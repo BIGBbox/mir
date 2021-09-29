@@ -1,6 +1,7 @@
 Mir200/Log/
+Mir200/ChatLog/
+Mir200/ConLog/
 .svn/
 CenterLog/
-DBServer/Log/
+DBServer/Log
 LoginSrv/CountLog/
-Mir200/Log
