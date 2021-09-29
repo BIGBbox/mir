@@ -1,0 +1,16 @@
+[@自动挂机QM脚本]
+{
+#IF
+Equal <$CLIENTFLAG> 1
+#act
+MOV S$挂机 <Button|x=-248|y=-220|color=251|mimg=private\main\Skill\1900012708.png|size=16|nimg=private\main\Skill\1900012708.png|pimg=private\main\Skill\1900012708.png|link=@开始挂机>
+ADDBUTTON 104 1 <$STR(S$挂机)>
+BREAK
+
+#IF
+Equal <$CLIENTFLAG> 2
+#act
+MOV S$挂机 <Button|x=-127|y=-374|color=251|mimg=private\main\Skill\1900012708.png|size=16|nimg=private\main\Skill\1900012708.png|pimg=private\main\Skill\1900012708.png|link=@开始挂机>
+ADDBUTTON 104 1 <$STR(S$挂机)>
+BREAK
+}

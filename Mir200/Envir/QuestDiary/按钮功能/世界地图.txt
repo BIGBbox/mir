@@ -1,0 +1,594 @@
+[@世界地图堆栈]
+{
+;占用标识
+;20-35
+
+#OR
+IsOnMap N3
+IsOnMap new0150
+#ACT
+SENDMSG 7 此地图不允许传送！！！！
+break
+
+
+;#IF
+;large N$攻击CD 0
+;#act
+;SENDMSG 6 {〖提示〗请在<$STR(N$攻击CD)>秒后使用随机|116:39:0}
+;BREAK
+
+
+#if
+CHECK [20] 0
+#act
+MOV S$西游异世界 00793
+MOV S$西游异世界1 00795
+#elseact
+MOV S$西游异世界 00793
+MOV S$西游异世界1 00795
+
+
+#if
+EQUAL G1 1
+#act
+MOV S$三国异世界 00832
+MOV S$三国异世界1 00834
+#elseact
+MOV S$三国异世界 00835
+MOV S$三国异世界1 0
+
+#if
+EQUAL G2 1
+#act
+MOV S$帝王异世界 00789
+MOV S$帝王异世界1 00791
+#elseact
+MOV S$帝王异世界 00792
+MOV S$帝王异世界1 0
+
+
+#IF
+EQUAL G3 1
+#act
+MOV S$金庸异世界 00828
+MOV S$金庸异世界1 00830
+#elseact
+MOV S$金庸异世界 00831
+MOV S$金庸异世界1 0
+
+
+#IF
+EQUAL G4 1
+#act
+MOV S$圣斗士异世界 00816
+MOV S$圣斗士异世界1 00818
+#elseact
+MOV S$圣斗士异世界 00819
+MOV S$圣斗士异世界1 0
+
+
+#IF
+EQUAL G5 1
+#act
+MOV S$水浒异世界 00836
+MOV S$水浒异世界1 <00838
+#elseact
+MOV S$水浒异世界 00839
+MOV S$水浒异世界1 0
+
+
+#IF
+EQUAL G6 1
+#act
+MOV S$诛仙异世界 00781
+MOV S$诛仙异世界1 00783
+#elseact
+MOV S$诛仙异世界 00784
+MOV S$诛仙异世界1 0
+
+#IF
+EQUAL G7 1
+#act
+MOV S$暗黑异世界 01553
+MOV S$暗黑异世界1 01555
+#elseact
+MOV S$暗黑异世界 01556
+MOV S$暗黑异世界1 0
+
+#or
+CHECKTITLE 暗黑之力⑩
+CHECKTITLE 神域之力①
+CHECKTITLE 神域之力②
+CHECKTITLE 神域之力③
+CHECKTITLE 神域之力④
+CHECKTITLE 神域之力⑤
+CHECKTITLE 神域之力⑥
+CHECKTITLE 神域之力⑦
+CHECKTITLE 神域之力⑧
+CHECKTITLE 神域之力⑨
+CHECKTITLE 神域之力⑩
+#act
+MOV S$神之领域 01466
+MOV S$神之领域1 01468
+#elseact
+MOV S$神之领域 01469
+MOV S$神之领域1 0
+
+
+#IF
+CHECK [24] 0
+#act
+MOV S$冰雪之城 01465
+MOV S$冰雪之城1 0
+#elseact
+MOV S$冰雪之城 01462
+MOV S$冰雪之城1 01464
+
+
+#IF
+CHECK [30] 0
+#act
+MOV S$降生之地 01473
+MOV S$降生之地1 0
+#elseact
+MOV S$降生之地 01470
+MOV S$降生之地1 01472
+
+
+#IF
+CHECK [32] 0
+#act
+MOV S$永恒之地 01481
+MOV S$永恒之地1 0
+#elseact
+MOV S$永恒之地 01478
+MOV S$永恒之地1 01480
+
+#IF
+CHECK [34] 0
+#act
+MOV S$未知之地 00807
+MOV S$未知之地1 0
+#elseact
+MOV S$未知之地 0780
+MOV S$未知之地1 0806
+
+#IF
+CHECK [35] 0
+#act
+MOV S$隐秘之地 00827
+MOV S$隐秘之地1 0
+#elseact
+MOV S$隐秘之地 00824
+MOV S$隐秘之地1 00826
+
+#IF
+CHECK [27] 0
+#act
+MOV S$天使之城 01477
+MOV S$天使之城1
+#elseact
+MOV S$天使之城 01474
+MOV S$天使之城1 01476
+
+#if
+#act
+mov S$世界地图引导标记
+delaycall 50 @世界地图面板
+
+[@世界地图面板]
+#IF
+#ACT
+#say
+
+<Img|img=public/sf1/1/00779.png|x=70|y=0|children={close_btn,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,合成描述,rightTips,}|bg=1|reset=1|move=1>
+<Button|x=1010|y=35|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
+<Button|id=btn1|x=172|y=50|nimg=public/sf1/1/<$STR(S$西游异世界)>.png|pimg=public/sf1/1/<$STR(S$西游异世界1)>.png|link=@西游异世界>
+<Button|id=btn2|x=355|y=280|nimg=public/sf1/1/<$STR(S$三国异世界)>.png|pimg=public/sf1/1/<$STR(S$三国异世界1)>.png|link=@三国异世界>
+<Button|id=btn3|x=221|y=217|nimg=public/sf1/1/<$STR(S$帝王异世界)>.png|pimg=public/sf1/1/<$STR(S$帝王异世界1)>.png|link=@帝王异世界>
+<Button|id=btn4|x=330|y=172|nimg=public/sf1/1/<$STR(S$金庸异世界)>.png|pimg=public/sf1/1/<$STR(S$金庸异世界1)>.png|link=@金庸异世界>
+<Button|id=btn5|x=535|y=390|nimg=public/sf1/1/<$STR(S$冰雪之城)>.png|pimg=public/sf1/1/<$STR(S$冰雪之城1)>.png|link=@冰雪之城>
+<Button|id=btn6|x=105|y=302|nimg=public/sf1/1/<$STR(S$暗黑异世界)>.png|pimg=public/sf1/1/<$STR(S$暗黑异世界1)>.png|link=@暗黑异世界>
+<Button|id=btn7|x=520|y=220|nimg=public/sf1/1/<$STR(S$圣斗士异世界)>.png|pimg=public/sf1/1/<$STR(S$圣斗士异世界1)>.png|link=@圣斗士异世界>
+<Button|id=btn8|x=610|y=215|nimg=public/sf1/1/<$STR(S$天使之城)>.png|pimg=public/sf1/1/<$STR(S$天使之城1)>.png|link=@天使之城>
+<Button|id=btn9|x=460|y=280|nimg=public/sf1/1/<$STR(S$水浒异世界)>.png|pimg=public/sf1/1/<$STR(S$水浒异世界1)>.png|link=@水浒异世界>
+<Button|id=btn10|x=412|y=345|nimg=public/sf1/1/<$STR(S$诛仙异世界)>.png|pimg=public/sf1/1/<$STR(S$诛仙异世界1)>.png|link=@诛仙异世界>
+<Button|id=btn11|x=640|y=290|nimg=public/sf1/1/<$STR(S$降生之地)>.png|pimg=public/sf1/1/<$STR(S$降生之地1)>.png|link=@降生之地>
+<Button|id=btn12|x=135|y=440|nimg=public/sf1/1/<$STR(S$神之领域)>.png|pimg=public/sf1/1/<$STR(S$神之领域1)>.png|link=@神之领域>
+<Button|id=btn13|x=520|y=335|nimg=public/sf1/1/<$STR(S$永恒之地)>.png|pimg=public/sf1/1/<$STR(S$永恒之地1)>.png|link=@永恒之地>
+<Button|id=btn14|x=590|y=80|nimg=public/sf1/1/<$STR(S$未知之地)>.png|pimg=public/sf1/1/<$STR(S$未知之地1)>.png|link=@未知之地>
+<Button|id=btn15|x=727|y=455|nimg=public/sf1/1/<$STR(S$隐秘之地)>.png|pimg=public/sf1/1/<$STR(S$隐秘之地1)>.png|link=@隐秘之地>
+
+< +8%/FCOLOR=239#0><  最大生命值/FCOLOR=229#0>
+< +8%/FCOLOR=239#0><  物理防御值/FCOLOR=229#0>
+<+5%/FCOLOR=250#0><  打怪伤害/FCOLOR=250#0>
+< +20%/FCOLOR=251#0>< 爆率/FCOLOR=251#0><BUFF：/FCOLOR=243#0>
+<5%概率攻击玩家/FCOLOR=70#0>\<让对方进入灼烧状态/FCOLOR=70#0>\
+<每秒损失百分之3血量/FCOLOR=70#0>\
+<持续10秒/FCOLOR=70#0>\
+<三国神器/FCOLOR=87#0>\
+<三国异世界全爆！/FCOLOR=87#0>\
+<剧情神器/FCOLOR=222#1>\
+
+#if
+not equal <$str(S$世界地图引导标记)>
+#act
+Navigation 0 btn1 点击进入地图
+
+[@西游异世界]
+
+;#IF
+;large N$攻击CD 0
+;#act
+;SENDMSG 6 {〖提示〗请在<$STR(N$攻击CD)>秒后使用随机|116:39:0}
+;BREAK
+
+#if
+CHECKLEVELEX < 80
+#act
+MESSAGEBOX  角色需要80级才能进入!!
+break
+
+#if
+#act
+mapmove 西游异世界 69 73
+break
+
+[@三国异世界]
+
+;#IF
+;large N$攻击CD 0
+;#act
+;SENDMSG 6 {〖提示〗请在<$STR(N$攻击CD)>秒后使用随机|116:39:0}
+;BREAK
+
+#if
+EQUAL G1 0
+#act
+MESSAGEBOX  提示:进入三国异世界，请击杀西游异世界的真·如来！！！
+break
+
+#if
+CHECKRENEWLEVEL < 3
+#act
+MESSAGEBOX  需要3转才能进入!!
+break
+
+
+#IF
+#ACT
+MAPMOVE 三国异世界 94 88
+break
+
+[@帝王异世界]
+
+;#IF
+;large N$攻击CD 0
+;#act
+;SENDMSG 6 {〖提示〗请在<$STR(N$攻击CD)>秒后使用随机|116:39:0}
+;BREAK
+
+#if
+EQUAL G2 0
+#act
+MESSAGEBOX  提示:进入帝王异世界，请击杀三国异世界的真·罗贯中！！！
+break
+
+#if
+CHECKRENEWLEVEL < 6
+#act
+MESSAGEBOX  需要6转才能进入!!
+break
+
+
+#IF
+#ACT
+MAPMOVE 帝王异世界 88 84
+break
+
+[@金庸异世界]
+
+;#IF
+;large N$攻击CD 0
+;#act
+;SENDMSG 6 {〖提示〗请在<$STR(N$攻击CD)>秒后使用随机|116:39:0}
+;BREAK
+
+#if
+EQUAL G3 0
+#act
+MESSAGEBOX  提示:进入金庸异世界，请击杀帝王异世界的真·帝王！！！
+break
+
+#if
+CHECKRENEWLEVEL < 9
+#act
+MESSAGEBOX  需要9转才能进入!!
+break
+
+#IF
+#ACT
+MAPMOVE 金庸异世界 81 86
+break
+
+
+[@圣斗士异世界]
+
+;#IF
+;large N$攻击CD 0
+;#act
+;SENDMSG 6 {〖提示〗请在<$STR(N$攻击CD)>秒后使用随机|116:39:0}
+;BREAK
+
+#if
+EQUAL G4 0
+#act
+MESSAGEBOX  提示:进入圣斗士异世界，请击杀金庸异世界的真·金庸！！！
+break
+
+#if
+CHECKRENEWLEVEL < 11
+#act
+MESSAGEBOX  需要11转才能进入!!
+break
+
+#IF
+#ACT
+MAPMOVE 圣斗士异世界 156 152
+break
+
+
+[@水浒异世界]
+
+;#IF
+;large N$攻击CD 0
+;#act
+;SENDMSG 6 {〖提示〗请在<$STR(N$攻击CD)>秒后使用随机|116:39:0}
+;BREAK
+
+#if
+EQUAL G5 0
+#act
+MESSAGEBOX  提示:进入水浒异世界，请击杀圣斗士异世界的真·圣斗士！！
+break
+
+#if
+CHECKRENEWLEVEL < 13
+#act
+MESSAGEBOX  需要13转才能进入!!
+break
+
+#IF
+#ACT
+MAPMOVE 水浒异世界 113 109
+break
+
+[@诛仙异世界]
+
+;#IF
+;large N$攻击CD 0
+;#act
+;SENDMSG 6 {〖提示〗请在<$STR(N$攻击CD)>秒后使用随机|116:39:0}
+;BREAK
+
+
+#if
+EQUAL G6 0
+#act
+MESSAGEBOX  提示:进入诛仙异世界，请击杀水浒异世界的真·施耐庵！！
+break
+
+#if
+CHECKRENEWLEVEL < 15
+#act
+MESSAGEBOX  需要15转才能进入!!
+break
+
+#IF
+#ACT
+MAPMOVE 诛仙异世界 144 144
+break
+
+
+[@暗黑异世界]
+
+;#IF
+;large N$攻击CD 0
+;#act
+;SENDMSG 6 {〖提示〗请在<$STR(N$攻击CD)>秒后使用随机|116:39:0}
+;BREAK
+
+#if
+EQUAL G7 0
+#act
+MESSAGEBOX  提示:进入暗黑异世界，请击杀诛仙异世界的真·萧鼎！！
+break
+
+
+#if
+CHECKRENEWLEVEL < 17
+#act
+MESSAGEBOX  需要17转才能进入!!
+break
+
+#IF
+#ACT
+MAPMOVE 暗黑异世界 175 129
+break
+
+
+[@神之领域]
+
+;#IF
+;large N$攻击CD 0
+;#act
+;SENDMSG 6 {〖提示〗请在<$STR(N$攻击CD)>秒后使用随机|116:39:0}
+;BREAK
+
+#if
+CHECKRENEWLEVEL < 19
+#act
+MESSAGEBOX  需要19转才能进入!!
+break
+
+#or
+CHECKTITLE 暗黑之力⑩
+CHECKTITLE 神域之力①
+CHECKTITLE 神域之力②
+CHECKTITLE 神域之力③
+CHECKTITLE 神域之力④
+CHECKTITLE 神域之力⑤
+CHECKTITLE 神域之力⑥
+CHECKTITLE 神域之力⑦
+CHECKTITLE 神域之力⑧
+CHECKTITLE 神域之力⑨
+CHECKTITLE 神域之力⑩
+#act
+MAPMOVE 神之领域 59 66
+#elseact
+MESSAGEBOX  提示:进入神之领域，需升级暗黑之力⑩！！
+break
+
+
+[@天使之城]
+
+;#IF
+;large N$攻击CD 0
+;#act
+;SENDMSG 6 {〖提示〗请在<$STR(N$攻击CD)>秒后使用随机|116:39:0}
+;BREAK
+
+#if
+check [34] 0
+#act
+MESSAGEBOX  抱歉:未知领域，你还未达到条件！！
+break
+
+
+#IF
+#ACT
+MESSAGEBOX  抱歉:未知领域，你还未达到条件！！
+MAPMOVE 未知之地 272 22
+set [34] 1
+break
+
+
+[@降生之地]
+
+;#IF
+;large N$攻击CD 0
+;#act
+;SENDMSG 6 {〖提示〗请在<$STR(N$攻击CD)>秒后使用随机|116:39:0}
+;BREAK
+
+#if
+check [34] 0
+#act
+MESSAGEBOX  抱歉:未知领域，你还未达到条件！！
+break
+
+
+#IF
+#ACT
+MESSAGEBOX  抱歉:未知领域，你还未达到条件！！
+MAPMOVE 未知之地 272 22
+set [34] 1
+break
+
+
+[@永恒之地]
+
+;#IF
+;large N$攻击CD 0
+;#act
+;SENDMSG 6 {〖提示〗请在<$STR(N$攻击CD)>秒后使用随机|116:39:0}
+;BREAK
+
+#if
+check [34] 0
+#act
+MESSAGEBOX  抱歉:未知领域，你还未达到条件！！
+break
+
+
+#IF
+#ACT
+MESSAGEBOX  抱歉:未知领域，你还未达到条件！！
+MAPMOVE 未知之地 272 22
+set [34] 1
+break
+
+
+[@冰雪之城]
+
+;#IF
+;large N$攻击CD 0
+;#act
+;SENDMSG 6 {〖提示〗请在<$STR(N$攻击CD)>秒后使用随机|116:39:0}
+;BREAK
+
+
+#if
+check [34] 0
+#act
+MESSAGEBOX  抱歉:未知领域，你还未达到条件！！
+break
+
+
+#IF
+#ACT
+MESSAGEBOX  抱歉:未知领域，你还未达到条件！！
+MAPMOVE 未知之地 272 22
+set [34] 1
+break
+
+
+[@未知之地]
+
+;#IF
+;large N$攻击CD 0
+;#act
+;SENDMSG 6 {〖提示〗请在<$STR(N$攻击CD)>秒后使用随机|116:39:0}
+;BREAK
+
+
+#if
+check [34] 0
+#act
+MESSAGEBOX  抱歉:未知领域，你还未达到条件！！
+break
+
+
+#IF
+#ACT
+MESSAGEBOX  抱歉:未知领域，你还未达到条件！！
+MAPMOVE 未知之地 272 22
+set [34] 1
+break
+
+
+[@隐秘之地]
+
+;#IF
+;large N$攻击CD 0
+;#act
+;SENDMSG 6 {〖提示〗请在<$STR(N$攻击CD)>秒后使用随机|116:39:0}
+;BREAK
+
+
+#if
+check [35] 0
+#act
+MESSAGEBOX  抱歉:隐秘之地，你还未达到条件！！
+break
+
+
+#IF
+#ACT
+MESSAGEBOX  抱歉:隐秘之地，你还未达到条件！！
+MAPMOVE 隐秘之地 272 22
+set [35] 1
+break
+
+
+}

@@ -1,0 +1,21 @@
+[@攻速检测]
+{
+
+;#IF
+;#ACT
+;MOV N$武器攻速 7
+;MOV N$武器攻速百分比 0
+
+#IF
+large <$STR(N$武器攻速)> 0
+#ACT
+CHANGESPEED 2 0
+CHANGESPEED 2 <$STR(N$武器攻速)>
+sendmsg 5 〖提示〗当前攻速加成：<$STR(N$武器攻速百分比)>%
+#CALL [\游戏登陆\右下显示.txt] @属性显示
+
+}
+
+
+
+

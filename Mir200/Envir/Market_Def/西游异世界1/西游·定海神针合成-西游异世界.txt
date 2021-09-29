@@ -1,0 +1,49 @@
+
+[@main]
+#IF
+#ACT
+#SAY
+
+<Img|img=public/sf1/1/01511.png|x=370|y=150|children={close_btn,click_btn,所有信息,gable_item,need_item1,need_item2,need_item3,need_item4,need_item5,need_item6}|bg=1|reset=1|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=840|y=155|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
+
+<Text|id=0|x=142|y=45|color=90|tips=|tipsx=10|tipsy=80|size=18|text=集齐这五种合成更高级武器>
+<Text|id=0|x=406|y=45|color=222|tips=|tipsx=10|tipsy=80|size=18|text=（西游·定海神针）>
+
+<ItemShow|id=gable_item|itemid=11572|itemcount=1|x=217|y=99.0|bgtype=1>
+
+<ItemShow|id=need_item2|itemid=11569|itemcount=1|x=87|y=199.0|bgtype=1>
+<ItemShow|id=need_item3|itemid=11570|itemcount=1|x=154|y=199.0|bgtype=1>
+<ItemShow|id=need_item4|itemid=11571|itemcount=1|x=221|y=199.0|bgtype=1>
+<ItemShow|id=need_item5|itemid=11576|itemcount=1|x=288|y=199.0|bgtype=1>
+<ItemShow|id=need_item6|itemid=11577|itemcount=1|x=355|y=199.0|bgtype=1>
+
+<Button|id=click_btn|x=180|y=300|nimg=public/sf1/1/01508.png|pimg=public/sf1/1/01510.png|tips={合成条件：/FCOLOR=249}^{金箍棒*1/FCOLOR=251}^{月牙铲*1/FCOLOR=251}^{九齿钉耙*1/FCOLOR=251}^{火眼金睛*1/FCOLOR=251}^{丈二金身*1/FCOLOR=251}^|tipsx=10|tipsy=80|size=18|color=249|link=@西游·定海神针合成>
+
+[@西游·定海神针合成]
+#if
+CHECKITEM 金箍棒 1
+CHECKITEM 月牙铲 1
+CHECKITEM 九齿钉耙 1
+CHECKITEM 火眼金睛 1
+CHECKITEM 丈二金身 1
+#ACT
+TAKE 金箍棒 1
+TAKE 月牙铲 1
+TAKE 九齿钉耙 1
+TAKE 火眼金睛 1
+TAKE 丈二金身 1
+GIVE 西游·定海神针 1
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【西游·定海神针】/FCOLOR=58>
+BREAK
+#elseact
+MESSAGEBOX 打造条件不足??\\1、材料货币不足
+BREAK
+
+
+
+
+
+
+

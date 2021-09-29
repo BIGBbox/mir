@@ -1,0 +1,187 @@
+[@上古异兽面板]
+{
+#If
+#act
+mov S$使用天下币 0
+mov S$是否付费 0
+mov S$是否下一步 1
+#say
+
+<Img|children={1,2,3,click_btn1,close_btn,button1,button2,输入框背景}|x=320|y=120|move=1|img=public/sf1/2/00008.png|bg=1|reset=0>
+<Button|id=close_btn|x=440.0|y=5.0|size=18|nimg=public/sf1/2/00010.png|link=@exit>
+
+<RText|id=1|x=205|y=5|size=20|text=<灵兽精石/FCOLOR=89>>
+<RText|id=2|x=15|y=65|size=14|text=<灵兽精石分为免费使用和付费使用,免费每消耗一颗晶石会获得/FCOLOR=251><1点/FCOLOR=250><灵兽经验/FCOLOR=251>>
+<RText|id=3|x=15|y=90|size=14|text=<付费使用,每颗晶石需要/FCOLOR=251><支付10天下币/FCOLOR=249><获得/FCOLOR=251><10倍/FCOLOR=250><兽灵经验!!/FCOLOR=251>>
+<Layout|submitInput=1|id=button1|children={4}|x=220|y=150|width=80|height=30|color=243|link=@升级按钮#参数=0>
+<RText|id=4|x=10|y=5|size=14|text=<免费使用/FCOLOR=0>>
+;<Button|id=button1|x=513.0|y=341.0|nimg=public/1900000660.png|submitInput=1|pimg=public/1900000661.png|size=18|color=1003|text=密码登录|link=@免费使用>
+<Layout|submitInput=1|id=button2|children={5}|x=350|y=150|width=80|height=30|color=243|link=@升级按钮#参数=1>
+<RText|id=5|x=10|y=5|size=14|text=<付费使用/FCOLOR=0>>
+<Img|id=输入框背景|width=120|height=30|children={输入框,countCoin}|x=20|y=150|move=1|img=public/sf1/6/00213.png|>
+<Input|id=输入框|inputid=1|x=0.0|y=0.0|type=1|text=1|width=120|height=30|color=250|size=18|mincount=1|maxcount=3|errortips=1>
+<RText|id=countCoin|x=15|y=38|size=14|text=<输入晶石数量/FCOLOR=251>>
+
+
+[@升级按钮]
+#if
+#act
+mov N$次数 <$NPCINPUT(1)>
+mov S$是否付费 <$STR(S$参数)>
+mov N$消耗天下币 0
+mov N$获得经验值 <$STR(N$次数)>
+mul N$获得经验值 <$STR(N$次数)>
+
+#if
+equal <$STR(S$是否付费)> 1
+#act
+mov N$消耗天下币 <$STR(N$次数)>
+mul N$消耗天下币 10
+mov N$获得经验值 <$STR(N$次数)>
+mul N$获得经验值 10
+
+;------------------判断是否穿戴异兽和是否满级-------------------
+goto @判断异兽状态
+
+#if
+;---------根据异兽是否穿戴和是否满级进行判断是否阻断-------------
+equal <$STR(S$是否下一步)> 0
+#act
+break
+
+#if
+CHECKGAMEDIAMOND < <$STR(N$消耗天下币)>
+#act
+messagebox 你的天下币不足!!
+break
+
+#if
+not CHECKITEM 灵兽精石 <$STR(N$次数)>
+#act
+messagebox 灵兽晶石数量不足!!
+break
+
+
+#if
+equal <$STR(S$是否付费)> 1
+#act
+messagebox 将要消耗<$STR(N$消耗天下币)>天下币! @确定 @取消
+break
+
+#if
+#act
+goto @升级兽灵
+sendmsg 7 异兽已获得<$STR(N$获得经验值)>点经验值
+
+[@升级兽灵]
+;----------使用原升级主逻辑----------------
+#if
+not small <$STR(N$次数)> 1
+#act
+dec N$次数 1
+
+#if
+not CHECKGAMEDIAMOND < <$STR(N$消耗天下币)>
+#act
+
+#if
+#act
+take 灵兽精石 1
+money 天下币 - 10
+
+goto @升级
+
+#if
+not small <$STR(N$次数)> 1
+#act
+goto @升级兽灵
+
+
+[@升级]
+
+#if
+#act
+mov p1 1
+
+;movr p1 2 4
+#if
+equal <$STR(S$是否付费)> 1
+#act
+mov p1 10
+
+#if
+#act
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 0 0 + <$str(p1)>
+GOTO @判断升级
+
+[@判断升级]
+
+#if
+#act
+;获取当前盾牌
+GetUserItemName 16 12
+;sendmsg 5 名字:<$STR(S12)>
+ReadConfigFileItem ..\QuestDiary\上古异兽数据\上古异兽升级数据.txt <$STR(S12)> 最大经验值 S$最大经验值数值
+ReadConfigFileItem ..\QuestDiary\上古异兽数据\上古异兽升级数据.txt <$STR(S12)> 下级经验值 S$下级经验值数值
+ReadConfigFileItem ..\QuestDiary\上古异兽数据\上古异兽升级数据.txt <$STR(S12)> 下一级异兽 S$下一级异兽名
+
+#if
+CHECKCUSTOMITEMPROGRESSBARPERCENT 16 0 = 100
+;CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 1 = <$STR(S$最大经验值数值)>
+#act
+
+TakeOffItem 16
+take <$STR(S12)> 1
+
+give <$STR(S$下一级异兽名)> 1
+TakeOnItem <$STR(S$下一级异兽名)>
+
+CHANGECUSTOMITEMPROGRESSBAR 16 0 0 1
+CHANGECUSTOMITEMPROGRESSBAR 16 0 1 经验值:
+CHANGECUSTOMITEMPROGRESSBAR 16 0 2 70
+CHANGECUSTOMITEMPROGRESSBAR 16 0 3 1
+CHANGECUSTOMITEMPROGRESSBAR 16 0 4 2
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 0 2 + 1
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 0 0 = 0
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 0 1 = <$STR(S$下级经验值数值)>
+
+goto @main
+messagebox  上古异兽进阶成功
+MOV S$晋级开关
+break
+
+[@判断异兽状态]
+#if
+#act
+mov S10
+GetUserItemName 16 10
+mov S$是否下一步 1
+
+
+#if
+equal <$STR(S10)>
+#act
+messagebox 抱歉，你的身上没有穿戴：上古异兽！
+mov S$是否下一步 0
+break
+
+#if
+equal <$STR(S10)> 上古异兽15级
+#act
+messagebox 恭喜，你的身上上古异兽，已满！！！
+mov S$是否下一步 0
+break
+
+[@确定]
+#if
+#act
+sendmsg 7 异兽已获得<$STR(N$获得经验值)>点经验值
+
+goto @升级兽灵
+
+
+[@取消]
+#if
+#act
+sendmsg 5 你已取消升级异兽!
+}

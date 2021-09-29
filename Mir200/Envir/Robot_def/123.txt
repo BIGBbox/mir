@@ -1,0 +1,201 @@
+[@随机地图链接]
+#if
+small g495 1800
+#act
+inc g495 30
+break
+
+
+
+
+
+#IF
+#ACT
+DELMAPGATE 西游神之地 西游异世界
+AddMapGate 西游神之地 西游异世界 -1 -1  1 西游神之地 19 28 30
+GetMapGate 西游神之地 西游异世界 <$STR(G100)> <$STR(G101)> <$STR(S10)> <$STR(G102)> <$STR(G103)>
+MAPEFFECT 西游异世界 <$STR(G100)> <$STR(G101)> 1 520 8 33 100 0 0
+
+DelMapGate 西游魔之地 西游异世界
+AddMapGate 西游魔之地 西游异世界 -1 -1  1 西游魔之地 19 28 30
+GetMapGate 西游魔之地 西游异世界 <$STR(G104)> <$STR(G105)> <$STR(S10)> <$STR(G106)> <$STR(G107)>
+MAPEFFECT 西游异世界 <$STR(G104)> <$STR(G105)> 1 520 8 33 100 0 0
+
+
+DELMAPGATE 三国神之地 三国异世界
+AddMapGate 三国神之地 三国异世界 -1 -1  1 三国神之地 19 28 30
+GetMapGate 三国神之地 三国异世界 <$STR(G108)> <$STR(G109)> <$STR(S10)> <$STR(G110)> <$STR(G111)>
+MAPEFFECT 三国异世界 <$STR(G108)> <$STR(G109)> 1 520 8 33 100 0 0
+
+DelMapGate 三国魔之地 三国异世界
+AddMapGate 三国魔之地 三国异世界 -1 -1  1 三国魔之地 19 28 30
+GetMapGate 三国魔之地 三国异世界 <$STR(G112)> <$STR(G113)> <$STR(S10)> <$STR(G114)> <$STR(G115)>
+MAPEFFECT 三国异世界 <$STR(G112)> <$STR(G113)> 1 520 8 33 100 0 0
+
+
+DELMAPGATE 帝王神之地 帝王异世界
+AddMapGate 帝王神之地 帝王异世界 -1 -1  1 帝王神之地 19 28 30
+GetMapGate 帝王神之地 帝王异世界 <$STR(G116)> <$STR(G117)> <$STR(S10)> <$STR(G118)> <$STR(G119)>
+MAPEFFECT 帝王异世界 <$STR(G116)> <$STR(G117)> 1 520 8 33 100 0 0
+
+DelMapGate 帝王魔之地 帝王异世界
+AddMapGate 帝王魔之地 帝王异世界 -1 -1  1 帝王魔之地 19 28 30
+GetMapGate 帝王魔之地 帝王异世界 <$STR(G120)> <$STR(G121)> <$STR(S10)> <$STR(G122)> <$STR(G123)>
+MAPEFFECT 帝王异世界 <$STR(G120)> <$STR(G121)> 1 520 8 33 100 0 0
+
+DELMAPGATE 金庸神之地 金庸异世界
+AddMapGate 金庸神之地 金庸异世界 -1 -1  1 金庸神之地 19 28 30
+GetMapGate 金庸神之地 金庸异世界 <$STR(G124)> <$STR(G125)> <$STR(S10)> <$STR(G126)> <$STR(G127)>
+MAPEFFECT 金庸异世界 <$STR(G124)> <$STR(G125)> 1 520 8 33 100 0 0
+
+DelMapGate 金庸魔之地 金庸异世界
+AddMapGate 金庸魔之地 金庸异世界 -1 -1  1 金庸魔之地 19 28 30
+GetMapGate 金庸魔之地 金庸异世界 <$STR(G128)> <$STR(G129)> <$STR(S10)> <$STR(G130)> <$STR(G131)>
+MAPEFFECT 金庸异世界 <$STR(G128)> <$STR(G129)> 1 520 8 33 100 0 0
+
+
+DELMAPGATE 圣斗士神之地 圣斗士异世界
+AddMapGate 圣斗士神之地 圣斗士异世界 -1 -1  1 圣斗士神之地 19 28 30
+GetMapGate 圣斗士神之地 圣斗士异世界 <$STR(G140)> <$STR(G141)> <$STR(S10)> <$STR(G142)> <$STR(G143)>
+MAPEFFECT 圣斗士异世界 <$STR(G140)> <$STR(G141)> 1 520 8 33 100 0 0
+
+DelMapGate 圣斗士魔之地 圣斗士异世界
+AddMapGate 圣斗士魔之地 圣斗士异世界 -1 -1  1 圣斗士魔之地 19 28 30
+GetMapGate 圣斗士魔之地 圣斗士异世界 <$STR(G144)> <$STR(G145)> <$STR(S10)> <$STR(G146)> <$STR(G147)>
+MAPEFFECT 圣斗士异世界 <$STR(G144)> <$STR(G145)> 1 520 8 33 100 0 0
+
+
+DelMapGate 水浒神之地 水浒异世界
+AddMapGate 水浒神之地 水浒异世界 -1 -1  1 水浒神之地 19 28 30
+GetMapGate 水浒神之地 水浒异世界 <$STR(G170)> <$STR(G171)> <$STR(S10)> <$STR(G172)> <$STR(G173)>
+MAPEFFECT 水浒异世界 <$STR(G170)> <$STR(G171)> 1 520 8 33 100 0 0
+
+DelMapGate 水浒魔之地 水浒异世界
+AddMapGate 水浒魔之地 水浒异世界 -1 -1  1 水浒魔之地 19 28 30
+GetMapGate 水浒魔之地 水浒异世界 <$STR(G174)> <$STR(G175)> <$STR(S10)> <$STR(G176)> <$STR(G177)>
+MAPEFFECT 水浒异世界 <$STR(G174)> <$STR(G175)> 1 520 8 33 100 0 0
+
+DelMapGate 诛仙神之地 诛仙异世界
+AddMapGate 诛仙神之地 诛仙异世界 -1 -1  1 诛仙神之地 19 28 30
+GetMapGate 诛仙神之地 诛仙异世界 <$STR(G178)> <$STR(G179)> <$STR(S10)> <$STR(G180)> <$STR(G181)>
+MAPEFFECT 诛仙异世界 <$STR(G178)> <$STR(G179)> 1 520 8 33 100 0 0
+
+DelMapGate 诛仙魔之地 诛仙异世界
+AddMapGate 诛仙魔之地 诛仙异世界 -1 -1  1 诛仙魔之地 19 28 30
+GetMapGate 诛仙魔之地 诛仙异世界 <$STR(G182)> <$STR(G183)> <$STR(S10)> <$STR(G184)> <$STR(G185)>
+MAPEFFECT 诛仙异世界 <$STR(G182)> <$STR(G183)> 1 520 8 33 100 0 0
+
+
+DelMapGate 暗黑神之地 暗黑异世界
+AddMapGate 暗黑神之地 暗黑异世界 -1 -1  1 暗黑神之地 19 28 30
+GetMapGate 暗黑神之地 暗黑异世界 <$STR(G186)> <$STR(G187)> <$STR(S10)> <$STR(G188)> <$STR(G189)>
+MAPEFFECT 暗黑异世界 <$STR(G186)> <$STR(G187)> 1 520 8 33 100 0 0
+
+DelMapGate 暗黑魔之地 暗黑异世界
+AddMapGate 暗黑魔之地 暗黑异世界 -1 -1  1 暗黑魔之地 19 28 30
+GetMapGate 暗黑魔之地 暗黑异世界 <$STR(G190)> <$STR(G191)> <$STR(S10)> <$STR(G192)> <$STR(G193)>
+MAPEFFECT 暗黑异世界 <$STR(G190)> <$STR(G191)> 1 520 8 33 100 0 0
+
+
+DELMAPGATE 神之领域神之地 神之领域
+AddMapGate 神之领域神之地 神之领域 -1 -1  1 神之领域神之地 19 28 30
+GetMapGate 神之领域神之地 神之领域 <$STR(G200)> <$STR(G201)> <$STR(S10)> <$STR(G202)> <$STR(G203)>
+MAPEFFECT 神之领域 <$STR(G200)> <$STR(G201)> 1 520 8 33 100 0 0
+
+DelMapGate 神之领域魔之地 神之领域
+AddMapGate 神之领域魔之地 神之领域 -1 -1  1 神之领域魔之地 19 28 30
+GetMapGate 神之领域魔之地 神之领域 <$STR(G204)> <$STR(G205)> <$STR(S10)> <$STR(G206)> <$STR(G207)>
+MAPEFFECT 神之领域 <$STR(G204)> <$STR(G205)> 1 520 8 33 100 0 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@攻城提示]
+#IF
+CheckContainsText <$SERVERNAME> 合区
+#ACT
+AddAttackSabukAll 0
+
+
+[@开启攻城]
+#IF
+CheckContainsText <$SERVERNAME> 合区
+#ACT
+MOV G498 1
+SendCenterMsg 250 0 ┗-----------------------------------┛ 1 30
+SendCenterMsg 250 0 ┠-----------攻城战已开启------------┨ 1 30
+SendCenterMsg 250 0 ┏-----------------------------------┓ 1 30
+#elseact
+SendCenterMsg 250 0 ┗-----------------------------------┛ 1 30
+SendCenterMsg 250 0 ┠-----------攻城三天开启------------┨ 1 30
+SendCenterMsg 250 0 ┏-----------------------------------┓ 1 30
+
+
+[@攻城结束]
+#IF
+#ACT
+SendCenterMsg 249 0 ┗-----------------------------------┛ 1 30
+SendCenterMsg 249 0 ┠-----------攻城战已结束------------┨ 1 30
+SendCenterMsg 249 0 ┏-----------------------------------┓ 1 30
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

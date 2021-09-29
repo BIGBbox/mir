@@ -1,0 +1,204 @@
+[@神兵谱回收面板]
+{
+#IF
+#act
+sendmsg 5 面板
+mov N$width <$SCREENWIDTH>
+mov N$height <$SCREENHEIGHT>
+
+mov N$SizeX 484
+mov N$SizeY 277
+
+dec N$width N$SizeX
+dec N$height N$SizeY
+
+div N$width 2
+div N$height 2
+
+
+
+#IF
+#ACT
+#SAY
+
+<Img|width=620|height=300|children={close_btn,特效控件1,特效控件2,特效控件3,特效控件4,title}|img=public/sf1/1/00385.png|x=<$STR(N$width)>|y=<$STR(N$height)>|bg=1|reset=1|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|id=close_btn|x=609|y=2.0|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
+<Text|a=0|id=title|x=54|y=50|color=249|tips=|tipsx=10|tipsy=80|size=18|text=【神兵谱回收】>
+
+<Img|id=特效控件1|children={1,2,3,4}|x=42|y=55|height=1|width=1|img=public/0.png>
+    <Text|id=1|x=0|y=55 |color=103|tips={回收价格：/FCOLOR=251}^{2-1000天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱武器>
+    <Text|id=2|x=0|y=90 |color=103|tips={回收价格：/FCOLOR=251}^{1-200天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱项链>
+    <Text|id=3|x=0|y=125|color=93|tips={回收价格：/FCOLOR=251}^{1-200天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱手镯>
+    <Text|id=4|x=0|y=160|color=94|tips={回收价格：/FCOLOR=251}^{1-200天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱腰带>
+
+<Img|id=特效控件2|children={5,6,7,8}|x=344|y=55|height=1|width=1|img=public/0.png>
+    <Text|id=5|x=0|y=55|color=95|tips={回收价格：/FCOLOR=251}^{2-500天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱衣服>
+    <Text|id=6|x=0|y=90 |color=244|tips={回收价格：/FCOLOR=251}^{1-200天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱头盔>
+    <Text|id=7|x=0|y=125|color=227|tips={回收价格：/FCOLOR=251}^{1-200天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱戒指>
+    <Text|id=8|x=0|y=160|color=229|tips={回收价格：/FCOLOR=251}^{1-200天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱靴子>
+
+<Img|id=特效控件3|children={9,10,11,12}|x=153|y=55|height=1|width=1|img=public/0.png>
+    <Text|id=9|x=0|y=55|color=251|tips=|tipsx=10|tipsy=80|size=18|text=一键回收武器|link=@回收#类型=神兵武器>
+    <Text|id=10|x=0|y=90 |color=251|tips=|tipsx=10|tipsy=80|size=18|text=一键回收项链|link=@回收#类型=神兵项链>
+    <Text|id=11|x=0|y=125|color=251|tips=|tipsx=10|tipsy=80|size=18|text=一键回收手镯|link=@回收#类型=神兵手镯>
+    <Text|id=12|x=0|y=160|color=251|tips=|tipsx=10|tipsy=80|size=18|text=一键回收腰带|link=@回收#类型=神兵腰带>
+
+<Img|id=特效控件4|children={13,14,14,15,16,17}|x=455|y=55|height=1|width=1|img=public/0.png>
+    <Text|id=13|x=0|y=55|color=251|tips=|tipsx=10|tipsy=80|size=18|text=一键回收衣服|link=@回收#类型=神兵衣服>
+    <Text|id=14|x=0|y=90 |color=251|tips=|tipsx=10|tipsy=80|size=18|text=一键回收头盔|link=@回收#类型=神兵头盔>
+    <Text|id=15|x=0|y=125|color=251|tips=|tipsx=10|tipsy=80|size=18|text=一键回收戒指|link=@回收#类型=神兵戒指>
+    <Text|id=16|x=0|y=160|color=251|tips=|tipsx=10|tipsy=80|size=18|text=一键回收靴子|link=@回收#类型=神兵靴子>
+    <Text|id=17|x=32|y=205|color=251|tips=|tipsx=10|tipsy=80|size=18|text=一键回收|link=@A1>
+
+
+[@A1]
+#ACT
+
+mov S$类型 神兵武器
+GOTO @回收
+
+mov S$类型 神兵项链
+GOTO @回收
+
+mov S$类型 神兵手镯
+GOTO @回收
+
+mov S$类型 神兵腰带
+GOTO @回收
+
+mov S$类型 神兵衣服
+GOTO @回收
+
+mov S$类型 神兵头盔
+GOTO @回收
+
+mov S$类型 神兵戒指
+GOTO @回收
+
+mov S$类型 神兵靴子
+GOTO @回收
+
+[@回收]
+
+#if
+#act
+MOV N$回收结算 0
+MOV N$回收结算1 0
+MOV N$回收结算2 0
+mov S$装备类型 <$STR(S$类型)>
+LoopBagItems @神兵回收回调 S$回收ID S$回收KEY
+GOTO @神兵谱装备回收结算
+
+
+[@神兵回收回调]
+#if
+CHECKTEXTLIST ..\QuestDiary\装备回收\神兵谱回收\神兵谱装备分类\<$STR(S$装备类型)>.txt <$STR(S$回收KEY)>
+#act
+
+ReadConfigFileItem ..\QuestDiary\装备回收\神兵谱回收\神兵装备价格配置.txt <$STR(S$回收KEY)> 元宝 N$元宝值
+ReadConfigFileItem ..\QuestDiary\装备回收\神兵谱回收\神兵装备价格配置.txt <$STR(S$回收KEY)> 天下币 N$天下币值
+ReadConfigFileItem ..\QuestDiary\装备回收\神兵谱回收\神兵装备价格配置.txt <$STR(S$回收KEY)> RMB点 N$RMB点值
+
+INC N$回收结算  <$STR(N$元宝值)>
+INC N$回收结算1  <$STR(N$天下币值)>
+INC N$回收结算2  <$STR(N$RMB点值)>
+DelItemByMakeIndex <$STR(S$回收ID)>
+
+
+[@神兵谱装备回收结算]
+
+#if
+equal <$STR(N$回收结算)> 0
+equal <$STR(N$回收结算1)> 0
+equal <$STR(N$回收结算2)> 0
+#act
+;messagebox 没有可回收的神兵谱装备!!
+break
+
+#if
+#act
+#CALL [\新会员系统\会员属性加成.txt] @会员属性设置
+#CALL [\赞助\赞助属性加成.txt] @赞助属性设置
+
+mov N$回收加成 100
+inc N$回收加成 <$STR(S$会员_回收加成)>
+inc N$回收加成 <$STR(S$赞助_回收加成)>
+
+#if
+CHECKTITLE 狂暴
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+
+#if
+large <$STR(N$回收加成)> 0
+#act
+mul N$回收结算 <$str(N$回收加成)>
+mul N$回收结算1 <$str(N$回收加成)>
+mul N$回收结算2 <$str(N$回收加成)>
+
+div N$回收结算 100
+div N$回收结算1 100
+div N$回收结算2 100
+
+
+#or
+large <$STR(N$回收结算1)> 0
+large <$STR(N$回收结算2)> 0
+#act
+
+money 天下币 + <$STR(N$回收结算1)>
+gamepoint + <$STR(N$回收结算2)>
+
+#if
+large <$STR(N$回收结算)> 0
+not small U99 88
+#act
+money 元宝 + <$STR(N$回收结算)>
+#elseact
+money 绑定元宝 + <$STR(N$回收结算)>
+
+#if
+not small <$STR(U17)> 1
+#act
+GuildNoticeMsg 255 56 至尊会员玩家:『<$USERNAME>』一键回收神兵谱装备获得大量货币！！！！！！
+goto @神兵谱回收支线任务
+break
+
+#if
+#act
+GuildNoticeMsg 255 56 玩家:『<$USERNAME>』一键回收神兵谱装备获得大量货币！！！！！！
+goto @神兵谱回收支线任务
+break
+
+
+
+[@神兵谱回收支线任务]
+#if
+not CheckContainsText <$STR(T108)> 神兵谱回收
+large U108 22
+#act
+mov S$支线任务临时变量 <$STR(T108)>
+mov T108 <$STR(S$支线任务临时变量)>_神兵谱回收
+NEWCOMPLETETASK 33
+NEWDELETETASK 33
+sendmsg 1 已完成任务!
+
+CHANGEEXP + 100000
+MailGIVE 绑定元宝 100000
+MailGIVE 灵兽精石 10 1#4#6#8
+SendMail 1 系统奖励 你已完成神兵谱回收任务,10万经验,10万元宝和灵兽精石*10已发放!!
+
+
+
+}

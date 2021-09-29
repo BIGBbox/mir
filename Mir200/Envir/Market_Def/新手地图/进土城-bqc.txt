@@ -1,0 +1,63 @@
+()
+%100
+[@main]
+
+
+<>                         <进入土城/@1>\ \
+[@1]
+
+#if
+#ACT
+MAPMOVE 天下主城 120 97
+
+
+#if
+not checkitemw 上古异兽
+#ACT
+HAIRSTYLE 0
+ADDSKILL 基本剑术
+ADDSKILL 攻杀剑术
+ADDSKILL 刺杀剑术
+ADDSKILL 野蛮冲撞
+ADDSKILL 烈火剑法
+SKILLLEVEL 基本剑术 = 3
+SKILLLEVEL 攻杀剑术 = 3
+SKILLLEVEL 刺杀剑术 = 3
+SKILLLEVEL 野蛮冲撞 = 3
+SKILLLEVEL 烈火剑法 = 3
+GIVE 新手武器 1
+GIVE 新手衣服 1
+GIVE 新手头盔 1
+GIVE 新手项链 1
+GIVE 新手手镯 1
+GIVE 新手戒指 1
+GIVE 新手手镯 1
+GIVE 新手戒指 1
+GIVE 新手腰带 1
+GIVE 新手靴子 1
+GIVE 新手马牌 1
+GIVE 新手宝石 1
+GIVE 新手勋章 1
+GIVE 新手面巾 1
+GIVE 新手盾牌 1
+GIVE 上古异兽 1
+GIVE 破界の无边 1
+GIVE 盟重回城石 1
+GIVE 随机传送石 1
+AutoTakeOnItem 上古异兽 0
+AutoTakeOnItem 新手武器 1
+AutoTakeOnItem 新手头盔 4
+AutoTakeOnItem 新手项链 3
+AutoTakeOnItem 新手手镯 5
+AutoTakeOnItem 新手手镯 6
+AutoTakeOnItem 新手戒指 7
+AutoTakeOnItem 新手戒指 8
+AutoTakeOnItem 新手腰带 10
+AutoTakeOnItem 新手靴子 11
+AutoTakeOnItem 新手马牌 15
+AutoTakeOnItem 新手宝石 12
+AutoTakeOnItem 新手勋章 2
+AutoTakeOnItem 新手面巾 9
+AutoTakeOnItem 新手衣服 16
+AutoTakeOnItem 破界の无边 18
+SetSndaItemBox 1

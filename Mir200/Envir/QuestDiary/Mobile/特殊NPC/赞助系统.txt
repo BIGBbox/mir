@@ -1,0 +1,771 @@
+[@赞助系统]
+{
+#IF
+check [601] 0
+#act
+set [601] 1
+goto @展开
+#IF
+#ACT
+MOV S$货币种类 灵符
+MOV N$限购价格 600
+#IF
+NOT EQUAL T99 <$YEAR><$MONTH><$DAY>
+#ACT
+MOV T99 <$YEAR><$MONTH><$DAY>
+MOV U98 0
+
+#IF
+#ACT
+;MOV U97 0    ;当前角色赞助级别,需删除
+;SET [001] 0
+;SET [002] 0
+;SET [003] 0
+;SET [004] 0
+;SET [005] 0
+
+MOV N$绝对级 <$STR(U97)>
+MOV N$显示级 <$STR(U97)>
+MOV N$真实级 <$STR(U97)>
+
+#IF
+SMALL N$显示级 4
+#ACT
+INC N$显示级 1
+INC N$真实级 1
+
+#IF
+EQUAL N$绝对级 0
+#ACT
+MOV N$绝对级 1
+
+#IF
+CHECK [005] 0
+NOT SMALL U97 5
+#ACT
+MOV N$显示级 5
+
+#IF
+CHECK [004] 0
+NOT SMALL U97 4
+#ACT
+MOV N$显示级 4
+#IF
+CHECK [003] 0
+NOT SMALL U97 3
+#ACT
+MOV N$显示级 3
+#IF
+CHECK [002] 0
+NOT SMALL U97 2
+#ACT
+MOV N$显示级 2
+#IF
+CHECK [001] 0
+NOT SMALL U97 1
+#ACT
+MOV N$显示级 1
+
+#IF
+#ACT
+MOV N$赞助查看页 <$STR(N$显示级)>
+GOTO @赞助页面
+
+[@赞助页面]
+#IF
+#ACT
+MOV S$当前货币  <$MONEY(<$STR(S$货币种类)>)>
+GetListStringEx ..\QuestDiary\表格文件\赞助表格.txt <$STR(N$真实级)> S$赞助真显列 #
+GetListStringEx ..\QuestDiary\表格文件\赞助表格.txt <$STR(N$赞助查看页)> S$赞助读取列 #
+GetListStringEx ..\QuestDiary\表格文件\赞助表格.txt <$STR(N$绝对级)> S$赞助绝对列 #
+
+MUL N$货币比例 <$STR(S$当前货币)> 347
+DIV N$货币比例 <$STR(N$货币比例)> <$STR(S$赞助真显列1)>
+GOTO @赞助条
+
+
+MOV S$奖品分割串 <$STR(S$赞助读取列2)>
+MOV N$物品框X坐标 515
+MOV N$物品X坐标 517
+GOTO @赞助奖品FOR
+
+MOV S$特权分割串 <$STR(S$赞助读取列3)>
+MOV N$特权序号 1
+MOV N$特权Y坐标 266
+GOTO @赞助特权FOR
+
+MOV S$限购分割串 <$STR(S$赞助绝对列4)>
+;GetValidstr <$STR(S$限购分割串)> & S$限购id S$限购分割串
+GetValidstr <$STR(S$限购分割串)> & S$限购key S$限购分割串
+GetDBItemFieldValue <$STR(S$限购key)> idx S$限购id
+GetValidstr <$STR(S$限购分割串)> & S$限购count S$限购上限
+INC S$显示 <Img|x=256.0|y=245.0|width=213|height=178|esc=0|img=public/haha/wake_base005.png>
+INC S$显示 <Text|x=308.0|y=244.0|color=250|size=18|text=每日特权限购>
+INC S$显示 <Img|x=327.0|y=288.0|img=public/1900000651_3.png>
+INC S$显示 <ItemShow|x=329.0|y=290.0|width=70|height=70|itemid=<$STR(S$限购id)>|itemcount=<$STR(S$限购count)>|showtips=1|bgtype=1>
+INC S$显示 <RText|x=297.0|y=404|color=255|size=16|text=<今日已购：/FCOLOR=255><<$STR(U98)>/<$STR(S$限购上限)>次/FCOLOR=251>>
+INC S$显示 <RText|x=291.0|y=436|color=255|size=16|text=<售价：/FCOLOR=255><<$STR(N$限购价格)><$STR(S$货币种类)>/FCOLOR=251>>
+
+#IF
+LARGE U97 0 
+#ACT
+INC S$显示 <Button|x=308.0|y=476|color=255|size=18|nimg=public/1900000660.png|text=购买|link=@会员每日限购>
+#ELSEACT
+INC S$显示 <Img|x=308.0|y=476|width=106|height=40|img=public/1900000661.png>
+INC S$显示 <Text|x=333.0|y=483.0|color=159|size=18|text=未达标>
+
+
+#IF
+SMALL U97 1
+#ACT
+INC S$显示 <RText|x=275.0|y=372.0|color=255|size=16|text=<购买条件：/FCOLOR=255><开通青铜赞助/FCOLOR=249>>
+#ELSEACT
+INC S$显示 <RText|x=275.0|y=372.0|color=255|size=16|text=<购买条件：/FCOLOR=255><开通青铜赞助/FCOLOR=250>>
+
+#IF
+LARGE N$赞助查看页 1
+#ACT
+INC S$显示 <Button|x=533.0|y=358.0|rotate=180|nimg=public/haha/f_0000a2070.png|mimg=public/haha/f_0000a2071.png|size=18|color=255|pimg=public/haha/f_0000a2071.png|link=@赞助翻页#赞助翻=上>
+
+#IF
+SMALL N$赞助查看页 4
+#ACT
+INC S$显示 <Button|x=846.0|y=312.0|color=255|mimg=public/haha/f_0000a2071.png|size=18|pimg=public/haha/f_0000a2071.png|nimg=public/haha/f_0000a2070.png|link=@赞助翻页#赞助翻=下>
+
+#IF
+#ACT
+GOTO @领奖按钮
+
+#IF
+#SAY
+<Img|ax=0|x=149.0|y=24.0|width=836|height=536|show=0|bg=1|reset=1|move=0|loadDelay=1|img=public/haha/1900020020.png|esc=1>
+<Layout|x=899.0|y=50.0|width=80|height=80|link=@exit>
+<Button|x=918.0|y=73.0|nimg=public/1900000510.png|link=@exit>
+<Img|x=254.0|y=116.0|width=657|height=100|scale9r=10|scale9l=10|esc=0|img=public/haha/1900000600.png|scale9b=10|scale9t=10>
+<Img|x=468.0|y=216.0|width=442|height=315|esc=0|img=public/haha/1900012104.png>
+<Img|x=375.0|y=161.0|width=400|scale9r=50|scale9l=50|esc=0|img=public/haha/common_bar006.png|scale9b=0|scale9t=0>
+<$STR(S$显示)>
+<Text|x=528.0|y=64.0|color=67|size=24|text=赞助特权>
+<RText|x=452.0|y=134.0|color=255|size=16|text=<需要/FCOLOR=255><<$STR(S$赞助真显列1)><$STR(S$货币种类)>/FCOLOR=251><即可购买<$STR(S$赞助真显列0)>/FCOLOR=255>>
+<Img|x=255.0|y=215.0|width=655|height=315|esc=0|img=public/haha/bg_yxui_1.png>
+<Img|x=277.0|y=124.0|width=90|height=85|esc=0|img=public/haha/f_000152007.png>
+<Img|x=288.0|y=129.0|width=69|height=62|esc=0|img=public/haha/<$STR(N$真实级)>.png>
+<Text|x=637.0|y=231.0|color=87|size=18|text=<$STR(S$赞助读取列0)>特权>
+
+
+[@额度串偏移]
+#IF
+CheckStringlength <$STR(S$当前货币)>/<$STR(S$赞助真显列1)> > <$STR(N$偏移初始量)>
+#ACT
+INC N$偏移初始量 1
+DEC N$额度串坐标 5
+GOTO @额度串偏移
+
+
+[@赞助条]
+#IF
+NOT SMALL U97 5
+#ACT
+MOV S$显示 <Img|x=401.0|y=171.0|width=347|scale9r=30|scale9t=0|esc=0|img=public/haha/common_bar048.png|scale9b=0|scale9l=30>
+INC S$显示 <Text|x=567.0|y=167.0|color=255|size=18|text=∞>
+INC S$显示 <Button|x=785.0|y=149.0|color=255|mimg=public/1900000661.png|size=18|pimg=public/1900000661.png|nimg=public/1900000660.png|text=立即充值|link=@充值链接>
+BREAK
+
+
+#IF
+LARGE N$货币比例 347
+#ACT
+MOV N$货币比例 347
+
+#IF
+#ACT
+MOV N$额度串坐标 543
+MOV N$偏移初始量 7
+GOTO @额度串偏移
+MOV S$显示 <Img|x=401.0|y=171.0|width=<$STR(N$货币比例)>|scale9r=30|scale9t=0|esc=0|img=public/haha/common_bar048.png|scale9b=0|scale9l=30>
+INC S$显示 <Text|x=<$STR(N$额度串坐标)>|y=167.0|color=255|size=18|text=<$STR(S$当前货币)>/<$STR(S$赞助真显列1)>>
+
+#IF
+NOT SMALL S$当前货币 <$STR(S$赞助读取列1)>
+#ACT
+INC S$显示 <Button|x=785.0|y=149.0|color=255|size=18|nimg=public/1900000660.png|text=开通特权|link=@开通特权>
+#ELSEACT
+INC S$显示 <Button|x=785.0|y=149.0|color=255|size=18|nimg=public/1900000660.png|text=立即充值|link=@充值链接>
+
+[@赞助奖品FOR]
+#IF
+NOT EQUAL S$奖品分割串
+#ACT
+GetValidstr <$STR(S$奖品分割串)> & S$分割结果 S$奖品分割串
+;GetValidstr <$STR(S$分割结果)> * S$分割id0 S$分割结果
+GetValidstr <$STR(S$分割结果)> * S$分割key S$分割结果
+GetDBItemFieldValue <$STR(S$分割key)> idx S$分割id
+;SENDMSG 6 人物:<$STR(S$分割id)>
+MOV N$框坐标 
+INC S$显示 <Img|x=<$STR(N$物品框X坐标)>|y=398.0|img=public/1900000651_3.png>
+INC S$显示 <ItemShow|x=<$STR(N$物品X坐标)>|y=400.0|width=70|height=70|itemid=<$STR(S$分割id)>|itemcount=<$STR(S$分割结果)>|showtips=1|bgtype=0>
+INC N$物品框X坐标 70
+INC N$物品X坐标 70
+GOTO @赞助奖品FOR
+
+
+[@赞助特权FOR]
+#IF
+NOT EQUAL S$特权分割串
+#ACT
+GetValidstr <$STR(S$特权分割串)> & S$特权内容 S$特权分割串
+INC S$显示 <RText|x=547.0|y=<$STR(N$特权Y坐标)>|color=255|size=16|text=<<$STR(N$特权序号)>）/FCOLOR=251><$STR(S$特权内容)>>
+INC N$特权Y坐标 23
+INC N$特权序号 1
+GOTO @赞助特权FOR
+
+
+[@赞助翻页]
+#IF
+EQUAL S$赞助翻 上
+LARGE N$赞助查看页 1
+#ACT
+DEC N$赞助查看页 1
+GOTO @赞助页面
+BREAK
+
+#IF
+EQUAL S$赞助翻 下
+SMALL N$赞助查看页 4
+#ACT
+INC N$赞助查看页 1
+GOTO @赞助页面
+BREAK
+
+[@领取赞助奖励]
+#IF
+CheckHumBag <$USERNAME> < 10
+#ACT
+MESSAGEBOX 请先将背包预留10个空位。
+BREAK
+
+#IF
+EQUAL <$STR(N$赞助查看页)> 1
+#ACT
+GOTO @领奖1
+BREAK
+#IF
+EQUAL <$STR(N$赞助查看页)> 2
+#ACT
+GOTO @领奖2
+BREAK
+#IF
+EQUAL <$STR(N$赞助查看页)> 3
+#ACT
+GOTO @领奖3
+BREAK
+#IF
+EQUAL <$STR(N$赞助查看页)> 4
+#ACT
+GOTO @领奖4
+BREAK
+;#IF
+;EQUAL <$STR(N$赞助查看页)> 5
+;#ACT
+;GOTO @领奖5
+;BREAK
+
+;[@派奖]
+;#IF
+;NOT EQUAL S$派奖串
+;#ACT
+;GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+;GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+;GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+;GIVE <$STR(S$奖品key)> <$STR(S$奖品count)>
+;SENDMSG 7 获得<$STR(S$奖品key)>x<$STR(S$奖品count)>
+;GOTO @派奖
+
+
+[@领奖1]
+#if
+CheckHumBag <$USERNAME> < 10
+#act
+messagebox 包裹空位不足10格！
+break
+#IF
+CHECK [001] 1
+#ACT
+SENDMSG 5 该奖励您已领取过了。
+BREAK
+#IF
+SMALL U97 1
+#ACT
+SENDMSG 5 您尚未开通该特权。
+BREAK
+#ELSEACT
+GetListStringEx ..\QuestDiary\表格文件\赞助表格.txt 1 S$赞助领奖列 #
+MOV S$派奖串 <$STR(S$赞助领奖列2)>
+SET [001] 1
+
+;此处不用循环为了避免有抓包直呼for，以逃避条件的可能性
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+;GIVE <$STR(S$奖品key)> <$STR(S$奖品count)>
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+#ACT
+
+SENDMSG 5 恭喜你，成功领取<$STR(S$赞助领奖列0)>奖励。
+GOTO @赞助系统
+
+
+[@领奖2]
+#if
+CheckHumBag <$USERNAME> < 10
+#act
+messagebox 包裹空位不足10格！
+break
+#IF
+CHECK [002] 1
+#ACT
+SENDMSG 5 该奖励您已领取过了。
+BREAK
+#IF
+SMALL U97 2
+#ACT
+SENDMSG 5 您尚未开通该特权。
+BREAK
+#ELSEACT
+GetListStringEx ..\QuestDiary\表格文件\赞助表格.txt 2 S$赞助领奖列 #
+MOV S$派奖串 <$STR(S$赞助领奖列2)>
+SET [002] 1
+;此处不用循环为了避免有抓包直呼for，以逃避条件的可能性
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+
+#IF
+#ACT
+SENDMSG 5 恭喜你，成功领取<$STR(S$赞助领奖列0)>奖励。
+GOTO @赞助系统
+
+
+[@领奖3]
+#if
+CheckHumBag <$USERNAME> < 10
+#act
+messagebox 包裹空位不足10格！
+break
+#IF
+CHECK [003] 1
+#ACT
+SENDMSG 5 该奖励您已领取过了。
+BREAK
+#IF
+SMALL U97 3
+#ACT
+SENDMSG 5 您尚未开通该特权。
+BREAK
+#ELSEACT
+GetListStringEx ..\QuestDiary\表格文件\赞助表格.txt 3 S$赞助领奖列 #
+MOV S$派奖串 <$STR(S$赞助领奖列2)>
+SET [003] 1
+;此处不用循环为了避免有抓包直呼for，以逃避条件的可能性
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+#ACT
+SENDMSG 5 恭喜你，成功领取<$STR(S$赞助领奖列0)>奖励。
+GOTO @赞助系统
+
+
+[@领奖4]
+#if
+CheckHumBag <$USERNAME> < 10
+#act
+messagebox 包裹空位不足10格！
+break
+#IF
+CHECK [004] 1
+#ACT
+SENDMSG 5 该奖励您已领取过了。
+BREAK
+#IF
+SMALL U97 4
+#ACT
+SENDMSG 5 您尚未开通该特权。
+BREAK
+#ELSEACT
+GetListStringEx ..\QuestDiary\表格文件\赞助表格.txt 4 S$赞助领奖列 #
+MOV S$派奖串 <$STR(S$赞助领奖列2)>
+SET [004] 1
+;此处不用循环为了避免有抓包直呼for，以逃避条件的可能性
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+#ACT
+SENDMSG 5 恭喜你，成功领取<$STR(S$赞助领奖列0)>奖励。
+GOTO @赞助系统
+
+
+[@领奖5]
+#if
+CheckHumBag <$USERNAME> < 10
+#act
+messagebox 包裹空位不足10格！
+break
+#IF
+CHECK [005] 1
+#ACT
+SENDMSG 5 该奖励您已领取过了。
+BREAK
+#IF
+SMALL U97 5
+#ACT
+SENDMSG 5 您尚未开通该特权。
+BREAK
+#ELSEACT
+GetListStringEx ..\QuestDiary\表格文件\赞助表格.txt 5 S$赞助领奖列 #
+MOV S$派奖串 <$STR(S$赞助领奖列2)>
+SET [005] 1
+;此处不用循环为了避免有抓包直呼for，以逃避条件的可能性
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+NOT EQUAL S$派奖串
+#ACT
+GetValidstr <$STR(S$派奖串)> & S$奖品串 S$派奖串
+;GetValidstr <$STR(S$奖品串)> * S$奖品id S$奖品串
+GetValidstr <$STR(S$奖品串)> * S$奖品key S$奖品串
+GetDBItemFieldValue <$STR(S$奖品key)> idx S$奖品id
+GetValidstr <$STR(S$奖品串)> * S$奖品count S$奖品串
+GiveStateItem <$STR(S$奖品key)> <$STR(S$奖品count)> 0 1 0 0 1 1 1 1
+#IF
+#ACT
+SENDMSG 5 恭喜你，成功领取<$STR(S$赞助领奖列0)>奖励。
+GOTO @赞助系统
+
+
+
+
+[@开通特权]
+#IF
+NOT SMALL U97 <$STR(N$真实级)>
+#ACT
+SENDMSG 6 您已购买过该特权。
+BREAK
+#IF
+CHECKMONEY <$STR(S$货币种类)> < <$STR(S$赞助真显列1)>
+#ACT
+MESSAGEBOX <$STR(S$货币种类)>数量不足，无法开通该特权。
+BREAK
+#ELSEACT
+MONEY <$STR(S$货币种类)> - <$STR(S$赞助真显列1)>
+INC U97 1
+GOTO @特权属性加成
+MESSAGEBOX 恭喜你成功开通<$STR(S$赞助真显列0)>
+GOTO @赞助系统
+
+[@特权属性加成]
+#IF
+#ACT
+;#CALL [\属性加成\动态属性加成.txt] @玩家属性计算
+
+;DELAYGOTO 500 @延迟开启特效
+goto @延迟开启特效
+[@延迟开启特效]
+#if
+#act
+#CALL [\顶戴花翎\称号类特效.txt] @开启特效
+
+[@会员每日限购]
+#IF
+NOT LARGE U97 0 
+#ACT
+MESSAGEBOX 您的赞助等级尚未达标。
+BREAK
+
+#IF
+CheckHumBag <$USERNAME> < 3
+#ACT
+MESSAGEBOX 请先将背包预留3个空位。
+BREAK
+
+
+#IF
+NOT SMALL U98 <$STR(S$限购上限)>
+#ACT
+MESSAGEBOX 您今日已达到限购上限，无法继续购买此商品。
+BREAK
+
+#IF
+CHECKMONEY <$STR(S$货币种类)> < <$STR(N$限购价格)>
+#ACT
+MESSAGEBOX <$STR(S$货币种类)>数量不足，无法购买限购商品。
+BREAK
+#ELSEACT
+INC U98 1
+MONEY <$STR(S$货币种类)> - <$STR(N$限购价格)>
+;GIVE <$STR(S$限购key)> <$STR(S$限购count)>
+GiveStateItem <$STR(S$限购key)> <$STR(S$限购count)> 0 1 0 0 1 1 1 1
+MESSAGEBOX 恭喜你成功购买：<$STR(S$限购key)>x<$STR(S$限购count)>
+SENDMSG 6 今日限购状态：<$STR(U98)>/<$STR(S$限购上限)>次
+GOTO @赞助系统
+
+[@领奖按钮]
+#IF
+CHECK [001] 1
+EQUAL N$赞助查看页 1
+#ACT
+INC S$显示 <Img|x=638.0|y=476.0|width=106|height=40|img=public/1900000661.png>
+INC S$显示 <Text|x=663.0|y=483.0|color=159|size=18|text=已领取>
+BREAK
+#IF
+CHECK [002] 1
+EQUAL N$赞助查看页 2
+#ACT
+INC S$显示 <Img|x=638.0|y=476.0|width=106|height=40|img=public/1900000661.png>
+INC S$显示 <Text|x=663.0|y=483.0|color=159|size=18|text=已领取>
+BREAK
+#IF
+CHECK [003] 1
+EQUAL N$赞助查看页 3
+#ACT
+INC S$显示 <Img|x=638.0|y=476.0|width=106|height=40|img=public/1900000661.png>
+INC S$显示 <Text|x=663.0|y=483.0|color=159|size=18|text=已领取>
+BREAK
+
+#IF
+CHECK [004] 1
+EQUAL N$赞助查看页 4
+#ACT
+INC S$显示 <Img|x=638.0|y=476.0|width=106|height=40|img=public/1900000661.png>
+INC S$显示 <Text|x=663.0|y=483.0|color=159|size=18|text=已领取>
+BREAK
+
+#IF
+CHECK [005] 1
+EQUAL N$赞助查看页 5
+#ACT
+INC S$显示 <Img|x=638.0|y=476.0|width=106|height=40|img=public/1900000661.png>
+INC S$显示 <Text|x=663.0|y=483.0|color=159|size=18|text=已领取>
+BREAK
+
+#IF
+SMALL U97 <$STR(N$赞助查看页)>
+#ACT
+INC S$显示 <Img|x=638.0|y=476.0|width=106|height=40|img=public/1900000661.png>
+INC S$显示 <Text|x=663.0|y=483.0|color=159|size=18|text=未开通>
+BREAK
+
+
+#ELSEACT
+INC S$显示 <Button|x=638.0|y=476.0|color=255|nimg=public/1900000660.png|text=领取奖励|link=@领取赞助奖励#领奖序=<$STR(N$赞助查看页)>>
+
+}

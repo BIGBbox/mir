@@ -1,0 +1,116 @@
+[@main]
+
+#if
+not equal U108 6
+not equal U108 7
+#act
+messagebox 勇士,请依次完成完成任务!!
+break
+
+#if
+equal U108 6
+#act
+mov S$任务状态 10W经验,新手衣服,新手鞋子/FCOLOR=250
+DELAYGOTO 10 @训练师
+
+#if
+equal U108 7
+#act
+mov S$任务状态 10W经验,退魔权杖,新手腰带,盟重回城石,随机传送石,初级称号证明*5,10W元宝/FCOLOR=250
+DELAYGOTO 10 @训练师
+
+
+
+[@训练师]
+
+#If
+equal U108 6
+#act
+#say
+
+<Text|a=0|x=20|y=20|color=255|tips=|tipsx=10|tipsy=80|size=18|text=出门前老父亲说黄历不宜出门...\不听老人言,吃亏在眼前>
+<RText|a=0|x=20|y=95|size=18|text=<奖励:/FCOLOR=250><<$STR(S$任务状态)>>>
+<Button|id=click_btn1|x=25|y=125|nimg=public/0.png|pimg=public/0.png|text=完成任务|color=251|link=@训练师任务>
+#IF
+equal U108 6
+#ACT
+Navigation 0 click_btn1 点击完成任务
+
+
+#If
+equal U108 7
+#act
+#say
+<Text|a=0|x=20|y=20|color=255|tips=|tipsx=10|tipsy=80|size=18|text=还好您来救了我.\对了,前面有个搜查官不知道在找些什么>
+<RText|a=0|x=20|y=95|size=18|text=<奖励:/FCOLOR=250><<$STR(S$任务状态)>>>
+<Button|id=click_btn1|x=25|y=125|nimg=public/0.png|pimg=public/0.png|text=完成任务|color=251|link=@训练师任务>
+
+#IF
+equal U108 7
+#ACT
+Navigation 0 click_btn1 点击完成任务
+
+
+[@训练师任务]
+
+#or
+equal U108 6
+equal U108 7
+
+#act
+goto @领取奖励
+
+#elseact
+messagebox 尊敬的勇士,你已经做过这个任务了!!
+break
+
+
+[@领取奖励]
+
+;;;;挂机引导奖励
+
+#if
+equal U108 6
+#act
+;mov U108 7
+NEWCOMPLETETASK 6
+NEWDELETETASK 6
+
+CHANGEEXP + 100000
+GIVE 新手衣服 1
+GIVE 新手鞋子 1
+sendmsg 7 完成任务了!!
+StartAutoPlayGame
+
+NEWPICKTASK 7
+NEWCHANGETASK 7 1
+;mapmove 新手训练营 18 23
+;OPENNPCSHOWEX 68
+close
+break
+
+;#CALL [\任务系统\任务文本.txt] @接取任务
+
+;;;;新手训练营挂机打怪升级奖励
+#if
+equal U108 7
+#act
+mov U108 8
+
+NEWCOMPLETETASK 7
+NEWDELETETASK 7
+
+CHANGEEXP + 100000
+money 元宝 + 100000
+GIVE 退魔权杖 1
+GIVE 新手腰带 1
+GIVE 盟重回城石 1
+GIVE 随机传送石 1
+GIVE 初级称号证明 5
+
+sendmsg 7 完成任务了!!
+#CALL [\任务系统\任务文本.txt] @接取任务
+close
+mapmove 天下主城 116 108
+OPENNPCSHOWEX 18
+close

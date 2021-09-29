@@ -1,0 +1,70 @@
+<Img|x=0.0|y=0.0|width=750|height=395|scale9r=50|scale9l=50|scale9t=50|img=public/1900000610.png|reset=1|move=0|bg=1|scale9b=50>
+<Layout|x=712.0|y=0.0|width=80|height=80|link=@exit>
+<Button|x=740.0|y=10.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=60|color=255|tips=|tipsx=10|tipsy=80|size=18|text=()>
+<Text|a=0|x=32|y=80|color=255|tips=|tipsx=10|tipsy=80|size=18|text=%100>
+<Text|a=0|x=32|y=100|color=255|tips=|tipsx=10|tipsy=80|size=18|text=[@MAIN]>
+<Text|a=0|x=32|y=120|color=255|tips=|tipsx=10|tipsy=80|size=18|text=#IF>
+<Text|a=0|x=32|y=140|color=255|tips=|tipsx=10|tipsy=80|size=18|text=#ACT>
+<Text|a=0|x=32|y=160|color=255|tips=|tipsx=10|tipsy=80|size=18|text=#IF>
+<Text|a=0|x=32|y=180|color=255|tips=|tipsx=10|tipsy=80|size=18|text=CHECKSTRINGLENGTH <$STR(T8)> >
+<Text|a=0|x=32|y=200|color=255|tips=|tipsx=10|tipsy=80|size=18|text=#ACT>
+<Text|a=0|x=32|y=220|color=255|tips=|tipsx=10|tipsy=80|size=18|text=#SAY>
+<Text|a=0|x=32|y=260|color=151|tips=|tipsx=10|tipsy=80|size=18|text=尊敬的玩家：>
+<Text|a=0|x=175|y=260|color=255|tips=|tipsx=10|tipsy=80|size=18|text=〖您的帐号存在被盗风险〗>
+<Text|a=0|x=32|y=280|color=91|tips=|tipsx=10|tipsy=80|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=300|color=161|tips=|tipsx=10|tipsy=80|size=18|text=1、可输入汉字`字符`符号等,一个汉字为2个字符,可输入6-8个字符！>
+<Text|a=0|x=32|y=320|color=161|tips=|tipsx=10|tipsy=80|size=18|text=2、密保功能一旦开启永久生效，合区无任何影响，不需要重新设置！>
+<Text|a=0|x=32|y=340|color=161|tips=|tipsx=10|tipsy=80|size=18|text=3、设置密保后每次登录IP和机器变化后上线都需要验证，不输入掉线处理！>
+<Text|a=0|x=32|y=360|color=255|tips=|tipsx=10|tipsy=80|size=18|text=4、为了您的装备和货币，建议您设置二级密码，有效防止盗号！/AUTOCOLOR161>
+<Text|a=0|x=32|y=380|color=91|tips=|tipsx=10|tipsy=80|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=400|color=251|tips=|tipsx=10|tipsy=80|size=18|text=设置二级密码|link=@@INPUTSTRING1>
+<Text|a=0|x=32|y=420|color=255|tips=|tipsx=10|tipsy=80|size=18|text=[@INPUTSTRING1]>
+<Text|a=0|x=32|y=440|color=255|tips=|tipsx=10|tipsy=80|size=18|text=#IF>
+<Text|a=0|x=32|y=460|color=255|tips=|tipsx=10|tipsy=80|size=18|text=CHECKSTRINGLENGTH <$STR(S1)> > 8>
+<Text|a=0|x=32|y=480|color=255|tips=|tipsx=10|tipsy=80|size=18|text=#ACT>
+<Text|a=0|x=32|y=500|color=255|tips=|tipsx=10|tipsy=80|size=18|text=MESSAGEBOX 密码位数大于了八位，请重新输入！←密码过于复杂.\\可以输入汉字、字母、数字、符号等！\\一个汉字为2个字符，可输入6-8个字符！>
+<Text|a=0|x=32|y=520|color=255|tips=|tipsx=10|tipsy=80|size=18|text=BREAK>
+<Text|a=0|x=32|y=540|color=255|tips=|tipsx=10|tipsy=80|size=18|text=#IF>
+<Text|a=0|x=32|y=560|color=255|tips=|tipsx=10|tipsy=80|size=18|text=CHECKSTRINGLENGTH <$STR(S1)> >
+<Text|a=0|x=32|y=580|color=255|tips=|tipsx=10|tipsy=80|size=18|text=#ACT>
+<Text|a=0|x=32|y=600|color=255|tips=|tipsx=10|tipsy=80|size=18|text=MESSAGEBOX 密码位数小于了六位，请重新输入！←密码过于简单.\\可以输入汉字、字母、数字、符号等！\\一个汉字为2个字符，可输入6-8个字符！>
+<Text|a=0|x=32|y=620|color=255|tips=|tipsx=10|tipsy=80|size=18|text=BREAK>
+<Text|a=0|x=32|y=640|color=255|tips=|tipsx=10|tipsy=80|size=18|text=#IF>
+<Text|a=0|x=32|y=660|color=255|tips=|tipsx=10|tipsy=80|size=18|text=#ACT>
+<Text|a=0|x=32|y=680|color=255|tips=|tipsx=10|tipsy=80|size=18|text=MOV T9 <$STR(S1)>>
+<Text|a=0|x=32|y=700|color=255|tips=|tipsx=10|tipsy=80|size=18|text=GOTO @设置2>
+<Text|a=0|x=32|y=720|color=255|tips=|tipsx=10|tipsy=80|size=18|text=BREAK>
+<Text|a=0|x=32|y=740|color=255|tips=|tipsx=10|tipsy=80|size=18|text=[@设置2]>
+<Text|a=0|x=32|y=760|color=255|tips=|tipsx=10|tipsy=80|size=18|text=#SAY>
+<Text|a=0|x=32|y=800|color=154|tips=|tipsx=10|tipsy=80|size=18|text=安全大使>
+<Text|a=0|x=32|y=820|color=19|tips=|tipsx=10|tipsy=80|size=18|text=安全大使>
+<Text|a=0|x=131|y=820|color=151|tips=|tipsx=10|tipsy=80|size=18|text=尊敬的游戏玩家,您好>
+<Text|a=0|x=351|y=820|color=87|tips=|tipsx=10|tipsy=80|size=18|text=〖请再次输入您的二级密码〗>
+<Text|a=0|x=43|y=840|color=91|tips=|tipsx=10|tipsy=80|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=860|color=151|tips=|tipsx=10|tipsy=80|size=18|text=1.请再次>
+<Text|a=0|x=120|y=860|color=255|tips=|tipsx=10|tipsy=80|size=18|text=输入你的>
+<Text|a=0|x=208|y=860|color=210|tips=|tipsx=10|tipsy=80|size=18|text=6-8位字符>
+<Text|a=0|x=307|y=860|color=255|tips=|tipsx=10|tipsy=80|size=18|text=密码后点确认.   >
+<Text|a=0|x=483|y=860|color=255|tips=|tipsx=10|tipsy=80|size=18|text=注意:不要输入错误！>
+<Text|a=0|x=32|y=880|color=154|tips=|tipsx=10|tipsy=80|size=18|text=2.当前步骤：>
+<Text|a=0|x=164|y=880|color=255|tips=|tipsx=10|tipsy=80|size=18|text=核对二级密码 需与第一次输入的密码一致>
+<Text|a=0|x=32|y=900|color=91|tips=|tipsx=10|tipsy=80|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=920|color=251|tips=|tipsx=10|tipsy=80|size=18|text=再次确定二级密码|link=@@INPUTSTRING5>
+<Text|a=0|x=32|y=940|color=255|tips=|tipsx=10|tipsy=80|size=18|text=[@INPUTSTRING5]>
+<Text|a=0|x=32|y=960|color=255|tips=|tipsx=10|tipsy=80|size=18|text=#IF>
+<Text|a=0|x=32|y=980|color=255|tips=|tipsx=10|tipsy=80|size=18|text=EQUAL T9 <$STR(S5)>>
+<Text|a=0|x=32|y=1000|color=255|tips=|tipsx=10|tipsy=80|size=18|text=#ACT>
+<Text|a=0|x=32|y=1020|color=255|tips=|tipsx=10|tipsy=80|size=18|text=MOV T8 <$STR(T9)>>
+<Text|a=0|x=32|y=1040|color=255|tips=|tipsx=10|tipsy=80|size=18|text=MOV T7 <$IPADDR>>
+<Text|a=0|x=32|y=1060|color=255|tips=|tipsx=10|tipsy=80|size=18|text=MOV T10 <$MACHINEID>>
+<Text|a=0|x=32|y=1080|color=255|tips=|tipsx=10|tipsy=80|size=18|text=MOV T9>
+<Text|a=0|x=32|y=1100|color=255|tips=|tipsx=10|tipsy=80|size=18|text=SENDMSG 6 <$STR(T8)>>
+<Text|a=0|x=32|y=1120|color=255|tips=|tipsx=10|tipsy=80|size=18|text=CALCVAR HUMAN 二级密码 = <$STR(T8)>>
+<Text|a=0|x=32|y=1140|color=255|tips=|tipsx=10|tipsy=80|size=18|text=SAVEVAR HUMAN 二级密码>
+<Text|a=0|x=32|y=1160|color=255|tips=|tipsx=10|tipsy=80|size=18|text=MESSAGEBOX \【设置密码成功，请牢记您的密码：[<$STR(T8)>]】下次登陆时生效！>
+<Text|a=0|x=32|y=1180|color=255|tips=|tipsx=10|tipsy=80|size=18|text=#ELSEACT>
+<Text|a=0|x=32|y=1200|color=255|tips=|tipsx=10|tipsy=80|size=18|text=MOV T9>
+<Text|a=0|x=32|y=1220|color=255|tips=|tipsx=10|tipsy=80|size=18|text=MESSAGEBOX \设置失败：\\您两次输入的密码不一致！\\请重新输入二级密码后确认！>
+<Text|a=0|x=32|y=1240|color=255|tips=|tipsx=10|tipsy=80|size=18|text=GOTO @MAIN>
+<Text|a=0|x=32|y=1260|color=255|tips=|tipsx=10|tipsy=80|size=18|text=BREAK>

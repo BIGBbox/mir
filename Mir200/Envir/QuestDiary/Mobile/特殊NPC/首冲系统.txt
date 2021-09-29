@@ -1,0 +1,232 @@
+
+[@首冲系统]
+{
+
+#IF
+check [609] 0
+#act
+set [609] 1
+goto @展开
+#IF
+CHECK [6] 1
+CHECK [7] 1
+CHECK [8] 1
+#ACT
+messagebox 您已领取了所有的充值礼包！
+close
+
+#IF
+#ACT
+;面板居中
+mov N$moveX <$SCREENWIDTH>
+mov N$moveY <$SCREENHEIGHT>
+
+mov N$SizeX 781
+mov N$SizeY 555
+dec N$moveX N$SizeX
+dec N$moveY N$SizeY
+div N$moveX 2
+div N$moveY 2
+
+dec N$moveX 80
+dec N$moveY 30
+mov N$按钮 N$SizeX
+dec N$按钮 112
+mov N$按钮0 N$SizeX
+dec N$按钮0 122
+
+#IF
+CHECK [6] 0
+#ACT
+mov S$首冲展示页 1
+
+#IF
+CHECK [6] 1
+CHECK [7] 0
+#ACT
+mov S$首冲展示页 2
+
+#IF
+CHECK [6] 1
+CHECK [7] 1
+#ACT
+mov S$首冲展示页 3
+
+#IF
+#ACT
+GOTO @首冲显示面板
+
+[@首冲显示面板]
+#IF
+#ACT
+;SENDMSG 6 读取首充数据
+;mov S$文字颜色 7
+ReadConfigFileItem ..\QuestDiary\表格文件\首冲表格.txt  第1档 按钮描述 S$首冲按钮描述1
+ReadConfigFileItem ..\QuestDiary\表格文件\首冲表格.txt  第2档 按钮描述 S$首冲按钮描述2
+ReadConfigFileItem ..\QuestDiary\表格文件\首冲表格.txt  第3档 按钮描述 S$首冲按钮描述3
+#IF
+#ACT
+GOTO @读取首充数据
+;1900000610
+#SAY
+<Img|children=bg1,btn1,btn2,btn3,btn4,page1,page2,page3,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17|x=<$STR(N$moveX)>|y=<$STR(N$moveY)>|width=<$STR(N$SizeX)>|height=<$STR(N$SizeY)>|show=0|esc=1|bg=1|move=0|loadDelay=1|img=public/NewUI/bg1.png>
+;<Img|children=bg1,btn1,btn2,btn3,btn4,page1,page2,page3,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17|x=<$STR(N$moveX)>|y=<$STR(N$moveY)>|width=<$STR(N$SizeX)>|height=<$STR(N$SizeY)>|show=0|esc=1|bg=1|move=0|loadDelay=1|img=public/1900000610.png>
+<Layout|id=btn1|x=<$STR(N$按钮0)>|y=100.0|width=80|height=80|link=@exit>
+<Button|id=btn2|x=<$STR(N$按钮)>|y=110.0|nimg=public/NewUI/close.png|link=@exit>
+
+<Button|id=page1|x=360|y=200|color=151|text=<$STR(S$首冲按钮描述1)>|nimg=public/NewUI/left1.png|pimg=public/NewUI/left2.png|link=@首冲显示面板#首冲展示页=1>
+<Button|id=page2|x=480|y=200|color=151|text=<$STR(S$首冲按钮描述2)>|nimg=public/NewUI/center1.png|pimg=public/NewUI/center2.png|link=@首冲显示面板#首冲展示页=2>
+<Button|id=page3|x=600|y=200|color=151|text=<$STR(S$首冲按钮描述3)>|nimg=public/NewUI/right1.png|pimg=public/NewUI/right2.png|link=@首冲显示面板#首冲展示页=3>
+
+<$STR(S$首充显示)>
+
+
+[@首充领奖]
+#IF
+equal U99 0
+#ACT
+messagebox  你还没有充值过，不能领取该奖励！
+BREAK
+;奖励组
+#IF
+#ACT
+ReadConfigFileItem ..\QuestDiary\表格文件\首冲表格.txt  第<$STR(S$奖励组)>档 标记 N$首冲标记0
+ReadConfigFileItem ..\QuestDiary\表格文件\首冲表格.txt  第<$STR(S$奖励组)>档 金额 N$首冲金额0
+;mul N$首冲金额0 100
+
+#IF
+CHECK [<$STR(N$首冲标记0)>] 1
+#ACT
+messagebox 你已领取过该奖励了！
+BREAK
+
+#IF
+small U99 <$STR(N$首冲金额0)>
+#ACT
+sendmsg 5 <$STR(U99)>
+messagebox 你当前充值金额不足，领取失败！！！
+BREAK
+
+#IF
+CheckHumBag <$USERNAME> < 5
+#ACT
+MESSAGEBOX 请先将背包预留5个空位。
+BREAK
+
+#IF
+#ACT
+ReadConfigFileItem ..\QuestDiary\表格文件\首冲表格.txt  第<$STR(S$奖励组)>档 奖励 S$首冲道具串
+;GetListString ..\QuestDiary\表格文件\首冲表格.txt 1 S$首冲道具串
+
+;SENDMSG 5 准备循环。
+GOTO @首冲奖励道具FOR
+SET [<$STR(N$首冲标记0)>] 1
+SENDMSG 6 领取首充奖励!
+SENDMOVEMSG 0 251 0 150 1 恭喜玩家{【<$USERNAME>】/FCOLOR=249}领取了首冲奖励！
+SENDMOVEMSG 0 251 0 300 1 恭喜玩家{【<$USERNAME>】/FCOLOR=249}领取了首冲奖励！
+SENDMOVEMSG 0 251 0 450 1 恭喜玩家{【<$USERNAME>】/FCOLOR=249}领取了首冲奖励！
+
+goto @展开
+goto @首冲系统
+
+;#CALL [\图标触发\图标红点系统.txt] @红点系统
+
+;Close
+;GOTO @首冲显示面板
+
+[@首冲奖励道具FOR]
+#IF
+NOT EQUAL S$首冲道具串
+#ACT
+GetValidstr <$STR(S$首冲道具串)> & S$分割结果 S$首冲道具串
+GetValidstr <$STR(S$分割结果)> * S$分割key S$分割结果
+;GIVE <$STR(S$分割key)> <$STR(S$分割结果)>
+GiveStateItem <$STR(S$分割key)> <$STR(S$分割结果)> 0 1 0 0 1 1 1 1
+
+GOTO @首冲奖励道具FOR
+
+[@读取首充数据]
+#if
+#ACT
+mov S$首充显示
+
+#IF
+equal <$STR(S$首冲展示页)> 1
+#ACT
+INC S$首充显示 <Img|id=11|x=367.0|y=255.0|color=159|img=public/NewUI/text1.png>
+
+#IF
+#ACT
+ReadConfigFileItem ..\QuestDiary\表格文件\首冲表格.txt  第<$STR(S$首冲展示页)>档 金额 N$首冲金额
+
+#IF
+equal <$STR(S$首冲展示页)> 2
+#ACT
+INC S$首充显示 <Img|id=11|children=11_1|x=367.0|y=255.0|color=159|img=public/NewUI/text2.png>
+inc S$首充显示 <TextAtlas|id=11_1|x=145.0|y=-5|img=public/NewUI/number1.png|schar=0|iheight=50|iwidth=31|text=<$STR(N$首冲金额)>>
+
+#IF
+equal <$STR(S$首冲展示页)> 3
+#ACT
+INC S$首充显示 <Img|id=11|children=11_1|x=367.0|y=255.0|color=159|img=public/NewUI/text2.png>
+inc S$首充显示 <TextAtlas|id=11_1|x=145.0|y=-5|img=public/NewUI/number1.png|schar=0|iheight=50|iwidth=31|text=<$STR(N$首冲金额)>>
+
+
+#IF
+#ACT
+;sendmsg 5 第<$STR(S$首冲展示页)>档
+;GetListString ..\QuestDiary\表格文件\首冲表格.txt 1 S$首冲道具串
+
+ReadConfigFileItem ..\QuestDiary\表格文件\首冲表格.txt  第<$STR(S$首冲展示页)>档 奖励 S$首冲道具串
+ReadConfigFileItem ..\QuestDiary\表格文件\首冲表格.txt  第<$STR(S$首冲展示页)>档 标记 N$首冲标记
+ReadConfigFileItem ..\QuestDiary\表格文件\首冲表格.txt  第<$STR(S$首冲展示页)>档 金额 N$首冲金额
+
+mov N$道具框id 2
+mov N$物品框X坐标 355
+GOTO @首冲道具FOR
+
+#IF
+small U99 <$STR(N$首冲金额)>
+#ACT
+INC S$首充显示 <Button|id=12|x=433.0|y=440.0|children=12_1|color=255|size=18|nimg=public/NewUI/btn1.png|link=@充值链接>
+INC S$首充显示 <Img|id=12_1|x=35.0|y=25.0|color=159|img=public/NewUI/chongzhi.png>
+
+#IF
+CHECK [<$STR(N$首冲标记)>] 1
+#ACT
+INC S$首充显示 <Button|id=12|children=12_1|x=433.0|y=440.0|color=249|size=25|nimg=public/NewUI/btn1.png>
+inc S$首充显示 <Text|id=12_1|x=74.0|y=30.0|color=250|size=22|outlinecolor=0|outline=1|text=已领取>
+;INC S$首充显示 <Img|id=12_1|x=35.0|y=25.0|color=159|img=public/NewUI/lingqu.png>
+break
+
+
+#IF
+not small U99 <$STR(N$首冲金额)>
+CHECK [<$STR(N$首冲标记)>] 0
+#ACT
+INC S$首充显示 <Button|id=12|x=433.0|y=440.0|children=12_1|color=255|size=18|nimg=public/NewUI/btn1.png|link=@首充领奖#奖励组=<$STR(S$首冲展示页)>>
+INC S$首充显示 <Img|id=12_1|x=35.0|y=25.0|color=159|img=public/NewUI/lingqu.png>
+
+
+[@首冲道具FOR]
+#IF
+NOT EQUAL S$首冲道具串
+#ACT
+GetValidstr <$STR(S$首冲道具串)> & S$分割结果 S$首冲道具串
+GetValidstr <$STR(S$分割结果)> * S$分割key S$分割结果
+GetDBItemFieldValue <$STR(S$分割key)> idx S$分割id
+;SENDMSG 6 人物:<$STR(S$分割id)>
+
+INC S$首充显示 <Img|id=<$STR(N$道具框id)>|children=<$STR(N$道具框id)>_1|x=<$STR(N$物品框X坐标)>|y=362.0|img=public/1900000651_3.png>
+INC S$首充显示 <ItemShow|id=<$STR(N$道具框id)>_1|x=2|y=2.0|width=70|height=70|itemid=<$STR(S$分割id)>|itemcount=<$STR(S$分割结果)>|showtips=1|bgtype=0>
+INC N$物品框X坐标 76
+inc N$道具框id 1
+GOTO @首冲道具FOR
+
+
+;[@充值链接]
+;#IF
+;#ACT
+;SENDMSG 5 充值链接待补充！。
+
+}

@@ -1,0 +1,374 @@
+[@main]
+
+#if
+CheckBoxItemCount 3
+#elseact
+mov s$宝石可镶嵌什么
+
+#if
+#act
+#say
+\ \ \ \ \ \ \
+\                                                               <注意事项：/FCOLOR=249>
+\                                                      <1、/FCOLOR=249> <只有武器衣服可以镶嵌宝石/FCOLOR=250> \
+\                                                      <2、/FCOLOR=249> <镶嵌其他宝石请摘下之前宝石/FCOLOR=250> \
+\                                                      <3、/FCOLOR=249> <镶嵌宝石请佩戴好武器或衣服/FCOLOR=250> \
+\ \
+<ITEMBOX:3:-1:280:125:0:45:45:46:250#在此处放入镶嵌类宝石！>\ \ \  \ \
+
+<>                <[<$str(s$宝石可镶嵌什么)>]/FCOLOR=222>\ \ \ \
+<>  <imgex:0:1386:1387:1388:-10:-10/@镶嵌武器> <imgex:0:1383:1384:1385:-10:-10/@镶嵌衣服> <imgex:0:1377:1378:1379:-10:-10/@摘取武器> <imgex:0:1380:1381:1382:-10:-10/@摘取衣服>\
+
+
+;<>       <取下武器宝石/@摘取1>        <取下衣服宝石/@摘取>
+
+;---------------------------------------------------------------------------------------------------
+;1  武器
+;16 衣服(盾牌)
+
+;勇者的祸根[银色剧情]
+;洪荒之力[金色剧情]
+;凯莎银翼[金色支线剧情]
+
+;五仁月饼[剧情]
+;焚神炎心[银色剧情]
+;太阴符纹[金色剧情]
+;極冰碎片[远古神器]
+;---------------------------------------------------------------------------------------------------
+
+
+
+[@ItemIntoBox3]
+#IF
+not equal <$BOXITEM[3].NAME> 勇者的祸根[银色剧情]
+not equal <$BOXITEM[3].NAME> 洪荒之力[金色剧情]
+not equal <$BOXITEM[3].NAME> 凯莎银翼[金色支线剧情]
+not equal <$BOXITEM[3].NAME> 五仁月饼[剧情]
+not equal <$BOXITEM[3].NAME> 焚神炎心[银色剧情]
+not equal <$BOXITEM[3].NAME> 太阴符纹[金色剧情]
+not equal <$BOXITEM[3].NAME> 極冰碎片[远古神器]
+#ACT
+ReturnBoxItem 3
+RECLAIMITEM
+MESSAGEBOX  此物品不支持镶嵌！！
+break
+
+#if
+#act
+mov s$宝石可镶嵌什么
+
+
+#or
+equal <$BOXITEM[3].NAME> 勇者的祸根[银色剧情]
+equal <$BOXITEM[3].NAME> 洪荒之力[金色剧情]
+equal <$BOXITEM[3].NAME> 凯莎银翼[金色支线剧情]
+#act
+mov s$宝石可镶嵌什么 此宝石可镶嵌衣服
+
+#or
+equal <$BOXITEM[3].NAME> 五仁月饼[剧情]
+equal <$BOXITEM[3].NAME> 焚神炎心[银色剧情]
+equal <$BOXITEM[3].NAME> 太阴符纹[金色剧情]
+equal <$BOXITEM[3].NAME> 極冰碎片[远古神器]
+#act
+mov s$宝石可镶嵌什么 <$BOXITEM[3].NAME>可镶嵌武器
+
+#if
+#act
+sendmsg 6 <$str(s$宝石可镶嵌什么)>
+
+
+#if
+#act
+goto @main
+
+
+[@ItemOutBox3]
+#if
+#act
+goto @main
+
+
+[@镶嵌武器]
+
+#or
+equal <$BOXITEM[3].NAME> 勇者的祸根[银色剧情]
+equal <$BOXITEM[3].NAME> 洪荒之力[金色剧情]
+equal <$BOXITEM[3].NAME> 凯莎银翼[金色支线剧情]
+#act
+MESSAGEBOX 镶嵌失败??\\1、此宝石属于衣服，请镶嵌在衣服上！
+BREAK
+
+
+#if
+equal <$BOXITEM[3].NAME> 五仁月饼[剧情]
+CHECKUSEITEM 1
+CheckBoxItemCount 3 1
+#act
+DELBOXITEM 3
+DRILLHOLE * * 1 * * 0 * 1 * *
+;然后镶嵌
+SOCKETABLEITEM * * * * 1 0 * * 2002 *
+MESSAGEBOX 提示：镶嵌成功！！！！
+#CALL [\属性重载\属性加成.txt] @属性设置
+#CALL [\触发系列\元素触发.txt] @元素伤害
+goto @main
+break
+
+
+#if
+equal <$BOXITEM[3].NAME> 焚神炎心[银色剧情]
+CHECKUSEITEM 1
+CheckBoxItemCount 3 1
+#act
+DELBOXITEM 3
+DRILLHOLE * * 1 * * 0 * 1 * *
+;然后镶嵌
+SOCKETABLEITEM * * * * 1 0 * * 2003 *
+MESSAGEBOX 提示：镶嵌成功！！！！
+#CALL [\属性重载\属性加成.txt] @属性设置
+#CALL [\触发系列\元素触发.txt] @元素伤害
+goto @main
+break
+
+
+#if
+equal <$BOXITEM[3].NAME> 太阴符纹[金色剧情]
+CHECKUSEITEM 1
+CheckBoxItemCount 3 1
+#act
+DELBOXITEM 3
+DRILLHOLE * * 1 * * 0 * 1 * *
+;然后镶嵌
+SOCKETABLEITEM * * * * 1 0 * * 2004 *
+MESSAGEBOX 提示：镶嵌成功！！！！
+
+#CALL [\属性重载\属性加成.txt] @属性设置
+#CALL [\触发系列\元素触发.txt] @元素伤害
+goto @main
+break
+
+#if
+equal <$BOXITEM[3].NAME> 極冰碎片[远古神器]
+CHECKUSEITEM 1
+CheckBoxItemCount 3 1
+#act
+DELBOXITEM 3
+DRILLHOLE * * 1 * * 0 * 1 * *
+;然后镶嵌
+SOCKETABLEITEM * * * * 1 0 * * 2005 *
+MESSAGEBOX 提示：镶嵌成功！！！！
+#CALL [\属性重载\属性加成.txt] @属性设置
+#CALL [\触发系列\元素触发.txt] @元素伤害
+goto @main
+break
+#elseact
+MESSAGEBOX 镶嵌失败??\\1、没有佩戴武器\\2、没有放入镶嵌宝石！
+BREAK
+
+
+[@镶嵌衣服]
+
+#or
+equal <$BOXITEM[3].NAME> 五仁月饼[剧情]
+equal <$BOXITEM[3].NAME> 焚神炎心[银色剧情]
+equal <$BOXITEM[3].NAME> 太阴符纹[金色剧情]
+equal <$BOXITEM[3].NAME> 極冰碎片[远古神器]
+#act
+MESSAGEBOX 镶嵌失败??\\1、此宝石属于武器，请镶嵌在武器上！
+BREAK
+
+
+
+#if
+CHECKSOCKETABLEITEM 16 0 N$宝石 S$宝石名称
+#act
+
+#if
+not equal S$宝石名称
+#act
+MESSAGEBOX 镶嵌失败??\\1、请先把衣服上面的宝石取下！
+break
+
+
+#if
+equal <$BOXITEM[3].NAME> 勇者的祸根[银色剧情]
+CHECKUSEITEM 16
+CheckBoxItemCount 3 1
+#act
+DELBOXITEM 3
+DRILLHOLE * * 16 * * 0 * 1 * *
+;然后镶嵌
+SOCKETABLEITEM * * * * 16 0 * * 2006 *
+MESSAGEBOX 提示：镶嵌成功！！！！
+#CALL [\属性重载\属性加成.txt] @属性设置
+goto @main
+break
+
+#if
+equal <$BOXITEM[3].NAME> 洪荒之力[金色剧情]
+CHECKUSEITEM 16
+CheckBoxItemCount 3
+#act
+DELBOXITEM 3
+DRILLHOLE * * 16 * * 0 * 1 * *
+;然后镶嵌
+SOCKETABLEITEM * * * * 16 0 * * 2007 *
+MESSAGEBOX 提示：镶嵌成功！！！！
+#CALL [\属性重载\属性加成.txt] @属性设置
+goto @main
+break
+
+#if
+equal <$BOXITEM[3].NAME> 凯莎银翼[金色支线剧情]
+CHECKUSEITEM 16
+CheckBoxItemCount 3 1
+#act
+DELBOXITEM 3
+DRILLHOLE * * 16 * * 0 * 1 * *
+;然后镶嵌
+SOCKETABLEITEM * * * * 16 0 * * 2008 *
+MESSAGEBOX 提示：镶嵌成功！！！！
+#CALL [\属性重载\属性加成.txt] @属性设置
+goto @main
+break
+#elseact
+MESSAGEBOX 镶嵌失败??\\1、没有佩戴衣服\\2、没有放入镶嵌宝石！
+BREAK
+
+
+
+
+[@摘取衣服]
+#IF
+NOT CHECKUSEITEM 16
+#ACT
+MESSAGEBOX 你没有穿衣服！
+BREAK
+
+#if
+CHECKSOCKETABLEITEM 16 0 N$衣服宝石 S$衣服宝石名称
+#act
+
+
+#IF
+EQUAL <$STR(S$衣服宝石名称)> 勇者的祸根
+#ACT
+SOCKETABLEITEM * * * * 16 0 * * 0 *
+DRILLHOLE * * 16 * * 0 * 0 * *
+give 勇者的祸根[银色剧情] 1
+mov S$衣服宝石名称
+mov N$衣服宝石 0
+goto @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+break
+
+#IF
+EQUAL <$STR(S$衣服宝石名称)> 洪荒之力
+#ACT
+SOCKETABLEITEM * * * * 16 0 * * 0 *
+DRILLHOLE * * 16 * * 0 * 0 * *
+give 洪荒之力[金色剧情] 1
+mov S$衣服宝石名称
+mov N$衣服宝石 0
+goto @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+break
+
+
+#IF
+EQUAL <$STR(S$衣服宝石名称)> 凯莎银翼
+#ACT
+SOCKETABLEITEM * * * * 16 0 * * 0 *
+DRILLHOLE * * 16 * * 0  * 0 * *
+give 凯莎银翼[金色支线剧情]
+mov S$衣服宝石名称
+mov N$衣服宝石 0
+goto @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+break
+
+
+#IF
+#ACT
+MESSAGEBOX 摘取失败??\\衣服没有镶嵌宝石！
+BREAK
+
+
+
+[@摘取武器]
+#IF
+NOT CHECKUSEITEM 1
+#ACT
+MESSAGEBOX 你没有佩戴武器！
+BREAK
+
+#if
+CHECKSOCKETABLEITEM 1 0 N$武器宝石 S$武器宝石名称
+#act
+
+#IF
+EQUAL <$STR(S$武器宝石名称)> 五仁月饼
+#ACT
+SOCKETABLEITEM * * * * 1 0 * * 0 *
+DRILLHOLE * * 1 * * 0  * 0 * *
+give 五仁月饼[剧情] 1
+mov S$武器宝石名称
+mov N$武器宝石 0
+MESSAGEBOX 摘取成功！！！
+#CALL [\属性重载\属性加成.txt] @属性设置
+#CALL [\触发系列\元素触发.txt] @元素伤害
+BREAK
+
+#IF
+EQUAL <$STR(S$武器宝石名称)> 焚神炎心
+#ACT
+SOCKETABLEITEM * * * * 1 0 * * 0 *
+DRILLHOLE * * 1 * * 0  * 0 * *
+give 焚神炎心[银色剧情] 1
+mov S$武器宝石名称
+mov N$武器宝石 0
+MESSAGEBOX 摘取成功！！！
+#CALL [\属性重载\属性加成.txt] @属性设置
+#CALL [\触发系列\元素触发.txt] @元素伤害
+BREAK
+
+
+#IF
+EQUAL <$STR(S$武器宝石名称)> 太阴符纹
+#ACT
+SOCKETABLEITEM * * * * 1 0 * * 0 *
+DRILLHOLE * * 1 * * 0  * 0 * *
+give 太阴符纹[金色剧情] 1
+mov S$武器宝石名称
+mov N$武器宝石 0
+MESSAGEBOX 摘取成功！！！
+#CALL [\属性重载\属性加成.txt] @属性设置
+#CALL [\触发系列\元素触发.txt] @元素伤害
+BREAK
+
+#IF
+EQUAL <$STR(S$武器宝石名称)> 極冰碎片
+#ACT
+SOCKETABLEITEM * * * * 1 0 * * 0 *
+DRILLHOLE * * 1 * * 0  * 0 * *
+give 極冰碎片[远古神器] 1
+mov S$武器宝石名称
+mov N$武器宝石 0
+MESSAGEBOX 摘取成功！！！
+#CALL [\属性重载\属性加成.txt] @属性设置
+#CALL [\触发系列\元素触发.txt] @元素伤害
+BREAK
+
+#IF
+#act
+MESSAGEBOX 摘取失败??\\1、武器没有镶嵌宝石！
+BREAK
+
+
+
+
+
+
+
+

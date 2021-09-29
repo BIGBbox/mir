@@ -1,0 +1,29 @@
+[@main]
+#IF
+#ACT
+#say
+
+<Img|width=545|height=180|esc=1|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/sf1/1/00845.png|scale9t=10|reset=1>
+<Layout|x=536.0|y=1.0|width=80|height=80|link=@exit>
+<Button|x=541.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=228.0|y=15.0|tipsx=10|tipsy=80|color=168|size=18|text=琅 嬛 福 地>
+<Text|a=0|x=32.0|y=50.0|tipsx=10|tipsy=80|color=219|size=18|text=怪物刷新：>
+<Text|a=0|x=123.0|y=50.0|tipsx=10|tipsy=80|color=0|size=18|text=郭靖、天山童姥、阿紫、叶二娘>
+<Text|a=0|x=32.0|y=75.0|tipsx=10|tipsy=80|color=219|size=18|text=适合人群：>
+<Text|a=0|x=123.0|y=75.0|tipsx=10|tipsy=80|color=119|size=18|text=适合行走江湖之人进入历练>
+<Text|a=0|x=32.0|y=100.0|tipsx=10|tipsy=80|color=219|size=18|text=进入等级：>
+<Text|a=0|x=123.0|y=100.0|tipsx=10|tipsy=80|color=27|size=18|text=达到126级以上方可进入>
+<Text|a=0|x=241.0|y=139.0|tipsx=10|tipsy=80|color=134|size=18|text=我要进入|link=@进入>
+
+
+
+
+[@进入]
+#IF
+CHECKLEVELEX > 125
+#act
+MAPMOVE 琅嬛福地
+GuildNoticeMsg 251 66 系统提示：玩家[%s]进入了【琅嬛福地】！！！
+#ELSEACT
+MESSAGEBOX 你还没有到达等级要求!
+BREAK

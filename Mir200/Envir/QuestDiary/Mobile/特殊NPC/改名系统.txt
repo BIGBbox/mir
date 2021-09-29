@@ -1,0 +1,70 @@
+[@改名系统]
+{
+#IF
+not equal <$STR(T98)>
+#ACT
+mov S$临时日期 <$YEAR>-<$MONTH>-<$DAY>
+DaysBetween <$STR(T98)> <$STR(S$临时日期)> S1
+;goto @日期检测差值是否达标
+goto @可以改名
+#elseact
+goto @可以改名
+
+[@日期检测差值是否达标]
+#IF
+small <$STR(S1)> 7
+#ACT
+messagebox 距离上次改名间隔小于7天，暂时不能改名！
+give 改名卡 1
+#elseact
+goto @可以改名
+
+[@可以改名]
+#IF
+#ACT
+#say
+<查询名称是否可以使用/@@InputString1(请输入新的名称：)>\ \
+<我要改名/@@InputString2(请输入新的名称：)>\
+
+[@InputString1]
+#IF
+Equal S1
+#ACT
+give 改名卡 1
+SENDMSG 6 请输入一个正确的名称
+Break
+
+#OR
+CheckStringlength S1 > 20
+CheckStringlength S1 < 4
+#ACT
+give 改名卡 1
+SENDMSG 6 输入名称长度不正确
+Break
+
+#IF
+#ACT
+QUERYHUMNAMEEXIST S1
+
+[@InputString2]
+#IF
+Equal S2
+#ACT
+give 改名卡 1
+SENDMSG 6 请输入一个正确的名称
+Break
+
+#OR
+CheckStringlength S2 > 20
+CheckStringlength S2 < 4
+#ACT
+give 改名卡 1
+SENDMSG 6 输入名称长度不正确
+Break
+
+#IF
+#ACT
+CHANGEHUMNAME S2
+
+
+}

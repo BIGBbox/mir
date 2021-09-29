@@ -1,0 +1,398 @@
+[@沙捐系统]
+{
+#IF
+;check [603] 0
+#act
+;set [603] 1
+goto @展开
+
+#IF
+#ACT
+;面板居中
+mov N$moveX <$SCREENWIDTH>
+mov N$moveY <$SCREENHEIGHT>
+
+mov N$SizeX 800
+mov N$SizeY 483
+dec N$moveX N$SizeX
+dec N$moveY N$SizeY
+div N$moveX 2
+div N$moveY 2
+
+mov N$按钮 N$SizeX
+dec N$按钮 62
+mov N$按钮0 N$SizeX
+dec N$按钮0 72
+GOTO @读取数据
+
+#SAY
+<Img|children=bg1,4,底板|x=<$STR(N$moveX)>|y=<$STR(N$moveY)>|width=<$STR(N$SizeX)>|height=<$STR(N$SizeY)>|show=0|reset=1|move=1|img=public/ui3/00001.png|bg=1>
+<Img|id=bg1|x=145.0|y=50.0|img=public/sf1/1/00709.png>
+
+<Button|id=4|x=760|y=55|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
+<Img|id=底板|children={btn1,btn2,btn3,btn4,5,6,特效控件1,特效控件2}|x=95|y=40.0|height=1|width=1|img=public/1900000665.png>
+
+<RText|id=5|children=5_1|x=74.0|y=60|color=249|size=16|text=<你当前的RMB点:/FCOLOR=249> >
+    <Text|id=5_1|text=$STM(ITEMCOUNT_RMB点)|x=130|y=0|size=16>
+<RText|id=6|x=74.0|y=80|color=255|size=16|text=<最低捐献:/FCOLOR=250><3000个RMB点起/FCOLOR=253> <累计捐献达到5000RMB点,即可获得属性加成/FCOLOR=228> <排名越高,属性越强!/FCOLOR=67> >
+
+<Img|id=特效控件1|children={1_1,1_2,1_3,1_4,1_5,1_6,2_1,2_2,2_3,2_4,2_5,2_6,3_1,3_2,3_3,3_4,3_5,3_6,}|x=50|y=95|height=1|width=1|img=public/0.png>
+    <Text|id=1_1|x=87|y=25|color=254|tips=|tipsx=10|tipsy=80|size=18|text=第一名:>
+    <Text|id=1_2|x=164|y=25|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$玩家1_排版)>>
+    <Text|id=1_3|x=300|y=25|color=253|tips=|tipsx=10|tipsy=80|size=18|text=累计捐献:>
+    <Text|id=1_4|x=380|y=25|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$捐献数量1_排版)>>
+    <Text|id=1_5|x=480|y=25|color=249|tips=|tipsx=10|tipsy=80|size=18|text=RMB>
+    <Button|id=1_6|x=47|y=25|color=103|tips={第一名属性：/FCOLOR=249}^{爆率+100%/FCOLOR=251}^{攻击+15%/FCOLOR=251}^{血量+15%/FCOLOR=251}^{排行与沙捐属性叠加/FCOLOR=249}^|tipsx=70|tipsy=0|nimg=public/sf1/1/00284.png>
+
+    <Text|id=2_1|x=87|y=65|color=254|tips=|tipsx=10|tipsy=80|size=18|text=第二名:>
+    <Text|id=2_2|x=164|y=65|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$玩家2_排版)>>
+    <Text|id=2_3|x=300|y=65|color=253|tips=|tipsx=10|tipsy=80|size=18|text=累计捐献:>
+    <Text|id=2_4|x=380|y=65|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$捐献数量2_排版)>>
+    <Text|id=2_5|x=480|y=65|color=249|tips=|tipsx=10|tipsy=80|size=18|text=RMB>
+    <Button|id=2_6|x=47|y=65|color=103|tips={第二名属性：/FCOLOR=249}^{爆率+80%/FCOLOR=251}^{攻击+10%/FCOLOR=251}^{血量+10%/FCOLOR=251}^{排行与沙捐属性叠加/FCOLOR=249}^|tipsx=70|tipsy=0|nimg=public/sf1/1/00284.png>
+
+    <Text|id=3_1|x=87|y=105|color=254|tips=|tipsx=10|tipsy=80|size=18|text=第三名:>
+    <Text|id=3_2|x=164|y=105|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$玩家3_排版)>>
+    <Text|id=3_3|x=300|y=105|color=253|tips=|tipsx=10|tipsy=80|size=18|text=累计捐献:>
+    <Text|id=3_4|x=380|y=105|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$捐献数量3_排版)>>
+    <Text|id=3_5|x=480|y=105|color=249|tips=|tipsx=10|tipsy=80|size=18|text=RMB>
+    <Button|id=3_6|x=47|y=105|color=103|tips={第三名属性：/FCOLOR=249}^{爆率+50%/FCOLOR=251}^{攻击+7%/FCOLOR=251}^{血量+7%/FCOLOR=251}^{排行与沙捐属性叠加/FCOLOR=249}^|tipsx=70|tipsy=0|nimg=public/sf1/1/00284.png>
+
+
+;<RText|id=8_3|x=334.0|y=0|color=255|size=16|text=<爆率+100% 攻击+15% 血量+15%/FCOLOR=250> >
+;<RText|id=9_3|x=334.0|y=0|color=255|size=16|text=<爆率+80%   攻击+10% 血量+10%/FCOLOR=250> >
+;<RText|id=10_3|x=334.0|y=0|color=255|size=16|text=<爆率+50%   攻击+7%   血量+7%  /FCOLOR=250>>
+
+<Img|id=特效控件2|children={11,add1,12,13,14,15,18,17,16,btn1}|x=20|y=65|height=1|width=1|img=public/0.png>
+
+    <RText|id=11|x=74.0|y=200|color=255|size=16|text=<凡是累计捐献达到3000RMB点,即可获得以下属性/FCOLOR=250>         <你当前累计捐献金额:/FCOLOR=250> <$human(沙城捐献)>>
+    <RText|id=add1|x=74.0|y=220|color=255|size=16|text=<第一名捐献需大于15000RMB点。第二名需大于10000RMB点，第三名大于7000RMB点/FCOLOR=146>>
+    ; <RText|id=12|x=74.0|y=240|color=255|size=16|text=<第4-10名玩家可获得【爆率+40% 攻击+6% 血量+6%】/FCOLOR=146>>
+    ; <RText|id=13|x=74.0|y=260|color=255|size=16|text=<从第11名开始所有捐献玩家【爆率+30% 攻击+5% 血量+5%】/FCOLOR=146>>
+    <RText|id=14|x=74.0|y=280|color=255|size=16|text=<捐献的侠士将+60%麻痹怪物几率！>>
+    <RText|id=15|children=15_1|x=74.0|y=300|color=255|size=16|text=<每月10号，25号捐献数据会清零,请玩家们理性捐献！/FCOLOR=249>>
+    <RText|id=18|x=74.0|y=320|color=250|size=16|text=<注：首次清除需开区10日后否则不清除捐献。/FCOLOR=251>>
+    <RText|id=17|x=80.0|y=370|color=255|size=16|text=<你的当前排名：/FCOLOR=249><<$STR(S$你的当前排名)>/FCOLOR=250>>
+    <Button|id=16|x=330.0|y=370|nimg=public/sf1/1/01096.png|pimg=public/sf1/1/01098.png|link=@@inputinteger4(首次捐献最少300,二次抢榜RMB数量大于50)>
+    <Button|id=btn1|x=510.0|y=435|children=btn1_text|nimg=public/sf1/1/01092.png|pimg=public/sf1/1/01094.png|link=@一键抢榜>
+    ; <RText|id=btn1_text|x=-10.0|y=40|color=255|size=16|text=<捐献第一名可进入/FCOLOR=250>>
+
+
+[@进入捐献地图]
+#IF
+EQUAL <$STR(N$捐献属性爆率)> 100
+#act
+MAPMOVE 英雄的黎明
+GuildNoticeMsg 251 66 系统提示：玩家[%s]进入了【英雄的黎明】！！！
+#ELSEACT
+MESSAGEBOX 你捐献没有达到第一名，无法进入！
+BREAK
+
+[@读取数据]
+#if
+#ACT
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 0 S$玩家名字1 N$捐献数量1
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 1 S$玩家名字2 N$捐献数量2
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 2 S$玩家名字3 N$捐献数量3
+
+
+
+mov S$你的当前排名 未捐献
+;SENDMSG 0 排名 <$STR(S$玩家名字2)>
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\捐献系统\捐献名单.txt <$USERNAME>
+#ACT
+mov S$你的当前排名 已捐献
+
+#if
+equal  S$玩家名字1 <$USERNAME>
+#act
+mov S$你的当前排名 第1名
+
+#if
+equal  S$玩家名字2 <$USERNAME>
+#act
+mov S$你的当前排名 第2名
+
+#if
+equal  S$玩家名字3 <$USERNAME>
+#act
+mov S$你的当前排名 第3名
+
+#IF
+LARGE N$捐献数量1 14999
+#ACT
+MOV S$玩家1_排版 <$STR(S$玩家名字1)>
+MOV S$捐献数量1_排版 <$STR(N$捐献数量1)>
+#ELSEACT
+MOV S$玩家1_排版 暂无
+MOV S$捐献数量1_排版 暂无
+
+#IF
+LARGE N$捐献数量2 9999
+#ACT
+MOV S$玩家2_排版 <$STR(S$玩家名字2)>
+MOV S$捐献数量2_排版 <$STR(N$捐献数量2)>
+#ELSEACT
+MOV S$玩家2_排版 暂无
+MOV S$捐献数量2_排版 暂无
+
+#IF
+LARGE N$捐献数量3 
+#ACT
+MOV S$玩家3_排版 <$STR(S$玩家名字3)>
+MOV S$捐献数量3_排版 <$STR(N$捐献数量3)>
+#ELSEACT
+MOV S$玩家3_排版 暂无
+MOV S$捐献数量3_排版 暂无
+
+
+; [@刷新]
+; #IF
+; #ACT
+; GOTO @捐献_字符串处理
+
+
+[@InPutInteger4]
+#if
+LARGE G8 0
+#ACT
+messagebox 当前不是正式开区，无法捐献！！
+break
+
+#IF
+#ACT
+MOV N$捐献_输入数量  <$STR(N4)>
+MOV N$当前升级_需要RMB点  <$STR(N$捐献_输入数量)>
+MOV S$人物财产 $STM(ITEMCOUNT_RMB点)
+
+#IF
+; CHECKGAMEGIRD < <$STR(N$捐献_输入数量)>
+CHECKMONEY RMB点 < <$STR(N$捐献_输入数量)>
+#ACT
+MESsAGEBOX 当前RMB点数量不足【<$STR(N$捐献_输入数量)>】...
+break
+
+#IF
+NOT CHECKTEXTLIST ..\QuestDiary\捐献系统\捐献名单.txt <$USERNAME>
+SMALL N$捐献_输入数量 300
+#ACT
+MESsAGEBOX 首次捐献必须大于300RMB点！
+BREAK
+
+;-------------------已上榜-----------------------------
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\捐献系统\捐献名单.txt <$USERNAME>
+#ACT
+money RMB点 - <$STR(N$捐献_输入数量)>
+
+
+INC G9 <$STR(N$捐献_输入数量)>
+SET [11] 1
+
+CALCVAR HUMAN 沙城捐献 + <$STR(N$捐献_输入数量)>
+savevar human 沙城捐献
+
+WriteConfigFileItem ..\QuestDiary\捐献系统\捐献数据.txt <$USERNAME> 沙城捐献 <$HUMAN(沙城捐献)>
+goto @捐献排名数据
+messagebox 捐献成功!
+
+;-------------------未上榜-----------------------------
+#IF
+NOT CHECKTEXTLIST ..\QuestDiary\捐献系统\捐献名单.txt <$USERNAME>
+#ACT
+
+money RMB点 - <$STR(N$捐献_输入数量)>
+INC G9 <$STR(N$捐献_输入数量)>
+
+SET [11] 1
+
+CALCVAR HUMAN 沙城捐献 + <$STR(N$捐献_输入数量)>
+savevar human 沙城捐献
+
+WriteConfigFileItem ..\QuestDiary\捐献系统\捐献数据.txt <$USERNAME> 沙城捐献 <$HUMAN(沙城捐献)>
+AddTextListEx ..\QuestDiary\捐献系统\捐献名单.txt <$USERNAME>
+
+goto @捐献排名数据
+goto @沙绢支线任务
+messagebox 捐献成功!
+
+#IF
+#ACT
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 0 S$玩家名字1 N$捐献数量1
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 1 S$玩家名字2 N$捐献数量2
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 2 S$玩家名字3 N$捐献数量3
+goto @沙捐系统
+
+#or
+EQUAL S$玩家名字1 <$USERNAME>
+EQUAL S$玩家名字2 <$USERNAME>
+EQUAL S$玩家名字3 <$USERNAME>
+#ACT
+SENDMOVEMSG 0 249 0 150 1 玩家[<$USERNAME>],强势打入沙城捐献排行榜 15 10 10
+
+#if
+#act
+GMEXECUTE StartQuest @捐献系统_属性_重新分配
+
+[@捐献排名数据]
+
+#if
+#act
+DelText ..\QuestDiary\捐献系统\捐献排名.txt 2 0
+DelText ..\QuestDiary\捐献系统\捐献排名.txt 1 0
+DelText ..\QuestDiary\捐献系统\捐献排名.txt 0 0
+
+SortHumVar 沙城捐献 S$玩家名字 N$捐献数额 0 1 10
+
+#if
+#act
+mov N$名次 0
+mov N$编号 1
+goto @新捐献排名for
+
+
+[@新捐献排名for]
+#if
+LARGE N$名次 2
+#act
+break
+
+#if
+#act
+mov S$玩家名字数据 <$STR(S$玩家名字<$STR(N$编号)>)>
+mov N$捐献数额数据 <$STR(N$捐献数额<$STR(N$编号)>)>
+;SENDMSG 6 名次:<$STR(N$名次)>
+;SENDMSG 0 玩家:<$STR(S$玩家名字数据)>..<$STR(N$编号)>,捐献<$STR(N$捐献数额数据)>
+
+
+#if
+not EQUAL S$玩家名字数据
+LARGE N$捐献数额数据 14999
+EQUAL N$名次 0
+#act
+AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 0
+inc N$编号 1
+;break
+
+#if
+not EQUAL S$玩家名字数据
+LARGE N$捐献数额数据 9999
+EQUAL N$名次 1
+#act
+AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 1
+inc N$编号 1
+;break
+
+#if
+not EQUAL S$玩家名字数据
+LARGE N$捐献数额数据 0
+EQUAL N$名次 2
+#act
+AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 2
+inc N$编号 1
+;break
+
+
+#if
+large N$编号 2
+#act
+break
+
+#if
+small N$名次 2
+#act
+inc N$名次 1
+goto @新捐献排名for
+
+
+
+[@一键抢榜]
+#if
+check [11] 0
+#act
+messagebox 只有沙捐玩家才可抢榜！
+break
+
+#if
+#act
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 0 S$玩家名字1 N$捐献数量1
+
+#if
+equal S$玩家名字1 <$USERNAME>
+#act
+messagebox 你已经是第一名了！
+break
+
+#if
+equal S$玩家名字1
+#act
+mov N$计算数量 15000
+dec N$计算数量 <$HUMAN(沙城捐献)>
+messagebox 本次抢榜需花费<$STR(N$计算数量)>，是否一键抢榜？ @确认抢榜 @取消
+break
+
+
+#if
+not equal S$玩家名字1 <$USERNAME>
+#act
+mov N$计算数量 <$STR(N$捐献数量1)>
+dec N$计算数量 <$HUMAN(沙城捐献)>
+inc N$计算数量 100
+
+messagebox 本次抢榜需花费<$STR(N$计算数量)>，是否一键抢榜？ @确认抢榜 @取消
+
+
+[@确认抢榜]
+#if
+CHECKMONEY RMB点 < <$STR(N$计算数量)>
+#act
+messagebox 你没有<$STR(N$计算数量)>RMB点，我们很难办啊！\是否充值？ @打开充值界面 @取消
+break
+
+
+#if
+#act
+money RMB点 - <$STR(N$计算数量)>
+CALCVAR HUMAN 沙城捐献 + <$STR(N$计算数量)>
+savevar human 沙城捐献
+;统计沙捐总额
+div N$计算数量 2
+INC G9 <$STR(N$计算数量)>
+goto @捐献排名数据
+goto @沙捐面板
+
+[@打开充值界面]
+#if
+#act
+close
+#call [\系统功能\充值功能.txt] @充值主面板
+
+
+[@沙绢支线任务]
+
+#if
+not CheckContainsText <$STR(T108)> 沙城捐献
+large U108 22
+#act
+mov S$支线任务临时变量 <$STR(T108)>
+mov T108 <$STR(S$支线任务临时变量)>_沙城捐献
+NEWCOMPLETETASK 26
+NEWDELETETASK 26
+sendmsg 1 已完成任务!
+
+CHANGEEXP + 100000
+MailGIVE 绑定元宝 100000
+MailGIVE 灵兽精石 10 1#4#6#8
+SendMail 1 系统奖励 你已完成首次沙绢任务,10万经验,10万元宝和灵兽精石*10已发放!!
+
+#if
+not CheckContainsText <$STR(T108)> 沙城捐献
+#act
+mov S$支线任务临时变量 <$STR(T108)>
+mov T108 <$STR(S$支线任务临时变量)>_沙城捐献
+
+}
+

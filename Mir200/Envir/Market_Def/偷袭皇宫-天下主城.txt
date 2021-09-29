@@ -1,0 +1,45 @@
+[@main]
+#if
+equal <$HOUR>  21
+large <$MINUTE> 50
+#Act
+MessageBox 这个时间不能帮你传送了！
+break
+#IF
+#say
+\
+消耗2000元宝！可以偷袭皇宫！！\
+21点50之后无法传送！\
+<皇宫一号点/@皇宫1>\
+<皇宫二号点/@皇宫2>\
+<皇宫三号点/@皇宫2>\
+
+[@皇宫1]
+#IF
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+MAPMOVE NEW0150 30 37
+SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|249:39:0}{从沙城比武台潜入皇宫!|116:39:0}
+#ELSEACT
+SENDMSG 7 元宝不足！！
+
+[@皇宫2]
+#IF
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+MAPMOVE NEW0150 29 43
+SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|249:39:0}{从沙城比武台潜入皇宫!|116:39:0}
+#ELSEACT
+SENDMSG 7 元宝不足！！
+
+[@皇宫3]
+#IF
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+MAPMOVE NEW0150 23 44
+SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|249:39:0}{从沙城比武台潜入皇宫!|116:39:0}
+#ELSEACT
+SENDMSG 7 元宝不足！！

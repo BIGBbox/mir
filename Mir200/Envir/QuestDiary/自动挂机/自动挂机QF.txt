@@ -1,0 +1,113 @@
+[@开始挂机]
+{
+#IF
+EQUAL N$挂机状态 0
+#ACT
+MOV N$挂机状态 1
+#ELSEACT
+BREAK
+
+#IF
+Equal <$CLIENTFLAG> 1
+#act
+StartAutoPlayGame
+MOV S$挂机 <Button|id=挂机|x=-248|y=-220|color=251|mimg=private\main\Skill\1900012709.png|size=16|nimg=private\main\Skill\1900012709.png|pimg=private\main\Skill\1900012709.png|link=@停止挂机>
+DELBUTTON 104 1 
+ADDBUTTON 104 1 <$STR(S$挂机)>
+
+#if
+equal <$MAPTITLE> 新手训练营
+equal U108 5
+#act
+mov U108 6
+;NEWCOMPLETETASK 6
+;NEWDELETETASK 6
+
+sendmsg 7 完成任务了!!
+#CALL [\任务系统\任务文本.txt] @接取任务
+mapmove 新手训练营 18 23
+OPENNPCSHOWEX 68
+
+#IF
+Equal <$CLIENTFLAG> 2
+#act
+StartAutoPlayGame
+
+MOV S$挂机 <Button|id=挂机|x=-127|y=-374|color=251|mimg=private\main\Skill\1900012709.png|size=16|nimg=private\main\Skill\1900012709.png|pimg=private\main\Skill\1900012709.png|link=@停止挂机>
+DELBUTTON 104 1
+ADDBUTTON 104 1 <$STR(S$挂机)>
+
+#if
+equal <$MAPTITLE> 新手训练营
+equal U108 5
+#act
+mov U108 6
+;NEWCOMPLETETASK 6
+;NEWDELETETASK 6
+
+sendmsg 7 完成任务了!!
+#CALL [\任务系统\任务文本.txt] @接取任务
+mapmove 新手训练营 18 23
+OPENNPCSHOWEX 68
+
+[@停止挂机]
+#IF
+EQUAL N$挂机状态 1
+#ACT
+MOV N$挂机状态 0
+#ELSEACT
+BREAK
+
+#IF
+Equal <$CLIENTFLAG> 1
+#act
+StopAutoPlayGame
+MOV S$挂机 <Button|id=挂机|x=-248|y=-220|color=251|mimg=private\main\Skill\1900012708.png|size=16|nimg=private\main\Skill\1900012708.png|pimg=private\main\Skill\1900012708.png|link=@开始挂机>
+DELBUTTON 104 1
+ADDBUTTON 104 1 <$STR(S$挂机)>
+SENDMSG 7 关闭挂机
+
+#IF
+Equal <$CLIENTFLAG> 2
+#act
+StopAutoPlayGame
+MOV S$挂机 <Button|id=挂机|x=-127|y=-374|color=251|mimg=private\main\Skill\1900012708.png|size=16|nimg=private\main\Skill\1900012708.png|pimg=private\main\Skill\1900012708.png|link=@开始挂机>
+DELBUTTON 104 1
+ADDBUTTON 104 1 <$STR(S$挂机)>
+SENDMSG 7 关闭挂机
+
+
+[@StartAutoPlayGame]
+#if
+#ACT
+SENDMSG 7 开始挂机
+
+
+[@StopAutoPlayGame]
+#IF
+EQUAL N$挂机状态 1
+#ACT
+MOV N$挂机状态 0
+#ELSEACT
+BREAK
+
+#IF
+Equal <$CLIENTFLAG> 1
+#act
+MOV N$挂机状态 0
+MOV S$挂机 <Button|x=-248|y=-220|color=251|mimg=private\main\Skill\1900012708.png|size=16|nimg=private\main\Skill\1900012708.png|pimg=private\main\Skill\1900012708.png|link=@开始挂机>
+DELBUTTON 104 1
+ADDBUTTON 104 1 <$STR(S$挂机)>
+SENDMSG 7 关闭挂机
+#IF
+Equal <$CLIENTFLAG> 2
+#act
+MOV N$挂机状态 0
+MOV S$挂机 <Button|x=-127|y=-374|color=251|mimg=private\main\Skill\1900012708.png|size=16|nimg=private\main\Skill\1900012708.png|pimg=private\main\Skill\1900012708.png|link=@开始挂机>
+DELBUTTON 104 1
+ADDBUTTON 104 1 <$STR(S$挂机)>
+SENDMSG 7 关闭挂机
+
+
+
+}

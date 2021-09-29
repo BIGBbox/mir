@@ -1,0 +1,681 @@
+[@Settings_hd]
+{
+
+
+#IF
+#ACT
+
+;面板居中
+mov N$moveX <$SCREENWIDTH>
+mov N$moveY <$SCREENHEIGHT>
+
+mov N$SizeX 700
+mov N$SizeY 530
+dec N$moveX N$SizeX
+dec N$moveY N$SizeY
+div N$moveX 2
+div N$moveY 2
+
+mov N$按钮 N$SizeX
+dec N$按钮 10
+mov N$按钮0 N$SizeX
+dec N$按钮0 20
+
+GOTO @check_hd
+;GOTO @main_hd
+GOTO @超值礼包
+
+[@check_hd]
+#IF
+#ACT
+MOV S$活动按钮01 <Button|id=页签2|x=15.0|y=60.0|color=254|nimg=public/sf1/19/page2.png|text=连续充值|size=18|link=@main_hd>
+MOV S$活动按钮02 <Button|id=页签1|x=15.0|y=60.0|color=254|nimg=public/sf1/19/page2.png|text=每日充值|size=18|link=@超值礼包>
+MOV S$活动按钮03 <Button|id=页签3|x=15.0|y=60.0|color=254|nimg=public/sf1/19/page2.png|text=前往充值|size=18|link=@充值客户端>
+;灰色按钮
+MOV S$活动按钮A1 <Button|id=页签2|x=15.0|y=60.0|color=247|nimg=public/sf1/19/page1.png|text=连续充值|size=18|link=@main_hd>
+MOV S$活动按钮A2 <Button|id=页签1|x=15.0|y=60.0|color=247|nimg=public/sf1/19/page1.png|text=每日充值|size=18|link=@超值礼包>
+MOV S$活动按钮A3 <Button|id=页签3|x=15.0|y=60.0|color=247|nimg=public/sf1/19/page1.png|text=前往充值|size=18|link=@充值客户端>
+
+;首页
+[@main_hd]
+#IF
+#ACT
+
+#if
+#act
+MOV S$累充奖励显示
+MOV S$累充奖励显示子项
+mov N$累充奖品编号 1
+
+MOV S$累充奖励显示子项0
+MOV S$累充奖励显示子项1
+goto @累充奖励显示FOR
+
+#IF
+not equal S$累充奖励显示子项0
+#ACT
+inc S$累充奖励显示子项 <$STR(S$累充奖励显示子项0)>
+
+#IF
+not equal S$累充奖励显示子项1
+#ACT
+inc S$累充奖励显示子项 <$STR(S$累充奖励显示子项1)>
+
+
+#IF
+#ACT
+#say
+<Img|layerid=100|children=bg1,bg2,title,titleBg,_网格,容器1,2,3,4,5,人物,6,7,8,9,10,11,12,13,14,15,容器2,容器3,btn_day|x=<$STR(N$moveX)>|y=<$STR(N$moveY)>|show=0|reset=0|move=1|img=public/sf1/19/bg5.png|bg=1>
+<Img|id=bg1|x=35.0|y=50.0|img=public/haha/f_0005a1.png>
+<Img|id=bg2|x=7.0|y=55.0|width=785|height=470|img=public/sf1/19/bg1.png>
+<Img|id=titleBg|x=270.0|y=125.0|img=public/sf1/19/artFont1.png>
+
+;<Layout|id=3|x=<$STR(N$按钮0)>|y=0.0|width=80|height=80|link=@exit>
+   <Button|id=4|x=750|y=25.0|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
+
+   <Img|id=title|x=355.0|y=23.0|img=public/sf1/19/title1.png>
+
+;<Text|id=title|x=55.0|y=15.0|color=95|size=20|outlinecolor=0|outline=1|text=连续充值>
+
+<Img|id=5|x=16.0|width=250|height=80|y=443.0|img=public/sf1/19/bottom.png>
+;<Img|id=6|x=156.0|y=183.0|width=515|height=3|esc=0|img=public/bg_yyxsz_01.png>
+<Frames|id=人物|x=-35|y=68|suffix=.png|prefix=public/sf1/frames/module_|count=16|loop=-1|speed=10|tips={强化说明：/FCOLOR=249}^{本服提供两种加星模式，属性完全相同！一次加成终生享用！货币加星只是为了更好的给有需要的玩家开荒立足的根本！玩家可根据各自条件选择加星模式/FCOLOR=249}^{三星：攻击面板+50、体力面板+3888、怪物伤害+5%、人物爆率+20%、暴击伤害+5%/FCOLOR=154}^{六星：攻击面板+100、体力面板+8888、怪物伤害+10%、人物爆率+50%、暴击伤害+10%、人物倍攻+0.02/FCOLOR=215}^{九星：攻击面板+200、体力面板+16888、怪物伤害+20%、人物爆率+100%、暴击伤害+20%、人物倍攻+0.05/FCOLOR=70}^{十二星：攻击面板+300、体力面板+38888、怪物伤害+40%、人物爆率+200%、暴击伤害+30%、人物倍攻+0.10、魔法盾/FCOLOR=249}^|tipsx=400|tipsy=80>
+
+<ListView|id=容器1|children={页签1,页签2,页签3}|x=35.0|y=60.0|width=440|height=50|margin=5|direction=2|bounce=0>
+    <$STR(S$活动按钮A2)>
+    <$STR(S$活动按钮01)>
+    <$STR(S$活动按钮A3)>
+
+<Img|id=7|children=7_1,7_2|x=160.0|y=55.0|width=510|height=130|img=public/haha/f_000694.png>
+;<RText|id=7_1|x=15.0|y=45.0|size=18|text=<每日充值6元即可领取每日奖励！/FCOLOR=249>>
+<ListView|id=容器2|children={gift1,gift2,gift3,gift4,gift5,gift6,gift7,}|x=170.0|y=130.0|width=360|height=50|margin=5|direction=2|bounce=0>
+    ;<$STR(S$每日奖励显示)>
+    ;<$STR(S$每日奖励可领取)>
+
+<ListView|id=容器3|children={<$STR(S$累充奖励显示子项)>}|x=266.0|y=195.0|width=635|height=325|direction=1|bounce=0|margin=3>
+    <$STR(S$累充奖励显示)>
+
+;----------连续充值填充-----------------
+[@累充奖励显示FOR]
+#IF
+#ACT
+;mov N$累充奖品编号 7
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt 累充奖励<$STR(N$累充奖品编号)> 天数 N$累充所需天数
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt 累充奖励<$STR(N$累充奖品编号)> 奖励内容 S$累充奖励串
+;SENDMSG 5 天数:<$STR(N$累充所需天数)>
+
+#IF
+not EQUAL <$STR(N$累充所需天数)> 0
+#ACT
+INC S$累充奖励显示 <Img|id=day_gift<$STR(N$累充奖品编号)>|children={day_gift<$STR(N$累充奖品编号)>_dayBtn,day_gift<$STR(N$累充奖品编号)>_daybg,day_gift<$STR(N$累充奖品编号)>_day,day_gift<$STR(N$累充奖品编号)>_1,day_gift<$STR(N$累充奖品编号)>_2,day_gift<$STR(N$累充奖品编号)>_3,day_gift<$STR(N$累充奖品编号)>_4,day_gift<$STR(N$累充奖品编号)>_5,day_gift<$STR(N$累充奖品编号)>_6,day_gift<$STR(N$累充奖品编号)>_7,day_gift<$STR(N$累充奖品编号)>_8,day_gift<$STR(N$累充奖品编号)>_9,}|x=10.0|y=0.0|width=514|height=80|img=public/sf1/19/image2.png>
+INC S$累充奖励显示 <Img|id=day_gift<$STR(N$累充奖品编号)>_daybg|children={day_gift<$STR(N$累充奖品编号)>_daybg_1,day_gift<$STR(N$累充奖品编号)>_daybg_2}|x=20.0|y=25.0|esc=0|img=public/sf1/19/bg6.png>
+
+INC S$累充奖励显示 <TextAtlas|img=public/sf1/19/artFont/00057.png|id=day_gift<$STR(N$累充奖品编号)>_daybg_1|x=85.0|y=-2.0|iheight=32|iwidth=21|text=<$STR(N$累充所需天数)>>
+
+goto @累计天数颜色串变更
+;INC S$累充奖励显示 <Text|id=day_gift<$STR(N$累充奖品编号)>_day|x=415.0|y=13.0|color=<$STR(S$天数颜色)>|size=18|text=(<$HUMAN(累计充值天数)>/<$STR(N$累充所需天数)>)>
+
+
+#IF
+not large <$STR(N$累充奖品编号)> 9
+#ACT
+INC S$累充奖励显示 <TextAtlas|img=public/sf1/19/artFont/00057.png|id=day_gift<$STR(N$累充奖品编号)>_daybg_1|x=95.0|y=-2.0|iheight=32|iwidth=21|text=<$STR(N$累充所需天数)>>
+
+#IF
+not EQUAL <$STR(N$累充所需天数)> 0
+#ACT
+goto @奖励显示串变更
+goto @按钮变更
+
+mov N$累充奖品编号子项 1
+mov N$累充奖品编号子项X坐标 185
+mov N$累充奖品编号子项Y坐标 18
+
+GOTO @累充奖励显示FOR1
+inc N$累充奖品编号 1
+
+;SENDMSG 5 奖励串:<$STR(S$累充奖励串)>
+
+#IF
+EQUAL S$累充奖励串
+not EQUAL <$STR(N$累充所需天数)> 0
+#ACT
+GOTO @累充奖励显示FOR
+
+
+[@累充奖励发放FOR]
+#IF
+NOT EQUAL S$累充奖励串
+#ACT
+GetValidstr <$STR(S$累充奖励串)> & S$奖品内容 S$累充奖励串
+GetValidstr <$STR(S$奖品内容)> * S$奖品 S$数量
+GetValidstr <$STR(S$累充绑定串)> & S$奖品是否绑定 S$累充绑定串
+
+;GetDBItemFieldValue <$STR(S$奖品)> idx S$奖品id
+;GIVE <$STR(S$奖品)> <$STR(S$数量)>
+
+#if
+equal <$STR(S$奖品是否绑定)> 1
+not CheckContainsText <$STR(S$奖品)> 元宝
+#act
+GiveStateItem <$STR(S$奖品)> <$STR(S$数量)> 0 1 0 0 1 1 1 1
+
+#if
+equal <$STR(S$奖品是否绑定)> 0
+not CheckContainsText <$STR(S$奖品)> 元宝
+#act
+GiveStateItem <$STR(S$奖品)> <$STR(S$数量)> 0 0 0 0 0 0 0 0
+
+#if
+CheckContainsText <$STR(S$奖品)> 元宝
+#act
+money <$STR(S$奖品)> + <$STR(S$数量)>
+;SENDMSG 5 <$STR(S$奖品)>----<$STR(S$数量)>
+
+#IF
+NOT EQUAL S$累充奖励串
+#ACT
+GOTO @累充奖励发放FOR
+
+[@累充奖励显示FOR1]
+#IF
+NOT EQUAL S$累充奖励串
+#ACT
+GetValidstr <$STR(S$累充奖励串)> & S$奖品内容 S$累充奖励串
+GetValidstr <$STR(S$奖品内容)> * S$奖品 S$数量
+GetDBItemFieldValue <$STR(S$奖品)> idx S$奖品id
+;SENDMSG 5 <$STR(N$累充奖品编号子项X坐标)>----<$STR(N$累充奖品编号子项X坐标1)>
+INC S$累充奖励显示 <Img|id=day_gift<$STR(N$累充奖品编号)>_<$STR(N$累充奖品编号子项)>|children={day_gift<$STR(N$累充奖品编号)>_<$STR(N$累充奖品编号子项)>_1}|x=<$STR(N$累充奖品编号子项X坐标)>|y=<$STR(N$累充奖品编号子项Y坐标)>|width=50|height=50|img=public/1900000651_4.png>
+INC S$累充奖励显示 <ItemShow|id=day_gift<$STR(N$累充奖品编号)>_<$STR(N$累充奖品编号子项)>_1|x=-8|y=-8|width=48|height=48|itemid=<$STR(S$奖品id)>|itemcount=<$STR(S$数量)>|showtips=1|bgtype=0>
+
+
+inc N$累充奖品编号子项 1
+inc N$累充奖品编号子项X坐标 65
+
+GOTO @累充奖励显示FOR1
+
+[@累计天数颜色串变更]
+#if
+CHECKVAR HUMAN 累计充值天数 ? <$STR(N$累充所需天数)>
+#act
+mov S$天数颜色 250
+#elseact
+mov S$天数颜色 249
+
+[@奖励显示串变更]
+#IF
+CHECKVAR HUMAN 累计充值领取标记<$STR(N$累充奖品编号)> > 0
+#ACT
+;mov N$奖励显示串变更 1
+inc S$累充奖励显示子项1 day_gift<$STR(N$累充奖品编号)>,
+#elseact
+;mov N$奖励显示串变更 0
+inc S$累充奖励显示子项0 day_gift<$STR(N$累充奖品编号)>,
+
+[@按钮变更]
+
+#IF
+CHECKVAR HUMAN 累计充值天数 ? <$STR(N$累充所需天数)>
+CHECKVAR HUMAN 累计充值领取标记<$STR(N$累充奖品编号)> = 0
+#ACT
+INC S$累充奖励显示 <Button|id=day_gift<$STR(N$累充奖品编号)>_dayBtn|x=380|y=28.0|color=250|text=可领取|size=16|nimg=public/sf1/19/button1.png|link=@领取累充奖励#奖品编号参数=<$STR(N$累充奖品编号)>#需要天数=<$STR(N$累充所需天数)>>
+
+#IF
+CHECKVAR HUMAN 累计充值天数 < <$STR(N$累充所需天数)>
+#ACT
+INC S$累充奖励显示 <Button|id=day_gift<$STR(N$累充奖品编号)>_dayBtn|grey=1|x=380|y=28.0|text=未达标|size=16|nimg=public/sf1/19/button1.png>
+
+#IF
+CHECKVAR HUMAN 累计充值天数 ? <$STR(N$累充所需天数)>
+CHECKVAR HUMAN 累计充值领取标记<$STR(N$累充奖品编号)> > 0
+#ACT
+INC S$累充奖励显示 <Button|id=day_gift<$STR(N$累充奖品编号)>_dayBtn|x=380|y=28.0|color=249|text=已领取|size=16|nimg=public/sf1/19/button1.png>
+
+
+[@领取累充奖励]
+#if
+CheckHumBag <$USERNAME> < 10
+#act
+messagebox 包裹空位不足10格！
+break
+
+#if
+CHECKVAR HUMAN 累计充值领取标记<$STR(S$奖品编号参数)> > 0
+#act
+messagebox 已经领取过奖励了！
+break
+
+#if
+CHECKVAR HUMAN 累计充值天数 ? <$STR(S$需要天数)>
+CHECKVAR HUMAN 累计充值领取标记<$STR(S$奖品编号参数)> = 0
+#act
+CALCVAR HUMAN 累计充值领取标记<$STR(S$奖品编号参数)> = 1
+SAVEVAR HUMAN 累计充值领取标记<$STR(S$奖品编号参数)>
+
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt  累充奖励<$STR(S$奖品编号参数)> 奖励内容 S$累充奖励串
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt  累充奖励<$STR(S$奖品编号参数)> 奖励绑定 S$累充绑定串
+
+GOTO @累充奖励发放FOR
+messagebox 领取累计充值成功！
+GOTO @main_hd
+
+
+;----------------------------------------------------------每日充值客户端----------------------------------------------------------
+[@超值礼包]
+
+#if
+#act
+MOV S$超值礼包显示
+mov N$超值礼包编号 1
+goto @超值礼包购买记录
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt 超值礼包2_<$STR(U112)> 金额 S$所需时间
+
+mov N$AS <$STR(S$所需时间)>
+dec N$AS <$STR(U114)>
+
+mov N$M <$STR(N$AS)>
+
+div N$M 60
+mov N$秒 60
+
+mul N$秒 <$STR(N$M)>
+dec N$AS <$STR(N$秒)>
+
+dec S$所需时间 <$STR(N$秒)>
+
+;sendmsg 5 剩总秒:<$STR(N$AS)>
+;sendmsg 5 剩余分:<$STR(N$M)>
+
+mov S$分 <$STR(N$M)>
+mov S$秒 <$STR(N$AS)>
+
+#if
+small <$STR(N$M)> 10
+#act
+mov S$分 0<$STR(N$M)>
+
+#if
+small <$STR(N$AS)> 10
+#act
+mov S$秒 0<$STR(N$AS)>
+
+#if
+not large <$STR(N$AS)> 0
+#act
+mov S$秒 00
+mov S$分 00
+
+#if
+#act
+
+goto @超值礼包显示FOR
+
+#IF
+#ACT
+#say
+   <Img|layerid=101|children=bg1,bg2,line11,titleBg,title,time,_网格,容器1,2,4,3,5,6,7,8,9,10,11,12,13,14,15,容器2,容器3|x=<$STR(N$moveX)>|y=<$STR(N$moveY)>|show=0|reset=0|move=1|img=public/sf1/19/bg5.png|bg=1>
+   <Img|id=bg1|x=35.0|y=50.0|img=public/haha/f_0005a1.png>
+   <Img|id=bg2|x=7.0|y=55.0|width=785|height=470|img=public/sf1/19/bg2.png>
+   <Img|id=line11|width=787|height=2|x=7.0|y=105.0|img=public/sf1/19/line.png>
+   <Img|id=titleBg|x=40.0|y=95.0|img=public/sf1/19/zzTitle.png>
+   <Img|id=title|x=355.0|y=23.0|img=public/sf1/19/title1.png>
+   <Button|id=4|x=750|y=25.0|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
+
+   ;<Img|id=5|x=156.0|y=53.0|height=437|esc=0|img=public/bg_yyxsz_02.png>
+   ;<Img|id=6|x=156.0|y=156.0|width=515|height=2|esc=0|img=public/bg_yyxsz_01.png>
+   <ListView|id=容器1|children={页签1,页签2,页签3}|x=35.0|y=60.0|width=440|height=70|margin=5|direction=2|bounce=0>
+       <$STR(S$活动按钮A1)>
+       <$STR(S$活动按钮02)>
+       <$STR(S$活动按钮A3)>
+   <Img|id=7|children=7_1|x=60.0|y=55.0|width=510|height=100|img=public/haha/cz_bg1.jpg>
+   <ListView|id=容器2|bounce=0|children={buy_gift1,buy_gift2,buy_gift3,buy_gift4,buy_gift5,buy_gift6}|x=23.0|y=185.0|width=760|height=330|margin=0|direction=2|bounce=0>
+   <$STR(S$超值礼包显示)>
+
+[@超值礼包购买记录]
+#IF
+#ACT
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt  超值礼包上限 超值礼包1 N$超值礼包上限1
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt  超值礼包上限 超值礼包2 N$超值礼包上限2
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt  超值礼包上限 超值礼包3 N$超值礼包上限3
+
+#IF
+NOT SMALL U111 <$STR(N$超值礼包上限1)>
+#ACT
+DEC N$超值礼包上限1  1
+mov N$超值礼包编号1  <$STR(N$超值礼包上限1)>
+#ELSEACT
+mov N$超值礼包编号1  <$STR(U111)>
+
+#IF
+NOT SMALL U112 <$STR(N$超值礼包上限2)>
+#ACT
+DEC N$超值礼包上限2  1
+mov N$超值礼包编号2  <$STR(N$超值礼包上限2)>
+#ELSEACT
+mov N$超值礼包编号2  <$STR(U112)>
+
+#IF
+NOT SMALL U113 <$STR(N$超值礼包上限3)>
+#ACT
+DEC N$超值礼包上限3  1
+mov N$超值礼包编号3  <$STR(N$超值礼包上限3)>
+#ELSEACT
+mov N$超值礼包编号3  <$STR(U113)>
+
+[@每日充值领取]
+#if
+CheckHumBag <$USERNAME> < 10
+#act
+messagebox 包裹空位不足10格！
+break
+
+
+#if
+CHECKVAR HUMAN 今日充值领取标记 > 0
+#act
+messagebox 今天已经领取过奖励了！
+break
+
+#if
+large <$STR(U91)> 10
+#act
+CALCVAR HUMAN 今日充值领取标记 = 1
+SAVEVAR HUMAN 今日充值领取标记
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt  每日奖励 奖励内容 S$每日奖励串
+GOTO @每日奖励发放FOR
+GOTO @main_hd
+;#CALL [\图标触发\图标红点系统.txt] @红点系统
+#elseact
+messagebox 你今天还没有充值过！
+
+[@每日奖励发放FOR]
+#IF
+NOT EQUAL S$每日奖励串
+#ACT
+GetValidstr <$STR(S$每日奖励串)> & S$奖品内容 S$每日奖励串
+GetValidstr <$STR(S$奖品内容)> * S$奖品 S$数量
+;GetDBItemFieldValue <$STR(S$奖品)> idx S$奖品id
+
+GiveStateItem <$STR(S$奖品)> <$STR(S$数量)> 0 1 0 0 1 1 1 1
+;GIVE <$STR(S$奖品)> <$STR(S$数量)>
+;SENDMSG 5 <$STR(S$奖品)>----<$STR(S$数量)>
+GOTO @每日奖励发放FOR
+
+;---------------------超值礼包部分-----------------
+[@超值礼包显示FOR]
+
+#IF
+#ACT
+;N$超值礼包编号1
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt  超值礼包<$STR(N$超值礼包编号)>_<$STR(N$超值礼包编号<$STR(N$超值礼包编号)>)> 名称 S$超值礼包名称
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt  超值礼包<$STR(N$超值礼包编号)>_<$STR(N$超值礼包编号<$STR(N$超值礼包编号)>)> 币种 S$超值礼包币种
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt  超值礼包<$STR(N$超值礼包编号)>_<$STR(N$超值礼包编号<$STR(N$超值礼包编号)>)> 金额 N$超值礼包金额
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt  超值礼包<$STR(N$超值礼包编号)>_<$STR(N$超值礼包编号<$STR(N$超值礼包编号)>)> 礼包内容 S$超值礼包串总
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt  超值礼包<$STR(N$超值礼包编号)>_<$STR(N$超值礼包编号<$STR(N$超值礼包编号)>)> 礼包描述 S$礼包描述串
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt  超值礼包<$STR(N$超值礼包编号)>_<$STR(N$超值礼包编号<$STR(N$超值礼包编号)>)> 记录标记 S$记录标记串
+
+#IF
+not EQUAL <$STR(N$超值礼包金额)> 0
+#ACT
+INC S$超值礼包显示 <Img|id=buy_gift<$STR(N$超值礼包编号)>|children={buy_gift<$STR(N$超值礼包编号)>_dayBtn,buy_gift<$STR(N$超值礼包编号)>_dayPrice,buy_gift<$STR(N$超值礼包编号)>_daybg,buy_gift<$STR(N$超值礼包编号)>_main,buy_gift<$STR(N$超值礼包编号)>_1,buy_gift<$STR(N$超值礼包编号)>_2,buy_gift<$STR(N$超值礼包编号)>_3,buy_gift<$STR(N$超值礼包编号)>_4,buy_gift<$STR(N$超值礼包编号)>_5,buy_gift<$STR(N$超值礼包编号)>_6,buy_gift<$STR(N$超值礼包编号)>_7,buy_gift<$STR(N$超值礼包编号)>_8,buy_gift<$STR(N$超值礼包编号)>_9,}|x=10.0|y=0.0|img=public/sf1/19/bg7.png>
+INC S$超值礼包显示 <Img|id=buy_gift<$STR(N$超值礼包编号)>_daybg|children={buy_gift<$STR(N$超值礼包编号)>_daybg_1,buy_gift<$STR(N$超值礼包编号)>_daybg_1BG}|x=50.0|y=5.0|width=150|height=30|esc=0|img=public/0.png>
+INC S$超值礼包显示 <Img|id=buy_gift<$STR(N$超值礼包编号)>_daybg_1BG|children={}|x=-30.0|y=45.0|img=public/sf1/19/box.png>
+INC S$超值礼包显示 <RText|id=buy_gift<$STR(N$超值礼包编号)>_daybg_1|x=25.0|y=3.0|color=7|size=19|text=<<$STR(S$超值礼包名称)>/FCOLOR=255>>
+
+#IF
+equal <$STR(S$超值礼包币种)> 1
+not equal <$STR(S$分)> 00
+not equal <$STR(S$秒)> 00
+#ACT
+INC S$超值礼包显示 <RText|id=buy_gift<$STR(N$超值礼包编号)>_dayPrice|x=70.0|y=247.0|color=7|size=18|text=<<$STR(S$分)>:<$STR(S$秒)>/FCOLOR=250><可领取/FCOLOR=250>>
+
+#IF
+equal <$STR(S$超值礼包币种)> 1
+equal <$STR(S$分)> 00
+equal <$STR(S$秒)> 00
+#ACT
+INC S$超值礼包显示 <RText|id=buy_gift<$STR(N$超值礼包编号)>_dayPrice|x=95.0|y=247.0|color=7|size=18|text=<可领取/FCOLOR=250>>
+
+#IF
+equal <$STR(S$超值礼包币种)> 1
+equal <$STR(U112)> 3
+#ACT
+INC S$超值礼包显示 <RText|id=buy_gift<$STR(N$超值礼包编号)>_dayPrice|x=40.0|y=225.0|color=7|size=18|text=<领取完毕/FCOLOR=251>>
+
+#IF
+;not equal <$STR(S$超值礼包币种)> 1
+not equal <$STR(S$礼包描述串)>
+#ACT
+INC S$超值礼包显示 <RText|id=buy_gift<$STR(N$超值礼包编号)>_dayPrice|x=70.0|y=247.0|color=7|size=18|text=<<$STR(S$礼包描述串)>/FCOLOR=250>>
+
+#IF
+not EQUAL <$STR(N$超值礼包金额)> 0
+#ACT
+
+goto @按钮变更1
+mov N$超值礼包编号子项 1
+mov N$超值礼包编号子项X坐标 30
+mov N$超值礼包编号子项Y坐标 185
+
+GOTO @超值礼包显示FOR1
+inc N$超值礼包编号 1
+;SENDMSG 5 奖励串1:<$STR(S$主奖品内容)>
+;SENDMSG 5 奖励串2:<$STR(S$超值礼包串)>
+#IF
+EQUAL S$超值礼包串总
+not EQUAL <$STR(N$超值礼包金额)> 0
+#ACT
+GOTO @超值礼包显示FOR
+
+[@超值礼包显示FOR1]
+#IF
+NOT EQUAL S$超值礼包串总
+#ACT
+GetValidstr <$STR(S$超值礼包串总)> & S$奖品内容 S$超值礼包串总
+GetValidstr <$STR(S$奖品内容)> * S$奖品 S$数量
+GetDBItemFieldValue <$STR(S$奖品)> idx S$奖品id
+;SENDMSG 5 <$STR(N$超值礼包编号子项X坐标)>----<$STR(N$超值礼包编号子项X坐标1)>
+INC S$超值礼包显示 <Img|id=buy_gift<$STR(N$超值礼包编号)>_<$STR(N$超值礼包编号子项)>|children={buy_gift<$STR(N$超值礼包编号)>_<$STR(N$超值礼包编号子项)>_1}|x=<$STR(N$超值礼包编号子项X坐标)>|y=<$STR(N$超值礼包编号子项Y坐标)>|width=60|height=60|img=public/sf1/19/itemBg1.png>
+INC S$超值礼包显示 <ItemShow|id=buy_gift<$STR(N$超值礼包编号)>_<$STR(N$超值礼包编号子项)>_1|x=-5|y=-5|width=48|height=48|itemid=<$STR(S$奖品id)>|itemcount=<$STR(S$数量)>|showtips=1|bgtype=0|scale=1.2>
+
+inc N$超值礼包编号子项 1
+inc N$超值礼包编号子项X坐标 60
+GOTO @超值礼包显示FOR1
+
+
+;第二个客户端按钮
+[@按钮变更1]
+
+;;------------第一个和第三个领取按钮----------------
+; #if
+; equal <$STR(N$超值礼包编号)> 2
+; #act
+; sendmsg 5 标记a:<$STR(S$礼包编号参数)>
+; sendmsg 5 标记b:<$STR(N$超值礼包编号)>
+; sendmsg 5 标记b:U11<$STR(N$超值礼包编号)>
+; sendmsg 5 标记c:<$STR(N$超值礼包编号<$STR(N$超值礼包编号)>)>
+; sendmsg 5 标记d:<$STR(N$超值礼包金额)>
+; sendmsg 5 标记e:<$STR(<$STR(S$记录标记串)>)>
+
+#IF
+large U11<$STR(N$超值礼包编号)> <$STR(N$超值礼包编号<$STR(N$超值礼包编号)>)>
+not equal <$STR(N$超值礼包编号)> 2
+#ACT
+INC S$超值礼包显示 <Button|id=buy_gift<$STR(N$超值礼包编号)>_dayBtn|grey=1|x=21|y=275.0|text=已领取|nimg=public/sf1/19/button2.png>
+
+
+#IF
+not large U11<$STR(N$超值礼包编号)> <$STR(N$超值礼包编号<$STR(N$超值礼包编号)>)>
+not equal <$STR(N$超值礼包编号)> 2
+not small <$STR(<$STR(S$记录标记串)>)> <$STR(N$超值礼包金额)>
+#ACT
+INC S$超值礼包显示 <Button|id=buy_gift<$STR(N$超值礼包编号)>_dayBtn|x=21|y=275.0|text=立即领取|size=16|nimg=public/sf1/19/button2.png|link=@购买超值礼包#礼包编号参数=<$STR(N$超值礼包编号)>>
+
+#if
+; equal <$STR(S$记录标记串)> U91
+equal <$STR(N$超值礼包编号)> 3
+small <$STR(<$STR(S$记录标记串)>)> <$STR(N$超值礼包金额)>
+#act
+INC S$超值礼包显示 <Button|id=buy_gift<$STR(N$超值礼包编号)>_dayBtn|x=21|y=275.0|text=立即充值|size=16|nimg=public/sf1/19/button2.png|link=@充值客户端>
+
+;sendmsg 5 串记:<$STR(S$记录标记串)>
+;sendmsg 5 标记:<$STR(S$礼包编号参数)>
+
+
+;#IF
+;not large U11<$STR(N$超值礼包编号)> <$STR(N$超值礼包编号<$STR(N$超值礼包编号)>)>
+;not equal <$STR(S$记录标记串)>
+;not large <$STR(<$STR(S$记录标记串)>)> <$STR(N$超值礼包金额)>
+;not equal <$STR(S$礼包编号参数)> 1
+;#ACT
+;;sendmsg 5 <$STR(<$STR(S$记录标记串)>)>::::<$STR(N$超值礼包金额)>
+;;sendmsg 5 99999999999999999
+;INC S$超值礼包显示 <Button|id=buy_gift<$STR(N$超值礼包编号)>_dayBtn|x=21|y=275.0|grey=1|text=未达标|size=16|nimg=public/sf1/19/button2.png>
+;
+;
+;;;;------------第二个领取按钮----------------
+;
+#IF
+equal <$STR(N$超值礼包编号)> 2
+small <$STR(U114)> <$STR(N$超值礼包金额)>
+#ACT
+INC S$超值礼包显示 <Button|id=buy_gift<$STR(N$超值礼包编号)>_dayBtn|grey=1|x=21|y=275.0|text=未达标|nimg=public/sf1/19/button2.png>
+
+#IF
+equal <$STR(N$超值礼包编号)> 2
+large U11<$STR(N$超值礼包编号)> <$STR(N$超值礼包编号<$STR(N$超值礼包编号)>)>
+#ACT
+INC S$超值礼包显示 <Button|id=buy_gift<$STR(N$超值礼包编号)>_dayBtn|grey=1|x=21|y=275.0|text=已领取|nimg=public/sf1/19/button2.png>
+
+
+#if
+#act
+;sendmsg 5 <$STR(<$STR(S$记录标记串)>)>:::::<$STR(N$超值礼包金额)>
+
+#IF
+equal <$STR(N$超值礼包编号)> 2
+not large U11<$STR(N$超值礼包编号)> <$STR(N$超值礼包编号<$STR(N$超值礼包编号)>)>
+not small <$STR(U114)> <$STR(N$超值礼包金额)>
+#ACT
+INC S$超值礼包显示 <Button|id=buy_gift<$STR(N$超值礼包编号)>_dayBtn|x=21|y=275.0|text=立即领取|size=16|nimg=public/sf1/19/button2.png|link=@购买超值礼包#礼包编号参数=<$STR(N$超值礼包编号)>>
+
+
+;-----------------购买超值礼包
+[@购买超值礼包]
+#if
+CheckHumBag <$USERNAME> < 10
+#act
+messagebox 包裹空位不足10格！
+break
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt  超值礼包<$STR(S$礼包编号参数)>_<$STR(N$超值礼包编号<$STR(S$礼包编号参数)>)> 币种 S$超值礼包币种
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt  超值礼包<$STR(S$礼包编号参数)>_<$STR(N$超值礼包编号<$STR(S$礼包编号参数)>)> 金额 N$超值礼包金额
+
+#if
+equal <$STR(S$礼包编号参数)> 3
+small <$STR(U91)> <$STR(N$超值礼包金额)>
+#act
+messagebox 你的日充金额不足!!
+break
+
+#if
+equal <$STR(S$礼包编号参数)> 2
+small <$STR(U114)> <$STR(N$超值礼包金额)>
+#act
+messagebox 你的今日在线时间不足!!
+;sendmsg 5 金额:<$STR(N$超值礼包金额)>
+break
+
+#if
+equal <$STR(S$礼包编号参数)> 1
+large <$STR(U111)> 0
+#act
+messagebox 今日登录礼包已领取!!
+break
+
+#if
+;CHECKVAR HUMAN 超值礼包购买标记<$STR(S$礼包编号参数)> > 0
+large U11<$STR(S$礼包编号参数)> <$STR(N$超值礼包编号<$STR(S$礼包编号参数)>)>
+#act
+messagebox 已经领取过该礼包了！
+break
+
+
+#if
+#act
+inc U11<$STR(S$礼包编号参数)> 1
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt 超值礼包<$STR(S$礼包编号参数)>_<$STR(N$超值礼包编号<$STR(S$礼包编号参数)>)> 礼包内容 S$超值礼包串总
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt 超值礼包<$STR(S$礼包编号参数)>_<$STR(N$超值礼包编号<$STR(S$礼包编号参数)>)> 名称 S$超值礼包名称
+ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt 超值礼包<$STR(S$礼包编号参数)>_<$STR(N$超值礼包编号<$STR(S$礼包编号参数)>)> 奖励绑定 S$累充绑定串
+
+#if
+#act
+GOTO @超值礼包发放FOR
+GOTO @超值礼包
+messagebox 领取超值礼包成功！
+
+
+[@超值礼包发放FOR]
+#IF
+NOT EQUAL S$超值礼包串总
+#ACT
+
+GetValidstr <$STR(S$超值礼包串总)> & S$奖品内容 S$超值礼包串总
+GetValidstr <$STR(S$奖品内容)> * S$奖品 S$数量
+GetValidstr <$STR(S$累充绑定串)> & S$奖品是否绑定 S$累充绑定串
+
+#if
+equal <$STR(S$奖品是否绑定)> 1
+not CheckContainsText <$STR(S$奖品)> 元宝
+#act
+GiveStateItem <$STR(S$奖品)> <$STR(S$数量)> 0 1 0 0 1 1 1 1
+
+#if
+equal <$STR(S$奖品是否绑定)> 0
+not CheckContainsText <$STR(S$奖品)> 元宝
+#act
+GiveStateItem <$STR(S$奖品)> <$STR(S$数量)> 0 0 0 0 0 0 0 0
+
+#if
+CheckContainsText <$STR(S$奖品)> 元宝
+#act
+money <$STR(S$奖品)> + <$STR(S$数量)>
+
+#IF
+NOT EQUAL S$超值礼包串总
+#ACT
+GOTO @超值礼包发放FOR
+
+[@OpenLayer101]
+#if
+#act
+SetOnTimer 8 1
+
+[@CloseLayer101]
+#if
+#act
+SetOffTimer 8
+
+[@CloseLayer100]
+#if
+#act
+SetOffTimer 8
+
+[@充值界面活动]
+#if
+#act
+close
+SetOffTimer 8
+
+OPENHYPERLINK 26
+
+
+;------------------------------------------
+[@充值客户端]
+#act
+close
+#call [\系统功能\充值功能.txt] @充值主面板
+
+}

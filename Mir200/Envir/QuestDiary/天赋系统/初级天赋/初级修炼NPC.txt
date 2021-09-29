@@ -1,0 +1,1279 @@
+[@初级天赋面板]
+{
+
+
+#if
+large U1 9
+large U2 9
+large U3 9
+large U4 9
+large U6 9
+large U7 9
+#act
+close
+messagebox 您已完成全部初级修炼！请前往更高级修炼！
+break
+
+
+#IF
+#ACT
+
+mov N$攻击基数 <$str(U2)>
+mov N$攻击基数1 <$str(U2)>
+inc N$攻击基数1 1
+mul N$攻击数值 N$攻击基数 10
+mul N$攻击材料数量1 N$攻击基数1 5
+mul N$攻击材料数量2 N$攻击基数1 5
+mul N$攻击元宝数量 N$攻击基数1 50000
+MOV S$晋升修炼1 @晋升11
+
+mov N$道术基数 <$str(U4)>
+mov N$道术基数1 <$str(U4)>
+inc N$道术基数1 1
+mul N$道术数值 N$道术基数 10
+mul N$道术材料数量1 N$道术基数1 5
+mul N$道术材料数量2 N$道术基数1 5
+mul N$道术元宝数量 N$道术基数1 50000
+MOV S$晋升修炼3 @晋升31
+
+mov N$HPMP基数 <$str(U1)>
+mov N$HPMP基数1 <$str(U1)>
+inc N$HPMP基数1 1
+mul N$HPMP数值 N$HPMP基数 100
+mul N$HPMP材料数量1 N$HPMP基数1 5
+mul N$HPMP材料数量2 N$HPMP基数1 5
+mul N$HPMP元宝数量 N$HPMP基数1 50000
+MOV S$晋升修炼 @晋升1
+
+mov N$道切基数 <$str(U7)>
+mov N$道切基数1 <$str(U7)>
+inc N$道切基数1 1
+mul N$道切材料数量1 N$道切基数1 5
+mul N$道切材料数量2 N$道切基数1 5
+mul N$道切元宝数量 N$道切基数1 50000
+MOV S$晋升修炼6 @晋升61
+
+mov N$魔法基数 <$str(U3)>
+mov N$魔法基数1 <$str(U3)>
+inc N$魔法基数1 1
+mul N$魔法数值 N$魔法基数 10
+mul N$魔法材料数量1 N$魔法基数1 5
+mul N$魔法材料数量2 N$魔法基数1 5
+mul N$魔法元宝数量 N$魔法基数1 50000
+MOV S$晋升修炼2 @晋升21
+
+mov N$法切基数 <$str(U6)>
+mov N$法切基数1 <$str(U6)>
+inc N$法切基数1 1
+mul N$法切材料数量1 N$法切基数1 5
+mul N$法切材料数量2 N$法切基数1 5
+mul N$法切元宝数量 N$法切基数1 50000
+MOV S$晋升修炼5 @晋升51
+
+
+#IF
+equal U2 10
+#ACT
+mov N$攻击基数 <$str(U2)>
+mov N$攻击材料数量1 0
+mov N$攻击材料数量2 0
+mov N$攻击元宝数量 0
+MOV S$晋升修炼1 <已修炼最高:/FCOLOR=249>
+
+#IF
+equal U4 10
+#ACT
+mov N$道术基数 <$str(U4)>
+mov N$道术材料数量1 0
+mov N$道术材料数量2 0
+mov N$道术元宝数量 0
+MOV S$晋升修炼3 <已修炼最高:/FCOLOR=249>
+
+#IF
+equal U1 10
+#ACT
+mov N$HPMP基数 <$str(U1)>
+mov N$HPMP材料数量1 0
+mov N$HPMP材料数量2 0
+mov N$HPMP元宝数量 0
+MOV S$晋升修炼 <已修炼最高:/FCOLOR=249>
+
+#IF
+equal U7 10
+#ACT
+mov N$道切基数 <$str(U7)>
+mov N$道切材料数量1 0
+mov N$道切材料数量2 0
+mov N$道切元宝数量 0
+MOV S$晋升修炼6 <已修炼最高:/FCOLOR=249>
+
+#IF
+equal U3 10
+#ACT
+mov N$魔法基数 <$str(U3)>
+mov N$魔法材料数量1 0
+mov N$魔法材料数量2 0
+mov N$魔法元宝数量 0
+MOV S$晋升修炼2 <已修炼最高:/FCOLOR=249>
+
+#IF
+equal U6 10
+#ACT
+mov N$法切基数 <$str(U6)>
+mov N$法切材料数量1 0
+mov N$法切材料数量2 0
+mov N$法切元宝数量 0
+MOV S$晋升修炼5 <已修炼最高:/FCOLOR=249>
+
+
+#if
+#act
+DELAYGOTO 10 @初级修炼npc
+
+
+[@初级修炼npc]
+#if
+#act
+#say
+<Img|img=public/sf1/1/01157.png|x=330|y=120|children={close_btn,click_btn,修炼等级1,修炼等级2,修炼等级3,修炼等级4,修炼等级5,修炼等级6,加成描述1,加成描述2,加成描述3,加成描述4,加成描述5,加成描述6,加成描述7,加成描述8,加成描述9}|bg=1|reset=1|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=809|y=125|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
+
+<Img|id=修炼等级1|children={修炼等级1_btn,修炼等级1_描述,}|x=12|y=70.0|height=1|width=1|img=public/1900000665.png>
+    <Button|id=修炼等级1_btn|x=0|y=0|nimg=public/sf1/1/01142.png|pimg=public/sf1/1/01144.png|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升修炼1)>>
+    <RText|id=修炼等级1_描述|x=15|y=75|size=16|text=<修炼等级：/FCOLOR=215><[<$STR(N$攻击基数)>]/FCOLOR=255>>
+
+<Img|id=修炼等级2|children={修炼等级2_btn,修炼等级2_描述,}|x=172|y=70.0|height=1|width=1|img=public/1900000665.png>
+    <Button|id=修炼等级2_btn|x=0|y=0|nimg=public/sf1/1/01148.png|pimg=public/sf1/1/01150.png|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升修炼3)>>
+    <RText|id=修炼等级2_描述|x=15|y=75|size=16|text=<修炼等级：/FCOLOR=215><[<$STR(N$道术基数)>]/FCOLOR=255>>
+
+<Img|id=修炼等级3|children={修炼等级3_btn,修炼等级3_描述,}|x=12|y=170.0|height=1|width=1|img=public/1900000665.png>
+    <Button|id=修炼等级3_btn|x=0|y=0|nimg=public/sf1/1/01133.png|pimg=public/sf1/1/01138.png|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升修炼)>>
+    <RText|id=修炼等级3_描述|x=15|y=75|size=16|text=<修炼等级：/FCOLOR=215><[<$STR(N$HPMP基数)>]/FCOLOR=255>>
+
+<Img|id=修炼等级4|children={修炼等级4_btn,修炼等级4_描述,}|x=172|y=170.0|height=1|width=1|img=public/1900000665.png>
+    <Button|id=修炼等级4_btn|x=0|y=0|nimg=public/sf1/1/01139.png|pimg=public/sf1/1/01141.png|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升修炼6)>>
+    <RText|id=修炼等级4_描述|x=15|y=75|size=16|text=<修炼等级：/FCOLOR=215><[<$STR(N$道切基数)>]/FCOLOR=255>>
+
+<Img|id=修炼等级5|children={修炼等级5_btn,修炼等级5_描述,}|x=12|y=270.0|height=1|width=1|img=public/1900000665.png>
+    <Button|id=修炼等级5_btn|x=0|y=0|nimg=public/sf1/1/01151.png|pimg=public/sf1/1/01153.png|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升修炼2)>>
+    <RText|id=修炼等级5_描述|x=15|y=75|size=16|text=<修炼等级：/FCOLOR=215><[<$STR(N$魔法基数)>]/FCOLOR=255>>
+
+<Img|id=修炼等级6|children={修炼等级6_btn,修炼等级6_描述,}|x=172|y=270.0|height=1|width=1|img=public/1900000665.png>
+    <Button|id=修炼等级6_btn|x=0|y=0|nimg=public/sf1/1/01145.png|pimg=public/sf1/1/01147.png|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升修炼5)>>
+    <RText|id=修炼等级6_描述|x=15|y=75|size=16|text=<修炼等级：/FCOLOR=215><[<$STR(N$法切基数)>]/FCOLOR=255>>
+
+<RText|id=加成描述1|x=310|y=100|size=15|text=<基本攻击加成：/FCOLOR=254><基本攻击 +<$STR(N$攻击数值)>/FCOLOR=253>>
+<RText|id=加成描述2|x=310|y=145|size=15|text=<H P M P 加成：/FCOLOR=254><H P M P +<$STR(N$HPMP数值)>/FCOLOR=253>>
+<RText|id=加成描述3|x=310|y=185|size=15|text=<基本魔法加成：/FCOLOR=254><基本魔法 +<$STR(N$魔法数值)>/FCOLOR=253>>
+<RText|id=加成描述4|x=310|y=225|size=15|text=<基本道术加成：/FCOLOR=254><基本道术 +<$STR(N$道术数值)>/FCOLOR=253>>
+<RText|id=加成描述5|x=310|y=265|size=15|text=<道切切割加成：/FCOLOR=254><道切切割 +<$STR(N$道切基数)>%/FCOLOR=253>>
+<RText|id=加成描述6|x=310|y=305|size=15|text=<法切切割加成：/FCOLOR=254><法切切割 +<$STR(N$法切基数)>%/FCOLOR=253>>
+
+;#if
+;equal U108 23
+;#ACT
+;Navigation 0 修炼等级1_btn 点击修炼攻击天赋
+;break
+
+;--------------HPMP修炼---------↓↓↓↓↓↓↓↓↓↓----------------------------------
+
+[@晋升1]
+
+#if
+equal U1 0
+CHECKITEM 修炼石 5
+CHECKITEM 天外陨石 5
+CheckBindMoney 元宝 > 49999
+#ACT
+TAKE 修炼石 5
+TAKE 天外陨石 5
+money 绑定元宝 - 50000
+MOV U1 1
+GOTO @神之天赋支线任务
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【HPMP修炼Lv1】/FCOLOR=58>
+GOTO @main
+BREAK
+
+#if
+equal U1 1
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CheckBindMoney 元宝 > 99999
+#ACT
+TAKE 修炼石 10
+TAKE 天外陨石 10
+money 绑定元宝 - 100000
+MOV U1 2
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【HPMP修炼Lv2】/FCOLOR=58>
+BREAK
+
+#if
+equal U1 2
+CHECKITEM 修炼石 15
+CHECKITEM 天外陨石 15
+CheckBindMoney 元宝 > 149999
+#ACT
+TAKE 修炼石 15
+TAKE 天外陨石 15
+money 绑定元宝 - 150000
+MOV U1 3
+inc U139 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【HPMP修炼Lv3】/FCOLOR=58>
+BREAK
+
+#if
+equal U1 3
+CHECKITEM 修炼石 20
+CHECKITEM 天外陨石 20
+CheckBindMoney 元宝 > 199999
+#ACT
+TAKE 修炼石 20
+TAKE 天外陨石 20
+money 绑定元宝 - 200000
+MOV U1 4
+inc U140 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【HPMP修炼Lv4】/FCOLOR=58>
+BREAK
+
+#if
+equal U1 4
+CHECKITEM 修炼石 25
+CHECKITEM 天外陨石 25
+CheckBindMoney 元宝 > 249999
+#ACT
+TAKE 修炼石 25
+TAKE 天外陨石 25
+money 绑定元宝 - 250000
+MOV U1 5
+inc U141 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【HPMP修炼Lv5】/FCOLOR=58>
+BREAK
+
+#if
+equal U1 5
+CHECKITEM 修炼石 30
+CHECKITEM 天外陨石 30
+CheckBindMoney 元宝 > 299999
+#ACT
+TAKE 修炼石 30
+TAKE 天外陨石 30
+money 绑定元宝 - 300000
+MOV U1 6
+inc U142 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【HPMP修炼Lv6】/FCOLOR=58>
+BREAK
+
+#if
+equal U1 6
+CHECKITEM 修炼石 35
+CHECKITEM 天外陨石 35
+CheckBindMoney 元宝 > 349999
+#ACT
+TAKE 修炼石 35
+TAKE 天外陨石 35
+money 绑定元宝 - 350000
+MOV U1 7
+inc U143 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【HPMP修炼Lv7】/FCOLOR=58>
+BREAK
+
+#if
+equal U1 7
+CHECKITEM 修炼石 40
+CHECKITEM 天外陨石 40
+CheckBindMoney 元宝 > 399999
+#ACT
+TAKE 修炼石 40
+TAKE 天外陨石 40
+money 绑定元宝 - 400000
+MOV U1 8
+inc U144 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【HPMP修炼Lv8】/FCOLOR=58>
+BREAK
+
+#if
+equal U1 8
+CHECKITEM 修炼石 45
+CHECKITEM 天外陨石 45
+CheckBindMoney 元宝 > 449999
+#ACT
+TAKE 修炼石 45
+TAKE 天外陨石 45
+money 绑定元宝 - 450000
+MOV U1 9
+inc U145 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【HPMP修炼Lv9】/FCOLOR=58>
+BREAK
+
+#if
+equal U1 9
+CHECKITEM 修炼石 50
+CHECKITEM 天外陨石 50
+CheckBindMoney 元宝 > 499999
+#ACT
+TAKE 修炼石 50
+TAKE 天外陨石 50
+money 绑定元宝 - 500000
+MOV U1 10
+inc U146 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【HPMP修炼Lv10】/FCOLOR=58>
+BREAK
+
+#if
+#act
+MESSAGEBOX 修炼需要：\\1.修炼石*<$STR(N$HPMP材料数量1)>\\2.<$STR(N$HPMP元宝数量)>元宝\\3.天外陨石*<$STR(N$HPMP材料数量2)>
+BREAK
+;-----------------------↑↑↑↑↑↑↑↑↑----------------------------------
+
+;-----------------------攻击修炼----------------------------------
+
+[@晋升11]
+
+#if
+equal U2 0
+CHECKITEM 修炼石 5
+CHECKITEM 天外陨石 5
+CheckBindMoney 元宝 > 49999
+#ACT
+TAKE 修炼石 5
+TAKE 天外陨石 5
+money 绑定元宝 - 50000
+MOV U2 1
+GOTO @神之天赋支线任务
+DELAYGOTO 10 @MAIN
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【攻击修炼Lv1】/FCOLOR=58>
+BREAK
+
+#if
+equal U2 1
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CheckBindMoney 元宝 > 99999
+#ACT
+TAKE 修炼石 10
+TAKE 天外陨石 10
+money 绑定元宝 - 100000
+MOV U2 2
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【攻击修炼Lv2】/FCOLOR=58>
+BREAK
+
+#if
+equal U2 2
+CHECKITEM 修炼石 15
+CHECKITEM 天外陨石 15
+CheckBindMoney 元宝 > 149999
+#ACT
+TAKE 修炼石 15
+TAKE 天外陨石 15
+money 绑定元宝 - 150000
+MOV U2 3
+inc U139 1
+
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【攻击修炼Lv3】/FCOLOR=58>
+BREAK
+
+#if
+equal U2 3
+CHECKITEM 修炼石 20
+CHECKITEM 天外陨石 20
+CheckBindMoney 元宝 > 199999
+#ACT
+TAKE 修炼石 20
+TAKE 天外陨石 20
+money 绑定元宝 - 200000
+MOV U2 4
+inc U140 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【攻击修炼Lv4】/FCOLOR=58>
+BREAK
+
+#if
+equal U2 4
+CHECKITEM 修炼石 25
+CHECKITEM 天外陨石 25
+CheckBindMoney 元宝 > 249999
+#ACT
+TAKE 修炼石 25
+TAKE 天外陨石 25
+money 绑定元宝 - 250000
+MOV U2 5
+inc U141 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【攻击修炼Lv5】/FCOLOR=58>
+BREAK
+
+#if
+equal U2 5
+CHECKITEM 修炼石 30
+CHECKITEM 天外陨石 30
+CheckBindMoney 元宝 > 299999
+#ACT
+TAKE 修炼石 30
+TAKE 天外陨石 30
+money 绑定元宝 - 300000
+MOV U2 6
+inc U142 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【攻击修炼Lv6】/FCOLOR=58>
+BREAK
+
+#if
+equal U2 6
+CHECKITEM 修炼石 35
+CHECKITEM 天外陨石 35
+CheckBindMoney 元宝 > 349999
+#ACT
+TAKE 修炼石 35
+TAKE 天外陨石 35
+money 绑定元宝 - 350000
+MOV U2 7
+inc U143 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【攻击修炼Lv7】/FCOLOR=58>
+BREAK
+
+#if
+equal U2 7
+CHECKITEM 修炼石 40
+CHECKITEM 天外陨石 40
+CheckBindMoney 元宝 > 499999
+#ACT
+TAKE 修炼石 40
+TAKE 天外陨石 40
+money 绑定元宝 - 400000
+MOV U2 8
+inc U144 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【攻击修炼Lv8】/FCOLOR=58>
+BREAK
+
+#if
+equal U2 8
+CHECKITEM 修炼石 45
+CHECKITEM 天外陨石 45
+CheckBindMoney 元宝 > 449999
+#ACT
+TAKE  修炼石 45
+TAKE  天外陨石 45
+money 绑定元宝 - 450000
+MOV U2 9
+inc U145 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【攻击修炼Lv9】/FCOLOR=58>
+BREAK
+
+#if
+equal U2 9
+CHECKITEM 修炼石 50
+CHECKITEM 天外陨石 50
+CheckBindMoney 元宝 > 499999
+#ACT
+TAKE 修炼石 50
+TAKE 天外陨石 50
+money 绑定元宝 - 500000
+MOV U2 10
+inc U146 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【攻击修炼Lv10】/FCOLOR=58>
+BREAK
+
+#if
+#act
+MESSAGEBOX 修炼需要：\\1.修炼石*<$STR(N$攻击材料数量1)>\\2.<$STR(N$攻击元宝数量)>元宝\\3.天外陨石*<$STR(N$攻击材料数量2)>
+BREAK
+;-----------------------↑↑↑↑↑↑↑↑↑----------------------------------
+
+
+;-----------------------魔法修炼----------------------------------
+
+[@晋升21]
+#if
+equal U3 0
+CHECKITEM 修炼石 5
+CHECKITEM 天外陨石 5
+CheckBindMoney 元宝 > 49999
+#ACT
+TAKE 修炼石 5
+TAKE 天外陨石 5
+money 绑定元宝 - 50000
+MOV U3 1
+GOTO @神之天赋支线任务
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法修炼Lv1】/FCOLOR=58>
+BREAK
+
+#if
+equal U3 1
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CheckBindMoney 元宝 > 99999
+#ACT
+TAKE 修炼石 10
+TAKE 天外陨石 10
+money 绑定元宝 - 100000
+MOV U3 2
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法修炼Lv2】/FCOLOR=58>
+BREAK
+
+#if
+equal U3 2
+CHECKITEM 修炼石 15
+CHECKITEM 天外陨石 15
+CheckBindMoney 元宝 > 149999
+#ACT
+TAKE 修炼石 15
+TAKE 天外陨石 15
+money 绑定元宝 - 150000
+MOV U3 3
+inc U139 1
+
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法修炼Lv3】/FCOLOR=58>
+BREAK
+
+#if
+equal U3 3
+CHECKITEM 修炼石 20
+CHECKITEM 天外陨石 20
+CheckBindMoney 元宝 > 199999
+#ACT
+TAKE  修炼石 20
+TAKE  天外陨石 20
+money 绑定元宝 - 200000
+MOV U3 4
+inc U140 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法修炼Lv4】/FCOLOR=58>
+BREAK
+
+#if
+equal U3 4
+CHECKITEM 修炼石 25
+CHECKITEM 天外陨石 25
+CheckBindMoney 元宝 > 249999
+#ACT
+TAKE 修炼石 25
+TAKE 天外陨石 25
+money 绑定元宝 - 250000
+MOV U3 5
+inc U141 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法修炼Lv5】/FCOLOR=58>
+BREAK
+
+#if
+equal U3 5
+CHECKITEM 修炼石 30
+CHECKITEM 天外陨石 30
+CheckBindMoney 元宝 > 299999
+#ACT
+TAKE 修炼石 30
+TAKE 天外陨石 30
+money 绑定元宝 - 300000
+MOV U3 6
+inc U142 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法修炼Lv6】/FCOLOR=58>
+BREAK
+
+#if
+equal U3 6
+CHECKITEM 修炼石 35
+CHECKITEM 天外陨石 35
+CheckBindMoney 元宝 > 349999
+#ACT
+TAKE 修炼石 35
+TAKE 天外陨石 35
+money 绑定元宝 - 350000
+MOV U3 7
+inc U143 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法修炼Lv7】/FCOLOR=58>
+BREAK
+
+#if
+equal U3 7
+CHECKITEM 修炼石 40
+CHECKITEM 天外陨石 40
+CheckBindMoney 元宝 > 399999
+#ACT
+TAKE 修炼石 40
+TAKE 天外陨石 40
+money 绑定元宝 - 400000
+MOV U3 8
+inc U144 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法修炼Lv8】/FCOLOR=58>
+BREAK
+
+#if
+equal U3 8
+CHECKITEM 修炼石 45
+CHECKITEM 天外陨石 45
+CheckBindMoney 元宝 > 449999
+#ACT
+TAKE 修炼石 45
+TAKE 天外陨石 45
+money 绑定元宝 - 450000
+MOV U3 9
+inc U145 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法修炼Lv9】/FCOLOR=58>
+BREAK
+
+#if
+equal U3 9
+CHECKITEM 修炼石 50
+CHECKITEM 天外陨石 50
+CheckBindMoney 元宝 > 499999
+#ACT
+TAKE 修炼石 50
+TAKE 天外陨石 50
+money 绑定元宝 - 500000
+MOV U3 10
+inc U146 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法修炼Lv10】/FCOLOR=58>
+BREAK
+
+#if
+#act
+MESSAGEBOX 修炼需要：\\1.修炼石*<$STR(N$魔法材料数量1)>\\2.<$STR(N$魔法元宝数量)>元宝\\3.天外陨石*<$STR(N$魔法材料数量2)>
+BREAK
+
+
+
+;-----------------------道术修炼----------------------------------
+
+[@晋升31]
+#if
+equal U4 0
+CHECKITEM 修炼石 5
+CHECKITEM 天外陨石 5
+CheckBindMoney 元宝 > 49999
+#ACT
+TAKE 修炼石 5
+TAKE 天外陨石 5
+money 绑定元宝 - 50000
+MOV U4 1
+GOTO @神之天赋支线任务
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术修炼Lv1】/FCOLOR=58>
+BREAK
+
+#if
+equal U4 1
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CheckBindMoney 元宝 > 99999
+#ACT
+TAKE 修炼石 10
+TAKE 天外陨石 10
+money 绑定元宝 - 100000
+MOV U4 2
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术修炼Lv2】/FCOLOR=58>
+BREAK
+
+#if
+equal U4 2
+CHECKITEM 修炼石 15
+CHECKITEM 天外陨石 15
+CheckBindMoney 元宝 > 149999
+#ACT
+TAKE 修炼石 15
+TAKE 天外陨石 15
+money 绑定元宝 - 150000
+MOV U4 3
+inc U139 1
+
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术修炼Lv3】/FCOLOR=58>
+BREAK
+
+#if
+equal U4 3
+CHECKITEM 修炼石 20
+CHECKITEM 天外陨石 20
+CheckBindMoney 元宝 > 199999
+#ACT
+TAKE 修炼石 20
+TAKE 天外陨石 20
+money 绑定元宝 - 200000
+MOV U4 4
+inc U140 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术修炼Lv4】/FCOLOR=58>
+BREAK
+
+#if
+equal U4 4
+CHECKITEM 修炼石 25
+CHECKITEM 天外陨石 25
+CheckBindMoney 元宝 > 249999
+#ACT
+TAKE 修炼石 25
+TAKE 天外陨石 25
+money 绑定元宝 - 250000
+MOV U4 5
+inc U141 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术修炼Lv5】/FCOLOR=58>
+BREAK
+
+#if
+equal U4 5
+CHECKITEM 修炼石 30
+CHECKITEM 天外陨石 30
+CheckBindMoney 元宝 > 299999
+#ACT
+TAKE 修炼石 30
+TAKE 天外陨石 30
+money 绑定元宝 - 300000
+MOV U4 6
+inc U142 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术修炼Lv6】/FCOLOR=58>
+BREAK
+
+#if
+equal U4 6
+CHECKITEM 修炼石 35
+CHECKITEM 天外陨石 35
+CheckBindMoney 元宝 > 349999
+#ACT
+TAKE 修炼石 35
+TAKE 天外陨石 35
+money 绑定元宝 - 350000
+MOV U4 7
+inc U143 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术修炼Lv7】/FCOLOR=58>
+BREAK
+
+#if
+equal U4 7
+CHECKITEM 修炼石 40
+CHECKITEM 天外陨石 40
+CheckBindMoney 元宝 > 399999
+#ACT
+TAKE 修炼石 40
+TAKE 天外陨石 40
+money 绑定元宝 - 400000
+MOV U4 8
+inc U144 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术修炼Lv8】/FCOLOR=58>
+BREAK
+
+#if
+equal U4 8
+CHECKITEM 修炼石 45
+CHECKITEM 天外陨石 45
+CheckBindMoney 元宝 > 449999
+#ACT
+TAKE 修炼石 45
+TAKE 天外陨石 45
+money 绑定元宝 - 450000
+MOV U4 9
+inc U145 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术修炼Lv9】/FCOLOR=58>
+BREAK
+
+#if
+equal U4 9
+CHECKITEM 修炼石 50
+CHECKITEM 天外陨石 50
+CheckBindMoney 元宝 > 499999
+#ACT
+TAKE 修炼石 50
+TAKE 天外陨石 50
+money 绑定元宝 - 500000
+MOV U4 10
+inc U146 1
+GOTO @main
+#CALL [\属性重载\属性加成.txt] @属性设置
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术修炼Lv10】/FCOLOR=58>
+BREAK
+
+#if
+#act
+MESSAGEBOX 修炼需要：\\1.修炼石*<$STR(N$道术材料数量1)>\\2.<$STR(N$道术元宝数量)>元宝\\3.天外陨石*<$STR(N$道术材料数量2)>
+BREAK
+
+
+;-----------------------魔法切割百分比----------------------------------
+
+[@晋升51]
+#if
+equal U6 0
+CHECKITEM 修炼石 5
+CHECKITEM 天外陨石 5
+CheckBindMoney 元宝 > 49999
+#ACT
+TAKE 修炼石 5
+TAKE 天外陨石 5
+money 绑定元宝 - 50000
+MOV U6 1
+GOTO @神之天赋支线任务
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法切割百分比Lv1】/FCOLOR=58>
+BREAK
+
+#if
+equal U6 1
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CheckBindMoney 元宝 > 99999
+#ACT
+TAKE 修炼石 10
+TAKE 天外陨石 10
+money 绑定元宝 - 100000
+MOV U6 2
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法切割百分比Lv2】/FCOLOR=58>
+BREAK
+
+#if
+equal U6 2
+CHECKITEM 修炼石 15
+CHECKITEM 天外陨石 15
+CheckBindMoney 元宝 > 299999
+#ACT
+TAKE 修炼石 15
+TAKE 天外陨石 15
+money 绑定元宝 - 150000
+MOV U6 3
+inc U139 1
+
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法切割百分比Lv3】/FCOLOR=58>
+BREAK
+
+#if
+equal U6 3
+CHECKITEM 修炼石 20
+CHECKITEM 天外陨石 20
+CheckBindMoney 元宝 > 399999
+#ACT
+TAKE 修炼石 20
+TAKE 天外陨石 20
+money 绑定元宝 - 200000
+MOV U6 4
+inc U140 1
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法切割百分比Lv4】/FCOLOR=58>
+BREAK
+
+#if
+equal U6 4
+CHECKITEM 修炼石 25
+CHECKITEM 天外陨石 25
+CheckBindMoney 元宝 > 249999
+#ACT
+TAKE 修炼石 25
+TAKE 天外陨石 25
+money 绑定元宝 - 250000
+MOV U6 5
+inc U141 1
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法切割百分比Lv5】/FCOLOR=58>
+BREAK
+
+#if
+equal U6 5
+CHECKITEM 修炼石 30
+CHECKITEM 天外陨石 30
+CheckBindMoney 元宝 > 299999
+#ACT
+TAKE 修炼石 30
+TAKE 天外陨石 30
+money 绑定元宝 - 300000
+MOV U6 6
+inc U142 1
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法切割百分比Lv6】/FCOLOR=58>
+BREAK
+
+#if
+equal U6 6
+CHECKITEM 修炼石 35
+CHECKITEM 天外陨石 35
+CheckBindMoney 元宝 > 349999
+#ACT
+TAKE 修炼石 35
+TAKE 天外陨石 35
+money 绑定元宝 - 350000
+MOV U6 7
+inc U143 1
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法切割百分比Lv7】/FCOLOR=58>
+BREAK
+
+#if
+equal U6 7
+CHECKITEM 修炼石 40
+CHECKITEM 天外陨石 40
+CheckBindMoney 元宝 > 399999
+#ACT
+TAKE 修炼石 40
+TAKE 天外陨石 40
+money 绑定元宝 - 400000
+MOV U6 8
+inc U144 1
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法切割百分比Lv8】/FCOLOR=58>
+BREAK
+
+
+#if
+equal U6 8
+CHECKITEM 修炼石 45
+CHECKITEM 天外陨石 45
+CheckBindMoney 元宝 > 449999
+#ACT
+TAKE 修炼石 45
+TAKE 天外陨石 45
+money 绑定元宝 - 450000
+MOV U6 9
+inc U145 1
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法切割百分比Lv9】/FCOLOR=58>
+BREAK
+
+#if
+equal U6 9
+CHECKITEM 修炼石 50
+CHECKITEM 天外陨石 50
+CheckBindMoney 元宝 > 499999
+#ACT
+TAKE 修炼石 50
+TAKE 天外陨石 50
+money 绑定元宝 - 500000
+MOV U6 10
+inc U146 1
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【魔法切割百分比Lv10】/FCOLOR=58>
+BREAK
+
+#if
+#act
+MESSAGEBOX 修炼需要：\\1.修炼石*<$STR(N$法切材料数量1)>\\2.<$STR(N$法切元宝数量)>元宝\\3.天外陨石*<$STR(N$法切材料数量2)>
+BREAK
+
+
+;-----------------------道术切割百分比----------------------------------
+
+[@晋升61]
+#if
+equal U7 0
+CHECKITEM 修炼石 5
+CHECKITEM 天外陨石 5
+CheckBindMoney 元宝 > 49999
+#ACT
+TAKE 修炼石 5
+TAKE 天外陨石 5
+money 绑定元宝 - 50000
+MOV U7 1
+GOTO @神之天赋支线任务
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术切割百分比Lv1】/FCOLOR=58>
+BREAK
+
+#if
+equal U7 1
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CheckBindMoney 元宝 > 99999
+#ACT
+TAKE 修炼石 10
+TAKE 天外陨石 10
+money 绑定元宝 - 100000
+MOV U7 2
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术切割百分比Lv2】/FCOLOR=58>
+BREAK
+
+#if
+equal U7 2
+CHECKITEM 修炼石 15
+CHECKITEM 天外陨石 15
+CheckBindMoney 元宝 > 149999
+#ACT
+TAKE 修炼石 15
+TAKE 天外陨石 15
+money 绑定元宝 - 150000
+MOV U7 3
+inc U139 1
+GOTO @main
+
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术切割百分比Lv3】/FCOLOR=58>
+BREAK
+
+#if
+equal U7 3
+CHECKITEM 修炼石 20
+CHECKITEM 天外陨石 20
+CheckBindMoney 元宝 > 199999
+#ACT
+TAKE 修炼石 20
+TAKE 天外陨石 20
+money 绑定元宝 - 200000
+MOV U7 4
+inc U140 1
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术切割百分比Lv4】/FCOLOR=58>
+BREAK
+
+#if
+equal U7 4
+CHECKITEM 修炼石 25
+CHECKITEM 天外陨石 25
+CheckBindMoney 元宝 > 249999
+#ACT
+TAKE 修炼石 25
+TAKE 天外陨石 25
+money 绑定元宝 - 250000
+MOV U7 5
+inc U141 1
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术切割百分比Lv5】/FCOLOR=58>
+BREAK
+
+#if
+equal U7 5
+CHECKITEM 修炼石 30
+CHECKITEM 天外陨石 30
+CheckBindMoney 元宝 > 299999
+#ACT
+TAKE 修炼石 30
+TAKE 天外陨石 30
+money 绑定元宝 - 300000
+MOV U7 6
+inc U142 1
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术切割百分比Lv6】/FCOLOR=58>
+BREAK
+
+#if
+equal U7 6
+CHECKITEM 修炼石 35
+CHECKITEM 天外陨石 35
+CheckBindMoney 元宝 > 349999
+#ACT
+TAKE 修炼石 35
+TAKE 天外陨石 35
+money 绑定元宝 - 350000
+MOV U7 7
+inc U143 1
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术切割百分比Lv7】/FCOLOR=58>
+BREAK
+
+#if
+equal U7 7
+CHECKITEM 修炼石 40
+CHECKITEM 天外陨石 40
+CheckBindMoney 元宝 > 399999
+#ACT
+TAKE 修炼石 40
+TAKE 天外陨石 40
+money 绑定元宝 - 400000
+MOV U7 8
+inc U144 1
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术切割百分比Lv8】/FCOLOR=58>
+BREAK
+
+#if
+equal U7 8
+CHECKITEM 修炼石 45
+CHECKITEM 天外陨石 45
+CheckBindMoney 元宝 > 449999
+#ACT
+TAKE 修炼石 45
+TAKE 天外陨石 45
+money 绑定元宝 - 450000
+MOV U7 9
+inc U145 1
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术切割百分比Lv9】/FCOLOR=58>
+BREAK
+
+#if
+equal U7 9
+CHECKITEM 修炼石 50
+CHECKITEM 天外陨石 50
+CheckBindMoney 元宝 > 499999
+#ACT
+TAKE 修炼石 50
+TAKE 天外陨石 50
+money 绑定元宝 - 500000
+MOV U7 10
+inc U146 1
+GOTO @main
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【道术切割百分比Lv10】/FCOLOR=58>
+BREAK
+
+#if
+#act
+MESSAGEBOX 修炼需要：\\1.修炼石*<$STR(N$道切材料数量1)>\\2.<$STR(N$道切元宝数量)>元宝\\3.天外陨石*<$STR(N$道切材料数量2)>
+BREAK
+
+[@神之天赋支线任务]
+
+#if
+not CheckContainsText <$STR(T108)> 神之天赋
+large U108 22
+#act
+mov S$支线任务临时变量 <$STR(T108)>
+mov T108 <$STR(S$支线任务临时变量)>_神之天赋
+NEWCOMPLETETASK 31
+NEWDELETETASK 31
+sendmsg 1 已完成任务!
+
+CHANGEEXP + 100000
+MailGIVE 元宝 100000
+MailGIVE 灵兽精石 10 1#4#6#8
+SendMail 1 系统奖励 你已完成神之天赋任务,10万经验,10万元宝和灵兽精石*10已发放!!
+
+#if
+not CheckContainsText <$STR(T108)> 神之天赋
+#act
+mov S$支线任务临时变量 <$STR(T108)>
+mov T108 <$STR(S$支线任务临时变量)>_神之天赋
+
+}

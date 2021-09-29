@@ -1,0 +1,43 @@
+{
+ "DGate-Service": {
+  "DataPort": 7011,
+  "DataIpaddr": "127.0.0.1"
+ },
+ "Ssid-Service": {
+  "SSIDPort": 7014,
+  "SSIDIpaddr": "127.0.0.1"
+ },
+ "Server": {
+  "ServerId": 0,
+  "Help": "服务器信息",
+  "KuafuServer": 0,
+  "ServerName": "单机测试区",
+  "plateformid": 0
+ },
+ "M2DB-Config": {
+  "M2DBUser": "sa",
+  "M2DBPort": 1433,
+  "M2DBName": "cqDB",
+  "M2DBIpaddr": "47.101.145.151",
+  "M2DBPsw": "Aa123123",
+  "Help": "玩家数据库配置"
+ },
+ "PayDB-Config": {
+  "PayDBUser": "sa",
+  "PayDBPort": 1433,
+  "PayDBName": "cqDB",
+  "PayDBIpaddr": "47.101.145.151",
+  "PayDBPsw": "Aa123123"
+ },
+ "Logger-Service": {
+  "LoggerIp": "127.0.0.1",
+  "LoggerPort": 7015
+ },
+ "Iocp-Service": {
+  "IOCPPort": 7012,
+  "IOCPIpaddr": "127.0.0.1"
+ },
+ "Console-Service": {
+  "ConsolePort": 7017
+ }
+}

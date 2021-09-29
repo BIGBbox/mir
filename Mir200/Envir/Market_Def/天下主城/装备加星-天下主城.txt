@@ -1,0 +1,1537 @@
+[@main]
+
+
+#IF
+#ACT
+goto @位置刷新
+#SAY
+
+<Img|img=public/sf1/1/01609.png|x=330|y=120|children={close_btn,人物,click_btn,部位名,强化等级,强化材料,材料数量,强化元宝,*,部位1,部位2,部位3,部位4,部位5,部位6,部位7,部位8,部位9,部位10,tips}|bg=1|reset=1|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=890|y=120|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
+
+<Text|id=部位名|x=500|y=75|color=253|tips=|tipsx=10|tipsy=80|size=16|text= <$STR(S$装备部位)>>
+<Text|id=强化等级|x=500|y=132|color=253|tips=|tipsx=10|tipsy=80|size=16|text= <$STR(S$强化等级)>>
+<Text|id=强化材料|x=500|y=189|color=253|tips=|tipsx=10|tipsy=80|size=16|text= <$STR(S$强化材料)>>
+<Text|id=*|x=552|y=189|color=255|tips=|tipsx=10|tipsy=80|size=16|text=*>
+<Text|id=材料数量|x=562|y=189|color=253|tips=|tipsx=10|tipsy=80|size=16|text=<$STR(S$材料数量)>>
+<Text|id=强化元宝|x=500|y=246|color=253|tips=|tipsx=10|tipsy=80|size=16|text=元宝*<$STR(S$元宝数量)>>
+<Frames|id=人物|x=125|y=18|suffix=.png|prefix=public/sf1/frames/module_|count=16|loop=-1|speed=10|tips={强化说明：/FCOLOR=249}^{本服提供两种加星模式，属性完全相同！一次加成终生享用！货币加星只是为了更好的给有需要的玩家开荒立足的根本！玩家可根据各自条件选择加星模式/FCOLOR=249}^{三星：攻击面板+50、体力面板+3888、怪物伤害+5%、人物爆率+20%、暴击伤害+5%/FCOLOR=154}^{六星：攻击面板+100、体力面板+8888、怪物伤害+10%、人物爆率+50%、暴击伤害+10%、人物倍攻+0.02/FCOLOR=215}^{九星：攻击面板+200、体力面板+16888、怪物伤害+20%、人物爆率+100%、暴击伤害+20%、人物倍攻+0.05/FCOLOR=70}^{十二星：攻击面板+300、体力面板+38888、怪物伤害+40%、人物爆率+200%、暴击伤害+30%、人物倍攻+0.10、魔法盾/FCOLOR=249}^|tipsx=400|tipsy=80>
+
+<Button|id=部位1|x=25|y=81|nimg=public/sf1/1/01581.png|pimg=public/sf1/1/01580.png|color=249|width=60|height=60|link=@武器>
+<Button|id=部位2|x=115|y=81|nimg=public/sf1/1/01581.png|pimg=public/sf1/1/01580.png|color=249|width=60|height=60|link=@衣服>
+
+<Button|id=部位3|x=25|y=158|nimg=public/sf1/1/01581.png|pimg=public/sf1/1/01580.png|color=249|width=60|height=60|link=@头盔>
+<Button|id=部位4|x=115|y=158|nimg=public/sf1/1/01581.png|pimg=public/sf1/1/01580.png|color=249|width=60|height=60|link=@项链>
+<Button|id=部位5|x=25|y=235|nimg=public/sf1/1/01581.png|pimg=public/sf1/1/01580.png|color=249|width=60|height=60|link=@左手>
+<Button|id=部位6|x=115|y=235|nimg=public/sf1/1/01581.png|pimg=public/sf1/1/01580.png|color=249|width=60|height=60|link=@右手>
+<Button|id=部位7|x=25|y=312|nimg=public/sf1/1/01581.png|pimg=public/sf1/1/01580.png|color=249|width=60|height=60|link=@左戒>
+<Button|id=部位8|x=115|y=312|nimg=public/sf1/1/01581.png|pimg=public/sf1/1/01580.png|color=249|width=60|height=60|link=@右戒>
+<Button|id=部位9|x=25|y=389|nimg=public/sf1/1/01581.png|pimg=public/sf1/1/01580.png|color=249|width=60|height=60|link=@腰带>
+<Button|id=部位10|x=115|y=389|nimg=public/sf1/1/01581.png|pimg=public/sf1/1/01580.png|color=249|width=60|height=60|link=@靴子>
+
+<Button|id=click_btn|x=440|y=400|nimg=public/sf1/1/01582.png|pimg=public/sf1/1/01584.png|link=@我要强化>
+<Text|id=tips|x=455|y=335|color=215|tips={强化说明：/FCOLOR=249}^{本服提供两种加星模式，属性完全相同！一次加成终生享用！}^{货币加星只是为了更好的给有需要的玩家开荒立足的根本！玩家可根据各自条件选择加星模式/FCOLOR=249}^{三星：攻击面板+50、体力面板+3888、怪物伤害+5%、人物爆率+20%、暴击伤害+5%/FCOLOR=154}^{六星：攻击面板+100、体力面板+8888、怪物伤害+10%、人物爆率+50%、暴击伤害+10%、人物倍攻+0.02/FCOLOR=215}^{九星：攻击面板+200、体力面板+16888、怪物伤害+20%、人物爆率+100%、暴击伤害+20%、人物倍攻+0.05/FCOLOR=70}^{十二星：攻击面板+300、体力面板+38888、怪物伤害+40%、人物爆率+200%、暴击伤害+30%、人物倍攻+0.10、魔法盾/FCOLOR=249}^|tipsx=-200|tipsy=-10|size=16|text=鉴定说明>
+
+
+[@我要强化]
+#IF
+EQUAL U<$STR(S$位置变量)> 12
+#ACT
+MESSAGEBOX 提示：已经加12星
+break
+
+#if
+CHECKUSEITEM <$str(S$装备部位A)>
+#elseact
+MESSAGEBOX 提示：没有穿戴装备不能强化
+break
+
+#IF
+CheckBindMoney 元宝 < <$str(S$元宝数量)>
+#ACT
+MESSAGEBOX 提示：元宝不足
+break
+
+#IF
+CHECKGAMEDIAMOND < <$str(S$材料数量)>
+#ACT
+MESSAGEBOX 提示：天下币不足
+break
+
+
+#if
+#act
+money 绑定元宝  - <$str(S$元宝数量)>
+GAMEDIAMOND - <$str(S$材料数量)>
+inc U<$STR(S$位置变量)> 1
+#CALL [\属性重载\获取属性.txt] @获取属性
+
+;;记录不同等级个数
+mov P1 126
+inc P1 U<$STR(S$位置变量)>
+
+#if
+not small <$STR(P1)> 129
+not large <$STR(P1)> 138
+#act
+inc U<$STR(P1)> 1
+
+#if
+#act
+GOTO @MAIN
+GOTO @装备加星引导奖励领取
+
+[@装备加星引导奖励领取]
+
+#if
+not CheckContainsText <$STR(T108)> 装备加星
+large U108 22
+#act
+mov S$支线任务临时变量 <$STR(T108)>
+mov T108 <$STR(S$支线任务临时变量)>_装备加星
+NEWCOMPLETETASK 32
+NEWDELETETASK 32
+CHANGEEXP + 100000
+MailGIVE 元宝 100000
+SendMail 1 系统奖励 你已完成装备加星任务,10万经验和10万元宝已发放!!
+
+
+[@武器]
+#act
+mov S$装备部位A 1
+mov S$装备部位 武器
+goto @main
+
+[@衣服]
+#if
+#act
+mov S$装备部位A 0
+mov S$装备部位 衣服
+goto @main
+
+[@头盔]
+#act
+mov S$装备部位A 4
+mov S$装备部位 头盔
+goto @main
+
+[@项链]
+#act
+mov S$装备部位A 3
+mov S$装备部位 项链
+goto @main
+
+[@左手]
+#act
+mov S$装备部位A 5
+mov S$装备部位 左手
+goto @main
+
+[@右手]
+#act
+mov S$装备部位A 6
+mov S$装备部位 右手
+goto @main
+
+[@左戒]
+#act
+mov S$装备部位A 7
+mov S$装备部位 左戒
+goto @main
+
+[@右戒]
+#act
+mov S$装备部位A 8
+mov S$装备部位 右戒
+goto @main
+
+[@腰带]
+#act
+mov S$装备部位A 10
+mov S$装备部位 腰带
+goto @main
+
+[@靴子]
+#act
+mov S$装备部位A 11
+mov S$装备部位 靴子
+goto @main
+
+
+
+
+[@位置刷新]
+
+#if
+equal S$装备部位A
+#act
+break
+
+#if
+equal <$str(u26)> 0
+equal S$装备部位A 1
+#act
+mov S$位置变量 26
+mov S$强化等级 <$str(u26)>
+mov S$强化材料 天下币
+mov S$材料数量 100
+mov S$元宝数量 1000000
+
+#if
+equal <$str(u27)> 0
+equal S$装备部位A 0
+#act
+mov S$位置变量 27
+mov S$强化等级 <$str(u27)>
+mov S$强化材料 天下币
+mov S$材料数量 100
+mov S$元宝数量 1000000
+
+#if
+equal <$str(u28)> 0
+equal S$装备部位A 4
+#act
+mov S$位置变量 28
+mov S$强化等级 <$str(u28)>
+mov S$强化材料 天下币
+mov S$材料数量 100
+mov S$元宝数量 1000000
+
+#if
+equal <$str(u29)> 0
+equal S$装备部位A 3
+#act
+mov S$位置变量 29
+mov S$强化等级 <$str(u29)>
+mov S$强化材料 天下币
+mov S$材料数量 100
+mov S$元宝数量 1000000
+
+#if
+equal <$str(u30)> 0
+equal S$装备部位A 5
+#act
+mov S$位置变量 30
+mov S$强化等级 <$str(u30)>
+mov S$强化材料 天下币
+mov S$材料数量 100
+mov S$元宝数量 1000000
+#if
+equal <$str(u31)> 0
+equal S$装备部位A 6
+#act
+mov S$位置变量 31
+mov S$强化等级 <$str(u31)>
+mov S$强化材料 天下币
+mov S$材料数量 100
+mov S$元宝数量 1000000
+
+#if
+equal <$str(u32)> 0
+equal S$装备部位A 7
+#act
+mov S$位置变量 32
+mov S$强化等级 <$str(u32)>
+mov S$强化材料 天下币
+mov S$材料数量 100
+mov S$元宝数量 1000000
+
+#if
+equal <$str(u33)> 0
+equal S$装备部位A 8
+#act
+mov S$位置变量 33
+mov S$强化等级 <$str(u33)>
+mov S$强化材料 天下币
+mov S$材料数量 100
+mov S$元宝数量 1000000
+
+#if
+equal <$str(u34)> 0
+equal S$装备部位A 10
+#act
+mov S$位置变量 34
+mov S$强化等级 <$str(u34)>
+mov S$强化材料 天下币
+mov S$材料数量 100
+mov S$元宝数量 1000000
+
+#if
+equal <$str(u35)> 0
+equal S$装备部位A 11
+#act
+mov S$位置变量 35
+mov S$强化等级 <$str(u35)>
+mov S$强化材料 天下币
+mov S$材料数量 100
+mov S$元宝数量 1000000
+
+
+;==============================================
+
+#if
+equal <$str(u26)> 1
+equal S$装备部位A 1
+#act
+mov S$位置变量 26
+mov S$强化等级 <$str(u26)>
+mov S$强化材料 天下币
+mov S$材料数量 200
+mov S$元宝数量 2000000
+
+#if
+equal <$str(u27)> 1
+equal S$装备部位A 0
+#act
+mov S$位置变量 27
+mov S$强化等级 <$str(u27)>
+mov S$强化材料 天下币
+mov S$材料数量 200
+mov S$元宝数量 2000000
+
+#if
+equal <$str(u28)> 1
+equal S$装备部位A 4
+#act
+mov S$位置变量 28
+mov S$强化等级 <$str(u28)>
+mov S$强化材料 天下币
+mov S$材料数量 200
+mov S$元宝数量 2000000
+
+#if
+equal <$str(u29)> 1
+equal S$装备部位A 3
+#act
+mov S$位置变量 29
+mov S$强化等级 <$str(u29)>
+mov S$强化材料 天下币
+mov S$材料数量 200
+mov S$元宝数量 2000000
+
+#if
+equal <$str(u30)> 1
+equal S$装备部位A 5
+#act
+mov S$位置变量 30
+mov S$强化等级 <$str(u30)>
+mov S$强化材料 天下币
+mov S$材料数量 200
+mov S$元宝数量 2000000
+
+#if
+equal <$str(u31)> 1
+equal S$装备部位A 6
+#act
+mov S$位置变量 31
+mov S$强化等级 <$str(u31)>
+mov S$强化材料 天下币
+mov S$材料数量 200
+mov S$元宝数量 2000000
+
+#if
+equal <$str(u32)> 1
+equal S$装备部位A 7
+#act
+mov S$位置变量 32
+mov S$强化等级 <$str(u32)>
+mov S$强化材料 天下币
+mov S$材料数量 200
+mov S$元宝数量 2000000
+
+#if
+equal <$str(u33)> 1
+equal S$装备部位A 8
+#act
+mov S$位置变量 33
+mov S$强化等级 <$str(u33)>
+mov S$强化材料 天下币
+mov S$材料数量 200
+mov S$元宝数量 2000000
+
+#if
+equal <$str(u34)> 1
+equal S$装备部位A 10
+#act
+mov S$位置变量 34
+mov S$强化等级 <$str(u34)>
+mov S$强化材料 天下币
+mov S$材料数量 200
+mov S$元宝数量 2000000
+
+#if
+equal <$str(u35)> 1
+equal S$装备部位A 11
+#act
+mov S$位置变量 35
+mov S$强化等级 <$str(u35)>
+mov S$强化材料 天下币
+mov S$材料数量 200
+mov S$元宝数量 2000000
+
+
+;==============================================
+
+#if
+equal <$str(u26)> 2
+equal S$装备部位A 1
+#act
+mov S$位置变量 26
+mov S$强化等级 <$str(u26)>
+mov S$强化材料 天下币
+mov S$材料数量 300
+mov S$元宝数量 3000000
+
+#if
+equal <$str(u27)> 2
+equal S$装备部位A 0
+#act
+mov S$位置变量 27
+mov S$强化等级 <$str(u27)>
+mov S$强化材料 天下币
+mov S$材料数量 300
+mov S$元宝数量 3000000
+
+#if
+equal <$str(u28)> 2
+equal S$装备部位A 4
+#act
+mov S$位置变量 28
+mov S$强化等级 <$str(u28)>
+mov S$强化材料 天下币
+mov S$材料数量 300
+mov S$元宝数量 3000000
+
+
+#if
+equal <$str(u29)> 2
+equal S$装备部位A 3
+#act
+mov S$位置变量 29
+mov S$强化等级 <$str(u29)>
+mov S$强化材料 天下币
+mov S$材料数量 300
+mov S$元宝数量 3000000
+
+
+#if
+equal <$str(u30)> 2
+equal S$装备部位A 5
+#act
+mov S$位置变量 30
+mov S$强化等级 <$str(u30)>
+mov S$强化材料 天下币
+mov S$材料数量 300
+mov S$元宝数量 3000000
+
+
+#if
+equal <$str(u31)> 2
+equal S$装备部位A 6
+#act
+mov S$位置变量 31
+mov S$强化等级 <$str(u31)>
+mov S$强化材料 天下币
+mov S$材料数量 300
+mov S$元宝数量 3000000
+
+
+#if
+equal <$str(u32)> 2
+equal S$装备部位A 7
+#act
+mov S$位置变量 32
+mov S$强化等级 <$str(u32)>
+mov S$强化材料 天下币
+mov S$材料数量 300
+mov S$元宝数量 3000000
+
+
+#if
+equal <$str(u33)> 2
+equal S$装备部位A 8
+#act
+mov S$位置变量 33
+mov S$强化等级 <$str(u33)>
+mov S$强化材料 天下币
+mov S$材料数量 300
+mov S$元宝数量 3000000
+
+
+#if
+equal <$str(u34)> 2
+equal S$装备部位A 10
+#act
+mov S$位置变量 34
+mov S$强化等级 <$str(u34)>
+mov S$强化材料 天下币
+mov S$材料数量 300
+mov S$元宝数量 3000000
+
+
+#if
+equal <$str(u35)> 2
+equal S$装备部位A 11
+#act
+mov S$位置变量 35
+mov S$强化等级 <$str(u35)>
+mov S$强化材料 天下币
+mov S$材料数量 300
+mov S$元宝数量 3000000
+
+
+
+;==============================================
+
+#if
+equal <$str(u26)> 3
+equal S$装备部位A 1
+#act
+mov S$位置变量 26
+mov S$强化等级 <$str(u26)>
+mov S$强化材料 天下币
+mov S$材料数量 400
+mov S$元宝数量 4000000
+
+
+#if
+equal <$str(u27)> 3
+equal S$装备部位A 0
+#act
+mov S$位置变量 27
+mov S$强化等级 <$str(u27)>
+mov S$强化材料 天下币
+mov S$材料数量 400
+mov S$元宝数量 4000000
+
+
+#if
+equal <$str(u28)> 3
+equal S$装备部位A 4
+#act
+mov S$位置变量 28
+mov S$强化等级 <$str(u28)>
+mov S$强化材料 天下币
+mov S$材料数量 400
+mov S$元宝数量 4000000
+
+
+#if
+equal <$str(u29)> 3
+equal S$装备部位A 3
+#act
+mov S$位置变量 29
+mov S$强化等级 <$str(u29)>
+mov S$强化材料 天下币
+mov S$材料数量 400
+mov S$元宝数量 4000000
+
+
+#if
+equal <$str(u30)> 3
+equal S$装备部位A 5
+#act
+mov S$位置变量 30
+mov S$强化等级 <$str(u30)>
+mov S$强化材料 天下币
+mov S$材料数量 400
+mov S$元宝数量 4000000
+
+#if
+equal <$str(u31)> 3
+equal S$装备部位A 6
+#act
+mov S$位置变量 31
+mov S$强化等级 <$str(u31)>
+mov S$强化材料 天下币
+mov S$材料数量 400
+mov S$元宝数量 4000000
+
+#if
+equal <$str(u32)> 3
+equal S$装备部位A 7
+#act
+mov S$位置变量 32
+mov S$强化等级 <$str(u32)>
+mov S$强化材料 天下币
+mov S$材料数量 400
+mov S$元宝数量 4000000
+
+#if
+equal <$str(u33)> 3
+equal S$装备部位A 8
+#act
+mov S$位置变量 33
+mov S$强化等级 <$str(u33)>
+mov S$强化材料 天下币
+mov S$材料数量 400
+mov S$元宝数量 4000000
+
+#if
+equal <$str(u34)> 3
+equal S$装备部位A 10
+#act
+mov S$位置变量 34
+mov S$强化等级 <$str(u34)>
+mov S$强化材料 天下币
+mov S$材料数量 400
+mov S$元宝数量 4000000
+
+#if
+equal <$str(u35)> 3
+equal S$装备部位A 11
+#act
+mov S$位置变量 35
+mov S$强化等级 <$str(u35)>
+mov S$强化材料 天下币
+mov S$材料数量 400
+mov S$元宝数量 4000000
+
+
+;==============================================
+
+#if
+equal <$str(u26)> 4
+equal S$装备部位A 1
+#act
+mov S$位置变量 26
+mov S$强化等级 <$str(u26)>
+mov S$强化材料 天下币
+mov S$材料数量 500
+mov S$元宝数量 5000000
+
+#if
+equal <$str(u27)> 4
+equal S$装备部位A 0
+#act
+mov S$位置变量 27
+mov S$强化等级 <$str(u27)>
+mov S$强化材料 天下币
+mov S$材料数量 500
+mov S$元宝数量 5000000
+
+#if
+equal <$str(u28)> 4
+equal S$装备部位A 4
+#act
+mov S$位置变量 28
+mov S$强化等级 <$str(u28)>
+mov S$强化材料 天下币
+mov S$材料数量 500
+mov S$元宝数量 5000000
+
+#if
+equal <$str(u29)> 4
+equal S$装备部位A 3
+#act
+mov S$位置变量 29
+mov S$强化等级 <$str(u29)>
+mov S$强化材料 天下币
+mov S$材料数量 500
+mov S$元宝数量 5000000
+
+#if
+equal <$str(u30)> 4
+equal S$装备部位A 5
+#act
+mov S$位置变量 30
+mov S$强化等级 <$str(u30)>
+mov S$强化材料 天下币
+mov S$材料数量 500
+mov S$元宝数量 5000000
+
+#if
+equal <$str(u31)> 4
+equal S$装备部位A 6
+#act
+mov S$位置变量 31
+mov S$强化等级 <$str(u31)>
+mov S$强化材料 天下币
+mov S$材料数量 500
+mov S$元宝数量 5000000
+
+#if
+equal <$str(u32)> 4
+equal S$装备部位A 7
+#act
+mov S$位置变量 32
+mov S$强化等级 <$str(u32)>
+mov S$强化材料 天下币
+mov S$材料数量 500
+mov S$元宝数量 5000000
+
+#if
+equal <$str(u33)> 4
+equal S$装备部位A 8
+#act
+mov S$位置变量 33
+mov S$强化等级 <$str(u33)>
+mov S$强化材料 天下币
+mov S$材料数量 500
+mov S$元宝数量 5000000
+
+#if
+equal <$str(u34)> 4
+equal S$装备部位A 10
+#act
+mov S$位置变量 34
+mov S$强化等级 <$str(u34)>
+mov S$强化材料 天下币
+mov S$材料数量 500
+mov S$元宝数量 5000000
+
+#if
+equal <$str(u35)> 4
+equal S$装备部位A 11
+#act
+mov S$位置变量 35
+mov S$强化等级 <$str(u35)>
+mov S$强化材料 天下币
+mov S$材料数量 500
+mov S$元宝数量 5000000
+
+
+;==============================================
+
+#if
+equal <$str(u26)> 5
+equal S$装备部位A 1
+#act
+mov S$位置变量 26
+mov S$强化等级 <$str(u26)>
+mov S$强化材料 天下币
+mov S$材料数量 700
+mov S$元宝数量 7000000
+
+#if
+equal <$str(u27)> 5
+equal S$装备部位A 0
+#act
+mov S$位置变量 27
+mov S$强化等级 <$str(u27)>
+mov S$强化材料 天下币
+mov S$材料数量 700
+mov S$元宝数量 7000000
+
+#if
+equal <$str(u28)> 5
+equal S$装备部位A 4
+#act
+mov S$位置变量 28
+mov S$强化等级 <$str(u28)>
+mov S$强化材料 天下币
+mov S$材料数量 700
+mov S$元宝数量 7000000
+
+#if
+equal <$str(u29)> 5
+equal S$装备部位A 3
+#act
+mov S$位置变量 29
+mov S$强化等级 <$str(u29)>
+mov S$强化材料 天下币
+mov S$材料数量 700
+mov S$元宝数量 7000000
+
+#if
+equal <$str(u30)> 5
+equal S$装备部位A 5
+#act
+mov S$位置变量 30
+mov S$强化等级 <$str(u30)>
+mov S$强化材料 天下币
+mov S$材料数量 700
+mov S$元宝数量 7000000
+
+#if
+equal <$str(u31)> 5
+equal S$装备部位A 6
+#act
+mov S$位置变量 31
+mov S$强化等级 <$str(u31)>
+mov S$强化材料 天下币
+mov S$材料数量 700
+mov S$元宝数量 7000000
+
+#if
+equal <$str(u32)> 5
+equal S$装备部位A 7
+#act
+mov S$位置变量 32
+mov S$强化等级 <$str(u32)>
+mov S$强化材料 天下币
+mov S$材料数量 700
+mov S$元宝数量 7000000
+
+#if
+equal <$str(u33)> 5
+equal S$装备部位A 8
+#act
+mov S$位置变量 33
+mov S$强化等级 <$str(u33)>
+mov S$强化材料 天下币
+mov S$材料数量 700
+mov S$元宝数量 7000000
+
+#if
+equal <$str(u34)> 5
+equal S$装备部位A 10
+#act
+mov S$位置变量 34
+mov S$强化等级 <$str(u34)>
+mov S$强化材料 天下币
+mov S$材料数量 700
+mov S$元宝数量 7000000
+
+#if
+equal <$str(u35)> 5
+equal S$装备部位A 11
+#act
+mov S$位置变量 35
+mov S$强化等级 <$str(u35)>
+mov S$强化材料 天下币
+mov S$材料数量 700
+mov S$元宝数量 7000000
+
+
+;==============================================
+
+#if
+equal <$str(u26)> 6
+equal S$装备部位A 1
+#act
+mov S$位置变量 26
+mov S$强化等级 <$str(u26)>
+mov S$强化材料 天下币
+mov S$材料数量 900
+mov S$元宝数量 9000000
+
+#if
+equal <$str(u27)> 6
+equal S$装备部位A 0
+#act
+mov S$位置变量 27
+mov S$强化等级 <$str(u27)>
+mov S$强化材料 天下币
+mov S$材料数量 900
+mov S$元宝数量 9000000
+
+#if
+equal <$str(u28)> 6
+equal S$装备部位A 4
+#act
+mov S$位置变量 28
+mov S$强化等级 <$str(u28)>
+mov S$强化材料 天下币
+mov S$材料数量 900
+mov S$元宝数量 9000000
+
+#if
+equal <$str(u29)> 6
+equal S$装备部位A 3
+#act
+mov S$位置变量 29
+mov S$强化等级 <$str(u29)>
+mov S$强化材料 天下币
+mov S$材料数量 900
+mov S$元宝数量 9000000
+
+#if
+equal <$str(u30)> 6
+equal S$装备部位A 5
+#act
+mov S$位置变量 30
+mov S$强化等级 <$str(u30)>
+mov S$强化材料 天下币
+mov S$材料数量 900
+mov S$元宝数量 9000000
+
+#if
+equal <$str(u31)> 6
+equal S$装备部位A 6
+#act
+mov S$位置变量 31
+mov S$强化等级 <$str(u31)>
+mov S$强化材料 天下币
+mov S$材料数量 900
+mov S$元宝数量 9000000
+
+#if
+equal <$str(u32)> 6
+equal S$装备部位A 7
+#act
+mov S$位置变量 32
+mov S$强化等级 <$str(u32)>
+mov S$强化材料 天下币
+mov S$材料数量 900
+mov S$元宝数量 9000000
+
+#if
+equal <$str(u33)> 6
+equal S$装备部位A 8
+#act
+mov S$位置变量 33
+mov S$强化等级 <$str(u33)>
+mov S$强化材料 天下币
+mov S$材料数量 900
+mov S$元宝数量 9000000
+
+#if
+equal <$str(u34)> 6
+equal S$装备部位A 10
+#act
+mov S$位置变量 34
+mov S$强化等级 <$str(u34)>
+mov S$强化材料 天下币
+mov S$材料数量 900
+mov S$元宝数量 9000000
+
+#if
+equal <$str(u35)> 6
+equal S$装备部位A 11
+#act
+mov S$位置变量 35
+mov S$强化等级 <$str(u35)>
+mov S$强化材料 天下币
+mov S$材料数量 900
+mov S$元宝数量 9000000
+
+
+;==============================================
+
+#if
+equal <$str(u26)> 7
+equal S$装备部位A 1
+#act
+mov S$位置变量 26
+mov S$强化等级 <$str(u26)>
+mov S$强化材料 天下币
+mov S$材料数量 1200
+mov S$元宝数量 12000000
+
+#if
+equal <$str(u27)> 7
+equal S$装备部位A 0
+#act
+mov S$位置变量 27
+mov S$强化等级 <$str(u27)>
+mov S$强化材料 天下币
+mov S$材料数量 1200
+mov S$元宝数量 12000000
+
+#if
+equal <$str(u28)> 7
+equal S$装备部位A 4
+#act
+mov S$位置变量 28
+mov S$强化等级 <$str(u28)>
+mov S$强化材料 天下币
+mov S$材料数量 1200
+mov S$元宝数量 12000000
+
+#if
+equal <$str(u29)> 7
+equal S$装备部位A 3
+#act
+mov S$位置变量 29
+mov S$强化等级 <$str(u29)>
+mov S$强化材料 天下币
+mov S$材料数量 1200
+mov S$元宝数量 12000000
+
+#if
+equal <$str(u30)> 7
+equal S$装备部位A 5
+#act
+mov S$位置变量 30
+mov S$强化等级 <$str(u30)>
+mov S$强化材料 天下币
+mov S$材料数量 1200
+mov S$元宝数量 12000000
+
+#if
+equal <$str(u31)> 7
+equal S$装备部位A 6
+#act
+mov S$位置变量 31
+mov S$强化等级 <$str(u31)>
+mov S$强化材料 天下币
+mov S$材料数量 1200
+mov S$元宝数量 12000000
+
+#if
+equal <$str(u32)> 7
+equal S$装备部位A 7
+#act
+mov S$位置变量 32
+mov S$强化等级 <$str(u32)>
+mov S$强化材料 天下币
+mov S$材料数量 1200
+mov S$元宝数量 12000000
+
+#if
+equal <$str(u33)> 7
+equal S$装备部位A 8
+#act
+mov S$位置变量 33
+mov S$强化等级 <$str(u33)>
+mov S$强化材料 天下币
+mov S$材料数量 1200
+mov S$元宝数量 12000000
+
+#if
+equal <$str(u34)> 7
+equal S$装备部位A 10
+#act
+mov S$位置变量 34
+mov S$强化等级 <$str(u34)>
+mov S$强化材料 天下币
+mov S$材料数量 1200
+mov S$元宝数量 12000000
+
+#if
+equal <$str(u35)> 7
+equal S$装备部位A 11
+#act
+mov S$位置变量 35
+mov S$强化等级 <$str(u35)>
+mov S$强化材料 天下币
+mov S$材料数量 1200
+mov S$元宝数量 12000000
+
+
+;==============================================
+
+#if
+equal <$str(u26)> 8
+equal S$装备部位A 1
+#act
+mov S$位置变量 26
+mov S$强化等级 <$str(u26)>
+mov S$强化材料 天下币
+mov S$材料数量 1500
+mov S$元宝数量 15000000
+
+#if
+equal <$str(u27)> 8
+equal S$装备部位A 0
+#act
+mov S$位置变量 27
+mov S$强化等级 <$str(u27)>
+mov S$强化材料 天下币
+mov S$材料数量 1500
+mov S$元宝数量 15000000
+
+#if
+equal <$str(u28)> 8
+equal S$装备部位A 4
+#act
+mov S$位置变量 28
+mov S$强化等级 <$str(u28)>
+mov S$强化材料 天下币
+mov S$材料数量 1500
+mov S$元宝数量 15000000
+
+#if
+equal <$str(u29)> 8
+equal S$装备部位A 3
+#act
+mov S$位置变量 29
+mov S$强化等级 <$str(u29)>
+mov S$强化材料 天下币
+mov S$材料数量 1500
+mov S$元宝数量 15000000
+
+#if
+equal <$str(u30)> 8
+equal S$装备部位A 5
+#act
+mov S$位置变量 30
+mov S$强化等级 <$str(u30)>
+mov S$强化材料 天下币
+mov S$材料数量 1500
+mov S$元宝数量 15000000
+
+#if
+equal <$str(u31)> 8
+equal S$装备部位A 6
+#act
+mov S$位置变量 31
+mov S$强化等级 <$str(u31)>
+mov S$强化材料 天下币
+mov S$材料数量 1500
+mov S$元宝数量 15000000
+
+#if
+equal <$str(u32)> 8
+equal S$装备部位A 7
+#act
+mov S$位置变量 32
+mov S$强化等级 <$str(u32)>
+mov S$强化材料 天下币
+mov S$材料数量 1500
+mov S$元宝数量 15000000
+
+#if
+equal <$str(u33)> 8
+equal S$装备部位A 8
+#act
+mov S$位置变量 33
+mov S$强化等级 <$str(u33)>
+mov S$强化材料 天下币
+mov S$材料数量 1500
+mov S$元宝数量 15000000
+
+#if
+equal <$str(u34)> 8
+equal S$装备部位A 10
+#act
+mov S$位置变量 34
+mov S$强化等级 <$str(u34)>
+mov S$强化材料 天下币
+mov S$材料数量 1500
+mov S$元宝数量 15000000
+
+#if
+equal <$str(u35)> 8
+equal S$装备部位A 11
+#act
+mov S$位置变量 35
+mov S$强化等级 <$str(u35)>
+mov S$强化材料 天下币
+mov S$材料数量 1500
+mov S$元宝数量 15000000
+
+
+;==============================================
+
+#if
+equal <$str(u26)> 9
+equal S$装备部位A 1
+#act
+mov S$位置变量 26
+mov S$强化等级 <$str(u26)>
+mov S$强化材料 天下币
+mov S$材料数量 2000
+mov S$元宝数量 20000000
+
+#if
+equal <$str(u27)> 9
+equal S$装备部位A 0
+#act
+mov S$位置变量 27
+mov S$强化等级 <$str(u27)>
+mov S$强化材料 天下币
+mov S$材料数量 2000
+mov S$元宝数量 20000000
+
+#if
+equal <$str(u28)> 9
+equal S$装备部位A 4
+#act
+mov S$位置变量 28
+mov S$强化等级 <$str(u28)>
+mov S$强化材料 天下币
+mov S$材料数量 2000
+mov S$元宝数量 20000000
+
+#if
+equal <$str(u29)> 9
+equal S$装备部位A 3
+#act
+mov S$位置变量 29
+mov S$强化等级 <$str(u29)>
+mov S$强化材料 天下币
+mov S$材料数量 2000
+mov S$元宝数量 20000000
+
+#if
+equal <$str(u30)> 9
+equal S$装备部位A 5
+#act
+mov S$位置变量 30
+mov S$强化等级 <$str(u30)>
+mov S$强化材料 天下币
+mov S$材料数量 2000
+mov S$元宝数量 20000000
+
+#if
+equal <$str(u31)> 9
+equal S$装备部位A 6
+#act
+mov S$位置变量 31
+mov S$强化等级 <$str(u31)>
+mov S$强化材料 天下币
+mov S$材料数量 2000
+mov S$元宝数量 20000000
+
+#if
+equal <$str(u32)> 9
+equal S$装备部位A 7
+#act
+mov S$位置变量 32
+mov S$强化等级 <$str(u32)>
+mov S$强化材料 天下币
+mov S$材料数量 2000
+mov S$元宝数量 20000000
+
+#if
+equal <$str(u33)> 9
+equal S$装备部位A 8
+#act
+mov S$位置变量 33
+mov S$强化等级 <$str(u33)>
+mov S$强化材料 天下币
+mov S$材料数量 2000
+mov S$元宝数量 20000000
+
+#if
+equal <$str(u34)> 9
+equal S$装备部位A 10
+#act
+mov S$位置变量 34
+mov S$强化等级 <$str(u34)>
+mov S$强化材料 天下币
+mov S$材料数量 2000
+mov S$元宝数量 20000000
+
+#if
+equal <$str(u35)> 9
+equal S$装备部位A 11
+#act
+mov S$位置变量 35
+mov S$强化等级 <$str(u35)>
+mov S$强化材料 天下币
+mov S$材料数量 2000
+mov S$元宝数量 20000000
+
+
+;==============================================
+
+#if
+equal <$str(u26)> 10
+equal S$装备部位A 1
+#act
+mov S$位置变量 26
+mov S$强化等级 <$str(u26)>
+mov S$强化材料 天下币
+mov S$材料数量 3000
+mov S$元宝数量 30000000
+
+#if
+equal <$str(u27)> 10
+equal S$装备部位A 0
+#act
+mov S$位置变量 27
+mov S$强化等级 <$str(u27)>
+mov S$强化材料 天下币
+mov S$材料数量 3000
+mov S$元宝数量 30000000
+
+
+#if
+equal <$str(u28)> 10
+equal S$装备部位A 4
+#act
+mov S$位置变量 28
+mov S$强化等级 <$str(u28)>
+mov S$强化材料 天下币
+mov S$材料数量 3000
+mov S$元宝数量 30000000
+
+
+#if
+equal <$str(u29)> 10
+equal S$装备部位A 3
+#act
+mov S$位置变量 29
+mov S$强化等级 <$str(u29)>
+mov S$强化材料 天下币
+mov S$材料数量 3000
+mov S$元宝数量 30000000
+
+
+#if
+equal <$str(u30)> 10
+equal S$装备部位A 5
+#act
+mov S$位置变量 30
+mov S$强化等级 <$str(u30)>
+mov S$强化材料 天下币
+mov S$材料数量 3000
+mov S$元宝数量 30000000
+
+
+#if
+equal <$str(u31)> 10
+equal S$装备部位A 6
+#act
+mov S$位置变量 31
+mov S$强化等级 <$str(u31)>
+mov S$强化材料 天下币
+mov S$材料数量 3000
+mov S$元宝数量 30000000
+
+
+#if
+equal <$str(u32)> 10
+equal S$装备部位A 7
+#act
+mov S$位置变量 32
+mov S$强化等级 <$str(u32)>
+mov S$强化材料 天下币
+mov S$材料数量 3000
+mov S$元宝数量 30000000
+
+
+#if
+equal <$str(u33)> 10
+equal S$装备部位A 8
+#act
+mov S$位置变量 33
+mov S$强化等级 <$str(u33)>
+mov S$强化材料 天下币
+mov S$材料数量 3000
+mov S$元宝数量 30000000
+
+
+#if
+equal <$str(u34)> 10
+equal S$装备部位A 10
+#act
+mov S$位置变量 34
+mov S$强化等级 <$str(u34)>
+mov S$强化材料 天下币
+mov S$材料数量 3000
+mov S$元宝数量 30000000
+
+
+#if
+equal <$str(u35)> 10
+equal S$装备部位A 11
+#act
+mov S$位置变量 35
+mov S$强化等级 <$str(u35)>
+mov S$强化材料 天下币
+mov S$材料数量 3000
+mov S$元宝数量 30000000
+
+
+
+;==============================================
+
+#if
+equal <$str(u26)> 11
+equal S$装备部位A 1
+#act
+mov S$位置变量 26
+mov S$强化等级 <$str(u26)>
+mov S$强化材料 天下币
+mov S$材料数量 5000
+mov S$元宝数量 50000000
+
+
+#if
+equal <$str(u27)> 11
+equal S$装备部位A 0
+#act
+mov S$位置变量 27
+mov S$强化等级 <$str(u27)>
+mov S$强化材料 天下币
+mov S$材料数量 5000
+mov S$元宝数量 50000000
+
+
+#if
+equal <$str(u28)> 11
+equal S$装备部位A 4
+#act
+mov S$位置变量 28
+mov S$强化等级 <$str(u28)>
+mov S$强化材料 天下币
+mov S$材料数量 5000
+mov S$元宝数量 50000000
+
+
+#if
+equal <$str(u29)> 11
+equal S$装备部位A 3
+#act
+mov S$位置变量 29
+mov S$强化等级 <$str(u29)>
+mov S$强化材料 天下币
+mov S$材料数量 5000
+mov S$元宝数量 50000000
+
+
+#if
+equal <$str(u30)> 11
+equal S$装备部位A 5
+#act
+mov S$位置变量 30
+mov S$强化等级 <$str(u30)>
+mov S$强化材料 天下币
+mov S$材料数量 5000
+mov S$元宝数量 50000000
+
+
+#if
+equal <$str(u31)> 11
+equal S$装备部位A 6
+#act
+mov S$位置变量 31
+mov S$强化等级 <$str(u31)>
+mov S$强化材料 天下币
+mov S$材料数量 5000
+mov S$元宝数量 50000000
+
+
+#if
+equal <$str(u32)> 11
+equal S$装备部位A 7
+#act
+mov S$位置变量 32
+mov S$强化等级 <$str(u32)>
+mov S$强化材料 天下币
+mov S$材料数量 5000
+mov S$元宝数量 50000000
+
+
+#if
+equal <$str(u33)> 11
+equal S$装备部位A 8
+#act
+mov S$位置变量 33
+mov S$强化等级 <$str(u33)>
+mov S$强化材料 天下币
+mov S$材料数量 5000
+mov S$元宝数量 50000000
+
+
+#if
+equal <$str(u34)> 11
+equal S$装备部位A 10
+#act
+mov S$位置变量 34
+mov S$强化等级 <$str(u34)>
+mov S$强化材料 天下币
+mov S$材料数量 5000
+mov S$元宝数量 50000000
+
+
+#if
+equal <$str(u35)> 11
+equal S$装备部位A 11
+#act
+mov S$位置变量 35
+mov S$强化等级 <$str(u35)>
+mov S$强化材料 天下币
+mov S$材料数量 5000
+mov S$元宝数量 50000000
+
+
+
+
+;==============================================
+
+#if
+equal <$str(u26)> 12
+equal S$装备部位A 1
+#act
+mov S$位置变量 26
+mov S$强化等级 MAX
+mov S$强化材料
+mov S$材料数量
+mov S$元宝数量
+
+#if
+equal <$str(u27)> 12
+equal S$装备部位A 0
+#act
+mov S$位置变量 27
+mov S$强化等级 MAX
+mov S$强化材料
+mov S$材料数量
+mov S$元宝数量
+
+#if
+equal <$str(u28)> 12
+equal S$装备部位A 4
+#act
+mov S$位置变量 28
+mov S$强化等级 MAX
+mov S$强化材料
+mov S$材料数量
+mov S$元宝数量
+
+#if
+equal <$str(u29)> 12
+equal S$装备部位A 3
+#act
+mov S$位置变量 29
+mov S$强化等级 MAX
+mov S$强化材料
+mov S$材料数量
+mov S$元宝数量
+
+#if
+equal <$str(u30)> 12
+equal S$装备部位A 5
+#act
+mov S$位置变量 30
+mov S$强化等级 MAX
+mov S$强化材料
+mov S$材料数量
+mov S$元宝数量
+
+#if
+equal <$str(u31)> 12
+equal S$装备部位A 6
+#act
+mov S$位置变量 31
+mov S$强化等级 MAX
+mov S$强化材料
+mov S$材料数量
+mov S$元宝数量
+
+#if
+equal <$str(u32)> 12
+equal S$装备部位A 7
+#act
+mov S$位置变量 32
+mov S$强化等级 MAX
+mov S$强化材料
+mov S$材料数量
+mov S$元宝数量
+
+#if
+equal <$str(u33)> 12
+equal S$装备部位A 8
+#act
+mov S$位置变量 33
+mov S$强化等级 MAX
+mov S$强化材料
+mov S$材料数量
+mov S$元宝数量
+
+#if
+equal <$str(u34)> 12
+equal S$装备部位A 10
+#act
+mov S$位置变量 34
+mov S$强化等级 MAX
+mov S$强化材料
+mov S$材料数量
+mov S$元宝数量
+
+#if
+equal <$str(u35)> 12
+equal S$装备部位A 11
+#act
+mov S$位置变量 35
+mov S$强化等级 MAX
+mov S$强化材料
+mov S$材料数量
+mov S$元宝数量
+

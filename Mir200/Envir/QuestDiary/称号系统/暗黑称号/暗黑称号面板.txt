@@ -1,0 +1,195 @@
+[@暗黑称号面板]
+{
+
+#if
+#act
+MOV S$称号名称
+MOV S$称号属性
+MOV S$称号爆率
+MOV S$称号伤害
+MOV S$称号体力
+MOV S$晋升条件1
+MOV S$晋升条件2
+MOV S$称号详情_1
+MOV S$称号详情_2
+MOV S$称号详情_3
+MOV S$称号详情_4
+MOV S$称号详情_5
+MOV S$称号详情_6
+MOV S$称号详情_7
+MOV S$称号详情_8
+MOV S$称号详情_9
+MOV S$称号详情_10
+MOV S$称号详情_11
+MOV S$当前npc称号是否满级 0
+MOV N$称号img序号 1
+MOV N$称号序号 0
+MOV S$当前称号
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\称号系统\暗黑称号\暗黑称号数据.txt 称号数量 称号数量 S$暗黑称号数量
+goto @获取当前称号
+goto @获取显示数据
+goto @满级称号检测
+goto @获取称号显示img
+#if
+equal <$STR(S$当前npc称号是否满级)> 1
+#act
+close
+break
+#if
+#act
+GOTO @称号主界面
+
+[@称号主界面]
+#IF
+#ACT
+
+
+#SAY
+<Img|img=public/sf1/1/01089.png|x=430|y=120|children={close_btn,click_btn1,click_btn2,称号1,称号2,称号3,称号4,称号5,称号6,称号7,称号8,称号9,称号10,称号11,称号信息,升级条件}|bg=1|reset=1|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=960|y=130|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
+
+<Img|id=称号1|img=<$STR(S$称号详情_1)>|x=10|y=65>
+<Img|id=称号2|img=<$STR(S$称号详情_2)>|x=10|y=95>
+<Img|id=称号3|img=<$STR(S$称号详情_3)>|x=10|y=125>
+<Img|id=称号4|img=<$STR(S$称号详情_4)>|x=10|y=155>
+<Img|id=称号5|img=<$STR(S$称号详情_5)>|x=10|y=185>
+<Img|id=称号6|img=<$STR(S$称号详情_6)>|x=10|y=215>
+<Img|id=称号7|img=<$STR(S$称号详情_7)>|x=10|y=245>
+<Img|id=称号8|img=<$STR(S$称号详情_8)>|x=10|y=275>
+<Img|id=称号9|img=<$STR(S$称号详情_9)>|x=10|y=305>
+<Img|id=称号10|img=<$STR(S$称号详情_10)>|x=10|y=335>
+
+<Img|id=称号信息|children={称号名称,称号属性,称号爆率,称号伤害,称号体力}|x=320|y=70.0|height=1|width=1|img=public/1900000665.png>
+    <Text|id=称号名称|x=0|y=0|color=222|size=14|text=[<$STR(S$给予称号)>]>
+    <Text|id=称号属性|x=0|y=17|color=70|size=14|text=[<$STR(S$全属性增加)>]>
+    <Text|id=称号爆率|x=0|y=34|color=58|size=14|text=[<$STR(S$爆率增加)>]>
+    <Text|id=称号伤害|x=0|y=51|color=146|size=14|text=[<$STR(S$对怪伤害增加)>]>
+    <Text|id=称号体力|x=0|y=68|color=58|size=14|text=[<$STR(S$体力增加)>]>
+
+<Img|id=升级条件|children={条件1,条件2}|x=280|y=180.0|height=1|width=1|img=public/1900000665.png>
+    <Text|id=条件1|x=0|y=10|color=222|size=15|text=[神器碎片*<$STR(S$神器碎片数量)> + 元宝*<$STR(S$所需元宝)>]>
+
+<Button|id=click_btn1|x=320|y=335|nimg=public/sf1/1/00724.png|pimg=public/sf1/2/00726.png|link=@升级方式1>
+
+
+[@升级方式1]
+#if
+#act
+goto @满级称号检测
+
+#if
+equal <$STR(S$当前npc称号是否满级)> 1
+#act
+close
+
+break
+
+#or
+CheckBindMoney 元宝 < <$STR(S$所需元宝)>
+not CHECKITEM 神器碎片 <$STR(S$神器碎片数量)>
+#ACT
+messagebox 打造条件不足??\\1、材料不足\\2、元宝不足
+break
+
+#if
+#act
+DEPRIVETITLE <$STR(S$当前称号)>
+TAKE  神器碎片 <$STR(S$神器碎片数量)>
+CONFERTITLE <$STR(S$给予称号)>
+money 绑定元宝 - <$STR(S$所需元宝)>
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【<$STR(S$给予称号)>】称号/FCOLOR=58>
+mov S$新增称号 <$STR(S$给予称号)>
+GOTO @称号标记记录
+GOTO @暗黑称号面板
+
+
+[@满级称号检测]
+
+#or
+equal <$STR(S$所需元宝)> 0
+equal <$STR(S$神器碎片数量)> 0
+#act
+mov S$当前npc称号是否满级 1
+messagebox 当前大陆称号已满级,不能再升级了!
+
+
+[@获取显示数据]
+#if
+;-----没有升级过称号判断-----
+equal <$STR(S$当前称号)>
+not CheckContainsText <$STR(T1)> 暗黑之力①
+#act
+mov S$当前称号 0
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\称号系统\暗黑称号\暗黑称号数据.txt <$STR(S$当前称号)> 元宝 S$所需元宝
+ReadConfigFileItem ..\QuestDiary\称号系统\暗黑称号\暗黑称号数据.txt <$STR(S$当前称号)> 称号 S$给予称号
+ReadConfigFileItem ..\QuestDiary\称号系统\暗黑称号\暗黑称号数据.txt <$STR(S$当前称号)> 神器碎片 S$神器碎片数量
+ReadConfigFileItem ..\QuestDiary\称号系统\暗黑称号\暗黑称号数据.txt <$STR(S$当前称号)> 全属性 S$全属性增加
+ReadConfigFileItem ..\QuestDiary\称号系统\暗黑称号\暗黑称号数据.txt <$STR(S$当前称号)> 体力 S$体力增加
+ReadConfigFileItem ..\QuestDiary\称号系统\暗黑称号\暗黑称号数据.txt <$STR(S$当前称号)> 爆率 S$爆率增加
+ReadConfigFileItem ..\QuestDiary\称号系统\暗黑称号\暗黑称号数据.txt <$STR(S$当前称号)> 对怪伤害 S$对怪伤害增加
+ReadConfigFileItem ..\QuestDiary\称号系统\暗黑称号\暗黑称号数据.txt <$STR(S$当前称号)> 称号img S$称号img串
+
+;------所有字段非空判断-------
+#or
+equal <$STR(S$所需元宝)>
+equal <$STR(S$给予称号)>
+equal <$STR(S$神器碎片数量)>
+equal <$STR(S$全属性增加)>
+equal <$STR(S$体力增加)>
+equal <$STR(S$爆率增加)>
+equal <$STR(S$对怪伤害增加)>
+#act
+
+messagebox 请检查称号信息是否正确!!
+break
+
+[@获取称号显示img]
+#if
+not large <$STR(N$称号img序号)> <$STR(S$暗黑称号数量)>
+not equal <$STR(S$称号img串)>
+#act
+GetValidstr <$STR(S$称号img串)> & S$this称号img S$称号img串
+mov S$称号详情_<$STR(N$称号img序号)> public/sf1/1/<$STR(S$this称号img)>.png
+
+#if
+not large <$STR(N$称号img序号)> <$STR(S$暗黑称号数量)>
+not equal <$STR(S$称号img串)>
+#act
+inc N$称号img序号 1
+goto @获取称号显示img
+
+[@获取当前称号]
+#if
+not large <$STR(N$称号序号)> <$STR(S$暗黑称号数量)>
+#act
+GetListString ..\QuestDiary\称号系统\暗黑称号\暗黑称号列表.txt <$STR(N$称号序号)> S$称号变量
+
+#if
+not equal <$STR(S$称号变量)>
+CHECKTITLE <$STR(S$称号变量)>
+#act
+mov S$当前称号 <$STR(S$称号变量)>
+break
+
+#if
+not large <$STR(N$称号序号)> <$STR(S$暗黑称号数量)>
+#act
+inc N$称号序号 1
+goto @获取当前称号
+
+
+[@称号标记记录]
+#if
+#act
+mov T1 <$STR(T1)>&<$STR(S$新增称号)>
+;#CALL [\任务系统\任务文本.txt] @点击支线任务
+}

@@ -1,0 +1,78 @@
+[@main]
+
+#if
+CHECKTITLE 狂暴
+#act
+mov S$狂暴显示1 <已开启/FCOLOR=250>
+mov S$狂暴显示2 <PlayImg:1:2880:10:100:0:-20:0:0>
+#elseact
+mov S$狂暴显示1 <未开启/FCOLOR=249>
+mov <$STR(S$狂暴显示2)> <PlayImg:1:2880:10:100:0:-20:0:0>
+
+
+#IF
+#ACT
+#SAY
+<Img|img=public/sf1/1/00693.png|x=330|y=120|children={close_btn,特效控件1,特效控件2,特效控件3,特效控件4,状态,title,buff特效}|bg=1|reset=1|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=839|y=125|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
+<RText|id=状态|x=228|y=78|size=16|color=255|text=<$STR(S$狂暴显示1)>>
+<Effect|id=buff特效|x=110|y=58|effectid=480|effecttype=0|scale=1|speed=1|act=0|dir=4 >
+
+<Img|id=特效控件1|children={1_1,1_2,1_3,1_4,1_5,1_6,1_7,1_8,1_9,2_1,2_2,2_3,2_4,2_5,2_6,2_7,2_8,2_9,2_10,3_1,3_2,3_3,3_4,3_5,3_6,button_click}|x=0|y=75|height=1|width=1|img=public/0.png>
+    <Text|id=1_1|x=140|y=65|color=70|size=16|text=提升自身修炼境界，获取狂暴>
+
+    <RText|id=1_2|x=57|y=85|size=16|color=255|text=<1、/FCOLOR=251><开启狂暴模式需要:/FCOLOR=146><100RMB点/FCOLOR=58>>
+    <RText|id=1_5|x=57|y=110|size=16|color=255|text=<2、/FCOLOR=251><开启狂暴获得:/FCOLOR=146><1.1/FCOLOR=151><倍属性提升且升华/FCOLOR=146><全属性:/FCOLOR=19><+50！/FCOLOR=253>>
+    <RText|id=2_2|x=57|y=135|size=16|color=255|text=<3、/FCOLOR=251><开启狂暴获得:/FCOLOR=146><回收加成+50%/FCOLOR=58><吸血+5%/FCOLOR=19>>
+    <RText|id=2_6|x=57|y=160|size=16|color=255|text=<4、/FCOLOR=251><被人物击杀后状态消失:/FCOLOR=146><（击杀者可获得50RMB点奖励）/FCOLOR=58>>
+    <RText|id=2_9|x=57|y=185|size=16|color=255|text=<5、/FCOLOR=251><被怪物击杀或小退大退状态依然保存。/FCOLOR=146>>
+
+    <Button|id=button_click|x=220|y=210|nimg=public/sf1/1/00085.png|pimg=public/sf1/1/00084.png|size=16|color=249|link=@开启狂暴模式>
+
+[@开启狂暴模式]
+#if
+CHECKTITLE 狂暴
+#act
+MESSAGEBOX 开启失败?已经是狂暴模式
+break
+
+
+#IF
+CHECKgamepoint > 99
+#act
+gamepoint - 100
+CONFERTITLE 狂暴
+#CALL [\属性重载\武器吸血.txt] @武器吸血
+SetIcon 2 1 2880 53 70 10 0 100 0
+SENDMOVEMSG 0 251 0 50 1 注意:玩家{[<$USERNAME>]/FCOLOR=70}已经开启{狂暴/FCOLOR=250}模式! 10 8 0
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+#CALL [\属性重载\神力倍攻.txt] @对话框倍攻
+goto @main
+goto @狂暴之力支线任务
+#call [\头顶称号\佩戴称号.txt] @佩戴称号
+#ELSEACT
+MESSAGEBOX 开启失败??\\1、当前RMB点不足
+
+[@狂暴之力支线任务]
+#if
+not CheckContainsText <$STR(T108)> 开通狂暴
+large U108 22
+#act
+mov S$支线任务临时变量 <$STR(T108)>
+mov T108 <$STR(S$支线任务临时变量)>_开通狂暴
+NEWCOMPLETETASK 25
+NEWDELETETASK 25
+sendmsg 1 已完成任务!
+
+CHANGEEXP + 100000
+MailGIVE 绑定元宝 100000
+MailGIVE 灵兽精石 10 1#4#6#8
+SendMail 1 系统奖励 你已完成开通狂暴之力任务,10万经验,10万元宝和灵兽精石*10已发放!!
+
+#if
+not CheckContainsText <$STR(T108)> 开通狂暴
+#act
+mov S$支线任务临时变量 <$STR(T108)>
+mov T108 <$STR(S$支线任务临时变量)>_开通狂暴
+

@@ -1,0 +1,37 @@
+[@刀刀切割]
+{
+#IF
+#ACT
+mov N$魔法切割 0
+mov N$道术切割 0
+mov N$魔法打怪 0
+mov N$道术打怪 0
+
+
+;#IF
+;CHECKTITLE 狂暴
+;#ACT
+;INC N$刀刀掉血 1000
+
+;#IF
+;CHECKTITLE 沙城捐献
+;#ACT
+;INC N$刀刀掉血 1000
+
+
+#IF
+large <$STR(N$打怪魔法)> 0
+#ACT
+MUL N$魔法打怪 <$MAXMC> <$STR(N$打怪魔法)>
+DIV N$魔法打怪 100
+
+
+
+#IF
+large <$STR(N$打怪道术)> 0
+#ACT
+MUL N$道术打怪 <$MAXSC> <$STR(N$打怪道术)>
+DIV N$道术打怪 100
+
+
+}

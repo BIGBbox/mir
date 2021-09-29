@@ -1,0 +1,48 @@
+[@main]
+#if
+#ACT
+#SAY
+<Img|img=public/sf1/1/00752.png|x=330|y=120|children={click_btn,特效控件1,特效控件2,特效控件3,特效控件4,,特效控件5,特效控件6,金额,title}|bg=1|reset=1|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=909|y=165|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
+<Text|id=金额|x=519|y=77|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<$CREDITPOINT>元>
+
+<Text|id=特效控件1|x=55|y=140|color=250|tips=|tipsx=10|tipsy=80|size=14|text=攻击力+200   生命提升+6666 >
+<Text|id=特效控件2|x=55|y=170|color=249|tips=|tipsx=10|tipsy=80|size=14|text=暴击+10%    攻击伤害+20%  >
+<Text|id=特效控件3|x=55|y=200|color=250|tips=|tipsx=10|tipsy=80|size=14|text=经验+80%   对怪伤害+30%    >
+<Text|id=特效控件4|x=55|y=230|color=249|tips=|tipsx=10|tipsy=80|size=14|text=吸血+5%   吸收伤害+5% >
+<Text|id=特效控件5|x=55|y=260|color=250|tips=|tipsx=10|tipsy=80|size=14|text=回收加成+100%   爆率+100%>
+<Text|id=特效控件6|x=85|y=290|color=249|tips=|tipsx=10|tipsy=80|size=14|text= 解放双手自动回收>
+<Button|id=click_btn|x=72|y=335|nimg=public/sf1/1/00756.png|pimg=public/sf1/1/00758.png|tips={需：88充值点(唯一赞助·不扣货币!)　/FCOLOR=249}|tipsx=10|tipsy=80|size=14|color=249|link=@购买会员>
+
+
+[@购买会员]
+#IF
+CHECKTITLE 至尊会员
+#ACT
+messagebox 已拥有：至尊会员
+break
+
+#if
+CHECKCreditPoint < 88
+#act
+messagebox [提示]：你的充值点不足88
+break
+
+
+#if
+not CHECKTITLE 至尊会员
+CHECKCreditPoint > 87
+
+#ACT
+CONFERTITLE 至尊会员
+#CALL [\属性重载\游戏爆率.txt] @暴率
+#CALL [\属性重载\打怪经验.txt] @经验倍数
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+#CALL [\属性重载\武器吸血.txt] @武器吸血
+#CALL [\属性重载\伤害吸收.txt] @吸收伤害
+
+GuildNoticeMsg 249 251 ):恭喜玩家[<$USERNAME>]购买赞助瞬间战斗力爆表...
+break
+
+

@@ -1,0 +1,879 @@
+[@GM]
+{
+#IF
+ISADMIN
+#act
+;SENDMSG 0 当前获取的值
+#SAY
+
+<Img|bg=1|move=1|reset=1|width=380|height=500|img=public/icon_paihangbang_05.png>
+<Img|x=120|y=120|img=public/btn_szjm_03.png>
+<Text|text=GM background v1.2|x=80|y=20|size=22|color=246>
+<Layout|x=340|width=80|height=80|link=@exit>
+<Button|x=340|y=20|nimg=public/btn_gban_01.png|link=@exit>
+
+<Button|x=40|y=70|nimg=public/bg_hhzy_01_3.png|text=提升等级|link=@@InPutString98(请输入增加的等级)>
+<Button|x=40|y=110|nimg=public/bg_hhzy_01_3.png|text=转生5级|link=@02>
+<Button|x=40|y=150|nimg=public/bg_hhzy_01_3.png|text=无敌模式|link=@03>
+<Button|x=40|y=190|nimg=public/bg_hhzy_01_3.png|text=增加RMB点|link=@04>
+;<Button|x=40|y=230|nimg=public/bg_hhzy_01_3.png|text=打开仓库|link=@05>
+<Button|x=40|y=230|nimg=public/bg_hhzy_01_3.png|text=打开仓库|link=@getback>
+
+
+<Button|x=190|y=70|nimg=public/bg_hhzy_01_3.png|text=增加天下币|link=@12>
+<Button|x=190|y=110|nimg=public/bg_hhzy_01_3.png|text=增加元宝|link=@11>
+<Button|x=190|y=150|nimg=public/bg_hhzy_01_3.png|text=增加小飞鞋|link=@10>
+<Button|x=190|y=190|nimg=public/bg_hhzy_01_3.png|text=清理背包|link=@09>
+<Button|x=190|y=230|nimg=public/bg_hhzy_01_3.png|text=城市传送|link=@08>
+
+
+;<Button|x=60|y=270|nimg=public/1900000611.png|text=刷装备|link=@page1>
+;<Button|x=150|y=270|nimg=public/1900000611.png|text=其他功能|link=@page2>
+;<Button|x=240|y=270|nimg=public/1900000611.png|text=锻造|link=@page3>
+
+
+;<Button|x=60|y=310|nimg=public/1900000611.png|text=转生|link=@page4>
+;<Button|x=150|y=310|nimg=public/1900000611.png|text=官职|link=@page5>
+;<Button|x=240|y=310|nimg=public/1900000611.png|text=热血宝器|link=@page6>
+
+<Button|x=60|y=350|nimg=public/1900000611.png|text=108|link=@page7>
+<Button|x=150|y=350|nimg=public/1900000611.png|text=测试哲别|link=@page8>
+<Button|x=240|y=350|nimg=public/1900000611.png|text=测试变量|link=@page9>
+
+<Button|x=240|y=400|nimg=public/1900000611.png|text=测试充值|link=@page10>
+<Button|x=150|y=400|nimg=public/1900000611.png|text=ceshi|link=@moxue>
+<Button|x=60|y=400|nimg=public/1900000611.png|text=开|link=@ceshi>
+<Button|x=60|y=450|nimg=public/1900000611.png|text=关|link=@ceshi1>
+<Button|x=150|y=450|nimg=public/1900000611.png|text=开区天数|link=@@InPutString99(请输入开区天数"范围1-90")>
+<Button|x=240|y=450|nimg=public/1900000611.png|text=设置会员等级|link=@setAtt>
+;<LoadingBar|x=60|y=485|percent=1|size=18|color=253|outline=1|outlinecolor=1|direction=0|loadingbg=public/bg_szjm_03_1.png|loadingbar=public/bg_szjm_03_2.png|startper=0|interval=0.1|loadvalue=1|x=44|y=57|img=public/cuilian/2.png|esc=0|link=@进度条结束>
+
+[@setAtt]
+
+#if
+#act
+;SetOnTimer 235 3
+mov S$任务状态 破界の无边和上古异兽/FCOLOR=250
+DELAYGOTO 10 @系统管理员引导测试
+
+[@OnTimer235]
+#if
+#act
+;mapmove 天下主城 130 92
+goto @延迟测试打印
+SetOffTimer 235
+
+[@系统管理员引导测试]
+
+#If
+#act
+#say
+
+<Text|a=0|x=20|y=20|color=255|tips=|tipsx=10|tipsy=80|size=18|text=出门前商队领队就说最近不太安生,\魔物蠢蠢欲动,路上快要千万小心啊!!>
+<RText|a=0|x=20|y=95|size=18|text=<奖励:/FCOLOR=250><<$STR(S$任务状态)>>>
+<Button|id=click_btn1|x=25|y=125|nimg=public/0.png|pimg=public/0.png|text=完成任务|color=251|link=@延迟测试打印>
+<TextAtlas|x=145.0|y=-5|img=public/sf1/19/artFont/00043.png|schar=0|iheight=50|iwidth=31|text=999>
+<TextAtlas|x=151.0|y=79.0|img=public/word_tywz_01.png|schar=0|iheight=28|iwidth=18|text=0123456789>
+<TextAtlas|x=151.0|y=109.0|img=public/word_tywz_01.png|schar=0|iheight=28|iwidth=18|text=1>
+<Img|x=280|y=50.0|img=public/sf1/19/00010.png|link=@p>
+#IF
+#ACT
+;Navigation 0 click_btn1 点击完成任务
+
+[@延迟测试打印]
+#if
+#act
+OPENNPCSHOWEX 21
+SetOffTimer 235
+sendmsg 5 定时器自动销毁
+close
+
+[@InPutString99]
+;检测变量是否合法
+#IF
+large <$STR(S99)> 0
+small <$STR(S99)> 91
+#ACT
+MOV N$Day <$STR(S99)>
+DEC N$Day 1
+MOV G100 <$STR(N$Day)>
+messagebox 成功设置当前开区天数为：<$STR(S99)>!!
+;MOV S99 0
+
+#ELSEACT
+messagebox 请输入合法的额数字！！
+break
+
+[@InPutString98]
+
+;检测变量是否合法
+#IF
+large <$STR(S98)> 0
+small <$STR(S98)> 200
+#ACT
+CHANGELEVEL + <$STR(S98)>
+#ELSEACT
+messagebox 请输入合法的额数字！！
+break
+
+
+[@ceshi]
+#IF
+#ACT
+MOV S$递增物品唯一ID
+MOV S$递增物品名称
+LoopBagItems @获取当前背包所有物品 N$物品唯一ID S$物品的名称
+
+
+[@获取当前背包所有物品]
+#IF
+#ACT
+INC S$递增物品唯一ID <$STR(N$物品唯一ID)>,
+INC S$递增物品名称 <$STR(S$物品的名称)>,
+;SelectBagItems <$STR(S$递增物品唯一ID)>
+SENDMSG 6 你当前背包所有物品ID:<$STR(S$递增物品唯一ID)>
+SENDMSG 6 你当前背包所有物品名称:<$STR(S$递增物品名称)>
+
+
+
+[@NPC面板提示]
+#IF
+#ACT
+//;0代表为NPC主界面ID   222代表为NPC按钮
+Navigation 0 221 NPC面板提示
+SENDMSG 5 增加成功
+BREAK
+
+[@背包物品唯一ID指引提示]
+#IF
+#act
+//;打开背包 7 1
+OPENHYPERLINK 7 1
+//;1代表引导背包ID    31601代表背包物品唯一ID
+Navigation 1 31601 背包界面提示
+
+[@角色面板装备位置指引提示]
+#IF
+#act
+OPENHYPERLINK 1 1
+//;2代表角色面板      0代表装备位置
+Navigation 2 0 角色界面提示21
+
+[@确11认]
+#if
+#act
+
+goto @前往主城
+OPENNPCSHOWEX 76
+
+[@ceshi1]
+
+#IF
+#ACT
+
+; MonGenEx 0 101 141 真·如来 1 1 0 255
+; ChangeHumNewValue 21 90 600
+; SENDMSG 6 增加90%暴击率 时间600秒
+; SENDMSG 6 A490:<$str(A490)>
+; HUMANHP - 77 8
+; SetIcon 1 1 0 10 5 0 0
+; sendmsg 5 ceshi1
+; SetIcon 0 0 ware12 0 -10 0 0
+; goto @SetDay
+;ChangeHumAbility 12 + 300 100
+;ChangeModeEx 20 65535 100 8000
+;sendmsg 5 100%几率攻击吸血80%
+addskill 彻地钉
+;mov T1 0
+;DEPRIVETITLE 开拓·初出江湖
+;DEPRIVETITLE 先锋·江湖少侠
+;DEPRIVETITLE 无畏·武林俊杰
+;sendmsg 5 U8:<$STR(U8)>
+money RMB点 + 100
+money 元宝 + 100
+money 绑定元宝 + 100
+money 天下币 + 100
+;ChangeBindMoney 元宝 200
+; #Call [\Mobile\特殊NPC\TOP图标.txt] @导航
+#Call [\Mobile\特殊NPC\货币记录.txt] @货币
+; #CALL [\基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+
+;CONFERTITLE 青铜会员
+;GiveStateItem 灵兽精石 10 0 1 0 0 1 1 1 1
+;goto @属性刷新
+
+[@测试close]
+#if
+#act
+close
+break
+
+[@升级装备星星]
+#IF
+#ACT
+SetNewItemValue -1 0 + 10
+ChangeItemUpgradeCount -1 + 1
+ChangeitemaddvaLue -1 0 + 10
+sendmsg 5 物品当前星数:<$BOXITEM[1].UPGRADECOUNT>
+
+[@ItemIntoBox1]
+#IF
+#ACT
+SetUpgradeItem 1
+MOV S$装备属性 0
+GetDBItemFieldValue <$BOXITEM[1].NAME> Attribute S$装备属性
+sendmsg 5 1框物品UPGRADECOUNT<$BOXITEM[1].UPGRADECOUNT>
+
+[@检查是否有物品1]
+#IF
+CHECKBOXITEMCOUNT 1 1
+#ACT
+SENDMSG 0 --【1号框内有物品】--
+#ELSEACT
+SENDMSG 0 --【1号框内没有物品】--
+
+[@检查是否有物品2]
+#IF
+CHECKBOXITEMCOUNT 2 31
+#ACT
+SENDMSG 0 --【2号框内有物品】--
+#ELSEACT
+SENDMSG 0 --【2号框内没有物品】--
+
+[@读取ok框物品属性]
+#IF
+NOT EQUAL S$装备属性
+#ACT
+GetValidstr <$STR(S$装备属性)> | S$单个属性串 S$装备属性
+DEC S$单个属性串 1 2
+GetValidstr <$STR(S$单个属性串)> # S$属性名 S$属性值
+;sendmsg 5 完整串：<$STR(S$装备属性)>
+sendmsg 5 单串：<$STR(S$单个属性串)>
+sendmsg 5 属性名：<$STR(S$属性名)>
+sendmsg 5 属性值：<$STR(S$属性值)>
+
+GOTO @读取ok框物品属性
+
+[@自动放入屠龙1]
+#IF
+#ACT
+BAGITEMINTOBOX 木剑 1
+
+[@自动放入屠龙2]
+#IF
+#ACT
+BAGITEMINTOBOX 木剑 2
+
+[@返回包裹1]
+#IF
+#ACT
+RETURNBOXITEM 1
+
+[@返回包裹2]
+#IF
+#ACT
+RETURNBOXITEM 2
+
+
+[@删除叠加1]
+#IF
+#ACT
+DELBOXITEM 1 2
+
+[@删除叠加2]
+#IF
+#ACT
+DELBOXITEM 2 2
+
+[@删除1]
+#IF
+#ACT
+DELBOXITEM 1
+
+[@删除2]
+#IF
+#ACT
+DELBOXITEM 2
+
+[@moxue]
+#IF
+#ACT
+sendmsg 5 8888888
+GetUserItemName 16 16
+SendMsg 5 武器的名字: <$STR(S16)>
+;MailGIVE 元宝 123456
+;SendMail 1 系统奖励 你已完成天下守护者任务,10万经验和10万元宝已发放!!
+
+
+[@page9]
+#if
+#act
+mov N$AS <$STR(U19)>
+dec N$AS <$UTCNOW8>
+
+mov N$M <$STR(N$AS)>
+
+div N$M 60
+mov N$秒 60
+mul N$秒 <$STR(N$M)>
+dec N$AS <$STR(N$秒)>
+
+sendmsg 5 剩总秒:<$STR(N$AS)>
+sendmsg 5 剩余分:<$STR(N$M)>
+
+
+
+[@page8]
+#IF
+#ACT
+sendmsg 5 U129:<$STR(U129)>
+
+[@page7]
+#IF
+#ACT
+SENDMSG 0 hehe:<$STR(U108)>
+
+
+[@page6]
+#IF
+#ACT
+#CALL [\51905\热血宝器.txt] @宝器
+
+
+[@page5]
+#IF
+#ACT
+#CALL [\51905\官职系统.txt] @官职
+
+[@page4]
+#IF
+#ACT
+#CALL [\51905\转生系统.txt] @转生
+
+
+[@page3]
+#IF
+#ACT
+#CALL [\51905\锻造系统.txt] @锻造
+
+[@page2]
+#IF
+ISADMIN
+#SAY
+<Img|bg=1|move=1|reset=0|width=380|height=500|img=public/icon_paihangbang_05.png>
+<Img|x=20|y=20|img=public/btn_szjm_03.png>
+<Text|text=GM background v1.2|x=80|y=20|size=22|color=246>
+<Layout|x=340|width=80|height=80|link=@exit>
+<Button|x=340|y=20|nimg=public/btn_gban_01.png|link=@exit>
+<Button|x=20|y=70|nimg=public/1900000611.png|text=读表|link=@excel>
+<Button|x=110|y=70|nimg=public/1900000611.png|text=称号|link=@title#ID=1>
+<Button|x=200|y=70|nimg=public/1900000611.png|text=称号|link=@title#ID=2>
+<Button|x=290|y=70|nimg=public/1900000611.png|text=开仓库|link=@开仓库格子>
+<Button|x=290|y=370|nimg=public/1900000611.png|text=返回|link=@GM>
+
+
+[@开仓库格子]
+#IF
+#ACT
+CHANGESTORAGE 1
+SENDMSG 6 开启成功
+
+[@page1]
+#IF
+ISADMIN
+#SAY
+<Img|bg=1|move=1|reset=0|width=380|height=500|img=public/icon_paihangbang_05.png>
+<Img|x=20|y=20|img=public/btn_szjm_03.png>
+<Text|text=GM background v1.2|x=80|y=20|size=22|color=246>
+<Layout|x=340|width=80|height=80|link=@exit>
+<Button|x=340|y=20|nimg=public/btn_gban_01.png|link=@exit>
+
+<Button|x=20|y=70|nimg=public/1900000611.png|text=星王(6)|link=@make#制作名=星王>
+<Button|x=110|y=70|nimg=public/1900000611.png|text=主宰(7)|link=@make#制作名=主宰>
+<Button|x=200|y=70|nimg=public/1900000611.png|text=火龙(8)|link=@make#制作名=火龙>
+<Button|x=290|y=70|nimg=public/1900000611.png|text=炎龙(9)|link=@make#制作名=炎龙>
+
+<Button|x=20|y=110|nimg=public/1900000611.png|text=皓月(10)|link=@make#制作名=皓月>
+<Button|x=110|y=110|nimg=public/1900000611.png|text=热血(1)|link=@make#制作名=热血>
+<Button|x=200|y=110|nimg=public/1900000611.png|text=至尊(2)|link=@make#制作名=至尊>
+<Button|x=290|y=110|nimg=public/1900000611.png|text=神龙(3)|link=@make#制作名=神龙>
+
+<Button|x=20|y=150|nimg=public/1900000611.png|text=霸主(4)|link=@make#制作名=霸主>
+<Button|x=110|y=150|nimg=public/1900000611.png|text=轩辕(5)|link=@make#制作名=轩辕>
+<Button|x=200|y=150|nimg=public/1900000611.png|text=无双(6)|link=@make#制作名=无双>
+<Button|x=290|y=150|nimg=public/1900000611.png|text=刑天(7)|link=@make#制作名=刑天>
+
+<Button|x=20|y=190|nimg=public/1900000611.png|text=雄霸(8)|link=@make#制作名=雄霸>
+<Button|x=110|y=190|nimg=public/1900000611.png|text=传说(9)|link=@make#制作名=传说>
+<Button|x=200|y=190|nimg=public/1900000611.png|text=荒神(10)|link=@make#制作名=荒神>
+<Button|x=290|y=190|nimg=public/1900000611.png|text=天渊(11)|link=@make#制作名=天渊>
+
+<Button|x=20|y=230|nimg=public/1900000611.png|text=神皇(12)|link=@make#制作名=神皇>
+<Button|x=290|y=370|nimg=public/1900000611.png|text=返回|link=@GM>
+
+
+[@title]
+#IF
+EQUAL <$STR(S$ID)> 1
+#ACT
+SetIcon 0 1 4231 -62 18 0 0
+#IF
+EQUAL <$STR(S$ID)> 2
+#ACT
+SetIcon 0 1 4232 -62 18 0 0
+
+
+[@excel]
+#IF
+#ACT
+ReadExcel ..\QuestDiary\GM制作装备表.xls 1
+SENDMSG 5 读表1行0列：<$GLOBAL(Excel0)>
+SENDMSG 5 读表1行1列：<$GLOBAL(Excel1)>
+SENDMSG 5 读表1行2列：<$GLOBAL(Excel2)>
+SENDMSG 5 读表1行3列：<$GLOBAL(Excel3)>
+SENDMSG 5 读表1行4列：<$GLOBAL(Excel4)>
+SENDMSG 5 读表1行5列：<$GLOBAL(Excel5)>
+
+
+[@make]
+#IF
+EQUAL <$STR(S$制作名)> 星王
+#ACT
+GIVE 星王战刃 1
+GIVE 星王战甲 1
+GIVE 星王战袍 1
+GIVE 星王战冠 1
+GIVE 星王战链 1
+GIVE 星王战镯 2
+GIVE 星王战戒 2
+GIVE 星王战带 1
+GIVE 星王战靴 1
+
+
+#IF
+EQUAL <$STR(S$制作名)> 主宰
+#ACT
+GIVE 主宰神剑 1
+GIVE 主宰神甲 1
+GIVE 主宰神袍 1
+GIVE 主宰头盔 1
+GIVE 主宰项链 1
+GIVE 主宰手镯 2
+GIVE 主宰戒指 2
+GIVE 主宰腰带 1
+GIVE 主宰靴子 1
+
+#IF
+EQUAL <$STR(S$制作名)> 火龙
+#ACT
+GIVE 火龙神斩 1
+GIVE 火龙神甲 1
+GIVE 火龙神袍 1
+GIVE 火龙头盔 1
+GIVE 火龙项链 1
+GIVE 火龙手镯 2
+GIVE 火龙戒指 2
+GIVE 火龙腰带 1
+GIVE 火龙靴子 1
+
+#IF
+EQUAL <$STR(S$制作名)> 炎龙
+#ACT
+GIVE 炎龙战斧 1
+GIVE 炎龙战甲 1
+GIVE 炎龙战袍 1
+GIVE 炎龙头盔 1
+GIVE 炎龙项链 1
+GIVE 炎龙手镯 2
+GIVE 炎龙戒指 2
+GIVE 炎龙腰带 1
+GIVE 炎龙靴子 1
+
+#IF
+EQUAL <$STR(S$制作名)> 皓月
+#ACT
+GIVE 皓月神剑 1
+GIVE 皓月神甲 1
+GIVE 皓月神袍 1
+GIVE 皓月头盔 1
+GIVE 皓月项链 1
+GIVE 皓月手镯 2
+GIVE 皓月戒指 2
+GIVE 皓月腰带 1
+GIVE 皓月靴子 1
+
+#IF
+EQUAL <$STR(S$制作名)> 热血
+#ACT
+GIVE 热血神剑 1
+GIVE 热血战甲 1
+GIVE 热血战袍 1
+GIVE 热血头盔 1
+GIVE 热血项链 1
+GIVE 热血手镯 2
+GIVE 热血戒指 2
+GIVE 热血腰带 1
+GIVE 热血靴子 1
+
+#IF
+EQUAL <$STR(S$制作名)> 至尊
+#ACT
+GIVE 至尊神剑 1
+GIVE 至尊战甲 1
+GIVE 至尊战袍 1
+GIVE 至尊头盔 1
+GIVE 至尊项链 1
+GIVE 至尊手镯 2
+GIVE 至尊戒指 2
+GIVE 至尊腰带 1
+GIVE 至尊靴子 1
+
+#IF
+EQUAL <$STR(S$制作名)> 神龙
+#ACT
+GIVE 神龙战刃 1
+GIVE 神龙战甲 1
+GIVE 神龙战袍 1
+GIVE 神龙头盔 1
+GIVE 神龙项链 1
+GIVE 神龙手镯 2
+GIVE 神龙戒指 2
+GIVE 神龙腰带 1
+GIVE 神龙靴子 1
+
+#IF
+EQUAL <$STR(S$制作名)> 霸主
+#ACT
+GIVE 霸主神剑 1
+GIVE 霸主神甲 1
+GIVE 霸主神袍 1
+GIVE 霸主头盔 1
+GIVE 霸主项链 1
+GIVE 霸主手镯 2
+GIVE 霸主戒指 2
+GIVE 霸主腰带 1
+GIVE 霸主靴子 1
+
+#IF
+EQUAL <$STR(S$制作名)> 轩辕
+#ACT
+GIVE 轩辕神剑 1
+GIVE 轩辕神甲 1
+GIVE 轩辕神袍 1
+GIVE 轩辕头盔 1
+GIVE 轩辕项链 1
+GIVE 轩辕手镯 2
+GIVE 轩辕戒指 2
+GIVE 轩辕腰带 1
+GIVE 轩辕靴子 1
+
+#IF
+EQUAL <$STR(S$制作名)> 无双
+#ACT
+GIVE 无双神剑 1
+GIVE 无双神甲 1
+GIVE 无双神袍 1
+GIVE 无双头盔 1
+GIVE 无双项链 1
+GIVE 无双手镯 2
+GIVE 无双戒指 2
+GIVE 无双腰带 1
+GIVE 无双靴子 1
+
+#IF
+EQUAL <$STR(S$制作名)> 刑天
+#ACT
+GIVE 刑天战刃 1
+GIVE 刑天战甲 1
+GIVE 刑天战袍 1
+GIVE 刑天头盔 1
+GIVE 刑天项链 1
+GIVE 刑天手镯 2
+GIVE 刑天戒指 2
+GIVE 刑天腰带 1
+GIVE 刑天靴子 1
+
+#IF
+EQUAL <$STR(S$制作名)> 雄霸
+#ACT
+GIVE 雄霸神剑 1
+GIVE 雄霸神甲 1
+GIVE 雄霸神袍 1
+GIVE 雄霸头盔 1
+GIVE 雄霸项链 1
+GIVE 雄霸手镯 2
+GIVE 雄霸戒指 2
+GIVE 雄霸腰带 1
+GIVE 雄霸靴子 1
+
+#IF
+EQUAL <$STR(S$制作名)> 传说
+#ACT
+GIVE 传说神剑 1
+GIVE 传说神甲 1
+GIVE 传说神袍 1
+GIVE 传说头盔 1
+GIVE 传说项链 1
+GIVE 传说手镯 2
+GIVE 传说戒指 2
+GIVE 传说腰带 1
+GIVE 传说靴子 1
+
+#IF
+EQUAL <$STR(S$制作名)> 荒神
+#ACT
+GIVE 荒神战刀 1
+GIVE 荒神战甲 1
+GIVE 荒神战袍 1
+GIVE 荒神头盔 1
+GIVE 荒神项链 1
+GIVE 荒神手镯 2
+GIVE 荒神戒指 2
+GIVE 荒神腰带 1
+GIVE 荒神靴子 1
+
+#IF
+EQUAL <$STR(S$制作名)> 天渊
+#ACT
+GIVE 天渊神剑 1
+GIVE 天渊神甲 1
+GIVE 天渊神袍 1
+GIVE 天渊头盔 1
+GIVE 天渊项链 1
+GIVE 天渊手镯 2
+GIVE 天渊戒指 2
+GIVE 天渊腰带 1
+GIVE 天渊靴子 1
+
+#IF
+EQUAL <$STR(S$制作名)> 神皇
+#ACT
+GIVE 神皇战刀 1
+GIVE 神皇战甲 1
+GIVE 神皇战袍 1
+GIVE 神皇头盔 1
+GIVE 神皇项链 1
+GIVE 神皇手镯 2
+GIVE 神皇戒指 2
+GIVE 神皇腰带 1
+GIVE 神皇靴子 1
+
+
+
+[@08]
+
+<Img|bg=1|move=1|reset=0|width=380|height=500|img=public/icon_paihangbang_05.png>
+<Img|x=20|y=20|img=public/btn_szjm_03.png>
+<Text|text=GM background v1.2|x=80|y=20|size=22|color=246>
+<Layout|x=340|width=80|height=80|link=@exit>
+<Button|x=340|y=20|nimg=public/btn_gban_01.png|link=@exit>
+
+<Button|x=40|y=70|nimg=public/bg_hhzy_01_3.png|text=天下主城|link=@001>
+<Button|x=190|y=70|nimg=public/bg_hhzy_01_3.png|text=西游异世界|link=@002>
+<Button|x=40|y=140|nimg=public/bg_hhzy_01_3.png|text=帝王异世界|link=@003>
+<Button|x=190|y=140|nimg=public/bg_hhzy_01_3.png|text=金庸异世界|link=@004>
+<Button|x=40|y=210|nimg=public/bg_hhzy_01_3.png|text=暗黑异世界|link=@005>
+<Button|x=190|y=210|nimg=public/bg_hhzy_01_3.png|text=水浒异世界|link=@006>
+<Button|x=40|y=280|nimg=public/bg_hhzy_01_3.png|text=圣斗士异世界|link=@007>
+<Button|x=190|y=280|nimg=public/bg_hhzy_01_3.png|text=三国异世界|link=@008>
+<Button|x=40|y=350|nimg=public/bg_hhzy_01_3.png|text=诛仙异世界|link=@009>
+<Button|x=190|y=350|nimg=public/bg_hhzy_01_3.png|text=神之领域|link=@010>
+
+[@page10]
+
+<Img|bg=1|move=1|reset=0|width=380|height=500|img=public/icon_paihangbang_05.png>
+<Img|x=20|y=20|img=public/btn_szjm_03.png>
+<Text|text=GM background v1.2|x=80|y=20|size=22|color=246>
+<Layout|x=340|width=80|height=80|link=@exit>
+<Button|x=340|y=20|nimg=public/btn_gban_01.png|link=@exit>
+
+<Button|x=40|y=70|nimg=public/bg_hhzy_01_3.png|text=充值10元|link=@cc1>
+<Button|x=190|y=70|nimg=public/bg_hhzy_01_3.png|text=充值20元|link=@cc2>
+<Button|x=40|y=140|nimg=public/bg_hhzy_01_3.png|text=充值50元|link=@cc3>
+<Button|x=190|y=140|nimg=public/bg_hhzy_01_3.png|text=充值100元|link=@cc4>
+<Button|x=40|y=210|nimg=public/bg_hhzy_01_3.png|text=充值200元|link=@cc5>
+<Button|x=190|y=210|nimg=public/bg_hhzy_01_3.png|text=充值500元|link=@cc6>
+
+[@cc1]
+#if
+#act
+mov M0 10
+goto @ReCharge
+goto @page10
+
+[@cc2]
+#if
+#act
+mov M0 20
+goto @ReCharge
+goto @page10
+
+[@cc3]
+#if
+#act
+
+mov M0 50
+
+goto @ReCharge
+goto @page10
+
+[@cc4]
+#if
+#act
+
+mov M0 100
+
+goto @ReCharge
+goto @page10
+
+[@cc5]
+#if
+#act
+mov M0 200
+
+goto @ReCharge
+goto @page10
+
+[@cc6]
+#if
+#act
+mov M0 500
+
+goto @ReCharge
+goto @page10
+
+
+[@001]
+#IF
+#ACT
+;mapmove 0 331 267
+mapmove 天下主城 120 100
+close
+
+[@002]
+#IF
+#ACT
+mapmove 西游异世界 69 73
+close
+
+[@003]
+#IF
+#ACT
+mapmove 帝王异世界 88 84
+close
+
+[@004]
+#IF
+#ACT
+mapmove 金庸异世界 81 86
+close
+
+[@005]
+#IF
+#ACT
+mapmove 暗黑异世界 175 129
+close
+
+[@006]
+#IF
+#ACT
+mapmove 水浒异世界 113 109
+close
+
+[@007]
+#IF
+#ACT
+mapmove 圣斗士异世界 156 152
+close
+
+[@008]
+#IF
+#ACT
+mapmove 三国异世界 94 88
+close
+
+
+[@009]
+#IF
+#ACT
+mapmove 诛仙异世界 144 144
+close
+
+[@010]
+#IF
+#ACT
+mapmove 神之领域 59 66
+close
+
+[@01]
+#IF
+#ACT
+CHANGELEVEL + 10
+
+[@02]
+#IF
+#ACT
+RENEWLEVEL 5 0 0
+
+
+
+[@03]
+#IF
+#ACT
+ChangeModeEx 1 65530
+sendmsg 5 开启无敌模式!
+
+
+[@04]
+
+#IF
+#ACT
+money RMB点 + 10000
+
+[@05]
+#SAY
+<Img:public/btn_npcfh_03.png:0:35:138:0>
+<使用仓库{FCOLOR=1001}:60:133:16/@getback>
+
+
+
+[@07]
+#IF
+#ACT
+give 无敌小木剑 1
+
+[@09]
+#IF
+#ACT
+GMEXECUTE ClearBag <$USERNAME>
+
+
+[@10]
+#IF
+#ACT
+MONEY 小飞鞋 + 100
+sendmsg 6 增加100个小飞鞋
+
+
+[@11]
+#IF
+#ACT
+MONEY 元宝 + 10000000
+sendmsg 6 增加1000万元宝
+;MONEY 元宝 + 100
+;sendmsg 6 增加1000元宝
+
+[@12]
+#IF
+#ACT
+
+GAMEDIAMOND + 10000
+sendmsg 6 增加1万天下币
+
+
+[@13]
+#IF
+#ACT
+Mov U52 3
+
+}

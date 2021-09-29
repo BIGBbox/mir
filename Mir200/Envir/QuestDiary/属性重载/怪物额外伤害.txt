@@ -1,0 +1,2689 @@
+[@额外掉血]
+{
+
+#if
+#act
+mov N$怪物额外伤害 0
+mov N$魔法切割 0
+mov N$道术切割 0
+
+mov N$第一刀斩杀怪物 0
+
+GETHUMCUSTOMITEMVALUE -1 8 N$怪物额外 N$怪物额外伤害
+#CALL [\赞助\赞助属性加成.txt] @赞助属性设置
+
+#if
+#act
+inc N$怪物额外伤害 <$STR(S$赞助_对怪伤害)>
+
+
+#IF
+CHECKITEMW 至高の荣耀
+#ACT
+INC N$怪物额外伤害 5
+
+#IF
+CHECKITEMW 永生の不灭
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKITEMW 神之の庇护
+#ACT
+INC N$怪物额外伤害 15
+
+#IF
+CHECKITEMW 冰霜の之心
+#ACT
+INC N$怪物额外伤害 20
+
+#IF
+CHECKITEMW 禁忌の之王
+#ACT
+INC N$怪物额外伤害 25
+
+#IF
+CHECKITEMW 復仇の之魂
+#ACT
+INC N$怪物额外伤害 30
+
+#IF
+CHECKITEMW 身份の象征
+#ACT
+INC N$怪物额外伤害 35
+
+#IF
+CHECKITEMW 不死の之身
+#ACT
+INC N$怪物额外伤害 40
+
+#IF
+CHECKITEMW 無敵の之力
+#ACT
+INC N$怪物额外伤害 50
+
+
+#IF
+CHECKITEMW 蛛王戒
+#ACT
+INC N$道术切割 1
+
+
+#IF
+CHECKITEMW 人中赤兔
+#ACT
+INC N$道术切割 2
+
+
+#IF
+CHECKITEMW 勇者得前
+#ACT
+INC N$道术切割 3
+
+
+#IF
+CHECKITEMW 援军令
+#ACT
+INC N$道术切割 4
+
+
+#IF
+CHECKITEMW 虎痴
+#ACT
+INC N$道术切割 5
+
+
+#IF
+CHECKITEMW 降龙十八掌
+#ACT
+INC N$道术切割 7
+
+
+#IF
+CHECKITEMW 凌波微步
+#ACT
+INC N$道术切割 9
+
+
+#IF
+CHECKITEMW 化功大法
+#ACT
+INC N$道术切割 10
+
+
+#IF
+CHECKITEMW 妻妾成群
+#ACT
+INC N$道术切割 12
+
+
+#IF
+CHECKITEMW 魔铃之戒
+#ACT
+INC N$道术切割 13
+
+
+#IF
+CHECKITEMW 亚鲁迪巴之戒
+#ACT
+INC N$道术切割 14
+
+
+#IF
+CHECKITEMW 黑旋风
+#ACT
+INC N$道术切割 15
+
+
+#IF
+CHECKITEMW 苏茹魔戒
+#ACT
+INC N$道术切割 16
+
+
+#IF
+CHECKITEMW 李洵之戒
+#ACT
+INC N$道术切割 17
+
+
+#IF
+CHECKITEMW 腐肉之风
+#ACT
+INC N$道术切割 20
+
+#IF
+CHECKITEMW 鬼火投射者
+#ACT
+INC N$道术切割 21
+
+#IF
+CHECKITEMW 邪恶的延伸
+#ACT
+INC N$道术切割 22
+
+#IF
+CHECKITEMW 战神指环
+#ACT
+INC N$道术切割 25
+
+
+
+
+
+#IF
+CHECKITEMW 大力牛魔拳
+#ACT
+INC N$魔法切割 1
+
+#IF
+CHECKITEMW 羊脂玉净瓶
+#ACT
+INC N$魔法切割 1
+
+#IF
+CHECKITEMW 公瑾糜烂
+#ACT
+INC N$魔法切割 2
+
+#IF
+CHECKITEMW 太清丹经
+#ACT
+INC N$魔法切割 3
+
+#IF
+CHECKITEMW 苟且偷生
+#ACT
+INC N$魔法切割 4
+
+#IF
+CHECKITEMW 北冥神功
+#ACT
+INC N$魔法切割 5
+
+#IF
+CHECKITEMW 生死符
+#ACT
+INC N$魔法切割 7
+
+#IF
+CHECKITEMW 凤凰幻魔拳
+#ACT
+INC N$魔法切割 9
+
+#IF
+CHECKITEMW 双子之镯
+#ACT
+INC N$魔法切割 12
+
+
+
+#IF
+CHECKITEMW 合欢铃
+#ACT
+INC N$魔法切割 14
+
+
+#IF
+CHECKITEMW 铁扇子
+#ACT
+INC N$魔法切割 13
+
+#IF
+CHECKITEMW 天音寺手链
+#ACT
+INC N$魔法切割 16
+
+
+#IF
+CHECKITEMW 霜燃
+#ACT
+INC N$魔法切割 18
+
+#IF
+CHECKITEMW 卓古拉之握
+#ACT
+INC N$魔法切割 20
+
+#IF
+CHECKITEMW 邪恶的源泉
+#ACT
+INC N$魔法切割 22
+
+
+
+#IF
+CHECKITEMW 至高の荣耀
+#ACT
+INC N$魔法切割 5
+
+#IF
+CHECKITEMW 永生の不灭
+#ACT
+INC N$魔法切割 10
+
+#IF
+CHECKITEMW 神之の庇护
+#ACT
+INC N$魔法切割 15
+
+#IF
+CHECKITEMW 冰霜の之心
+#ACT
+INC N$魔法切割 20
+
+#IF
+CHECKITEMW 禁忌の之王
+#ACT
+INC N$魔法切割 25
+
+#IF
+CHECKITEMW 復仇の之魂
+#ACT
+INC N$魔法切割 30
+
+#IF
+CHECKITEMW 身份の象征
+#ACT
+INC N$魔法切割 35
+
+#IF
+CHECKITEMW 不死の之身
+#ACT
+INC N$魔法切割 40
+
+#IF
+CHECKITEMW 無敵の之力
+#ACT
+INC N$魔法切割 50
+
+
+#IF
+CHECKITEMW 至高の荣耀
+#ACT
+INC N$道术切割 5
+
+#IF
+CHECKITEMW 永生の不灭
+#ACT
+INC N$道术切割 10
+
+#IF
+CHECKITEMW 神之の庇护
+#ACT
+INC N$道术切割 15
+
+#IF
+CHECKITEMW 冰霜の之心
+#ACT
+INC N$道术切割 20
+
+#IF
+CHECKITEMW 禁忌の之王
+#ACT
+INC N$道术切割 25
+
+#IF
+CHECKITEMW 復仇の之魂
+#ACT
+INC N$道术切割 30
+
+#IF
+CHECKITEMW 身份の象征
+#ACT
+INC N$道术切割 35
+
+#IF
+CHECKITEMW 不死の之身
+#ACT
+INC N$道术切割 40
+
+#IF
+CHECKITEMW 無敵の之力
+#ACT
+INC N$道术切割 50
+
+
+
+
+#IF
+CHECKTITLE 三星
+#ACT
+INC N$怪物额外伤害 5
+
+#IF
+CHECKTITLE 六星
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKTITLE 九星
+#ACT
+INC N$怪物额外伤害 20
+
+#IF
+CHECKTITLE 十二星
+#ACT
+INC N$怪物额外伤害 40
+
+
+#IF
+CHECKTITLE 狂暴
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKTITLE 沙巴克捐献
+#ACT
+INC N$怪物额外伤害 15
+
+
+
+#IF
+CHECKTITLE 第一名
+#ACT
+INC N$怪物额外伤害 15
+
+#IF
+CHECKTITLE 第二名
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKTITLE 第三名
+#ACT
+INC N$怪物额外伤害 5
+
+
+
+
+
+#If
+CHECKTITLE 至尊会员
+#act
+INC N$怪物额外伤害 30
+
+#If
+#ACT
+INC N$怪物额外伤害 <$str(u0)>
+;军火库数量U0
+
+
+
+#IF
+check [6] 1
+#ACT
+INC N$魔法切割 20
+INC N$道术切割 20
+
+#IF
+CHECKITEMW 苍松道人的堕落
+CHECKITEMW 陆雪琪的清冷
+#ACT
+INC N$魔法切割 10
+INC N$道术切割 10
+
+#IF
+CHECKITEMW 桀骜不驯
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKITEMW 打狗棒
+#ACT
+INC N$魔法切割 10
+
+#IF
+CHECKITEMW 天蝎权杖
+#ACT
+INC N$魔法切割 20
+
+#IF
+CHECKITEMW 斩龙剑
+#ACT
+INC N$魔法切割 40
+
+#IF
+CHECKITEMW 凌波微步
+#ACT
+INC N$道术切割 15
+
+#IF
+equal U16 1
+#ACT
+INC N$道术切割 5
+
+#IF
+equal U16 2
+#ACT
+INC N$道术切割 10
+
+#IF
+equal U16 3
+#ACT
+INC N$道术切割 15
+
+#IF
+equal U16 4
+#ACT
+INC N$道术切割 25
+
+#IF
+equal U16 5
+#ACT
+INC N$道术切割 35
+
+#IF
+equal U16 6
+#ACT
+INC N$道术切割 45
+
+#IF
+equal U16 7
+#ACT
+INC N$道术切割 65
+
+#IF
+equal U16 8
+#ACT
+INC N$道术切割 85
+
+#IF
+equal U16 9
+#ACT
+INC N$道术切割 105
+
+
+#IF
+equal U15 1
+#ACT
+INC N$魔法切割 5
+
+#IF
+equal U15 2
+#ACT
+INC N$魔法切割 10
+
+#IF
+equal U15 3
+#ACT
+INC N$魔法切割 15
+
+#IF
+equal U15 4
+#ACT
+INC N$魔法切割 25
+
+#IF
+equal U15 5
+#ACT
+INC N$魔法切割 35
+
+#IF
+equal U15 6
+#ACT
+INC N$魔法切割 45
+
+#IF
+equal U15 7
+#ACT
+INC N$魔法切割 65
+
+#IF
+equal U15 8
+#ACT
+INC N$魔法切割 85
+
+#IF
+equal U15 9
+#ACT
+INC N$魔法切割 105
+
+#IF
+equal U7 1
+#ACT
+INC N$道术切割 1
+
+#IF
+equal U7 2
+#ACT
+INC N$道术切割 3
+
+#IF
+equal U7 3
+#ACT
+INC N$道术切割 6
+
+#IF
+equal U7 4
+#ACT
+INC N$道术切割 10
+
+#IF
+equal U7 5
+#ACT
+INC N$道术切割 15
+
+#IF
+equal U7 6
+#ACT
+INC N$道术切割 21
+
+#IF
+equal U7 7
+#ACT
+INC N$道术切割 28
+
+#IF
+equal U7 8
+#ACT
+INC N$道术切割 36
+
+#IF
+equal U7 9
+#ACT
+INC N$道术切割 44
+
+#IF
+equal U7 10
+#ACT
+INC N$道术切割 54
+
+#IF
+equal U6 1
+#ACT
+INC N$魔法切割 1
+
+#IF
+equal U6 2
+#ACT
+INC N$魔法切割 3
+
+#IF
+equal U6 3
+#ACT
+INC N$魔法切割 6
+
+#IF
+equal U6 4
+#ACT
+INC N$魔法切割 10
+
+#IF
+equal U6 5
+#ACT
+INC N$魔法切割 15
+
+#IF
+equal U6 6
+#ACT
+INC N$魔法切割 21
+
+#IF
+equal U6 7
+#ACT
+INC N$魔法切割 28
+
+#IF
+equal U6 8
+#ACT
+INC N$魔法切割 36
+
+#IF
+equal U6 9
+#ACT
+INC N$魔法切割 44
+
+#IF
+equal U6 10
+#ACT
+INC N$魔法切割 54
+
+#IF
+CHECKTITLE 开拓·初出江湖
+#ACT
+INC N$怪物额外伤害 2
+
+#IF
+CHECKTITLE 先锋·江湖少侠
+#ACT
+INC N$怪物额外伤害 4
+
+#IF
+CHECKTITLE 无畏·武林俊杰
+#ACT
+INC N$怪物额外伤害 6
+
+#IF
+CHECKTITLE 驭风·罕有敌手
+#ACT
+INC N$怪物额外伤害 8
+
+#IF
+CHECKTITLE 破焰·绝世高手
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKTITLE 毁灭·傲视群雄
+#ACT
+INC N$怪物额外伤害 12
+
+#IF
+CHECKTITLE 审判·独孤求败
+#ACT
+INC N$怪物额外伤害 14
+
+#IF
+CHECKTITLE 屠龙·凶神恶煞
+#ACT
+INC N$怪物额外伤害 16
+
+#IF
+CHECKTITLE 修罗·屠戮成性
+#ACT
+INC N$怪物额外伤害 18
+
+#IF
+CHECKTITLE 神谕·武林魔头
+#ACT
+INC N$怪物额外伤害 20
+
+#IF
+CHECKTITLE 乾坤·风华绝月
+#ACT
+INC N$怪物额外伤害 22
+
+#IF
+CHECKTITLE 破天·烽火无极
+#ACT
+INC N$怪物额外伤害 24
+
+#IF
+CHECKTITLE 天下·问鼎争锋
+#ACT
+INC N$怪物额外伤害 26
+
+#IF
+CHECKTITLE 证道·鬼面罗刹
+#ACT
+INC N$怪物额外伤害 28
+
+#IF
+CHECKTITLE 玄冥·逆道违天
+#ACT
+INC N$怪物额外伤害 30
+
+#IF
+CHECKTITLE 狂舞·百步屠魔
+#ACT
+INC N$怪物额外伤害 32
+
+#IF
+CHECKTITLE 浮沉·青天苍茫
+#ACT
+INC N$怪物额外伤害 34
+
+#IF
+CHECKTITLE 无敌·死躯灭魂
+#ACT
+INC N$怪物额外伤害 36
+
+#IF
+CHECKTITLE 轮回·天地难葬
+#ACT
+INC N$怪物额外伤害 38
+
+#IF
+CHECKTITLE 归一·终极审判
+#ACT
+INC N$怪物额外伤害 40
+
+#IF
+CHECKTITLE 踏碎天地·众生朝
+#ACT
+INC N$怪物额外伤害 42
+
+#IF
+CHECKTITLE 血染诸天·涅阴阳
+#ACT
+INC N$怪物额外伤害 44
+
+#IF
+CHECKTITLE 一念天道·化三千
+#ACT
+INC N$怪物额外伤害 46
+
+#IF
+CHECKTITLE 混化阴阳·断生念
+#ACT
+INC N$怪物额外伤害 48
+
+#IF
+CHECKTITLE 一笑沧海·化桑田
+#ACT
+INC N$怪物额外伤害 50
+
+#IF
+CHECKTITLE 万剑归宗·阴阳间
+#ACT
+INC N$怪物额外伤害 52
+
+#IF
+CHECKTITLE 修罗战火·焚尽天
+#ACT
+INC N$怪物额外伤害 54
+
+#IF
+CHECKTITLE 人非圣贤·斩情绝
+#ACT
+INC N$怪物额外伤害 56
+
+#IF
+CHECKTITLE 浮华无忌·百化仙
+#ACT
+INC N$怪物额外伤害 58
+
+#IF
+CHECKTITLE 唯我独尊·屠苍生
+#ACT
+INC N$怪物额外伤害 60
+
+#IF
+CHECKTITLE 世界之巅·诸神灭
+#ACT
+INC N$怪物额外伤害 65
+
+#IF
+CHECKITEMW 西游·定海神针
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKITEMW 蛛王戒
+#ACT
+INC N$怪物额外伤害 2
+
+#IF
+CHECKITEMW 紫金红葫芦
+#ACT
+INC N$怪物额外伤害 1
+
+#IF
+CHECKITEMW 羊脂玉净瓶
+#ACT
+INC N$怪物额外伤害 3
+
+#IF
+CHECKITEMW 公瑾糜烂
+#ACT
+INC N$怪物额外伤害 3
+
+#IF
+CHECKTITLE 伯爵
+#ACT
+INC N$怪物额外伤害 3
+
+#IF
+CHECKITEMW 太清丹经
+#ACT
+INC N$怪物额外伤害 4
+
+#IF
+CHECKITEMW 祸国殃民
+#ACT
+INC N$怪物额外伤害 4
+
+
+#IF
+CHECKITEMW 蓝灵法杖
+#ACT
+INC N$魔法切割 20
+
+#IF
+CHECKITEMW 退魔权杖
+#ACT
+INC N$魔法切割 40
+
+#IF
+CHECKITEMW 赤血魔剑
+#ACT
+INC N$道术切割 30
+
+#IF
+CHECKITEMW 小红剑
+#ACT
+INC N$道术切割 60
+
+
+#IF
+CHECKITEMW 观世音面纱[西游神器]
+#ACT
+INC N$怪物额外伤害 5
+
+#IF
+CHECKITEMW 金刚伏魔盾[西游神器]
+#ACT
+INC N$怪物额外伤害 5
+
+#IF
+CHECKITEMW 羽扇纶巾[三国神器]
+#ACT
+INC N$怪物额外伤害 5
+
+
+#IF
+CHECKITEMW 过五关斩六将[三国神器]
+#ACT
+INC N$怪物额外伤害 5
+
+#IF
+CHECKITEMW 挟天子以令诸侯[三国神器]
+#ACT
+INC N$怪物额外伤害 5
+
+#IF
+CHECKITEMW 一骑当千[三国神器]
+#ACT
+INC N$怪物额外伤害 5
+
+#IF
+CHECKITEMW 金龙玉凤[帝王神器]
+#ACT
+INC N$怪物额外伤害 5
+
+#IF
+CHECKITEMW 励精图治[帝王神器]
+#ACT
+INC N$怪物额外伤害 5
+
+#IF
+CHECKITEMW 九重天子[帝王神器]
+#ACT
+INC N$怪物额外伤害 5
+
+#IF
+CHECKITEMW 南征北战[帝王神器]
+#ACT
+INC N$怪物额外伤害 5
+
+#IF
+CHECKITEMW 乾坤大挪移[金庸神器]
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKITEMW 凌波微步[金庸神器]
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKITEMW 黯然销魂掌[金庸神器]
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKITEMW 天山折梅手[金庸神器]
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKITEMW 雅典娜的召唤[圣斗士神器]
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKITEMW 曙光女神之宽恕[圣斗士神器]
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKITEMW 修罗圣剑[圣斗士神器]
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKITEMW 星红旋风[圣斗士神器]
+#ACT
+INC N$怪物额外伤害 10
+
+
+#IF
+CHECKITEMW 雪夜上梁山[水浒神器]
+#ACT
+INC N$怪物额外伤害 15
+
+#IF
+CHECKITEMW 智取生辰纲[水浒神器]
+#ACT
+INC N$怪物额外伤害 15
+
+#IF
+CHECKITEMW 血溅鸳鸯楼[水浒神器]
+#ACT
+INC N$怪物额外伤害 15
+
+#IF
+CHECKITEMW 拳打镇关西[水浒神器]
+#ACT
+INC N$怪物额外伤害 15
+
+
+#IF
+CHECKITEMW 伏龙鼎[诛仙神器]
+#ACT
+INC N$怪物额外伤害 20
+
+#IF
+CHECKITEMW 摄魂[诛仙神器]
+#ACT
+INC N$怪物额外伤害 20
+
+#IF
+CHECKITEMW 大悲金轮[诛仙神器]
+#ACT
+INC N$怪物额外伤害 20
+
+#IF
+CHECKITEMW 玄火鉴[诛仙神器]
+#ACT
+INC N$怪物额外伤害 20
+
+#IF
+CHECKITEMW 量天尺[诛仙神器]
+#ACT
+INC N$怪物额外伤害 20
+
+
+
+#IF
+CHECKITEMW 暴君之怒[暗黑神器]
+#ACT
+INC N$怪物额外伤害 25
+
+#IF
+CHECKITEMW 不死皇冠[暗黑神器]
+#ACT
+INC N$怪物额外伤害 25
+
+#IF
+CHECKITEMW 吸魂者[暗黑神器]
+#ACT
+INC N$怪物额外伤害 25
+
+#IF
+CHECKITEMW 乔丹之石[暗黑神器]
+#ACT
+INC N$怪物额外伤害 25
+
+#IF
+CHECKITEMW 天堂的信徒[暗黑神器]
+#ACT
+INC N$怪物额外伤害 25
+
+#IF
+CHECKITEMW 地狱的伪装[暗黑神器]
+#ACT
+INC N$怪物额外伤害 25
+
+
+
+#IF
+CHECKITEMW 盘古幡[上古神器]
+#ACT
+INC N$怪物额外伤害 30
+
+#IF
+CHECKITEMW 补天石[上古神器]
+#ACT
+INC N$怪物额外伤害 30
+
+#IF
+CHECKITEMW 东皇钟[上古神器]
+#ACT
+INC N$怪物额外伤害 30
+
+#IF
+CHECKITEMW 昆仑镜[上古神器]
+#ACT
+INC N$怪物额外伤害 30
+
+#IF
+CHECKITEMW 先天五行旗[上古神器]
+#ACT
+INC N$怪物额外伤害 30
+
+#IF
+CHECKITEMW 追日靴[上古神器]
+#ACT
+INC N$怪物额外伤害 30
+
+#IF
+CHECKITEMW 封天印[上古神器]
+#ACT
+INC N$怪物额外伤害 30
+
+#IF
+CHECKITEMW 崆峒印[上古神器]
+#ACT
+INC N$怪物额外伤害 30
+
+#IF
+CHECKITEMW 轩辕剑[上古神器]
+#ACT
+INC N$怪物额外伤害 30
+
+#IF
+CHECKITEMW 太极图[上古神器]
+#ACT
+INC N$怪物额外伤害 30
+
+#IF
+CHECKITEMW 玲珑塔[上古神器]
+#ACT
+INC N$怪物额外伤害 30
+
+#IF
+CHECKITEMW 昊天塔[上古神器]
+#ACT
+INC N$怪物额外伤害 30
+
+
+
+#IF
+CHECKTITLE 西游之力①
+#act
+INC N$怪物额外伤害 1
+
+#IF
+CHECKTITLE 西游之力②
+#act
+INC N$怪物额外伤害 2
+
+#IF
+CHECKTITLE 西游之力③
+#act
+INC N$怪物额外伤害 3
+
+#IF
+CHECKTITLE 西游之力④
+#act
+INC N$怪物额外伤害 4
+
+#IF
+CHECKTITLE 西游之力⑤
+#act
+INC N$怪物额外伤害 5
+
+#IF
+CHECKTITLE 西游之力⑥
+#act
+INC N$怪物额外伤害 6
+
+#IF
+CHECKTITLE 西游之力⑦
+#act
+INC N$怪物额外伤害 7
+
+#IF
+CHECKTITLE 西游之力⑧
+#act
+INC N$怪物额外伤害 8
+
+#IF
+CHECKTITLE 西游之力⑨
+#act
+INC N$怪物额外伤害 9
+
+#IF
+CHECKTITLE 西游之力⑩
+#act
+INC N$怪物额外伤害 10
+
+#IF
+CHECKTITLE 三国之力①
+#act
+INC N$怪物额外伤害 11
+
+#IF
+CHECKTITLE 三国之力②
+#act
+INC N$怪物额外伤害 12
+
+#IF
+CHECKTITLE 三国之力③
+#act
+INC N$怪物额外伤害 13
+
+#IF
+CHECKTITLE 三国之力④
+#act
+INC N$怪物额外伤害 14
+
+#IF
+CHECKTITLE 三国之力⑤
+#act
+INC N$怪物额外伤害 15
+
+#IF
+CHECKTITLE 三国之力⑥
+#act
+INC N$怪物额外伤害 16
+
+#IF
+CHECKTITLE 三国之力⑦
+#act
+INC N$怪物额外伤害 17
+
+#IF
+CHECKTITLE 三国之力⑧
+#act
+INC N$怪物额外伤害 18
+
+#IF
+CHECKTITLE 三国之力⑨
+#act
+INC N$怪物额外伤害 19
+
+#IF
+CHECKTITLE 三国之力⑩
+#act
+INC N$怪物额外伤害 20
+
+#IF
+CHECKTITLE 帝王之力①
+#act
+INC N$怪物额外伤害 21
+
+#IF
+CHECKTITLE 帝王之力②
+#act
+INC N$怪物额外伤害 22
+
+#IF
+CHECKTITLE 帝王之力③
+#act
+INC N$怪物额外伤害 23
+
+#IF
+CHECKTITLE 帝王之力④
+#act
+INC N$怪物额外伤害 24
+
+#IF
+CHECKTITLE 帝王之力⑤
+#act
+INC N$怪物额外伤害 25
+
+#IF
+CHECKTITLE 帝王之力⑥
+#act
+INC N$怪物额外伤害 26
+
+#IF
+CHECKTITLE 帝王之力⑦
+#act
+INC N$怪物额外伤害 27
+
+#IF
+CHECKTITLE 帝王之力⑧
+#act
+INC N$怪物额外伤害 28
+
+#IF
+CHECKTITLE 帝王之力⑨
+#act
+INC N$怪物额外伤害 29
+
+#IF
+CHECKTITLE 帝王之力⑩
+#act
+INC N$怪物额外伤害 30
+
+#IF
+CHECKTITLE 金庸之力①
+#act
+INC N$怪物额外伤害 31
+
+#IF
+CHECKTITLE 金庸之力②
+#act
+INC N$怪物额外伤害 32
+
+#IF
+CHECKTITLE 金庸之力③
+#act
+INC N$怪物额外伤害 33
+
+#IF
+CHECKTITLE 金庸之力④
+#act
+INC N$怪物额外伤害 34
+
+#IF
+CHECKTITLE 金庸之力⑤
+#act
+INC N$怪物额外伤害 35
+
+#IF
+CHECKTITLE 金庸之力⑥
+#act
+INC N$怪物额外伤害 36
+
+#IF
+CHECKTITLE 金庸之力⑦
+#act
+INC N$怪物额外伤害 37
+
+#IF
+CHECKTITLE 金庸之力⑧
+#act
+INC N$怪物额外伤害 38
+
+#IF
+CHECKTITLE 金庸之力⑨
+#act
+INC N$怪物额外伤害 39
+
+#IF
+CHECKTITLE 金庸之力⑩
+#act
+INC N$怪物额外伤害 40
+
+#IF
+CHECKTITLE 圣斗士之力①
+#act
+INC N$怪物额外伤害 41
+
+#IF
+CHECKTITLE 圣斗士之力②
+#act
+INC N$怪物额外伤害 42
+
+#IF
+CHECKTITLE 圣斗士之力③
+#act
+INC N$怪物额外伤害 43
+
+#IF
+CHECKTITLE 圣斗士之力④
+#act
+INC N$怪物额外伤害 44
+
+#IF
+CHECKTITLE 圣斗士之力⑤
+#act
+INC N$怪物额外伤害 45
+
+#IF
+CHECKTITLE 圣斗士之力⑥
+#act
+INC N$怪物额外伤害 46
+
+#IF
+CHECKTITLE 圣斗士之力⑦
+#act
+INC N$怪物额外伤害 47
+
+#IF
+CHECKTITLE 圣斗士之力⑧
+#act
+INC N$怪物额外伤害 48
+
+#IF
+CHECKTITLE 圣斗士之力⑨
+#act
+INC N$怪物额外伤害 49
+
+#IF
+CHECKTITLE 圣斗士之力⑩
+#act
+INC N$怪物额外伤害 50
+
+#IF
+CHECKTITLE 水浒之力①
+#act
+INC N$怪物额外伤害 51
+
+#IF
+CHECKTITLE 水浒之力②
+#act
+INC N$怪物额外伤害 52
+
+#IF
+CHECKTITLE 水浒之力③
+#act
+INC N$怪物额外伤害 53
+
+#IF
+CHECKTITLE 水浒之力④
+#act
+INC N$怪物额外伤害 54
+
+#IF
+CHECKTITLE 水浒之力⑤
+#act
+INC N$怪物额外伤害 55
+
+#IF
+CHECKTITLE 水浒之力⑥
+#act
+INC N$怪物额外伤害 56
+
+#IF
+CHECKTITLE 水浒之力⑦
+#act
+INC N$怪物额外伤害 57
+
+#IF
+CHECKTITLE 水浒之力⑧
+#act
+INC N$怪物额外伤害 58
+
+#IF
+CHECKTITLE 水浒之力⑨
+#act
+INC N$怪物额外伤害 59
+
+#IF
+CHECKTITLE 水浒之力⑩
+#act
+INC N$怪物额外伤害 60
+
+#IF
+CHECKTITLE 诛仙之力①
+#act
+INC N$怪物额外伤害 61
+
+#IF
+CHECKTITLE 诛仙之力②
+#act
+INC N$怪物额外伤害 62
+
+#IF
+CHECKTITLE 诛仙之力③
+#act
+INC N$怪物额外伤害 63
+
+#IF
+CHECKTITLE 诛仙之力④
+#act
+INC N$怪物额外伤害 64
+
+#IF
+CHECKTITLE 诛仙之力⑤
+#act
+INC N$怪物额外伤害 65
+
+#IF
+CHECKTITLE 诛仙之力⑥
+#act
+INC N$怪物额外伤害 66
+
+#IF
+CHECKTITLE 诛仙之力⑦
+#act
+INC N$怪物额外伤害 67
+
+#IF
+CHECKTITLE 诛仙之力⑧
+#act
+INC N$怪物额外伤害 68
+
+#IF
+CHECKTITLE 诛仙之力⑨
+#act
+INC N$怪物额外伤害 69
+
+#IF
+CHECKTITLE 诛仙之力⑩
+#act
+INC N$怪物额外伤害 70
+
+#IF
+CHECKTITLE 暗黑之力①
+#act
+INC N$怪物额外伤害 72
+
+#IF
+CHECKTITLE 暗黑之力②
+#act
+INC N$怪物额外伤害 74
+
+#IF
+CHECKTITLE 暗黑之力③
+#act
+INC N$怪物额外伤害 76
+
+#IF
+CHECKTITLE 暗黑之力④
+#act
+INC N$怪物额外伤害 78
+
+#IF
+CHECKTITLE 暗黑之力⑤
+#act
+INC N$怪物额外伤害 80
+
+#IF
+CHECKTITLE 暗黑之力⑥
+#act
+INC N$怪物额外伤害 82
+
+#IF
+CHECKTITLE 暗黑之力⑦
+#act
+INC N$怪物额外伤害 84
+
+#IF
+CHECKTITLE 暗黑之力⑧
+#act
+INC N$怪物额外伤害 86
+
+#IF
+CHECKTITLE 暗黑之力⑨
+#act
+INC N$怪物额外伤害 88
+
+#IF
+CHECKTITLE 暗黑之力⑩
+#act
+INC N$怪物额外伤害 90
+
+#IF
+CHECKTITLE 神域之力①
+#act
+INC N$怪物额外伤害 92
+
+#IF
+CHECKTITLE 神域之力②
+#act
+INC N$怪物额外伤害 94
+
+#IF
+CHECKTITLE 神域之力③
+#act
+INC N$怪物额外伤害 96
+
+#IF
+CHECKTITLE 神域之力④
+#act
+INC N$怪物额外伤害 98
+
+#IF
+CHECKTITLE 神域之力⑤
+#act
+INC N$怪物额外伤害 100
+
+#IF
+CHECKTITLE 神域之力⑥
+#act
+INC N$怪物额外伤害 105
+
+#IF
+CHECKTITLE 神域之力⑦
+#act
+INC N$怪物额外伤害 110
+
+#IF
+CHECKTITLE 神域之力⑧
+#act
+INC N$怪物额外伤害 115
+
+#IF
+CHECKTITLE 神域之力⑨
+#act
+INC N$怪物额外伤害 120
+
+#IF
+CHECKTITLE 神域之力⑩
+#act
+INC N$怪物额外伤害 130
+
+
+;--------------------------武器--------------------------------
+#IF
+CHECKSOCKETABLEITEM 1 0 N$武器位置一IDX S$武器位置一
+#act
+
+#IF
+CHECKSOCKETABLEITEM 1 1 N$武器位置二IDX S$武器位置二
+#act
+
+#IF
+CHECKSOCKETABLEITEM 1 2 N$武器位置三IDX S$武器位置三
+#act
+
+#IF
+CHECKSOCKETABLEITEM 1 3 N$武器位置四IDX S$武器位置四
+#act
+
+#IF
+CHECKSOCKETABLEITEM 1 4 N$武器位置五IDX S$武器位置五
+#act
+
+#if
+CheckContainsText <$str(S$武器位置五)> 第一刀斩杀怪物
+#act
+DEC S$武器位置五 第一刀斩杀怪物
+DEC S$武器位置五 %HP
+mov N$第一刀斩杀怪物 <$str(S$武器位置五)>
+
+#if
+CheckContainsText <$str(S$武器位置四)> 第一刀斩杀怪物
+#act
+DEC S$武器位置四 第一刀斩杀怪物
+DEC S$武器位置四 %HP
+mov N$第一刀斩杀怪物 <$str(S$武器位置四)>
+
+#if
+CheckContainsText <$str(S$武器位置三)> 第一刀斩杀怪物
+#act
+DEC S$武器位置三 第一刀斩杀怪物
+DEC S$武器位置三 %HP
+mov N$第一刀斩杀怪物 <$str(S$武器位置三)>
+
+#if
+CheckContainsText <$str(S$武器位置二)> 第一刀斩杀怪物
+#act
+DEC S$武器位置二 第一刀斩杀怪物
+DEC S$武器位置二 %HP
+mov N$第一刀斩杀怪物 <$str(S$武器位置二)>
+
+#if
+CheckContainsText <$str(S$武器位置一)> 第一刀斩杀怪物
+#act
+DEC S$武器位置一 第一刀斩杀怪物
+DEC S$武器位置一 %HP
+mov N$第一刀斩杀怪物 <$str(S$武器位置一)>
+
+
+#if
+CheckContainsText <$str(S$武器位置一)> 对怪伤害+
+#act
+DEC S$武器位置一 对怪伤害+
+DEC S$武器位置一 %
+inc N$怪物额外伤害 <$str(S$武器位置一)>
+
+#if
+CheckContainsText <$str(S$武器位置二)> 对怪伤害+
+#act
+DEC S$武器位置二 对怪伤害+
+DEC S$武器位置二 %
+inc N$怪物额外伤害 <$str(S$武器位置二)>
+
+#if
+CheckContainsText <$str(S$武器位置三)> 对怪伤害+
+#act
+DEC S$武器位置三 对怪伤害+
+DEC S$武器位置三 %
+inc N$怪物额外伤害 <$str(S$武器位置三)>
+
+#if
+CheckContainsText <$str(S$武器位置四)> 对怪伤害+
+#act
+DEC S$武器位置四 对怪伤害+
+DEC S$武器位置四 %
+inc N$怪物额外伤害 <$str(S$武器位置四)>
+
+
+#if
+CheckContainsText <$str(S$武器位置五)> 对怪伤害+
+#act
+DEC S$武器位置五 对怪伤害+
+DEC S$武器位置五 %
+
+inc N$怪物额外伤害 <$str(S$武器位置五)>
+
+
+
+
+;------------------------靴子----------------------------------
+
+#IF
+CHECKSOCKETABLEITEM 11 0 N$靴子位置一IDX S$靴子位置一
+#act
+
+#IF
+CHECKSOCKETABLEITEM 11 1 N$靴子位置二IDX S$靴子位置二
+#act
+
+#IF
+CHECKSOCKETABLEITEM 11 2 N$靴子位置三IDX S$靴子位置三
+#act
+
+#IF
+CHECKSOCKETABLEITEM 11 3 N$靴子位置四IDX S$靴子位置四
+#act
+
+#IF
+CHECKSOCKETABLEITEM 11 4 N$靴子位置五IDX S$靴子位置五
+#act
+
+#if
+CheckContainsText <$str(S$靴子位置一)> 对怪伤害+
+#act
+DEC S$靴子位置一 对怪伤害+
+DEC S$靴子位置一 %
+inc N$怪物额外伤害 <$str(S$靴子位置一)>
+
+#if
+CheckContainsText <$str(S$靴子位置二)> 对怪伤害+
+#act
+DEC S$靴子位置二 对怪伤害+
+DEC S$靴子位置二 %
+inc N$怪物额外伤害 <$str(S$靴子位置二)>
+
+#if
+CheckContainsText <$str(S$靴子位置三)> 对怪伤害+
+#act
+DEC S$靴子位置三 对怪伤害+
+DEC S$靴子位置三 %
+inc N$怪物额外伤害 <$str(S$靴子位置三)>
+
+#if
+CheckContainsText <$str(S$靴子位置四)> 对怪伤害+
+#act
+DEC S$靴子位置四 对怪伤害+
+DEC S$靴子位置四 %
+inc N$怪物额外伤害 <$str(S$靴子位置四)>
+
+#if
+CheckContainsText <$str(S$靴子位置五)> 对怪伤害+
+#act
+DEC S$靴子位置五 对怪伤害+
+DEC S$靴子位置五 %
+inc N$怪物额外伤害 <$str(S$靴子位置五)>
+
+
+#if
+CheckContainsText <$str(S$靴子位置一)> 道术切割+
+#act
+DEC S$靴子位置一 道术切割+
+DEC S$靴子位置一 %
+inc N$道术切割 <$str(S$靴子位置一)>
+
+#if
+CheckContainsText <$str(S$靴子位置二)> 道术切割+
+#act
+DEC S$靴子位置二 道术切割+
+DEC S$靴子位置二 %
+inc N$道术切割 <$str(S$靴子位置二)>
+
+#if
+CheckContainsText <$str(S$靴子位置三)> 道术切割+
+#act
+DEC S$靴子位置三 道术切割+
+DEC S$靴子位置三 %
+inc N$道术切割 <$str(S$靴子位置三)>
+
+#if
+CheckContainsText <$str(S$靴子位置四)> 道术切割+
+#act
+DEC S$靴子位置四 道术切割+
+DEC S$靴子位置四 %
+inc N$道术切割 <$str(S$靴子位置四)>
+
+#if
+CheckContainsText <$str(S$靴子位置五)> 道术切割+
+#act
+DEC S$靴子位置五 道术切割+
+DEC S$靴子位置五 %
+inc N$道术切割 <$str(S$靴子位置五)>
+
+#if
+CheckContainsText <$str(S$靴子位置一)> 魔法切割+
+#act
+DEC S$靴子位置一 魔法切割+
+DEC S$靴子位置一 %
+inc N$魔法切割 <$str(S$靴子位置一)>
+
+#if
+CheckContainsText <$str(S$靴子位置二)> 魔法切割+
+#act
+DEC S$靴子位置二 魔法切割+
+DEC S$靴子位置二 %
+inc N$魔法切割 <$str(S$靴子位置二)>
+
+#if
+CheckContainsText <$str(S$靴子位置三)> 魔法切割+
+#act
+DEC S$靴子位置三 魔法切割+
+DEC S$靴子位置三 %
+inc N$魔法切割 <$str(S$靴子位置三)>
+
+#if
+CheckContainsText <$str(S$靴子位置四)> 魔法切割+
+#act
+DEC S$靴子位置四 魔法切割+
+DEC S$靴子位置四 %
+inc N$魔法切割 <$str(S$靴子位置四)>
+
+#if
+CheckContainsText <$str(S$靴子位置五)> 魔法切割+
+#act
+DEC S$靴子位置五 魔法切割+
+DEC S$靴子位置五 %
+inc N$魔法切割 <$str(S$靴子位置五)>
+
+
+
+
+
+;----------------------右戒指------------------------------------
+
+#IF
+CHECKSOCKETABLEITEM 7 0 N$右戒指位置一IDX S$右戒指位置一
+#act
+
+#IF
+CHECKSOCKETABLEITEM 7 1 N$右戒指位置二IDX S$右戒指位置二
+#act
+
+#IF
+CHECKSOCKETABLEITEM 7 2 N$右戒指位置三IDX S$右戒指位置三
+#act
+
+#IF
+CHECKSOCKETABLEITEM 7 3 N$右戒指位置四IDX S$右戒指位置四
+#act
+
+#IF
+CHECKSOCKETABLEITEM 7 4 N$右戒指位置五IDX S$右戒指位置五
+#act
+
+
+#if
+CheckContainsText <$str(S$右戒指位置一)> 对怪伤害+
+#act
+DEC S$右戒指位置一 对怪伤害+
+DEC S$右戒指位置一 %
+inc N$怪物额外伤害 <$str(S$右戒指位置一)>
+
+#if
+CheckContainsText <$str(S$右戒指位置二)> 对怪伤害+
+#act
+DEC S$右戒指位置二 对怪伤害+
+DEC S$右戒指位置二 %
+inc N$怪物额外伤害 <$str(S$右戒指位置二)>
+
+#if
+CheckContainsText <$str(S$右戒指位置三)> 对怪伤害+
+#act
+DEC S$右戒指位置三 对怪伤害+
+DEC S$右戒指位置三 %
+inc N$怪物额外伤害 <$str(S$右戒指位置三)>
+
+#if
+CheckContainsText <$str(S$右戒指位置四)> 对怪伤害+
+#act
+DEC S$右戒指位置四 对怪伤害+
+DEC S$右戒指位置四 %
+inc N$怪物额外伤害 <$str(S$右戒指位置四)>
+
+#if
+CheckContainsText <$str(S$右戒指位置五)> 对怪伤害+
+#act
+DEC S$右戒指位置五 对怪伤害+
+DEC S$右戒指位置五 %
+inc N$怪物额外伤害 <$str(S$右戒指位置五)>
+
+
+#if
+CheckContainsText <$str(S$右戒指位置一)> 道术切割+
+#act
+DEC S$右戒指位置一 道术切割+
+DEC S$右戒指位置一 %
+inc N$道术切割 <$str(S$右戒指位置一)>
+
+#if
+CheckContainsText <$str(S$右戒指位置二)> 道术切割+
+#act
+DEC S$右戒指位置二 道术切割+
+DEC S$右戒指位置二 %
+inc N$道术切割 <$str(S$右戒指位置二)>
+
+#if
+CheckContainsText <$str(S$右戒指位置三)> 道术切割+
+#act
+DEC S$右戒指位置三 道术切割+
+DEC S$右戒指位置三 %
+inc N$道术切割 <$str(S$右戒指位置三)>
+
+#if
+CheckContainsText <$str(S$右戒指位置四)> 道术切割+
+#act
+DEC S$右戒指位置四 道术切割+
+DEC S$右戒指位置四 %
+inc N$道术切割 <$str(S$右戒指位置四)>
+
+#if
+CheckContainsText <$str(S$右戒指位置五)> 道术切割+
+#act
+DEC S$右戒指位置五 道术切割+
+DEC S$右戒指位置五 %
+inc N$道术切割 <$str(S$右戒指位置五)>
+
+#if
+CheckContainsText <$str(S$右戒指位置一)> 魔法切割+
+#act
+DEC S$右戒指位置一 魔法切割+
+DEC S$右戒指位置一 %
+inc N$魔法切割 <$str(S$右戒指位置一)>
+
+#if
+CheckContainsText <$str(S$右戒指位置二)> 魔法切割+
+#act
+DEC S$右戒指位置二 魔法切割+
+DEC S$右戒指位置二 %
+inc N$魔法切割 <$str(S$右戒指位置二)>
+
+#if
+CheckContainsText <$str(S$右戒指位置三)> 魔法切割+
+#act
+DEC S$右戒指位置三 魔法切割+
+DEC S$右戒指位置三 %
+inc N$魔法切割 <$str(S$右戒指位置三)>
+
+#if
+CheckContainsText <$str(S$右戒指位置四)> 魔法切割+
+#act
+DEC S$右戒指位置四 魔法切割+
+DEC S$右戒指位置四 %
+inc N$魔法切割 <$str(S$右戒指位置四)>
+
+#if
+CheckContainsText <$str(S$右戒指位置五)> 魔法切割+
+#act
+DEC S$右戒指位置五 魔法切割+
+DEC S$右戒指位置五 %
+inc N$魔法切割 <$str(S$右戒指位置五)>
+
+
+
+
+
+
+;--------------------------左戒指--------------------------------
+
+
+#IF
+CHECKSOCKETABLEITEM 8 0 N$左戒指位置一IDX S$左戒指位置一
+#act
+
+#IF
+CHECKSOCKETABLEITEM 8 1 N$左戒指位置二IDX S$左戒指位置二
+#act
+
+#IF
+CHECKSOCKETABLEITEM 8 2 N$左戒指位置三IDX S$左戒指位置三
+#act
+
+#IF
+CHECKSOCKETABLEITEM 8 3 N$左戒指位置四IDX S$左戒指位置四
+#act
+
+#IF
+CHECKSOCKETABLEITEM 8 4 N$左戒指位置五IDX S$左戒指位置五
+#act
+
+
+
+#if
+CheckContainsText <$str(S$左戒指位置一)> 对怪伤害+
+#act
+DEC S$左戒指位置一 对怪伤害+
+DEC S$左戒指位置一 %
+inc N$怪物额外伤害 <$str(S$左戒指位置一)>
+
+#if
+CheckContainsText <$str(S$左戒指位置二)> 对怪伤害+
+#act
+DEC S$左戒指位置二 对怪伤害+
+DEC S$左戒指位置二 %
+inc N$怪物额外伤害 <$str(S$左戒指位置二)>
+
+#if
+CheckContainsText <$str(S$左戒指位置三)> 对怪伤害+
+#act
+DEC S$左戒指位置三 对怪伤害+
+DEC S$左戒指位置三 %
+inc N$怪物额外伤害 <$str(S$左戒指位置三)>
+
+#if
+CheckContainsText <$str(S$左戒指位置四)> 对怪伤害+
+#act
+DEC S$左戒指位置四 对怪伤害+
+DEC S$左戒指位置四 %
+inc N$怪物额外伤害 <$str(S$左戒指位置四)>
+
+#if
+CheckContainsText <$str(S$左戒指位置五)> 对怪伤害+
+#act
+DEC S$左戒指位置五 对怪伤害+
+DEC S$左戒指位置五 %
+inc N$怪物额外伤害 <$str(S$左戒指位置五)>
+
+
+#if
+CheckContainsText <$str(S$左戒指位置一)> 道术切割+
+#act
+DEC S$左戒指位置一 道术切割+
+DEC S$左戒指位置一 %
+inc N$道术切割 <$str(S$左戒指位置一)>
+
+#if
+CheckContainsText <$str(S$左戒指位置二)> 道术切割+
+#act
+DEC S$左戒指位置二 道术切割+
+DEC S$左戒指位置二 %
+inc N$道术切割 <$str(S$左戒指位置二)>
+
+#if
+CheckContainsText <$str(S$左戒指位置三)> 道术切割+
+#act
+DEC S$左戒指位置三 道术切割+
+DEC S$左戒指位置三 %
+inc N$道术切割 <$str(S$左戒指位置三)>
+
+#if
+CheckContainsText <$str(S$左戒指位置四)> 道术切割+
+#act
+DEC S$左戒指位置四 道术切割+
+DEC S$左戒指位置四 %
+inc N$道术切割 <$str(S$左戒指位置四)>
+
+#if
+CheckContainsText <$str(S$左戒指位置五)> 道术切割+
+#act
+DEC S$左戒指位置五 道术切割+
+DEC S$左戒指位置五 %
+inc N$道术切割 <$str(S$左戒指位置五)>
+
+#if
+CheckContainsText <$str(S$左戒指位置一)> 魔法切割+
+#act
+DEC S$左戒指位置一 魔法切割+
+DEC S$左戒指位置一 %
+inc N$魔法切割 <$str(S$左戒指位置一)>
+
+#if
+CheckContainsText <$str(S$左戒指位置二)> 魔法切割+
+#act
+DEC S$左戒指位置二 魔法切割+
+DEC S$左戒指位置二 %
+inc N$魔法切割 <$str(S$左戒指位置二)>
+
+#if
+CheckContainsText <$str(S$左戒指位置三)> 魔法切割+
+#act
+DEC S$左戒指位置三 魔法切割+
+DEC S$左戒指位置三 %
+inc N$魔法切割 <$str(S$左戒指位置三)>
+
+#if
+CheckContainsText <$str(S$左戒指位置四)> 魔法切割+
+#act
+DEC S$左戒指位置四 魔法切割+
+DEC S$左戒指位置四 %
+inc N$魔法切割 <$str(S$左戒指位置四)>
+
+#if
+CheckContainsText <$str(S$左戒指位置五)> 魔法切割+
+#act
+DEC S$左戒指位置五 魔法切割+
+DEC S$左戒指位置五 %
+inc N$魔法切割 <$str(S$左戒指位置五)>
+
+
+;-----------------------右手镯-----------------------------------
+
+#IF
+CHECKSOCKETABLEITEM 5 0 N$右手镯位置一IDX S$右手镯位置一
+#act
+
+#IF
+CHECKSOCKETABLEITEM 5 1 N$右手镯位置二IDX S$右手镯位置二
+#act
+
+#IF
+CHECKSOCKETABLEITEM 5 2 N$右手镯位置三IDX S$右手镯位置三
+#act
+
+#IF
+CHECKSOCKETABLEITEM 5 3 N$右手镯位置四IDX S$右手镯位置四
+#act
+
+#IF
+CHECKSOCKETABLEITEM 5 4 N$右手镯位置五IDX S$右手镯位置五
+#act
+
+#if
+CheckContainsText <$str(S$右手镯位置一)> 对怪伤害+
+#act
+DEC S$右手镯位置一 对怪伤害+
+DEC S$右手镯位置一 %
+inc N$怪物额外伤害 <$str(S$右手镯位置一)>
+
+#if
+CheckContainsText <$str(S$右手镯位置二)> 对怪伤害+
+#act
+DEC S$右手镯位置二 对怪伤害+
+DEC S$右手镯位置二 %
+inc N$怪物额外伤害 <$str(S$右手镯位置二)>
+
+#if
+CheckContainsText <$str(S$右手镯位置三)> 对怪伤害+
+#act
+DEC S$右手镯位置三 对怪伤害+
+DEC S$右手镯位置三 %
+inc N$怪物额外伤害 <$str(S$右手镯位置三)>
+
+#if
+CheckContainsText <$str(S$右手镯位置四)> 对怪伤害+
+#act
+DEC S$右手镯位置四 对怪伤害+
+DEC S$右手镯位置四 %
+inc N$怪物额外伤害 <$str(S$右手镯位置四)>
+
+#if
+CheckContainsText <$str(S$右手镯位置五)> 对怪伤害+
+#act
+DEC S$右手镯位置五 对怪伤害+
+DEC S$右手镯位置五 %
+inc N$怪物额外伤害 <$str(S$右手镯位置五)>
+
+
+#if
+CheckContainsText <$str(S$右手镯位置一)> 道术切割+
+#act
+DEC S$右手镯位置一 道术切割+
+DEC S$右手镯位置一 %
+inc N$道术切割 <$str(S$右手镯位置一)>
+
+#if
+CheckContainsText <$str(S$右手镯位置二)> 道术切割+
+#act
+DEC S$右手镯位置二 道术切割+
+DEC S$右手镯位置二 %
+inc N$道术切割 <$str(S$右手镯位置二)>
+
+#if
+CheckContainsText <$str(S$右手镯位置三)> 道术切割+
+#act
+DEC S$右手镯位置三 道术切割+
+DEC S$右手镯位置三 %
+inc N$道术切割 <$str(S$右手镯位置三)>
+
+#if
+CheckContainsText <$str(S$右手镯位置四)> 道术切割+
+#act
+DEC S$右手镯位置四 道术切割+
+DEC S$右手镯位置四 %
+inc N$道术切割 <$str(S$右手镯位置四)>
+
+#if
+CheckContainsText <$str(S$右手镯位置五)> 道术切割+
+#act
+DEC S$右手镯位置五 道术切割+
+DEC S$右手镯位置五 %
+inc N$道术切割 <$str(S$右手镯位置五)>
+
+#if
+CheckContainsText <$str(S$右手镯位置一)> 魔法切割+
+#act
+DEC S$右手镯位置一 魔法切割+
+DEC S$右手镯位置一 %
+inc N$魔法切割 <$str(S$右手镯位置一)>
+
+#if
+CheckContainsText <$str(S$右手镯位置二)> 魔法切割+
+#act
+DEC S$右手镯位置二 魔法切割+
+DEC S$右手镯位置二 %
+inc N$魔法切割 <$str(S$右手镯位置二)>
+
+#if
+CheckContainsText <$str(S$右手镯位置三)> 魔法切割+
+#act
+DEC S$右手镯位置三 魔法切割+
+DEC S$右手镯位置三 %
+inc N$魔法切割 <$str(S$右手镯位置三)>
+
+#if
+CheckContainsText <$str(S$右手镯位置四)> 魔法切割+
+#act
+DEC S$右手镯位置四 魔法切割+
+DEC S$右手镯位置四 %
+inc N$魔法切割 <$str(S$右手镯位置四)>
+
+#if
+CheckContainsText <$str(S$右手镯位置五)> 魔法切割+
+#act
+DEC S$右手镯位置五 魔法切割+
+DEC S$右手镯位置五 %
+inc N$魔法切割 <$str(S$右手镯位置五)>
+
+
+
+;-----------------------左手镯-----------------------------------
+#IF
+CHECKSOCKETABLEITEM 6 0 N$左手镯位置一IDX S$左手镯位置一
+#act
+
+#IF
+CHECKSOCKETABLEITEM 6 1 N$左手镯位置二IDX S$左手镯位置二
+#act
+
+#IF
+CHECKSOCKETABLEITEM 6 2 N$左手镯位置三IDX S$左手镯位置三
+#act
+
+#IF
+CHECKSOCKETABLEITEM 6 3 N$左手镯位置四IDX S$左手镯位置四
+#act
+
+#IF
+CHECKSOCKETABLEITEM 6 4 N$左手镯位置五IDX S$左手镯位置五
+#act
+
+#if
+CheckContainsText <$str(S$左手镯位置一)> 对怪伤害+
+#act
+DEC S$左手镯位置一 对怪伤害+
+DEC S$左手镯位置一 %
+inc N$怪物额外伤害 <$str(S$左手镯位置一)>
+
+#if
+CheckContainsText <$str(S$左手镯位置二)> 对怪伤害+
+#act
+DEC S$左手镯位置二 对怪伤害+
+DEC S$左手镯位置二 %
+inc N$怪物额外伤害 <$str(S$左手镯位置二)>
+
+#if
+CheckContainsText <$str(S$左手镯位置三)> 对怪伤害+
+#act
+DEC S$左手镯位置三 对怪伤害+
+DEC S$左手镯位置三 %
+inc N$怪物额外伤害 <$str(S$左手镯位置三)>
+
+#if
+CheckContainsText <$str(S$左手镯位置四)> 对怪伤害+
+#act
+DEC S$左手镯位置四 对怪伤害+
+DEC S$左手镯位置四 %
+inc N$怪物额外伤害 <$str(S$左手镯位置四)>
+
+#if
+CheckContainsText <$str(S$左手镯位置五)> 对怪伤害+
+#act
+DEC S$左手镯位置五 对怪伤害+
+DEC S$左手镯位置五 %
+inc N$怪物额外伤害 <$str(S$左手镯位置五)>
+
+#if
+CheckContainsText <$str(S$左手镯位置一)> 道术切割+
+#act
+DEC S$左手镯位置一 道术切割+
+DEC S$左手镯位置一 %
+inc N$道术切割 <$str(S$左手镯位置一)>
+
+#if
+CheckContainsText <$str(S$左手镯位置二)> 道术切割+
+#act
+DEC S$左手镯位置二 道术切割+
+DEC S$左手镯位置二 %
+inc N$道术切割 <$str(S$左手镯位置二)>
+
+#if
+CheckContainsText <$str(S$左手镯位置三)> 道术切割+
+#act
+DEC S$左手镯位置三 道术切割+
+DEC S$左手镯位置三 %
+inc N$道术切割 <$str(S$左手镯位置三)>
+
+#if
+CheckContainsText <$str(S$左手镯位置四)> 道术切割+
+#act
+DEC S$左手镯位置四 道术切割+
+DEC S$左手镯位置四 %
+inc N$道术切割 <$str(S$左手镯位置四)>
+
+#if
+CheckContainsText <$str(S$左手镯位置五)> 道术切割+
+#act
+DEC S$左手镯位置五 道术切割+
+DEC S$左手镯位置五 %
+inc N$道术切割 <$str(S$左手镯位置五)>
+
+#if
+CheckContainsText <$str(S$左手镯位置一)> 魔法切割+
+#act
+DEC S$左手镯位置一 魔法切割+
+DEC S$左手镯位置一 %
+inc N$魔法切割 <$str(S$左手镯位置一)>
+
+#if
+CheckContainsText <$str(S$左手镯位置二)> 魔法切割+
+#act
+DEC S$左手镯位置二 魔法切割+
+DEC S$左手镯位置二 %
+inc N$魔法切割 <$str(S$左手镯位置二)>
+
+#if
+CheckContainsText <$str(S$左手镯位置三)> 魔法切割+
+#act
+DEC S$左手镯位置三 魔法切割+
+DEC S$左手镯位置三 %
+inc N$魔法切割 <$str(S$左手镯位置三)>
+
+#if
+CheckContainsText <$str(S$左手镯位置四)> 魔法切割+
+#act
+DEC S$左手镯位置四 魔法切割+
+DEC S$左手镯位置四 %
+inc N$魔法切割 <$str(S$左手镯位置四)>
+
+#if
+CheckContainsText <$str(S$左手镯位置五)> 魔法切割+
+#act
+DEC S$左手镯位置五 魔法切割+
+DEC S$左手镯位置五 %
+inc N$魔法切割 <$str(S$左手镯位置五)>
+
+
+
+
+;--------------------------头盔--------------------------------
+#IF
+CHECKSOCKETABLEITEM 4 0 N$头盔位置一IDX S$头盔位置一
+#act
+
+#IF
+CHECKSOCKETABLEITEM 4 1 N$头盔位置二IDX S$头盔位置二
+#act
+
+#IF
+CHECKSOCKETABLEITEM 4 2 N$头盔位置三IDX S$头盔位置三
+#act
+
+#IF
+CHECKSOCKETABLEITEM 4 3 N$头盔位置四IDX S$头盔位置四
+#act
+
+#IF
+CHECKSOCKETABLEITEM 4 4 N$头盔位置五IDX S$头盔位置五
+#act
+
+#if
+CheckContainsText <$str(S$头盔位置一)> 对怪伤害+
+#act
+DEC S$头盔位置一 对怪伤害+
+DEC S$头盔位置一 %
+inc N$怪物额外伤害 <$str(S$头盔位置一)>
+
+#if
+CheckContainsText <$str(S$头盔位置二)> 对怪伤害+
+#act
+DEC S$头盔位置二 对怪伤害+
+DEC S$头盔位置二 %
+inc N$怪物额外伤害 <$str(S$头盔位置二)>
+
+#if
+CheckContainsText <$str(S$头盔位置三)> 对怪伤害+
+#act
+DEC S$头盔位置三 对怪伤害+
+DEC S$头盔位置三 %
+inc N$怪物额外伤害 <$str(S$头盔位置三)>
+
+#if
+CheckContainsText <$str(S$头盔位置四)> 对怪伤害+
+#act
+DEC S$头盔位置四 对怪伤害+
+DEC S$头盔位置四 %
+inc N$怪物额外伤害 <$str(S$头盔位置四)>
+
+#if
+CheckContainsText <$str(S$头盔位置五)> 对怪伤害+
+#act
+DEC S$头盔位置五 对怪伤害+
+DEC S$头盔位置五 %
+inc N$怪物额外伤害 <$str(S$头盔位置五)>
+
+
+#if
+CheckContainsText <$str(S$头盔位置一)> 道术切割+
+#act
+DEC S$头盔位置一 道术切割+
+DEC S$头盔位置一 %
+inc N$道术切割 <$str(S$头盔位置一)>
+
+#if
+CheckContainsText <$str(S$头盔位置二)> 道术切割+
+#act
+DEC S$头盔位置二 道术切割+
+DEC S$头盔位置二 %
+inc N$道术切割 <$str(S$头盔位置二)>
+
+#if
+CheckContainsText <$str(S$头盔位置三)> 道术切割+
+#act
+DEC S$头盔位置三 道术切割+
+DEC S$头盔位置三 %
+inc N$道术切割 <$str(S$头盔位置三)>
+
+#if
+CheckContainsText <$str(S$头盔位置四)> 道术切割+
+#act
+DEC S$头盔位置四 道术切割+
+DEC S$头盔位置四 %
+inc N$道术切割 <$str(S$头盔位置四)>
+
+#if
+CheckContainsText <$str(S$头盔位置五)> 道术切割+
+#act
+DEC S$头盔位置五 道术切割+
+DEC S$头盔位置五 %
+inc N$道术切割 <$str(S$头盔位置五)>
+
+#if
+CheckContainsText <$str(S$头盔位置一)> 魔法切割+
+#act
+DEC S$头盔位置一 魔法切割+
+DEC S$头盔位置一 %
+inc N$魔法切割 <$str(S$头盔位置一)>
+
+#if
+CheckContainsText <$str(S$头盔位置二)> 魔法切割+
+#act
+DEC S$头盔位置二 魔法切割+
+DEC S$头盔位置二 %
+inc N$魔法切割 <$str(S$头盔位置二)>
+
+#if
+CheckContainsText <$str(S$头盔位置三)> 魔法切割+
+#act
+DEC S$头盔位置三 魔法切割+
+DEC S$头盔位置三 %
+inc N$魔法切割 <$str(S$头盔位置三)>
+
+#if
+CheckContainsText <$str(S$头盔位置四)> 魔法切割+
+#act
+DEC S$头盔位置四 魔法切割+
+DEC S$头盔位置四 %
+inc N$魔法切割 <$str(S$头盔位置四)>
+
+#if
+CheckContainsText <$str(S$头盔位置五)> 魔法切割+
+#act
+DEC S$头盔位置五 魔法切割+
+DEC S$头盔位置五 %
+inc N$魔法切割 <$str(S$头盔位置五)>
+
+
+
+;------------------------项链----------------------------------
+#IF
+CHECKSOCKETABLEITEM 3 0 N$项链位置一IDX S$项链位置一
+#act
+
+#IF
+CHECKSOCKETABLEITEM 3 1 N$项链位置二IDX S$项链位置二
+#act
+
+#IF
+CHECKSOCKETABLEITEM 3 2 N$项链位置三IDX S$项链位置三
+#act
+
+#IF
+CHECKSOCKETABLEITEM 3 3 N$项链位置四IDX S$项链位置四
+#act
+
+#IF
+CHECKSOCKETABLEITEM 3 4 N$项链位置五IDX S$项链位置五
+#act
+
+#if
+CheckContainsText <$str(S$项链位置一)> 对怪伤害+
+#act
+DEC S$项链位置一 对怪伤害+
+DEC S$项链位置一 %
+inc N$怪物额外伤害 <$str(S$项链位置一)>
+
+#if
+CheckContainsText <$str(S$项链位置二)> 对怪伤害+
+#act
+DEC S$项链位置二 对怪伤害+
+DEC S$项链位置二 %
+inc N$怪物额外伤害 <$str(S$项链位置二)>
+
+#if
+CheckContainsText <$str(S$项链位置三)> 对怪伤害+
+#act
+DEC S$项链位置三 对怪伤害+
+DEC S$项链位置三 %
+inc N$怪物额外伤害 <$str(S$项链位置三)>
+
+#if
+CheckContainsText <$str(S$项链位置四)> 对怪伤害+
+#act
+DEC S$项链位置四 对怪伤害+
+DEC S$项链位置四 %
+inc N$怪物额外伤害 <$str(S$项链位置四)>
+
+#if
+CheckContainsText <$str(S$项链位置五)> 对怪伤害+
+#act
+DEC S$项链位置五 对怪伤害+
+DEC S$项链位置五 %
+inc N$怪物额外伤害 <$str(S$项链位置五)>
+
+
+#if
+CheckContainsText <$str(S$项链位置一)> 道术切割+
+#act
+DEC S$项链位置一 道术切割+
+DEC S$项链位置一 %
+inc N$道术切割 <$str(S$项链位置一)>
+
+#if
+CheckContainsText <$str(S$项链位置二)> 道术切割+
+#act
+DEC S$项链位置二 道术切割+
+DEC S$项链位置二 %
+inc N$道术切割 <$str(S$项链位置二)>
+
+#if
+CheckContainsText <$str(S$项链位置三)> 道术切割+
+#act
+DEC S$项链位置三 道术切割+
+DEC S$项链位置三 %
+inc N$道术切割 <$str(S$项链位置三)>
+
+#if
+CheckContainsText <$str(S$项链位置四)> 道术切割+
+#act
+DEC S$项链位置四 道术切割+
+DEC S$项链位置四 %
+inc N$道术切割 <$str(S$项链位置四)>
+
+#if
+CheckContainsText <$str(S$项链位置五)> 道术切割+
+#act
+DEC S$项链位置五 道术切割+
+DEC S$项链位置五 %
+inc N$道术切割 <$str(S$项链位置五)>
+
+#if
+CheckContainsText <$str(S$项链位置一)> 魔法切割+
+#act
+DEC S$项链位置一 魔法切割+
+DEC S$项链位置一 %
+inc N$魔法切割 <$str(S$项链位置一)>
+
+#if
+CheckContainsText <$str(S$项链位置二)> 魔法切割+
+#act
+DEC S$项链位置二 魔法切割+
+DEC S$项链位置二 %
+inc N$魔法切割 <$str(S$项链位置二)>
+
+#if
+CheckContainsText <$str(S$项链位置三)> 魔法切割+
+#act
+DEC S$项链位置三 魔法切割+
+DEC S$项链位置三 %
+inc N$魔法切割 <$str(S$项链位置三)>
+
+#if
+CheckContainsText <$str(S$项链位置四)> 魔法切割+
+#act
+DEC S$项链位置四 魔法切割+
+DEC S$项链位置四 %
+inc N$魔法切割 <$str(S$项链位置四)>
+
+#if
+CheckContainsText <$str(S$项链位置五)> 魔法切割+
+#act
+DEC S$项链位置五 魔法切割+
+DEC S$项链位置五 %
+inc N$魔法切割 <$str(S$项链位置五)>
+
+
+;------------------------腰带----------------------------------
+
+#IF
+CHECKSOCKETABLEITEM 10 0 N$腰带位置一IDX S$腰带位置一
+#act
+
+#IF
+CHECKSOCKETABLEITEM 10 1 N$腰带位置二IDX S$腰带位置二
+#act
+
+#IF
+CHECKSOCKETABLEITEM 10 2 N$腰带位置三IDX S$腰带位置三
+#act
+
+#IF
+CHECKSOCKETABLEITEM 10 3 N$腰带位置四IDX S$腰带位置四
+#act
+
+#IF
+CHECKSOCKETABLEITEM 10 4 N$腰带位置五IDX S$腰带位置五
+#act
+
+#if
+CheckContainsText <$str(S$腰带位置一)> 对怪伤害+
+#act
+DEC S$腰带位置一 对怪伤害+
+DEC S$腰带位置一 %
+inc N$怪物额外伤害 <$str(S$腰带位置一)>
+
+#if
+CheckContainsText <$str(S$腰带位置二)> 对怪伤害+
+#act
+DEC S$腰带位置二 对怪伤害+
+DEC S$腰带位置二 %
+inc N$怪物额外伤害 <$str(S$腰带位置二)>
+
+#if
+CheckContainsText <$str(S$腰带位置三)> 对怪伤害+
+#act
+DEC S$腰带位置三 对怪伤害+
+DEC S$腰带位置三 %
+inc N$怪物额外伤害 <$str(S$腰带位置三)>
+
+#if
+CheckContainsText <$str(S$腰带位置四)> 对怪伤害+
+#act
+DEC S$腰带位置四 对怪伤害+
+DEC S$腰带位置四 %
+inc N$怪物额外伤害 <$str(S$腰带位置四)>
+
+#if
+CheckContainsText <$str(S$腰带位置五)> 对怪伤害+
+#act
+DEC S$腰带位置五 对怪伤害+
+DEC S$腰带位置五 %
+inc N$怪物额外伤害 <$str(S$腰带位置五)>
+
+
+#if
+CheckContainsText <$str(S$腰带位置一)> 道术切割+
+#act
+DEC S$腰带位置一 道术切割+
+DEC S$腰带位置一 %
+inc N$道术切割 <$str(S$腰带位置一)>
+
+#if
+CheckContainsText <$str(S$腰带位置二)> 道术切割+
+#act
+DEC S$腰带位置二 道术切割+
+DEC S$腰带位置二 %
+inc N$道术切割 <$str(S$腰带位置二)>
+
+#if
+CheckContainsText <$str(S$腰带位置三)> 道术切割+
+#act
+DEC S$腰带位置三 道术切割+
+DEC S$腰带位置三 %
+inc N$道术切割 <$str(S$腰带位置三)>
+
+#if
+CheckContainsText <$str(S$腰带位置四)> 道术切割+
+#act
+DEC S$腰带位置四 道术切割+
+DEC S$腰带位置四 %
+inc N$道术切割 <$str(S$腰带位置四)>
+
+#if
+CheckContainsText <$str(S$腰带位置五)> 道术切割+
+#act
+DEC S$腰带位置五 道术切割+
+DEC S$腰带位置五 %
+inc N$道术切割 <$str(S$腰带位置五)>
+
+#if
+CheckContainsText <$str(S$腰带位置一)> 魔法切割+
+#act
+DEC S$腰带位置一 魔法切割+
+DEC S$腰带位置一 %
+inc N$魔法切割 <$str(S$腰带位置一)>
+
+#if
+CheckContainsText <$str(S$腰带位置二)> 魔法切割+
+#act
+DEC S$腰带位置二 魔法切割+
+DEC S$腰带位置二 %
+inc N$魔法切割 <$str(S$腰带位置二)>
+
+#if
+CheckContainsText <$str(S$腰带位置三)> 魔法切割+
+#act
+DEC S$腰带位置三 魔法切割+
+DEC S$腰带位置三 %
+inc N$魔法切割 <$str(S$腰带位置三)>
+
+#if
+CheckContainsText <$str(S$腰带位置四)> 魔法切割+
+#act
+DEC S$腰带位置四 魔法切割+
+DEC S$腰带位置四 %
+inc N$魔法切割 <$str(S$腰带位置四)>
+
+#if
+CheckContainsText <$str(S$腰带位置五)> 魔法切割+
+#act
+DEC S$腰带位置五 魔法切割+
+DEC S$腰带位置五 %
+inc N$魔法切割 <$str(S$腰带位置五)>
+
+
+#if
+#act
+#CALL [\游戏登陆\右下显示.txt] @属性显示
+
+
+}

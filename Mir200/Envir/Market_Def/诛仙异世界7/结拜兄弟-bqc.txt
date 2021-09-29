@@ -1,0 +1,122 @@
+[@main]
+
+
+
+#IF
+#ACT
+#SAY
+
+
+<imgex:0:291:292:291:50:127/@agree>\
+
+<imgex:0:293:294:293:140:111|249#解除条件：200RMB点/@确定解除>\ \
+
+<结拜需要佩戴/FCOLOR=150><[兄弟豪杰令]/FCOLOR=150> <注意：/FCOLOR=58><两个人面对面站好，不要乱动/FCOLOR=251>\
+
+<你结拜的兄弟：/FCOLOR=150><[<$STR(T30)>]/FCOLOR=253>\
+
+
+
+
+
+
+
+[@agree]
+#if
+not EQUAL T30
+#ACT
+messagebox 你已经结拜过了！你的兄弟是<$STR(T30)>
+break
+
+
+#if
+checkposedir 1
+#elsesay
+<你们两个面对面站好，别没事溜达！/FCOLOR=150>\
+#elseact
+break
+
+#IF
+#ACT
+GetOppositeHumName S$结拜名
+SendMsg 5 你对面的人物是: <$STR(S$结拜名)>
+
+
+#if
+NOT <$STR(S$结拜名)>.EQUAL T30
+#say
+对方已经结拜过了，不能在结拜了！
+#act
+break
+
+
+
+#if
+NOT checkitemw 兄弟豪杰令 1
+#ACT
+messagebox 请佩戴(兄弟豪杰令)再来找我!
+break
+
+
+
+
+#if
+#elsesay
+<已经发送结婚邀请至对方/FCOLOR=150>
+<请等待对方回应/FCOLOR=150>
+
+
+#if
+#act
+<$STR(S$结拜名)>.MESSAGEBOX 同意和对方结拜？ @同意 @取消
+
+
+[@同意]
+#IF
+#ACT
+GetOppositeHumName S$结拜名
+
+#IF
+equal S$结拜名
+#ACT
+messagebox 请面对面战好！！！
+BREAK
+
+#if
+not <$STR(S$结拜名)>.CHECKITEMW 兄弟豪杰令 1
+#ACT
+messagebox 对方未穿戴指定信物！！！
+<$STR(S$结拜名)>.messagebox 身上未穿戴指定信物！！！
+BREAK
+
+#if
+<$STR(S$结拜名)>.CHECKITEMW 兄弟豪杰令 1
+#act
+<$STR(S$结拜名)>.TAKEW 兄弟豪杰令 1
+<$STR(S$结拜名)>.MOV T30 <$STR(S$结拜名)>
+MOV T30 <$STR(S$结拜名)>
+ADDSKILL 召唤兄弟
+<$STR(S$结拜名)>.ADDSKILL 召唤兄弟
+messagebox 恭喜你和<$STR(t30)>成为生死兄弟！！！
+<$STR(T30)>.messagebox 恭喜你和<$STR(t30)>成为友好基佬二人组！！！
+<$STR(T30)>.goto @main
+
+
+
+
+[@确定解除]
+#IF
+CHECKgamepoint > 199
+#Act
+gamepoint - 200
+<$STR(t30)>.messagebox 你的结拜兄弟已经和你解除结拜！！！
+<$STR(t30)>.MOV T30
+<$STR(t30)>.MOV S$结拜名
+MOV T30
+MOV S$结拜名
+MESSAGEBOX 解除成功，你们两个已经彻底掰了！
+#elseact
+MESSAGEBOX 抱歉：货币不足！
+break
+
+

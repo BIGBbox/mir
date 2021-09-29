@@ -1,0 +1,36 @@
+[@会员属性设置]
+{
+
+#if
+small U17 1
+#act
+break
+
+#if
+#act
+mov N$会员等级 <$STR(U17)>
+ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt 会员数量 会员数量 S$会员_会员数量
+
+#if
+large <$STR(U17)> 0
+not large <$STR(U17)> <$STR(S$会员_会员数量)>
+#act
+ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(N$会员等级)> 按钮文字 S$会员_称号
+ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(N$会员等级)> 攻击 S$会员_攻击
+ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(N$会员等级)> 爆率 S$会员_爆率
+ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(N$会员等级)> 回收加成 S$会员_回收加成
+ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(N$会员等级)> 鞭尸几率 S$会员_鞭尸几率
+
+#if
+#act
+DEPRIVETITLE 青铜会员,白银会员,黄金会员,铂金会员,钻石会员,星耀会员,王者会员,荣耀会员,神圣会员,永恒会员,至尊会员
+
+#if
+not CHECKTITLE <$STR(S$会员_称号)>
+#act
+CONFERTITLE <$STR(S$会员_称号)>
+
+;-------调整人物属性-------
+;inc N$人物攻击 <$STR(S$会员_攻击)>
+;inc N$暴率加成 <$STR(S$会员_爆率)>
+}

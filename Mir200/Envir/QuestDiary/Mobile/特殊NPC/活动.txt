@@ -1,0 +1,237 @@
+;
+
+[@Settings_hd]
+{
+#IF
+#ACT
+GOTO @check_hd
+GOTO @main_hd
+;首页
+[@main_hd]
+<Img|bg=1|move=1|reset=0|width=800|height=530|img=public/bg_npc_11.jpg>
+<Text|x=25.0|y=5.0|color=7|size=22|text=开服活动>
+<Layout|x=800|y=0|width=80|height=80|link=@exit>
+<Button|x=800.0|y=3.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Img|x=136.0|y=49.0|height=475|esc=0|img=public/bg_yyxsz_02.png>
+<Img|x=136.0|y=223.0|width=655|height=3|esc=0|img=public/bg_yyxsz_01.png>
+<ListView|children={101,102,103,4}|x=15.0|y=50.0|width=140|height=470|direction=1>
+    <$STR(S$活动按钮01)>
+    <$STR(S$按钮红点1)>
+    <$STR(S$活动按钮A2)>
+    <$STR(S$按钮红点2)>
+    <$STR(S$活动按钮A3)>
+    <$STR(S$按钮红点3)>
+<ListView|children={201,202,203,204,205,206,207,}|x=200.0|y=60.0|width=540|height=135|direction=2>
+
+    <Img|id=201|x=10.0|y=0.0|width=120|height=130|img=private/dress_ui/bg_zbjm_02.jpg>
+    <Img|id=202|x=10.0|y=0.0|width=120|height=130|img=private/dress_ui/bg_zbjm_02.jpg>
+    <Img|id=203|x=10.0|y=0.0|width=120|height=130|img=private/dress_ui/bg_zbjm_02.jpg>
+    <Img|id=204|x=10.0|y=0.0|width=120|height=130|img=private/dress_ui/bg_zbjm_02.jpg>
+    <Img|id=205|x=10.0|y=0.0|width=120|height=130|img=private/dress_ui/bg_zbjm_02.jpg>
+    <Img|id=206|x=10.0|y=0.0|width=120|height=130|img=private/dress_ui/bg_zbjm_02.jpg>
+    <Img|id=207|x=10.0|y=0.0|width=120|height=130|img=private/dress_ui/bg_zbjm_02.jpg>
+
+<ListView|children={301,302,303,304,305}|x=146.0|y=240.0|width=635|height=275|direction=2>
+
+    <Img|id=301|children={3010,3011,3012,3013,3014,3015}|x=10.0|y=0.0|width=190|height=250|img=public/bg_fubentg_01.png>
+        <Img|id=3010|children={30101}|x=20.0|y=50.0|width=150|height=40|img=public/bg_hhzy_01_1.png>
+            <Text|id=30101|x=10.0|y=5.0|color=149|size=22|text=6元惊喜礼包>
+            <ItemShow|id=3011|x=28.0|y=90.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+            <ItemShow|id=3012|x=100.0|y=90.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+            <ItemShow|id=3013|x=28.0|y=160.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+            <ItemShow|id=3014|x=100.0|y=160.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+            <Button|id=3015|x=40.0|y=230.0|color=255|nimg=public/1900000662.png|text=立即购买|link=@BUY#礼包类别=1>
+    <Img|id=302|children={3020,3021,3022,3023,3024,3025}|x=10.0|y=0.0|width=190|height=250|img=public/bg_fubentg_01.png>
+        <Img|id=3020|children={30201}|x=20.0|y=50.0|width=150|height=40|img=public/bg_hhzy_01_1.png>
+             <Text|id=30201|x=10.0|y=5.0|color=149|size=22|text=12元惊喜礼包>
+             <ItemShow|id=3021|x=28.0|y=90.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+             <ItemShow|id=3022|x=100.0|y=90.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+             <ItemShow|id=3023|x=28.0|y=160.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+             <ItemShow|id=3024|x=100.0|y=160.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+             <Button|id=3025|x=40.0|y=230.0|color=255|nimg=public/1900000662.png|text=立即购买|link=@BUY#礼包类别=2>
+    <Img|id=303|children={3030,3031,3032,3033,3034,3035}|x=10.0|y=0.0|width=190|height=250|img=public/bg_fubentg_01.png>
+        <Img|id=3030|children={30301}|x=20.0|y=50.0|width=150|height=40|img=public/bg_hhzy_01_1.png>
+             <Text|id=30301|x=10.0|y=5.0|color=149|size=22|text=28元惊喜礼包>
+             <ItemShow|id=3031|x=28.0|y=90.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+             <ItemShow|id=3032|x=100.0|y=90.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+             <ItemShow|id=3033|x=28.0|y=160.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+             <ItemShow|id=3034|x=100.0|y=160.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+             <Button|id=3035|x=40.0|y=230.0|color=255|nimg=public/1900000662.png|text=立即购买|link=@BUY#礼包类别=3>
+
+    <Img|id=304|children={3040,3041,3042,3043,3044,3045}|x=10.0|y=0.0|width=190|height=250|img=public/bg_fubentg_01.png>
+        <Img|id=3040|children={30401}|x=20.0|y=50.0|width=150|height=40|img=public/bg_hhzy_01_1.png>
+             <Text|id=30401|x=10.0|y=5.0|color=149|size=22|text=58元惊喜礼包>
+             <ItemShow|id=3041|x=28.0|y=90.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+             <ItemShow|id=3042|x=100.0|y=90.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+             <ItemShow|id=3043|x=28.0|y=160.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+             <ItemShow|id=3044|x=100.0|y=160.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+             <Button|id=3045|x=40.0|y=230.0|color=255|nimg=public/1900000662.png|text=立即购买|link=@BUY#礼包类别=4>
+    <Img|id=305|children={3050,3051,3052,3053,3054,3055}|x=10.0|y=0.0|width=190|height=250|img=public/bg_fubentg_01.png>
+        <Img|id=3050|children={30501}|x=20.0|y=50.0|width=150|height=40|img=public/bg_hhzy_01_1.png>
+             <Text|id=30501|x=10.0|y=5.0|color=149|size=22|text=98元惊喜礼包>
+             <ItemShow|id=3051|x=28.0|y=90.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+             <ItemShow|id=3052|x=100.0|y=90.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+             <ItemShow|id=3053|x=28.0|y=160.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+             <ItemShow|id=3054|x=100.0|y=160.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+             <Button|id=3055|x=40.0|y=230.0|color=255|nimg=public/1900000662.png|text=立即购买|link=@BUY#礼包类别=5>
+
+
+[@装备回收]
+    <Img|bg=1|move=1|reset=0|width=800|height=530|img=public/bg_npc_11.jpg>
+    <Text|x=25.0|y=5.0|color=7|size=22|text=开服活动>
+    <Layout|x=800|y=0|width=80|height=80|link=@exit>
+    <Button|x=800.0|y=3.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+    <Img|x=136.0|y=49.0|height=475|esc=0|img=public/bg_yyxsz_02.png>
+    <ListView|children={101,102,103,4}|x=15.0|y=50.0|width=140|height=470|direction=1>
+    <$STR(S$活动按钮A1)>
+    <$STR(S$按钮红点1)>
+    <$STR(S$活动按钮02)>
+    <$STR(S$按钮红点2)>
+    <$STR(S$活动按钮A3)>
+    <$STR(S$按钮红点3)>
+
+    <Text|x=365.0|y=55.0|color=69|size=22|text=装备回收 >
+    <Text|x=160.0|y=90.0|color=255|size=16|text=活动时间：2020年12月18日0时0分 - 2021年4月7日0时0分 >
+    <Text|x=160.0|y=115.0|color=255|size=16|text=活动说明：活动期间，率先回收极品装备可以获得高额奖励 >
+
+    <Img|x=140.0|y=149.0|width=650|height=375|esc=0|img=public/bg_npc_10.jpg>
+    <Img|x=150.0|y=200.0|width=630|height=3|esc=0|img=public/bg_yyxsz_01.png>
+    <Img|x=350.0|y=163.0|height=36|esc=0|img=public/bg_yyxsz_02.png>
+    <Img|x=500.0|y=163.0|height=36|esc=0|img=public/bg_yyxsz_02.png>
+    <Img|x=640.0|y=163.0|height=36|esc=0|img=public/bg_yyxsz_02.png>
+    <Text|x=210.0|y=165.0|color=149|size=20|text=装备信息>
+    <Text|x=385.0|y=165.0|color=149|size=20|text=首爆奖励>
+    <Text|x=535.0|y=165.0|color=149|size=20|text=剩余名额>
+    <Text|x=690.0|y=165.0|color=149|size=20|text=操作>
+    <ListView|children={1,2,3,40,5}|x=150.0|y=210.0|width=625|height=285|direction=1>
+        <Img|id=1|children={1011,1012,1013,1014,10110}|x=20.0|y=50.0|width=625|height=85|img=public/bg_npcsm_02.png>
+            <ItemShow|id=1011|x=28.0|y=7.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+            <Text|id=10110|x=105.0|y=25.0|color=149|size=22|text=铁1剑>
+            <ItemShow|id=1012|x=235.0|y=7.0|width=60|height=60|itemid=1|itemcount=50|showtips=1|bgtype=1>
+            <Text|id=1013|x=410.0|y=25.0|color=149|size=22|text=1>
+            <Button|id=1014|x=500.0|y=20.0|color=255|nimg=public/1900000662.png|text=回收|link=@huishou#参数=1>
+        <Img|id=2|children={1021,1022,1023,1024,10210},|x=20.0|y=50.0|width=625|height=85|img=public/bg_npcsm_02.png>
+            <ItemShow|id=1021|x=28.0|y=7.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+            <Text|id=10210|x=105.0|y=25.0|color=149|size=22|text=铁2剑>
+            <ItemShow|id=1022|x=235.0|y=7.0|width=60|height=60|itemid=1|itemcount=50|showtips=1|bgtype=1>
+            <Text|id=1023|x=410.0|y=25.0|color=149|size=22|text=1>
+            <Button|id=1024|x=500.0|y=20.0|color=255|nimg=public/1900000662.png|text=回收|link=@huishou#参数=2>
+        <Img|id=3|children={1031,1032,1033,1034,10310}|x=20.0|y=50.0|width=625|height=85|img=public/bg_npcsm_02.png>
+            <ItemShow|id=1031|x=28.0|y=7.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+            <Text|id=10310|x=105.0|y=25.0|color=149|size=22|text=铁3剑>
+            <ItemShow|id=1032|x=235.0|y=7.0|width=60|height=60|itemid=1|itemcount=50|showtips=1|bgtype=1>
+            <Text|id=1033|x=410.0|y=25.0|color=149|size=22|text=1>
+            <Button|id=1034|x=500.0|y=20.0|color=255|nimg=public/1900000662.png|text=回收|link=@huishou#参数=3>
+        <Img|id=40|children={1041,1042,1043,1044,10410}|x=20.0|y=50.0|width=625|height=85|img=public/bg_npcsm_02.png>
+            <ItemShow|id=1041|x=28.0|y=7.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+            <Text|id=10410|x=105.0|y=25.0|color=149|size=22|text=铁4剑>
+            <ItemShow|id=1042|x=235.0|y=7.0|width=60|height=60|itemid=1|itemcount=50|showtips=1|bgtype=1>
+            <Text|id=1043|x=410.0|y=25.0|color=149|size=22|text=1>
+            <Button|id=1044|x=500.0|y=20.0|color=255|nimg=public/1900000662.png|text=回收|link=@huishou#参数=4>
+        <Img|id=5|children={1051,1052,1053,1054,10510}|x=20.0|y=50.0|width=625|height=85|img=public/bg_npcsm_02.png>
+            <ItemShow|id=1051|x=28.0|y=7.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+            <Text|id=10510|x=105.0|y=25.0|color=149|size=22|text=铁5剑>
+            <ItemShow|id=1052|x=235.0|y=7.0|width=60|height=60|itemid=1|itemcount=50|showtips=1|bgtype=1>
+            <Text|id=1053|x=410.0|y=25.0|color=149|size=22|text=1>
+            <Button|id=1054|x=500.0|y=20.0|color=255|nimg=public/1900000662.png|text=回收|link=@huishou#参数=5>
+
+
+[@装备首爆]
+<Img|bg=1|move=1|reset=0|width=800|height=530|img=public/bg_npc_11.jpg>
+<Text|x=25.0|y=5.0|color=7|size=22|text=开服活动>
+<Layout|x=800|y=0|width=80|height=80|link=@exit>
+<Button|x=800.0|y=3.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Img|x=136.0|y=49.0|height=475|esc=0|img=public/bg_yyxsz_02.png>
+<ListView|children={101,102,103,4}|x=15.0|y=50.0|width=140|height=470|direction=1>
+<$STR(S$活动按钮A1)>
+<$STR(S$按钮红点1)>
+<$STR(S$活动按钮A2)>
+<$STR(S$按钮红点2)>
+<$STR(S$活动按钮03)>
+<$STR(S$按钮红点3)>
+    <Text|x=365.0|y=55.0|color=69|size=22|text=装备首爆 >
+    <Text|x=160.0|y=90.0|color=255|size=16|text=活动时间：2020年12月18日0时0分 - 2021年1月27日0时0分 >
+    <Text|x=160.0|y=115.0|color=255|size=16|text=活动说明：活动期间，率先击杀怪物，爆出装备可以获得高额奖励，爆出立即计数 >
+
+    <Img|x=140.0|y=149.0|width=650|height=375|esc=0|img=public/bg_npc_10.jpg>
+    <Img|x=150.0|y=200.0|width=630|height=3|esc=0|img=public/bg_yyxsz_01.png>
+    <Img|x=350.0|y=163.0|height=36|esc=0|img=public/bg_yyxsz_02.png>
+    <Img|x=500.0|y=163.0|height=36|esc=0|img=public/bg_yyxsz_02.png>
+    <Img|x=640.0|y=163.0|height=36|esc=0|img=public/bg_yyxsz_02.png>
+    <Text|x=210.0|y=165.0|color=149|size=20|text=装备信息>
+    <Text|x=385.0|y=165.0|color=149|size=20|text=首爆奖励>
+    <Text|x=535.0|y=165.0|color=149|size=20|text=剩余名额>
+    <Text|x=690.0|y=165.0|color=149|size=20|text=操作>
+    <ListView|children={1,2,3,40,5}|x=150.0|y=210.0|width=625|height=285|direction=1>
+        <Img|id=1|children={1011,1012,1013,1014,10110}|x=20.0|y=50.0|width=625|height=85|img=public/bg_npcsm_02.png>
+            <ItemShow|id=1011|x=28.0|y=7.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+            <Text|id=10110|x=105.0|y=25.0|color=149|size=22|text=铁11剑>
+            <ItemShow|id=1012|x=235.0|y=7.0|width=60|height=60|itemid=1|itemcount=50|showtips=1|bgtype=1>
+            <Text|id=1013|x=410.0|y=25.0|color=149|size=22|text=1>
+            <Text|id=1014|x=517.0|y=25.0|color=79|size=22|text=尚未获得>
+        <Img|id=2|children={1021,1022,1023,1024,10210},|x=20.0|y=50.0|width=625|height=85|img=public/bg_npcsm_02.png>
+            <ItemShow|id=1021|x=28.0|y=7.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+            <Text|id=10210|x=105.0|y=25.0|color=149|size=22|text=铁22剑>
+            <ItemShow|id=1022|x=235.0|y=7.0|width=60|height=60|itemid=1|itemcount=50|showtips=1|bgtype=1>
+            <Text|id=1023|x=410.0|y=25.0|color=149|size=22|text=1>
+            <Text|id=1024|x=517.0|y=25.0|color=79|size=22|text=尚未获得>
+        <Img|id=3|children={1031,1032,1033,1034,10310}|x=20.0|y=50.0|width=625|height=85|img=public/bg_npcsm_02.png>
+            <ItemShow|id=1031|x=28.0|y=7.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+            <Text|id=10310|x=105.0|y=25.0|color=149|size=22|text=铁33剑>
+            <ItemShow|id=1032|x=235.0|y=7.0|width=60|height=60|itemid=1|itemcount=50|showtips=1|bgtype=1>
+            <Text|id=1033|x=410.0|y=25.0|color=149|size=22|text=1>
+            <Text|id=1034|x=517.0|y=25.0|color=79|size=22|text=尚未获得>
+        <Img|id=40|children={1041,1042,1043,1044,10410}|x=20.0|y=50.0|width=625|height=85|img=public/bg_npcsm_02.png>
+            <ItemShow|id=1041|x=28.0|y=7.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+            <Text|id=10410|x=105.0|y=25.0|color=149|size=22|text=铁44剑>
+            <ItemShow|id=1042|x=235.0|y=7.0|width=60|height=60|itemid=1|itemcount=50|showtips=1|bgtype=1>
+            <Text|id=1043|x=410.0|y=25.0|color=149|size=22|text=1>
+            <Text|id=1044|x=517.0|y=25.0|color=79|size=22|text=尚未获得>
+        <Img|id=5|children={1051,1052,1053,1054,10510}|x=20.0|y=50.0|width=625|height=85|img=public/bg_npcsm_02.png>
+            <ItemShow|id=1051|x=28.0|y=7.0|width=60|height=60|itemid=10016|itemcount=1|showtips=1|bgtype=1>
+            <Text|id=10510|x=105.0|y=25.0|color=149|size=22|text=铁55剑>
+            <ItemShow|id=1052|x=235.0|y=7.0|width=60|height=60|itemid=1|itemcount=50|showtips=1|bgtype=1>
+            <Text|id=1053|x=410.0|y=25.0|color=149|size=22|text=1>
+            <Text|id=1054|x=517.0|y=25.0|color=79|size=22|text=尚未获得>
+
+
+[@check_hd]
+#IF
+#ACT
+MOV S$活动按钮01 <Button|id=101|children={11}|x=15.0|y=60.0|color=255|nimg=public/1900000662.png|text=直购礼包|link=@main_hd>
+MOV S$活动按钮02 <Button|id=102|children={21}|x=15.0|y=60.0|color=255|nimg=public/1900000662.png|text=装备回收|link=@装备回收>
+MOV S$活动按钮03 <Button|id=103|children={31}|x=15.0|y=60.0|color=255|nimg=public/1900000662.png|text=装备首爆|link=@装备首爆>
+;灰色按钮
+MOV S$活动按钮A1 <Button|id=101|children={11}|x=15.0|y=60.0|color=12|nimg=public/1900000663.png|text=直购礼包|link=@main_hd>
+MOV S$活动按钮A2 <Button|id=102|children={21}|x=15.0|y=60.0|color=12|nimg=public/1900000663.png|text=装备回收|link=@装备回收>
+MOV S$活动按钮A3 <Button|id=103|children={31}|x=15.0|y=60.0|color=12|nimg=public/1900000663.png|text=装备首爆|link=@装备首爆>
+
+;红点检测
+#IF
+small 1 2
+#ACT
+MOV S$按钮红点1 <Img|id=11|x=98.0|y=0.0|img=public/btn_npcfh_04.png|>
+#IF
+small 2 1
+#ACT
+MOV S$按钮红点1 <Img|id=11|x=98.0|y=0.0|img=0|>
+#IF
+small 1 2
+#ACT
+MOV S$按钮红点2 <Img|id=21|x=98.0|y=0.0|img=public/btn_npcfh_04.png|>
+#IF
+small 2 1
+#ACT
+MOV S$按钮红点2 <Img|id=21|x=98.0|y=0.0|img=0|>
+#IF
+small 1 2
+#ACT
+MOV S$按钮红点3 <Img|id=31|x=98.0|y=0.0|img=public/btn_npcfh_04.png|>
+#IF
+small 2 1
+#ACT
+MOV S$按钮红点3 <Img|id=31|x=98.0|y=0.0|img=0|>
+
+
+
+}

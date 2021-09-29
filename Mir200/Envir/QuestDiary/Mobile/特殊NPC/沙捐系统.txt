@@ -1,0 +1,407 @@
+[@沙捐系统]
+{
+#IF
+check [603] 0
+#act
+set [603] 1
+goto @展开
+#IF
+#ACT
+;面板居中
+mov N$moveX <$SCREENWIDTH>
+mov N$moveY <$SCREENHEIGHT>
+
+mov N$SizeX 800
+mov N$SizeY 483
+dec N$moveX N$SizeX
+dec N$moveY N$SizeY
+div N$moveX 2
+div N$moveY 2
+
+mov N$按钮 N$SizeX
+dec N$按钮 62
+mov N$按钮0 N$SizeX
+dec N$按钮0 72
+GOTO @读取数据
+
+#SAY
+<Img|children=bg1,btn1,btn2,btn3,btn4,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,add1|x=<$STR(N$moveX)>|y=<$STR(N$moveY)>|width=<$STR(N$SizeX)>|height=<$STR(N$SizeY)>|show=0|reset=1|move=1|img=public/ui3/00001.png|bg=1>
+<Img|id=bg1|x=145.0|y=50.0|img=public/haha/f_0001e2.png>
+<Layout|id=3|x=<$STR(N$按钮0)>|y=12.0|width=80|height=80|link=@exit>
+<Button|id=4|x=<$STR(N$按钮)>|y=22.0|nimg=public/ui4/00077.png|pimg=public/ui4/00079.png|link=@exit>
+<RText|id=5|children=5_1|x=74.0|y=60|color=255|size=16|text=<你当前的灵符:/FCOLOR=7> >
+<Text|id=5_1|text=$STM(ITEMCOUNT_灵符)|x=100|y=0|size=16>
+<RText|id=6|x=74.0|y=80|color=255|size=16|text=<最低捐献:/FCOLOR=250><3000个灵符起/FCOLOR=253> <累计捐献达到5000灵符,即可获得属性加成/FCOLOR=228> <排名越高,属性越强!/FCOLOR=67> >
+<RText|id=7|x=85.0|y=100|color=255|size=16|text=<[捐献排名]/FCOLOR=67>        <[玩家名称]/FCOLOR=67>                <[捐献数量]/FCOLOR=67>                      <[属性加成]/FCOLOR=67> >
+<RText|id=8|x=100.0|y=120|children=8_1,8_2,8_3|color=255|size=16|text=<N0.1:/FCOLOR=249>>
+<RText|id=8_1|x=90.0|y=0|color=255|size=16|text=<<$STR(S$玩家1_排版)>/FCOLOR=249> >
+<RText|id=8_2|x=250.0|y=0|color=255|size=16|text=<<$STR(S$捐献数量1_排版)>/FCOLOR=249> >
+<RText|id=8_3|x=334.0|y=0|color=255|size=16|text=<爆率+100% 攻击+15% 血量+15%/FCOLOR=250> >
+;15000 10000 7000
+<RText|id=9|x=100.0|y=140|children=9_1,9_2,9_3|color=255|size=16|text=<N0.2:/FCOLOR=251>>
+<RText|id=9_1|x=90.0|y=0|color=255|size=16|text=<<$STR(S$玩家2_排版)>/FCOLOR=249> >
+<RText|id=9_2|x=250.0|y=0|color=255|size=16|text=<<$STR(S$捐献数量2_排版)>/FCOLOR=249> >
+<RText|id=9_3|x=334.0|y=0|color=255|size=16|text=<爆率+80%   攻击+10% 血量+10%/FCOLOR=250> >
+
+<RText|id=10|x=100.0|y=160|children=10_1,10_2,10_3|color=255|color=255|size=16|text=<N0.3:/FCOLOR=116>>
+<RText|id=10_1|x=90.0|y=0|color=255|size=16|text=<<$STR(S$玩家3_排版)>/FCOLOR=249> >
+<RText|id=10_2|x=250.0|y=0|color=255|size=16|text=<<$STR(S$捐献数量3_排版)>/FCOLOR=249> >
+<RText|id=10_3|x=334.0|y=0|color=255|size=16|text=<爆率+50%   攻击+7%   血量+7%  /FCOLOR=250>>
+
+<RText|id=11|x=74.0|y=200|color=255|size=16|text=<凡是累计捐献达到3000灵符,即可获得以下属性/FCOLOR=250>         <你当前累计捐献金额:/FCOLOR=250> <$human(沙城捐献)>>
+<RText|id=add1|x=74.0|y=220|color=255|size=16|text=<第一名捐献需大于15000灵符。第二名需大于10000灵符，第三名大于7000灵符/FCOLOR=146>>
+<RText|id=12|x=74.0|y=240|color=255|size=16|text=<第4-10名玩家可获得【爆率+40% 攻击+6% 血量+6%】/FCOLOR=146>>
+<RText|id=13|x=74.0|y=260|color=255|size=16|text=<从第11名开始所有捐献玩家【爆率+30% 攻击+5% 血量+5%】/FCOLOR=146>>
+<RText|id=14|x=74.0|y=280|color=255|size=16|text=<捐献的侠士将+60%麻痹怪物几率！>>
+<RText|id=15|children=15_1|x=74.0|y=300|color=255|size=16|text=<每月10号，25号捐献数据会清零,请玩家们理性捐献！/FCOLOR=249>>
+<RText|id=18|x=74.0|y=320|color=250|size=16|text=<注：首次清除需开区10日后否则不清除捐献。/FCOLOR=251>>
+;
+
+<RText|id=17|x=80.0|y=370|color=255|size=16|text=<你的当前排名：/FCOLOR=249><<$STR(S$你的当前排名)>/FCOLOR=250>>
+<RText|id=16|x=330.0|y=370|color=255|size=16|text=<点击开始进行捐献/@@inputinteger4>>
+<Button|id=btn1|children=btn1_text|x=560|y=370.0|text=英雄的黎明|size=16|nimg=public/button/00220.png|link=@进入捐献地图>
+<RText|id=btn1_text|x=-10.0|y=40|color=255|size=16|text=<捐献第一名可进入/FCOLOR=250>>
+
+[@进入捐献地图]
+#IF
+EQUAL <$STR(N$捐献属性爆率)> 100
+#act
+MAPMOVE 英雄的黎明
+GuildNoticeMsg 251 66 系统提示：玩家[%s]进入了【英雄的黎明】！！！
+#ELSEACT
+MESSAGEBOX 你捐献没有达到第一名，无法进入！
+BREAK
+
+[@读取数据]
+#if
+#ACT
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 0 S$玩家名字1 N$捐献数量1
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 1 S$玩家名字2 N$捐献数量2
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 2 S$玩家名字3 N$捐献数量3
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 3 S$玩家名字4 N$捐献数量4
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 4 S$玩家名字5 N$捐献数量5
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 5 S$玩家名字6 N$捐献数量6
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 6 S$玩家名字7 N$捐献数量7
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 7 S$玩家名字8 N$捐献数量8
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 8 S$玩家名字9 N$捐献数量9
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 9 S$玩家名字10 N$捐献数量10
+
+
+mov S$你的当前排名 未上榜
+;SENDMSG 0 排名 <$STR(S$玩家名字2)>
+#IF
+CHECKTEXTLIST ..\QuestDiary\捐献系统\捐献名单.txt <$USERNAME>
+#ACT
+mov S$你的当前排名 已上榜
+
+#if
+equal  S$玩家名字1 <$USERNAME>
+#act
+mov S$你的当前排名 第1名
+#if
+equal  S$玩家名字2 <$USERNAME>
+#act
+mov S$你的当前排名 第2名
+
+#if
+equal  S$玩家名字3 <$USERNAME>
+#act
+mov S$你的当前排名 第3名
+#if
+equal  S$玩家名字4 <$USERNAME>
+#act
+mov S$你的当前排名 第4名
+#if
+equal  S$玩家名字5 <$USERNAME>
+#act
+mov S$你的当前排名 第5名
+#if
+equal  S$玩家名字6 <$USERNAME>
+#act
+mov S$你的当前排名 第6名
+#if
+equal  S$玩家名字7 <$USERNAME>
+#act
+mov S$你的当前排名 第7名
+#if
+equal  S$玩家名字8 <$USERNAME>
+#act
+mov S$你的当前排名 第8名
+#if
+equal  S$玩家名字9 <$USERNAME>
+#act
+mov S$你的当前排名 第9名
+#if
+equal  S$玩家名字10 <$USERNAME>
+#act
+mov S$你的当前排名 第10名
+
+#IF
+LARGE N$捐献数量1 29
+#ACT
+MOV S$玩家1_排版 <$STR(S$玩家名字1)>
+MOV S$捐献数量1_排版 <$STR(N$捐献数量1)>
+#ELSEACT
+MOV S$玩家1_排版 暂无
+MOV S$捐献数量1_排版 暂无
+
+#IF
+LARGE N$捐献数量2 29
+#ACT
+MOV S$玩家2_排版 <$STR(S$玩家名字2)>
+MOV S$捐献数量2_排版 <$STR(N$捐献数量2)>
+#ELSEACT
+MOV S$玩家2_排版 暂无
+MOV S$捐献数量2_排版 暂无
+
+#IF
+LARGE N$捐献数量3 29
+#ACT
+MOV S$玩家3_排版 <$STR(S$玩家名字3)>
+MOV S$捐献数量3_排版 <$STR(N$捐献数量3)>
+#ELSEACT
+MOV S$玩家3_排版 暂无
+MOV S$捐献数量3_排版 暂无
+
+
+[@刷新]
+#IF
+#ACT
+GOTO @捐献_字符串处理
+
+[@InPutInteger4]
+#if
+LARGE G8 0
+#ACT
+messagebox 当前不是正式开区，无法捐献！！
+break
+
+;<$GAMEPOINT>
+#IF
+#ACT
+MOV N$捐献_输入数量  <$STR(N4)>
+MOV N$当前升级_需要灵符  <$STR(N$捐献_输入数量)>
+MOV N$人物财产 <$GAMEGIRD>
+;GetStringPos ..\QuestDiary\捐献系统\捐献数据.txt  [<$USERNAME>]
+;MOV N$捐献判断 <$STR(N0)>
+
+
+#IF
+SMALL N$人物财产 <$STR(N$捐献_输入数量)>
+#ACT
+MESsAGEBOX 当前灵符数量不足【<$STR(N$捐献_输入数量)>】...
+break
+
+#IF
+SMALL N$人物财产 <$STR(N$捐献_输入数量)>
+#ACT
+MESsAGEBOX 当前灵符数量不足【<$STR(N$捐献_输入数量)>】...
+break
+
+
+#IF
+NOT CHECKTEXTLIST ..\QuestDiary\捐献系统\捐献名单.txt <$USERNAME>
+SMALL N$捐献_输入数量 3000
+#ACT
+MESsAGEBOX 首次捐献必须大于3000灵符！
+BREAK
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\捐献系统\捐献名单.txt <$USERNAME>
+;SMALL N$人物财产 <$STR(N$捐献_输入数量)>
+#ACT
+;SENDMSG 0 捐献过！
+GAMEGIRD - <$STR(N$捐献_输入数量)>
+INC G9 <$STR(N$捐献_输入数量)>
+SET [795] 1
+;ADDSKILL 十步一杀
+;SKILLLEVEL 十步一杀 = 3
+CALCVAR HUMAN 沙城捐献 + <$STR(N$捐献_输入数量)>
+savevar human 沙城捐献
+
+WriteConfigFileItem ..\QuestDiary\捐献系统\捐献数据.txt <$USERNAME> 沙城捐献 <$HUMAN(沙城捐献)>
+goto @捐献排名数据
+messagebox 捐献成功!
+
+#IF
+NOT CHECKTEXTLIST ..\QuestDiary\捐献系统\捐献名单.txt <$USERNAME>
+#ACT
+;SENDMSG 0 还没捐献过！
+
+GAMEGIRD - <$STR(N$捐献_输入数量)>
+INC G9 <$STR(N$捐献_输入数量)>
+SET [795] 1
+;ADDSKILL 十步一杀
+;SKILLLEVEL 十步一杀 = 3
+CALCVAR HUMAN 沙城捐献 + <$STR(N$捐献_输入数量)>
+savevar human 沙城捐献
+WriteConfigFileItem ..\QuestDiary\捐献系统\捐献数据.txt <$USERNAME> 沙城捐献 <$HUMAN(沙城捐献)>
+AddTextListEx ..\QuestDiary\捐献系统\捐献名单.txt <$USERNAME>
+goto @捐献排名数据
+
+messagebox 捐献成功!
+
+#IF
+#ACT
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 0 S$玩家名字1 N$捐献数量1
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 1 S$玩家名字2 N$捐献数量2
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 2 S$玩家名字3 N$捐献数量3
+goto @沙捐系统
+
+#or
+EQUAL S$玩家名字1 <$USERNAME>
+EQUAL S$玩家名字2 <$USERNAME>
+EQUAL S$玩家名字3 <$USERNAME>
+#ACT
+SENDMOVEMSG 0 249 0 150 1 玩家[<$USERNAME>],强势打入镇派群侠沙城捐献排行榜 15 10 10
+
+#if
+#act
+GMEXECUTE StartQuest @捐献系统_属性_重新分配
+
+[@捐献排名数据]
+#if
+#act
+DelText ..\QuestDiary\捐献系统\捐献排名.txt 9 0
+DelText ..\QuestDiary\捐献系统\捐献排名.txt 8 0
+DelText ..\QuestDiary\捐献系统\捐献排名.txt 7 0
+DelText ..\QuestDiary\捐献系统\捐献排名.txt 6 0
+DelText ..\QuestDiary\捐献系统\捐献排名.txt 5 0
+DelText ..\QuestDiary\捐献系统\捐献排名.txt 4 0
+DelText ..\QuestDiary\捐献系统\捐献排名.txt 3 0
+DelText ..\QuestDiary\捐献系统\捐献排名.txt 2 0
+DelText ..\QuestDiary\捐献系统\捐献排名.txt 1 0
+DelText ..\QuestDiary\捐献系统\捐献排名.txt 0 0
+
+
+SortHumVar 沙城捐献 S$玩家名字 N$捐献数额 0 1 10
+
+#if
+#act
+mov N$名次 0
+mov N$编号 1
+goto @捐献排名for
+
+
+[@捐献排名for]
+#if
+LARGE N$名次 10
+#act
+break
+
+#if
+#act
+mov S$玩家名字数据 <$STR(S$玩家名字<$STR(N$编号)>)>
+mov N$捐献数额数据 <$STR(N$捐献数额<$STR(N$编号)>)>
+;SENDMSG 6 名次:<$STR(N$名次)>
+;SENDMSG 0 玩家:<$STR(S$玩家名字数据)>..<$STR(N$编号)>,捐献<$STR(N$捐献数额数据)>
+
+
+#if
+not EQUAL S$玩家名字数据
+LARGE N$捐献数额数据 14999
+EQUAL N$名次 0
+#act
+AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 0
+inc N$编号 1
+;break
+
+#if
+not EQUAL S$玩家名字数据
+LARGE N$捐献数额数据 9999
+EQUAL N$名次 1
+#act
+AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 1
+inc N$编号 1
+;break
+
+#if
+not EQUAL S$玩家名字数据
+LARGE N$捐献数额数据 6999
+EQUAL N$名次 2
+#act
+AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 2
+inc N$编号 1
+;break
+
+#if
+not EQUAL S$玩家名字数据
+LARGE N$捐献数额数据 4999
+EQUAL N$名次 3
+#act
+AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 3
+inc N$编号 1
+;break
+
+#if
+not EQUAL S$玩家名字数据
+LARGE N$捐献数额数据 4999
+EQUAL N$名次 4
+#act
+AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 4
+inc N$编号 1
+;break
+
+#if
+not EQUAL S$玩家名字数据
+LARGE N$捐献数额数据 4999
+EQUAL N$名次 5
+#act
+AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 5
+inc N$编号 1
+;break
+
+
+#if
+not EQUAL S$玩家名字数据
+LARGE N$捐献数额数据 4999
+EQUAL N$名次 6
+#act
+AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 6
+inc N$编号 1
+;break
+
+
+#if
+not EQUAL S$玩家名字数据
+LARGE N$捐献数额数据 4999
+EQUAL N$名次 7
+#act
+AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 7
+inc N$编号 1
+;break
+
+
+#if
+not EQUAL S$玩家名字数据
+LARGE N$捐献数额数据 4999
+EQUAL N$名次 8
+#act
+AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 8
+inc N$编号 1
+;break
+
+
+#if
+not EQUAL S$玩家名字数据
+LARGE N$捐献数额数据 4999
+EQUAL N$名次 9
+#act
+AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 9
+inc N$编号 1
+;break
+
+
+#if
+large N$编号 10
+#act
+break
+
+#if
+small N$名次 10
+#act
+inc N$名次 1
+goto @捐献排名for
+
+}
+

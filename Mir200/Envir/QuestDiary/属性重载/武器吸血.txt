@@ -1,0 +1,171 @@
+[@武器吸血]
+{
+
+#IF
+#ACT
+mov N$攻击吸血 0
+
+
+#IF
+CHECKTITLE 狂暴
+#ACT
+INC N$攻击吸血 1
+
+#IF
+CHECKTITLE 沙城捐献
+#ACT
+INC N$攻击吸血 2
+
+
+#IF
+CHECKTITLE 至尊会员
+#ACT
+INC N$攻击吸血 2
+
+
+#IF
+equal U23 1
+#ACT
+INC N$攻击吸血 1
+
+#IF
+equal U23 2
+#ACT
+INC N$攻击吸血 2
+
+#IF
+equal U23 3
+#ACT
+INC N$攻击吸血 3
+
+#IF
+equal U23 4
+#ACT
+INC N$攻击吸血 4
+
+#IF
+equal U23 5
+#ACT
+INC N$攻击吸血 5
+
+#IF
+equal U23 6
+#ACT
+INC N$攻击吸血 6
+
+#IF
+equal U23 7
+#ACT
+INC N$攻击吸血 7
+
+#IF
+equal U23 8
+#ACT
+INC N$攻击吸血 8
+
+#IF
+equal U23 9
+#ACT
+INC N$攻击吸血 9
+
+
+
+
+#if
+check [7] 1
+#act
+INC N$攻击吸血 3
+
+#if
+check [264] 1
+#act
+INC N$攻击吸血 1
+
+#IF
+CHECK [269] 1
+#ACT
+inc N$攻击吸血 1
+
+#IF
+CHECK [275] 1
+#ACT
+inc N$攻击吸血 1
+
+#IF
+CHECK [278] 1
+#ACT
+inc N$攻击吸血 1
+
+#IF
+CHECKSOCKETABLEITEM 1 0 N$武器位置一IDX S$武器位置一
+#act
+
+#IF
+CHECKSOCKETABLEITEM 1 1 N$武器位置二IDX S$武器位置二
+#act
+
+#IF
+CHECKSOCKETABLEITEM 1 2 N$武器位置三IDX S$武器位置三
+#act
+
+#IF
+CHECKSOCKETABLEITEM 1 3 N$武器位置四IDX S$武器位置四
+#act
+
+#IF
+CHECKSOCKETABLEITEM 1 4 N$武器位置五IDX S$武器位置五
+#act
+
+
+#if
+CheckContainsText <$STR(S$武器位置一)> 吸血+
+#act
+DEC S$武器位置一 吸血+
+DEC S$武器位置一 %
+inc N$攻击吸血 <$str(S$武器位置一)>
+
+#if
+CheckContainsText <$STR(S$武器位置二)> 吸血+
+#act
+DEC S$武器位置二 吸血+
+DEC S$武器位置二 %
+inc N$攻击吸血 <$str(S$武器位置二)>
+
+#if
+CheckContainsText <$STR(S$武器位置三)> 吸血+
+#act
+DEC S$武器位置三 吸血+
+DEC S$武器位置三 %
+inc N$攻击吸血 <$str(S$武器位置三)>
+
+#if
+CheckContainsText <$STR(S$武器位置四)> 吸血+
+#act
+DEC S$武器位置四 吸血+
+DEC S$武器位置四 %
+inc N$攻击吸血 <$str(S$武器位置四)>
+
+#if
+CheckContainsText <$STR(S$武器位置五)> 吸血+
+#act
+DEC S$武器位置五 吸血+
+DEC S$武器位置五 %
+inc N$攻击吸血 <$str(S$武器位置五)>
+
+
+#IF
+large <$STR(N$攻击吸血)> 0
+#ACT
+SENDMSG 5 〖提示〗人物当前吸血比例：<$STR(N$攻击吸血)>%！
+mul N$攻击吸血 100
+ChangeModeEx 20 65535 100 <$STR(N$攻击吸血)>
+ChangeModeEx 21 65535 100 <$STR(N$攻击吸血)>
+
+
+#if
+#act
+#CALL [\游戏登陆\右下显示.txt] @属性显示
+
+
+}
+

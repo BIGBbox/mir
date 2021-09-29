@@ -1,0 +1,74 @@
+[@捐献属性]
+{
+
+#IF
+#ACT
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 0 S$玩家名字1 N$捐献数量1
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 1 S$玩家名字2 N$捐献数量2
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 2 S$玩家名字3 N$捐献数量3
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 3 S$玩家名字4 N$捐献数量4
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 4 S$玩家名字5 N$捐献数量5
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 5 S$玩家名字6 N$捐献数量6
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 6 S$玩家名字7 N$捐献数量7
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 7 S$玩家名字8 N$捐献数量8
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 8 S$玩家名字9 N$捐献数量9
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 9 S$玩家名字10 N$捐献数量10
+
+
+#IF
+EQUAL S$玩家名字1 <$USERNAME>
+#ACT
+MOV N$捐献属性爆率 100
+MOV N$捐献属性攻击 15
+MOV N$捐献属性生命 15
+;MOV N$捐献属性攻速 20
+BREAK
+
+#IF
+EQUAL S$玩家名字2 <$USERNAME>
+#ACT
+MOV N$捐献属性爆率 80
+MOV N$捐献属性攻击 10
+MOV N$捐献属性生命 10
+;MOV N$捐献属性攻速 15
+BREAK
+
+#IF
+EQUAL S$玩家名字3 <$USERNAME>
+#ACT
+MOV N$捐献属性爆率 50
+MOV N$捐献属性攻击 7
+MOV N$捐献属性生命 7
+;MOV N$捐献属性攻速 10
+BREAK
+
+#or
+;4-10名玩家获得的属性
+EQUAL S$玩家名字4 <$USERNAME>
+EQUAL S$玩家名字5 <$USERNAME>
+EQUAL S$玩家名字6 <$USERNAME>
+EQUAL S$玩家名字7 <$USERNAME>
+EQUAL S$玩家名字8 <$USERNAME>
+EQUAL S$玩家名字9 <$USERNAME>
+EQUAL S$玩家名字10 <$USERNAME>
+#ACT
+MOV N$捐献属性爆率 40
+MOV N$捐献属性攻击 6
+MOV N$捐献属性生命 6
+;MOV N$捐献属性攻速 8
+BREAK
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\捐献系统\捐献名单.txt <$USERNAME>
+#ACT
+MOV N$捐献属性爆率 30
+MOV N$捐献属性攻击 5
+MOV N$捐献属性生命 5
+;MOV N$捐献属性攻速 5
+BREAK
+
+
+
+}
+
+

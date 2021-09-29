@@ -1,0 +1,500 @@
+[@MAIN]
+#if
+checkcontainstext <$SERVERNAME> 测试
+#ACT
+messagebox 提现失败！当前还是测试区,等正式区后方可提现！
+break
+
+#IF
+#ACT
+;CloseBigDialogBox
+
+#IF
+#ACT
+GetStringPos ..\..\..\..\技术QQ198605888\提现\提现内容.txt ########结束########
+Mov N$回收总数 <$STR(N0)>
+DEC N$回收总数 1
+MOV <$STR(N$索引)> <$STR(N$回收总数)>
+DIV <$STR(N$索引)> 8
+INC <$STR(N$索引)> 1
+MOV N$数据条数 0
+MOV N4 1
+
+
+
+
+
+#IF
+CheckLevelEx > 0
+#ACT
+CreateFile ..\QuestDiary\提现文件\申请提现列表.txt
+
+
+#IF
+NOT CHECKTEXTLIST ..\..\..\..\技术QQ198605888\提现\提现内容.txt ########结束########
+#ACT
+AddTextListEx ..\..\..\..\技术QQ198605888\提现\提现内容.txt ########结束########
+
+#IF
+Equal T21
+#ACT
+Mov S$交易帐号 <设置账号/@@InPutString20(请确保输入正确的支付宝帐号！只能是手机号码！否则不予打款！)>
+
+#IF
+NOT Equal T21
+#ACT
+MOV S$交易帐号 <$STR(T21)>
+Mov S$交易帐号 <修改账号|账户：<$STR(T21)>/@@InPutString20(请确保输入正确的支付宝帐号！只能是手机号码！否则不予打款！)>
+
+
+
+#IF
+Equal T22
+#ACT
+Mov S$交易名字 <设置名字/@@InPutString21(请输入你的提现姓名，请确保输入的为真实姓名！否则不予打款！)>
+
+
+#IF
+NOT Equal T22
+#ACT
+Mov S$交易名字 <修改名字|账户名：<$STR(T22)>/@@InPutString21(请输入你的真实姓名，请确保输入的准确性！否则不予打款！)>
+
+
+#IF
+#ACT
+GOTO @获取提现数据
+
+[@绘制商人界面]
+#IF
+#SAY
+<Img|width=620|height=300|img=public/bg_npc_01.png|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=45|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$游戏显示1)><$STR(S$交易状态1))>>
+<Text|a=0|x=32|y=65|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$游戏显示2)><$STR(S$交易状态2))>>
+<Text|a=0|x=32|y=85|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$游戏显示3)><$STR(S$交易状态3))>>
+<Text|a=0|x=32|y=105|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$游戏显示4)><$STR(S$交易状态4))>>
+<Text|a=0|x=32|y=125|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$游戏显示5)><$STR(S$交易状态5))>>
+<Text|a=0|x=32|y=145|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$游戏显示6)><$STR(S$交易状态6))>>
+<Text|a=0|x=32|y=165|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$游戏显示7)><$STR(S$交易状态7))>>
+<Text|a=0|x=32|y=185|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$游戏显示8)><$STR(S$交易状态8))>>
+<Text|a=0|x=32|y=205|color=255|tips=|tipsx=10|tipsy=80|size=18|text=         <$STR(S$交易帐号)>                           <$STR(S$交易名字))>\>
+<Button|a=0|x=132|y=245|nimg=PUBLIC/1900000612.png|pimg=PUBLIC/1900000611.png|tips={回收RMB1：10收取10%手续费.最低500点起提/FCOLOR=103}|tipsx=100|tipsy=80|size=18|color=249|text=提现RMB点|link=@@INPUTINTEGER5(请输入提现RMB点数量！最低不能少于500RMB点)>
+<Button|a=0|x=282|y=245|nimg=PUBLIC/1900000612.png|pimg=PUBLIC/1900000611.png|tips=|tipsx=10|tipsy=80|size=18|color=249|text=提现上一页|link=@提现上一页>
+<Button|a=0|x=432|y=245|nimg=PUBLIC/1900000612.png|pimg=PUBLIC/1900000611.png|tips=|tipsx=10|tipsy=80|size=18|color=249|text=提现下一页|link=@提现下一页>
+
+[@InputString20]
+#IF
+CHECKTEXTLIST ..\..\..\DBServer\FilterNewHumanNameString.txt <$STR(S20)>
+#ACT
+MessageBox 【错误】：输入的名字包含非法字符！
+Break
+
+
+#IF
+Equal S20
+#ACT
+Break
+#IF
+NOT Equal S20
+#ACT
+MessageBox 请确认你输入的是支付宝账号是手机号码！否则不予提现！\你填写的支付宝帐号为：<$STR(S20)> @RMB点DHS_ALIPAYID @RMB点DHS_ALIPAYIDNO
+Break
+
+
+[@RMB点DHS_ALIPAYID]
+#IF
+NOT Equal S20
+#ACT
+Mov T21 <$STR(S20)>
+MOV S$交易帐号 <$STR(T21)>
+DEC S$交易帐号 8 11
+Mov S$交易帐号 <修改账号|<$STR(S$交易帐号)>/@@InPutString3(请确保输入正确的支付宝帐号！只能是手机号码！否则不予打款！)>
+MessageBox 提示：交易账号已更新
+GOTO @绘制商人界面
+Break
+
+
+[@RMB点DHS_ALIPAYIDNO]
+#IF
+CheckLevelEx > 0
+#ACT
+Break
+
+
+
+[@InPutString21]
+#IF
+CHECKTEXTLIST ..\..\..\DBServer\FilterNewHumanNameString.txt <$STR(S21)>
+#ACT
+MessageBox 【错误】：输入的名字包含非法字符！
+Break
+#OR
+CheckContainsText <$STR(S25)> @
+CheckContainsText <$STR(S25)> (
+CheckContainsText <$STR(S25)> )
+CheckContainsText <$STR(S25)> [
+CheckContainsText <$STR(S25)> ]
+CheckContainsText <$STR(S25)> {
+CheckContainsText <$STR(S25)> }
+CheckContainsText <$STR(S25)> *
+CheckContainsText <$STR(S25)> /
+CheckContainsText <$STR(S25)> \
+CheckContainsText <$STR(S25)> $
+CheckContainsText <$STR(S25)> &
+#ACT
+MessageBox 输入内容包含@　￥　$　&　(　)　[　]　{　}　*　/　\，无法提交！！！
+Break
+
+
+#IF
+Equal S21
+#ACT
+Break
+
+
+#IF
+NOT Equal S21
+#ACT
+MessageBox 请确保你输入的支付宝姓名为真实姓名,否则不予打款！\你填写的支付宝名字为：<$STR(S21)> @RMB点DHS_ALIPAYNAME @RMB点DHS_ALIPAYNAMENO
+Break
+
+
+
+[@RMB点DHS_ALIPAYNAME]
+#IF
+NOT Equal S21
+#ACT
+Mov T22 <$STR(S21)>
+Mov S$交易名字 <修改名字|<$STR(T22)>/@@InPutString4(请输入你的真实姓名，请确保输入的准确性！否则不予打款！)>
+MessageBox 提示：交易名字已更新
+GOTO @绘制商人界面
+Break
+
+
+[@RMB点DHS_ALIPAYNAMENO]
+#IF
+CheckLevelEx > 0
+#ACT
+Break
+[@InPutInteger5]
+
+#IF
+checklevelex < 79
+#ACT
+MessageBox 等级80级才能提现
+BREAK
+
+#IF
+Equal T21
+#ACT
+MESSAGEBOX 提示：请输入你的支付宝账号！
+Break
+
+
+#IF
+Equal T22
+#ACT
+MESSAGEBOX 提示：请输入你的支付宝账号姓名(请输入真实姓名)否则可能会导致无法收到转账！
+Break
+#OR
+CheckContainsText <$STR(S22)> @
+CheckContainsText <$STR(S22)> (
+CheckContainsText <$STR(S22)> )
+CheckContainsText <$STR(S22)> [
+CheckContainsText <$STR(S22)> ]
+CheckContainsText <$STR(S22)> {
+CheckContainsText <$STR(S22)> }
+CheckContainsText <$STR(S22)> *
+CheckContainsText <$STR(S22)> /
+CheckContainsText <$STR(S22)> \
+CheckContainsText <$STR(S22)> $
+CheckContainsText <$STR(S22)> &
+#ACT
+MessageBox 输入内容包含@　￥　$　&　(　)　[　]　{　}　*　/　\，无法提交！！！
+Break
+
+
+#IF
+Small N5 500
+#ACT
+MessageBox 提示：交易RMB不能低于500。
+Break
+
+
+#IF
+Equal N5
+#ACT
+Break
+
+
+#OR
+Equal T21
+Equal T22
+#ACT
+MessageBox 请先正确填写支付宝的账号和收款人！！！！
+Break
+
+#IF
+NOT CHECKGAMEPOINT < <$STR(N5)>
+
+#ACT
+Mov S$申请时间 <$YEAR>年<$MONTH>月<$DAY>日<$HOUR>∶<$MINUTE>∶<$SECOND>
+Mov N$打款金额 <$STR(N5)>
+DIV N$打款金额 10
+Mov N$打款金额1 <$STR(N$打款金额)>
+Div N$打款金额1 10
+Dec N$打款金额 <$STR(N$打款金额1)>
+Mov S$提现玩家 <$USERNAME>
+Mov S$收款帐号EE 支付宝：<$STR(T21)>
+Mov S$收款名字EE 名字：<$STR(T22)>
+Mov S$打款金额 <$STR(N5)>
+AddTextListEx ..\QuestDiary\提现文件\申请提现列表.txt <$USERNAME>=<$STR(T21)>=<$STR(T22)>=<$STR(N$打款金额)>=<$STR(N5)>=<$STR(S$申请时间)>
+AddTextListEx ..\..\..\..\技术QQ198605888\提现\打款内容.txt <$STR(S$申请时间)>,区:<$SERVERNAME>,玩家:<$STR(S$提现玩家)>,<$STR(S$收款名字EE)>,<$STR(S$收款帐号EE)>,<$STR(N$打款金额)> 0
+;SetStringBlank S$提现玩家 16 0
+;SetStringBlank S$提现玩家 16 0
+SetStringBlank S$提现玩家 16 0
+;SetStringBlank S$收款帐号EE 26 1
+;SetStringBlank S$收款帐号EE 26 1
+SetStringBlank S$收款帐号EE 26 1
+;SetStringBlank S$收款名字EE 26 1
+;SetStringBlank S$收款名字EE 26 1
+SetStringBlank S$收款名字EE 26 1
+;SetStringBlank S$打款金额 22 0
+;SetStringBlank S$打款金额 22 0
+SetStringBlank S$打款金额 22 0
+AddTextListEx ..\..\..\..\技术QQ198605888\提现\提现内容.txt <$STR(S$申请时间)><$STR(S$提现玩家)><$STR(S$打款金额)> 0
+AddTextListEx ..\..\..\..\技术QQ198605888\提现\交易状态.txt <$STR(S$申请时间)><$STR(S$提现玩家)><$STR(S$打款金额)> 0
+GAMEPOINT - <$STR(N5)>
+INC U48 <$STR(N$打款金额)>
+MessageBox 交易操作成功！将24小时内为你打款，请留意你的支付宝！\<$STR(S$打款金额)>
+GOTO @main
+#elseact
+MessageBox 你的RMB不足！！！
+Break
+
+
+
+[@提现上一页]
+#IF
+EQUAL N4 1
+#ACT
+SENDMSG 7 已经是第一页了
+#ELSEACT
+DEC N4 1
+DEC N$数据条数 16
+GOTO @获取提现数据
+
+
+[@提现下一页]
+#IF
+EQUAL <$STR(N$索引)> <$STR(N4)>
+#ACT
+SENDMSG 7 已经是最后一页了
+#ELSEACT
+INC N4 1
+GOTO @获取提现数据
+
+
+[@获取提现数据]
+#IF
+CheckLevelEx > 0
+#ACT
+Mov <$STR(S$提现数据内容)>
+Mov S$提现状态Temp
+Mov S$提现审核Temp
+MOV <$STR(S$交易状态1)>
+MOV <$STR(S$交易状态2)>
+MOV <$STR(S$交易状态3)>
+MOV <$STR(S$交易状态4)>
+MOV <$STR(S$交易状态5)>
+MOV <$STR(S$交易状态6)>
+MOV <$STR(S$交易状态7)>
+MOV <$STR(S$交易状态8)>
+MOV <$STR(S$游戏显示1)>
+MOV <$STR(S$游戏显示2)>
+MOV <$STR(S$游戏显示3)>
+MOV <$STR(S$游戏显示4)>
+MOV <$STR(S$游戏显示5)>
+MOV <$STR(S$游戏显示6)>
+MOV <$STR(S$游戏显示7)>
+MOV <$STR(S$游戏显示8)>
+
+
+#IF
+#ACT
+MOV S$提现金额
+GetListString ..\..\..\..\技术QQ198605888\提现\提现内容.txt <$STR(N$数据条数)> <$STR(S$提现数据内容)>
+INC <$STR(N$数据条数)> 1
+
+#IF
+NOT EQUAL <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)> ########结束########
+#ACT
+MOV <$STR(S$游戏显示1)> <$STR(S$提现数据内容)>
+MOV <$STR(S$交易状态1)> 审核中…
+
+#IF
+NOT CHECKTEXTLIST ..\..\..\..\技术QQ198605888\提现\交易状态.txt <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)> ########结束########
+#ACT
+MOV <$STR(S$交易状态1)> 交易成功
+
+#IF
+#ACT
+MOV S$提现金额
+GetListString ..\..\..\..\技术QQ198605888\提现\提现内容.txt <$STR(N$数据条数)> <$STR(S$提现数据内容)>
+INC <$STR(N$数据条数)> 1
+
+#IF
+NOT EQUAL <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)> ########结束########
+#ACT
+MOV <$STR(S$游戏显示2)> <$STR(S$提现数据内容)>
+MOV <$STR(S$交易状态2)> 审核中…
+
+#IF
+NOT CHECKTEXTLIST ..\..\..\..\技术QQ198605888\提现\交易状态.txt <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)> ########结束########
+#ACT
+MOV <$STR(S$交易状态2)> 交易成功
+
+#IF
+#ACT
+MOV S$提现金额
+GetListString ..\..\..\..\技术QQ198605888\提现\提现内容.txt <$STR(N$数据条数)> <$STR(S$提现数据内容)>
+INC <$STR(N$数据条数)> 1
+
+
+#IF
+NOT EQUAL <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)> ########结束########
+#ACT
+MOV <$STR(S$游戏显示3)> <$STR(S$提现数据内容)>
+MOV <$STR(S$交易状态3)> 审核中…
+
+
+#IF
+NOT CHECKTEXTLIST ..\..\..\..\技术QQ198605888\提现\交易状态.txt <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)> ########结束########
+#ACT
+MOV <$STR(S$交易状态3)> 交易成功
+
+#IF
+#ACT
+MOV S$提现金额
+GetListString ..\..\..\..\技术QQ198605888\提现\提现内容.txt <$STR(N$数据条数)> <$STR(S$提现数据内容)>
+INC <$STR(N$数据条数)> 1
+
+
+#IF
+NOT EQUAL <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)> ########结束########
+#ACT
+MOV <$STR(S$游戏显示4)> <$STR(S$提现数据内容)>
+MOV <$STR(S$交易状态4)> 审核中…
+
+#IF
+NOT CHECKTEXTLIST ..\..\..\..\技术QQ198605888\提现\交易状态.txt <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)> ########结束########
+#ACT
+MOV <$STR(S$交易状态4)> 交易成功
+
+#IF
+#ACT
+MOV S$提现金额
+GetListString ..\..\..\..\技术QQ198605888\提现\提现内容.txt <$STR(N$数据条数)> <$STR(S$提现数据内容)>
+INC <$STR(N$数据条数)> 1
+
+
+#IF
+NOT EQUAL <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)> ########结束########
+#ACT
+MOV <$STR(S$游戏显示5)> <$STR(S$提现数据内容)>
+MOV <$STR(S$交易状态5)> 审核中…
+
+#IF
+NOT CHECKTEXTLIST ..\..\..\..\技术QQ198605888\提现\交易状态.txt <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)> ########结束########
+#ACT
+MOV <$STR(S$交易状态5)> 交易成功
+
+#IF
+#ACT
+MOV S$提现金额
+GetListString ..\..\..\..\技术QQ198605888\提现\提现内容.txt <$STR(N$数据条数)> <$STR(S$提现数据内容)>
+INC <$STR(N$数据条数)> 1
+
+#IF
+NOT EQUAL <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)> ########结束########
+#ACT
+MOV <$STR(S$游戏显示6)> <$STR(S$提现数据内容)>
+MOV <$STR(S$交易状态6)> 审核中…
+
+#IF
+NOT CHECKTEXTLIST ..\..\..\..\技术QQ198605888\提现\交易状态.txt <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)> ########结束########
+#ACT
+MOV <$STR(S$交易状态6)> 交易成功
+
+#IF
+#ACT
+MOV S$提现金额
+GetListString ..\..\..\..\技术QQ198605888\提现\提现内容.txt <$STR(N$数据条数)> <$STR(S$提现数据内容)>
+INC <$STR(N$数据条数)> 1
+
+
+#IF
+NOT EQUAL <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)> ########结束########
+#ACT
+MOV <$STR(S$游戏显示7)> <$STR(S$提现数据内容)>
+MOV <$STR(S$交易状态7)> 审核中…
+
+#IF
+NOT CHECKTEXTLIST ..\..\..\..\技术QQ198605888\提现\交易状态.txt <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)> ########结束########
+#ACT
+MOV <$STR(S$交易状态7)> 交易成功
+
+#IF
+#ACT
+MOV S$提现金额
+GetListString ..\..\..\..\技术QQ198605888\提现\提现内容.txt <$STR(N$数据条数)> <$STR(S$提现数据内容)>
+INC <$STR(N$数据条数)> 1
+
+#IF
+NOT EQUAL <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)> ########结束########
+#ACT
+MOV <$STR(S$游戏显示8)> <$STR(S$提现数据内容)>
+MOV <$STR(S$交易状态8)> 审核中…
+
+
+#IF
+NOT CHECKTEXTLIST ..\..\..\..\技术QQ198605888\提现\交易状态.txt <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)>
+NOT EQUAL <$STR(S$提现数据内容)> ########结束########
+#ACT
+MOV <$STR(S$交易状态8)> 交易成功
+#IF
+#ACT
+GOTO @绘制商人界面
+
+
+
+
+
+
+
+
+
+

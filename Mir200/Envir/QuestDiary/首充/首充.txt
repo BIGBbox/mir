@@ -1,0 +1,54 @@
+[@首充面板]
+{
+#if
+#act
+mov S$背景图片 1000010
+
+#if
+large <$STR(U99)> 9
+check [22] 0
+#act
+mov S$背景图片 1000011
+
+
+#IF
+#ACT
+#SAY
+<Img|img=public/sf1/1/10000010.png|x=200|y=100|children={close_btn,道具1,道具2,道具3,道具4,img1,img2,二维码,rightTips,gable_item,点击按钮}|bg=1|reset=1|move=1>
+<Button|x=739|y=195|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
+;<Text|id=rightTips|x=300|y=80|color=254|size=20|outline=3|outlinecolor=249|text=充值10元，即可领取首充奖励。>
+
+<Img|id=道具1|x=310|y=210|children={道具11}|width=60|height=60|img=public/sf1/1/1000012.png>
+    <ItemShow|id=道具11|x=0|y=0|width=75|height=70|itemid=10112|itemcount=1|showtips=1|bgtype=0|color=250|scale=1.2>
+<Img|id=道具2|x=375|y=210|children={道具22}|width=60|height=60|img=public/sf1/1/1000012.png>
+    <ItemShow|id=道具22|x=-2|y=-2|width=75|height=70|itemid=10209|itemcount=1|showtips=1|bgtype=0|color=250|scale=0.8>
+<Img|id=道具3|x=440|y=210|children={道具33}|width=60|height=60|img=public/sf1/1/1000012.png>
+    <ItemShow|id=道具33|x=-2|y=-2|width=75|height=70|itemid=4|itemcount=1000000|showtips=1|bgtype=0|color=250|scale=1.2>
+<Img|id=道具4|x=505|y=210|children={道具44}|width=60|height=60|img=public/sf1/1/1000012.png>
+    <ItemShow|id=道具44|x=-3|y=-3|width=75|height=70|itemid=10941|itemcount=20|showtips=1|bgtype=0|color=250|scale=1.2>
+
+<Img|id=img1|x=350|y=300|children={click_btn}|img=public/sf1/1/1000009.png>
+<Button|id=click_btn|nimg=public/sf1/1/<$str(S$背景图片)>.png|x=30|y=20|link=@点击按钮>
+
+
+[@点击按钮]
+#if
+small <$STR(U99)> 9
+#act
+; OPENHYPERLINK 26
+goto @充值界面
+break
+
+#if
+#act
+set [22] 1
+MailGIVE 幽影之枪 1 1#4#6#8
+MailGIVE 紫阳百衲衣 1 1#4#6#8
+MailGIVE 绑定元宝 1000000
+MailGIVE 灵兽精石 20 1#4#6#8
+SendMail 1 系统奖励 首充10元礼包,请及时提取!
+messagebox 首充礼包已发放到你的邮箱,请及时提取附件!!
+close
+#Call [\Mobile\特殊NPC\TOP图标.txt] @导航
+
+}

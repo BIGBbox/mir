@@ -1,0 +1,143 @@
+[@main]
+#IF
+#ACT
+#IF
+CheckContainsText <$SERVERNAME> 测试
+#ACT
+MESSAGEBOX 抱歉：测试区，无法互换！！
+break
+
+
+
+#IF
+#ACT
+#SAY
+
+<Img|img=public/sf1/1/01482.png|x=330|y=120|children={close_btn,click_btn,合成描述,rightTips,兑换1,兑换2,兑换3,兑换4,兑换5,兑换6,兑换7,兑换8}|bg=1|reset=1|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=769|y=185|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
+
+<Button|id=兑换1|x=200|y=100|nimg=public/sf1/1/01489.png|pimg=public/sf1/1/01491.png|tips={兑换条件：/FCOLOR=249}^{10RMB点/FCOLOR=251}^|tipsx=10|tipsy=80|size=18|color=249|link=@兑换100>
+<Button|id=兑换2|x=340|y=100|nimg=public/sf1/1/01492.png|pimg=public/sf1/1/01494.png|tips={兑换条件：/FCOLOR=249}^{50RMB点/FCOLOR=251}^|tipsx=10|tipsy=80|size=18|color=249|link=@兑换500>
+<Button|id=兑换3|x=200|y=135|nimg=public/sf1/1/01495.png|pimg=public/sf1/1/01497.png|tips={兑换条件：/FCOLOR=249}^{100RMB点/FCOLOR=251}^|tipsx=10|tipsy=80|size=18|color=249|link=@兑换1000>
+<Button|id=兑换4|x=340|y=135|nimg=public/sf1/1/01498.png|pimg=public/sf1/1/01500.png|tips={兑换条件：/FCOLOR=249}^{500RMB点/FCOLOR=251}^|tipsx=10|tipsy=80|size=18|color=249|link=@兑换5000>
+<Button|id=兑换5|x=200|y=170|nimg=public/sf1/1/01501.png|pimg=public/sf1/1/01503.png|tips={兑换条件：/FCOLOR=249}^{1000RMB点/FCOLOR=251}^|tipsx=10|tipsy=80|size=18|color=249|link=@兑换10000>
+<Button|id=兑换6|x=340|y=170|nimg=public/sf1/1/01504.png|pimg=public/sf1/1/01506.png|tips={兑换条件：/FCOLOR=249}^{5000RMB点/FCOLOR=251}^|tipsx=10|tipsy=80|size=18|color=249|link=@兑换50000>
+<Button|id=兑换7|x=200|y=205|nimg=public/sf1/1/01483.png|pimg=public/sf1/1/01485.png|tips={提取条件：/FCOLOR=249}^{500天下币/FCOLOR=251}^|tipsx=10|tipsy=80|size=18|color=249|link=@提取500>
+<Button|id=兑换8|x=340|y=205|nimg=public/sf1/1/01486.png|pimg=public/sf1/1/01488.png|tips={提取条件：/FCOLOR=249}^{1000天下币/FCOLOR=251}^|tipsx=10|tipsy=80|size=18|color=249|link=@提取1000>
+
+
+[@提取500]
+#IF
+CHECKGAMEDIAMOND > 499
+#ACT
+GAMEDIAMOND - 500
+GIVE 500天下币 1
+MESSAGEBOX 提示：成功提取500天下币！！
+BREAK
+#ELSEACT
+MESSAGEBOX 抱歉：天下币不足，无法提取！！
+BREAK
+
+
+[@提取1000]
+#IF
+CHECKGAMEDIAMOND > 999
+#ACT
+GAMEDIAMOND - 1000
+GIVE 1000天下币 1
+MESSAGEBOX 提示：成功提取1000天下币！！
+BREAK
+#ELSEACT
+MESSAGEBOX 抱歉：天下币不足，无法提取！！
+BREAK
+
+
+
+
+[@兑换100]
+
+#IF
+CHECKgamepoint > 9
+#ACT
+gamepoint - 10
+CreditPoint + 1
+GAMEDIAMOND + 100
+MESSAGEBOX 提示：成功兑换100天下币！！
+BREAK
+#ELSEACT
+MESSAGEBOX 抱歉：RMB点不足，无法兑换！！
+BREAK
+
+
+
+
+[@兑换1000]
+
+#IF
+CHECKgamepoint > 99
+#ACT
+gamepoint - 100
+CreditPoint + 10
+GAMEDIAMOND + 1000
+MESSAGEBOX 提示：成功兑换1000天下币！！
+BREAK
+#ELSEACT
+MESSAGEBOX 抱歉：RMB点不足，无法兑换！！
+BREAK
+
+
+[@兑换10000]
+#IF
+CHECKgamepoint > 999
+#ACT
+gamepoint - 1000
+CreditPoint + 100
+GAMEDIAMOND + 10000
+MESSAGEBOX 提示：成功兑换100000天下币！！
+BREAK
+#ELSEACT
+MESSAGEBOX 抱歉：RMB点不足，无法兑换！！
+BREAK
+
+
+[@兑换500]
+#IF
+CHECKgamepoint > 49
+#ACT
+gamepoint - 50
+CreditPoint + 5
+GAMEDIAMOND + 500
+MESSAGEBOX 提示：成功兑换500天下币！！
+BREAK
+#ELSEACT
+MESSAGEBOX 抱歉：RMB点不足，无法兑换！！
+BREAK
+
+
+[@兑换5000]
+#IF
+CHECKgamepoint > 499
+#ACT
+gamepoint - 500
+CreditPoint + 50
+GAMEDIAMOND + 5000
+MESSAGEBOX 提示：成功兑换5000天下币！！
+BREAK
+#ELSEACT
+MESSAGEBOX 抱歉：RMB点不足，无法兑换！！
+BREAK
+
+
+[@兑换50000]
+#IF
+CHECKgamepoint > 4999
+#ACT
+gamepoint - 5000
+CreditPoint + 500
+GAMEDIAMOND + 50000
+MESSAGEBOX 提示：成功兑换50000天下币！！
+BREAK
+#ELSEACT
+MESSAGEBOX 抱歉：RMB点不足，无法兑换！！
+BREAK

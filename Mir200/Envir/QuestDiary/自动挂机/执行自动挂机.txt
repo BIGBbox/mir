@@ -1,0 +1,8 @@
+[@执行自动挂机]
+
+{
+
+#if
+#act
+StartAutoPlayGame
+}

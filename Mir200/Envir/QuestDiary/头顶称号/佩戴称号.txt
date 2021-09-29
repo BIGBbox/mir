@@ -1,0 +1,12 @@
+[@Åå´÷³ÆºÅ]
+{
+#if
+#act
+SetIcon 0 0 ware<$STR(U17)> 0 -10 0 0
+
+#IF
+CHECKTITLE ¿ñ±©
+#ACT
+SetIcon 1 1 480 10 5 0 0
+
+}

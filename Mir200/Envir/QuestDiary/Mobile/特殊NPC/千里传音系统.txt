@@ -1,0 +1,70 @@
+[@传音]
+{
+#IF
+check [604] 0
+#act
+set [604] 1
+goto @展开
+#IF
+#ACT
+#say
+
+;<>                            <大 狮 子 吼>\
+;<>         <使用大狮子吼可发送滚屏信息/FCOLOR=250>\
+;<>         <每次使用需要200灵符/FCOLOR=250>\
+;<>         <滚屏信息，持续10秒播放，所有玩家均可看见/FCOLOR=250>\ \
+;<>                           <释放大狮子吼/@喊话>\ \
+
+<Img|width=545|height=180|img=public/bg_npc_01.png|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
+<Layout|x=545|y=0|width=80|height=80|link=@exit>
+<Button|x=545|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=200|y=18|color=249|tips=|tipsx=10|tipsy=80|size=18|text=大 狮 子 吼>
+<Text|a=0|x=25|y=45|color=250|tips=|tipsx=10|tipsy=80|size=18|text=使用大狮子吼可发送滚屏信息>
+<Text|a=0|x=25|y=65|color=250|tips=|tipsx=10|tipsy=80|size=18|text=每次使用需要200灵符>
+<Text|a=0|x=25|y=85|color=250|tips=|tipsx=10|tipsy=80|size=18|text=滚屏信息，持续10秒播放，所有玩家均可看见>
+<Text|a=0|x=190|y=135|color=251|tips=|tipsx=10|tipsy=80|size=18|text=释放大狮子吼|link=@喊话>
+
+[@喊话]
+;<>         <尊敬的玩家：【<$USERNAME>】您好/FCOLOR=250>\
+;<>         <欢迎使用大狮子吼，本次大狮子吼将收费200灵符/FCOLOR=250>\
+;<>         <在使用之前请核对您的帐户中是否有200灵符/FCOLOR=250>\
+;<>         <满足本次消费！谢谢！/FCOLOR=250>\ \
+;<>         <请输入您需要发布的广告内容/@@InPutString3>\
+
+<Img|width=545|height=180|img=public/bg_npc_01.png|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
+<Layout|x=545|y=0|width=80|height=80|link=@exit>
+<Button|x=545|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=25|y=25|color=250|tips=|tipsx=10|tipsy=80|size=18|text=尊敬的玩家：【<$USERNAME>】您好>
+<Text|a=0|x=25|y=45|color=250|tips=|tipsx=10|tipsy=80|size=18|text=欢迎使用大狮子吼，本次大狮子吼将收费200灵符>
+<Text|a=0|x=25|y=65|color=250|tips=|tipsx=10|tipsy=80|size=18|text=在使用之前请核对您的帐户中是否有200灵符>
+<Text|a=0|x=25|y=85|color=250|tips=|tipsx=10|tipsy=80|size=18|text=满足本次消费！谢谢！>
+<Text|a=0|x=25|y=135|color=251|tips=|tipsx=10|tipsy=80|size=18|text=请输入您需要发布的广告内容|link=@@INPUTSTRING3>
+
+
+[@InPutString3]
+;<>         <您输入的广告内容为/FCOLOR=250>\
+;<>         <【<$STR(S3)>】>\ \ \
+;<>         <核对内容无误后请点击/FCOLOR=250>\
+;<>         <确定发布/@确定发布1>
+
+<Img|width=545|height=180|img=public/bg_npc_01.png|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
+<Layout|x=545|y=0|width=80|height=80|link=@exit>
+<Button|x=545|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=25|y=25|color=250|tips=|tipsx=10|tipsy=80|size=18|text=您输入的广告内容为>
+<Text|a=0|x=25|y=45|color=249|tips=|tipsx=10|tipsy=80|size=18|text=【<$STR(S3)>】>
+<Text|a=0|x=25|y=120|color=250|tips=|tipsx=10|tipsy=80|size=18|text=核对内容无误后请点击>
+<Text|a=0|x=215|y=120|color=251|tips=|tipsx=10|tipsy=80|size=18|text=确定发布|link=@确定发布1>
+
+[@确定发布1]
+#IF
+CHECKGAMEGIRD > 200
+#ACT
+GAMEGIRD - 200
+SENDMOVEMSG 0 243 0 350 1 <$USERNAME>说：<$STR(S3)> 10 10
+GOTO @开始全服喊话
+#ELSEACT
+MESSAGEBOX [失败]：您帐户的灵符数量不足200，无法完成本次广告发布！
+
+
+
+}

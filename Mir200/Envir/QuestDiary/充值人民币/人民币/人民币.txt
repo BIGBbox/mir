@@ -1,0 +1,457 @@
+[@领取人民币]
+{
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\01.txt
+#ACT
+GAMEPOINT + 1
+DelAccountList ..\QuestDiary\充值人民币\人民币\01.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币1,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\02.txt
+#ACT
+GAMEPOINT + 2
+DelAccountList ..\QuestDiary\充值人民币\人民币\02.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币2,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\03.txt
+#ACT
+GAMEPOINT + 3
+DelAccountList ..\QuestDiary\充值人民币\人民币\03.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币3,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\04.txt
+#ACT
+GAMEPOINT + 4
+DelAccountList ..\QuestDiary\充值人民币\人民币\04.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币4,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\05.txt
+#ACT
+GAMEPOINT + 5
+DelAccountList ..\QuestDiary\充值人民币\人民币\05.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币5,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\06.txt
+#ACT
+GAMEPOINT + 6
+DelAccountList ..\QuestDiary\充值人民币\人民币\06.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币6,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\07.txt
+#ACT
+GAMEPOINT + 7
+DelAccountList ..\QuestDiary\充值人民币\人民币\07.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币7,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\08.txt
+#ACT
+GAMEPOINT + 8
+DelAccountList ..\QuestDiary\充值人民币\人民币\08.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币8,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\09.txt
+#ACT
+GAMEPOINT + 9
+DelAccountList ..\QuestDiary\充值人民币\人民币\09.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币9,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\1.txt
+#ACT
+GAMEPOINT + 10
+DelAccountList ..\QuestDiary\充值人民币\人民币\1.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币10,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\2.txt
+#ACT
+GAMEPOINT + 20
+DelAccountList ..\QuestDiary\充值人民币\人民币\2.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币20,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\3.txt
+#ACT
+GAMEPOINT + 30
+DelAccountList ..\QuestDiary\充值人民币\人民币\3.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币30,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\4.txt
+#ACT
+GAMEPOINT + 40
+DelAccountList ..\QuestDiary\充值人民币\人民币\4.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币40,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\5.txt
+#ACT
+GAMEPOINT + 50
+DelAccountList ..\QuestDiary\充值人民币\人民币\5.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币50,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\6.txt
+#ACT
+GAMEPOINT + 60
+DelAccountList ..\QuestDiary\充值人民币\人民币\6.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币60,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\7.txt
+#ACT
+GAMEPOINT + 70
+DelAccountList ..\QuestDiary\充值人民币\人民币\7.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币70,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\8.txt
+#ACT
+GAMEPOINT + 80
+DelAccountList ..\QuestDiary\充值人民币\人民币\8.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币80,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\9.txt
+#ACT
+GAMEPOINT + 90
+DelAccountList ..\QuestDiary\充值人民币\人民币\9.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币90,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\10.txt
+#ACT
+GAMEPOINT + 100
+DelAccountList ..\QuestDiary\充值人民币\人民币\10.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币100,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\20.txt
+#ACT
+GAMEPOINT + 200
+DelAccountList ..\QuestDiary\充值人民币\人民币\20.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币200,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\30.txt
+#ACT
+GAMEPOINT + 300
+DelAccountList ..\QuestDiary\充值人民币\人民币\30.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币300,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\40.txt
+#ACT
+GAMEPOINT + 400
+DelAccountList ..\QuestDiary\充值人民币\人民币\40.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币400,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\50.txt
+#ACT
+GAMEPOINT + 500
+DelAccountList ..\QuestDiary\充值人民币\人民币\50.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币500,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\60.txt
+#ACT
+GAMEPOINT + 600
+DelAccountList ..\QuestDiary\充值人民币\人民币\60.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币600,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\70.txt
+#ACT
+GAMEPOINT + 700
+DelAccountList ..\QuestDiary\充值人民币\人民币\70.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币700,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\80.txt
+#ACT
+GAMEPOINT + 800
+DelAccountList ..\QuestDiary\充值人民币\人民币\80.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币800,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\90.txt
+#ACT
+GAMEPOINT + 900
+DelAccountList ..\QuestDiary\充值人民币\人民币\90.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币900,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\100.txt
+#ACT
+GAMEPOINT + 1000
+DelAccountList ..\QuestDiary\充值人民币\人民币\100.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币1000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\200.txt
+#ACT
+GAMEPOINT + 2000
+DelAccountList ..\QuestDiary\充值人民币\人民币\200.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币2000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\300.txt
+#ACT
+GAMEPOINT + 3000
+DelAccountList ..\QuestDiary\充值人民币\人民币\300.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币3000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\400.txt
+#ACT
+GAMEPOINT + 4000
+DelAccountList ..\QuestDiary\充值人民币\人民币\400.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币4000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\500.txt
+#ACT
+GAMEPOINT + 5000
+DelAccountList ..\QuestDiary\充值人民币\人民币\500.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币5000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\600.txt
+#ACT
+GAMEPOINT + 6000
+DelAccountList ..\QuestDiary\充值人民币\人民币\600.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币6000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\700.txt
+#ACT
+GAMEPOINT + 7000
+DelAccountList ..\QuestDiary\充值人民币\人民币\700.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币7000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\800.txt
+#ACT
+GAMEPOINT + 8000
+DelAccountList ..\QuestDiary\充值人民币\人民币\800.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币8000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\900.txt
+#ACT
+GAMEPOINT + 9000
+DelAccountList ..\QuestDiary\充值人民币\人民币\900.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币9000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\1000.txt
+#ACT
+GAMEPOINT + 10000
+DelAccountList ..\QuestDiary\充值人民币\人民币\1000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币10000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\2000.txt
+#ACT
+GAMEPOINT + 20000
+DelAccountList ..\QuestDiary\充值人民币\人民币\2000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币20000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\3000.txt
+#ACT
+GAMEPOINT + 30000
+DelAccountList ..\QuestDiary\充值人民币\人民币\3000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币30000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\4000.txt
+#ACT
+GAMEPOINT + 40000
+DelAccountList ..\QuestDiary\充值人民币\人民币\4000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币40000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\5000.txt
+#ACT
+GAMEPOINT + 50000
+DelAccountList ..\QuestDiary\充值人民币\人民币\5000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币50000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\6000.txt
+#ACT
+GAMEPOINT + 60000
+DelAccountList ..\QuestDiary\充值人民币\人民币\6000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币60000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\7000.txt
+#ACT
+GAMEPOINT + 70000
+DelAccountList ..\QuestDiary\充值人民币\人民币\7000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币70000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\8000.txt
+#ACT
+GAMEPOINT + 80000
+DelAccountList ..\QuestDiary\充值人民币\人民币\8000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币80000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\9000.txt
+#ACT
+GAMEPOINT + 90000
+DelAccountList ..\QuestDiary\充值人民币\人民币\9000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币90000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\10000.txt
+#ACT
+GAMEPOINT + 100000
+DelAccountList ..\QuestDiary\充值人民币\人民币\10000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币100000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\20000.txt
+#ACT
+GAMEPOINT + 200000
+DelAccountList ..\QuestDiary\充值人民币\人民币\20000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币200000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\30000.txt
+#ACT
+GAMEPOINT + 300000
+DelAccountList ..\QuestDiary\充值人民币\人民币\30000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币300000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\40000.txt
+#ACT
+GAMEPOINT + 400000
+DelAccountList ..\QuestDiary\充值人民币\人民币\40000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币400000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\50000.txt
+#ACT
+GAMEPOINT + 500000
+DelAccountList ..\QuestDiary\充值人民币\人民币\50000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币500000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\60000.txt
+#ACT
+GAMEPOINT + 600000
+DelAccountList ..\QuestDiary\充值人民币\人民币\60000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币600000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\70000.txt
+#ACT
+GAMEPOINT + 700000
+DelAccountList ..\QuestDiary\充值人民币\人民币\70000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币700000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\80000.txt
+#ACT
+GAMEPOINT + 800000
+DelAccountList ..\QuestDiary\充值人民币\人民币\80000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币800000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\90000.txt
+#ACT
+GAMEPOINT + 900000
+DelAccountList ..\QuestDiary\充值人民币\人民币\90000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币900000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\100000.txt
+#ACT
+GAMEPOINT + 1000000
+DelAccountList ..\QuestDiary\充值人民币\人民币\100000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币1000000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\200000.txt
+#ACT
+GAMEPOINT + 2000000
+DelAccountList ..\QuestDiary\充值人民币\人民币\200000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币2000000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\300000.txt
+#ACT
+GAMEPOINT + 3000000
+DelAccountList ..\QuestDiary\充值人民币\人民币\300000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币3000000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\400000.txt
+#ACT
+GAMEPOINT + 4000000
+DelAccountList ..\QuestDiary\充值人民币\人民币\400000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币4000000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\500000.txt
+#ACT
+GAMEPOINT + 5000000
+DelAccountList ..\QuestDiary\充值人民币\人民币\500000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币5000000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\600000.txt
+#ACT
+GAMEPOINT + 6000000
+DelAccountList ..\QuestDiary\充值人民币\人民币\600000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币6000000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\700000.txt
+#ACT
+GAMEPOINT + 7000000
+DelAccountList ..\QuestDiary\充值人民币\人民币\700000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币7000000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\800000.txt
+#ACT
+GAMEPOINT + 8000000
+DelAccountList ..\QuestDiary\充值人民币\人民币\800000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币8000000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\900000.txt
+#ACT
+GAMEPOINT + 9000000
+DelAccountList ..\QuestDiary\充值人民币\人民币\900000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币9000000,如果您也想获得,请赶快充值吧!
+
+#IF
+CheckAccountList ..\QuestDiary\充值人民币\人民币\1000000.txt
+#ACT
+GAMEPOINT + 10000000
+DelAccountList ..\QuestDiary\充值人民币\人民币\1000000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得人民币10000000,如果您也想获得,请赶快充值吧!
+
+#IF
+#ACT
+#ELSESAY
+请查看自己的人民币数量!\
+没有充值请按提示进行充值!\
+<退出/@exit>
+}

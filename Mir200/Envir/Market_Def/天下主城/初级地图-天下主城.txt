@@ -1,0 +1,106 @@
+
+[@main]
+
+#if
+#act
+mov S$任务状态 10W元宝,烈火剑法/FCOLOR=250
+DELAYGOTO 10 @初级地图
+
+[@初级地图]
+#if
+equal U108 11
+#act
+#say
+<Img|width=545|height=179|show=0|bg=1|loadDelay=1|move=0|esc=1|img=public/sf1/1/00845.png|reset=1>
+<Layout|x=541.0|y=0.0|width=80|height=80|link=@exit>
+<Button|x=542.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=25.0|y=20.0|tipsx=10|tipsy=80|color=0|size=18|text=我已经从搜查官那边知道了您归来的事情,\非常感您为天下主城做出的贡献>
+<Button|id=click_btn1|x=30.0|y=125.0|nimg=public/0.png|color=251|pimg=public/0.png|text=完成任务|color=251|link=@初级地图引导>
+
+#if
+equal U108 11
+#ACT
+DELAYGOTO 5000 @领取初级地图奖励
+Navigation 0 click_btn1 点击完成任务
+break
+
+#if
+#act
+
+#say
+<Img|width=545|height=179|show=0|bg=1|loadDelay=1|move=0|esc=1|img=public/sf1/1/00845.png|reset=1>
+<Button|x=542.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+
+;MESSAGEBOX 是否要去【初级地图】逛一逛？\\那个地方会使你变强！\\来域外的强者都会进去挑战！ @传送 @取消
+<Text|a=0|x=20|y=20|color=255|tips=|tipsx=10|tipsy=80|size=18|text=是否要去【初级地图】逛一逛？\来域外的强者都会进去挑战！>
+<Button|id=click_btn1|x=25|y=125|nimg=public/0.png|pimg=public/0.png|text=传送|color=251|link=@传送>
+
+#IF
+large U108 7
+small U108 11
+#ACT
+DELAYGOTO 5000 @传送
+Navigation 0 click_btn1 点击进入地图
+break
+
+
+[@传送]
+
+#if
+not CHECKRENEWLEVEL < 1
+#act
+messagebox 1转以上玩家禁止进入
+close
+break
+
+#if
+#act
+map 初级地图
+
+#if
+large U108 7
+small U108 12
+#act
+mov U108 10
+CLEARDELAYGOTO
+DELAYGOTO 100 @开启自动挂机
+break
+
+[@开启自动挂机]
+#act
+#Call [\自动挂机\执行自动挂机.txt] @执行自动挂机
+
+[@初级地图引导]
+#if
+equal U108 11
+#act
+goto @领取初级地图奖励
+
+#elseact
+messagebox 尊敬的勇士,任务状态获取失败!!
+break
+
+[@领取初级地图奖励]
+#if
+equal U108 11
+#act
+mov U108 12
+
+NEWCOMPLETETASK 9
+NEWDELETETASK 9
+
+ADDSKILL 烈火剑法
+CHANGEEXP + 100000
+MailGIVE 绑定元宝 1000000
+MailGIVE 神器碎片 100 1#4#6#8
+SendMail 1 系统奖励 你已完成初级地图任务,奖励已发放!!
+
+sendmsg 7 完成任务了!!
+; #CALL [\任务系统\任务文本.txt] @接取任务
+NEWPICKTASK 10
+NEWCHANGETASK 10 <$STR(U200)>
+; mapmove 天下主城 120 92 5
+OPENNPCSHOWEX 70
+CLEARDELAYGOTO
+close
+

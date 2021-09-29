@@ -1,0 +1,328 @@
+(@@InPutString  @InPutInteger )
+
+[@MAIN]
+#if
+equal S$输入生日0
+#act
+mov   S$输入生日0   输入格式:1900/12/25
+
+#if
+equal S$输入问题1
+#act
+mov   S$输入问题1  <注册账号时填写的：问题一/color=103>
+
+#if
+equal S$输入答案1
+#act
+mov   S$输入答案1  <注册账号时填写的：答案一/FCOLOR=103>
+
+
+#if
+equal S$输入问题2
+#act
+mov   S$输入问题2  <注册账号时填写的：问题二/FCOLOR=103>
+
+#if
+equal S$输入答案2
+#act
+mov   S$输入答案2  <注册账号时填写的：答案二/FCOLOR=103>
+
+#if
+CHECKCreditPoint > 199
+#act
+MOV N$充值点 <$CreditPoint>
+DIV N$充值点 2
+
+#if
+EQUAL S31
+#ACT
+MOV S31 暂未输入
+
+#if
+#act
+#say
+<Img|width=620|height=300|img=public/bg_npc_01.png|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=450|y=25|color=254,251,168,191,250,70,245,249,253|tips=|tipsx=10|tipsy=80|size=18|text=【账号保值转新区系统】>
+<Text|a=0|x=153|y=45|color=233|tips=|tipsx=10|tipsy=80|size=18|text=┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄>
+<Text|a=0|x=43|y=65|color=254|tips=|tipsx=10|tipsy=80|size=18|text=转区介绍:>
+<Text|a=0|x=153|y=65|color=251|tips=|tipsx=10|tipsy=80|size=18|text=充值200元天下币及以上的玩家才找我可以转区！需要完成密保验证>
+<Text|a=0|x=835|y=65|color=250|tips=|tipsx=10|tipsy=80|size=18|text=本区充值：>
+<Text|a=0|x=945|y=65|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$CREDITPOINT>元天下币\>
+<Text|a=0|x=43|y=85|color=254|tips=|tipsx=10|tipsy=80|size=18|text=转区介绍:>
+<Text|a=0|x=153|y=85|color=251|tips=|tipsx=10|tipsy=80|size=18|text=本区充值200元可转新区100元天下币，验证完成资料,输入新区ID>
+<Text|a=0|x=835|y=85|color=250|tips=|tipsx=10|tipsy=80|size=18|text=可转新区：>
+<Text|a=0|x=945|y=85|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(N$充值点)>元天下币\>
+<Text|a=0|x=43|y=105|color=254|tips=|tipsx=10|tipsy=80|size=18|text=转区介绍:>
+<Text|a=0|x=153|y=105|color=253|tips=|tipsx=10|tipsy=80|size=18|text=然后在新区充值100元天下币，即可在新区找我领转区的:1000天下币>
+<Text|a=0|x=835|y=105|color=250|tips=|tipsx=10|tipsy=80|size=18|text=转区只转天下币,无充值点>
+<Text|a=0|x=450|y=125|color=255|tips=|tipsx=10|tipsy=80|size=18|text=↓请详细填写以下信息↓>
+<Text|a=0|x=32|y=145|color=255|tips=|tipsx=10|tipsy=80|size=18|text=                    ⑴.>
+<Text|a=0|x=32|y=145|color=251|tips=|tipsx=10|tipsy=80|size=18|text=点此输入|link=@@INPUTSTRING32>
+<Text|a=0|x=285|y=145|color=255|tips=|tipsx=10|tipsy=80|size=18|text=       你的生日:      <$STR(S$输入生日0)>   \>
+<Text|a=0|x=252|y=165|color=233|tips=|tipsx=10|tipsy=80|size=18|text=┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄>
+<Text|a=0|x=32|y=185|color=255|tips=|tipsx=10|tipsy=80|size=18|text=                    ⑵.>
+<Text|a=0|x=32|y=185|color=251|tips=|tipsx=10|tipsy=80|size=18|text=点此输入|link=@@INPUTSTRING33>
+<Text|a=0|x=285|y=185|color=255|tips=|tipsx=10|tipsy=80|size=18|text=       问题  一:      <$STR(S$输入问题1)>   \>
+<Text|a=0|x=252|y=205|color=233|tips=|tipsx=10|tipsy=80|size=18|text=┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄>
+<Text|a=0|x=32|y=225|color=255|tips=|tipsx=10|tipsy=80|size=18|text=                    ⑶.>
+<Text|a=0|x=32|y=225|color=251|tips=|tipsx=10|tipsy=80|size=18|text=点此输入|link=@@INPUTSTRING34>
+<Text|a=0|x=285|y=225|color=255|tips=|tipsx=10|tipsy=80|size=18|text=       答案  一:      <$STR(S$输入答案1)>   \>
+<Text|a=0|x=252|y=245|color=233|tips=|tipsx=10|tipsy=80|size=18|text=┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄>
+<Text|a=0|x=32|y=265|color=255|tips=|tipsx=10|tipsy=80|size=18|text=                    ⑷.>
+<Text|a=0|x=32|y=265|color=251|tips=|tipsx=10|tipsy=80|size=18|text=点此输入|link=@@INPUTSTRING35>
+<Text|a=0|x=285|y=265|color=255|tips=|tipsx=10|tipsy=80|size=18|text=       问题  二:      <$STR(S$输入问题2)>   \>
+<Text|a=0|x=252|y=285|color=233|tips=|tipsx=10|tipsy=80|size=18|text=┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄>
+<Text|a=0|x=32|y=305|color=255|tips=|tipsx=10|tipsy=80|size=18|text=                    ⑸.>
+<Text|a=0|x=32|y=305|color=251|tips=|tipsx=10|tipsy=80|size=18|text=点此输入|link=@@INPUTSTRING36>
+<Text|a=0|x=285|y=305|color=255|tips=|tipsx=10|tipsy=80|size=18|text=       答案  二:      <$STR(S$输入答案2)>    \>
+<Text|a=0|x=252|y=325|color=233|tips=|tipsx=10|tipsy=80|size=18|text=┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄>
+<Text|a=0|x=32|y=345|color=255|tips=|tipsx=10|tipsy=80|size=18|text=                    ⑹.>
+<Text|a=0|x=32|y=345|color=251|tips=|tipsx=10|tipsy=80|size=18|text=账号验证|link=@验证信息>
+<Text|a=0|x=362|y=345|color=253|tips=|tipsx=10|tipsy=80|size=18|text=←点此验证:以上输入信息是否完全正确>
+<Text|a=0|x=252|y=365|color=233|tips=|tipsx=10|tipsy=80|size=18|text=┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄>
+<Text|a=0|x=32|y=385|color=255|tips=|tipsx=10|tipsy=80|size=18|text=                    ⑺.>
+<Text|a=0|x=32|y=385|color=251|tips={1.完成上面的信息验证/FCOLOR=255}^{2.输入新区注册好的账号/FCOLOR=255}^{3.去新区找我领[充值]/FCOLOR=255}^|tipsx=10|tipsy=80|size=18|text=新区账号|link=@@INPUTSTRING31(请在下面输入框中写入:您的新区账号，【切记：不是游戏名】)>
+<Text|a=0|x=362|y=385|color=70|tips=|tipsx=10|tipsy=80|size=18|text=←点此输入:新区的账号>
+<Text|a=0|x=593|y=385|color=253|tips=|tipsx=10|tipsy=80|size=18|text=【不是游戏名】>
+<Text|a=0|x=758|y=385|color=70|tips=|tipsx=10|tipsy=80|size=18|text=您的新区账号：>
+<Text|a=0|x=912|y=385|color=255|tips=|tipsx=10|tipsy=80|size=18|text= <$STR(S31)>             \>
+<Text|a=0|x=252|y=405|color=233|tips=|tipsx=10|tipsy=80|size=18|text=┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄>
+<Text|a=0|x=32|y=425|color=255|tips=|tipsx=10|tipsy=80|size=18|text=                    ⑻.>
+<Text|a=0|x=32|y=425|color=251|tips=|tipsx=10|tipsy=80|size=18|text=确认转区|link=@确认转区>
+<Text|a=0|x=362|y=425|color=253|tips=|tipsx=10|tipsy=80|size=18|text=←点此确认:确认转区后该账号即刻>
+<Text|a=0|x=703|y=425|color=255|tips=|tipsx=10|tipsy=80|size=18|text=封停>
+<Text|a=0|x=230|y=445|color=224|tips=|tipsx=10|tipsy=80|size=18|text=请在【新区】点此处领取充值→>
+<Text|a=0|x=538|y=445|color=251|tips=|tipsx=10|tipsy=80|size=18|text=领取充值|link=@领取充值>
+<Text|a=0|x=571|y=445|color=224|tips=|tipsx=10|tipsy=80|size=18|text=←请在【新区】点此处领取充值→>
+
+
+
+
+
+[@领取充值]
+#IF
+checkcontainstext <$SERVERNAME> 测试
+#ACT
+MESSAGEBOX 提　示：测试区禁止转区！
+Break
+
+#IF
+NOT CHECKTEXTLIST ..\..\..\..\..\转区\转区数据.txt <$USERACCOUNT>
+#ACT
+MESSAGEBOX \\没有您的转区记录
+break
+
+#IF
+CHECKTEXTLIST ..\..\..\..\转区\转区数据.txt <$USERACCOUNT>
+#ACT
+GetListString ..\..\..\..\转区\转区领取账号\<$USERACCOUNT>.txt 0 S$转区账号1 N$转区金额1
+
+
+
+#IF
+CHECKCreditPoint < <$STR(N$转区金额1)>
+#ACT
+MESSAGEBOX \\您需要在本区充值【<$STR(N$转区金额1)>】元才可以领取转区充值
+break
+
+#IF
+#ACT
+GetListString ..\..\..\..\转区\转区领取账号\<$USERACCOUNT>.txt 0 S$转区账号1 N$转区金额1
+MOV N$天下币 <$STR(N$转区金额1)>
+MUL N$天下币 100
+
+
+
+
+
+GameDiamond + <$STR(N$天下币)>
+MESSAGEBOX 领取成功充值天下币+<$STR(N$天下币)>
+ADDTEXTLIST ..\..\..\..\转区\领取记录.TXT [<$SERVERNAME>]-[<$USERACCOUNT>]-[<$USERNAME>]领取了[<$STR(N$转区金额1)>元转区充值] <$DATETIME>
+CLEARNAMELIST ..\..\..\..\转区\转区领取账号\<$USERACCOUNT>.txt
+MOV N$积分 0
+MOV N$天下币 0
+mov N$转区金额1 0
+mov S$X2
+CLOSE
+BREAK
+#ELSEACT
+MESSAGEBOX 领取失败，条件不符！
+
+[@确认转区]
+#IF
+checkcontainstext <$SERVERNAME> 测试
+#ACT
+MESSAGEBOX 提　示：测试区禁止转区！
+Break
+#if
+NOT EQUAL S$是否完成自助验证 是
+#ACT
+MESSAGEBOX \\请先完成【账号验证】
+BREAK
+
+#if
+EQUAL S31 暂未输入
+#act
+MESSAGEBOX \\请先输入【新区账号】
+BREAK
+
+#if
+EQUAL S31
+#act
+MESSAGEBOX \\请先输入【新区账号】
+BREAK
+
+#if
+check [344] 1
+#act
+MESSAGEBOX \\该账号已经转区过了
+BREAK
+
+
+#if
+CHECKTEXTLIST ..\..\..\..\转区\转区数据.txt <$STR(S31)>
+#act
+messagebox 你当前ID已经被人使用，请重新输入新区账号！
+BREAK
+
+
+#IF
+check [344] 0
+CHECKCreditPoint > 199
+#ACT
+SET [344] 1
+AddTextList ..\..\..\..\转区\转区数据.txt [本区账号]=<$USERACCOUNT>
+AddTextList ..\..\..\..\转区\转区数据.txt [本区名字]=<$USERNAME>
+AddTextList ..\..\..\..\转区\转区数据.txt <$STR(S31)>
+AddTextList ..\..\..\..\转区\转区数据.txt [回收时间]=<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>时<$MINUTE>分<$SECOND>秒
+AddTextList ..\..\..\..\转区\转区数据.txt *********************************************************************
+AddTextList ..\..\..\..\转区\全服回收记录.txt [回收人物]=<$USERNAME>，新区ID<$STR(S31)>
+AddTextList ..\..\..\..\转区\全服回收记录.txt [回收时间]=<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>时<$MINUTE>分<$SECOND>秒
+AddTextList ..\..\..\..\转区\全服回收记录.txt *********************************************************************
+CreateFile ..\..\..\..\转区\转区领取账号\<$STR(S31)>.txt
+AddTextList ..\..\..\..\转区\转区领取账号\<$STR(S31)>.txt <$STR(S31)>:<$str(N$充值点)>
+GAMEGLORY = 0
+GAMEDIAMOND = 0
+CREDITPOINT = 0
+GAMEGIRD = 0
+GAMEPOINT = 0
+CHANGELEVEL = 1
+GAMEGOLD = 0
+GAMEDIAMOND = 0
+CREDITPOINT = 0
+GAMEGLORY = 0
+mov S31
+ChangeModeEx 10 65535
+GOTO @main
+messagebox 回收成功,请在新区正式开区领取转区奖励
+KICK
+BREAK
+
+
+
+
+[@InPutString31]
+#IF
+EQUAL S$是否完成自助验证
+#act
+messagebox \\请先验证信息再来找我
+MOV S31 暂未输入
+GOTO @main
+break
+
+#IF
+CHECKCreditPoint < 200
+#act
+messagebox \\充值不足200，不可以转区
+MOV S31 暂未输入
+GOTO @main
+break
+
+#IF
+EQUAL S31
+#ACT
+MESSAGEBOX \\输入账号不能为空
+MOV S31 暂未输入
+GOTO @main
+break
+
+#OR
+CheckStringlength S31 > 20
+CheckStringlength S31 < 4
+#ACT
+MESSAGEBOX \\新区账号新区为：4-20个字符。
+MOV S31
+GOTO @main
+break
+
+#IF
+#ACT
+messagebox \\请输入的新区账号为：【<$STR(S31)>】。在确认转区前可重新输入！
+goto @main
+break
+
+
+
+[@验证信息]
+#IF
+CHECKCreditPoint < 200
+#act
+messagebox \\充值不足200，不可以转区
+MOV S31 暂未输入
+GOTO @main
+break
+
+#IF
+EQUAL S$输入生日0 <$BIRTHDAT>
+EQUAL S$输入问题1 <$QUIZ1>
+EQUAL S$输入答案1 <$ANSWER1>
+EQUAL S$输入问题2 <$QUIZ2>
+EQUAL S$输入答案2 <$ANSWER2>
+#act
+MOV S$是否完成自助验证 是
+messagebox \\输入注册信息正确.请输入新区账号
+goto @完成验证
+break
+
+#if
+#act
+messagebox \\您的注册信息输入有误！
+break
+
+[@InPutString36]
+#IF
+#ACT
+MOV S$输入答案2 <$STR(S36)>
+goto @main
+break
+
+[@InPutString35]
+#IF
+#ACT
+MOV S$输入问题2 <$STR(S35)>
+goto @main
+break
+
+
+[@InPutString34]
+#IF
+#ACT
+MOV S$输入答案1 <$STR(S34)>
+goto @main
+break
+
+[@InPutString33]
+#IF
+#ACT
+MOV S$输入问题1 <$STR(S33)>
+goto @main
+break
+
+[@InPutString32]
+#IF
+#ACT
+MOV S$输入生日0 <$STR(S32)>
+goto @main
+break

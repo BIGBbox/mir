@@ -1,0 +1,40 @@
+[@赞助属性设置]
+{
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\赞助\赞助数据.txt 1 充值金额 S$赞助_充值金额1
+ReadConfigFileItem ..\QuestDiary\赞助\赞助数据.txt 2 充值金额 S$赞助_充值金额2
+ReadConfigFileItem ..\QuestDiary\赞助\赞助数据.txt 3 充值金额 S$赞助_充值金额3
+mov N$index 0
+
+#if
+large <$STR(U99)> <$STR(S$赞助_充值金额1)>
+#act
+mov N$index 1
+
+#if
+large <$STR(U99)> <$STR(S$赞助_充值金额2)>
+#act
+mov N$index 2
+
+#if
+large <$STR(U99)> <$STR(S$赞助_充值金额3)>
+#act
+mov N$index 3
+
+#if
+large <$STR(N$index)> 0
+#act
+ReadConfigFileItem ..\QuestDiary\赞助\赞助数据.txt <$STR(N$index)> 攻击 S$赞助_攻击
+ReadConfigFileItem ..\QuestDiary\赞助\赞助数据.txt <$STR(N$index)> 生命 S$赞助_生命
+ReadConfigFileItem ..\QuestDiary\赞助\赞助数据.txt <$STR(N$index)> 暴击率 S$赞助_暴击率
+ReadConfigFileItem ..\QuestDiary\赞助\赞助数据.txt <$STR(N$index)> 攻击倍率 S$赞助_攻击倍率
+ReadConfigFileItem ..\QuestDiary\赞助\赞助数据.txt <$STR(N$index)> 对怪伤害 S$赞助_对怪伤害
+ReadConfigFileItem ..\QuestDiary\赞助\赞助数据.txt <$STR(N$index)> 伤害吸收 S$赞助_伤害吸收
+ReadConfigFileItem ..\QuestDiary\赞助\赞助数据.txt <$STR(N$index)> 回收加成 S$赞助_回收加成
+ReadConfigFileItem ..\QuestDiary\赞助\赞助数据.txt <$STR(N$index)> 爆率 S$赞助_爆率
+ReadConfigFileItem ..\QuestDiary\赞助\赞助数据.txt <$STR(N$index)> 攻击附带绿毒 S$赞助_攻击附带绿毒
+ReadConfigFileItem ..\QuestDiary\赞助\赞助数据.txt <$STR(N$index)> 自动批量拾取 S$赞助_自动批量拾取
+
+}

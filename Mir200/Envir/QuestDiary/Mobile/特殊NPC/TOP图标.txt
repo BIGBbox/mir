@@ -1,0 +1,252 @@
+[@导航]
+{
+#IF
+#ACT
+goto @手游top1
+
+
+#IF
+ISADMIN
+#ACT
+MOV S$admin <Button|x=-250|y=220|nimg=official/top/1900012530.png|link=@Member>
+addbutton 102 4 <$STR(S$admin)>
+
+[@手游top1]
+
+#IF
+Equal <$CLIENTFLAG> 2
+#ACT
+MOV N$坐标Y1 45
+MOV N$坐标Y2 110
+MOV N$坐标Y3 110
+#elseact
+MOV N$坐标Y1 5
+MOV N$坐标Y2 80
+MOV N$坐标Y3 50
+
+#IF
+#ACT
+;delbutton 102 2
+MOV S$展示 <Button|x=-230|y=<$STR(N$坐标Y1)>|nimg=official/top/1900012531.png|link=@伸缩>
+MOV S$图标2 <Button|x=-230|y=<$STR(N$坐标Y1)>|nimg=official/top/1900012531.png|link=@伸缩>
+
+;#if
+;check [99] 0
+;large U108 19
+;#act
+;dec N$坐标X 65
+;INC S$图标2 <Button|id=103|children=103_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/1/01319.png|link=@微信礼包>
+
+;#if
+;;check [100] 0
+;;large U108 19
+;#act
+;dec N$坐标X 65
+;INC S$图标2 <Button|id=101|children=101_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/1/01277.png|link=@QQ礼包>
+
+#if
+#act
+; 世界BOSS按钮必须为是第一个
+goto @世界BOSS按钮
+goto @神兵谱按钮
+goto @异兽坊按钮
+goto @首爆奖励按钮
+goto @天下大陆按钮
+goto @每日活动按钮
+goto @新会员系统按钮
+goto @首充按钮
+goto @赞助按钮
+
+#if
+#act
+addbutton 102 2 <$STR(S$图标2)>
+; not CheckContainsText <$STR(A490)> <$Str(S$首杀名0)>
+
+
+[@世界BOSS按钮]
+#if
+; CheckContainsText <$STR(A490)> 真·如来
+; CheckContainsText <$STR(A490)> 真·罗贯中
+; CheckContainsText <$STR(A490)> 真·帝王
+; CheckContainsText <$STR(A490)> 真·金庸
+; CheckContainsText <$STR(A490)> 真·圣斗士
+; CheckContainsText <$STR(A490)> 真·施耐庵
+; CheckContainsText <$STR(A490)> 真·萧鼎
+#act
+; MOV N$坐标X -320
+; INC S$图标2 <Button|id=111|children=111_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00009.png|link=@世界BOSS>
+; #elseact
+MOV N$坐标X -320
+INC S$图标2 <Button|id=111|children=111_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00010.png|link=@世界BOSS>
+
+[@神兵谱按钮]
+#if
+#act
+dec N$坐标X 65
+INC S$图标2 <Button|id=113|children=113_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00008.png|link=@神兵谱>
+
+[@异兽坊按钮]
+#if
+#act
+dec N$坐标X 65
+INC S$图标2 <Button|id=112|children=112_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00020.png|link=@异兽坊>
+
+
+[@首爆奖励按钮]
+#if
+#act
+dec N$坐标X 65
+INC S$图标2 <Button|id=107|children=107_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00012.png|link=@首爆奖励>
+
+
+[@天下大陆按钮]
+#if
+#act
+dec N$坐标X 65
+INC S$图标2 <Button|id=106|children=106_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00016.png|link=@天下大陆>
+
+[@每日活动按钮]
+#if
+#act
+; ReadConfigFileItem ..\QuestDiary\充值活动\日充累充奖品数据.txt  超值礼包2_<$STR(U112)> 金额 S$所需时间
+
+; #or
+; not large <$STR(U111)> 1
+; large <$STR(U114)> <$STR(S$所需时间)>
+; #act
+dec N$坐标X 65
+INC S$图标2 <Button|id=115|children=115_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00006.png|link=@每日活动>
+; #elseact
+; INC S$图标2 <Button|id=115|children=115_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00005.png|link=@每日活动>
+
+
+[@新会员系统按钮]
+#if
+;large U108 26
+#act
+; MOV N$坐标X -320
+dec N$坐标X 65
+INC S$图标2 <Button|id=105|children=108_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00004.png|link=@新会员系统>
+
+
+
+[@首充按钮]
+#if
+not check [22] 0
+#act
+break
+
+; #if
+; small <$str(U99)> 10
+; #act
+; dec N$坐标X 65
+; INC S$图标2 <Button|id=110|children=110_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00013.png|link=@新首充>
+; break
+
+#if
+not small <$str(U99)> 10
+#act
+dec N$坐标X 65
+INC S$图标2 <Button|id=110|children=110_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00014.png|link=@新首充>
+
+
+[@赞助按钮]
+#if
+not large U99 888
+#act
+dec N$坐标X 65
+INC S$图标2 <Button|id=116|children=116_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00022.png|link=@赞助>
+
+[@伸缩]
+#IF
+Equal <$CLIENTFLAG> 2
+#ACT
+;delbutton 102 2
+MOV S$展示 <Button|x=-230|a=3|y=45|rotate=180|nimg=official/top/1900012531.png|link=@展开>
+addbutton 102 2 <$STR(S$展示)>
+
+#elseact
+;delbutton 102 2
+MOV S$展示 <Button|x=-230|a=3|y=35|rotate=180|nimg=official/top/1900012531.png|link=@展开>
+addbutton 102 2 <$STR(S$展示)>
+
+[@展开]
+
+#IF
+#ACT
+addbutton 102 2 <$STR(S$图标2)>
+
+[@世界BOSS]
+#IF
+#ACT
+messagebox 这是攻略图标!!
+; #CALL [\首杀奖励\首杀奖励.txt] @首杀奖励
+
+[@神兵谱]
+#IF
+#ACT
+#CALL [\按钮功能\军火库.txt] @载入军火库
+
+
+[@异兽坊]
+#IF
+#ACT
+#CALL [\按钮功能\马厩.txt] @载入马厩
+
+
+[@首爆奖励]
+;#CALL [\技术QQ198605888\首杀_首爆\首爆_奖励\首爆_奖励.txt] @首爆_奖励
+#CALL [\首爆物品\首爆脚本界面.txt] @脚本界面
+
+
+[@天下大陆]
+#IF
+NOT CHECKUNDERWAR 沙巴克
+#ACT
+#CALL [\按钮功能\世界地图.txt] @世界地图堆栈
+BREAK
+#elseact
+messagebox [抱歉]：攻沙状态不允许逃跑！
+
+
+[@赞助]
+#IF
+#ACT
+#CALL [\赞助\赞助面板.txt] @赞助面板
+
+[@每日活动]
+#IF
+#ACT
+#CALL [\充值活动\活动.txt] @Settings_hd
+
+
+[@微信礼包]
+#IF
+#ACT
+#CALL [\技术QQ198605888\微信礼包.txt] @领取微信
+
+
+[@QQ礼包]
+#IF
+#ACT
+#CALL [\技术QQ198605888\QQ礼品.txt] @领取QQ
+
+[@新会员系统]
+#IF
+#ACT
+#CALL [\新会员系统\新会员系统.txt] @新会员系统面板
+
+[@新首充]
+#if
+#act
+#CALL [\首充\首充.txt] @首充面板
+
+[@Member]
+#IF
+ISADMIN
+#ACT
+;MessageBox 元宝@GM！
+#Call [\Mobile\特殊NPC\系统管理员.txt] @GM
+
+
+}

@@ -1,0 +1,534 @@
+[@main]
+#if
+CHECKTITLE 神域之力⑩
+#ACT
+close
+MessageBox 当前大陆称号已满级,不能再升级了!
+BREAK
+
+
+#IF
+NOT CHECKTITLE 神域之力①
+NOT CHECKTITLE 神域之力②
+NOT CHECKTITLE 神域之力③
+NOT CHECKTITLE 神域之力④
+NOT CHECKTITLE 神域之力⑤
+NOT CHECKTITLE 神域之力⑥
+NOT CHECKTITLE 神域之力⑦
+NOT CHECKTITLE 神域之力⑧
+NOT CHECKTITLE 神域之力⑨
+NOT CHECKTITLE 暗黑之力⑩
+#ACT
+close
+MessageBox 请您晋升[暗黑之力⑩]称号再来这里晋升!
+BREAK
+
+
+#IF
+NOT CHECKTITLE 神域之力①
+NOT CHECKTITLE 神域之力②
+NOT CHECKTITLE 神域之力③
+NOT CHECKTITLE 神域之力④
+NOT CHECKTITLE 神域之力⑤
+NOT CHECKTITLE 神域之力⑥
+NOT CHECKTITLE 神域之力⑦
+NOT CHECKTITLE 神域之力⑧
+NOT CHECKTITLE 神域之力⑨
+NOT CHECKTITLE 神域之力⑩
+
+#ACT
+MOV S$称号名称 神域之力①
+MOV S$称号属性 全属性510
+MOV S$称号爆率 爆率+61%
+MOV S$称号伤害 对怪伤害+61%
+MOV S$称号体力 生命值+3050
+MOV S$晋升条件1 神器碎片*335
+MOV S$晋升条件2 元宝*3350000
+MOV S$称号详情_1 public/sf1/1/01711.png
+MOV S$称号详情_2 public/sf1/1/01713.png
+MOV S$称号详情_3 public/sf1/1/01715.png
+MOV S$称号详情_4 public/sf1/1/01717.png
+MOV S$称号详情_5 public/sf1/1/01719.png
+MOV S$称号详情_6 public/sf1/1/01721.png
+MOV S$称号详情_7 public/sf1/1/01723.png
+MOV S$称号详情_8 public/sf1/1/01725.png
+MOV S$称号详情_9 public/sf1/1/01727.png
+MOV S$称号详情_10 public/sf1/1/01728.png
+
+MOV S$晋升称号1 @晋升1
+GOTO @称号主界面
+BREAK
+
+#IF
+CHECKTITLE 神域之力①
+#ACT
+MOV S$称号名称 神域之力②
+MOV S$称号属性 全属性520
+MOV S$称号爆率 爆率+62%
+MOV S$称号伤害 对怪伤害+62%
+MOV S$称号体力 生命值+3100
+MOV S$晋升条件1 神器碎片*340
+MOV S$晋升条件2 元宝*3400000
+MOV S$称号详情_1 public/sf1/1/01710.png
+MOV S$称号详情_2 public/sf1/1/01713.png
+MOV S$称号详情_3 public/sf1/1/01715.png
+MOV S$称号详情_4 public/sf1/1/01717.png
+MOV S$称号详情_5 public/sf1/1/01719.png
+MOV S$称号详情_6 public/sf1/1/01721.png
+MOV S$称号详情_7 public/sf1/1/01723.png
+MOV S$称号详情_8 public/sf1/1/01725.png
+MOV S$称号详情_9 public/sf1/1/01727.png
+MOV S$称号详情_10 public/sf1/1/01728.png
+
+MOV S$晋升称号1 @晋升2
+GOTO @称号主界面
+BREAK
+
+#IF
+CHECKTITLE 神域之力②
+#ACT
+MOV S$称号名称 神域之力③
+MOV S$称号属性 全属性530
+MOV S$称号爆率 爆率+63%
+MOV S$称号伤害 对怪伤害+63%
+MOV S$称号体力 生命值+3150
+MOV S$晋升条件1 神器碎片*345
+MOV S$晋升条件2 元宝*3450000
+MOV S$称号详情_1 public/sf1/1/01710.png
+MOV S$称号详情_2 public/sf1/1/01712.png
+MOV S$称号详情_3 public/sf1/1/01715.png
+MOV S$称号详情_4 public/sf1/1/01717.png
+MOV S$称号详情_5 public/sf1/1/01719.png
+MOV S$称号详情_6 public/sf1/1/01721.png
+MOV S$称号详情_7 public/sf1/1/01723.png
+MOV S$称号详情_8 public/sf1/1/01725.png
+MOV S$称号详情_9 public/sf1/1/01727.png
+MOV S$称号详情_10 public/sf1/1/01728.png
+
+MOV S$晋升称号1 @晋升3
+GOTO @称号主界面
+BREAK
+
+#IF
+CHECKTITLE 神域之力③
+#ACT
+MOV S$称号名称 神域之力④
+MOV S$称号属性 全属性540
+MOV S$称号爆率 爆率+64%
+MOV S$称号伤害 对怪伤害+64%
+MOV S$称号体力 生命值+3200
+MOV S$晋升条件1 神器碎片*350
+MOV S$晋升条件2 元宝*3500000
+MOV S$称号详情_1 public/sf1/1/01710.png
+MOV S$称号详情_2 public/sf1/1/01712.png
+MOV S$称号详情_3 public/sf1/1/01714.png
+MOV S$称号详情_4 public/sf1/1/01717.png
+MOV S$称号详情_5 public/sf1/1/01719.png
+MOV S$称号详情_6 public/sf1/1/01721.png
+MOV S$称号详情_7 public/sf1/1/01723.png
+MOV S$称号详情_8 public/sf1/1/01725.png
+MOV S$称号详情_9 public/sf1/1/01727.png
+MOV S$称号详情_10 public/sf1/1/01728.png
+
+MOV S$晋升称号1 @晋升4
+GOTO @称号主界面
+BREAK
+
+#IF
+CHECKTITLE 神域之力④
+#ACT
+MOV S$称号名称 神域之力⑤
+MOV S$称号属性 全属性550
+MOV S$称号爆率 爆率+65%
+MOV S$称号伤害 对怪伤害+65%
+MOV S$称号体力 生命值+3250
+MOV S$晋升条件1 神器碎片*355
+MOV S$晋升条件2 元宝*3550000
+MOV S$称号详情_1 public/sf1/1/01710.png
+MOV S$称号详情_2 public/sf1/1/01712.png
+MOV S$称号详情_3 public/sf1/1/01714.png
+MOV S$称号详情_4 public/sf1/1/01716.png
+MOV S$称号详情_5 public/sf1/1/01719.png
+MOV S$称号详情_6 public/sf1/1/01721.png
+MOV S$称号详情_7 public/sf1/1/01723.png
+MOV S$称号详情_8 public/sf1/1/01725.png
+MOV S$称号详情_9 public/sf1/1/01727.png
+MOV S$称号详情_10 public/sf1/1/01728.png
+
+MOV S$晋升称号1 @晋升5
+GOTO @称号主界面
+BREAK
+
+#IF
+CHECKTITLE 神域之力⑤
+#ACT
+MOV S$称号名称 神域之力⑥
+MOV S$称号属性 全属性560
+MOV S$称号爆率 爆率+66%
+MOV S$称号伤害 对怪伤害+66%
+MOV S$称号体力 生命值+3300
+MOV S$晋升条件1 神器碎片*360
+MOV S$晋升条件2 元宝*3600000
+MOV S$称号详情_1 public/sf1/1/01710.png
+MOV S$称号详情_2 public/sf1/1/01712.png
+MOV S$称号详情_3 public/sf1/1/01714.png
+MOV S$称号详情_4 public/sf1/1/01716.png
+MOV S$称号详情_5 public/sf1/1/01718.png
+MOV S$称号详情_6 public/sf1/1/01721.png
+MOV S$称号详情_7 public/sf1/1/01723.png
+MOV S$称号详情_8 public/sf1/1/01725.png
+MOV S$称号详情_9 public/sf1/1/01727.png
+MOV S$称号详情_10 public/sf1/1/01728.png
+
+MOV S$晋升称号1 @晋升6
+GOTO @称号主界面
+BREAK
+
+#IF
+CHECKTITLE 神域之力⑥
+#ACT
+MOV S$称号名称 神域之力⑦
+MOV S$称号属性 全属性570
+MOV S$称号爆率 爆率+67%
+MOV S$称号伤害 对怪伤害+67%
+MOV S$称号体力 生命值+3350
+MOV S$晋升条件1 神器碎片*365
+MOV S$晋升条件2 元宝*3650000
+MOV S$称号详情_1 public/sf1/1/01710.png
+MOV S$称号详情_2 public/sf1/1/01712.png
+MOV S$称号详情_3 public/sf1/1/01714.png
+MOV S$称号详情_4 public/sf1/1/01716.png
+MOV S$称号详情_5 public/sf1/1/01718.png
+MOV S$称号详情_6 public/sf1/1/01720.png
+MOV S$称号详情_7 public/sf1/1/01723.png
+MOV S$称号详情_8 public/sf1/1/01725.png
+MOV S$称号详情_9 public/sf1/1/01727.png
+MOV S$称号详情_10 public/sf1/1/01728.png
+
+MOV S$晋升称号1 @晋升7
+GOTO @称号主界面
+BREAK
+
+#IF
+CHECKTITLE 神域之力⑦
+#ACT
+MOV S$称号名称 神域之力⑧
+MOV S$称号属性 全属性580
+MOV S$称号爆率 爆率+68%
+MOV S$称号伤害 对怪伤害+68%
+MOV S$称号体力 生命值+3400
+MOV S$晋升条件1 神器碎片*370
+MOV S$晋升条件2 元宝*3700000
+MOV S$称号详情_1 public/sf1/1/01710.png
+MOV S$称号详情_2 public/sf1/1/01712.png
+MOV S$称号详情_3 public/sf1/1/01714.png
+MOV S$称号详情_4 public/sf1/1/01716.png
+MOV S$称号详情_5 public/sf1/1/01718.png
+MOV S$称号详情_6 public/sf1/1/01720.png
+MOV S$称号详情_7 public/sf1/1/01722.png
+MOV S$称号详情_8 public/sf1/1/01725.png
+MOV S$称号详情_9 public/sf1/1/01727.png
+MOV S$称号详情_10 public/sf1/1/01728.png
+
+MOV S$晋升称号1 @晋升8>
+GOTO @称号主界面
+BREAK
+
+#IF
+CHECKTITLE 神域之力⑧
+#ACT
+MOV S$称号名称 神域之力⑨
+MOV S$称号属性 全属性590
+MOV S$称号爆率 爆率+69%
+MOV S$称号伤害 对怪伤害+69%
+MOV S$称号体力 生命值+3450
+MOV S$晋升条件1 神器碎片*375
+MOV S$晋升条件2 元宝*3750000
+MOV S$称号详情_1 public/sf1/1/01710.png
+MOV S$称号详情_2 public/sf1/1/01712.png
+MOV S$称号详情_3 public/sf1/1/01714.png
+MOV S$称号详情_4 public/sf1/1/01716.png
+MOV S$称号详情_5 public/sf1/1/01718.png
+MOV S$称号详情_6 public/sf1/1/01720.png
+MOV S$称号详情_7 public/sf1/1/01722.png
+MOV S$称号详情_8 public/sf1/1/01724.png
+MOV S$称号详情_9 public/sf1/1/01727.png
+MOV S$称号详情_10 public/sf1/1/01728.png
+
+MOV S$晋升称号1 @晋升9
+GOTO @称号主界面
+BREAK
+
+#IF
+CHECKTITLE 神域之力⑨
+#ACT
+MOV S$称号名称 神域之力⑩
+MOV S$称号属性 全属性600
+MOV S$称号爆率 爆率+70%
+MOV S$称号伤害 对怪伤害+70%
+MOV S$称号体力 生命值+3500
+MOV S$晋升条件1 神器碎片*380
+MOV S$晋升条件2 元宝*3800000
+MOV S$称号详情_1 public/sf1/1/01710.png
+MOV S$称号详情_2 public/sf1/1/01712.png
+MOV S$称号详情_3 public/sf1/1/01714.png
+MOV S$称号详情_4 public/sf1/1/01716.png
+MOV S$称号详情_5 public/sf1/1/01718.png
+MOV S$称号详情_6 public/sf1/1/01720.png
+MOV S$称号详情_7 public/sf1/1/01722.png
+MOV S$称号详情_8 public/sf1/1/01724.png
+MOV S$称号详情_9 public/sf1/1/01726.png
+MOV S$称号详情_10 public/sf1/1/01728.png
+
+MOV S$晋升称号1 @晋升10
+GOTO @称号主界面
+BREAK
+
+
+
+
+[@称号主界面]
+#IF
+#ACT
+#SAY
+<Img|img=public/sf1/1/01087.png|x=430|y=120|children={close_btn,click_btn1,click_btn2,称号1,称号2,称号3,称号4,称号5,称号6,称号7,称号8,称号9,称号10,称号11,称号信息,升级条件}|bg=1|reset=1|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=960|y=130|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
+
+<Img|id=称号1|img=<$STR(S$称号详情_1)>|x=10|y=65>
+<Img|id=称号2|img=<$STR(S$称号详情_2)>|x=10|y=95>
+<Img|id=称号3|img=<$STR(S$称号详情_3)>|x=10|y=125>
+<Img|id=称号4|img=<$STR(S$称号详情_4)>|x=10|y=155>
+<Img|id=称号5|img=<$STR(S$称号详情_5)>|x=10|y=185>
+<Img|id=称号6|img=<$STR(S$称号详情_6)>|x=10|y=215>
+<Img|id=称号7|img=<$STR(S$称号详情_7)>|x=10|y=245>
+<Img|id=称号8|img=<$STR(S$称号详情_8)>|x=10|y=275>
+<Img|id=称号9|img=<$STR(S$称号详情_9)>|x=10|y=305>
+<Img|id=称号10|img=<$STR(S$称号详情_10)>|x=10|y=335>
+
+<Img|id=称号信息|children={称号名称,称号属性,称号爆率,称号伤害,称号体力}|x=320|y=70.0|height=1|width=1|img=public/1900000665.png>
+    <Text|id=称号名称|x=0|y=0|color=222|size=14|text=[<$STR(S$称号名称)>]>
+    <Text|id=称号属性|x=0|y=17|color=70|size=14|text=[<$STR(S$称号属性)>]>
+    <Text|id=称号爆率|x=0|y=34|color=58|size=14|text=[<$STR(S$称号爆率)>]>
+    <Text|id=称号伤害|x=0|y=51|color=146|size=14|text=[<$STR(S$称号伤害)>]>
+    <Text|id=称号体力|x=0|y=68|color=58|size=14|text=[<$STR(S$称号体力)>]>
+
+<Img|id=升级条件|children={条件1,条件2}|x=280|y=180.0|height=1|width=1|img=public/1900000665.png>
+    <Text|id=条件1|x=0|y=10|color=222|size=15|text=[<$STR(S$晋升条件1)>]>
+    <Text|id=条件2|x=0|y=35|color=222|size=15|text=[<$STR(S$晋升条件2)>]>
+
+<Button|id=click_btn1|x=300|y=335|nimg=public/sf1/1/00724.png|pimg=public/sf1/2/00726.png|link=<$STR(S$晋升称号1)>>
+;<Button|id=click_btn2|x=420|y=335|nimg=public/sf1/1/01347.png|pimg=public/sf1/2/01349.png|link=<$STR(S$晋升称号2)>>
+
+
+
+[@晋升1]
+#IF
+CHECKTITLE 暗黑之力⑩
+CHECKITEM 神器碎片 335
+CHECKGAMEGOLD > 3349999
+#ACT
+GAMEGOLD - 3350000
+TAKE  神器碎片 335
+DEPRIVETITLE 暗黑之力⑩
+CONFERTITLE 神域之力①
+#CALL [\属性重载\游戏爆率.txt] @暴率
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【神域之力①】称号/FCOLOR=58>
+GOTO @MAIN
+BREAK
+#elseact
+MESSAGEBOX 打造条件不足??\\1、材料不足
+GOTO @MAIN
+BREAK
+
+[@晋升2]
+#IF
+CHECKTITLE 神域之力①
+CHECKITEM 神器碎片 340
+CHECKGAMEGOLD > 3399999
+#ACT
+GAMEGOLD - 3400000
+TAKE  神器碎片 340
+DEPRIVETITLE 神域之力①
+CONFERTITLE 神域之力②
+#CALL [\属性重载\游戏爆率.txt] @暴率
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【神域之力②】称号/FCOLOR=58>
+GOTO @MAIN
+BREAK
+#elseact
+MESSAGEBOX 打造条件不足??\\1、材料不足
+GOTO @MAIN
+BREAK
+
+[@晋升3]
+#IF
+CHECKTITLE 神域之力②
+CHECKITEM 神器碎片 345
+CHECKGAMEGOLD > 3449999
+#ACT
+GAMEGOLD - 3450000
+TAKE  神器碎片 345
+DEPRIVETITLE 神域之力②
+CONFERTITLE 神域之力③
+#CALL [\属性重载\游戏爆率.txt] @暴率
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【神域之力③】称号/FCOLOR=58>
+GOTO @MAIN
+BREAK
+#elseact
+MESSAGEBOX 打造条件不足??\\1、材料不足
+GOTO @MAIN
+BREAK
+
+[@晋升4]
+#IF
+CHECKTITLE 神域之力③
+CHECKITEM 神器碎片 350
+CHECKGAMEGOLD > 3499999
+#ACT
+GAMEGOLD - 3500000
+TAKE  神器碎片 350
+DEPRIVETITLE 神域之力③
+CONFERTITLE 神域之力④
+#CALL [\属性重载\游戏爆率.txt] @暴率
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【神域之力④】称号/FCOLOR=58>
+GOTO @MAIN
+BREAK
+#elseact
+MESSAGEBOX 打造条件不足??\\1、材料不足
+GOTO @MAIN
+BREAK
+
+[@晋升5]
+#IF
+CHECKTITLE 神域之力④
+CHECKITEM 神器碎片 355
+CHECKGAMEGOLD > 3549999
+#ACT
+GAMEGOLD - 3550000
+TAKE  神器碎片 355
+DEPRIVETITLE 神域之力④
+CONFERTITLE 神域之力⑤
+#CALL [\属性重载\游戏爆率.txt] @暴率
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【神域之力⑤】称号/FCOLOR=58>
+GOTO @MAIN
+BREAK
+#elseact
+MESSAGEBOX 打造条件不足??\\1、材料不足
+GOTO @MAIN
+BREAK
+
+[@晋升6]
+#IF
+CHECKTITLE 神域之力⑤
+CHECKITEM 神器碎片 360
+CHECKGAMEGOLD > 3599999
+#ACT
+GAMEGOLD - 3600000
+TAKE  神器碎片 360
+DEPRIVETITLE 神域之力⑤
+CONFERTITLE 神域之力⑥
+#CALL [\属性重载\游戏爆率.txt] @暴率
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【神域之力⑥】称号/FCOLOR=58>
+GOTO @MAIN
+BREAK
+#elseact
+MESSAGEBOX 打造条件不足??\\1、材料不足
+GOTO @MAIN
+BREAK
+
+[@晋升7]
+#IF
+CHECKTITLE 神域之力⑥
+CHECKITEM 神器碎片 365
+CHECKGAMEGOLD > 3649999
+#ACT
+GAMEGOLD - 3650000
+TAKE  神器碎片 365
+DEPRIVETITLE 神域之力⑥
+CONFERTITLE 神域之力⑦
+#CALL [\属性重载\游戏爆率.txt] @暴率
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【神域之力⑦】称号/FCOLOR=58>
+GOTO @MAIN
+BREAK
+#elseact
+MESSAGEBOX 打造条件不足??\\1、材料不足
+GOTO @MAIN
+BREAK
+
+[@晋升8]
+#IF
+CHECKTITLE 神域之力⑦
+CHECKITEM 神器碎片 370
+CHECKGAMEGOLD > 3699999
+#ACT
+GAMEGOLD - 3700000
+TAKE  神器碎片 370
+DEPRIVETITLE 神域之力⑦
+CONFERTITLE 神域之力⑧
+#CALL [\属性重载\游戏爆率.txt] @暴率
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【神域之力⑧】称号/FCOLOR=58>
+GOTO @MAIN
+BREAK
+#elseact
+MESSAGEBOX 打造条件不足??\\1、材料不足
+GOTO @MAIN
+BREAK
+
+[@晋升9]
+#IF
+CHECKTITLE 神域之力⑧
+CHECKITEM 神器碎片 375
+CHECKGAMEGOLD > 3749999
+#ACT
+GAMEGOLD - 3750000
+TAKE  神器碎片 375
+DEPRIVETITLE 神域之力⑧
+CONFERTITLE 神域之力⑨
+#CALL [\属性重载\游戏爆率.txt] @暴率
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【神域之力⑨】称号/FCOLOR=58>
+GOTO @MAIN
+BREAK
+#elseact
+MESSAGEBOX 打造条件不足??\\1、材料不足
+GOTO @MAIN
+BREAK
+
+[@晋升10]
+#IF
+CHECKTITLE 神域之力⑨
+CHECKITEM 神器碎片 380
+CHECKGAMEGOLD > 3799999
+#ACT
+GAMEGOLD - 3800000
+TAKE  神器碎片 380
+DEPRIVETITLE 神域之力⑨
+CONFERTITLE 神域之力⑩
+#CALL [\属性重载\游戏爆率.txt] @暴率
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【神域之力⑩】称号/FCOLOR=58>
+GOTO @MAIN
+BREAK
+#elseact
+MESSAGEBOX 打造条件不足??\\1、材料不足
+GOTO @MAIN
+BREAK
+

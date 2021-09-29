@@ -1,0 +1,2490 @@
+[@Settings_cs]
+{
+#IF
+#ACT
+GOTO @Chepag
+GOTO @Chseds
+
+[@Chseds]
+
+<Img|bg=1|move=1|reset=0|img=public/bg_npc_06.jpg>
+<Layout|x=400|width=80|height=80|link=@exit>
+<Button|x=400|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+
+<Img|img=public/bg_yyxsz_01.png|width=380|height=2|x=10|y=55>
+<Img|img=public/bg_yyxsz_02.png|width=2|height=510|x=135|y=55>
+
+<Text|text=飞鞋|color=1005|x=180|y=20|size=20>
+<Text|text=当前飞鞋：|color=255|x=145|y=500|size=18>
+<Text|text=传送1次需消耗飞鞋：1|color=255|x=145|y=530|size=18>
+
+<$STR(S$鞋子数量)>
+
+<$STR(S$主页签A1)>
+<$STR(S$主页签02)>
+<$STR(S$主页签03)>
+<$STR(S$主页签04)>
+<$STR(S$主页签05)>
+<$STR(S$主页签06)>
+<$STR(S$主页签07)>
+<$STR(S$主页签08)>
+<$STR(S$主页签09)>
+
+<$STR(S$分页签01)>
+<$STR(S$锁定图01)>
+
+<$STR(S$分页签02)>
+<$STR(S$锁定图02)>
+
+<$STR(S$分页签03)>
+<$STR(S$锁定图03)>
+
+<$STR(S$分页签04)>
+<$STR(S$锁定图04)>
+
+<$STR(S$分页签05)>
+<$STR(S$锁定图05)>
+
+<$STR(S$分页签06)>
+<$STR(S$锁定图06)>
+
+<$STR(S$分页签07)>
+<$STR(S$锁定图07)>
+
+<$STR(S$分页签08)>
+<$STR(S$锁定图08)>
+
+[@比奇省]
+
+<Img|bg=1|move=1|reset=0|img=public/bg_npc_06.jpg>
+<Layout|x=400|width=80|height=80|link=@exit>
+<Button|x=400|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+
+<Img|img=public/bg_yyxsz_01.png|width=380|height=2|x=10|y=55>
+<Img|img=public/bg_yyxsz_02.png|width=2|height=510|x=135|y=55>
+
+<Text|text=飞鞋|color=1005|x=180|y=20|size=20>
+<Text|text=当前飞鞋：|color=255|x=145|y=500|size=18>
+<Text|text=传送1次需消耗飞鞋：1|color=255|x=145|y=530|size=18>
+
+<$STR(S$鞋子数量)>
+
+<$STR(S$主页签01)>
+<$STR(S$主页签A2)>
+<$STR(S$主页签03)>
+<$STR(S$主页签04)>
+<$STR(S$主页签05)>
+<$STR(S$主页签06)>
+<$STR(S$主页签07)>
+<$STR(S$主页签08)>
+<$STR(S$主页签09)>
+
+<$STR(S$分页签20)>
+<$STR(S$锁定图20)>
+
+<$STR(S$分页签21)>
+<$STR(S$锁定图21)>
+
+<$STR(S$分页签22)>
+<$STR(S$锁定图22)>
+
+<$STR(S$分页签23)>
+<$STR(S$锁定图23)>
+
+<$STR(S$分页签24)>
+<$STR(S$锁定图24)>
+
+<$STR(S$分页签25)>
+<$STR(S$锁定图25)>
+
+<$STR(S$分页签26)>
+<$STR(S$锁定图26)>
+
+<$STR(S$分页签27)>
+<$STR(S$锁定图27)>
+
+<$STR(S$分页签28)>
+<$STR(S$锁定图28)>
+
+<$STR(S$分页签29)>
+<$STR(S$锁定图29)>
+
+<$STR(S$分页签30)>
+<$STR(S$锁定图30)>
+
+<$STR(S$分页签31)>
+<$STR(S$锁定图31)>
+
+<$STR(S$分页签32)>
+<$STR(S$锁定图32)>
+
+<$STR(S$分页签33)>
+<$STR(S$锁定图33)>
+
+<$STR(S$分页签34)>
+<$STR(S$锁定图34)>
+
+<$STR(S$分页签35)>
+<$STR(S$锁定图35)>
+
+
+[@毒蛇山谷]
+
+<Img|bg=1|move=1|reset=0|img=public/bg_npc_06.jpg>
+<Layout|x=400|width=80|height=80|link=@exit>
+<Button|x=400|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+
+<Img|img=public/bg_yyxsz_01.png|width=380|height=2|x=10|y=55>
+<Img|img=public/bg_yyxsz_02.png|width=2|height=510|x=135|y=55>
+
+<Text|text=飞鞋|color=1005|x=180|y=20|size=20>
+<Text|text=当前飞鞋：|color=255|x=145|y=500|size=18>
+<Text|text=传送1次需消耗飞鞋：1|color=255|x=145|y=530|size=18>
+
+<$STR(S$鞋子数量)>
+
+<$STR(S$主页签01)>
+<$STR(S$主页签02)>
+<$STR(S$主页签A3)>
+<$STR(S$主页签04)>
+<$STR(S$主页签05)>
+<$STR(S$主页签06)>
+<$STR(S$主页签07)>
+<$STR(S$主页签08)>
+<$STR(S$主页签09)>
+
+<$STR(S$分页签40)>
+<$STR(S$锁定图40)>
+
+<$STR(S$分页签41)>
+<$STR(S$锁定图41)>
+
+
+[@盟重省]
+
+<Img|bg=1|move=1|reset=0|img=public/bg_npc_06.jpg>
+<Layout|x=400|width=80|height=80|link=@exit>
+<Button|x=400|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+
+<Img|img=public/bg_yyxsz_01.png|width=380|height=2|x=10|y=55>
+<Img|img=public/bg_yyxsz_02.png|width=2|height=510|x=135|y=55>
+
+<Text|text=飞鞋|color=1005|x=180|y=20|size=20>
+<Text|text=当前飞鞋：|color=255|x=145|y=500|size=18>
+<Text|text=传送1次需消耗飞鞋：1|color=255|x=145|y=530|size=18>
+
+<$STR(S$鞋子数量)>
+
+<$STR(S$主页签01)>
+<$STR(S$主页签02)>
+<$STR(S$主页签03)>
+<$STR(S$主页签A4)>
+<$STR(S$主页签05)>
+<$STR(S$主页签06)>
+<$STR(S$主页签07)>
+<$STR(S$主页签08)>
+<$STR(S$主页签09)>
+
+<$STR(S$分页签60)>
+<$STR(S$锁定图60)>
+
+<$STR(S$分页签61)>
+<$STR(S$锁定图61)>
+
+<$STR(S$分页签62)>
+<$STR(S$锁定图62)>
+
+<$STR(S$分页签63)>
+<$STR(S$锁定图63)>
+
+<$STR(S$分页签64)>
+<$STR(S$锁定图64)>
+
+<$STR(S$分页签65)>
+<$STR(S$锁定图65)>
+
+<$STR(S$分页签66)>
+<$STR(S$锁定图66)>
+
+<$STR(S$分页签67)>
+<$STR(S$锁定图67)>
+
+<$STR(S$分页签68)>
+<$STR(S$锁定图68)>
+
+<$STR(S$分页签69)>
+<$STR(S$锁定图69)>
+
+<$STR(S$分页签70)>
+<$STR(S$锁定图70)>
+
+<$STR(S$分页签71)>
+<$STR(S$锁定图71)>
+
+<$STR(S$分页签72)>
+<$STR(S$锁定图72)>
+
+<$STR(S$分页签73)>
+<$STR(S$锁定图73)>
+
+<$STR(S$分页签74)>
+<$STR(S$锁定图74)>
+
+<$STR(S$分页签75)>
+<$STR(S$锁定图75)>
+
+
+[@封魔谷]
+
+<Img|bg=1|move=1|reset=0|img=public/bg_npc_06.jpg>
+<Layout|x=400|width=80|height=80|link=@exit>
+<Button|x=400|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+
+<Img|img=public/bg_yyxsz_01.png|width=380|height=2|x=10|y=55>
+<Img|img=public/bg_yyxsz_02.png|width=2|height=510|x=135|y=55>
+
+<Text|text=飞鞋|color=1005|x=180|y=20|size=20>
+<Text|text=当前飞鞋：|color=255|x=145|y=500|size=18>
+<Text|text=传送1次需消耗飞鞋：1|color=255|x=145|y=530|size=18>
+
+<$STR(S$鞋子数量)>
+
+<$STR(S$主页签01)>
+<$STR(S$主页签02)>
+<$STR(S$主页签03)>
+<$STR(S$主页签04)>
+<$STR(S$主页签A5)>
+<$STR(S$主页签06)>
+<$STR(S$主页签07)>
+<$STR(S$主页签08)>
+<$STR(S$主页签09)>
+
+<$STR(S$分页签80)>
+<$STR(S$锁定图80)>
+
+<$STR(S$分页签81)>
+<$STR(S$锁定图81)>
+
+<$STR(S$分页签82)>
+<$STR(S$锁定图82)>
+
+<$STR(S$分页签83)>
+<$STR(S$锁定图83)>
+
+<$STR(S$分页签84)>
+<$STR(S$锁定图84)>
+
+<$STR(S$分页签85)>
+<$STR(S$锁定图85)>
+
+<$STR(S$分页签86)>
+<$STR(S$锁定图86)>
+
+<$STR(S$分页签87)>
+<$STR(S$锁定图87)>
+
+<$STR(S$分页签88)>
+<$STR(S$锁定图88)>
+
+<$STR(S$分页签89)>
+<$STR(S$锁定图89)>
+
+<$STR(S$分页签90)>
+<$STR(S$锁定图90)>
+
+<$STR(S$分页签91)>
+<$STR(S$锁定图91)>
+
+<$STR(S$分页签92)>
+<$STR(S$锁定图92)>
+
+<$STR(S$分页签93)>
+<$STR(S$锁定图93)>
+
+
+[@白日门]
+
+<Img|bg=1|move=1|reset=0|img=public/bg_npc_06.jpg>
+<Layout|x=400|width=80|height=80|link=@exit>
+<Button|x=400|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+
+<Img|img=public/bg_yyxsz_01.png|width=380|height=2|x=10|y=55>
+<Img|img=public/bg_yyxsz_02.png|width=2|height=510|x=135|y=55>
+
+<Text|text=飞鞋|color=1005|x=180|y=20|size=20>
+<Text|text=当前飞鞋：|color=255|x=145|y=500|size=18>
+<Text|text=传送1次需消耗飞鞋：1|color=255|x=145|y=530|size=18>
+
+<$STR(S$鞋子数量)>
+
+<$STR(S$主页签01)>
+<$STR(S$主页签02)>
+<$STR(S$主页签03)>
+<$STR(S$主页签04)>
+<$STR(S$主页签05)>
+<$STR(S$主页签A6)>
+<$STR(S$主页签07)>
+<$STR(S$主页签08)>
+<$STR(S$主页签09)>
+
+<$STR(S$分页签100)>
+<$STR(S$锁定图100)>
+
+<$STR(S$分页签101)>
+<$STR(S$锁定图101)>
+
+<$STR(S$分页签102)>
+<$STR(S$锁定图102)>
+
+<$STR(S$分页签103)>
+<$STR(S$锁定图103)>
+
+<$STR(S$分页签104)>
+<$STR(S$锁定图104)>
+
+<$STR(S$分页签105)>
+<$STR(S$锁定图105)>
+
+<$STR(S$分页签106)>
+<$STR(S$锁定图106)>
+
+<$STR(S$分页签107)>
+<$STR(S$锁定图107)>
+
+<$STR(S$分页签108)>
+<$STR(S$锁定图108)>
+
+<$STR(S$分页签109)>
+<$STR(S$锁定图109)>
+
+
+
+
+
+[@苍月岛]
+
+<Img|bg=1|move=1|reset=0|img=public/bg_npc_06.jpg>
+<Layout|x=400|width=80|height=80|link=@exit>
+<Button|x=400|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+
+<Img|img=public/bg_yyxsz_01.png|width=380|height=2|x=10|y=55>
+<Img|img=public/bg_yyxsz_02.png|width=2|height=510|x=135|y=55>
+
+<Text|text=飞鞋|color=1005|x=180|y=20|size=20>
+<Text|text=当前飞鞋：|color=255|x=145|y=500|size=18>
+<Text|text=传送1次需消耗飞鞋：1|color=255|x=145|y=530|size=18>
+
+<$STR(S$鞋子数量)>
+
+<$STR(S$主页签01)>
+<$STR(S$主页签02)>
+<$STR(S$主页签03)>
+<$STR(S$主页签04)>
+<$STR(S$主页签05)>
+<$STR(S$主页签06)>
+<$STR(S$主页签A7)>
+<$STR(S$主页签08)>
+<$STR(S$主页签09)>
+
+<$STR(S$分页签140)>
+<$STR(S$锁定图140)>
+
+<$STR(S$分页签141)>
+<$STR(S$锁定图141)>
+
+<$STR(S$分页签142)>
+<$STR(S$锁定图142)>
+
+<$STR(S$分页签143)>
+<$STR(S$锁定图143)>
+
+<$STR(S$分页签144)>
+<$STR(S$锁定图144)>
+
+<$STR(S$分页签145)>
+<$STR(S$锁定图145)>
+
+<$STR(S$分页签146)>
+<$STR(S$锁定图146)>
+
+<$STR(S$分页签147)>
+<$STR(S$锁定图147)>
+
+<$STR(S$分页签148)>
+<$STR(S$锁定图148)>
+
+<$STR(S$分页签149)>
+<$STR(S$锁定图149)>
+
+<$STR(S$分页签150)>
+<$STR(S$锁定图150)>
+
+<$STR(S$分页签151)>
+<$STR(S$锁定图151)>
+
+<$STR(S$分页签152)>
+<$STR(S$锁定图152)>
+
+<$STR(S$分页签153)>
+<$STR(S$锁定图153)>
+
+
+
+
+
+
+
+
+
+
+
+[@魔王传送]
+
+<Img|bg=1|move=1|reset=0|img=public/bg_npc_06.jpg>
+<Layout|x=400|width=80|height=80|link=@exit>
+<Button|x=400|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+
+<Img|img=public/bg_yyxsz_01.png|width=380|height=2|x=10|y=55>
+<Img|img=public/bg_yyxsz_02.png|width=2|height=510|x=135|y=55>
+
+<Text|text=飞鞋|color=1005|x=180|y=20|size=20>
+<Text|text=当前飞鞋：|color=255|x=145|y=500|size=18>
+<Text|text=传送1次需消耗飞鞋：10|color=255|x=145|y=530|size=18>
+
+<$STR(S$鞋子数量)>
+
+<$STR(S$主页签01)>
+<$STR(S$主页签02)>
+<$STR(S$主页签03)>
+<$STR(S$主页签04)>
+<$STR(S$主页签05)>
+<$STR(S$主页签06)>
+<$STR(S$主页签07)>
+<$STR(S$主页签A8)>
+<$STR(S$主页签09)>
+
+<$STR(S$分页签200)>
+<$STR(S$锁定图200)>
+
+<$STR(S$分页签201)>
+<$STR(S$锁定图201)>
+
+<$STR(S$分页签202)>
+<$STR(S$锁定图202)>
+
+<$STR(S$分页签203)>
+<$STR(S$锁定图203)>
+
+<$STR(S$分页签204)>
+<$STR(S$锁定图204)>
+
+<$STR(S$分页签205)>
+<$STR(S$锁定图205)>
+
+
+
+
+
+[@其它传送]
+
+<Img|bg=1|move=1|reset=0|img=public/bg_npc_06.jpg>
+<Layout|x=400|width=80|height=80|link=@exit>
+<Button|x=400|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+
+<Img|img=public/bg_yyxsz_01.png|width=380|height=2|x=10|y=55>
+<Img|img=public/bg_yyxsz_02.png|width=2|height=510|x=135|y=55>
+
+<Text|text=飞鞋|color=1005|x=180|y=20|size=20>
+<Text|text=当前飞鞋：|color=255|x=145|y=500|size=18>
+<Text|text=传送1次需消耗飞鞋：1|color=255|x=145|y=530|size=18>
+
+<$STR(S$鞋子数量)>
+
+<$STR(S$主页签01)>
+<$STR(S$主页签02)>
+<$STR(S$主页签03)>
+<$STR(S$主页签04)>
+<$STR(S$主页签05)>
+<$STR(S$主页签06)>
+<$STR(S$主页签07)>
+<$STR(S$主页签08)>
+<$STR(S$主页签A9)>
+
+<$STR(S$分页签120)>
+<$STR(S$锁定图120)>
+
+<$STR(S$分页签121)>
+<$STR(S$锁定图121)>
+
+<$STR(S$分页签122)>
+<$STR(S$锁定图122)>
+
+<$STR(S$分页签123)>
+<$STR(S$锁定图123)>
+
+<$STR(S$分页签124)>
+<$STR(S$锁定图124)>
+
+<$STR(S$分页签125)>
+<$STR(S$锁定图125)>
+
+
+[@比奇城]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove 0 333 268
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+
+[@边界村]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove 0 292 620
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@银杏村]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove 0 650 625
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@毒蛇]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove 2 506 487
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@盟重]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove 3 333 333
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@封魔]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove 4 239 201
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@道馆]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove 11 180 325
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@苍月]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove 5 140 330
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@沃玛森林]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove 0 325 38
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@沃玛一层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove D022 76 74
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@沃玛二层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove D023 199 197
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@半兽一层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove D001 152 360
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@半兽二层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove D002 323 18
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@半兽三层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove D003 107 83
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@洞穴一层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove D011 152 365
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@洞穴二层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove D012 77 200
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@比奇矿区]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove D401 27 181
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@北部矿区]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove D411 59 8
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@东部矿区]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove D402 100 105
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@废矿一层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove D403 93 99
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+
+[@矿区二层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove D404 101 104
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@回收站]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove D405 92 157
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@南部矿区]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove D406 23 18
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@废弃桥头]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove D413 11 10
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@毒蛇矿区一层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 2
+mapmove D421 31 371
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@毒蛇矿区二层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 2
+mapmove D422 329 379
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@祖玛一层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 3
+mapmove D501 168 216
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@祖玛二层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 3
+mapmove D502 168 216
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@祖玛三层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 3
+mapmove D503 168 216
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@祖玛四层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 3
+mapmove D504 168 216
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@祖玛五层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 3
+mapmove D505 99 96
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@石墓一层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 3
+mapmove D711 203 202
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@石墓二层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 3
+mapmove D712 366 226
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@石墓三层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 3
+mapmove D713 34 190
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@石墓四层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 3
+mapmove D714 385 190
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@石墓五层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 3
+mapmove D715 32 344
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@邪恶势力]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 3
+mapmove D615 62 85
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@恐怖空间]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 3
+mapmove D617 45 45
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@封魔矿区]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove D2000 134 130
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@歧路]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 2
+mapmove D2001 257 266
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@连接通道]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 3
+mapmove D2002 31 34
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@封魔道]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 3
+mapmove D2003 282 276
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@疾风殿]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 4
+mapmove D2004 74 74
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@光芒回廊]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 4
+mapmove D2005 84 86
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@烈焰殿]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 4
+mapmove D2006 72 78
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@雷霆之路]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 4
+mapmove D2007 179 178
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@霸者大厅]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 4
+mapmove D2008 82 81
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@幽冥回廊]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 4
+mapmove D2009 83 85
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@纵横道]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 4
+mapmove D2010 283 278
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@魔魂殿]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 4
+mapmove D2011 83 86
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@炼狱回廊]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 4
+mapmove D2012 82 83
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@封魔殿]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 4
+mapmove D2013 81 82
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@丛林迷宫]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 2
+mapmove 12 326 458
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@峡谷东走廊]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 6
+mapmove D10011 267 382
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@峡谷西走廊]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 6
+mapmove D10012 52 283
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@西回隧道]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 6
+mapmove D10013 287 282
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@峡谷东二层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 6
+mapmove D1002 15 28
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@峡谷广场]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 6
+mapmove D10031 287 148
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@峡谷东长廊]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 6
+mapmove D10032 11 153
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@抉择之地]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 6
+mapmove D1004 89 196
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@山谷秘道一]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 6
+mapmove D10051 38 99
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@山谷秘道二]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 6
+mapmove D10052 96 182
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@尸魔洞一层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 5
+mapmove D2051 113 175
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@尸魔洞二层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 5
+mapmove D2053 198 272
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@尸魔洞三层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 6
+mapmove D2052 88 71
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@骨魔洞一层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 5
+mapmove D2061 21 168
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@骨魔洞二层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 5
+mapmove D2062 32 20
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@骨魔洞三层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 5
+mapmove D2063 90 169
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@骨魔洞四层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 5
+mapmove D2064 18 31
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@骨魔洞五层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 6
+mapmove D2065 237 30
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@牛魔寺庙一层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 3
+mapmove D2071 223 223
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@牛魔寺庙二层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 8
+mapmove D2072 149 117
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@牛魔寺庙三层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 8
+mapmove D2073 157 158
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@牛魔寺庙四层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 8
+mapmove D2074 35 27
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@牛魔寺庙五层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 8
+mapmove D2075 42 104
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@牛魔寺庙六层]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 8
+mapmove D2076 94 126
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@地狱烈焰]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 10
+mapmove T139 12 28
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@堕落坟场]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 10
+mapmove T115 59 156
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@深渊魔域]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 10
+mapmove T119 13 83
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@困惑殿堂]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 10
+mapmove T140 9 16
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@钳虫巢穴]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 10
+mapmove T132 19 23
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@回城传送]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+GoHome
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+[@行会传送]
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MONEY 小飞鞋 - 1
+mapmove 3 644 290
+close
+#ELSEACT
+SENDMSG 10 对不起，小飞鞋不足，无法移动！ 1009 -1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@Chepag]
+#IF
+#ACT
+
+;等级检测
+
+MOV N$比奇城 15
+MOV N$边界村 0
+MOV N$银杏村 0
+MOV N$毒蛇山谷 20
+MOV N$盟重省 25
+MOV N$白日门 35
+MOV N$封魔谷 32
+MOV N$苍月岛 40
+
+MOV N$沃玛森林 10
+MOV N$沃玛一层 20
+MOV N$沃玛二层 30
+
+MOV N$半兽一层 7
+MOV N$半兽二层 12
+MOV N$半兽三层 16
+
+MOV N$洞穴一层 9
+MOV N$洞穴二层 16
+
+MOV N$比奇矿区 17
+MOV N$北部矿区 18
+MOV N$东部矿区 19
+MOV N$矿区一层 20
+MOV N$矿区二层 21
+MOV N$回收站 22
+MOV N$南部矿区 23
+MOV N$废弃桥头 25
+
+MOV N$毒蛇一层 25
+MOV N$毒蛇二层 30
+
+MOV N$祖玛一层 30
+MOV N$祖玛二层 33
+MOV N$祖玛三层 35
+MOV N$祖玛四层 40
+MOV N$祖玛五层 45
+MOV N$石墓一层 25
+MOV N$石墓二层 28
+MOV N$石墓三层 32
+MOV N$石墓四层 36
+MOV N$石墓五层 38
+MOV N$邪恶势力 40
+MOV N$恐怖空间 34
+MOV N$死亡棺材 26
+MOV N$黑暗地带 28
+MOV N$生死之间 32
+MOV N$传奇部落 30
+
+MOV N$封魔矿区 25
+MOV N$歧路 32
+MOV N$连接通道 30
+MOV N$封魔道 35
+MOV N$疾风殿 36
+MOV N$光芒回廊 38
+MOV N$烈焰殿 39
+MOV N$雷霆之路 40
+MOV N$霸者大厅 41
+MOV N$幽冥回廊 42
+MOV N$纵横道 43
+MOV N$魔魂殿 44
+MOV N$炼狱回廊 45
+MOV N$封魔殿 46
+
+MOV N$丛林迷宫 30
+MOV N$峡谷东走廊 42
+MOV N$峡谷西走廊 43
+MOV N$西回隧道 41
+MOV N$峡谷东二层 43
+MOV N$峡谷广场 44
+MOV N$峡谷东长廊 46
+MOV N$抉择之地 47
+MOV N$山谷秘道一 48
+MOV N$山谷秘道二 48
+
+MOV N$尸魔洞一层 35
+MOV N$尸魔洞二层 38
+MOV N$尸魔洞三层 43
+MOV N$骨魔洞一层 32
+MOV N$骨魔洞二层 36
+MOV N$骨魔洞三层 38
+MOV N$骨魔洞四层 42
+MOV N$骨魔洞五层 46
+MOV N$牛魔寺庙一层 35
+MOV N$牛魔寺庙二层 38
+MOV N$牛魔寺庙三层 42
+MOV N$牛魔寺庙四层 44
+MOV N$牛魔寺庙五层 46
+MOV N$牛魔寺庙六层 48
+
+MOV N$堕落坟场 40
+MOV N$死亡神殿 40
+MOV N$深渊魔域 40
+MOV N$钳虫巢穴 40
+MOV N$地狱烈焰 40
+MOV N$困惑殿堂 40
+
+MOV N$随机传送 1
+MOV N$回城传送 1
+MOV N$地牢逃脱 1
+MOV N$行会传送 1
+MOV N$沙城通道 1
+MOV N$沙城郊外 1
+
+MOV S$锁定图01 
+MOV S$锁定图02 
+MOV S$锁定图03 
+MOV S$锁定图04 
+MOV S$锁定图05 
+MOV S$锁定图06 
+MOV S$锁定图07 
+MOV S$锁定图08 
+
+MOV S$锁定图20 
+MOV S$锁定图21 
+MOV S$锁定图22 
+MOV S$锁定图23 
+MOV S$锁定图24 
+MOV S$锁定图25 
+MOV S$锁定图26 
+MOV S$锁定图27 
+MOV S$锁定图28 
+MOV S$锁定图29 
+MOV S$锁定图30 
+MOV S$锁定图31 
+MOV S$锁定图32 
+MOV S$锁定图33 
+MOV S$锁定图34 
+MOV S$锁定图35 
+
+MOV S$锁定图40 
+MOV S$锁定图41 
+
+MOV S$锁定图60 
+MOV S$锁定图61 
+MOV S$锁定图62 
+MOV S$锁定图63 
+MOV S$锁定图64 
+MOV S$锁定图65 
+MOV S$锁定图66 
+MOV S$锁定图67 
+MOV S$锁定图68 
+MOV S$锁定图69 
+MOV S$锁定图70 
+MOV S$锁定图71 
+MOV S$锁定图72 
+MOV S$锁定图73 
+MOV S$锁定图74 
+MOV S$锁定图75 
+
+MOV S$锁定图80 
+MOV S$锁定图81 
+MOV S$锁定图82 
+MOV S$锁定图83 
+MOV S$锁定图84 
+MOV S$锁定图85 
+MOV S$锁定图86 
+MOV S$锁定图87 
+MOV S$锁定图88 
+MOV S$锁定图89 
+MOV S$锁定图90 
+MOV S$锁定图91 
+MOV S$锁定图92 
+MOV S$锁定图93 
+
+MOV S$锁定图100 
+MOV S$锁定图101 
+MOV S$锁定图102 
+MOV S$锁定图103 
+MOV S$锁定图104 
+MOV S$锁定图105 
+MOV S$锁定图106 
+MOV S$锁定图107 
+MOV S$锁定图108 
+MOV S$锁定图109 
+
+MOV S$锁定图120 
+MOV S$锁定图121 
+MOV S$锁定图122 
+MOV S$锁定图123 
+MOV S$锁定图124 
+MOV S$锁定图125 
+
+MOV S$锁定图140 
+MOV S$锁定图141 
+MOV S$锁定图142 
+MOV S$锁定图143 
+MOV S$锁定图144 
+MOV S$锁定图145 
+MOV S$锁定图146 
+MOV S$锁定图147 
+MOV S$锁定图148 
+MOV S$锁定图149 
+
+MOV S$锁定图150 
+MOV S$锁定图151 
+MOV S$锁定图152 
+MOV S$锁定图153 
+
+MOV S$锁定图200 
+MOV S$锁定图201 
+MOV S$锁定图202 
+MOV S$锁定图203 
+MOV S$锁定图204 
+MOV S$锁定图205 
+
+
+
+;页签设置
+
+;默认
+
+MOV S$主页签A1 <Button|x=15|y=65|color=1020|nimg=public/1900000662.png|pimg=public/1900000663.png|text=主城传送|link=@Chseds>
+MOV S$主页签A2 <Button|x=15|y=110|color=1020|nimg=public/1900000662.png|pimg=public/1900000663.png|text=比奇省|link=@比奇省>
+MOV S$主页签A3 <Button|x=15|y=155|color=1020|nimg=public/1900000662.png|pimg=public/1900000663.png|text=毒蛇山谷|link=@毒蛇山谷>
+MOV S$主页签A4 <Button|x=15|y=200|color=1020|nimg=public/1900000662.png|pimg=public/1900000663.png|text=盟重省|link=@盟重省>
+MOV S$主页签A5 <Button|x=15|y=245|color=1020|nimg=public/1900000662.png|pimg=public/1900000663.png|text=封魔谷|link=@封魔谷>
+MOV S$主页签A6 <Button|x=15|y=290|color=1020|nimg=public/1900000662.png|pimg=public/1900000663.png|text=白日门|link=@白日门>
+MOV S$主页签A7 <Button|x=15|y=335|color=1020|nimg=public/1900000662.png|pimg=public/1900000663.png|text=苍月岛|link=@苍月岛>
+
+MOV S$主页签A8 <Button|x=15|y=380|color=1020|nimg=public/1900000662.png|pimg=public/1900000663.png|text=魔王传送|link=@魔王传送>
+MOV S$主页签A9 <Button|x=15|y=425|color=1020|nimg=public/1900000662.png|pimg=public/1900000663.png|text=其它传送|link=@其它传送>
+
+;灰色
+MOV S$主页签01 <Button|x=15|y=65|color=10221|nimg=public/1900000663.png|pimg=public/1900000662.png|text=主城传送|link=@Chseds>
+MOV S$主页签02 <Button|x=15|y=110|color=10221|nimg=public/1900000663.png|pimg=public/1900000662.png|text=比奇省|link=@比奇省>
+MOV S$主页签03 <Button|x=15|y=155|color=10221|nimg=public/1900000663.png|pimg=public/1900000662.png|text=毒蛇山谷|link=@毒蛇山谷>
+MOV S$主页签04 <Button|x=15|y=200|color=10221|nimg=public/1900000663.png|pimg=public/1900000662.png|text=盟重省|link=@盟重省>
+MOV S$主页签05 <Button|x=15|y=245|color=10221|nimg=public/1900000663.png|pimg=public/1900000662.png|text=封魔谷|link=@封魔谷>
+MOV S$主页签06 <Button|x=15|y=290|color=10221|nimg=public/1900000663.png|pimg=public/1900000662.png|text=白日门|link=@白日门>
+MOV S$主页签07 <Button|x=15|y=335|color=10221|nimg=public/1900000663.png|pimg=public/1900000662.png|text=苍月岛|link=@苍月岛>
+
+MOV S$主页签08 <Button|x=15|y=380|color=10221|nimg=public/1900000663.png|pimg=public/1900000662.png|text=魔王传送|link=@魔王传送>
+MOV S$主页签09 <Button|x=15|y=425|color=10221|nimg=public/1900000663.png|pimg=public/1900000662.png|text=其它传送|link=@其它传送>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$边界村)>
+#ACT
+MOV S$分页签01 <Button|x=150|y=63|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=边界村|link=@边界村>
+#ELSEACT
+MOV S$分页签01 <Button|x=150|y=63|color=1020|nimg=public/1900000661.png|text=边界村|link=@锁>
+MOV S$锁定图01 <Img|x=140|y=55|img=public/lock.png>
+
+#IF
+CHECKLEVELEX > <$STR(N$银杏村)>
+#ACT
+MOV S$分页签02 <Button|x=270|y=63|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=银杏村|link=@银杏村>
+#ELSEACT
+MOV S$分页签02 <Button|x=270|y=63|color=1020|nimg=public/1900000661.png|text=银杏村|link=@锁>
+MOV S$锁定图02 <Img|x=263|y=55|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$比奇城)>
+#ACT
+MOV S$分页签03 <Button|x=150|y=113|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=比奇城|link=@比奇城>
+#ELSEACT
+MOV S$分页签03 <Button|x=150|y=113|color=1020|nimg=public/1900000661.png|text=比奇城|link=@锁>
+MOV S$锁定图03 <Img|x=140|y=105|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$毒蛇山谷)>
+#ACT
+MOV S$分页签04 <Button|x=270|y=113|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=毒蛇山谷|link=@毒蛇>
+#ELSEACT
+MOV S$分页签04 <Button|x=270|y=113|color=1020|nimg=public/1900000661.png|text=毒蛇山谷|link=@锁>
+MOV S$锁定图04 <Img|x=263|y=105|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$盟重省)>
+#ACT
+MOV S$分页签05 <Button|x=150|y=163|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=盟重省|link=@盟重>
+#ELSEACT
+MOV S$分页签05 <Button|x=150|y=163|color=1020|nimg=public/1900000661.png|text=盟重省|link=@锁>
+MOV S$锁定图05 <Img|x=140|y=155|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$白日门)>
+#ACT
+MOV S$分页签06 <Button|x=270|y=163|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=白日门|link=@道馆>
+#ELSEACT
+MOV S$分页签06 <Button|x=270|y=163|color=1020|nimg=public/1900000661.png|text=白日门|link=@锁>
+MOV S$锁定图06 <Img|x=263|y=155|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$封魔谷)>
+#ACT
+MOV S$分页签07 <Button|x=150|y=213|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=封魔谷|link=@封魔>
+#ELSEACT
+MOV S$分页签07 <Button|x=150|y=213|color=1020|nimg=public/1900000661.png|text=封魔谷|link=@锁>
+MOV S$锁定图07 <Img|x=140|y=205|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$苍月岛)>
+#ACT
+MOV S$分页签08 <Button|x=270|y=213|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=苍月岛|link=@苍月>
+#ELSEACT
+MOV S$分页签08 <Button|x=270|y=213|color=1020|nimg=public/1900000661.png|text=苍月岛|link=@锁>
+MOV S$锁定图08 <Img|x=263|y=205|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$沃玛森林)>
+#ACT
+MOV S$分页签20 <Button|x=150|y=63|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=沃玛森林|link=@沃玛森林>
+#ELSEACT
+MOV S$分页签20 <Button|x=150|y=63|color=1020|nimg=public/1900000661.png|text=沃玛森林|link=@锁>
+MOV S$锁定图20 <Img|x=140|y=55|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$沃玛一层)>
+#ACT
+MOV S$分页签21 <Button|x=270|y=63|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=沃玛一层|link=@沃玛一层>
+#ELSEACT
+MOV S$分页签21 <Button|x=270|y=63|color=1020|nimg=public/1900000661.png|text=沃玛一层|link=@锁>
+MOV S$锁定图21 <Img|x=263|y=55|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$沃玛二层)>
+#ACT
+MOV S$分页签22 <Button|x=150|y=113|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=沃玛二层|link=@沃玛二层>
+#ELSEACT
+MOV S$分页签22 <Button|x=150|y=113|color=1020|nimg=public/1900000661.png|text=沃玛二层|link=@锁>
+MOV S$锁定图22 <Img|x=140|y=105|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$半兽一层)>
+#ACT
+MOV S$分页签23 <Button|x=270|y=113|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=半兽一层|link=@半兽一层>
+#ELSEACT
+MOV S$分页签23 <Button|x=270|y=113|color=1020|nimg=public/1900000661.png|text=半兽一层|link=@锁>
+MOV S$锁定图23 <Img|x=263|y=105|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$半兽二层)>
+#ACT
+MOV S$分页签24 <Button|x=150|y=163|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=半兽二层|link=@半兽二层>
+#ELSEACT
+MOV S$分页签24 <Button|x=150|y=163|color=1020|nimg=public/1900000661.png|text=半兽二层|link=@锁>
+MOV S$锁定图24 <Img|x=140|y=155|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$半兽三层)>
+#ACT
+MOV S$分页签25 <Button|x=270|y=163|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=半兽三层|link=@半兽三层>
+#ELSEACT
+MOV S$分页签25 <Button|x=270|y=163|color=1020|nimg=public/1900000661.png|text=半兽三层|link=@锁>
+MOV S$锁定图25 <Img|x=263|y=155|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$洞穴一层)>
+#ACT
+MOV S$分页签26 <Button|x=150|y=213|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=洞穴一层|link=@洞穴一层>
+#ELSEACT
+MOV S$分页签26 <Button|x=150|y=213|color=1020|nimg=public/1900000661.png|text=洞穴一层|link=@锁>
+MOV S$锁定图26 <Img|x=140|y=205|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$洞穴二层)>
+#ACT
+MOV S$分页签27 <Button|x=270|y=213|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=洞穴二层|link=@洞穴二层>
+#ELSEACT
+MOV S$分页签27 <Button|x=270|y=213|color=1020|nimg=public/1900000661.png|text=洞穴二层|link=@锁>
+MOV S$锁定图27 <Img|x=263|y=205|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$比奇矿区)>
+#ACT
+MOV S$分页签28 <Button|x=150|y=263|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=比奇矿区|link=@比奇矿区>
+#ELSEACT
+MOV S$分页签28 <Button|x=150|y=263|color=1020|nimg=public/1900000661.png|text=比奇矿区|link=@锁>
+MOV S$锁定图28 <Img|x=140|y=255|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$北部矿区)>
+#ACT
+MOV S$分页签29 <Button|x=270|y=263|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=北部矿区|link=@北部矿区>
+#ELSEACT
+MOV S$分页签29 <Button|x=270|y=263|color=1020|nimg=public/1900000661.png|text=北部矿区|link=@锁>
+MOV S$锁定图29 <Img|x=263|y=255|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$东部矿区)>
+#ACT
+MOV S$分页签30 <Button|x=150|y=313|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=东部矿区|link=@东部矿区>
+#ELSEACT
+MOV S$分页签30 <Button|x=150|y=313|color=1020|nimg=public/1900000661.png|text=东部矿区|link=@锁>
+MOV S$锁定图30 <Img|x=140|y=305|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$矿区一层)>
+#ACT
+MOV S$分页签31 <Button|x=270|y=313|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=废矿一层|link=@废矿一层>
+#ELSEACT
+MOV S$分页签31 <Button|x=270|y=313|color=1020|nimg=public/1900000661.png|text=废矿一层|link=@锁>
+MOV S$锁定图31 <Img|x=263|y=305|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$矿区二层)>
+#ACT
+MOV S$分页签32 <Button|x=150|y=363|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=矿区二层|link=@矿区二层>
+#ELSEACT
+MOV S$分页签32 <Button|x=150|y=363|color=1020|nimg=public/1900000661.png|text=矿区二层|link=@锁>
+MOV S$锁定图32 <Img|x=140|y=355|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$回收站)>
+#ACT
+MOV S$分页签33 <Button|x=270|y=363|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=回收站|link=@回收站>
+#ELSEACT
+MOV S$分页签33 <Button|x=270|y=363|color=1020|nimg=public/1900000661.png|text=回收站|link=@锁>
+MOV S$锁定图33 <Img|x=263|y=355|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$南部矿区)>
+#ACT
+MOV S$分页签34 <Button|x=150|y=413|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=南部矿区|link=@南部矿区>
+#ELSEACT
+MOV S$分页签34 <Button|x=150|y=413|color=1020|nimg=public/1900000661.png|text=南部矿区|link=@锁>
+MOV S$锁定图34 <Img|x=140|y=405|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$废弃桥头)>
+#ACT
+MOV S$分页签35 <Button|x=270|y=413|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=废弃桥头|link=@废弃桥头>
+#ELSEACT
+MOV S$分页签35 <Button|x=270|y=413|color=1020|nimg=public/1900000661.png|text=废弃桥头|link=@锁>
+MOV S$锁定图35 <Img|x=263|y=405|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$毒蛇一层)>
+#ACT
+MOV S$分页签40 <Button|x=150|y=63|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=毒蛇矿区一层|size=16|link=@毒蛇矿区一层>
+#ELSEACT
+MOV S$分页签40 <Button|x=150|y=63|color=1020|nimg=public/1900000661.png|text=毒蛇矿区一层|size=16|link=@锁>
+MOV S$锁定图40 <Img|x=140|y=55|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$毒蛇二层)>
+#ACT
+MOV S$分页签41 <Button|x=270|y=63|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=毒蛇矿区二层|size=16|link=@毒蛇矿区二层>
+#ELSEACT
+MOV S$分页签41 <Button|x=270|y=63|color=1020|nimg=public/1900000661.png|text=毒蛇矿区二层|size=16|link=@锁>
+MOV S$锁定图41 <Img|x=263|y=55|img=public/lock.png>
+
+
+
+#IF
+CHECKLEVELEX > <$STR(N$祖玛一层)>
+#ACT
+MOV S$分页签60 <Button|x=150|y=63|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=祖玛一层|link=@祖玛一层>
+#ELSEACT
+MOV S$分页签60 <Button|x=150|y=63|color=1020|nimg=public/1900000661.png|text=祖玛一层|link=@锁>
+MOV S$锁定图60 <Img|x=140|y=55|img=public/lock.png>
+
+#IF
+CHECKLEVELEX > <$STR(N$祖玛二层)>
+#ACT
+MOV S$分页签61 <Button|x=270|y=63|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=祖玛二层|link=@祖玛二层>
+#ELSEACT
+MOV S$分页签61 <Button|x=270|y=63|color=1020|nimg=public/1900000661.png|text=祖玛二层|link=@锁>
+MOV S$锁定图61 <Img|x=263|y=55|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$祖玛三层)>
+#ACT
+MOV S$分页签62 <Button|x=150|y=113|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=祖玛三层|link=@祖玛三层>
+#ELSEACT
+MOV S$分页签62 <Button|x=150|y=113|color=1020|nimg=public/1900000661.png|text=祖玛三层|link=@锁>
+MOV S$锁定图62 <Img|x=140|y=105|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$祖玛四层)>
+#ACT
+MOV S$分页签63 <Button|x=270|y=113|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=祖玛四层|link=@祖玛四层>
+#ELSEACT
+MOV S$分页签63 <Button|x=270|y=113|color=1020|nimg=public/1900000661.png|text=祖玛四层|link=@锁>
+MOV S$锁定图63 <Img|x=263|y=105|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$祖玛五层)>
+#ACT
+MOV S$分页签64 <Button|x=150|y=163|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=祖玛五层|link=@祖玛五层>
+#ELSEACT
+MOV S$分页签64 <Button|x=150|y=163|color=1020|nimg=public/1900000661.png|text=祖玛五层|link=@锁>
+MOV S$锁定图64 <Img|x=140|y=155|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$石墓一层)>
+#ACT
+MOV S$分页签65 <Button|x=270|y=163|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=石墓一层|link=@石墓一层>
+#ELSEACT
+MOV S$分页签65 <Button|x=270|y=163|color=1020|nimg=public/1900000661.png|text=石墓一层|link=@锁>
+MOV S$锁定图65 <Img|x=263|y=155|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$石墓二层)>
+#ACT
+MOV S$分页签66 <Button|x=150|y=213|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=石墓二层|link=@石墓二层>
+#ELSEACT
+MOV S$分页签66 <Button|x=150|y=213|color=1020|nimg=public/1900000661.png|text=石墓二层|link=@锁>
+MOV S$锁定图66 <Img|x=140|y=205|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$石墓三层)>
+#ACT
+MOV S$分页签67 <Button|x=270|y=213|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=石墓三层|link=@石墓三层>
+#ELSEACT
+MOV S$分页签67 <Button|x=270|y=213|color=1020|nimg=public/1900000661.png|text=石墓三层|link=@锁>
+MOV S$锁定图67 <Img|x=263|y=205|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$石墓四层)>
+#ACT
+MOV S$分页签68 <Button|x=150|y=263|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=石墓四层|link=@石墓四层>
+#ELSEACT
+MOV S$分页签68 <Button|x=150|y=263|color=1020|nimg=public/1900000661.png|text=石墓四层|link=@锁>
+MOV S$锁定图68 <Img|x=140|y=255|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$石墓五层)>
+#ACT
+MOV S$分页签69 <Button|x=270|y=263|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=石墓五层|link=@石墓五层>
+#ELSEACT
+MOV S$分页签69 <Button|x=270|y=263|color=1020|nimg=public/1900000661.png|text=石墓五层|link=@锁>
+MOV S$锁定图69 <Img|x=263|y=255|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$邪恶势力)>
+#ACT
+MOV S$分页签70 <Button|x=150|y=313|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=邪恶势力|link=@邪恶势力>
+#ELSEACT
+MOV S$分页签70 <Button|x=150|y=313|color=1020|nimg=public/1900000661.png|text=邪恶势力|link=@锁>
+MOV S$锁定图70 <Img|x=140|y=305|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$恐怖空间)>
+#ACT
+MOV S$分页签71 <Button|x=270|y=313|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=恐怖空间|link=@恐怖空间>
+#ELSEACT
+MOV S$分页签71 <Button|x=270|y=313|color=1020|nimg=public/1900000661.png|text=恐怖空间|link=@锁>
+MOV S$锁定图71 <Img|x=263|y=305|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$死亡棺材)>
+#ACT
+MOV S$分页签72 <Button|x=150|y=363|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=死亡棺材|link=@死亡棺材>
+#ELSEACT
+MOV S$分页签72 <Button|x=150|y=363|color=1020|nimg=public/1900000661.png|text=死亡棺材|link=@锁>
+MOV S$锁定图72 <Img|x=140|y=355|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$黑暗地带)>
+#ACT
+MOV S$分页签73 <Button|x=270|y=363|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=黑暗地带|link=@黑暗地带>
+#ELSEACT
+MOV S$分页签73 <Button|x=270|y=363|color=1020|nimg=public/1900000661.png|text=黑暗地带|link=@锁>
+MOV S$锁定图73 <Img|x=263|y=355|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$生死之间)>
+#ACT
+MOV S$分页签74 <Button|x=150|y=413|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=生死之间|link=@生死之间>
+#ELSEACT
+MOV S$分页签74 <Button|x=150|y=413|color=1020|nimg=public/1900000661.png|text=生死之间|link=@锁>
+MOV S$锁定图74 <Img|x=140|y=405|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$传奇部落)>
+#ACT
+MOV S$分页签75 <Button|x=270|y=413|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=传奇部落|link=@传奇部落>
+#ELSEACT
+MOV S$分页签75 <Button|x=270|y=413|color=1020|nimg=public/1900000661.png|text=传奇部落|link=@锁>
+MOV S$锁定图75 <Img|x=263|y=405|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$封魔矿区)>
+#ACT
+MOV S$分页签80 <Button|x=150|y=63|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=封魔矿区|size=18|link=@封魔矿区>
+#ELSEACT
+MOV S$分页签80 <Button|x=150|y=63|color=1020|nimg=public/1900000661.png|text=封魔矿区|link=@锁>
+MOV S$锁定图80 <Img|x=140|y=55|img=public/lock.png>
+
+#IF
+CHECKLEVELEX > <$STR(N$歧路)>
+#ACT
+MOV S$分页签81 <Button|x=270|y=63|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=歧路|size=18|link=@歧路>
+#ELSEACT
+MOV S$分页签81 <Button|x=270|y=63|color=1020|nimg=public/1900000661.png|text=歧路|link=@锁>
+MOV S$锁定图81 <Img|x=263|y=55|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$连接通道)>
+#ACT
+MOV S$分页签82 <Button|x=150|y=113|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=连接通道|link=@连接通道>
+#ELSEACT
+MOV S$分页签82 <Button|x=150|y=113|color=1020|nimg=public/1900000661.png|text=连接通道|link=@锁>
+MOV S$锁定图82 <Img|x=140|y=105|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$封魔道)>
+#ACT
+MOV S$分页签83 <Button|x=270|y=113|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=封魔道|link=@封魔道>
+#ELSEACT
+MOV S$分页签83 <Button|x=270|y=113|color=1020|nimg=public/1900000661.png|text=封魔道|link=@锁>
+MOV S$锁定图83 <Img|x=263|y=105|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$疾风殿)>
+#ACT
+MOV S$分页签84 <Button|x=150|y=163|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=疾风殿|link=@疾风殿>
+#ELSEACT
+MOV S$分页签84 <Button|x=150|y=163|color=1020|nimg=public/1900000661.png|text=疾风殿|link=@锁>
+MOV S$锁定图84 <Img|x=140|y=155|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$光芒回廊)>
+#ACT
+MOV S$分页签85 <Button|x=270|y=163|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=光芒回廊|link=@光芒回廊>
+#ELSEACT
+MOV S$分页签85 <Button|x=270|y=163|color=1020|nimg=public/1900000661.png|text=光芒回廊|link=@锁>
+MOV S$锁定图85 <Img|x=263|y=155|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$烈焰殿)>
+#ACT
+MOV S$分页签86 <Button|x=150|y=213|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=烈焰殿|link=@烈焰殿>
+#ELSEACT
+MOV S$分页签86 <Button|x=150|y=213|color=1020|nimg=public/1900000661.png|text=烈焰殿|link=@锁>
+MOV S$锁定图86 <Img|x=140|y=205|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$雷霆之路)>
+#ACT
+MOV S$分页签87 <Button|x=270|y=213|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=雷霆之路|link=@雷霆之路>
+#ELSEACT
+MOV S$分页签87 <Button|x=270|y=213|color=1020|nimg=public/1900000661.png|text=雷霆之路|link=@锁>
+MOV S$锁定图87 <Img|x=263|y=205|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$霸者大厅)>
+#ACT
+MOV S$分页签88 <Button|x=150|y=263|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=霸者大厅|link=@霸者大厅>
+#ELSEACT
+MOV S$分页签88 <Button|x=150|y=263|color=1020|nimg=public/1900000661.png|text=霸者大厅|link=@锁>
+MOV S$锁定图88 <Img|x=140|y=255|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$幽冥回廊)>
+#ACT
+MOV S$分页签89 <Button|x=270|y=263|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=幽冥回廊|link=@幽冥回廊>
+#ELSEACT
+MOV S$分页签89 <Button|x=270|y=263|color=1020|nimg=public/1900000661.png|text=幽冥回廊|link=@锁>
+MOV S$锁定图89 <Img|x=263|y=255|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$纵横道)>
+#ACT
+MOV S$分页签90 <Button|x=150|y=313|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=纵横道|link=@纵横道>
+#ELSEACT
+MOV S$分页签90 <Button|x=150|y=313|color=1020|nimg=public/1900000661.png|text=纵横道|link=@锁>
+MOV S$锁定图90 <Img|x=140|y=305|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$魔魂殿)>
+#ACT
+MOV S$分页签91 <Button|x=270|y=313|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=魔魂殿|link=@魔魂殿>
+#ELSEACT
+MOV S$分页签91 <Button|x=270|y=313|color=1020|nimg=public/1900000661.png|text=魔魂殿|link=@锁>
+MOV S$锁定图91 <Img|x=263|y=305|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$炼狱回廊)>
+#ACT
+MOV S$分页签92 <Button|x=150|y=363|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=炼狱回廊|link=@炼狱回廊>
+#ELSEACT
+MOV S$分页签92 <Button|x=150|y=363|color=1020|nimg=public/1900000661.png|text=炼狱回廊|link=@锁>
+MOV S$锁定图92 <Img|x=140|y=355|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$封魔殿)>
+#ACT
+MOV S$分页签93 <Button|x=270|y=363|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=封魔殿|link=@封魔殿>
+#ELSEACT
+MOV S$分页签93 <Button|x=270|y=363|color=1020|nimg=public/1900000661.png|text=封魔殿|link=@锁>
+MOV S$锁定图93 <Img|x=263|y=355|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$丛林迷宫)>
+#ACT
+MOV S$分页签100 <Button|x=150|y=63|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=丛林迷宫|size=18|link=@丛林迷宫>
+#ELSEACT
+MOV S$分页签100 <Button|x=150|y=63|color=1020|nimg=public/1900000661.png|text=丛林迷宫|link=@锁>
+MOV S$锁定图100 <Img|x=140|y=55|img=public/lock.png>
+
+#IF
+CHECKLEVELEX > <$STR(N$峡谷东走廊)>
+#ACT
+MOV S$分页签101 <Button|x=270|y=63|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=峡谷东走廊|size=18|link=@峡谷东走廊>
+#ELSEACT
+MOV S$分页签101 <Button|x=270|y=63|color=1020|nimg=public/1900000661.png|text=峡谷东走廊|link=@锁>
+MOV S$锁定图101 <Img|x=263|y=55|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$峡谷西走廊)>
+#ACT
+MOV S$分页签102 <Button|x=150|y=113|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=峡谷西走廊|link=@峡谷西走廊>
+#ELSEACT
+MOV S$分页签102 <Button|x=150|y=113|color=1020|nimg=public/1900000661.png|text=峡谷西走廊|link=@锁>
+MOV S$锁定图102 <Img|x=140|y=105|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$西回隧道)>
+#ACT
+MOV S$分页签103 <Button|x=270|y=113|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=西回隧道|link=@西回隧道>
+#ELSEACT
+MOV S$分页签103 <Button|x=270|y=113|color=1020|nimg=public/1900000661.png|text=西回隧道|link=@锁>
+MOV S$锁定图103 <Img|x=263|y=105|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$峡谷东二层)>
+#ACT
+MOV S$分页签104 <Button|x=150|y=163|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=峡谷东二层|link=@峡谷东二层>
+#ELSEACT
+MOV S$分页签104 <Button|x=150|y=163|color=1020|nimg=public/1900000661.png|text=峡谷东二层|link=@锁>
+MOV S$锁定图104 <Img|x=140|y=155|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$峡谷广场)>
+#ACT
+MOV S$分页签105 <Button|x=270|y=163|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=峡谷广场|link=@峡谷广场>
+#ELSEACT
+MOV S$分页签105 <Button|x=270|y=163|color=1020|nimg=public/1900000661.png|text=峡谷广场|link=@锁>
+MOV S$锁定图105 <Img|x=263|y=155|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$峡谷东长廊)>
+#ACT
+MOV S$分页签106 <Button|x=150|y=213|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=峡谷东长廊|link=@峡谷东长廊>
+#ELSEACT
+MOV S$分页签106 <Button|x=150|y=213|color=1020|nimg=public/1900000661.png|text=峡谷东长廊|link=@锁>
+MOV S$锁定图106 <Img|x=140|y=205|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$抉择之地)>
+#ACT
+MOV S$分页签107 <Button|x=270|y=213|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=抉择之地|link=@抉择之地>
+#ELSEACT
+MOV S$分页签107 <Button|x=270|y=213|color=1020|nimg=public/1900000661.png|text=抉择之地|link=@锁>
+MOV S$锁定图107 <Img|x=263|y=205|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$山谷秘道一)>
+#ACT
+MOV S$分页签108 <Button|x=150|y=263|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=山谷秘道一|link=@山谷秘道一>
+#ELSEACT
+MOV S$分页签108 <Button|x=150|y=263|color=1020|nimg=public/1900000661.png|text=山谷秘道一|link=@锁>
+MOV S$锁定图108 <Img|x=140|y=255|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$山谷秘道二)>
+#ACT
+MOV S$分页签109 <Button|x=270|y=263|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=山谷秘道二|link=@山谷秘道二>
+#ELSEACT
+MOV S$分页签109 <Button|x=270|y=263|color=1020|nimg=public/1900000661.png|text=山谷秘道二|link=@锁>
+MOV S$锁定图109 <Img|x=263|y=255|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$尸魔洞一层)>
+#ACT
+MOV S$分页签140 <Button|x=150|y=63|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=尸魔洞一层|size=18|link=@尸魔洞一层>
+#ELSEACT
+MOV S$分页签140 <Button|x=150|y=63|color=1020|nimg=public/1900000661.png|text=尸魔洞一层|link=@锁>
+MOV S$锁定图140 <Img|x=140|y=55|img=public/lock.png>
+
+#IF
+CHECKLEVELEX > <$STR(N$尸魔洞二层)>
+#ACT
+MOV S$分页签141 <Button|x=270|y=63|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=尸魔洞二层|size=18|link=@尸魔洞二层>
+#ELSEACT
+MOV S$分页签141 <Button|x=270|y=63|color=1020|nimg=public/1900000661.png|text=尸魔洞二层|link=@锁>
+MOV S$锁定图141 <Img|x=263|y=55|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$尸魔洞三层)>
+#ACT
+MOV S$分页签142 <Button|x=150|y=113|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=尸魔洞三层|link=@尸魔洞三层>
+#ELSEACT
+MOV S$分页签142 <Button|x=150|y=113|color=1020|nimg=public/1900000661.png|text=尸魔洞三层|link=@锁>
+MOV S$锁定图142 <Img|x=140|y=105|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$骨魔洞一层)>
+#ACT
+MOV S$分页签143 <Button|x=270|y=113|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=骨魔洞一层|link=@骨魔洞一层>
+#ELSEACT
+MOV S$分页签143 <Button|x=270|y=113|color=1020|nimg=public/1900000661.png|text=骨魔洞一层|link=@锁>
+MOV S$锁定图143 <Img|x=263|y=105|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$骨魔洞二层)>
+#ACT
+MOV S$分页签144 <Button|x=150|y=163|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=骨魔洞二层|link=@骨魔洞二层>
+#ELSEACT
+MOV S$分页签144 <Button|x=150|y=163|color=1020|nimg=public/1900000661.png|text=骨魔洞二层|link=@锁>
+MOV S$锁定图144 <Img|x=140|y=155|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$骨魔洞三层)>
+#ACT
+MOV S$分页签145 <Button|x=270|y=163|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=骨魔洞三层|link=@骨魔洞三层>
+#ELSEACT
+MOV S$分页签145 <Button|x=270|y=163|color=1020|nimg=public/1900000661.png|text=骨魔洞三层|link=@锁>
+MOV S$锁定图145 <Img|x=263|y=155|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$骨魔洞四层)>
+#ACT
+MOV S$分页签146 <Button|x=150|y=213|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=骨魔洞四层|link=@骨魔洞四层>
+#ELSEACT
+MOV S$分页签146 <Button|x=150|y=213|color=1020|nimg=public/1900000661.png|text=骨魔洞四层|link=@锁>
+MOV S$锁定图146 <Img|x=140|y=205|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$骨魔洞五层)>
+#ACT
+MOV S$分页签147 <Button|x=270|y=213|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=骨魔洞五层|link=@骨魔洞五层>
+#ELSEACT
+MOV S$分页签147 <Button|x=270|y=213|color=1020|nimg=public/1900000661.png|text=骨魔洞五层|link=@锁>
+MOV S$锁定图147 <Img|x=263|y=205|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$牛魔寺庙一层)>
+#ACT
+MOV S$分页签148 <Button|x=150|y=263|color=1020|size=16|nimg=public/1900000660.png|pimg=public/1900000661.png|text=牛魔寺庙一层|link=@牛魔寺庙一层>
+#ELSEACT
+MOV S$分页签148 <Button|x=150|y=263|color=1020|nimg=public/1900000661.png|text=牛魔寺庙一层|size=16|link=@锁>
+MOV S$锁定图148 <Img|x=140|y=255|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$牛魔寺庙二层)>
+#ACT
+MOV S$分页签149 <Button|x=270|y=263|color=1020|size=16|nimg=public/1900000660.png|pimg=public/1900000661.png|text=牛魔寺庙二层|link=@牛魔寺庙二层>
+#ELSEACT
+MOV S$分页签149 <Button|x=270|y=263|color=1020|nimg=public/1900000661.png|text=牛魔寺庙二层|size=16|link=@锁>
+MOV S$锁定图149 <Img|x=263|y=255|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$牛魔寺庙三层)>
+#ACT
+MOV S$分页签150 <Button|x=150|y=313|color=1020|size=16|nimg=public/1900000660.png|pimg=public/1900000661.png|text=牛魔寺庙三层|link=@牛魔寺庙三层>
+#ELSEACT
+MOV S$分页签150 <Button|x=150|y=313|color=1020|nimg=public/1900000661.png|text=牛魔寺庙三层|size=16|link=@锁>
+MOV S$锁定图150 <Img|x=140|y=305|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$牛魔寺庙四层)>
+#ACT
+MOV S$分页签151 <Button|x=270|y=313|color=1020|size=16|nimg=public/1900000660.png|pimg=public/1900000661.png|text=牛魔寺庙四层|link=@牛魔寺庙四层>
+#ELSEACT
+MOV S$分页签151 <Button|x=270|y=313|color=1020|nimg=public/1900000661.png|text=牛魔寺庙四层|size=16|link=@锁>
+MOV S$锁定图151 <Img|x=263|y=305|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$牛魔寺庙五层)>
+#ACT
+MOV S$分页签152 <Button|x=150|y=363|color=1020|size=16|nimg=public/1900000660.png|pimg=public/1900000661.png|text=牛魔寺庙五层|link=@牛魔寺庙五层>
+#ELSEACT
+MOV S$分页签152 <Button|x=150|y=363|color=1020|nimg=public/1900000661.png|text=牛魔寺庙五层|size=16|link=@锁>
+MOV S$锁定图152 <Img|x=140|y=355|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$牛魔寺庙六层)>
+#ACT
+MOV S$分页签153 <Button|x=270|y=363|color=1020|size=16|nimg=public/1900000660.png|pimg=public/1900000661.png|text=牛魔寺庙六层|link=@牛魔寺庙六层>
+#ELSEACT
+MOV S$分页签153 <Button|x=270|y=363|color=1020|nimg=public/1900000661.png|text=牛魔寺庙六层|size=16|link=@锁>
+MOV S$锁定图153 <Img|x=263|y=355|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$堕落坟场)>
+#ACT
+MOV S$分页签200 <Button|x=150|y=63|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=堕落坟场|size=18|link=@堕落坟场>
+#ELSEACT
+MOV S$分页签200 <Button|x=150|y=63|color=1020|nimg=public/1900000661.png|text=堕落坟场|link=@锁>
+MOV S$锁定图200 <Img|x=140|y=55|img=public/lock.png>
+
+#IF
+CHECKLEVELEX > <$STR(N$死亡神殿)>
+#ACT
+MOV S$分页签201 <Button|x=270|y=63|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=死亡神殿|size=18|link=@死亡神殿>
+#ELSEACT
+MOV S$分页签201 <Button|x=270|y=63|color=1020|nimg=public/1900000661.png|text=死亡神殿|link=@锁>
+MOV S$锁定图201 <Img|x=263|y=55|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$深渊魔域)>
+#ACT
+MOV S$分页签202 <Button|x=150|y=113|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=深渊魔域|link=@深渊魔域>
+#ELSEACT
+MOV S$分页签202 <Button|x=150|y=113|color=1020|nimg=public/1900000661.png|text=深渊魔域|link=@锁>
+MOV S$锁定图202 <Img|x=140|y=105|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$钳虫巢穴)>
+#ACT
+MOV S$分页签203 <Button|x=270|y=113|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=钳虫巢穴|link=@钳虫巢穴>
+#ELSEACT
+MOV S$分页签203 <Button|x=270|y=113|color=1020|nimg=public/1900000661.png|text=钳虫巢穴|link=@锁>
+MOV S$锁定图203 <Img|x=263|y=105|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$地狱烈焰)>
+#ACT
+MOV S$分页签204 <Button|x=150|y=163|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=地狱烈焰|link=@地狱烈焰>
+#ELSEACT
+MOV S$分页签204 <Button|x=150|y=163|color=1020|nimg=public/1900000661.png|text=地狱烈焰|link=@锁>
+MOV S$锁定图204 <Img|x=140|y=155|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$困惑殿堂)>
+#ACT
+MOV S$分页签205 <Button|x=270|y=163|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=困惑殿堂|link=@困惑殿堂>
+#ELSEACT
+MOV S$分页签205 <Button|x=270|y=163|color=1020|nimg=public/1900000661.png|text=困惑殿堂|link=@锁>
+MOV S$锁定图205 <Img|x=263|y=155|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$随机传送)>
+#ACT
+MOV S$分页签120 <Button|x=150|y=63|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=随机传送|size=18|link=@随机传送>
+#ELSEACT
+MOV S$分页签120 <Button|x=150|y=63|color=1020|nimg=public/1900000661.png|text=随机传送|link=@锁>
+MOV S$锁定图120 <Img|x=140|y=55|img=public/lock.png>
+
+#IF
+CHECKLEVELEX > <$STR(N$回城传送)>
+#ACT
+MOV S$分页签121 <Button|x=270|y=63|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=回城传送|size=18|link=@回城传送>
+#ELSEACT
+MOV S$分页签121 <Button|x=270|y=63|color=1020|nimg=public/1900000661.png|text=回城传送|link=@锁>
+MOV S$锁定图121 <Img|x=263|y=55|img=public/lock.png>
+
+
+#IF
+CHECKLEVELEX > <$STR(N$地牢逃脱)>
+#ACT
+MOV S$分页签122 <Button|x=150|y=113|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=地牢逃脱|link=@地牢逃脱>
+#ELSEACT
+MOV S$分页签122 <Button|x=150|y=113|color=1020|nimg=public/1900000661.png|text=地牢逃脱|link=@锁>
+MOV S$锁定图122 <Img|x=140|y=105|img=public/lock.png>
+
+
+#IF
+ISCASTLEGUILD
+;CHECKLEVELEX > <$STR(N$行会传送)>
+#ACT
+MOV S$分页签123 <Button|x=270|y=113|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=行会传送|link=@行会传送>
+#ELSEACT
+MOV S$分页签123 <Button|x=270|y=113|color=1020|nimg=public/1900000661.png|text=行会传送|link=@锁>
+MOV S$锁定图123 <Img|x=263|y=105|img=public/lock.png>
+
+
+#IF
+ISCASTLEGUILD
+;CHECKLEVELEX > <$STR(N$沙城通道)>
+#ACT
+MOV S$分页签124 <Button|x=150|y=163|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=沙城通道|link=@沙城通道>
+#ELSEACT
+MOV S$分页签124 <Button|x=150|y=163|color=1020|nimg=public/1900000661.png|text=沙城通道|link=@锁>
+MOV S$锁定图124 <Img|x=140|y=155|img=public/lock.png>
+
+
+#IF
+ISCASTLEGUILD
+;CHECKLEVELEX > <$STR(N$沙城郊外)>
+#ACT
+MOV S$分页签125 <Button|x=270|y=163|color=1020|nimg=public/1900000660.png|pimg=public/1900000661.png|text=沙城郊外|link=@沙城郊外>
+#ELSEACT
+MOV S$分页签125 <Button|x=270|y=163|color=1020|nimg=public/1900000661.png|text=沙城郊外|link=@锁>
+MOV S$锁定图125 <Img|x=263|y=155|img=public/lock.png>
+
+#IF
+CHECKMONEY 小飞鞋 > 0
+#ACT
+MOV S$鞋子数量 <Text|text=<$MONEY(小飞鞋)>|color=215|x=235|y=500|size=18>
+#ELSEACT
+MOV S$鞋子数量 <Text|text=<$MONEY(小飞鞋)>|color=249|x=235|y=500|size=18>
+
+}

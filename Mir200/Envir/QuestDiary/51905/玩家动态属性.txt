@@ -1,0 +1,64 @@
+[@属性计算]
+{
+#IF
+#ACT
+MOV N$生命上限 0
+MOV N$物防上限 0
+MOV N$物攻上限 0
+MOV N$杀怪爆率 100
+MOV N$伤害加成 100
+
+
+#IF
+LARGE <$RELEVEL> 0
+#ACT
+;转生部分
+GetListString ..\QuestDiary\表格文件\转生表格.txt <$RELEVEL> S$转生串
+GetValidstr <$STR(S$转生串)> | S$转生属性 S$剩余串
+
+GetValidstr <$STR(S$转生属性)> \ S$属性1 S$转生属性
+GetValidstr <$STR(S$转生属性)> \ S$属性2 S$属性3
+
+GetValidstr <$STR(S$属性1)> + S$属性1名 S$属性1值
+GetValidstr <$STR(S$属性2)> + S$属性2名 S$属性2值
+GetValidstr <$STR(S$属性3)> + S$属性3名 S$属性3值
+
+INC N$生命上限 <$STR(S$属性1值)>
+INC N$物攻上限 <$STR(S$属性2值)>
+INC N$杀怪爆率 <$STR(S$属性3值)>
+
+SENDMSG 6 转生属性计算完毕
+
+
+#IF
+#ACT
+;官职部分
+
+
+#IF
+#ACT
+;狂暴部分
+MOV N$狂暴等级 U11
+DEC N$狂暴等级 1
+
+#IF
+EQUAL N$狂暴等级 1
+#ACT
+
+
+
+
+#IF
+#ACT
+;ChangeHumAbility 11 = <$STR(N$生命上限)>
+;ChangeHumAbility 2 = <$STR(N$物防上限)>
+;ChangeHumAbility 6 = <$STR(N$物攻上限)>
+;KILLMONBURSTRATE <$STR(N$杀怪爆率)> 6
+
+
+
+SENDMSG 7 11111
+
+
+
+}

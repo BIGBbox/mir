@@ -1,0 +1,654 @@
+[@首杀_奖励]
+{
+#act
+mov n$首杀_页数 0
+mov n$首杀_读取行数 0
+mov n$首杀_显示行数 0
+mov N$首杀_循环次数 0
+mov s$首杀_下一页 @首杀_下一页
+goto @首杀_下一页
+
+[@首杀_显示首杀]
+#act
+SetStringBlank S$首杀_排名1 5 0
+SetStringBlank S$首杀_排名2 5 0
+SetStringBlank S$首杀_排名3 5 0
+SetStringBlank S$首杀_排名4 5 0
+SetStringBlank S$首杀_排名5 5 0
+SetStringBlank S$首杀_排名6 5 0
+SetStringBlank S$首杀_排名7 5 0
+SetStringBlank S$首杀_排名8 5 0
+SetStringBlank S$首杀_排名9 5 0
+SetStringBlank S$首杀_排名10 5 0
+
+#say
+
+<Img|img=public/sf1/1/01457.png|x=200|y=100|children={close_btn,up,dn,jp,page,all,rank0,rank1,rank2,rank3,rank4,rank5,rank6,rank7,rank8,rank9,}|bg=1|reset=1|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=769|y=95|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
+
+<RText|id=rank0|x=35|y=105|color=87|size=15|text=<<$STR(S$首杀_排名1)>/FCOLOR=87><$STR(S$首杀_数据1)>>
+<RText|id=rank1|x=35|y=137|color=87|size=15|text=<<$STR(S$首杀_排名2)>/FCOLOR=87><$STR(S$首杀_数据2)>>
+<RText|id=rank2|x=35|y=169|color=87|size=15|text=<<$STR(S$首杀_排名3)>/FCOLOR=87><$STR(S$首杀_数据3)>>
+<RText|id=rank3|x=35|y=201|color=87|size=15|text=<<$STR(S$首杀_排名4)>/FCOLOR=87><$STR(S$首杀_数据4)>>
+<RText|id=rank4|x=35|y=233|color=87|size=15|text=<<$STR(S$首杀_排名5)>/FCOLOR=87><$STR(S$首杀_数据5)>>
+<RText|id=rank5|x=35|y=265|color=87|size=15|text=<<$STR(S$首杀_排名6)>/FCOLOR=87><$STR(S$首杀_数据6)>>
+<RText|id=rank6|x=35|y=297|color=87|size=15|text=<<$STR(S$首杀_排名7)>/FCOLOR=87><$STR(S$首杀_数据7)>>
+<RText|id=rank7|x=35|y=329|color=87|size=15|text=<<$STR(S$首杀_排名8)>/FCOLOR=87><$STR(S$首杀_数据8)>>
+<RText|id=rank8|x=35|y=361|color=87|size=15|text=<<$STR(S$首杀_排名9)>/FCOLOR=87><$STR(S$首杀_数据9)>>
+<RText|id=rank9|x=35|y=393|color=87|size=15|text=<<$STR(S$首杀_排名10)>/FCOLOR=87><$STR(S$首杀_数据10)>>
+
+<RText|id=page|x=270|y=425|color=149|size=15|text=<<$str(N$首杀_页数)> 页/FCOLOR=255>>
+
+<Button|id=up|x=135|y=420|nimg=public/sf1/1/00613.png|pimg=public/sf1/1/00615.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@首杀_上一步>
+<Button|id=dn|x=330|y=420|nimg=public/sf1/1/00616.png|pimg=public/sf1/1/00618.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=<$str(s$首杀_下一页)>>
+
+
+
+
+[@读取数据]
+#IF
+#ACT
+MOV N$读取行 0
+INC N$读取行 <$STR(N$页数)>
+sendmsg 5 <$STR(N$读取行)>***---
+
+GetListString ..\QuestDiary\首杀奖励\boss列表.txt <$STR(N$读取行)> S$首爆名0
+INC N$读取行 1
+GetListString ..\QuestDiary\首杀奖励\boss列表.txt <$STR(N$读取行)> S$首爆名1
+INC N$读取行 1
+GetListString ..\QuestDiary\首杀奖励\boss列表.txt <$STR(N$读取行)> S$首爆名2
+INC N$读取行 1
+GetListString ..\QuestDiary\首杀奖励\boss列表.txt <$STR(N$读取行)> S$首爆名3
+INC N$读取行 1
+GetListString ..\QuestDiary\首杀奖励\boss列表.txt <$STR(N$读取行)> S$首爆名4
+INC N$读取行 1
+GetListString ..\QuestDiary\首杀奖励\boss列表.txt <$STR(N$读取行)> S$首爆名5
+INC N$读取行 1
+GetListString ..\QuestDiary\首杀奖励\boss列表.txt <$STR(N$读取行)> S$首爆名6
+INC N$读取行 1
+GetListString ..\QuestDiary\首杀奖励\boss列表.txt <$STR(N$读取行)> S$首爆名7
+INC N$读取行 1
+GetListString ..\QuestDiary\首杀奖励\boss列表.txt <$STR(N$读取行)> S$首爆名8
+INC N$读取行 1
+GetListString ..\QuestDiary\首杀奖励\boss列表.txt <$STR(N$读取行)> S$首爆名9
+INC N$读取行 1
+
+#IF
+NOT EQUAL S$首爆名0
+#ACT
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名0)> 价格 S$价格0
+;ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名0)> 玩家 S$玩家0
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名0)> 币种 S$币种0
+ReadConfigFileItem ..\QuestDiary\首杀奖励\首爆领取记录.txt <$STR(S$首爆名0)> 玩家 S$玩家0
+#IF
+EQUAL S$玩家0
+#ACT
+mov S$玩家0 {暂未领取/FCOLOR=249}
+
+#IF
+NOT EQUAL S$首爆名1
+#ACT
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名1)> 价格 S$价格1
+;ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名1)> 玩家 S$玩家1
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名1)> 币种 S$币种1
+ReadConfigFileItem ..\QuestDiary\首杀奖励\首爆领取记录.txt <$STR(S$首爆名1)> 玩家 S$玩家1
+#IF
+EQUAL S$玩家1
+#ACT
+mov S$玩家1 {暂未领取/FCOLOR=249}
+
+
+#IF
+NOT EQUAL S$首爆名2
+#ACT
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名2)> 价格 S$价格2
+;ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名2)> 玩家 S$玩家2
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名2)> 币种 S$币种2
+ReadConfigFileItem ..\QuestDiary\首杀奖励\首爆领取记录.txt <$STR(S$首爆名2)> 玩家 S$玩家2
+#IF
+EQUAL S$玩家2
+#ACT
+mov S$玩家2 {暂未领取/FCOLOR=249}
+#IF
+NOT EQUAL S$首爆名3
+#ACT
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名3)> 价格 S$价格3
+;ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名3)> 玩家 S$玩家3
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名3)> 币种 S$币种3
+ReadConfigFileItem ..\QuestDiary\首杀奖励\首爆领取记录.txt <$STR(S$首爆名3)> 玩家 S$玩家3
+#IF
+EQUAL S$玩家3
+#ACT
+mov S$玩家3 {暂未领取/FCOLOR=249}
+#IF
+NOT EQUAL S$首爆名4
+#ACT
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名4)> 价格 S$价格4
+;ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名4)> 玩家 S$玩家4
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名4)> 币种 S$币种4
+ReadConfigFileItem ..\QuestDiary\首杀奖励\首爆领取记录.txt <$STR(S$首爆名4)> 玩家 S$玩家4
+#IF
+EQUAL S$玩家4
+#ACT
+mov S$玩家4 {暂未领取/FCOLOR=249}
+#IF
+NOT EQUAL S$首爆名5
+#ACT
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名5)> 价格 S$价格5
+;ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名5)> 玩家 S$玩家5
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名5)> 币种 S$币种5
+ReadConfigFileItem ..\QuestDiary\首杀奖励\首爆领取记录.txt <$STR(S$首爆名5)> 玩家 S$玩家5
+#IF
+EQUAL S$玩家5
+#ACT
+mov S$玩家5 {暂未领取/FCOLOR=249}
+#IF
+NOT EQUAL S$首爆名6
+#ACT
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名6)> 价格 S$价格6
+;ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名6)> 玩家 S$玩家6
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名6)> 币种 S$币种6
+ReadConfigFileItem ..\QuestDiary\首杀奖励\首爆领取记录.txt <$STR(S$首爆名6)> 玩家 S$玩家6
+#IF
+EQUAL S$玩家6
+#ACT
+mov S$玩家6 {暂未领取/FCOLOR=249}
+#IF
+NOT EQUAL S$首爆名7
+#ACT
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名7)> 价格 S$价格7
+;ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名7)> 玩家 S$玩家7
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名7)> 币种 S$币种7
+ReadConfigFileItem ..\QuestDiary\首杀奖励\首爆领取记录.txt <$STR(S$首爆名7)> 玩家 S$玩家7
+#IF
+EQUAL S$玩家7
+#ACT
+mov S$玩家7 {暂未领取/FCOLOR=249}
+#IF
+NOT EQUAL S$首爆名8
+#ACT
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名8)> 价格 S$价格8
+;ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名8)> 玩家 S$玩家8
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名8)> 币种 S$币种8
+ReadConfigFileItem ..\QuestDiary\首杀奖励\首爆领取记录.txt <$STR(S$首爆名8)> 玩家 S$玩家8
+#IF
+EQUAL S$玩家8
+#ACT
+mov S$玩家8 {暂未领取/FCOLOR=249}
+#IF
+NOT EQUAL S$首爆名9
+#ACT
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名9)> 价格 S$价格9
+;ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名9)> 玩家 S$玩家9
+ReadConfigFileItem ..\QuestDiary\首杀奖励\价格配置.txt <$STR(S$首爆名9)> 币种 S$币种9
+ReadConfigFileItem ..\QuestDiary\首杀奖励\首爆领取记录.txt <$STR(S$首爆名9)> 玩家 S$玩家9
+#IF
+EQUAL S$玩家9
+#ACT
+mov S$玩家9 {暂未领取/FCOLOR=249}
+
+#IF
+#ACT
+MOV S$首爆名显0 <$Str(S$首爆名0)>
+MOV S$首爆名显1 <$Str(S$首爆名1)>
+MOV S$首爆名显2 <$Str(S$首爆名2)>
+MOV S$首爆名显3 <$Str(S$首爆名3)>
+MOV S$首爆名显4 <$Str(S$首爆名4)>
+MOV S$首爆名显5 <$Str(S$首爆名5)>
+MOV S$首爆名显6 <$Str(S$首爆名6)>
+MOV S$首爆名显7 <$Str(S$首爆名7)>
+MOV S$首爆名显8 <$Str(S$首爆名8)>
+MOV S$首爆名显9 <$Str(S$首爆名9)>
+
+;SetStringBlank S$货币  15 1
+
+#IF
+EQUAL S$首爆名0
+#ACT
+MOV S$显示0_1
+MOV S$显示0_2
+MOV S$显示0_3
+MOV S$显示0_4
+#ELSEACT
+
+;N$页数
+mov N$当前序号1
+inc N$当前序号1 1
+inc N$当前序号1 N$页数
+
+
+MOV S$显示0_1    <<$STR(S$首爆名显0)>/FCOLOR=250>
+MOV S$显示0_2    <<$STR(S$价格0)><$Str(S$币种0)>/FCOLOR=250>
+MOV S$显示0_3    <获得者：/FCOLOR=251><$STR(S$玩家0)>
+MOV S$显示0_4    <<$STR(N$当前序号1)>./FCOLOR=249>
+
+#IF
+EQUAL S$首爆名1
+#ACT
+;MOV S$显示1
+MOV S$显示1_1
+MOV S$显示1_2
+MOV S$显示1_3
+MOV S$显示1_4
+#ELSEACT
+mov N$当前序号2
+inc N$当前序号2 2
+inc N$当前序号2 N$页数
+
+MOV S$显示1_1    <<$STR(S$首爆名显1)>/FCOLOR=250>
+MOV S$显示1_2    <<$STR(S$价格1)><$STR(S$币种1)>/FCOLOR=250>
+MOV S$显示1_3    <获得者：/FCOLOR=251><$STR(S$玩家1)>
+MOV S$显示1_4    <<$STR(N$当前序号2)>./FCOLOR=249>
+
+#IF
+EQUAL S$首爆名2
+#ACT
+;MOV S$显示2
+MOV S$显示2_1
+MOV S$显示2_2
+MOV S$显示2_3
+MOV S$显示2_4
+#ELSEACT
+mov N$当前序号3
+inc N$当前序号3 3
+inc N$当前序号3 N$页数
+
+MOV S$显示2_1    <<$STR(S$首爆名显2)>/FCOLOR=250>
+MOV S$显示2_2    <<$STR(S$价格2)><$Str(S$币种2)>/FCOLOR=250>
+MOV S$显示2_3    <获得者：/FCOLOR=251><$STR(S$玩家2)>
+MOV S$显示2_4    <<$STR(N$当前序号3)>./FCOLOR=249>
+
+#IF
+EQUAL S$首爆名3
+#ACT
+;MOV S$显示3
+MOV S$显示3_1
+MOV S$显示3_2
+MOV S$显示3_3
+MOV S$显示3_4
+#ELSEACT
+mov N$当前序号4
+inc N$当前序号4 4
+inc N$当前序号4 N$页数
+
+MOV S$显示3_1    <<$STR(S$首爆名显3)>/FCOLOR=250>
+MOV S$显示3_2    <<$STR(S$价格3)><$Str(S$币种3)>/FCOLOR=250>
+MOV S$显示3_3    <获得者：/FCOLOR=251><$STR(S$玩家3)>
+MOV S$显示3_4    <<$STR(N$当前序号4)>./FCOLOR=249>
+
+#IF
+EQUAL S$首爆名4
+#ACT
+;MOV S$显示4
+MOV S$显示4_1
+MOV S$显示4_2
+MOV S$显示4_3
+MOV S$显示4_4
+#ELSEACT
+mov N$当前序号5
+inc N$当前序号5 5
+inc N$当前序号5 N$页数
+
+MOV S$显示4_1    <<$STR(S$首爆名显4)>/FCOLOR=250>
+MOV S$显示4_2    <<$STR(S$价格4)><$Str(S$币种4)>/FCOLOR=250>
+MOV S$显示4_3    <获得者：/FCOLOR=251><$STR(S$玩家4)>
+MOV S$显示4_4    <<$STR(N$当前序号5)>./FCOLOR=249>
+
+#IF
+EQUAL S$首爆名5
+#ACT
+;MOV S$显示5
+MOV S$显示5_1
+MOV S$显示5_2
+MOV S$显示5_3
+MOV S$显示5_4
+#ELSEACT
+mov N$当前序号6
+inc N$当前序号6 6
+inc N$当前序号6 N$页数
+
+MOV S$显示5_1    <<$STR(S$首爆名显5)>/FCOLOR=250>
+MOV S$显示5_2    <<$STR(S$价格5)><$Str(S$币种5)>/FCOLOR=250>
+MOV S$显示5_3    <获得者：/FCOLOR=251><$STR(S$玩家5)>
+MOV S$显示5_4    <<$STR(N$当前序号6)>./FCOLOR=249>
+
+#IF
+EQUAL S$首爆名6
+#ACT
+;MOV S$显示6
+MOV S$显示6_1
+MOV S$显示6_2
+MOV S$显示6_3
+MOV S$显示6_4
+
+#ELSEACT
+mov N$当前序号7
+inc N$当前序号7 7
+inc N$当前序号7 N$页数
+
+MOV S$显示6_1    <<$STR(S$首爆名显6)>/FCOLOR=250>
+MOV S$显示6_2    <<$STR(S$价格6)><$Str(S$币种6)>/FCOLOR=250>
+MOV S$显示6_3    <获得者：/FCOLOR=251><$STR(S$玩家6)>
+MOV S$显示6_4    <<$STR(N$当前序号7)>./FCOLOR=249>
+
+
+#IF
+EQUAL S$首爆名7
+#ACT
+;MOV S$显示7
+MOV S$显示7_1
+MOV S$显示7_2
+MOV S$显示7_3
+MOV S$显示7_4
+
+#ELSEACT
+mov N$当前序号8
+inc N$当前序号8 8
+inc N$当前序号8 N$页数
+
+MOV S$显示7_1    <<$STR(S$首爆名显7)>/FCOLOR=250>
+MOV S$显示7_2    <<$STR(S$价格7)><$Str(S$币种7)>/FCOLOR=250>
+MOV S$显示7_3    <获得者：/FCOLOR=251><$STR(S$玩家7)>
+MOV S$显示7_4    <<$STR(N$当前序号8)>./FCOLOR=249>
+
+#IF
+EQUAL S$首爆名8
+#ACT
+;MOV S$显示8
+MOV S$显示8_1
+MOV S$显示8_2
+MOV S$显示8_3
+MOV S$显示8_4
+#ELSEACT
+mov N$当前序号9
+inc N$当前序号9 9
+inc N$当前序号9 N$页数
+
+MOV S$显示8_1    <<$STR(S$首爆名显8)>/FCOLOR=250>
+MOV S$显示8_2    <<$STR(S$价格8)><$Str(S$币种8)>/FCOLOR=250>
+MOV S$显示8_3    <获得者：/FCOLOR=251><$STR(S$玩家8)>
+MOV S$显示8_4    <<$STR(N$当前序号9)>./FCOLOR=249>
+
+#IF
+EQUAL S$首爆名9
+#ACT
+;MOV S$显示9
+MOV S$显示9_1
+MOV S$显示9_2
+MOV S$显示9_3
+MOV S$显示9_4
+#ELSEACT
+mov N$当前序号10
+inc N$当前序号10 10
+inc N$当前序号10 N$页数
+
+MOV S$显示9_1    <<$STR(S$首爆名显9)>/FCOLOR=250>
+MOV S$显示9_2    <<$STR(S$价格9)><$Str(S$币种9)>/FCOLOR=250>
+MOV S$显示9_3    <获得者：/FCOLOR=251><$STR(S$玩家9)>
+MOV S$显示9_4    <<$STR(N$当前序号10)>./FCOLOR=249>
+
+[@上一页]
+#IF
+LARGE N$页数 0
+#ACT
+DEC N$页数 10
+GOTO @主脚本
+#ELSEACT
+MESSAGEBOX 已经是第一页了。
+
+[@下一页]
+#OR
+EQUAL S$首爆名0
+EQUAL S$首爆名1
+EQUAL S$首爆名2
+EQUAL S$首爆名3
+EQUAL S$首爆名4
+EQUAL S$首爆名5
+EQUAL S$首爆名6
+EQUAL S$首爆名7
+EQUAL S$首爆名8
+EQUAL S$首爆名9
+#ACT
+MESSAGEBOX 已经是最后一页了。
+
+#ELSEACT
+INC N$页数 10
+INC N$页数1 10
+GOTO @主脚本
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@首杀_上一步]
+#act
+dec N$首杀_页数 2
+mul n$首杀_读取行数 <$str(N$首杀_页数)> 20
+mul n$首杀_显示行数 <$str(N$首杀_页数)> 10
+mov s$首杀_下一页 @首杀_下一页
+
+#if
+small <$str(N$首杀_页数)> 1
+#act
+goto @首杀_奖励
+#elseact
+goto @首杀_下一页
+
+
+[@首杀_下一页]
+#if
+equal <$str(N$首杀_循环次数)> 0
+#act
+inc N$首杀_页数 1
+
+mov S$首杀_排名1
+mov S$首杀_排名2
+mov S$首杀_排名3
+mov S$首杀_排名4
+mov S$首杀_排名5
+mov S$首杀_排名6
+mov S$首杀_排名7
+mov S$首杀_排名8
+mov S$首杀_排名9
+mov S$首杀_排名10
+
+mov S$首杀_数据1
+mov S$首杀_数据2
+mov S$首杀_数据3
+mov S$首杀_数据4
+mov S$首杀_数据5
+mov S$首杀_数据6
+mov S$首杀_数据7
+mov S$首杀_数据8
+mov S$首杀_数据9
+mov S$首杀_数据10
+
+#if
+#act
+mov S$首杀_读取名字
+GetRandomText ..\QuestDiary\技术QQ198605888\首杀_首爆\首杀_奖励\首杀_设置.txt S$首杀_读取名字 <$str(n$首杀_读取行数)>
+
+INC n$首杀_读取行数 1
+MOV S$首杀_读取奖励
+goto @首杀_读取奖励A
+
+
+[@首杀_读取奖励A]
+#act
+GetListString ..\QuestDiary\技术QQ198605888\首杀_首爆\首杀_奖励\首杀_设置.txt <$str(n$首杀_读取行数)> S$首杀_读取奖励1 S$首杀_读取奖励2
+INC n$首杀_读取行数 1
+
+#if
+equal S$首杀_读取奖励2
+#act
+DEC n$首杀_读取行数 1
+goto @首杀_读取奖励B
+break
+#elseact
+SetStringBlank S$首杀_读取奖励2 10 0
+
+inc S$首杀_读取奖励 <$str(S$首杀_读取奖励2)>.<$str(S$首杀_读取奖励1)>
+goto @首杀_读取奖励A
+break
+
+[@首杀_读取奖励B]
+
+#if
+CHECKTEXTLIST ..\QuestDiary\技术QQ198605888\首杀_首爆\首杀_奖励\首杀_已获得.txt <$str(S$首杀_读取名字)>
+#act
+GetStringPos ..\QuestDiary\技术QQ198605888\首杀_首爆\首杀_奖励\首杀_已获得.txt <$str(S$首杀_读取名字)>
+INC n0 1
+GetRandomText ..\QuestDiary\技术QQ198605888\首杀_首爆\首杀_奖励\首杀_已获得.txt S$首杀_击杀者 n0
+
+#elseact
+mov S$首杀_击杀者
+
+#if
+equal S$首杀_读取名字
+#act
+mov s$首杀_下一页
+mov N$首杀_循环次数 0
+goto @首杀_显示首杀
+break
+
+#if
+equal N$首杀_循环次数 10
+#act
+dec n$首杀_读取行数 2
+mov N$首杀_循环次数 0
+goto @首杀_显示首杀
+#elseact
+inc n$首杀_显示行数 1
+inc N$首杀_循环次数 1
+SetStringBlank S$首杀_读取名字 25 1
+MOV S$首杀_数据<$str(N$首杀_循环次数)> {<$STR(S$首杀_读取名字)>/FCOLOR=254}<$STR(S$首杀_读取奖励)>　　{击杀者：<$str(S$首杀_击杀者)>/FCOLOR=253}
+MOV S$首杀_排名<$str(N$首杀_循环次数)> <$str(n$首杀_显示行数)>．
+goto @首杀_下一页
+
+
+[@首杀_获取奖励]
+#IF
+CHECKTEXTLIST ..\QuestDiary\技术QQ198605888\首杀_首爆\首杀_奖励\首杀_已获得.txt <$CURRRTARGETNAME>
+#act
+break
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\技术QQ198605888\首杀_首爆\首杀_奖励\首杀_设置.txt <$CURRRTARGETNAME>
+#act
+GetStringPos ..\QuestDiary\技术QQ198605888\首杀_首爆\首杀_奖励\首杀_设置.txt <$CURRRTARGETNAME>
+inc N0 1
+AddTextListEx ..\QuestDiary\技术QQ198605888\首杀_首爆\首杀_奖励\首杀_已获得.txt <$USERNAME> 0
+AddTextListEx ..\QuestDiary\技术QQ198605888\首杀_首爆\首杀_奖励\首杀_已获得.txt <$CURRRTARGETNAME> 0
+GetListString ..\QuestDiary\技术QQ198605888\首杀_首爆\首杀_奖励\首杀_设置.txt N0 S$首杀_获取奖励1 S$首杀_获取奖励2
+#elseact
+break
+
+#if
+equal S$首杀_获取奖励1 元　宝
+#act
+GAMEGOLD + <$str(S$首杀_获取奖励2)>
+
+#if
+equal S$首杀_获取奖励1 ＲＭＢ
+#act
+gamepoint + <$str(S$首杀_获取奖励2)>
+SCENEVIBRATION 0 2 1
+messagebox
+
+#if
+equal S$首杀_获取奖励1 积　分
+#act
+GAMEDIAMOND + <$str(S$首杀_获取奖励2)>
+SCENEVIBRATION 0 2 1
+messagebox
+
+#if
+small g498 100
+#act
+mov g498 100
+#if
+small <$str(g498)> 300
+#act
+inc g498 30
+SENDMOVEMSG 0 251 249 <$str(g498)> 1 <系统提示：/FCOLOR=249>恭喜玩家　{<$USERNAME>/FCOLOR=250}　第一个杀死　{<$CURRRTARGETNAME>/FCOLOR=253}　{奖励：<$str(S$首杀_获取奖励2)><$str(S$首杀_获取奖励1)>/FCOLOR=254}
+#elseact
+inc g498 30
+SENDMOVEMSG 0 251 249 <$str(g498)> 1 <系统提示：/FCOLOR=249>恭喜玩家　{<$USERNAME>/FCOLOR=250}　第一个杀死　{<$CURRRTARGETNAME>/FCOLOR=253}　{奖励：<$str(S$首杀_获取奖励2)><$str(S$首杀_获取奖励1)>/FCOLOR=254}
+mov g498 0
+
+}

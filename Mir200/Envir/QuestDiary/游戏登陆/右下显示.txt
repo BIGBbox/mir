@@ -1,0 +1,42 @@
+[@属性显示]
+{
+#IF
+#ACT
+;delbutton 105 98
+;delbutton 105 99
+
+#Call [\Mobile\特殊NPC\TOP图标.txt] @导航
+#CALL [\游戏登陆\顶部属性.txt] @顶部属性显示
+
+#IF
+#ACT
+mov S$btn <Button|id=100|children=100_1|x=5|y=-40|nimg=official/top/1900012531.png|pimg=public/sf1/1/99999.png|link=@显示>
+mov S$小面板str <Img|img=public/sf1/1/01543_2.png|x=5|y=-5|children={close_btn,up,dn,jp,page,all,称号信息}|bg=1|reset=1|move=1>
+INC S$小面板str <Img|id=称号信息|children={文本框1,文本框2,文本框3,文本框4,文本框5,文本框6,文本框7,文本框8,文本框9,100}|x=0|y=0.0|height=1|width=1|img=public/0.png>
+INC S$小面板str <Button|id=100|x=0|y=-35|nimg=official/top/1900012532.png|pimg=official/top/0.png|link=@隐藏>
+INC S$小面板str <Text|id=文本框1|text=<$STR(N$装备经验)>%|x=85|y=2|size=15>
+INC S$小面板str <Text|id=文本框2|text=<$STR(N$怪物额外伤害)>%|x=85|y=25|size=15>
+INC S$小面板str <Text|id=文本框3|text=<$STR(N$魔法切割)>%|x=85|y=48|size=15>
+INC S$小面板str <Text|id=文本框4|text=<$STR(N$道术切割)>%|x=85|y=71|size=15>
+INC S$小面板str <Text|id=文本框5|text=<$STR(N$游戏吸收显示)>%|x=85|y=94|size=15>
+INC S$小面板str <Text|id=文本框6|text=<$STR(N$装备倍攻)>%|x=85|y=117|size=15>
+;INC S$小面板str <Text|id=文本框7|text=<$STR(N$攻击吸血)>%|x=85|y=140|size=15>
+;INC S$小面板str <Text|id=文本框8|text=<$STR(N$暴击伤害)>%|x=85|y=163|size=15>
+;INC S$小面板str <Text|id=文本框9|text=<$STR(N$暴率显示)>%|x=85|y=186|size=15>
+
+addbutton 105 98 <$STR(S$小面板str)>
+
+[@显示]
+#IF
+#ACT
+;delbutton 105 98
+addbutton 105 99 <$STR(S$小面板str)>
+
+[@隐藏]
+#IF
+#ACT
+;delbutton 105 99
+addbutton 105 98 <$STR(S$btn)>
+
+
+}

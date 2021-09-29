@@ -1,0 +1,175 @@
+(@@InPutString @@InPutInteger)
+[@main]
+#IF
+#ACT
+#SAY
+
+<Img|img=public/sf1/1/01095.png|x=330|y=120|children={close_btn,click_btn,行会名,行会管理员,创建行会,增加行会人数,攻城描述,rightTips,大门,复活,仓库,服饰店,元宝}|bg=1|reset=1|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=1029|y=130|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
+
+<RText|id=行会名|x=420|y=247|color=149|size=16|text=<[<$OWNERGUILD>]/FCOLOR=222>>
+<RText|id=行会管理员|x=420|y=265|color=149|size=16|text=<[<$LORD>]/FCOLOR=151>>
+;<RText|id=元宝|x=635|y=52|color=149|size=16|text=<0000000000/FCOLOR=151>>
+
+<Button|id=创建行会|x=310|y=310|nimg=public/sf1/1/00386.png|pimg=public/sf1/1/00387.png|tips={创建条件：/FCOLOR=250}^{所需等级：50级/FCOLOR=251}^{所需材料：沃玛号角 * 1/FCOLOR=251}^|tipsx=10|tipsy=80|size=18|color=249|link=@@INPUTSTRING70(请输入建立行会的名字：)>
+<Button|id=增加行会人数|x=310|y=330|nimg=public/sf1/1/00388.png|pimg=public/sf1/1/00389.png|tips={增加行会人数条件：/FCOLOR=250}^{所需元宝：10000/FCOLOR=251}^{可增加人数：+ 10/FCOLOR=251}^|tipsx=10|tipsy=80|size=18|color=249|link=@增加行会人数>
+<Text|id=攻城描述|x=330|y=355|color=87|tips=|tipsx=10|tipsy=80|size=13|text=每次合区之后自动开启沙巴克攻城战，我可用帮你快速前往沙城参战>
+<Button|id=大门|x=320|y=400|nimg=public/sf1/1/00390.png|pimg=public/sf1/1/00391.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@前进沙城大门>
+<Button|id=复活|x=420|y=400|nimg=public/sf1/1/00398.png|pimg=public/sf1/1/00399.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@前进复活点>
+<Button|id=仓库|x=320|y=425|nimg=public/sf1/1/00392.png|pimg=public/sf1/1/00393.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@前进沙城仓库>
+<Button|id=服饰店|x=420|y=425|nimg=public/sf1/1/00394.png|pimg=public/sf1/1/00395.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@前进沙城服装>
+
+;<Button|id=0|x=482|y=180|public/sf1/1/00386.png|pimg=public/sf1/1/00387.png|tips=|tipsx=10|tipsy=80|size=18|color=249|text=前进影之道|link=@前进影之道>
+
+;<>  <imgex:0:396:397:396:10:12|/@前进影之道>
+
+
+[@前进沙城大门]
+#IF
+CHECKTITLE 沙城捐献
+#ACT
+MOVR N$随机X 674 679
+MOVR N$随机Y 332 338
+MAPMOVE N3 <$STR(N$随机X)> <$STR(N$随机Y)>
+SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|249:39:0}{进入了沙城大门区域!|116:39:0}
+#elseact
+MessageBox 传送失败??\\1、不在攻城期间或没有沙城捐献
+BREAK
+
+
+[@前进沙城仓库]
+#IF
+CHECKTITLE 沙城捐献
+#ACT
+MAPMOVE N3 595 292
+SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|249:39:0}{进入了沙城仓库区域!|116:39:0}
+#elseact
+MessageBox 传送失败??\\1、不在攻城期间或没有沙城捐献
+BREAK
+
+
+[@前进沙城服装]
+#IF
+CHECKTITLE 沙城捐献
+#ACT
+MAPMOVE N3 662 286
+SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|249:39:0}{进入了沙城服装店区域!|116:39:0}
+#elseact
+MessageBox 传送失败??\\1、不在攻城期间或没有沙城捐献
+BREAK
+
+
+[@前进复活点]
+#IF
+CHECKTITLE 沙城捐献
+#ACT
+MAPMOVE N3 630 283
+SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|249:39:0}{进入了沙城复活点区域!|116:39:0}
+#elseact
+MessageBox 传送失败??\\1、不在攻城期间或没有沙城捐献
+BREAK
+
+
+
+
+
+
+[@前进影之道]
+#IF
+CHECKUNDERWAR 沙巴克
+#ACT
+MAPMOVE YZD
+SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|249:39:0}{进入了影之道区域!|116:39:0}
+#elseact
+MessageBox 传送失败??\\1、不在攻城期间
+BREAK
+
+
+
+
+[@InPutString70]
+#IF
+HAVEGUILD
+#ACT
+MessageBox 你已经有行会了！
+BREAK
+
+#IF
+CheckContainsText <$STR(S70)>
+#ACT
+messagebox 创建失败！！！\\请勿输入特殊字符！！
+BREAK
+
+
+#IF
+checkitem 沃玛号角 1
+CHECKLEVELEX > 49
+CheckStringlength <$STR(S70)> > 1
+#ACT
+TAKE 沃玛号角 1
+AddGuild <$STR(S70)> <$USERNAME>
+MessageBox 行会创建成功....<$STR(S70)>
+BREAK
+#elseact
+messagebox 创建失败！！！\\1、缺少《沃玛号角》\\2、请输入2位以上行会名字！！
+BREAK
+
+[@增加行会人数]
+#IF
+ISGUILDMASTER
+#elseact
+MessageBox 你不是行会老大，无法操作！
+BREAK
+
+#IF
+ISGUILDMASTER
+CHECKGAMEDIAMOND > 999
+#ACT
+GAMEDIAMOND - 1000
+AddGuildMemberCount + 10
+MessageBox 行会人数上限增加10！
+BREAK
+#elseact
+MessageBox 增加行会人数上限需要1000天下币！
+BREAK
+
+
+[@开始领取攻沙奖励]
+#IF
+EQUAL G437 0
+ISCASTLEMASTER
+EQUAL G436 2
+HOUR 22 23
+#ACT
+mov G437 1
+;gamepoint + <$STR(G427)>
+mov G427 0
+GAMEDIAMOND + 100000
+SENDMOVEMSG 0 251 0 50 1 公告:恭喜伟大的沙巴克城主{[<$USERNAME>]/FCOLOR=70}领取了{10W天下币/FCOLOR=250}奖励，微信红包联系群管理发放！! 10 8 0
+SENDMOVEMSG 0 251 0 100 1 公告:恭喜伟大的沙巴克城主{[<$USERNAME>]/FCOLOR=70}领取了{10W天下币/FCOLOR=250}奖励，微信红包联系群管理发放! 10 8 0
+SENDMOVEMSG 0 251 0 150 1 公告:恭喜伟大的沙巴克城主{[<$USERNAME>]/FCOLOR=70}领取了{10W天下币/FCOLOR=250}奖励，微信红包联系群管理发放! 10 8 0
+SENDMOVEMSG 0 251 0 200 1 公告:恭喜伟大的沙巴克城主{[<$USERNAME>]/FCOLOR=70}领取了{10W天下币/FCOLOR=250}奖励，微信红包联系群管理发放! 10 8 0
+SENDMOVEMSG 0 251 0 250 1 公告:恭喜伟大的沙巴克城主{[<$USERNAME>]/FCOLOR=70}领取了{10W天下币/FCOLOR=250}奖励，微信红包联系群管理发放! 10 8 0
+break
+
+
+#IF
+EQUAL G437 0
+ISCASTLEMASTER
+large G436 2
+HOUR 22 23
+#ACT
+mov G437 1
+GAMEDIAMOND + 30000
+;gamepoint + <$STR(G427)>
+mov G427 0
+SENDMOVEMSG 0 251 0 50 1 公告:恭喜伟大的沙巴克城主{[<$USERNAME>]/FCOLOR=70}领取了{30000天下币/FCOLOR=250}奖励! 10 8 0
+SENDMOVEMSG 0 251 0 100 1 公告:恭喜伟大的沙巴克城主{[<$USERNAME>]/FCOLOR=70}领取了{30000天下币/FCOLOR=250}奖励! 10 8 0
+SENDMOVEMSG 0 251 0 150 1 公告:恭喜伟大的沙巴克城主{[<$USERNAME>]/FCOLOR=70}领取了{30000天下币/FCOLOR=250}奖励! 10 8 0
+SENDMOVEMSG 0 251 0 200 1 公告:恭喜伟大的沙巴克城主{[<$USERNAME>]/FCOLOR=70}领取了{30000天下币/FCOLOR=250}奖励! 10 8 0
+SENDMOVEMSG 0 251 0 250 1 公告:恭喜伟大的沙巴克城主{[<$USERNAME>]/FCOLOR=70}领取了{30000天下币/FCOLOR=250}奖励! 10 8 0
+break
+#elseact
+MessageBox 领取失败??
+BREAK

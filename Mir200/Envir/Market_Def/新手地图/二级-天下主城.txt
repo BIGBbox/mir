@@ -1,0 +1,77 @@
+
+(@MDlgImgName=public/sf1/1/01806.png)
+
+[@main]
+
+#if
+#act
+#if
+;CheckStringlength <$STR(T8)> < 1
+#act
+#say
+<Img|width=650|height=300|img=public/bg_npc_01.png|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=80|color=151|tips=|tipsx=10|tipsy=80|size=18|text=尊敬的玩家：[<$USERNAME>]>
+<Text|a=0|x=245|y=80|color=255|tips=|tipsx=10|tipsy=80|size=18|text=〖您的帐号存在被盗风险〗>
+<Text|a=0|x=32|y=100|color=91|tips=|tipsx=10|tipsy=80|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=120|color=161|tips=|tipsx=10|tipsy=80|size=18|text=1、可输入汉字`字符`符号等,一个汉字为2个字符,可输入6-8个字符！>
+<Text|a=0|x=32|y=140|color=161|tips=|tipsx=10|tipsy=80|size=18|text=2、密保功能一旦开启永久生效，合区无任何影响，不需要重新设置！>
+<Text|a=0|x=32|y=160|color=161|tips=|tipsx=10|tipsy=80|size=18|text=3、设置密保后每次登录IP和机器变化后上线都需要验证，不输入掉线处理！>
+<Text|a=0|x=32|y=180|color=255|tips=|tipsx=10|tipsy=80|size=18|text=4、为了您的装备和货币，建议您设置二级密码，有效防止盗号！|color=161>
+<Text|a=0|x=32|y=200|color=91|tips=|tipsx=10|tipsy=80|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=220|color=251|tips=|tipsx=10|tipsy=80|size=18|text=设置二级密码|link=@@INPUTSTRING1>
+
+[@InPutString1]
+#IF
+CheckStringlength <$STR(s1)> > 8
+#ACT
+MESSAGEBOX 密码位数大于了八位，请重新输入！←密码过于复杂.\可以输入汉字、字母、数字、符号等！\一个汉字为2个字符，可输入6-8个字符！
+BREAK
+#IF
+CheckStringlength <$STR(s1)> < 6
+#ACT
+MESSAGEBOX 密码位数小于了六位，请重新输入！←密码过于简单.\可以输入汉字、字母、数字、符号等！\一个汉字为2个字符，可输入6-8个字符！
+BREAK
+#IF
+#ACT
+mov t9 <$STR(s1)>
+GOTO @设置2
+BREAK
+[@设置2]
+#say
+<Img|width=650|height=300|img=public/bg_npc_01.png|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=80|color=154|tips=|tipsx=10|tipsy=80|size=18|text=安全大使>
+<Text|a=0|x=32|y=100|color=19|tips=|tipsx=10|tipsy=80|size=18|text=安全大使>
+<Text|a=0|x=131|y=100|color=151|tips=|tipsx=10|tipsy=80|size=18|text=尊敬的游戏玩家,您好>
+<Text|a=0|x=351|y=100|color=87|tips=|tipsx=10|tipsy=80|size=18|text=〖请再次输入您的二级密码〗>
+<Text|a=0|x=43|y=120|color=91|tips=|tipsx=10|tipsy=80|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=140|color=151|tips=|tipsx=10|tipsy=80|size=18|text=1.请再次>
+<Text|a=0|x=120|y=140|color=255|tips=|tipsx=10|tipsy=80|size=18|text=输入你的>
+<Text|a=0|x=208|y=140|color=210|tips=|tipsx=10|tipsy=80|size=18|text=6-8位字符>
+<Text|a=0|x=307|y=140|color=255|tips=|tipsx=10|tipsy=80|size=18|text=密码后点确认.   >
+<Text|a=0|x=483|y=140|color=255|tips=|tipsx=10|tipsy=80|size=18|text=注意:不要输入错误！>
+<Text|a=0|x=32|y=160|color=154|tips=|tipsx=10|tipsy=80|size=18|text=2.当前步骤：>
+<Text|a=0|x=164|y=160|color=255|tips=|tipsx=10|tipsy=80|size=18|text=核对二级密码 需与第一次输入的密码一致>
+<Text|a=0|x=32|y=180|color=91|tips=|tipsx=10|tipsy=80|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=200|color=251|tips=|tipsx=10|tipsy=80|size=18|text=再次确定二级密码|link=@@INPUTSTRING5>
+
+[@InPutString5]
+#IF
+Equal t9 <$STR(s5)>
+#ACT
+mov t8 <$STR(t9)>
+mov t7 <$IPADDR>
+mov t10 <$MACHINEID>
+mov t9
+sendmsg 6 <$STR(t8)>
+CALCVAR HUMAN 二级密码 = <$STR(t8)>
+SAVEVAR HUMAN 二级密码 ..\QuestDiary\数据文件\二级密码\密码数据.txt
+MESSAGEBOX \【设置密码成功，请牢记您的密码：[<$STR(t8)>]】下次登陆时生效！
+#elseact
+mov t9
+MESSAGEBOX \设置失败：\您两次输入的密码不一致！\请重新输入二级密码后确认！
+GOTO @main
+BREAK
