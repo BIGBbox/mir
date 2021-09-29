@@ -1,0 +1,47 @@
+[@属性显示]
+{
+
+
+#IF
+#ACT
+MOV N$BGY坐标 <$SCREENHEIGHT>
+DEC N$BGY坐标 463
+;经验
+ADDBUTTON 0 11 9999 9999 9999 90 <$STR(N$BGY坐标)> 0 <$STR(N$装备经验)>% 经验
+;伤害
+INC <$STR(N$BGY坐标)> 24
+ADDBUTTON 0 12 9999 9999 9999 90 <$STR(N$BGY坐标)> 0 <$STR(N$怪物额外伤害)>% 怪物额外伤害
+INC <$STR(N$BGY坐标)> 24
+ADDBUTTON 0 17 9999 9999 9999 90 <$STR(N$BGY坐标)> 0 <$STR(N$魔法切割)>% 当魔法值过低时，无法产生切割效果
+;魔法切割
+INC <$STR(N$BGY坐标)> 24
+ADDBUTTON 0 18 9999 9999 9999 90 <$STR(N$BGY坐标)> 0 <$STR(N$道术切割)>% 当道术值过低时，无法产生切割效果
+;道术切割
+;切割
+INC <$STR(N$BGY坐标)> 23
+;ADDBUTTON 0 13 9999 9999 9999 110 <$STR(N$BGY坐标)> 0 <$STR(N$切割倍数)>
+ADDBUTTON 0 13 9999 9999 9999 90 <$STR(N$BGY坐标)> 0 <$STR(N$游戏吸收显示)>% 游戏吸收显示
+;吸收
+INC <$STR(N$BGY坐标)> 23
+ADDBUTTON 0 14 9999 9999 9999 90 <$STR(N$BGY坐标)> 0 <$STR(N$装备倍攻)>% 装备倍攻
+;倍功
+INC <$STR(N$BGY坐标)> 22
+ADDBUTTON 0 15 9999 9999 9999 90 <$STR(N$BGY坐标)> 0 <$STR(N$攻击吸血)>% 攻击吸血
+;吸血
+INC <$STR(N$BGY坐标)> 23
+ADDBUTTON 0 20 9999 9999 9999 90 <$STR(N$BGY坐标)> 0 <$STR(N$暴击伤害)>% 暴击伤害
+;爆率
+INC <$STR(N$BGY坐标)> 23
+ADDBUTTON 0 16 9999 9999 9999 90 <$STR(N$BGY坐标)> 0 <$STR(N$暴率显示)>% 暴率显示
+
+
+MOV N$BGY坐标 <$SCREENHEIGHT>
+DEC N$BGY坐标 500
+ADDBUTTON 0 10 1543 1543 1543 0 <$STR(N$BGY坐标)> 0 -1
+
+
+
+
+
+
+}

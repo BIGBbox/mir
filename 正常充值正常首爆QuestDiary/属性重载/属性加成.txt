@@ -1,0 +1,726 @@
+[@属性设置]
+{
+#IF
+#ACT
+mov N$人物攻击 0
+mov N$人物魔法 0
+mov N$人物道术 0
+mov N$人物防御 0
+mov N$人物魔御 0
+mov N$人物血量 0
+mov N$人物蓝量 0
+mov N$人物准确 0
+mov N$人物敏捷 0
+
+mov N$人物攻击计算 0
+mov N$人物魔法计算 0
+mov N$人物道术计算 0
+mov N$人物防御计算 0
+mov N$人物魔御计算 0
+mov N$人物血量计算 0
+mov N$人物蓝量计算 0
+
+mov N$人物攻击百分比 0
+mov N$人物魔法百分比 0
+mov N$人物道术百分比 0
+mov N$人物防御百分比 0
+mov N$人物魔御百分比 0
+mov N$人物血量百分比 0
+mov N$人物蓝量百分比 0
+
+ChangeHumAbility 1 = <$STR(N$人物防御)> 1
+ChangeHumAbility 2 = <$STR(N$人物防御)> 1
+ChangeHumAbility 3 = <$STR(N$人物魔御)> 1
+ChangeHumAbility 4 = <$STR(N$人物魔御)> 1
+ChangeHumAbility 5 = <$STR(N$人物攻击)> 1
+ChangeHumAbility 6 = <$STR(N$人物攻击)> 1
+ChangeHumAbility 7 = <$STR(N$人物魔法)> 1
+ChangeHumAbility 8 = <$STR(N$人物魔法)> 1
+ChangeHumAbility 9 = <$STR(N$人物道术)> 1
+ChangeHumAbility 10 = <$STR(N$人物道术)> 1
+ChangeHumAbility 11 = <$STR(N$人物血量)> 1
+ChangeHumAbility 12 = <$STR(N$人物蓝量)> 1
+ChangeHumAbility 18 = <$STR(N$人物准确)> 1
+ChangeHumAbility 19 = <$STR(N$人物敏捷)> 1
+
+
+
+#IF
+#ACT
+INC N$人物攻击 <$str(U17)>
+INC N$人物魔法 <$str(U17)>
+INC N$人物道术 <$str(U17)>
+
+
+#IF
+equal U1 1
+#ACT
+INC N$人物血量 100
+INC N$人物蓝量 100
+
+#IF
+equal U1 2
+#ACT
+INC N$人物血量 300
+INC N$人物蓝量 300
+
+#IF
+equal U1 3
+#ACT
+INC N$人物血量 600
+INC N$人物蓝量 600
+
+#IF
+equal U1 4
+#ACT
+INC N$人物血量 1000
+INC N$人物蓝量 1000
+
+#IF
+equal U1 5
+#ACT
+INC N$人物血量 1500
+INC N$人物蓝量 1500
+
+#IF
+equal U1 6
+#ACT
+INC N$人物血量 2100
+INC N$人物蓝量 2100
+
+#IF
+equal U1 7
+#ACT
+INC N$人物血量 2800
+INC N$人物蓝量 2800
+
+#IF
+equal U1 8
+#ACT
+INC N$人物血量 3600
+INC N$人物蓝量 3600
+
+#IF
+equal U1 9
+#ACT
+INC N$人物血量 4500
+INC N$人物蓝量 4500
+
+#IF
+equal U1 10
+#ACT
+INC N$人物血量 5500
+INC N$人物蓝量 5500
+
+
+#IF
+CHECK [251] 1
+#ACT
+inc N$人物攻击 5
+inc N$人物魔法 5
+inc N$人物道术 5
+
+#IF
+CHECK [252] 1
+#ACT
+inc N$人物攻击 10
+inc N$人物魔法 10
+inc N$人物道术 10
+
+#IF
+CHECK [253] 1
+#ACT
+inc N$人物攻击 15
+inc N$人物魔法 15
+inc N$人物道术 15
+
+#IF
+CHECK [254] 1
+#ACT
+inc N$人物攻击 20
+inc N$人物魔法 20
+inc N$人物道术 20
+
+#IF
+CHECK [255] 1
+#ACT
+inc N$人物攻击 25
+inc N$人物魔法 25
+inc N$人物道术 25
+
+#IF
+CHECK [256] 1
+#ACT
+inc N$人物准确 5
+
+#IF
+CHECK [257] 1
+#ACT
+inc N$人物敏捷 5
+
+#IF
+CHECK [258] 1
+#ACT
+inc N$人物准确 5
+inc N$人物敏捷 5
+
+#IF
+CHECK [260] 1
+#ACT
+inc N$人物血量百分比 1
+
+
+
+#IF
+CHECK [265] 1
+#ACT
+inc N$人物攻击百分比 1
+inc N$人物魔法百分比 1
+inc N$人物道术百分比 1
+
+
+#IF
+CHECK [266] 1
+#ACT
+inc N$人物血量百分比 1
+
+
+#IF
+check [267] 1
+#ACT
+inc N$人物准确 10
+inc N$人物敏捷 10
+
+
+#IF
+CHECK [268] 1
+#ACT
+inc N$人物血量百分比 2
+
+
+
+
+#IF
+CHECK [270] 1
+#ACT
+inc N$人物攻击百分比 1
+inc N$人物魔法百分比 1
+inc N$人物道术百分比 1
+
+
+#IF
+CHECK [271] 1
+#ACT
+inc N$人物准确 5
+inc N$人物敏捷 5
+inc N$人物攻击 30
+inc N$人物魔法 30
+inc N$人物道术 30
+
+
+#IF
+CHECK [272] 1
+#ACT
+inc N$人物攻击百分比 1
+inc N$人物魔法百分比 1
+inc N$人物道术百分比 1
+
+
+#IF
+CHECK [274] 1
+#ACT
+inc N$人物攻击百分比 1
+inc N$人物魔法百分比 1
+inc N$人物道术百分比 1
+
+#IF
+CHECK [275] 1
+#ACT
+inc N$人物准确 5
+inc N$人物敏捷 5
+inc N$人物血量百分比 2
+
+#IF
+CHECK [276] 1
+#ACT
+inc N$人物血量百分比 1
+inc N$人物攻击百分比 1
+inc N$人物魔法百分比 1
+inc N$人物道术百分比 1
+
+#IF
+CHECK [277] 1
+#ACT
+inc N$人物血量百分比 1
+inc N$人物攻击百分比 1
+inc N$人物魔法百分比 1
+inc N$人物道术百分比 1
+
+
+#IF
+CHECK [278] 1
+#ACT
+inc N$人物血量百分比 1
+inc N$人物攻击百分比 1
+inc N$人物魔法百分比 1
+inc N$人物道术百分比 1
+
+
+#IF
+CHECK [279] 1
+#ACT
+inc N$人物血量百分比 1
+inc N$人物攻击百分比 1
+inc N$人物魔法百分比 1
+inc N$人物道术百分比 1
+
+#IF
+CHECK [280] 1
+#ACT
+inc N$人物血量百分比 2
+inc N$人物攻击百分比 2
+inc N$人物魔法百分比 2
+inc N$人物道术百分比 2
+
+
+#IF
+large N$临时增长 1
+#act
+inc N$人物攻击百分比 50
+inc N$人物魔法百分比 50
+inc N$人物道术百分比 50
+inc N$人物防御百分比 50
+inc N$人物魔御百分比 50
+inc N$人物血量百分比 50
+inc N$人物蓝量百分比 50
+
+
+
+#IF
+equal N$平定三藩 0
+CHECKITEM 平定三藩
+#act
+inc N$人物攻击百分比 10
+inc N$人物魔法百分比 10
+inc N$人物道术百分比 10
+SENDMSG 7 提示：攻魔道增加10%，持续10秒！
+
+#IF
+CHECK [9] 1
+#act
+inc N$人物攻击 300
+inc N$人物魔法 300
+inc N$人物道术 300
+inc N$人物防御 300
+inc N$人物魔御 300
+inc N$人物血量 300
+inc N$人物蓝量 300
+
+
+
+
+
+#IF
+equal U4 1
+#ACT
+INC N$人物道术 10
+
+#IF
+equal U4 2
+#ACT
+INC N$人物道术 30
+
+#IF
+equal U4 3
+#ACT
+INC N$人物道术 60
+
+#IF
+equal U4 4
+#ACT
+INC N$人物道术 100
+
+#IF
+equal U4 5
+#ACT
+INC N$人物道术 150
+
+#IF
+equal U4 6
+#ACT
+INC N$人物道术 210
+
+#IF
+equal U4 7
+#ACT
+INC N$人物道术 280
+
+#IF
+equal U4 8
+#ACT
+INC N$人物道术 360
+
+#IF
+equal U4 9
+#ACT
+INC N$人物道术 440
+
+#IF
+equal U4 10
+#ACT
+INC N$人物道术 540
+
+
+#IF
+equal U3 1
+#ACT
+INC N$人物魔法 10
+
+#IF
+equal U3 2
+#ACT
+INC N$人物魔法 30
+
+#IF
+equal U3 3
+#ACT
+INC N$人物魔法 60
+
+#IF
+equal U3 4
+#ACT
+INC N$人物魔法 100
+
+#IF
+equal U3 5
+#ACT
+INC N$人物魔法 150
+
+#IF
+equal U3 6
+#ACT
+INC N$人物魔法 210
+
+#IF
+equal U3 7
+#ACT
+INC N$人物魔法 280
+
+#IF
+equal U3 8
+#ACT
+INC N$人物魔法 360
+
+#IF
+equal U3 9
+#ACT
+INC N$人物魔法 440
+
+#IF
+equal U3 10
+#ACT
+INC N$人物魔法 540
+
+#IF
+equal U2 1
+#ACT
+INC N$人物攻击 10
+
+#IF
+equal U2 2
+#ACT
+INC N$人物攻击 30
+
+#IF
+equal U2 3
+#ACT
+INC N$人物攻击 60
+
+#IF
+equal U2 4
+#ACT
+INC N$人物攻击 100
+
+#IF
+equal U2 5
+#ACT
+INC N$人物攻击 150
+
+#IF
+equal U2 6
+#ACT
+INC N$人物攻击 210
+
+#IF
+equal U2 7
+#ACT
+INC N$人物攻击 280
+
+#IF
+equal U2 8
+#ACT
+INC N$人物攻击 360
+
+#IF
+equal U2 9
+#ACT
+INC N$人物攻击 440
+
+#IF
+equal U2 10
+#ACT
+INC N$人物攻击 540
+
+
+
+#IF
+equal U12 1
+#ACT
+INC N$人物魔法百分比 1
+
+#IF
+equal U12 2
+#ACT
+INC N$人物魔法百分比 3
+
+#IF
+equal U12 3
+#ACT
+INC N$人物魔法百分比 6
+
+#IF
+equal U12 4
+#ACT
+INC N$人物魔法百分比 10
+
+#IF
+equal U12 5
+#ACT
+INC N$人物魔法百分比 15
+
+#IF
+equal U12 6
+#ACT
+INC N$人物魔法百分比 21
+
+#IF
+equal U12 7
+#ACT
+INC N$人物魔法百分比 28
+
+#IF
+equal U12 8
+#ACT
+INC N$人物魔法百分比 36
+
+#IF
+equal U12 9
+#ACT
+INC N$人物魔法百分比 45
+
+
+#IF
+equal U13 1
+#ACT
+INC N$人物道术百分比 1
+
+#IF
+equal U13 2
+#ACT
+INC N$人物道术百分比 3
+
+#IF
+equal U13 3
+#ACT
+INC N$人物道术百分比 6
+
+#IF
+equal U13 4
+#ACT
+INC N$人物道术百分比 10
+
+#IF
+equal U13 5
+#ACT
+INC N$人物道术百分比 15
+
+#IF
+equal U13 6
+#ACT
+INC N$人物道术百分比 21
+
+#IF
+equal U13 7
+#ACT
+INC N$人物道术百分比 28
+
+#IF
+equal U13 8
+#ACT
+INC N$人物道术百分比 36
+
+#IF
+equal U13 9
+#ACT
+INC N$人物道术百分比 45
+
+
+
+
+
+#IF
+CHECKSOCKETABLEITEM 1 0 N$武器位置一IDX S$武器位置一
+#act
+
+
+#if
+CheckContainsText S$武器位置一 五仁月饼
+#act
+inc N$人物攻击 100
+inc N$人物魔法 100
+inc N$人物道术 100
+
+
+#if
+CheckContainsText S$武器位置一 焚神炎心
+#act
+inc N$人物攻击 200
+inc N$人物魔法 200
+inc N$人物道术 200
+
+#if
+CheckContainsText S$武器位置一 太阴符纹
+#act
+inc N$人物攻击 300
+inc N$人物魔法 300
+inc N$人物道术 300
+
+#if
+CheckContainsText S$武器位置一 極冰碎片
+#act
+inc N$人物攻击 500
+inc N$人物魔法 500
+inc N$人物道术 500
+
+
+
+#IF
+CHECKSOCKETABLEITEM 16 0 N$衣服位置一IDX S$衣服位置一
+#act
+
+
+#if
+CheckContainsText S$衣服位置一 勇者的祸根
+#act
+INC N$人物防御 350
+INC N$人物魔御 350
+INC N$人物攻击 50
+INC N$人物魔法 50
+INC N$人物道术 50
+INC N$人物血量 5000
+
+#if
+CheckContainsText S$衣服位置一 洪荒之力
+#act
+INC N$人物防御 500
+INC N$人物魔御 500
+INC N$人物攻击 75
+INC N$人物魔法 75
+INC N$人物道术 75
+INC N$人物血量 7500
+
+
+
+
+
+
+
+
+
+
+
+
+#IF
+#ACT
+mov N$人物攻击计算 <$MAXDC>
+mov N$人物魔法计算 <$MAXMC>
+mov N$人物道术计算 <$MAXSC>
+mov N$人物防御计算 <$MAXAC>
+mov N$人物魔御计算 <$MAXMAC>
+mov N$人物血量计算 <$MAXHP>
+mov N$人物蓝量计算 <$MAXMP>
+mov N$人物准确计算 <$HIT> 
+mov N$人物敏捷计算 <$SPD> 
+
+
+inc N$人物攻击计算 <$STR(N$人物攻击)>
+inc N$人物魔法计算 <$STR(N$人物魔法)>
+inc N$人物道术计算 <$STR(N$人物道术)>
+inc N$人物防御计算 <$STR(N$人物防御)>
+inc N$人物魔御计算 <$STR(N$人物魔御)>
+inc N$人物血量计算 <$STR(N$人物血量)>
+inc N$人物蓝量计算 <$STR(N$人物蓝量)>
+inc N$人物准确计算 <$STR(N$人物准确)>
+inc N$人物敏捷计算 <$STR(N$人物敏捷)>
+
+Mul N$人物攻击计算 <$STR(N$人物攻击百分比)>
+Mul N$人物魔法计算 <$STR(N$人物魔法百分比)>
+Mul N$人物道术计算 <$STR(N$人物道术百分比)>
+Mul N$人物防御计算 <$STR(N$人物防御百分比)>
+Mul N$人物魔御计算 <$STR(N$人物魔御百分比)>
+Mul N$人物血量计算 <$STR(N$人物血量百分比)>
+Mul N$人物蓝量计算 <$STR(N$人物蓝量百分比)>
+
+div N$人物攻击计算 100
+div N$人物魔法计算 100
+div N$人物道术计算 100
+div N$人物防御计算 100
+div N$人物魔御计算 100
+div N$人物血量计算 100
+div N$人物蓝量计算 100
+
+inc N$人物攻击 <$STR(N$人物攻击计算)>
+inc N$人物魔法 <$STR(N$人物魔法计算)>
+inc N$人物道术 <$STR(N$人物道术计算)>
+inc N$人物防御 <$STR(N$人物防御计算)>
+inc N$人物魔御 <$STR(N$人物魔御计算)>
+inc N$人物血量 <$STR(N$人物血量计算)>
+inc N$人物蓝量 <$STR(N$人物蓝量计算)>
+
+
+
+;#if
+;large N$血量减少 <$STR(N$人物血量)>
+;#act
+;dec N$血量减少 <$STR(N$人物血量)>
+;ChangeHumAbility 11 - <$STR(N$血量减少)> 65535
+;#elseact
+;dec N$人物血量 <$STR(N$血量减少)>
+;ChangeHumAbility 11 = <$STR(N$人物血量)> 65535
+
+
+#if
+#act
+ChangeHumAbility 1 = <$STR(N$人物防御)> 65535
+ChangeHumAbility 2 = <$STR(N$人物防御)> 65535
+ChangeHumAbility 3 = <$STR(N$人物魔御)> 65535
+ChangeHumAbility 4 = <$STR(N$人物魔御)> 65535
+ChangeHumAbility 5 = <$STR(N$人物攻击)> 65535
+ChangeHumAbility 6 = <$STR(N$人物攻击)> 65535
+ChangeHumAbility 7 = <$STR(N$人物魔法)> 65535
+ChangeHumAbility 8 = <$STR(N$人物魔法)> 65535
+ChangeHumAbility 9 = <$STR(N$人物道术)> 65535
+ChangeHumAbility 10 = <$STR(N$人物道术)> 65535
+ChangeHumAbility 11 = <$STR(N$人物血量)> 65535
+ChangeHumAbility 12 = <$STR(N$人物蓝量)> 65535
+ChangeHumAbility 18 = <$STR(N$人物准确)> 65535
+ChangeHumAbility 19 = <$STR(N$人物敏捷)> 65535
+
+
+
+
+
+
+
+
+}

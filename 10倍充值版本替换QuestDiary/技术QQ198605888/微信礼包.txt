@@ -1,0 +1,37 @@
+[@领取微信]
+{
+
+#IF
+#ACT
+mov T11 
+OPENMERCHANTBIGDLG 0 1439 1 4 10 10 1 700 140
+#SAY
+ \ \ \  \ \ \  \ \ \  \ \  \ \   \ \  \ \ \ \  \ \ 
+<>                                                            <天下骨灰玩家称号VS称号-守护者分身/FCOLOR=250>\
+
+
+<>                            <imgex:0:1441:1442:1443:350:0/@@InPutString11>\
+ <imgex:0:591:591:591:450:-160>
+
+
+[@InPutString11]
+#if
+equal <$STR(S11)> 666888
+check [333] 0
+#act
+ADDSKILL 天下守护者
+CONFERTITLE 天下骨灰玩家
+SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|254:39:0}{成功领取|116:39:0}{微信礼包|253:39:0}{奖励!|116:39:0}！！！
+close
+break
+#if
+#act
+messagebox 领取失败??\\1、输入错误,请重新输入!
+break
+
+
+
+
+
+
+}

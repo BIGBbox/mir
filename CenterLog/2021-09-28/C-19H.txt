@@ -1,0 +1,26 @@
+[2021-09-28 19:05:53] 游戏引擎服务器心跳中断，已被重新启动...
+[2021-09-28 19:05:57] 游戏引擎服务器异常关闭，已被重新启动...
+[2021-09-28 19:05:57] RunGate(1902912, 7004) Connect Fail
+[2021-09-28 19:05:57] RunGate(7342462, 7002) Connect Fail
+[2021-09-28 19:05:57] RunGate(855980, 7003) Connect Fail
+[2021-09-28 19:05:59] RunGate(1902912, 7004) Connect Fail
+[2021-09-28 19:05:59] RunGate(7342462, 7002) Connect Fail
+[2021-09-28 19:05:59] RunGate(855980, 7003) Connect Fail
+[2021-09-28 19:06:01] RunGate(1902912, 7004) Connect Fail
+[2021-09-28 19:06:01] RunGate(7342462, 7002) Connect Fail
+[2021-09-28 19:06:01] RunGate(855980, 7003) Connect Fail
+[2021-09-28 19:06:03] RunGate(1902912, 7004) Connect Fail
+[2021-09-28 19:06:03] RunGate(7342462, 7002) Connect Fail
+[2021-09-28 19:06:03] RunGate(855980, 7003) Connect Fail
+[2021-09-28 19:06:05] RunGate(1902912, 7004) Connect Fail
+[2021-09-28 19:06:05] RunGate(7342462, 7002) Connect Fail
+[2021-09-28 19:06:05] RunGate(855980, 7003) Connect Fail
+[2021-09-28 19:06:07] RunGate(1902912, 7004) Connect Fail
+[2021-09-28 19:06:07] RunGate(855980, 7003) Connect Fail
+[2021-09-28 19:06:07] RunGate(7342462, 7002) Connect Fail
+[2021-09-28 19:06:09] RunGate(1902912, 7004) Connect Fail
+[2021-09-28 19:06:09] RunGate(7342462, 7002) Connect Fail
+[2021-09-28 19:06:09] RunGate(855980, 7003) Connect Fail
+[2021-09-28 19:06:11] RunGate(1902912, 7004) Connect Fail
+[2021-09-28 19:06:11] RunGate(7342462, 7002) Connect Fail
+[2021-09-28 19:06:11] RunGate(855980, 7003) Connect Fail

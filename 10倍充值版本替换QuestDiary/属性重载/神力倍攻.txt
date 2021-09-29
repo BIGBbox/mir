@@ -1,0 +1,125 @@
+[@对话框倍攻]
+{
+#IF
+#ACT
+mov N$装备倍攻 100
+
+
+
+#IF
+CHECKTITLE 六星
+#ACT
+INC N$装备倍攻 2
+
+
+#IF
+CHECKTITLE 九星
+#ACT
+INC N$装备倍攻 5
+
+#IF
+CHECKTITLE 十二星
+#ACT
+INC N$装备倍攻 10
+
+
+
+
+#IF
+CHECK [8] 1
+#ACT
+INC N$装备倍攻 20
+
+
+#IF
+CHECK [2] 1
+#ACT
+INC N$装备倍攻 10
+
+
+#IF
+large U49 0
+#ACT
+INC N$装备倍攻 <$str(U49)>
+
+#IF
+CHECK [123] 1
+#ACT
+INC N$装备倍攻 6
+
+#IF
+CHECK [141] 1
+#ACT
+INC N$装备倍攻 6
+
+#IF
+CHECK [157] 1
+#ACT
+INC N$装备倍攻 3
+
+#IF
+CHECK [173] 1
+#ACT
+INC N$装备倍攻 3
+
+#IF
+CHECK [189] 1
+#ACT
+INC N$装备倍攻 3
+
+#IF
+CHECK [205] 1
+#ACT
+INC N$装备倍攻 3
+
+#IF
+CHECK [221] 1
+#ACT
+INC N$装备倍攻 3
+
+#IF
+CHECK [237] 1
+#ACT
+INC N$装备倍攻 3
+
+
+#IF
+CHECKTITLE 狂暴
+#ACT
+INC N$装备倍攻 10
+
+#IF
+CHECKTITLE 沙城捐献
+#ACT
+INC N$装备倍攻 10
+
+#IF
+CHECKTITLE 第一名
+#ACT
+INC N$装备倍攻 10
+
+#IF
+CHECKTITLE 第二名
+#ACT
+INC N$装备倍攻 5
+
+#IF
+CHECKTITLE 第三名
+#ACT
+INC N$装备倍攻 3
+
+
+
+
+
+
+#if
+#act
+POWERRATE <$STR(N$装备倍攻)> 65535
+
+
+#if
+#act
+#CALL [\游戏登陆\右下显示.txt] @属性显示
+
+}

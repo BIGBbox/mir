@@ -1,0 +1,44 @@
+[@领取QQ]
+{
+
+#IF
+#ACT
+mov T11 
+OPENMERCHANTBIGDLG 0 1440 1 4 10 10 1 650 91
+#SAY
+ \ \ \  \ \ \  \ \ \  \ \  \ \   \ \  \ \ 
+<>                                                 <QQ群：3008053660/FCOLOR=250>\
+
+
+<>                            <imgex:0:1441:1442:1443:170:20/@@InPutString10>\
+
+
+[@InPutString10]
+#if
+equal <$STR(S10)> 666888
+equal T11
+#act
+ADDSKILL 施毒术
+ADDSKILL 逐日剑法
+ADDSKILL 开天斩
+ADDSKILL 隐身术
+SKILLLEVEL 施毒术 = 3
+SKILLLEVEL 开天斩 = 3
+SKILLLEVEL 逐日剑法 = 3
+SKILLLEVEL 隐身术 = 3
+MOV T11 已领取
+SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|254:39:0}{成功领取|116:39:0}{QQ群礼包|253:39:0}{奖励!获得了技能|116:39:0}{[施毒术-逐日剑法-开天斩-隐身术]|254:39:0}
+close
+break
+#if
+#act
+messagebox 领取失败??\\1、输入错误,请重新输入!
+break
+
+
+
+
+
+
+
+}

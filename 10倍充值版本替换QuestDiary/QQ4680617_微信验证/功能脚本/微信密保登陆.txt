@@ -1,0 +1,378 @@
+;MOV <$STR(N$验证时间)> 60
+;〓〓〓〓〓〓脚本里面上面的时间30秒必须和软件上的设置时间一样〓〓〓〓
+
+[@QQ4680617微信密保登陆]
+{
+#OR
+CheckContainsText <$MACHINEID> $
+#ACT
+kick
+MESSAGEBOX  非法机器码禁止登录！\  \  \请勿修改机器码！
+BREAK
+#OR
+CheckContainsText <$USERMACHINEID> $
+#ACT
+kick
+MESSAGEBOX  非法机器码禁止登录！\  \  \请勿修改机器码！
+BREAK
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\QQ4680617_微信验证\手动解绑账号.txt <$USERID>
+#ACT
+SetOFFTimer 11
+CALCVAR HUMAN 微信状态 = 解绑成功
+SAVEVAR HUMAN 微信状态 ..\QuestDiary\QQ4680617_微信验证\ReturnData.txt
+MOV T20 
+MOV T21 
+MOV T22 
+MAP 新手地图
+DelTextList  ..\QuestDiary\QQ4680617_微信验证\手动解绑账号.txt <$USERID>
+SENDMSG 6 您的微信绑定信息已被管理员手动解绑.
+SENDMSG 6 您的微信绑定信息已被管理员手动解绑.
+SENDMSG 6 您的微信绑定信息已被管理员手动解绑.
+SENDMSG 6 您的微信绑定信息已被管理员手动解绑.
+SENDMSG 6 您的微信绑定信息已被管理员手动解绑.
+SENDMSG 6 您的微信绑定信息已被管理员手动解绑.
+OPENMERCHANTBIGDLG <$STR(S$补丁编号)> 331 0 4 X -50 0 530 5
+#SAY
+<ImgEx:<$STR(S$补丁编号)>:320:321:322:402:-189/@exit>\
+<Img:330:<$STR(S$补丁编号)>:282:-146>\
+BREAK
+
+#IF
+#ACT
+MOV S$补丁编号 78
+VAR String HUMAN 微信状态
+LOADVAR HUMAN 微信状态 ..\QuestDiary\QQ4680617_微信验证\ReturnData.txt
+
+
+#IF
+NOT EQUAL T20 
+EQUAL T21 <$MACHINEID>
+EQUAL T22 <$USERMACHINEID>
+ISONMAP 新手地图
+#ACT
+MAP 新手地图 40 46
+BREAK
+
+#IF
+EQUAL T20 
+#ACT
+MAP 新手地图
+SetOnTimer 9 1
+SENDMSG 5 ┌─────────────────────────────┐
+SENDMSG 5 │您还没有设置绑定微信，为了帐号安全请尽快前往设置绑定微信。│
+SENDMSG 5 └─────────────────────────────┘
+BREAK
+
+#IF
+EQUAL T21 <$MACHINEID>
+EQUAL T22 <$USERMACHINEID>
+#ACT
+SENDMSG 6 机器码验证通过，祝您游戏愉快！
+BREAK
+
+#IF
+NOT EQUAL T20 
+NOT EQUAL T21 <$MACHINEID>
+NOT EQUAL T22 <$USERMACHINEID>
+#ACT
+MAP 新手地图
+MOV <$STR(N$验证时间)> 60
+MOVR <$STR(N$验证码)> 300000 399999
+CALCVAR HUMAN 微信状态 = 验证中
+SAVEVAR HUMAN 微信状态 ..\QuestDiary\QQ4680617_微信验证\ReturnData.txt
+MOV N$转换的数字 <$STR(N$验证码)>
+#CALL [\QQ4680617_微信验证\功能脚本\数字转换图片.txt] @数字转换图片
+AddTextList ..\QuestDiary\QQ4680617_微信验证\SubmitData.txt 异地登录|<$STR(T20)>|<$SERVERNAME>|<$USERNAME>|<$STR(N$验证码)>
+SetOnTimer 12 1
+ChangeModeEx 10 99999
+BREAK
+
+[@OnTimer9]
+#IF
+NOT EQUAL T20 
+#ACT
+SetOFFTimer 9 1
+BREAK
+
+#IF
+EQUAL T20 
+NOT ISONMAP 新手地图
+#ACT
+MAP 新手地图
+SENDMSG 5 ┌───────────────────────────┐
+SENDMSG 5 │为保障您的账号安全，绑定微信后才能离开本地图自由活动。│
+SENDMSG 5 └───────────────────────────┘
+BREAK
+
+
+[@OnTimer12]
+#IF
+#ACT
+LOADVAR HUMAN 微信状态 ..\QuestDiary\QQ4680617_微信验证\ReturnData.txt
+
+#IF
+SMALL <$STR(N$验证时间)> 1
+CHECKVAR HUMAN 微信状态 = 验证中
+#ACT
+KICK
+SetOffTimer 12
+CALCVAR HUMAN 微信状态 = 时间到期
+SAVEVAR HUMAN 微信状态 ..\QuestDiary\QQ4680617_微信验证\ReturnData.txt
+OPENMERCHANTBIGDLG <$STR(S$补丁编号)> 331 0 4 X -50 0 530 5
+#SAY
+\ \ \
+<请扫码关注我们的微信公众号后,点击进行微信绑定./SCOLOR=150>\
+<成功绑定后,可微信上回复动态验证码,当您的机器/SCOLOR=150>\
+<码有变动时,系统将要求您发送验证码到公众号上!/SCOLOR=150>\
+　　<（若提示无效,请仔细核对或再试一次）/SCOLOR=154>\
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+　　<没在指定时间内验证，您已被踢下线！/SCOLOR=58> \
+　　<没在指定时间内验证，您已被踢下线！/SCOLOR=58> \
+　　<没在指定时间内验证，您已被踢下线！/SCOLOR=58> \
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+<ImgEx:<$STR(S$补丁编号)>:320:321:322:402:-189/@exit>\
+<Img:330:<$STR(S$补丁编号)>:282:-146>\
+
+
+
+#IF
+LARGE <$STR(N$验证时间)> 0
+#ACT
+DEC <$STR(N$验证时间)> 1
+
+#IF
+CHECKVAR HUMAN 微信状态 = 验证通过
+#ACT
+MAPMOVE 3 333 333
+SetOffTimer 12
+MOV T21 <$MACHINEID>
+MOV T22 <$USERMACHINEID>
+CALCVAR HUMAN 微信状态 = 验证成功
+SAVEVAR HUMAN 微信状态 ..\QuestDiary\QQ4680617_微信验证\ReturnData.txt
+ChangeModeEx 10 1
+OPENMERCHANTBIGDLG <$STR(S$补丁编号)> 331 0 4 X -50 0 530 5
+#SAY
+\ \ \
+<请扫码关注我们的微信公众号后,点击进行微信绑定./SCOLOR=150>\
+<成功绑定后,可微信上回复动态验证码,当您的机器/SCOLOR=150>\
+<码有变动时,系统将要求您发送验证码到公众号上!/SCOLOR=150>\
+　<（若提示无效,请仔细核对或再试一次）/SCOLOR=154>\
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+　　<恭喜您，异地登陆验证成功！/SCOLOR=224> \
+　　<恭喜您，异地登陆验证成功！/SCOLOR=224> \
+　　<恭喜您，异地登陆验证成功！/SCOLOR=224> \
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+<ImgEx:<$STR(S$补丁编号)>:320:321:322:402:-189/@exit>\
+<Img:330:<$STR(S$补丁编号)>:282:-146>\
+
+
+#IF
+CHECKVAR HUMAN 微信状态 = 验证中
+NOT CHECKVAR HUMAN 微信状态 = 时间到期
+#ACT
+OPENMERCHANTBIGDLG <$STR(S$补丁编号)> 331 0 4 X -50 0 530 5
+#SAY
+\ \ \
+<请扫码关注我们的微信公众号后,点击进行微信绑定./SCOLOR=150>\
+<成功绑定后,可微信上回复动态验证码,当您的机器/SCOLOR=150>\
+<码有变动时,系统将要求您发送验证码到公众号上!/SCOLOR=150>\
+　<（若提示无效,请仔细核对或再试一次）/SCOLOR=154>\
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+　　　<请在微信中回复下方数字/SCOLOR=254> 　　 {有效期:<$STR(N$验证时间)>/SCOLOR=253}\ 
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+<Img:326:<$STR(S$补丁编号)>:30:-5>\
+　　　<$STR(S$数字图片)>　<←异地登陆验证码/SCOLOR=242>\ 
+<ImgEx:<$STR(S$补丁编号)>:320:321:322:402:-189/@exit>\
+<Img:330:<$STR(S$补丁编号)>:282:-146>\
+
+
+[@OnTimer11]
+#IF
+#ACT
+LOADVAR HUMAN 微信状态 ..\QuestDiary\QQ4680617_微信验证\ReturnData.txt
+
+#IF
+SMALL <$STR(N$验证时间)> 1
+CHECKVAR HUMAN 微信状态 = 解绑中
+#ACT
+SetOffTimer 11
+CALCVAR HUMAN 微信状态 = 时间到期
+SAVEVAR HUMAN 微信状态 ..\QuestDiary\QQ4680617_微信验证\ReturnData.txt
+OPENMERCHANTBIGDLG <$STR(S$补丁编号)> 331 0 4 X -50 0 530 5
+#SAY
+\ \ \
+<请扫码关注我们的微信公众号后,点击进行微信绑定./SCOLOR=150>\
+<成功绑定后,可微信上回复动态验证码,当您的机器/SCOLOR=150>\
+<码有变动时,系统将要求您发送验证码到公众号上!/SCOLOR=150>\
+　　<（若提示无效,请仔细核对或再试一次）/SCOLOR=154>\
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+　　<很遗憾，您没有在指定时间内进行验证！/SCOLOR=58> \
+　　<很遗憾，您没有在指定时间内进行验证！/SCOLOR=58> \
+　　<很遗憾，您没有在指定时间内进行验证！/SCOLOR=58> \
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+<ImgEx:<$STR(S$补丁编号)>:320:321:322:402:-189/@exit>\
+<Img:330:<$STR(S$补丁编号)>:282:-146>\
+
+#IF
+LARGE <$STR(N$验证时间)> 0
+#ACT
+DEC <$STR(N$验证时间)> 1
+
+#IF
+CHECKVAR HUMAN 微信状态 = 匹配成功
+#ACT
+SetOffTimer 11
+CALCVAR HUMAN 微信状态 = 解绑成功
+SAVEVAR HUMAN 微信状态 ..\QuestDiary\QQ4680617_微信验证\ReturnData.txt
+MOV T20 
+MOV T21
+MOV T22
+OPENMERCHANTBIGDLG <$STR(S$补丁编号)> 331 0 4 X -50 0 530 5
+#SAY
+\ \ \
+<请扫码关注我们的微信公众号后,点击进行微信绑定./SCOLOR=150>\
+<成功绑定后,可微信上回复动态验证码,当您的机器/SCOLOR=150>\
+<码有变动时,系统将要求您发送验证码到公众号上!/SCOLOR=150>\
+　<（若提示无效,请仔细核对或再试一次）/SCOLOR=154>\
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+　　　<恭喜您，微信解绑成功！/SCOLOR=224> \
+　　　<恭喜您，微信解绑成功！/SCOLOR=224> \
+　　　<恭喜您，微信解绑成功！/SCOLOR=224> \
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+<ImgEx:<$STR(S$补丁编号)>:320:321:322:402:-189/@exit>\
+<Img:330:<$STR(S$补丁编号)>:282:-146>\
+
+#IF
+CHECKVAR HUMAN 微信状态 = 解绑中
+NOT CHECKVAR HUMAN 微信状态 = 时间到期
+#ACT
+OPENMERCHANTBIGDLG <$STR(S$补丁编号)> 331 0 4 X -50 0 530 5
+#SAY
+\ \ \
+<请扫码关注我们的微信公众号后,点击进行微信绑定./SCOLOR=150>\
+<成功绑定后,可微信上回复动态验证码,当您的机器/SCOLOR=150>\
+<码有变动时,系统将要求您发送验证码到公众号上!/SCOLOR=150>\
+　<（若提示无效,请仔细核对或再试一次）/SCOLOR=154>\
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+　　　<请在微信中回复下方数字/SCOLOR=254> 　　 {有效期:<$STR(N$验证时间)>/SCOLOR=253}\ 
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+<Img:326:<$STR(S$补丁编号)>:30:-5>\
+　　　<$STR(S$数字图片)>　<←解绑微信验证码/SCOLOR=58>\ 
+<ImgEx:<$STR(S$补丁编号)>:320:321:322:402:-189/@exit>\
+<Img:330:<$STR(S$补丁编号)>:282:-146>\
+
+
+[@OnTimer10]
+#IF
+#ACT
+LOADVAR HUMAN 微信状态 ..\QuestDiary\QQ4680617_微信验证\ReturnData.txt
+
+
+#IF
+SMALL <$STR(N$验证时间)> 1
+CHECKVAR HUMAN 微信状态 = 绑定中
+#ACT
+SetOffTimer 10
+CALCVAR HUMAN 微信状态 = 时间到期
+SAVEVAR HUMAN 微信状态 ..\QuestDiary\QQ4680617_微信验证\ReturnData.txt
+OPENMERCHANTBIGDLG <$STR(S$补丁编号)> 331 0 4 X -50 0 530 5
+#SAY
+\ \ \
+<请扫码关注我们的微信公众号后,点击进行微信绑定./SCOLOR=150>\
+<成功绑定后,可微信上回复动态验证码,当您的机器/SCOLOR=150>\
+<码有变动时,系统将要求您发送验证码到公众号上!/SCOLOR=150>\
+　　<（若提示无效,请仔细核对或再试一次）/SCOLOR=154>\
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+　　<很遗憾，您没有在指定时间内进行验证！/SCOLOR=58> \
+　　<很遗憾，您没有在指定时间内进行验证！/SCOLOR=58> \
+　　<很遗憾，您没有在指定时间内进行验证！/SCOLOR=58> \
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+<ImgEx:<$STR(S$补丁编号)>:320:321:322:402:-189/@exit>\
+<Img:330:<$STR(S$补丁编号)>:282:-146>\
+
+#IF
+LARGE <$STR(N$验证时间)> 0
+#ACT
+DEC <$STR(N$验证时间)> 1
+
+
+#IF
+NOT CHECKVAR HUMAN 微信状态 = 绑定中
+NOT CHECKVAR HUMAN 微信状态 = 时间到期
+NOT CHECKVAR HUMAN 微信状态 = 
+NOT ISONMAP 新手地图
+#ACT
+SetOffTimer 10
+MOV T20 <$HUMAN(微信状态)>
+MOV T21 <$MACHINEID>
+MOV T22 <$USERMACHINEID>
+CALCVAR HUMAN 微信状态 = 绑定成功
+SAVEVAR HUMAN 微信状态 ..\QuestDiary\QQ4680617_微信验证\ReturnData.txt
+OPENMERCHANTBIGDLG <$STR(S$补丁编号)> 331 0 4 X -50 0 530 5
+#SAY
+\ \ \
+<请扫码关注我们的微信公众号后,点击进行微信绑定./SCOLOR=150>\
+<成功绑定后,可微信上回复动态验证码,当您的机器/SCOLOR=150>\
+<码有变动时,系统将要求您发送验证码到公众号上!/SCOLOR=150>\
+　<（若提示无效,请仔细核对或再试一次）/SCOLOR=154>\
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+　　　<恭喜您，微信绑定成功！/SCOLOR=224> \
+　　　<恭喜您，微信绑定成功！/SCOLOR=224> \
+　　　<恭喜您，微信绑定成功！/SCOLOR=224> \
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+<ImgEx:<$STR(S$补丁编号)>:320:321:322:402:-189/@exit>\
+<Img:330:<$STR(S$补丁编号)>:282:-146>\
+
+#IF
+NOT CHECKVAR HUMAN 微信状态 = 绑定中
+NOT CHECKVAR HUMAN 微信状态 = 时间到期
+NOT CHECKVAR HUMAN 微信状态 = 
+ISONMAP 新手地图
+#ACT
+MAPMOVE 新手地图 40 46
+SetOffTimer 10
+MOV T20 <$HUMAN(微信状态)>
+MOV T21 <$MACHINEID>
+MOV T22 <$USERMACHINEID>
+CALCVAR HUMAN 微信状态 = 绑定成功
+SAVEVAR HUMAN 微信状态 ..\QuestDiary\QQ4680617_微信验证\ReturnData.txt
+OPENMERCHANTBIGDLG <$STR(S$补丁编号)> 331 0 4 X -50 0 530 5
+#SAY
+\ \ \
+<请扫码关注我们的微信公众号后,点击进行微信绑定./SCOLOR=150>\
+<成功绑定后,可微信上回复动态验证码,当您的机器/SCOLOR=150>\
+<码有变动时,系统将要求您发送验证码到公众号上!/SCOLOR=150>\
+　<（若提示无效,请仔细核对或再试一次）/SCOLOR=154>\
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+　　　<恭喜您，微信绑定成功！/SCOLOR=224> \
+　　　<恭喜您，微信绑定成功！/SCOLOR=224> \
+　　　<恭喜您，微信绑定成功！/SCOLOR=224> \
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+<ImgEx:<$STR(S$补丁编号)>:320:321:322:402:-189/@exit>\
+<Img:330:<$STR(S$补丁编号)>:282:-146>\
+
+
+
+#IF
+EQUAL T20 
+NOT CHECKVAR HUMAN 微信状态 = 时间到期
+#ACT
+;OPENMERCHANTBIGDLG <$STR(S$补丁编号)> 331 0 4 X -50 0 530 5
+#SAY
+\ \ \
+<请扫码关注我们的微信公众号后,点击进行微信绑定./SCOLOR=150>\
+<成功绑定后,可微信上回复动态验证码,当您的机器/SCOLOR=150>\
+<码有变动时,系统将要求您发送验证码到公众号上!/SCOLOR=150>\
+　<（若提示无效,请仔细核对或再试一次）/SCOLOR=154>\
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+　　　<请在微信中回复下方数字/SCOLOR=254> 　　 {有效期:<$STR(N$验证时间)>/SCOLOR=253}\ 
+<━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=14>\
+<Img:326:<$STR(S$补丁编号)>:30:-5>\
+　　　<$STR(S$数字图片)>　<←绑定微信验证码/SCOLOR=224>\ 
+<ImgEx:<$STR(S$补丁编号)>:320:321:322:402:-189/@exit>\
+<Img:330:<$STR(S$补丁编号)>:282:-146>\
+
+
+}

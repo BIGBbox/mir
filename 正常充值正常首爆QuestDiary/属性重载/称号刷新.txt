@@ -1,0 +1,43 @@
+[@称号刷新]
+{
+
+#IF
+CHECKTITLE 狂暴
+#ACT
+SetIcon 2 1 2880 53 70 10 0 100 0
+
+#IF
+#ACT
+mov <$str(S$轮回)> 转生「<$RELEVEL>」
+
+
+#IF
+CHECKTITLE 白日升天
+#ACT
+mov <$str(S$轮回)> 白日升天
+#IF
+CHECKTITLE 飞升成仙
+#ACT
+mov <$str(S$轮回)> 飞升成仙
+#IF
+CHECKTITLE 百炼成仙
+#ACT
+mov <$str(S$轮回)> 百炼成仙
+#IF
+CHECKTITLE 得道成仙
+#ACT
+mov <$str(S$轮回)> 得道成仙
+#IF
+CHECKTITLE 修神成仙
+#ACT
+mov <$str(S$轮回)> 修神成仙
+#IF
+CHECKTITLE 跨凤乘龙
+#ACT
+mov <$str(S$轮回)> 跨凤乘龙
+
+#IF
+#ACT
+SETRANKLEVELNAME  %s\「天下沉默」\<$str(S$轮回)>\杀人数量：<$str(u48)>
+
+}

@@ -1,0 +1,359 @@
+[2021-09-27 15:08:26:427] 共享MAP映射名：cqDB
+[2021-09-27 15:08:26:931] Provider=SQLOLEDB.1;User ID=sa;Password=Aa123123;Data Source=47.101.145.151,1433; Initial Catalog=cqDB;Persist Security Info=False
+
+[2021-09-27 15:08:32:818] 已读取 1个行会信息...
+[2021-09-27 15:08:32:940] 已读取 1个城堡信息...
+[2021-09-27 15:08:33:050] 0150 No map found. ( No inner wall map of wall conquest war )
+[2021-09-27 15:08:33:050] D701 - secret map not found !!
+[2021-09-27 15:08:33:158] 回收表格不存在！！！
+[2021-09-27 15:08:33:471] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1399 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\衣服店-0.txt
+[2021-09-27 15:08:33:471] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1399 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\衣服店-0.txt
+[2021-09-27 15:08:33:501] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1400 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\武器店-0.txt
+[2021-09-27 15:08:33:501] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1400 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\武器店-0.txt
+[2021-09-27 15:08:33:547] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1402 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\首饰店-0.txt
+[2021-09-27 15:08:33:547] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1402 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\首饰店-0.txt
+[2021-09-27 15:08:33:581] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1465 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\高级地图-天下主城.txt
+[2021-09-27 15:08:33:581] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1465 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\高级地图-天下主城.txt
+[2021-09-27 15:08:33:775] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1473 行: F:\MirServer\Mir200\Envir\Market_Def\新手训练营\训练师-新手训练营.txt
+[2021-09-27 15:08:33:775] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1473 行: F:\MirServer\Mir200\Envir\Market_Def\新手训练营\训练师-新手训练营.txt
+[2021-09-27 15:08:33:817] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1407 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\训练营-0.txt
+[2021-09-27 15:08:33:817] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1407 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\训练营-0.txt
+[2021-09-27 15:08:33:871] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1401 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\村长-0.txt
+[2021-09-27 15:08:33:871] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1401 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\村长-0.txt
+[2021-09-27 15:08:33:925] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1403 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\书店老板-0.txt
+[2021-09-27 15:08:33:925] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1403 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\书店老板-0.txt
+[2021-09-27 15:08:33:971] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1399 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\药店老板-0.txt
+[2021-09-27 15:08:33:971] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1399 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\药店老板-0.txt
+[2021-09-27 15:08:34:020] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1401 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\新手指导员-0.txt
+[2021-09-27 15:08:34:020] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1401 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\新手指导员-0.txt
+[2021-09-27 15:08:34:053] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\神之领域9\神之领域称号-神之领域.txt
+[2021-09-27 15:08:34:053] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\神之领域9\神之领域称号-神之领域.txt
+[2021-09-27 15:08:34:094] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\暗黑异世界8\暗黑称号-暗黑异世界.txt
+[2021-09-27 15:08:34:094] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\暗黑异世界8\暗黑称号-暗黑异世界.txt
+[2021-09-27 15:08:34:134] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\诛仙异世界7\诛仙称号-诛仙异世界.txt
+[2021-09-27 15:08:34:134] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\诛仙异世界7\诛仙称号-诛仙异世界.txt
+[2021-09-27 15:08:34:188] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\水浒异世界6\水浒称号-水浒异世界.txt
+[2021-09-27 15:08:34:188] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\水浒异世界6\水浒称号-水浒异世界.txt
+[2021-09-27 15:08:34:323] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\圣斗士异世界5\圣斗士称号-圣斗士异世界.txt
+[2021-09-27 15:08:34:323] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\圣斗士异世界5\圣斗士称号-圣斗士异世界.txt
+[2021-09-27 15:08:34:373] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:421 行: F:\MirServer\Mir200\Envir\Market_Def\圣斗士异世界5\飞升-圣斗士异世界.txt
+[2021-09-27 15:08:34:373] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:421 行: F:\MirServer\Mir200\Envir\Market_Def\圣斗士异世界5\飞升-圣斗士异世界.txt
+[2021-09-27 15:08:34:404] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:4674 行: F:\MirServer\Mir200\Envir\Market_Def\圣斗士异世界5\高级修炼NPC-圣斗士异世界.txt
+[2021-09-27 15:08:34:404] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:4674 行: F:\MirServer\Mir200\Envir\Market_Def\圣斗士异世界5\高级修炼NPC-圣斗士异世界.txt
+[2021-09-27 15:08:34:428] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\金庸异世界4\金庸称号-金庸异世界.txt
+[2021-09-27 15:08:34:429] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\金庸异世界4\金庸称号-金庸异世界.txt
+[2021-09-27 15:08:34:483] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2503 行: F:\MirServer\Mir200\Envir\Market_Def\帝王异世界3\帝王称号-帝王异世界.txt
+[2021-09-27 15:08:34:483] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2503 行: F:\MirServer\Mir200\Envir\Market_Def\帝王异世界3\帝王称号-帝王异世界.txt
+[2021-09-27 15:08:34:527] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:3591 行: F:\MirServer\Mir200\Envir\Market_Def\帝王异世界3\中级修炼NPC-帝王异世界.txt
+[2021-09-27 15:08:34:527] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:3591 行: F:\MirServer\Mir200\Envir\Market_Def\帝王异世界3\中级修炼NPC-帝王异世界.txt
+[2021-09-27 15:08:34:559] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2547 行: F:\MirServer\Mir200\Envir\Market_Def\帝王异世界3\高级称号-帝王异世界.txt
+[2021-09-27 15:08:34:559] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2547 行: F:\MirServer\Mir200\Envir\Market_Def\帝王异世界3\高级称号-帝王异世界.txt
+[2021-09-27 15:08:34:599] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:4421 行: F:\MirServer\Mir200\Envir\Market_Def\三国异世界2\三国称号-三国异世界.txt
+[2021-09-27 15:08:34:599] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:4421 行: F:\MirServer\Mir200\Envir\Market_Def\三国异世界2\三国称号-三国异世界.txt
+[2021-09-27 15:08:34:641] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2555 行: F:\MirServer\Mir200\Envir\Market_Def\三国异世界2\中级称号-三国异世界.txt
+[2021-09-27 15:08:34:641] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2555 行: F:\MirServer\Mir200\Envir\Market_Def\三国异世界2\中级称号-三国异世界.txt
+[2021-09-27 15:08:34:702] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\西游异世界1\西游称号-西游异世界.txt
+[2021-09-27 15:08:34:702] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\西游异世界1\西游称号-西游异世界.txt
+[2021-09-27 15:08:34:832] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2642 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\狂暴之力-天下主城.txt
+[2021-09-27 15:08:34:832] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2642 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\狂暴之力-天下主城.txt
+[2021-09-27 15:08:35:065] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:4163 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\初级修炼NPC-天下主城.txt
+[2021-09-27 15:08:35:065] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:4163 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\初级修炼NPC-天下主城.txt
+[2021-09-27 15:08:35:316] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:396 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\转生-天下主城.txt
+[2021-09-27 15:08:35:316] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:396 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\转生-天下主城.txt
+[2021-09-27 15:08:35:364] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2552 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\初级称号-天下主城.txt
+[2021-09-27 15:08:35:364] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2552 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\初级称号-天下主城.txt
+
+[2021-09-27 15:08:35:573] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:27749 行: F:\MirServer\Mir200\Envir\Market_Def\QFunction-0.txt
+[2021-09-27 15:08:35:573] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:27749 行: F:\MirServer\Mir200\Envir\Market_Def\QFunction-0.txt
+[2021-09-27 15:08:35:617] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:9615 行: F:\MirServer\Mir200\Envir\MapQuest_def\QManage.txt
+[2021-09-27 15:08:35:617] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:9615 行: F:\MirServer\Mir200\Envir\MapQuest_def\QManage.txt
+[2021-09-27 15:08:35:642] 实名认证系统(1) 游戏时间(120)
+[2021-09-27 15:08:35:642] RunTime Hum:150 Mon:30 Zen:5 Npc:5 Soc10
+[2021-09-27 15:08:35:642] 游戏处理引擎初始化成功..[MainThreadID :19296]
+[2021-09-27 15:08:37:344] 登录服务器连接成功(127.0.0.1:7014)
+[2021-09-27 15:08:37:911] 网关1(127.0.0.1)连接成功
+[2021-09-27 15:08:38:065] 网关2(127.0.0.1)连接成功
+[2021-09-27 15:08:38:529] 网关3(127.0.0.1)连接成功
+[2021-09-27 15:08:39:140] 数据库服务器连接成功(127.0.0.1:7011)
+
+[2021-09-27 15:10:19:997] 共享MAP映射名：cqDB
+[2021-09-27 15:10:20:501] Provider=SQLOLEDB.1;User ID=sa;Password=Aa123123;Data Source=47.101.145.151,1433; Initial Catalog=cqDB;Persist Security Info=False
+
+[2021-09-27 15:10:24:692] 已读取 1个行会信息...
+[2021-09-27 15:10:24:803] 已读取 1个城堡信息...
+[2021-09-27 15:10:24:880] 0150 No map found. ( No inner wall map of wall conquest war )
+[2021-09-27 15:10:24:880] D701 - secret map not found !!
+[2021-09-27 15:10:24:944] 回收表格不存在！！！
+[2021-09-27 15:10:25:030] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1399 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\衣服店-0.txt
+[2021-09-27 15:10:25:030] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1399 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\衣服店-0.txt
+[2021-09-27 15:10:25:053] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1400 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\武器店-0.txt
+[2021-09-27 15:10:25:053] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1400 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\武器店-0.txt
+[2021-09-27 15:10:25:077] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1402 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\首饰店-0.txt
+[2021-09-27 15:10:25:077] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1402 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\首饰店-0.txt
+[2021-09-27 15:10:25:100] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1465 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\高级地图-天下主城.txt
+[2021-09-27 15:10:25:100] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1465 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\高级地图-天下主城.txt
+[2021-09-27 15:10:25:123] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1473 行: F:\MirServer\Mir200\Envir\Market_Def\新手训练营\训练师-新手训练营.txt
+[2021-09-27 15:10:25:123] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1473 行: F:\MirServer\Mir200\Envir\Market_Def\新手训练营\训练师-新手训练营.txt
+[2021-09-27 15:10:25:145] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1407 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\训练营-0.txt
+[2021-09-27 15:10:25:145] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1407 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\训练营-0.txt
+[2021-09-27 15:10:25:169] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1401 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\村长-0.txt
+[2021-09-27 15:10:25:169] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1401 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\村长-0.txt
+[2021-09-27 15:10:25:193] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1403 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\书店老板-0.txt
+[2021-09-27 15:10:25:193] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1403 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\书店老板-0.txt
+[2021-09-27 15:10:25:218] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1399 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\药店老板-0.txt
+[2021-09-27 15:10:25:218] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1399 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\药店老板-0.txt
+[2021-09-27 15:10:25:241] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1401 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\新手指导员-0.txt
+[2021-09-27 15:10:25:241] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:1401 行: F:\MirServer\Mir200\Envir\Market_Def\新手村\新手指导员-0.txt
+[2021-09-27 15:10:25:266] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\神之领域9\神之领域称号-神之领域.txt
+[2021-09-27 15:10:25:266] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\神之领域9\神之领域称号-神之领域.txt
+[2021-09-27 15:10:25:290] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\暗黑异世界8\暗黑称号-暗黑异世界.txt
+[2021-09-27 15:10:25:290] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\暗黑异世界8\暗黑称号-暗黑异世界.txt
+[2021-09-27 15:10:25:314] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\诛仙异世界7\诛仙称号-诛仙异世界.txt
+[2021-09-27 15:10:25:314] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\诛仙异世界7\诛仙称号-诛仙异世界.txt
+[2021-09-27 15:10:25:338] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\水浒异世界6\水浒称号-水浒异世界.txt
+[2021-09-27 15:10:25:338] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\水浒异世界6\水浒称号-水浒异世界.txt
+[2021-09-27 15:10:25:362] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\圣斗士异世界5\圣斗士称号-圣斗士异世界.txt
+[2021-09-27 15:10:25:362] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\圣斗士异世界5\圣斗士称号-圣斗士异世界.txt
+[2021-09-27 15:10:25:384] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:421 行: F:\MirServer\Mir200\Envir\Market_Def\圣斗士异世界5\飞升-圣斗士异世界.txt
+[2021-09-27 15:10:25:384] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:421 行: F:\MirServer\Mir200\Envir\Market_Def\圣斗士异世界5\飞升-圣斗士异世界.txt
+[2021-09-27 15:10:25:415] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:4674 行: F:\MirServer\Mir200\Envir\Market_Def\圣斗士异世界5\高级修炼NPC-圣斗士异世界.txt
+[2021-09-27 15:10:25:415] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:4674 行: F:\MirServer\Mir200\Envir\Market_Def\圣斗士异世界5\高级修炼NPC-圣斗士异世界.txt
+[2021-09-27 15:10:25:439] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\金庸异世界4\金庸称号-金庸异世界.txt
+[2021-09-27 15:10:25:439] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\金庸异世界4\金庸称号-金庸异世界.txt
+[2021-09-27 15:10:25:464] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2503 行: F:\MirServer\Mir200\Envir\Market_Def\帝王异世界3\帝王称号-帝王异世界.txt
+[2021-09-27 15:10:25:464] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2503 行: F:\MirServer\Mir200\Envir\Market_Def\帝王异世界3\帝王称号-帝王异世界.txt
+[2021-09-27 15:10:25:492] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:3591 行: F:\MirServer\Mir200\Envir\Market_Def\帝王异世界3\中级修炼NPC-帝王异世界.txt
+[2021-09-27 15:10:25:492] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:3591 行: F:\MirServer\Mir200\Envir\Market_Def\帝王异世界3\中级修炼NPC-帝王异世界.txt
+[2021-09-27 15:10:25:518] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2547 行: F:\MirServer\Mir200\Envir\Market_Def\帝王异世界3\高级称号-帝王异世界.txt
+[2021-09-27 15:10:25:518] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2547 行: F:\MirServer\Mir200\Envir\Market_Def\帝王异世界3\高级称号-帝王异世界.txt
+[2021-09-27 15:10:25:545] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:4421 行: F:\MirServer\Mir200\Envir\Market_Def\三国异世界2\三国称号-三国异世界.txt
+[2021-09-27 15:10:25:545] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:4421 行: F:\MirServer\Mir200\Envir\Market_Def\三国异世界2\三国称号-三国异世界.txt
+[2021-09-27 15:10:25:568] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2555 行: F:\MirServer\Mir200\Envir\Market_Def\三国异世界2\中级称号-三国异世界.txt
+[2021-09-27 15:10:25:568] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2555 行: F:\MirServer\Mir200\Envir\Market_Def\三国异世界2\中级称号-三国异世界.txt
+[2021-09-27 15:10:25:593] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\西游异世界1\西游称号-西游异世界.txt
+[2021-09-27 15:10:25:593] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2501 行: F:\MirServer\Mir200\Envir\Market_Def\西游异世界1\西游称号-西游异世界.txt
+[2021-09-27 15:10:25:660] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2642 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\狂暴之力-天下主城.txt
+[2021-09-27 15:10:25:660] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2642 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\狂暴之力-天下主城.txt
+[2021-09-27 15:10:25:693] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:4163 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\初级修炼NPC-天下主城.txt
+[2021-09-27 15:10:25:693] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:4163 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\初级修炼NPC-天下主城.txt
+[2021-09-27 15:10:25:721] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:396 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\转生-天下主城.txt
+[2021-09-27 15:10:25:721] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:396 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\转生-天下主城.txt
+[2021-09-27 15:10:25:748] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2552 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\初级称号-天下主城.txt
+[2021-09-27 15:10:25:748] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:2552 行: F:\MirServer\Mir200\Envir\Market_Def\天下主城\初级称号-天下主城.txt
+[2021-09-27 15:10:25:837] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:27749 行: F:\MirServer\Mir200\Envir\Market_Def\QFunction-0.txt
+[2021-09-27 15:10:25:837] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:27749 行: F:\MirServer\Mir200\Envir\Market_Def\QFunction-0.txt
+[2021-09-27 15:10:25:873] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:9615 行: F:\MirServer\Mir200\Envir\MapQuest_def\QManage.txt
+[2021-09-27 15:10:25:873] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:9615 行: F:\MirServer\Mir200\Envir\MapQuest_def\QManage.txt
+[2021-09-27 15:10:25:898] 实名认证系统(1) 游戏时间(120)
+[2021-09-27 15:10:25:898] RunTime Hum:150 Mon:30 Zen:5 Npc:5 Soc10
+[2021-09-27 15:10:25:898] 游戏处理引擎初始化成功..[MainThreadID :20896]
+[2021-09-27 15:10:27:510] 登录服务器连接成功(127.0.0.1:7014)
+[2021-09-27 15:10:27:857] 网关1(127.0.0.1)连接成功
+[2021-09-27 15:10:28:257] 网关2(127.0.0.1)连接成功
+
+[2021-09-27 15:10:28:684] 网关3(127.0.0.1)连接成功
+[2021-09-27 15:10:29:408] 数据库服务器连接成功(127.0.0.1:7011)
+
+[2021-09-27 15:10:51:769] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:27749 行: F:\MirServer\Mir200\Envir\Market_Def\QFunction-0.txt
+[2021-09-27 15:10:51:769] 脚本错误2: sendmsgbox 这时候攻略图标!! 第:27749 行: F:\MirServer\Mir200\Envir\Market_Def\QFunction-0.txt
+[2021-09-27 15:10:51:781] QFunction重新加载成功...
+
+[2021-09-27 15:11:23:131] QFunction重新加载成功...
+
+[2021-09-27 15:11:25:901] QManage重新加载成功...
+
+[2021-09-27 15:20:19:979] 在线人数: 1
+
+[2021-09-27 15:30:19:994] 在线人数: 1
+
+[2021-09-27 15:40:20:008] 在线人数: 1
+
+[2021-09-27 16:47:06:854] 共享MAP映射名：cqDB
+[2021-09-27 16:47:07:357] Provider=SQLOLEDB.1;User ID=sa;Password=Aa123123;Data Source=47.101.145.151,1433; Initial Catalog=cqDB;Persist Security Info=False
+
+[2021-09-27 16:47:12:538] 已读取 1个行会信息...
+[2021-09-27 16:47:12:640] 已读取 1个城堡信息...
+[2021-09-27 16:47:12:735] 0150 No map found. ( No inner wall map of wall conquest war )
+[2021-09-27 16:47:12:735] D701 - secret map not found !!
+[2021-09-27 16:47:12:826] 回收表格不存在！！！
+[2021-09-27 16:47:14:545] 实名认证系统(1) 游戏时间(120)
+[2021-09-27 16:47:14:545] RunTime Hum:150 Mon:30 Zen:5 Npc:5 Soc10
+[2021-09-27 16:47:14:545] 游戏处理引擎初始化成功..[MainThreadID :5196]
+
+[2021-09-27 16:47:16:175] 登录服务器连接成功(127.0.0.1:7014)
+[2021-09-27 16:47:16:708] 网关1(127.0.0.1)连接成功
+[2021-09-27 16:47:16:965] 网关2(127.0.0.1)连接成功
+[2021-09-27 16:47:17:390] 网关3(127.0.0.1)连接成功
+[2021-09-27 16:47:18:052] 数据库服务器连接成功(127.0.0.1:7011)
+
+[2021-09-27 16:49:59:877] QFunction重新加载成功...
+
+[2021-09-27 16:50:02:146] QManage重新加载成功...
+
+[2021-09-27 16:54:30:789] QFunction重新加载成功...
+
+[2021-09-27 16:54:38:731] QFunction重新加载成功...
+
+[2021-09-27 16:55:10:088] QFunction重新加载成功...
+
+[2021-09-27 16:56:35:646] QFunction重新加载成功...
+
+[2021-09-27 16:56:58:399] QFunction重新加载成功...
+
+[2021-09-27 16:57:06:832] 在线人数: 1
+
+[2021-09-27 17:00:56:788] QFunction重新加载成功...
+
+[2021-09-27 17:01:30:116] QFunction重新加载成功...
+
+[2021-09-27 17:01:32:390] QFunction重新加载成功...
+
+[2021-09-27 17:02:57:911] QFunction重新加载成功...
+
+[2021-09-27 17:03:06:198] QManage重新加载成功...
+
+[2021-09-27 17:03:16:557] QFunction重新加载成功...
+[2021-09-27 17:03:18:693] QManage重新加载成功...
+
+[2021-09-27 17:04:01:728] QManage重新加载成功...
+[2021-09-27 17:04:04:605] QFunction重新加载成功...
+
+[2021-09-27 17:05:00:115] QManage重新加载成功...
+
+[2021-09-27 17:05:03:570] QFunction重新加载成功...
+
+[2021-09-27 17:05:50:369] QFunction重新加载成功...
+
+[2021-09-27 17:06:52:169] 消息处理超时[华丽夜店] 0,id:1003,0,1190,9,0,0,新手面巾,[77BC242C] ZwGetContextThread
+[005CEAD1] JclDebug.JclCreateThreadStackTrace (Line 4979, "JclDebug.pas" + 12)
+[005CEB63] JclDebug.JclCreateThreadStackTraceFromID (Line 5013, "JclDebug.pas" + 12)
+[00734FD1] M2Share.GetThreadStackInfo (Line 14438, "M2Share.pas" + 1)
+[00747D01] ObjBase.TBaseObject.Run (Line 3431, "ObjBase.pas" + 19)
+[00743A7F] ObjBase.TAnimalObject.Run (Line 2782, "ObjBase.pas" + 26)
+[00793F4C] uPlayObject.TPlayObject.Run (Line 5374, "uPlayObject.pas" + 4)
+[007740DB] UsrEngn.TUserEngine.ProcessHumans (Line 1359, "UsrEngn.pas" + 282)
+[0077C332] UsrEngn.TUserEngine.PrcocessData (Line 4445, "UsrEngn.pas" + 4)
+[0088C588] svMain.ProcessGameRun (Line 2095, "svMain.pas" + 3)
+[0088D9C5] svMain.TMainRunThread.OnRun (Line 2570, "svMain.pas" + 16)
+[00482AEE] uThreadPools.TThreadPool.ThreadProc (Line 163, "uThreadPools.pas" + 14)
+[0048288C] uThreadPools.TMyThread.Execute (Line 69, "uThreadPools.pas" + 2)
+[0042B4B0] Classes.ThreadProc (Line 9877, "common\Classes.pas" + 7)
+(000044F8) [004054F8]
+
+
+[2021-09-27 17:07:06:845] 在线人数: 1
+
+[2021-09-27 17:07:17:217] QFunction重新加载成功...
+[2021-09-27 17:07:19:142] QManage重新加载成功...
+
+[2021-09-27 17:07:22:668] 所有NPC重新加载成功...
+
+[2021-09-27 17:08:06:514] 消息处理超时[华丽夜店] 初级地图,id:1003,0,1206,0,0,0,天魔战甲,[77BC242C] ZwGetContextThread
+[005CEAD1] JclDebug.JclCreateThreadStackTrace (Line 4979, "JclDebug.pas" + 12)
+[005CEB63] JclDebug.JclCreateThreadStackTraceFromID (Line 5013, "JclDebug.pas" + 12)
+[00734FD1] M2Share.GetThreadStackInfo (Line 14438, "M2Share.pas" + 1)
+[00747D01] ObjBase.TBaseObject.Run (Line 3431, "ObjBase.pas" + 19)
+[00743A7F] ObjBase.TAnimalObject.Run (Line 2782, "ObjBase.pas" + 26)
+[00793F4C] uPlayObject.TPlayObject.Run (Line 5374, "uPlayObject.pas" + 4)
+[007740DB] UsrEngn.TUserEngine.ProcessHumans (Line 1359, "UsrEngn.pas" + 282)
+[0077C332] UsrEngn.TUserEngine.PrcocessData (Line 4445, "UsrEngn.pas" + 4)
+[0088C588] svMain.ProcessGameRun (Line 2095, "svMain.pas" + 3)
+[0088D9C5] svMain.TMainRunThread.OnRun (Line 2570, "svMain.pas" + 16)
+[00482AEE] uThreadPools.TThreadPool.ThreadProc (Line 163, "uThreadPools.pas" + 14)
+[0048288C] uThreadPools.TMyThread.Execute (Line 69, "uThreadPools.pas" + 2)
+[0042B4B0] Classes.ThreadProc (Line 9877, "common\Classes.pas" + 7)
+(000044F8) [004054F8]
+
+
+[2021-09-27 17:09:04:667] 消息处理超时[华丽夜店] 中级地图,id:1003,0,1211,3,0,0,雷霆项链,[77BC242C] ZwGetContextThread
+[005CEAD1] JclDebug.JclCreateThreadStackTrace (Line 4979, "JclDebug.pas" + 12)
+[005CEB63] JclDebug.JclCreateThreadStackTraceFromID (Line 5013, "JclDebug.pas" + 12)
+[00734FD1] M2Share.GetThreadStackInfo (Line 14438, "M2Share.pas" + 1)
+[00747D01] ObjBase.TBaseObject.Run (Line 3431, "ObjBase.pas" + 19)
+[00743A7F] ObjBase.TAnimalObject.Run (Line 2782, "ObjBase.pas" + 26)
+[00793F4C] uPlayObject.TPlayObject.Run (Line 5374, "uPlayObject.pas" + 4)
+[007740DB] UsrEngn.TUserEngine.ProcessHumans (Line 1359, "UsrEngn.pas" + 282)
+[0077C332] UsrEngn.TUserEngine.PrcocessData (Line 4445, "UsrEngn.pas" + 4)
+[0088C588] svMain.ProcessGameRun (Line 2095, "svMain.pas" + 3)
+[0088D9C5] svMain.TMainRunThread.OnRun (Line 2570, "svMain.pas" + 16)
+[004F8B43] MidasLib.DllGetDataSnapClassObject
+[00482AEE] uThreadPools.TThreadPool.ThreadProc (Line 163, "uThreadPools.pas" + 14)
+[0048288C] uThreadPools.TMyThread.Execute (Line 69, "uThreadPools.pas" + 2)
+[0042B4B0] Classes.ThreadProc (Line 9877, "common\Classes.pas" + 7)
+(000044F8) [004054F8]
+
+
+[2021-09-27 17:09:16:135] 消息处理超时[华丽夜店] 中级地图,id:1003,0,1213,5,0,0,雷霆手镯,[77BC242C] ZwGetContextThread
+[005CEAD1] JclDebug.JclCreateThreadStackTrace (Line 4979, "JclDebug.pas" + 12)
+[005CEB63] JclDebug.JclCreateThreadStackTraceFromID (Line 5013, "JclDebug.pas" + 12)
+[00734FD1] M2Share.GetThreadStackInfo (Line 14438, "M2Share.pas" + 1)
+[00747D01] ObjBase.TBaseObject.Run (Line 3431, "ObjBase.pas" + 19)
+[00743A7F] ObjBase.TAnimalObject.Run (Line 2782, "ObjBase.pas" + 26)
+[00793F4C] uPlayObject.TPlayObject.Run (Line 5374, "uPlayObject.pas" + 4)
+[007740DB] UsrEngn.TUserEngine.ProcessHumans (Line 1359, "UsrEngn.pas" + 282)
+[0077C332] UsrEngn.TUserEngine.PrcocessData (Line 4445, "UsrEngn.pas" + 4)
+[0088C588] svMain.ProcessGameRun (Line 2095, "svMain.pas" + 3)
+[0088D9C5] svMain.TMainRunThread.OnRun (Line 2570, "svMain.pas" + 16)
+[00482AEE] uThreadPools.TThreadPool.ThreadProc (Line 163, "uThreadPools.pas" + 14)
+[0048288C] uThreadPools.TMyThread.Execute (Line 69, "uThreadPools.pas" + 2)
+[0042B4B0] Classes.ThreadProc (Line 9877, "common\Classes.pas" + 7)
+(000044F8) [004054F8]
+
+
+[2021-09-27 17:09:57:453] 消息处理超时[华丽夜店] 中级地图,id:1003,0,1214,1,0,0,屠龙,[77BC242C] ZwGetContextThread
+[005CEAD1] JclDebug.JclCreateThreadStackTrace (Line 4979, "JclDebug.pas" + 12)
+[005CEB63] JclDebug.JclCreateThreadStackTraceFromID (Line 5013, "JclDebug.pas" + 12)
+[00734FD1] M2Share.GetThreadStackInfo (Line 14438, "M2Share.pas" + 1)
+[00747D01] ObjBase.TBaseObject.Run (Line 3431, "ObjBase.pas" + 19)
+[00743A7F] ObjBase.TAnimalObject.Run (Line 2782, "ObjBase.pas" + 26)
+[00793F4C] uPlayObject.TPlayObject.Run (Line 5374, "uPlayObject.pas" + 4)
+[007740DB] UsrEngn.TUserEngine.ProcessHumans (Line 1359, "UsrEngn.pas" + 282)
+[0077C332] UsrEngn.TUserEngine.PrcocessData (Line 4445, "UsrEngn.pas" + 4)
+[0088C588] svMain.ProcessGameRun (Line 2095, "svMain.pas" + 3)
+[0088D9C5] svMain.TMainRunThread.OnRun (Line 2570, "svMain.pas" + 16)
+[00482AEE] uThreadPools.TThreadPool.ThreadProc (Line 163, "uThreadPools.pas" + 14)
+[0048288C] uThreadPools.TMyThread.Execute (Line 69, "uThreadPools.pas" + 2)
+[0042B4B0] Classes.ThreadProc (Line 9877, "common\Classes.pas" + 7)
+(000044F8) [004054F8]
+
+
+[2021-09-27 17:11:19:196] 消息处理超时[华丽夜店] 中级地图,id:1003,0,1221,0,0,0,雷霆战甲,[77BC242C] ZwGetContextThread
+[005CEAD1] JclDebug.JclCreateThreadStackTrace (Line 4979, "JclDebug.pas" + 12)
+[005CEB63] JclDebug.JclCreateThreadStackTraceFromID (Line 5013, "JclDebug.pas" + 12)
+[00734FD1] M2Share.GetThreadStackInfo (Line 14438, "M2Share.pas" + 1)
+[00747D01] ObjBase.TBaseObject.Run (Line 3431, "ObjBase.pas" + 19)
+[00743A7F] ObjBase.TAnimalObject.Run (Line 2782, "ObjBase.pas" + 26)
+[00793F4C] uPlayObject.TPlayObject.Run (Line 5374, "uPlayObject.pas" + 4)
+[007740DB] UsrEngn.TUserEngine.ProcessHumans (Line 1359, "UsrEngn.pas" + 282)
+[0077C332] UsrEngn.TUserEngine.PrcocessData (Line 4445, "UsrEngn.pas" + 4)
+[0088C588] svMain.ProcessGameRun (Line 2095, "svMain.pas" + 3)
+[0088D9C5] svMain.TMainRunThread.OnRun (Line 2570, "svMain.pas" + 16)
+[00482AEE] uThreadPools.TThreadPool.ThreadProc (Line 163, "uThreadPools.pas" + 14)
+[0048288C] uThreadPools.TMyThread.Execute (Line 69, "uThreadPools.pas" + 2)
+[0042B4B0] Classes.ThreadProc (Line 9877, "common\Classes.pas" + 7)
+(000044F8) [004054F8]
+
+
+[2021-09-27 17:12:53:142] 消息处理超时[华丽夜店] 高级地图,id:1003,0,1227,0,0,0,火龙战甲,[77BC242C] ZwGetContextThread
+[005CEAD1] JclDebug.JclCreateThreadStackTrace (Line 4979, "JclDebug.pas" + 12)
+[005CEB63] JclDebug.JclCreateThreadStackTraceFromID (Line 5013, "JclDebug.pas" + 12)
+[00734FD1] M2Share.GetThreadStackInfo (Line 14438, "M2Share.pas" + 1)
+[00747D01] ObjBase.TBaseObject.Run (Line 3431, "ObjBase.pas" + 19)
+[00743A7F] ObjBase.TAnimalObject.Run (Line 2782, "ObjBase.pas" + 26)
+[00793F4C] uPlayObject.TPlayObject.Run (Line 5374, "uPlayObject.pas" + 4)
+[007740DB] UsrEngn.TUserEngine.ProcessHumans (Line 1359, "UsrEngn.pas" + 282)
+[0077C332] UsrEngn.TUserEngine.PrcocessData (Line 4445, "UsrEngn.pas" + 4)
+[0088C588] svMain.ProcessGameRun (Line 2095, "svMain.pas" + 3)
+[0088D9C5] svMain.TMainRunThread.OnRun (Line 2570, "svMain.pas" + 16)
+[00482AEE] uThreadPools.TThreadPool.ThreadProc (Line 163, "uThreadPools.pas" + 14)
+[0048288C] uThreadPools.TMyThread.Execute (Line 69, "uThreadPools.pas" + 2)
+[0042B4B0] Classes.ThreadProc (Line 9877, "common\Classes.pas" + 7)
+(000044F8) [004054F8]
+
+
+[2021-09-27 17:17:06:856] 在线人数: 1
+
+[2021-09-27 17:27:06:870] 在线人数: 1
+
+[2021-09-27 17:37:06:886] 在线人数: 1
+

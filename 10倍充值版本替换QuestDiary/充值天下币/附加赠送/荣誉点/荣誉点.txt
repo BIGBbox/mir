@@ -1,0 +1,391 @@
+[@领取荣誉点]
+{
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\01.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\01.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\02.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\02.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\03.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\03.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\04.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\04.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\05.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\05.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\06.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\06.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\07.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\07.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\08.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\08.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\09.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\09.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\1.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\1.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\2.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\2.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\3.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\3.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\4.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\4.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\5.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\5.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\6.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\6.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\7.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\7.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\8.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\8.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\9.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\9.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\10.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\10.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\20.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\20.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\30.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\30.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\40.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\40.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\50.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\50.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\60.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\60.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\70.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\70.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\80.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\80.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\90.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\90.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\100.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\100.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\200.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\200.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\300.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\300.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\400.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\400.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\500.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\500.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\600.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\600.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\700.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\700.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\800.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\800.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\900.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\900.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\1000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\1000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\2000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\2000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\3000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\3000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\4000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\4000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\5000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\5000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\6000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\6000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\7000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\7000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\8000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\8000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\9000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\9000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\10000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\10000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\20000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\20000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\30000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\30000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\40000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\40000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\50000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\50000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\60000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\60000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\70000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\70000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\80000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\80000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\90000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\90000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\100000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\100000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\200000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\200000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\300000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\300000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\400000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\400000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\500000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\500000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\600000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\600000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\700000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\700000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\800000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\800000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\900000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\900000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\1000000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\荣誉点\1000000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了荣誉点
+
+#ELSESAY
+请查看自己的荣誉点数量!\
+没有充值请按提示进行充值!\
+<退出/@exit>
+}

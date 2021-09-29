@@ -1,0 +1,391 @@
+[@领取灵符]
+{
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\01.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\01.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\02.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\02.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\03.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\03.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\04.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\04.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\05.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\05.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\06.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\06.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\07.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\07.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\08.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\08.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\09.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\09.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\1.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\1.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\2.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\2.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\3.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\3.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\4.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\4.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\5.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\5.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\6.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\6.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\7.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\7.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\8.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\8.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\9.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\9.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\10.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\10.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\20.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\20.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\30.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\30.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\40.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\40.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\50.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\50.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\60.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\60.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\70.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\70.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\80.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\80.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\90.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\90.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\100.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\100.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\200.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\200.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\300.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\300.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\400.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\400.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\500.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\500.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\600.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\600.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\700.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\700.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\800.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\800.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\900.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\900.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\1000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\1000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\2000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\2000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\3000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\3000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\4000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\4000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\5000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\5000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\6000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\6000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\7000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\7000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\8000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\8000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\9000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\9000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\10000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\10000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\20000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\20000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\30000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\30000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\40000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\40000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\50000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\50000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\60000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\60000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\70000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\70000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\80000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\80000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\90000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\90000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\100000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\100000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\200000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\200000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\300000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\300000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\400000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\400000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\500000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\500000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\600000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\600000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\700000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\700000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\800000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\800000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\900000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\900000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\1000000.txt
+#ACT
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\灵符\1000000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了灵符
+
+#ELSESAY
+请查看自己的灵符数量!\
+没有充值请按提示进行充值!\
+<退出/@exit>
+}

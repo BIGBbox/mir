@@ -1,0 +1,263 @@
+[@转区]
+{
+#act
+ForceDirectories  ..\..\..\..\转区信息\
+ForceDirectories  ..\..\..\..\转区信息\正式区\
+ForceDirectories  ..\..\..\..\转区信息\测试区\
+CreateFile ..\..\..\..\转区信息\正式区\转区信息.txt
+CreateFile ..\..\..\..\转区信息\正式区\提取信息备份.txt
+CreateFile ..\..\..\..\转区信息\测试区\转区信息.txt
+CreateFile ..\..\..\..\转区信息\测试区\提取信息备份.txt
+
+#if
+SMALL N2 100
+#act
+mov <$str(N$充值点)> 0
+mov <$str(N$积　分)> 0
+mov <$str(N$ＲＭＢ)> 0
+mov <$STR(N2)> 0
+#ELSEACT
+mov <$str(N$充值点)> <$STR(N2)> 1
+mul <$str(N$积　分)> <$STR(N2)> 10
+
+MUL <$str(N$ＲＭＢ)> <$STR(N2)> 50
+DIV <$str(N$ＲＭＢ)> 10
+
+
+#or
+CHECKCREDITPOINT > <$STR(N2)>
+CHECKCREDITPOINT = <$STR(N2)>
+#ELSEact
+mov <$str(N$充值点)> 0
+mov <$str(N$积　分)> 0
+mov <$str(N$ＲＭＢ)> 0
+mov <$STR(N2)> 0
+
+
+
+#if
+equal <$str(s5)> <$BIRTHDAT>
+#act
+mov <$str(s$验证生日)> <已通过/FCOLOR=250>
+#elseact
+mov <$str(s$验证生日)> <未通过/FCOLOR=249>
+
+
+
+
+#if
+#act
+OPENMERCHANTBIGDLG  0 1512 1 4 0 -65 1 445 10
+#say
+\ \ \
+\  　　　          　   {当前分区：<$SERVERNAME>/FCOLOR=250}\ \ \ \
+\  　　　 　<imgex:0:1513:1514:1515:-18:-13/@@InPutString4(例:ABCD)>    {提取密码：<$str(s4)>/FCOLOR=250} \
+\   　　　　<imgex:0:1516:1517:1518:-18:7/@@InPutString5(例:1990/01/01)>    <验证生日：/FCOLOR=249><$str(S$验证生日)>\ \ \ \
+
+\  　　　         　 {<$CREDITPOINT>/FCOLOR=250}                     {<$STR(N2)>/FCOLOR=250}             \ \  
+\  　　　            　 {<$str(N$充值点)>/FCOLOR=253}\ \
+\  　　　　             {<$str(N$积　分)>/FCOLOR=254}\ \
+\   　　　            　{<$str(N$ＲＭＢ)>|250#转区收费 50% RMB./FCOLOR=250}\ \
+
+\  　　　　                                 <imgex:0:1525:1526:1527:58:-80/@确定转区>        \ \   
+\  　　　　                                 <imgex:0:1528:1529:1530:58:-60/@@InputString6(输入提取密码　　　例如:13999999999)>\ \ \
+
+\   　 <imgex:0:1519:1520:1521:302:-222/@@InPutInteger2(最少输入100累计充值)>    \ \
+
+
+
+[@InputString6]
+#IF
+CHECKContainsText <$SERVERNAME> 测试
+#act
+goto @测试区领取
+#elseact
+goto @正试区领取
+
+
+[@正试区领取]
+#if
+equal <$str(S6)>
+#act
+MESSAGEBOX 提示：请正确输入提取信息
+break
+
+#IF
+CHECKTEXTLIST ..\..\..\..\转区信息\正式区\转区信息.txt <$str(S6)>
+#act
+mov <$str(N$转区充值)> 0
+GetRandomText ..\..\..\..\转区信息\正式区\<$str(S6)>.txt <$str(N$转区充值)>
+CLEARNAMELIST ..\..\..\..\转区信息\正式区\<$str(s6)>.txt
+#elseact
+MESSAGEBOX 提示：没有可以领取数据
+inc <$str(N$错误次数)> 1
+GOTO @转区掉线
+BREAK
+
+#if
+large <$str(N$转区充值)> 0
+#act
+mul <$str(N$领取积分)> <$str(N$转区充值)> 2
+CREDITPOINT + <$str(N$转区充值)>
+GAMEDIAMOND + <$str(N$领取积分)>
+MESSAGEBOX 提示：成功领取<$str(N$转区充值)>RMB转区充值
+#elseact
+MESSAGEBOX 提示：不能重复领取
+inc <$str(N$错误次数)> 1
+GOTO @转区掉线
+
+
+
+
+[@测试区领取]
+#if
+equal <$str(S6)>
+#act
+MESSAGEBOX 提示：请正确输入提取信息
+break
+
+#IF
+CHECKTEXTLIST ..\..\..\..\转区信息\测试区\转区信息.txt <$str(S6)>
+#act
+mov <$str(N$转区充值)> 0
+GetRandomText ..\..\..\..\转区信息\测试区\<$str(S6)>.txt <$str(N$转区充值)>
+CLEARNAMELIST ..\..\..\..\转区信息\测试区\<$str(s6)>.txt
+#ELSEACT
+MESSAGEBOX 提示：没有可以领取数据
+inc <$str(N$错误次数)> 1
+GOTO @转区掉线
+BREAK
+
+#if
+large <$str(N$转区充值)> 0
+#act
+mul <$str(N$领取积分)> <$str(N$转区充值)> 2
+CREDITPOINT + <$str(N$转区充值)>
+GAMEDIAMOND + <$str(N$领取积分)>
+MESSAGEBOX 提示：成功领取<$str(N$转区充值)>RMB转区充值
+#elseact
+MESSAGEBOX 提示：不能重复领取
+inc <$str(N$错误次数)> 1
+GOTO @转区掉线
+
+
+
+[@转区掉线]
+#if
+large <$str(N$错误次数)> 2
+#act
+KICK
+
+
+[@确定转区]
+#IF
+CHECKContainsText <$SERVERNAME> 测试
+#act
+messagebox 测试区不可转区！
+break
+
+#if
+small <$STR(N2)> 100
+#act
+messagebox 提示：转区金额小于100
+break
+
+#if
+equal <$str(s4)>
+#act
+MESSAGEBOX 提示：输入提取密码
+break
+
+#if
+equal <$str(s5)>
+#act
+MESSAGEBOX 提示：输入生日
+break
+
+#if
+equal <$str(s5)> <$BIRTHDAT>
+#elseact
+MESSAGEBOX 提示：生日输入错误
+break
+
+#if
+CHECKgamepoint < <$str(N$ＲＭＢ)>
+#act
+MESSAGEBOX 提示：ＲＭＢ不足
+break
+
+
+
+#if
+NOT CHECKTEXTLIST ..\..\..\..\转区信息\正式区\转区信息.txt <$str(s4)>
+NOT CHECKTEXTLIST ..\..\..\..\转区信息\测试区\转区信息.txt <$str(s4)>
+#act
+
+gamepoint - <$str(N$ＲＭＢ)>
+CREDITPOINT - <$STR(N2)>
+
+AddTextListEx ..\..\..\..\转区信息\正式区\转区信息.txt <$str(s4)>
+AddTextListEx ..\..\..\..\转区信息\正式区\<$str(s4)>.txt <$str(n2)>
+AddTextListEx ..\..\..\..\转区信息\正式区\提取信息备份.txt 区名:<$SERVERNAME>　时间:<$DATETIME>　人物:<$USERNAME>　提取密码:<$str(s4)>　转区金额:<$str(n2)>　
+
+AddTextListEx ..\..\..\..\转区信息\测试区\转区信息.txt <$str(s4)>
+AddTextListEx ..\..\..\..\转区信息\测试区\<$str(s4)>.txt <$str(n2)>
+AddTextListEx ..\..\..\..\转区信息\测试区\提取信息备份.txt 区名:<$SERVERNAME>　时间:<$DATETIME>　人物:<$USERNAME>　提取密码:<$str(s4)>　转区金额:<$str(n2)>　
+
+MESSAGEBOX 提示：转区操作成功,此号已封!
+set [10] 1
+KICK 1
+#elseact
+MESSAGEBOX 提示：提取密码已被使用.重新填写
+
+
+
+[@InPutString4]
+#or
+CHECKTEXTLIST ..\..\..\..\转区信息\正式区\转区信息.txt <$str(s4)>
+CHECKTEXTLIST ..\..\..\..\转区信息\测试区\转区信息.txt <$str(s4)>
+#act
+MOV S4
+MESSAGEBOX 提示：提取密码已被使用.重新填写
+goto @转区
+#elseact
+goto @转区
+
+
+[@InPutString5]
+#act
+goto @转区
+
+[@InPutInteger2]
+#if
+CHECKCREDITPOINT < 100
+#act
+mov n2 0
+MESSAGEBOX 提示：没有100充值不能专区！
+goto @转区
+break
+
+#if
+small <$str(n2)> 100
+#act
+mov n2 0
+MESSAGEBOX 提示：最少输入100以上转区金额！！！
+goto @转区
+break
+
+#if
+checkCREDITPOINT < <$str(n2)>
+#act
+mov n2 0
+MESSAGEBOX 提示：不可超过<$CREDITPOINT>金额！
+goto @转区
+break
+
+#if
+#act
+goto @转区
+
+
+
+
+}

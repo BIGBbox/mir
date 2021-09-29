@@ -1,0 +1,11 @@
+[@沙捐变量]
+{
+#if
+#act
+VAR Integer HUMAN 沙城捐献
+LOADVAR HUMAN 沙城捐献 ..\QuestDiary\技术QQ198605888\沙城捐献\捐献数据.txt
+
+
+
+
+}

@@ -1,0 +1,105 @@
+[@被攻击触发]
+{
+
+
+
+#if
+random 10
+CHECKCURRTARGETRACE = 0
+CHECKITEMW 牛魔披风
+#act
+addhpper + 1
+addmpper + 1
+sendmsg 7 你的【牛魔披风】BUFF触发恢复1%HPMP！
+
+
+#if
+random 50
+CHECKCURRTARGETRACE = 0 
+CHECKITEMW 人强货硬 1
+#act
+mov N$反弹伤害 <$PKPOWER>
+<$CURRRTARGETNAME>.HUMANHP - <$STR(N$反弹伤害)>
+<$CURRRTARGETNAME>.mov N$反弹伤害 <$PKPOWER>
+<$CURRRTARGETNAME>.sendmsg 7 对方的【人强货硬】BUFF触发,反弹本次攻击100%的伤害！！
+
+
+
+#if
+random 88
+CHECKCURRTARGETRACE = 0
+CHECKITEMW 灵儿铠甲
+#ACT
+<$CURRRTARGETNAME>.GOTO @随机脱装备1
+SendCenterMsg 229 0 【<$CURRRTARGETNAME>】被随机脱下1件装备！！ 0 2
+<$CURRRTARGETNAME>.SendCenterMsg 229 0 被随机脱下1件装备！！ 0 2
+break
+
+
+#if
+random 77
+CHECKCURRTARGETRACE = 0
+CHECKITEMW 扩散黑暗
+#ACT
+<$CURRRTARGETNAME>.GOTO @随机脱装备1
+SendCenterMsg 229 0 【<$CURRRTARGETNAME>】被随机脱下1件装备！！ 0 2
+<$CURRRTARGETNAME>.SendCenterMsg 229 0 被随机脱下1件装备！！ 0 2
+break
+
+
+
+
+
+#if
+random 99
+CHECKCURRTARGETRACE = 0
+CHECKITEMW 绝对防御 1
+#ACT
+ChangeHumAbility 2 = <$MAXAC> 10
+SENDMSG 6 你的[绝对防御]触发,防御增加100% 持续10秒
+
+
+#if
+random 99
+CHECKCURRTARGETRACE = 0
+CHECKITEMW 堕落·诅咒之翼 1
+#ACT
+MOV N$zjl攻击 <$MAXDC>
+MUL N$zjl攻击 20
+DIV N$zjl攻击 100
+ChangeHumAbility 6 = <$str(N$zjl攻击)> 10
+SENDMSG 6 你的[绝对防御]触发,攻击增加20% 持续10秒
+
+
+
+
+[@随机脱装备1]
+#if
+#ACT
+MOVR N$随机脱装备位置 1 13
+
+#if
+CHECKBAGSIZE 2
+not equal N$随机脱装备位置 0
+not equal N$随机脱装备位置 15
+#ACT
+AutoTakeOffItem <$STR(N$随机脱装备位置)>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

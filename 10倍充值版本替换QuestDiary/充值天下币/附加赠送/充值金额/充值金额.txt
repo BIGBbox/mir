@@ -1,0 +1,455 @@
+[@领取充值金额]
+{
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\01.txt
+#ACT
+CREDITPOINT + 0
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\01.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额0
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\02.txt
+#ACT
+CREDITPOINT + 0
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\02.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额0
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\03.txt
+#ACT
+CREDITPOINT + 0
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\03.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额0
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\04.txt
+#ACT
+CREDITPOINT + 0
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\04.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额0
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\05.txt
+#ACT
+CREDITPOINT + 0
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\05.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额0
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\06.txt
+#ACT
+CREDITPOINT + 0
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\06.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额0
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\07.txt
+#ACT
+CREDITPOINT + 0
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\07.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额0
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\08.txt
+#ACT
+CREDITPOINT + 0
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\08.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额0
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\09.txt
+#ACT
+CREDITPOINT + 0
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\09.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额0
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\1.txt
+#ACT
+CREDITPOINT + 1
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\1.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额1
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\2.txt
+#ACT
+CREDITPOINT + 2
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\2.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额2
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\3.txt
+#ACT
+CREDITPOINT + 3
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\3.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额3
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\4.txt
+#ACT
+CREDITPOINT + 4
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\4.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额4
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\5.txt
+#ACT
+CREDITPOINT + 5
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\5.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额5
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\6.txt
+#ACT
+CREDITPOINT + 6
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\6.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额6
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\7.txt
+#ACT
+CREDITPOINT + 7
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\7.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额7
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\8.txt
+#ACT
+CREDITPOINT + 8
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\8.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额8
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\9.txt
+#ACT
+CREDITPOINT + 9
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\9.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额9
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\10.txt
+#ACT
+CREDITPOINT + 10
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\10.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额10
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\20.txt
+#ACT
+CREDITPOINT + 20
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\20.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额20
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\30.txt
+#ACT
+CREDITPOINT + 30
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\30.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额30
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\40.txt
+#ACT
+CREDITPOINT + 40
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\40.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额40
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\50.txt
+#ACT
+CREDITPOINT + 50
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\50.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额50
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\60.txt
+#ACT
+CREDITPOINT + 60
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\60.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额60
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\70.txt
+#ACT
+CREDITPOINT + 70
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\70.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额70
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\80.txt
+#ACT
+CREDITPOINT + 80
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\80.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额80
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\90.txt
+#ACT
+CREDITPOINT + 90
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\90.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额90
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\100.txt
+#ACT
+CREDITPOINT + 100
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\100.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额100
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\200.txt
+#ACT
+CREDITPOINT + 200
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\200.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额200
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\300.txt
+#ACT
+CREDITPOINT + 300
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\300.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额300
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\400.txt
+#ACT
+CREDITPOINT + 400
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\400.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额400
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\500.txt
+#ACT
+CREDITPOINT + 500
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\500.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额500
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\600.txt
+#ACT
+CREDITPOINT + 600
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\600.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额600
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\700.txt
+#ACT
+CREDITPOINT + 700
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\700.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额700
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\800.txt
+#ACT
+CREDITPOINT + 800
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\800.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额800
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\900.txt
+#ACT
+CREDITPOINT + 900
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\900.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额900
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\1000.txt
+#ACT
+CREDITPOINT + 1000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\1000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额1000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\2000.txt
+#ACT
+CREDITPOINT + 2000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\2000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额2000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\3000.txt
+#ACT
+CREDITPOINT + 3000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\3000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额3000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\4000.txt
+#ACT
+CREDITPOINT + 4000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\4000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额4000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\5000.txt
+#ACT
+CREDITPOINT + 5000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\5000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额5000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\6000.txt
+#ACT
+CREDITPOINT + 6000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\6000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额6000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\7000.txt
+#ACT
+CREDITPOINT + 7000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\7000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额7000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\8000.txt
+#ACT
+CREDITPOINT + 8000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\8000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额8000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\9000.txt
+#ACT
+CREDITPOINT + 9000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\9000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额9000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\10000.txt
+#ACT
+CREDITPOINT + 10000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\10000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额10000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\20000.txt
+#ACT
+CREDITPOINT + 20000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\20000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额20000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\30000.txt
+#ACT
+CREDITPOINT + 30000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\30000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额30000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\40000.txt
+#ACT
+CREDITPOINT + 40000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\40000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额40000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\50000.txt
+#ACT
+CREDITPOINT + 50000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\50000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额50000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\60000.txt
+#ACT
+CREDITPOINT + 60000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\60000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额60000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\70000.txt
+#ACT
+CREDITPOINT + 70000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\70000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额70000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\80000.txt
+#ACT
+CREDITPOINT + 80000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\80000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额80000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\90000.txt
+#ACT
+CREDITPOINT + 90000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\90000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额90000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\100000.txt
+#ACT
+CREDITPOINT + 100000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\100000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额100000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\200000.txt
+#ACT
+CREDITPOINT + 200000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\200000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额200000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\300000.txt
+#ACT
+CREDITPOINT + 300000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\300000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额300000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\400000.txt
+#ACT
+CREDITPOINT + 400000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\400000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额400000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\500000.txt
+#ACT
+CREDITPOINT + 500000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\500000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额500000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\600000.txt
+#ACT
+CREDITPOINT + 600000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\600000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额600000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\700000.txt
+#ACT
+CREDITPOINT + 700000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\700000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额700000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\800000.txt
+#ACT
+CREDITPOINT + 800000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\800000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额800000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\900000.txt
+#ACT
+CREDITPOINT + 900000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\900000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额900000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\1000000.txt
+#ACT
+CREDITPOINT + 1000000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值金额\1000000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值金额1000000
+
+#ELSESAY
+请查看自己的充值金额数量!\
+没有充值请按提示进行充值!\
+<退出/@exit>
+}

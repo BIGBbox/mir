@@ -1,0 +1,455 @@
+[@领取充值点]
+{
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\01.txt
+#ACT
+CREDITPOINT + 0
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\01.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点0
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\02.txt
+#ACT
+CREDITPOINT + 0
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\02.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点0
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\03.txt
+#ACT
+CREDITPOINT + 0
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\03.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点0
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\04.txt
+#ACT
+CREDITPOINT + 0
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\04.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点0
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\05.txt
+#ACT
+CREDITPOINT + 0
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\05.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点0
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\06.txt
+#ACT
+CREDITPOINT + 0
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\06.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点0
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\07.txt
+#ACT
+CREDITPOINT + 0
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\07.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点0
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\08.txt
+#ACT
+CREDITPOINT + 0
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\08.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点0
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\09.txt
+#ACT
+CREDITPOINT + 0
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\09.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点0
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\1.txt
+#ACT
+CREDITPOINT + 1
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\1.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点1
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\2.txt
+#ACT
+CREDITPOINT + 2
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\2.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点2
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\3.txt
+#ACT
+CREDITPOINT + 3
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\3.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点3
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\4.txt
+#ACT
+CREDITPOINT + 4
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\4.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点4
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\5.txt
+#ACT
+CREDITPOINT + 5
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\5.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点5
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\6.txt
+#ACT
+CREDITPOINT + 6
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\6.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点6
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\7.txt
+#ACT
+CREDITPOINT + 7
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\7.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点7
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\8.txt
+#ACT
+CREDITPOINT + 8
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\8.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点8
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\9.txt
+#ACT
+CREDITPOINT + 9
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\9.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点9
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\10.txt
+#ACT
+CREDITPOINT + 10
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\10.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点10
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\20.txt
+#ACT
+CREDITPOINT + 20
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\20.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点20
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\30.txt
+#ACT
+CREDITPOINT + 30
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\30.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点30
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\40.txt
+#ACT
+CREDITPOINT + 40
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\40.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点40
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\50.txt
+#ACT
+CREDITPOINT + 50
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\50.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点50
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\60.txt
+#ACT
+CREDITPOINT + 60
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\60.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点60
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\70.txt
+#ACT
+CREDITPOINT + 70
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\70.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点70
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\80.txt
+#ACT
+CREDITPOINT + 80
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\80.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点80
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\90.txt
+#ACT
+CREDITPOINT + 90
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\90.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点90
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\100.txt
+#ACT
+CREDITPOINT + 100
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\100.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点100
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\200.txt
+#ACT
+CREDITPOINT + 200
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\200.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点200
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\300.txt
+#ACT
+CREDITPOINT + 300
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\300.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点300
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\400.txt
+#ACT
+CREDITPOINT + 400
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\400.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点400
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\500.txt
+#ACT
+CREDITPOINT + 500
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\500.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点500
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\600.txt
+#ACT
+CREDITPOINT + 600
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\600.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点600
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\700.txt
+#ACT
+CREDITPOINT + 700
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\700.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点700
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\800.txt
+#ACT
+CREDITPOINT + 800
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\800.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点800
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\900.txt
+#ACT
+CREDITPOINT + 900
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\900.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点900
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\1000.txt
+#ACT
+CREDITPOINT + 1000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\1000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点1000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\2000.txt
+#ACT
+CREDITPOINT + 2000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\2000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点2000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\3000.txt
+#ACT
+CREDITPOINT + 3000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\3000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点3000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\4000.txt
+#ACT
+CREDITPOINT + 4000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\4000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点4000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\5000.txt
+#ACT
+CREDITPOINT + 5000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\5000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点5000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\6000.txt
+#ACT
+CREDITPOINT + 6000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\6000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点6000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\7000.txt
+#ACT
+CREDITPOINT + 7000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\7000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点7000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\8000.txt
+#ACT
+CREDITPOINT + 8000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\8000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点8000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\9000.txt
+#ACT
+CREDITPOINT + 9000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\9000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点9000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\10000.txt
+#ACT
+CREDITPOINT + 10000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\10000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点10000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\20000.txt
+#ACT
+CREDITPOINT + 20000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\20000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点20000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\30000.txt
+#ACT
+CREDITPOINT + 30000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\30000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点30000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\40000.txt
+#ACT
+CREDITPOINT + 40000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\40000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点40000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\50000.txt
+#ACT
+CREDITPOINT + 50000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\50000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点50000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\60000.txt
+#ACT
+CREDITPOINT + 60000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\60000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点60000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\70000.txt
+#ACT
+CREDITPOINT + 70000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\70000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点70000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\80000.txt
+#ACT
+CREDITPOINT + 80000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\80000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点80000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\90000.txt
+#ACT
+CREDITPOINT + 90000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\90000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点90000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\100000.txt
+#ACT
+CREDITPOINT + 100000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\100000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点100000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\200000.txt
+#ACT
+CREDITPOINT + 200000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\200000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点200000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\300000.txt
+#ACT
+CREDITPOINT + 300000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\300000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点300000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\400000.txt
+#ACT
+CREDITPOINT + 400000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\400000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点400000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\500000.txt
+#ACT
+CREDITPOINT + 500000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\500000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点500000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\600000.txt
+#ACT
+CREDITPOINT + 600000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\600000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点600000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\700000.txt
+#ACT
+CREDITPOINT + 700000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\700000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点700000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\800000.txt
+#ACT
+CREDITPOINT + 800000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\800000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点800000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\900000.txt
+#ACT
+CREDITPOINT + 900000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\900000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点900000
+
+#IF
+CheckAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\1000000.txt
+#ACT
+CREDITPOINT + 1000000
+DelAccountList ..\QuestDiary\充值天下币\附加赠送\充值点\1000000.txt
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了充值点1000000
+
+#ELSESAY
+请查看自己的充值点数量!\
+没有充值请按提示进行充值!\
+<退出/@exit>
+}

@@ -1,0 +1,26 @@
+[@数字转换图片]
+{
+
+#ACT
+MOV S$数字转字符 <$STR(N$转换的数字)>
+MOV S$数字图片
+GOTO @开始转换图片
+
+[@开始转换图片]
+#if
+EQUAL S$数字转字符 
+#act
+break
+#elseact
+MOV S$当前数字 <$STR(S$数字转字符)>
+DEC S$当前数字 2 11
+DEC S$数字转字符 1 1
+INC S$数字图片 <Img:31<$STR(S$当前数字)>:<$STR(S$补丁编号)>:0:-14>
+GOTO @开始转换图片
+
+}
+
+
+
+
+

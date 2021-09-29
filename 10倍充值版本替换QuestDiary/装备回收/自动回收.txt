@@ -1,0 +1,1413 @@
+[@自动回收]
+{
+
+
+#if
+check [451] 1
+#act
+goto @打勾1
+
+#if
+check [452] 1
+#act
+goto @打勾2
+
+#if
+check [453] 1
+#act
+goto @打勾3
+
+#if
+check [454] 1
+#act
+goto @打勾4
+
+#if
+check [455] 1
+#act
+goto @打勾5
+
+#if
+check [456] 1
+#act
+goto @打勾6
+
+#if
+check [461] 1
+#act
+goto @打勾11
+
+#if
+check [462] 1
+#act
+goto @打勾12
+
+#if
+check [463] 1
+#act
+goto @打勾13
+
+#if
+check [464] 1
+#act
+goto @打勾14
+
+#if
+check [465] 1
+#act
+goto @打勾15
+
+#if
+check [466] 1
+#act
+goto @打勾16
+
+#if
+check [467] 1
+#act
+goto @打勾17
+
+#if
+check [468] 1
+#act
+goto @打勾18
+
+#if
+check [469] 1
+#act
+goto @打勾19
+
+#if
+check [470] 1
+#act
+goto @打勾20
+
+#if
+check [471] 1
+#act
+goto @打勾21
+
+#if
+check [472] 1
+#act
+goto @打勾22
+
+
+
+
+[@打勾1]
+#if
+CHECKTITLE 狂暴
+#act
+mov N$回收加成 50
+
+#if
+CHECKTITLE 至尊会员
+#act
+mov N$回收加成 100
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+
+#if
+#act
+mov N$回收裁决 10
+mov N$回收屠龙 15
+mov N$回收开天 20
+mov N$回收火龙 25
+mov N$回收天龙 30
+mov N$回收冰龙 40
+mov N$回收蛮荒战刀 50
+mov N$回收梦幻之刃 60
+mov N$回收英雄之刃 80
+mov N$回收武神之刃 100
+mov N$回收寂静魔剑 120
+mov N$回收虎头斩 140
+mov N$回收水蓝之剑 160
+mov N$回收合金战刀 180
+mov N$回收黄金战刃 200
+mov N$回收红域魔剑 250
+mov N$回收蝴蝶之刃 300
+mov N$回收七彩魔刀 350
+mov N$回收魔域之刃 400
+mov N$回收逍遥魔剑 450
+mov N$回收星辰之刃 500
+mov N$回收遗忘之刃 600
+mov N$回收迷失无双斩 700
+mov N$回收地裂魔神斩 800
+mov N$回收至尊之刃 900
+mov N$回收龙神斩 1000
+mov N$回收霸王魔剑 1500
+mov N$回收缥缈之刃 2000
+mov N$回收破灭斩 3000
+mov N$回收炙炎之刃 5000
+
+
+
+
+
+mul N$回收裁决 <$str(N$回收加成)>
+mul N$回收屠龙 <$str(N$回收加成)>
+mul N$回收开天 <$str(N$回收加成)>
+mul N$回收火龙 <$str(N$回收加成)>
+mul N$回收天龙 <$str(N$回收加成)>
+mul N$回收冰龙 <$str(N$回收加成)>
+mul N$回收蛮荒战刀 <$str(N$回收加成)>
+mul N$回收梦幻之刃 <$str(N$回收加成)>
+mul N$回收英雄之刃 <$str(N$回收加成)>
+mul N$回收武神之刃 <$str(N$回收加成)>
+mul N$回收寂静魔剑 <$str(N$回收加成)>
+mul N$回收虎头斩 <$str(N$回收加成)>
+mul N$回收水蓝之剑 <$str(N$回收加成)>
+mul N$回收合金战刀 <$str(N$回收加成)>
+mul N$回收黄金战刃 <$str(N$回收加成)>
+mul N$回收红域魔剑 <$str(N$回收加成)>
+mul N$回收蝴蝶之刃 <$str(N$回收加成)>
+mul N$回收七彩魔刀 <$str(N$回收加成)>
+mul N$回收魔域之刃 <$str(N$回收加成)>
+mul N$回收逍遥魔剑 <$str(N$回收加成)>
+mul N$回收星辰之刃 <$str(N$回收加成)>
+mul N$回收遗忘之刃 <$str(N$回收加成)>
+mul N$回收迷失无双斩 <$str(N$回收加成)>
+mul N$回收地裂魔神斩 <$str(N$回收加成)>
+mul N$回收至尊之刃 <$str(N$回收加成)>
+mul N$回收龙神斩 <$str(N$回收加成)>
+mul N$回收霸王魔剑 <$str(N$回收加成)>
+mul N$回收缥缈之刃 <$str(N$回收加成)>
+mul N$回收破灭斩 <$str(N$回收加成)>
+mul N$回收炙炎之刃 <$str(N$回收加成)>
+
+
+div N$回收裁决 100
+div N$回收屠龙 100
+div N$回收开天 100
+div N$回收火龙 100
+div N$回收天龙 100
+div N$回收冰龙 100
+div N$回收蛮荒战刀 100
+div N$回收梦幻之刃 100
+div N$回收英雄之刃 100
+div N$回收武神之刃 100
+div N$回收寂静魔剑 100
+div N$回收虎头斩 100
+div N$回收水蓝之剑 100
+div N$回收合金战刀 100
+div N$回收黄金战刃 100
+div N$回收红域魔剑 100
+div N$回收蝴蝶之刃 100
+div N$回收七彩魔刀 100
+div N$回收魔域之刃 100
+div N$回收逍遥魔剑 100
+div N$回收星辰之刃 100
+div N$回收遗忘之刃 100
+div N$回收迷失无双斩 100
+div N$回收地裂魔神斩 100
+div N$回收至尊之刃 100
+div N$回收龙神斩 100
+div N$回收霸王魔剑 100
+div N$回收缥缈之刃 100
+div N$回收破灭斩 100
+div N$回收炙炎之刃 100
+
+
+
+inc N$回收裁决 10
+inc N$回收屠龙 15
+inc N$回收开天 20
+inc N$回收火龙 25
+inc N$回收天龙 30
+inc N$回收冰龙 40
+inc N$回收蛮荒战刀 50
+inc N$回收梦幻之刃 60
+inc N$回收英雄之刃 80
+inc N$回收武神之刃 100
+inc N$回收寂静魔剑 120
+inc N$回收虎头斩 140
+inc N$回收水蓝之剑 160
+inc N$回收合金战刀 180
+inc N$回收黄金战刃 200
+inc N$回收红域魔剑 250
+inc N$回收蝴蝶之刃 300
+inc N$回收七彩魔刀 350
+inc N$回收魔域之刃 400
+inc N$回收逍遥魔剑 450
+inc N$回收星辰之刃 500
+inc N$回收遗忘之刃 600
+inc N$回收迷失无双斩 700
+inc N$回收地裂魔神斩 800
+inc N$回收至尊之刃 900
+inc N$回收龙神斩 1000
+inc N$回收霸王魔剑 1500
+inc N$回收缥缈之刃 2000
+inc N$回收破灭斩 3000
+inc N$回收炙炎之刃 5000
+
+#if
+#act
+TakeBagItem 裁决|天魔战甲 50 <$str(N$回收裁决)> 0 0 0 N1 0
+TakeBagItem 屠龙|雷霆战甲 50 <$str(N$回收屠龙)> 0 0 0 N1 0
+TakeBagItem 开天|凤天魔甲 50 <$str(N$回收开天)> 0 0 0 N1 0
+TakeBagItem 火龙|火龙战甲 50 <$str(N$回收火龙)> 0 0 0 N1 0
+TakeBagItem 天龙|天龙之铠 50 <$str(N$回收天龙)> 0 0 0 N1 0
+TakeBagItem 冰龙|冰龙之铠 50 <$str(N$回收冰龙)> 0 0 0 N1 0
+TakeBagItem 蛮荒战刀|蛮荒战铠 50 <$str(N$回收蛮荒战刀)> 0 0 0 N1 0
+TakeBagItem 梦幻之刃|梦幻之铠 50 <$str(N$回收梦幻之刃)> 0 0 0 N1 0
+TakeBagItem 英雄之刃|英雄之铠 50 <$str(N$回收英雄之刃)> 0 0 0 N1 0
+TakeBagItem 武神之刃|武神之铠 50 <$str(N$回收武神之刃)> 0 0 0 N1 0
+TakeBagItem 寂静魔剑|寂静魔铠 50 <$str(N$回收寂静魔剑)> 0 0 0 N1 0
+TakeBagItem 虎头斩|虎头铠 50 <$str(N$回收虎头斩)> 0 0 0 N1 0
+TakeBagItem 水蓝之剑|水蓝之铠 50 <$str(N$回收水蓝之剑)> 0 0 0 N1 0
+TakeBagItem 合金战刀|合金战甲 50 <$str(N$回收合金战刀)> 0 0 0 N1 0
+TakeBagItem 黄金战刃|黄金战甲 50 <$str(N$回收黄金战刃)> 0 0 0 N1 0
+TakeBagItem 红域魔剑|红域魔甲 50 <$str(N$回收红域魔剑)> 0 0 0 N1 0
+TakeBagItem 蝴蝶之刃|蝴蝶之甲 50 <$str(N$回收蝴蝶之刃)> 0 0 0 N1 0
+TakeBagItem 七彩魔刀|七彩魔甲 50 <$str(N$回收七彩魔刀)> 0 0 0 N1 0
+TakeBagItem 魔域之刃|魔域之甲 50 <$str(N$回收魔域之刃)> 0 0 0 N1 0
+TakeBagItem 逍遥魔剑|逍遥魔甲 50 <$str(N$回收逍遥魔剑)> 0 0 0 N1 0
+TakeBagItem 星辰之刃|星辰之甲 50 <$str(N$回收星辰之刃)> 0 0 0 N1 0
+TakeBagItem 遗忘之刃|遗忘之甲 50 <$str(N$回收遗忘之刃)> 0 0 0 N1 0
+TakeBagItem 迷失无双斩|迷失无双甲 50 <$str(N$回收迷失无双斩)> 0 0 0 N1 0
+TakeBagItem 地裂魔神斩|地裂魔神甲 50 <$str(N$回收地裂魔神斩)> 0 0 0 N1 0
+TakeBagItem 至尊之刃|至尊之甲 50 <$str(N$回收至尊之刃)> 0 0 0 N1 0
+TakeBagItem 龙神斩|龙神甲 50 <$str(N$回收龙神斩)> 0 0 0 N1 0
+TakeBagItem 霸王魔剑|霸王魔甲 50 <$str(N$回收霸王魔剑)> 0 0 0 N1 0
+TakeBagItem 缥缈之刃|缥缈之甲 50 <$str(N$回收缥缈之刃)> 0 0 0 N1 0
+TakeBagItem 破灭斩|破灭甲 50 <$str(N$回收破灭斩)> 0 0 0 N1 0
+TakeBagItem 炙炎之刃|炙炎之甲 50 <$str(N$回收炙炎之刃)> 0 0 0 N1 0
+
+
+
+
+
+
+
+
+
+[@打勾2]
+#if
+CHECKTITLE 狂暴
+#act
+mov N$回收加成 50
+
+#if
+CHECKTITLE 至尊会员
+#act
+mov N$回收加成 100
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+
+#if
+#act
+mov N$回收怒颜者·盈怒 1000
+mov N$回收狂放者·诛魂 2000
+mov N$回收影遁者·隐灭 3000
+mov N$回收仙律者·裁决 4000
+mov N$回收嗜魂者·镜花 5000
+mov N$回收强韧者·日月 6000
+mov N$回收坚定者·无殇 7000
+mov N$回收隐匿者·逐日 8000
+mov N$回收冰缚者·霜桦 9000
+mov N$回收神武者·碧空 10000
+
+mul N$回收怒颜者·盈怒 <$str(N$回收加成)>
+mul N$回收狂放者·诛魂 <$str(N$回收加成)>
+mul N$回收影遁者·隐灭 <$str(N$回收加成)>
+mul N$回收仙律者·裁决 <$str(N$回收加成)>
+mul N$回收嗜魂者·镜花 <$str(N$回收加成)>
+mul N$回收强韧者·日月 <$str(N$回收加成)>
+mul N$回收坚定者·无殇 <$str(N$回收加成)>
+mul N$回收隐匿者·逐日 <$str(N$回收加成)>
+mul N$回收冰缚者·霜桦 <$str(N$回收加成)>
+mul N$回收神武者·碧空 <$str(N$回收加成)>
+
+div N$回收怒颜者·盈怒 100
+div N$回收狂放者·诛魂 100
+div N$回收影遁者·隐灭 100
+div N$回收仙律者·裁决 100
+div N$回收嗜魂者·镜花 100
+div N$回收强韧者·日月 100
+div N$回收坚定者·无殇 100
+div N$回收隐匿者·逐日 100
+div N$回收冰缚者·霜桦 100
+div N$回收神武者·碧空 100
+
+inc N$回收怒颜者·盈怒 1000
+inc N$回收狂放者·诛魂 2000
+inc N$回收影遁者·隐灭 3000
+inc N$回收仙律者·裁决 4000
+inc N$回收嗜魂者·镜花 5000
+inc N$回收强韧者·日月 6000
+inc N$回收坚定者·无殇 7000
+inc N$回收隐匿者·逐日 8000
+inc N$回收冰缚者·霜桦 9000
+inc N$回收神武者·碧空 10000
+
+TakeBagItem 怒颜者·盈怒|断肠 50 <$str(N$回收怒颜者·盈怒)> 0 0 0 N1 0
+TakeBagItem 狂放者·诛魂|拂魂 50 <$str(N$回收狂放者·诛魂)> 0 0 0 N1 0
+TakeBagItem 影遁者·隐灭|凤翼 50 <$str(N$回收影遁者·隐灭)> 0 0 0 N1 0
+TakeBagItem 仙律者·裁决|天翔 50 <$str(N$回收仙律者·裁决)> 0 0 0 N1 0
+TakeBagItem 嗜魂者·镜花|九龙 50 <$str(N$回收嗜魂者·镜花)> 0 0 0 N1 0
+TakeBagItem 强韧者·日月|明光 50 <$str(N$回收强韧者·日月)> 0 0 0 N1 0
+TakeBagItem 坚定者·无殇|流焰 50 <$str(N$回收坚定者·无殇)> 0 0 0 N1 0
+TakeBagItem 隐匿者·逐日|破魂 50 <$str(N$回收隐匿者·逐日)> 0 0 0 N1 0
+TakeBagItem 冰缚者·霜桦|云罗 50 <$str(N$回收冰缚者·霜桦)> 0 0 0 N1 0
+TakeBagItem 神武者·碧空|战天 50 <$str(N$回收神武者·碧空)> 0 0 0 N1 0
+
+
+
+
+[@打勾3]
+#if
+CHECKTITLE 狂暴
+#act
+mov N$回收加成 50
+
+#if
+CHECKTITLE 至尊会员
+#act
+mov N$回收加成 100
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+
+#if
+#act
+mov N$回收御兽石[枣红马] 100
+mov N$回收御兽石[迎亲马] 500
+mov N$回收御兽石[独角战马] 1000
+mov N$回收御兽石[飒露紫] 5000
+mov N$回收御兽石[至尊白虎] 10000
+mov N$回收御兽石[森林狼] 20000
+
+mul N$回收御兽石[枣红马] <$str(N$回收加成)>
+mul N$回收御兽石[迎亲马] <$str(N$回收加成)>
+mul N$回收御兽石[独角战马] <$str(N$回收加成)>
+mul N$回收御兽石[飒露紫] <$str(N$回收加成)>
+mul N$回收御兽石[至尊白虎] <$str(N$回收加成)>
+mul N$回收御兽石[森林狼] <$str(N$回收加成)>
+
+div N$回收御兽石[枣红马] 100
+div N$回收御兽石[迎亲马] 100
+div N$回收御兽石[独角战马] 100
+div N$回收御兽石[飒露紫] 100
+div N$回收御兽石[至尊白虎] 100
+div N$回收御兽石[森林狼] 100
+
+
+inc N$回收御兽石[枣红马] 100
+inc N$回收御兽石[迎亲马] 500
+inc N$回收御兽石[独角战马] 1000
+inc N$回收御兽石[飒露紫] 5000
+inc N$回收御兽石[至尊白虎] 10000
+inc N$回收御兽石[森林狼] 20000
+
+TakeBagItem 御兽石[枣红马]|御兽石[乌黑马]|御兽石[白马]|御兽石[赤炎马]|御兽石[高头大马] 50 <$str(N$回收御兽石[枣红马])> 0 0 0 N1 0
+TakeBagItem 御兽石[迎亲马]|御兽石[金色马]|御兽石[骐骥]|御兽石[幼麒麟]|御兽石[黄金虎] 50 <$str(N$回收御兽石[迎亲马])> 0 0 0 N1 0
+TakeBagItem 御兽石[独角战马]|御兽石[赤兔]|御兽石[烈焰独角]|御兽石[天子之骏]|御兽石[百兽之王] 50 <$str(N$回收御兽石[独角战马])> 0 0 0 N1 0
+TakeBagItem 御兽石[飒露紫]|御兽石[乌骓]|御兽石[白熊]|御兽石[森林白斑]|御兽石[烈焰] 50 <$str(N$回收御兽石[飒露紫])> 0 0 0 N1 0
+TakeBagItem 御兽石[至尊白虎]|御兽石[拳毛騧]|御兽石[骕骦]|御兽石[黄骠]|御兽石[天驷] 50 <$str(N$回收御兽石[至尊白虎])> 0 0 0 N1 0
+TakeBagItem 御兽石[森林狼]|御兽石[雪狼]|御兽石[照夜玉狼]|御兽石[八骏]|御兽石[青骓] 50 <$str(N$回收御兽石[森林狼])> 0 0 0 N1 0
+
+
+
+
+[@打勾4]
+#if
+CHECKTITLE 狂暴
+#act
+mov N$回收加成 50
+
+#if
+CHECKTITLE 至尊会员
+#act
+mov N$回收加成 100
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+
+#if
+#act
+mov N$回收圣战头盔 5
+mov N$回收雷霆头盔 8
+mov N$回收圣龙盔 10
+mov N$回收火龙头盔 13
+mov N$回收天龙头盔 15
+mov N$回收冰龙头盔 20
+mov N$回收蛮荒头盔 25
+mov N$回收梦幻头盔 30
+mov N$回收英雄头盔 40
+mov N$回收武神头盔 50
+mov N$回收寂静头盔 60
+mov N$回收虎头盔 70
+mov N$回收水蓝之盔 80
+mov N$回收合金战盔 90
+mov N$回收黄金战盔 100
+mov N$回收红域头盔 125
+mov N$回收蝴蝶头盔 150
+mov N$回收七彩头盔 175
+mov N$回收魔域头盔 200
+mov N$回收逍遥头盔 225
+mov N$回收星辰头盔 250
+mov N$回收遗忘头盔 300
+mov N$回收迷失无双盔 350
+mov N$回收地裂魔神盔 400
+mov N$回收至尊头盔 450
+mov N$回收龙神头盔 500
+mov N$回收霸王头盔 750
+mov N$回收缥缈头盔 1000
+mov N$回收破灭头盔 1500
+mov N$回收炙炎头盔 2500
+
+mul N$回收圣战头盔 <$str(N$回收加成)>
+mul N$回收雷霆头盔 <$str(N$回收加成)>
+mul N$回收圣龙盔 <$str(N$回收加成)>
+mul N$回收火龙头盔 <$str(N$回收加成)>
+mul N$回收天龙头盔 <$str(N$回收加成)>
+mul N$回收冰龙头盔 <$str(N$回收加成)>
+mul N$回收蛮荒头盔 <$str(N$回收加成)>
+mul N$回收梦幻头盔 <$str(N$回收加成)>
+mul N$回收英雄头盔 <$str(N$回收加成)>
+mul N$回收武神头盔 <$str(N$回收加成)>
+mul N$回收寂静头盔 <$str(N$回收加成)>
+mul N$回收虎头盔 <$str(N$回收加成)>
+mul N$回收水蓝之盔 <$str(N$回收加成)>
+mul N$回收合金战盔 <$str(N$回收加成)>
+mul N$回收黄金战盔 <$str(N$回收加成)>
+mul N$回收红域头盔 <$str(N$回收加成)>
+mul N$回收蝴蝶头盔 <$str(N$回收加成)>
+mul N$回收七彩头盔 <$str(N$回收加成)>
+mul N$回收魔域头盔 <$str(N$回收加成)>
+mul N$回收逍遥头盔 <$str(N$回收加成)>
+mul N$回收星辰头盔 <$str(N$回收加成)>
+mul N$回收遗忘头盔 <$str(N$回收加成)>
+mul N$回收迷失无双盔 <$str(N$回收加成)>
+mul N$回收地裂魔神盔 <$str(N$回收加成)>
+mul N$回收至尊头盔 <$str(N$回收加成)>
+mul N$回收龙神头盔 <$str(N$回收加成)>
+mul N$回收霸王头盔 <$str(N$回收加成)>
+mul N$回收缥缈头盔 <$str(N$回收加成)>
+mul N$回收破灭头盔 <$str(N$回收加成)>
+mul N$回收炙炎头盔 <$str(N$回收加成)>
+
+div N$回收圣战头盔 100
+div N$回收雷霆头盔 100
+div N$回收圣龙盔 100
+div N$回收火龙头盔 100
+div N$回收天龙头盔 100
+div N$回收冰龙头盔 100
+div N$回收蛮荒头盔 100
+div N$回收梦幻头盔 100
+div N$回收英雄头盔 100
+div N$回收武神头盔 100
+div N$回收寂静头盔 100
+div N$回收虎头盔 100
+div N$回收水蓝之盔 100
+div N$回收合金战盔 100
+div N$回收黄金战盔 100
+div N$回收红域头盔 100
+div N$回收蝴蝶头盔 100
+div N$回收七彩头盔 100
+div N$回收魔域头盔 100
+div N$回收星辰头盔 100
+div N$回收遗忘头盔 100
+div N$回收迷失无双盔 100
+div N$回收地裂魔神盔 100
+div N$回收至尊头盔 100
+div N$回收龙神头盔 100
+div N$回收霸王头盔 100
+div N$回收缥缈头盔 100
+div N$回收破灭头盔 100
+div N$回收炙炎头盔 100
+
+inc N$回收圣战头盔 5
+inc N$回收雷霆头盔 8
+inc N$回收圣龙盔 10
+inc N$回收火龙头盔 13
+inc N$回收天龙头盔 15
+inc N$回收冰龙头盔 20
+inc N$回收蛮荒头盔 25
+inc N$回收梦幻头盔 30
+inc N$回收英雄头盔 40
+inc N$回收武神头盔 50
+inc N$回收寂静头盔 60
+inc N$回收虎头盔 70
+inc N$回收水蓝之盔 80
+inc N$回收合金战盔 90
+inc N$回收黄金战盔 100
+inc N$回收红域头盔 125
+inc N$回收蝴蝶头盔 150
+inc N$回收七彩头盔 175
+inc N$回收魔域头盔 200
+inc N$回收逍遥头盔 225
+inc N$回收星辰头盔 250
+inc N$回收遗忘头盔 300
+inc N$回收迷失无双盔 350
+inc N$回收地裂魔神盔 400
+inc N$回收至尊头盔 450
+inc N$回收龙神头盔 500
+inc N$回收霸王头盔 750
+inc N$回收缥缈头盔 1000
+inc N$回收破灭头盔 1500
+inc N$回收炙炎头盔 2500
+
+
+#if
+#act
+TakeBagItem 圣战头盔|圣战项链|圣战手镯|圣战戒指|圣战腰带|圣战靴子 50 <$str(N$回收圣战头盔)> 0 0 0 N1 0
+TakeBagItem 雷霆头盔|雷霆项链|雷霆手镯|雷霆戒指|雷霆腰带|雷霆靴子 50 <$str(N$回收雷霆头盔)> 0 0 0 N1 0
+TakeBagItem 圣龙盔|战神项链|战神手镯|战神戒指|战神腰带|战神靴子 50 <$str(N$回收圣龙盔)> 0 0 0 N1 0
+TakeBagItem 火龙头盔|火龙项链|火龙手镯|火龙戒指|火龙腰带|火龙靴子 50 <$str(N$回收火龙头盔)> 0 0 0 N1 0
+TakeBagItem 天龙头盔|天龙项链|天龙手镯|天龙戒指|天龙腰带|天龙靴子 50 <$str(N$回收天龙头盔)> 0 0 0 N1 0
+TakeBagItem 冰龙头盔|冰龙项链|冰龙手镯|冰龙戒指|冰龙腰带|冰龙靴子 50 <$str(N$回收冰龙头盔)> 0 0 0 N1 0
+TakeBagItem 蛮荒头盔|蛮荒项链|蛮荒手镯|蛮荒戒指|蛮荒腰带|蛮荒靴子 50 <$str(N$回收蛮荒头盔)> 0 0 0 N1 0
+TakeBagItem 梦幻头盔|梦幻项链|梦幻手镯|梦幻戒指|梦幻腰带|梦幻靴子 50 <$str(N$回收梦幻头盔)> 0 0 0 N1 0
+TakeBagItem 英雄头盔|英雄项链|英雄手镯|英雄戒指|英雄腰带|英雄靴子 50 <$str(N$回收英雄头盔)> 0 0 0 N1 0
+TakeBagItem 武神头盔|武神项链|武神手镯|武神戒指|武神腰带|武神靴子 50 <$str(N$回收武神头盔)> 0 0 0 N1 0
+TakeBagItem 寂静头盔|寂静项链|寂静手镯|寂静戒指|寂静腰带|寂静靴子 50 <$str(N$回收寂静头盔)> 0 0 0 N1 0
+TakeBagItem 虎头盔|虎头项链|虎头手镯|虎头戒指|虎头腰带|虎头靴子 50 <$str(N$回收虎头盔)> 0 0 0 N1 0
+TakeBagItem 水蓝之盔|水蓝项链|水蓝手镯|水蓝戒指|水蓝腰带|水蓝靴子 50 <$str(N$回收水蓝之盔)> 0 0 0 N1 0
+TakeBagItem 合金战盔|合金项链|合金手镯|合金戒指|合金腰带|合金靴子 50 <$str(N$回收合金战盔)> 0 0 0 N1 0
+TakeBagItem 黄金战盔|黄金项链|黄金手镯|黄金戒指|黄金腰带|黄金靴子 50 <$str(N$回收黄金战盔)> 0 0 0 N1 0
+TakeBagItem 红域头盔|红域项链|红域手镯|红域戒指|红域腰带|红域靴子 50 <$str(N$回收红域头盔)> 0 0 0 N1 0
+TakeBagItem 蝴蝶头盔|蝴蝶项链|蝴蝶手镯|蝴蝶戒指|蝴蝶腰带|蝴蝶靴子 50 <$str(N$回收蝴蝶头盔)> 0 0 0 N1 0
+TakeBagItem 七彩头盔|七彩项链|七彩手镯|七彩戒指|七彩腰带|七彩靴子 50 <$str(N$回收七彩头盔)> 0 0 0 N1 0
+TakeBagItem 魔域头盔|魔域项链|魔域手镯|魔域戒指|魔域腰带|魔域靴子 50 <$str(N$回收魔域头盔)> 0 0 0 N1 0
+TakeBagItem 逍遥头盔|逍遥项链|逍遥手镯|逍遥戒指|逍遥腰带|逍遥靴子 50 <$str(N$回收逍遥头盔)> 0 0 0 N1 0
+TakeBagItem 星辰头盔|星辰项链|星辰手镯|星辰戒指|星辰腰带|星辰靴子 50 <$str(N$回收星辰头盔)> 0 0 0 N1 0
+TakeBagItem 遗忘头盔|遗忘项链|遗忘手镯|遗忘戒指|遗忘腰带|遗忘靴子 50 <$str(N$回收遗忘头盔)> 0 0 0 N1 0
+TakeBagItem 迷失无双盔|迷失无双链|迷失无双镯|迷失无双指|迷失无双腰|迷失无双靴 50 <$str(N$回收迷失无双盔)> 0 0 0 N1 0
+TakeBagItem 地裂魔神盔|地裂魔神链|地裂魔神镯|地裂魔神指|地裂魔神腰|地裂魔神靴 50 <$str(N$回收地裂魔神盔)> 0 0 0 N1 0
+TakeBagItem 至尊头盔|至尊项链|至尊手镯|至尊戒指|至尊腰带|至尊靴子 50 <$str(N$回收至尊头盔)> 0 0 0 N1 0
+TakeBagItem 龙神头盔|龙神项链|龙神手镯|龙神戒指|龙神腰带|龙神靴子 50 <$str(N$回收龙神头盔)> 0 0 0 N1 0
+TakeBagItem 霸王头盔|霸王项链|霸王手镯|霸王戒指|霸王腰带|霸王靴子 50 <$str(N$回收霸王头盔)> 0 0 0 N1 0
+TakeBagItem 缥缈头盔|缥缈项链|缥缈手镯|缥缈戒指|缥缈腰带|缥缈靴子 50 <$str(N$回收缥缈头盔)> 0 0 0 N1 0
+TakeBagItem 破灭头盔|破灭项链|破灭手镯|破灭戒指|破灭腰带|破灭靴子 50 <$str(N$回收破灭头盔)> 0 0 0 N1 0
+TakeBagItem 炙炎头盔|炙炎项链|炙炎手镯|炙炎戒指|炙炎腰带|炙炎靴子 50 <$str(N$回收炙炎头盔)> 0 0 0 N1 0
+
+
+
+
+
+[@打勾5]
+#if
+CHECKTITLE 狂暴
+#act
+mov N$回收加成 50
+
+#if
+CHECKTITLE 至尊会员
+#act
+mov N$回收加成 100
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+
+
+#if
+#act
+mov N$回收金之力 500
+mov N$回收天 1000
+mov N$回收巫·帝江 2000
+mov N$回收浮生天云落 4000
+
+mul N$回收金之力 <$str(N$回收加成)>
+mul N$回收天 <$str(N$回收加成)>
+mul N$回收巫·帝江 <$str(N$回收加成)>
+mul N$回收浮生天云落 <$str(N$回收加成)>
+
+div N$回收金之力 100
+div N$回收天 100
+div N$回收巫·帝江 100
+div N$回收浮生天云落 100
+
+inc N$回收金之力 500
+inc N$回收天 1000
+inc N$回收巫·帝江 2000
+inc N$回收浮生天云落 4000
+
+TakeBagItem 金之力|木之力|水之力|火之力|土之力|光之力|暗之力|雷之力|风之力|冰之力|时之力|空之力 50 <$str(N$回收金之力)> 0 0 0 N1 0
+TakeBagItem 天|地|玄|黄|宇|宙|洪|荒|日|月|星|辰 50 <$str(N$回收天)> 0 0 0 N1 0
+TakeBagItem 巫·帝江|巫·句芒|巫·祝融|巫·蓐收|巫·共工|巫·玄冥|巫·后土|巫·强良|巫·天吴|巫·翕兹|巫·烛九阴|巫·奢比尸 50 <$str(N$回收巫·帝江)> 0 0 0 N1 0
+TakeBagItem 浮生天云落|苍雷潜龙殇|天霜雪凋零|破灭极炙焰|皇道龙魂气|紫火鎏璃莹|武之禅碎骨|灵天剑指流|镇魔藏忘忧|沧澜儒驭风|汲空神武斗|邪殇溟伏都 50 <$str(N$回收浮生天云落)> 0 0 0 N1 0
+
+
+
+[@打勾6]
+
+#if
+CHECKTITLE 狂暴
+#act
+mov N$回收加成 50
+
+#if
+CHECKTITLE 至尊会员
+#act
+mov N$回收加成 100
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+
+
+#if
+#act
+mov N$回收开天残① 1000
+mov N$回收黄金残① 2000
+mov N$回收嗜血残① 3000
+mov N$回收制裁残① 5000
+mov N$回收天使残① 10000
+
+mul N$回收开天残① <$str(N$回收加成)>
+mul N$回收黄金残① <$str(N$回收加成)>
+mul N$回收嗜血残① <$str(N$回收加成)>
+mul N$回收制裁残① <$str(N$回收加成)>
+mul N$回收天使残① <$str(N$回收加成)>
+
+div N$回收开天残① 100
+div N$回收黄金残① 100
+div N$回收嗜血残① 100
+div N$回收制裁残① 100
+div N$回收天使残① 100
+
+inc N$回收开天残① 1000
+inc N$回收黄金残① 2000
+inc N$回收嗜血残① 3000
+inc N$回收制裁残① 5000
+inc N$回收天使残① 10000
+
+TakeBagItem 开天残①|开天残②|开天残③|开天残④|开天残⑤|开天残⑥|开天残⑦ 50 <$str(N$回收开天残①)> 0 0 0 N1 0
+TakeBagItem 黄金残①|黄金残②|黄金残③|黄金残④|黄金残⑤|黄金残⑥|黄金残⑦ 50 <$str(N$回收黄金残①)> 0 0 0 N1 0
+TakeBagItem 嗜血残①|嗜血残②|嗜血残③|嗜血残④|嗜血残⑤|嗜血残⑥|嗜血残⑦ 50 <$str(N$回收嗜血残①)> 0 0 0 N1 0
+TakeBagItem 制裁残①|制裁残②|制裁残③|制裁残④|制裁残⑤|制裁残⑥|制裁残⑦ 50 <$str(N$回收制裁残①)> 0 0 0 N1 0
+TakeBagItem 天使残①|天使残②|天使残③|天使残④|天使残⑤|天使残⑥|天使残⑦ 50 <$str(N$回收天使残①)> 0 0 0 N1 0
+
+
+
+
+
+[@打勾11]
+
+#if
+CHECKTITLE 狂暴
+#act
+mov N$回收加成 50
+
+#if
+CHECKTITLE 至尊会员
+#act
+mov N$回收加成 100
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+
+#if
+#act
+mov N$回收幽影之枪 100
+mov N$回收神圣之剑 200
+mov N$回收胜利之匕 300
+mov N$回收涅幻之刃 400
+mov N$回收嗜血之矛 500
+
+mul N$回收幽影之枪 <$str(N$回收加成)>
+mul N$回收神圣之剑 <$str(N$回收加成)>
+mul N$回收胜利之匕 <$str(N$回收加成)>
+mul N$回收涅幻之刃 <$str(N$回收加成)>
+mul N$回收嗜血之矛 <$str(N$回收加成)>
+
+div N$回收幽影之枪 100
+div N$回收神圣之剑 100
+div N$回收胜利之匕 100
+div N$回收涅幻之刃 100
+div N$回收嗜血之矛 100
+
+inc N$回收幽影之枪 100
+inc N$回收神圣之剑 200
+inc N$回收胜利之匕 300
+inc N$回收涅幻之刃 400
+inc N$回收嗜血之矛 500
+
+#if
+#act
+TakeBagItem 幽影之枪|乌金战铠 50 <$str(N$回收幽影之枪)> 0 0 0 N1 0
+TakeBagItem 神圣之剑|天心铠甲 50 <$str(N$回收神圣之剑)> 0 0 0 N1 0
+TakeBagItem 胜利之匕|玄武战袍 50 <$str(N$回收胜利之匕)> 0 0 0 N1 0
+TakeBagItem 涅幻之刃|乾坤无畏铠 50 <$str(N$回收涅幻之刃)> 0 0 0 N1 0
+TakeBagItem 嗜血之矛|紫阳百衲衣 50 <$str(N$回收嗜血之矛)> 0 0 0 N1 0
+
+[@打勾12]
+#if
+CHECKTITLE 狂暴
+#act
+mov N$回收加成 50
+
+#if
+CHECKTITLE 至尊会员
+#act
+mov N$回收加成 100
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+
+#if
+#act
+mov N$回收冰之枪 600
+mov N$回收天御牙 700
+mov N$回收黄金圣龙之剑 800
+mov N$回收血矛 900
+mov N$回收震天 1000
+
+mul N$回收冰之枪 <$str(N$回收加成)>
+mul N$回收天御牙 <$str(N$回收加成)>
+mul N$回收黄金圣龙之剑 <$str(N$回收加成)>
+mul N$回收血矛 <$str(N$回收加成)>
+mul N$回收震天 <$str(N$回收加成)>
+
+div N$回收冰之枪 100
+div N$回收天御牙 100
+div N$回收黄金圣龙之剑 100
+div N$回收血矛 100
+div N$回收震天 100
+
+inc N$回收冰之枪 600
+inc N$回收天御牙 700
+inc N$回收黄金圣龙之剑 800
+inc N$回收血矛 900
+inc N$回收震天 1000
+
+#if
+#act
+TakeBagItem 冰之枪|九黎披风 50 <$str(N$回收冰之枪)> 0 0 0 N1 0
+TakeBagItem 天御牙|仙元紫天 50 <$str(N$回收天御牙)> 0 0 0 N1 0
+TakeBagItem 黄金圣龙之剑|死亡魔魂 50 <$str(N$回收黄金圣龙之剑)> 0 0 0 N1 0
+TakeBagItem 血矛|暗黑之袍 50 <$str(N$回收血矛)> 0 0 0 N1 0
+TakeBagItem 震天|风流披风|魔鲨 50 <$str(N$回收震天)> 0 0 0 N1 0
+
+
+[@打勾13]
+#if
+CHECKTITLE 狂暴
+#act
+mov N$回收加成 50
+
+#if
+CHECKTITLE 至尊会员
+#act
+mov N$回收加成 100
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+
+#if
+#act
+mov N$回收咆哮之刀 1500
+mov N$回收邪恶之戟 2000
+mov N$回收风华之鞭 2500
+mov N$回收灵魂之锤 3000
+mov N$回收愤怒咆哮之刃 3500
+
+mul N$回收咆哮之刀 <$str(N$回收加成)>
+mul N$回收邪恶之戟 <$str(N$回收加成)>
+mul N$回收风华之鞭 <$str(N$回收加成)>
+mul N$回收灵魂之锤 <$str(N$回收加成)>
+mul N$回收愤怒咆哮之刃 <$str(N$回收加成)>
+
+div N$回收咆哮之刀 100
+div N$回收邪恶之戟 100
+div N$回收风华之鞭 100
+div N$回收灵魂之锤 100
+div N$回收愤怒咆哮之刃 100
+
+inc N$回收咆哮之刀 1500
+inc N$回收邪恶之戟 2000
+inc N$回收风华之鞭 2500
+inc N$回收灵魂之锤 3000
+inc N$回收愤怒咆哮之刃 3500
+
+#if
+#act
+TakeBagItem 咆哮之刀|龙骨灵铠 50 <$str(N$回收咆哮之刀)> 0 0 0 N1 0
+TakeBagItem 邪恶之戟|原始无双 50 <$str(N$回收邪恶之戟)> 0 0 0 N1 0
+TakeBagItem 风华之鞭|火神愤怒 50 <$str(N$回收风华之鞭)> 0 0 0 N1 0
+TakeBagItem 灵魂之锤|天罡灭魂 50 <$str(N$回收灵魂之锤)> 0 0 0 N1 0
+TakeBagItem 愤怒咆哮之刃|猩红 50 <$str(N$回收愤怒咆哮之刃)> 0 0 0 N1 0
+
+
+[@打勾14]
+#if
+CHECKTITLE 狂暴
+#act
+mov N$回收加成 50
+
+#if
+CHECKTITLE 至尊会员
+#act
+mov N$回收加成 100
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+
+#if
+#act
+mov N$回收乾坤一剑 4000
+mov N$回收绝望 4500
+mov N$回收玄铁 5000
+mov N$回收玄铁枪 6000
+mov N$回收嗜血杀戮斧 7000
+
+mul N$回收乾坤一剑 <$str(N$回收加成)>
+mul N$回收绝望 <$str(N$回收加成)>
+mul N$回收玄铁 <$str(N$回收加成)>
+mul N$回收玄铁枪 <$str(N$回收加成)>
+mul N$回收嗜血杀戮斧 <$str(N$回收加成)>
+
+div N$回收乾坤一剑 100
+div N$回收绝望 100
+div N$回收玄铁 100
+div N$回收玄铁枪 100
+div N$回收嗜血杀戮斧 100
+
+inc N$回收乾坤一剑 4000
+inc N$回收绝望 4500
+inc N$回收玄铁 5000
+inc N$回收玄铁枪 6000
+inc N$回收嗜血杀戮斧 7000
+
+#if
+#act
+TakeBagItem 乾坤一剑|血魔 50 <$str(N$回收乾坤一剑)> 0 0 0 N1 0
+TakeBagItem 绝望|海神破天 50 <$str(N$回收绝望)> 0 0 0 N1 0
+TakeBagItem 玄铁|魔鲨军 50 <$str(N$回收玄铁)> 0 0 0 N1 0
+TakeBagItem 玄铁枪|人马冰霜 50 <$str(N$回收玄铁枪)> 0 0 0 N1 0
+TakeBagItem 嗜血杀戮斧|封龙 50 <$str(N$回收嗜血杀戮斧)> 0 0 0 N1 0
+
+[@打勾15]
+#if
+CHECKTITLE 狂暴
+#act
+mov N$回收加成 50
+
+#if
+CHECKTITLE 至尊会员
+#act
+mov N$回收加成 100
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+
+#if
+#act
+mov N$回收破灭 8000
+mov N$回收追魂之剑 9000
+mov N$回收胜利之不灭枪 10000
+mov N$回收寒冬之刃 12000
+mov N$回收献祭血羽刃 14000
+
+mul N$回收破灭 <$str(N$回收加成)>
+mul N$回收追魂之剑 <$str(N$回收加成)>
+mul N$回收胜利之不灭枪 <$str(N$回收加成)>
+mul N$回收寒冬之刃 <$str(N$回收加成)>
+mul N$回收献祭血羽刃 <$str(N$回收加成)>
+
+div N$回收破灭 100
+div N$回收追魂之剑 100
+div N$回收胜利之不灭枪  100
+div N$回收寒冬之刃 100
+div N$回收献祭血羽刃 100
+
+inc N$回收破灭 8000
+inc N$回收追魂之剑 9000
+inc N$回收胜利之不灭枪 10000
+inc N$回收寒冬之刃 12000
+inc N$回收献祭血羽刃 14000
+
+#if
+#act
+TakeBagItem 破灭|孤星战月 50 <$str(N$回收破灭)> 0 0 0 N1 0
+TakeBagItem 追魂之剑|不死鸟披风 50 <$str(N$回收追魂之剑)> 0 0 0 N1 0
+TakeBagItem 胜利之不灭枪|白夜荒天铠 50 <$str(N$回收胜利之不灭枪)> 0 0 0 N1 0
+TakeBagItem 寒冬之刃|镇魂| 50 <$str(N$回收寒冬之刃)> 0 0 0 N1 0
+TakeBagItem 献祭血羽刃|八崩 50 <$str(N$回收献祭血羽刃)> 0 0 0 N1 0
+
+
+
+[@打勾16]
+
+#if
+CHECKTITLE 狂暴
+#act
+mov N$回收加成 50
+
+#if
+CHECKTITLE 至尊会员
+#act
+mov N$回收加成 100
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+
+#if
+#act
+mov N$回收人皇匕 16000
+mov N$回收战炎 18000
+mov N$回收星隐 20000
+mov N$回收天炼 25000
+mov N$回收恶魔弯刀 30000
+
+mul N$回收人皇匕 <$str(N$回收加成)>
+mul N$回收战炎 <$str(N$回收加成)>
+mul N$回收星隐 <$str(N$回收加成)>
+mul N$回收天炼 <$str(N$回收加成)>
+mul N$回收恶魔弯刀 <$str(N$回收加成)>
+
+div N$回收人皇匕 100
+div N$回收战炎 100
+div N$回收星隐 100
+div N$回收天炼 100
+div N$回收恶魔弯刀 100
+
+inc N$回收人皇匕 16000
+inc N$回收战炎 18000
+inc N$回收星隐 20000
+inc N$回收天炼 25000
+inc N$回收恶魔弯刀 30000
+
+#if
+#act
+TakeBagItem 人皇匕|噬浪罗杉 50 16000 0 0 0 N1 0
+TakeBagItem 战炎|天武神雷 50 18000 0 0 0 N1 0
+TakeBagItem 星隐|冥铠 50 20000 0 0 0 N1 0
+TakeBagItem 天炼|上古魔甲 50 25000 0 0 0 N1 0
+TakeBagItem 恶魔弯刀|逆水寒 50 30000 0 0 0 N1 0
+
+
+
+[@打勾17]
+#if
+CHECKTITLE 狂暴
+#act
+mov N$回收加成 50
+
+#if
+CHECKTITLE 至尊会员
+#act
+mov N$回收加成 100
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+
+#if
+#act
+mov N$回收怨灵 50
+mov N$回收封天 100
+mov N$回收血怒之魂 150
+mov N$回收帝江 200
+mov N$回收神罗面具 250
+
+mul N$回收怨灵 <$str(N$回收加成)>
+mul N$回收封天 <$str(N$回收加成)>
+mul N$回收血怒之魂 <$str(N$回收加成)>
+mul N$回收帝江 <$str(N$回收加成)>
+mul N$回收神罗面具 <$str(N$回收加成)>
+
+div N$回收怨灵 100
+div N$回收封天 100
+div N$回收血怒之魂 100
+div N$回收帝江 100
+div N$回收神罗面具 100
+
+inc N$回收怨灵 50
+inc N$回收封天 100
+inc N$回收血怒之魂 150
+inc N$回收帝江 200
+inc N$回收神罗面具 250
+
+#if
+#act
+TakeBagItem 怨灵|遗失|幽灵手镯|幽灵之戒|天绝圣带|波力之靴 50 <$str(N$回收怨灵)> 0 0 0 N1 0
+TakeBagItem 封天|破月|末日手镯|圣心神戒|虎威魔带|狂风马靴 50 <$str(N$回收封天)> 0 0 0 N1 0
+TakeBagItem 血怒之魂|嗜血|骑士亡镯|遗忘之戒|尊之苍穹|晓梦 50 <$str(N$回收血怒之魂)> 0 0 0 N1 0
+TakeBagItem 帝江|霸王|未知神镯|命运之戒|圣之传承|微光短靴 50 <$str(N$回收帝江)> 0 0 0 N1 0
+TakeBagItem 神罗面具|圣山|帝皇手镯|勇者之戒|魔之复兴|浸毒布靴 50 <$str(N$回收神罗面具)> 0 0 0 N1 0
+
+
+[@打勾18]
+#if
+CHECKTITLE 狂暴
+#act
+mov N$回收加成 50
+
+#if
+CHECKTITLE 至尊会员
+#act
+mov N$回收加成 100
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+#if
+#act
+mov N$回收死亡化身 300
+mov N$回收血苍穹 350
+mov N$回收笑苍生 400
+mov N$回收炽烈修罗 450
+mov N$回收暗黑切割者 500
+
+mul N$回收死亡化身 <$str(N$回收加成)>
+mul N$回收血苍穹 <$str(N$回收加成)>
+mul N$回收笑苍生 <$str(N$回收加成)>
+mul N$回收炽烈修罗 <$str(N$回收加成)>
+mul N$回收暗黑切割者 <$str(N$回收加成)>
+
+div N$回收死亡化身 100
+div N$回收血苍穹 100
+div N$回收笑苍生 100
+div N$回收炽烈修罗 100
+div N$回收暗黑切割者 100
+
+inc N$回收死亡化身 300
+inc N$回收血苍穹 350
+inc N$回收笑苍生 400
+inc N$回收炽烈修罗 450
+inc N$回收暗黑切割者 500
+
+#if
+#act
+TakeBagItem 死亡化身|流星|龙牙手镯|灵魂之戒|傳说腰带|远古法鞋 50 <$str(N$回收死亡化身)> 0 0 0 N1 0
+TakeBagItem 血苍穹|彩云|深渊之镯|漆黑之戒|屠神|亚瑟 50 <$str(N$回收血苍穹)> 0 0 0 N1 0
+TakeBagItem 笑苍生|魔云|地狱之爪|神灵毁灭|寒骨|聚灵 50 <$str(N$回收笑苍生)> 0 0 0 N1 0
+TakeBagItem 炽烈修罗|神隐|神灵守护|邪灵之戒|流夜|大师之靴 50 <$str(N$回收炽烈修罗)> 0 0 0 N1 0
+TakeBagItem 暗黑切割者|万里碧海|传说手镯|噬魂魔戒|九尺墨影|露指之血 50 <$str(N$回收暗黑切割者)> 0 0 0 N1 0
+
+
+[@打勾19]
+#if
+CHECKTITLE 狂暴
+#act
+mov N$回收加成 50
+
+#if
+CHECKTITLE 至尊会员
+#act
+mov N$回收加成 100
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+
+#if
+#act
+mov N$回收烈狱裁断 750
+mov N$回收黄泉天怒 1000
+mov N$回收远古开天盔 1250
+mov N$回收逆鳞 1500
+mov N$回收幻夜 1750
+
+mul N$回收烈狱裁断 <$str(N$回收加成)>
+mul N$回收黄泉天怒 <$str(N$回收加成)>
+mul N$回收远古开天盔 <$str(N$回收加成)>
+mul N$回收逆鳞 <$str(N$回收加成)>
+mul N$回收幻夜 <$str(N$回收加成)>
+
+div N$回收烈狱裁断 100
+div N$回收黄泉天怒 100
+div N$回收远古开天盔 100
+div N$回收逆鳞 100
+div N$回收幻夜 100
+
+inc N$回收烈狱裁断 750
+inc N$回收黄泉天怒 1000
+inc N$回收远古开天盔 1250
+inc N$回收逆鳞 1500
+inc N$回收幻夜 1750
+
+#if
+#act
+TakeBagItem 烈狱裁断|永恒边界|毁灭公爵|蛇指|永夜暗鸣|死灵之潮汐 50 <$str(N$回收烈狱裁断)> 0 0 0 N1 0
+TakeBagItem 黄泉天怒|传说挂坠|天晶噬魂|鬼影指环|降妖之带|银月之血斑 50 <$str(N$回收黄泉天怒)> 0 0 0 N1 0
+TakeBagItem 远古开天盔|月神咆哮|麒麟臂|圣之圆环|咆哮之带|守护远古战靴 50 <$str(N$回收远古开天盔)> 0 0 0 N1 0
+TakeBagItem 逆鳞|雷霆之怒|流光万丈|流光圣戒|无极真义|冰灵苍穹 50 <$str(N$回收逆鳞)> 0 0 0 N1 0
+TakeBagItem 幻夜|天羽|七宝琉璃|蝴蝶指环|最后的怒吼|剑相 50 <$str(N$回收幻夜)> 0 0 0 N1 0
+
+
+
+[@打勾20]
+#if
+CHECKTITLE 狂暴
+#act
+mov N$回收加成 50
+
+#if
+CHECKTITLE 至尊会员
+#act
+mov N$回收加成 100
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+
+#if
+#act
+mov N$回收罗天法相 2000
+mov N$回收猎魂 2250
+mov N$回收天宫之盔 2500
+mov N$回收清曜 3000
+mov N$回收帝释盔 3500
+
+mul N$回收罗天法相 <$str(N$回收加成)>
+mul N$回收猎魂 <$str(N$回收加成)>
+mul N$回收天宫之盔 <$str(N$回收加成)>
+mul N$回收清曜 <$str(N$回收加成)>
+mul N$回收帝释盔 <$str(N$回收加成)>
+
+div N$回收罗天法相 100
+div N$回收猎魂 100
+div N$回收天宫之盔 100
+div N$回收清曜 100
+div N$回收帝释盔 100
+
+inc N$回收罗天法相 2000
+inc N$回收猎魂 2250
+inc N$回收天宫之盔 2500
+inc N$回收清曜 3000
+inc N$回收帝释盔 3500
+
+#if
+#act
+TakeBagItem 罗天法相|摘星|双龙魔影|虚幻之蛇|逍遥天地|万仞 50 <$str(N$回收罗天法相)> 0 0 0 N1 0
+TakeBagItem 猎魂|凝旋|碎颅拳套|哀伤指环|远古之腰|幽灵阴影 50 <$str(N$回收猎魂)> 0 0 0 N1 0
+TakeBagItem 天宫之盔|雷蝠天翼|灵者之拳|绝望之戒|赦免|龙旋破军 50 <$str(N$回收天宫之盔)> 0 0 0 N1 0
+TakeBagItem 清曜|魂锁|绝望之喉|霜噬指环|无双护腿|熔火之皮 50 <$str(N$回收清曜)> 0 0 0 N1 0
+TakeBagItem 帝释盔|凝血爆|暗影之息|饮虎痴|永夜黎明|苍澜灭魔靴 50 <$str(N$回收帝释盔)> 0 0 0 N1 0
+
+
+
+
+[@打勾21]
+#if
+CHECKTITLE 狂暴
+#act
+mov N$回收加成 50
+
+#if
+CHECKTITLE 至尊会员
+#act
+mov N$回收加成 100
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+
+#if
+#act
+mov N$回收紫极魔瞳 4000
+mov N$回收噬血魔盔 4500
+mov N$回收影血 5000
+mov N$回收天翼 6000
+mov N$回收龙蝶 10000
+
+mul N$回收紫极魔瞳 <$str(N$回收加成)>
+mul N$回收噬血魔盔 <$str(N$回收加成)>
+mul N$回收影血 <$str(N$回收加成)>
+mul N$回收天翼 <$str(N$回收加成)>
+mul N$回收龙蝶 <$str(N$回收加成)>
+
+div N$回收紫极魔瞳 100
+div N$回收噬血魔盔 100
+div N$回收影血 100
+div N$回收天翼 100
+div N$回收龙蝶 100
+
+inc N$回收紫极魔瞳 4000
+inc N$回收噬血魔盔 4500
+inc N$回收影血 5000
+inc N$回收天翼 6000
+inc N$回收龙蝶 10000
+
+#if
+#act
+TakeBagItem 紫极魔瞳|蓝焰滔天|霜噬拳套|殇神|暗夜潜行|散纶玉靴 50 <$str(N$回收紫极魔瞳)> 0 0 0 N1 0
+TakeBagItem 噬血魔盔|琉璃挂坠|愤怒风暴|泣天|血色纹带|天修魂济世履 50 <$str(N$回收噬血魔盔)> 0 0 0 N1 0
+TakeBagItem 影血|幻梦空影|上清|帝陨戒指|幻想空域|雷焱炙羽履 50 <$str(N$回收影血)> 0 0 0 N1 0
+TakeBagItem 天翼|龙牙舞星|七宝玲珑|武皇神戒|静籁永恒|宿驻灵靴 50 <$str(N$回收天翼)> 0 0 0 N1 0
+TakeBagItem 龙蝶|苍衍灭灵|吞噬之影|白之毒戒|星空之源|命运暗鸣 50 <$str(N$回收龙蝶)> 0 0 0 N1 0
+
+
+
+[@打勾22]
+#if
+CHECKTITLE 狂暴
+#act
+mov N$回收加成 50
+
+#if
+CHECKTITLE 至尊会员
+#act
+mov N$回收加成 100
+
+#if
+CHECKITEM 聚宝盆[西游神器] 1
+#act
+inc N$回收加成 50
+
+#if
+CHECKITEM 万贯家财 1
+#act
+inc N$回收加成 10
+
+#if
+#act
+mov N$回收破天之盔 8000
+mov N$回收赤血魔盔 9000
+mov N$回收神殇 10000
+mov N$回收轮回天殇 12500
+mov N$回收日炎 15000
+
+mul N$回收破天之盔 <$str(N$回收加成)>
+mul N$回收赤血魔盔 <$str(N$回收加成)>
+mul N$回收神殇 <$str(N$回收加成)>
+mul N$回收轮回天殇 <$str(N$回收加成)>
+mul N$回收日炎 <$str(N$回收加成)>
+
+div N$回收破天之盔 100
+div N$回收赤血魔盔 100
+div N$回收神殇 100
+div N$回收轮回天殇 100
+div N$回收日炎 100
+
+inc N$回收破天之盔 8000
+inc N$回收赤血魔盔 9000
+inc N$回收神殇 10000
+inc N$回收轮回天殇 12500
+inc N$回收日炎 15000
+
+#if
+#act
+TakeBagItem 破天之盔|天穹诸星|火焰新星|青蛇毒牙|鲜血哀歌|冰魄返魂 50 <$str(N$回收破天之盔)> 0 0 0 N1 0
+TakeBagItem 赤血魔盔|圣决天佑|赤精之赐|神怒之炎|幽光鞘腰|屠戮之靴 50 <$str(N$回收赤血魔盔)> 0 0 0 N1 0
+TakeBagItem 神殇|幽冥泉落|灾厄之手|爆焰旋風|镇魂之虚|守护之靴 50 <$str(N$回收神殇)> 0 0 0 N1 0
+TakeBagItem 轮回天殇|剑吼蛟龙怒|恐爪拳套|冰封聖騎|死灵之阳|初心 50 <$str(N$回收轮回天殇)> 0 0 0 N1 0
+TakeBagItem 日炎|孤星战月|黑潮之螯|虹魔指环|涅槃天威|古拉之海 50 <$str(N$回收日炎)> 0 0 0 N1 0
+
+
+
+
+
+
+}
+
+

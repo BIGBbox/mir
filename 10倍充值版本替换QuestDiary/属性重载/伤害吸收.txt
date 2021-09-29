@@ -1,0 +1,193 @@
+[@吸收伤害]
+{
+#if
+#act
+MOV N$游戏吸收伤害总 0
+MOV N$游戏吸收伤害总用到的 0
+
+
+
+
+#If
+CHECKTITLE 至尊会员
+#act
+INC N$游戏吸收伤害总 500
+
+
+#if
+CHECKITEMW 骑士战袍 1
+#act
+INC N$游戏吸收伤害总 200
+
+#if
+CHECKITEMW 猩猩战甲
+#act
+INC N$游戏吸收伤害总 200
+
+#if
+CHECKITEMW 幽冥の龍
+#act
+INC N$游戏吸收伤害总 200
+
+#if
+CHECKITEMW 钢铁之铠
+#act
+INC N$游戏吸收伤害总 300
+
+
+#if
+CHECKITEMW 天地の防
+#act
+INC N$游戏吸收伤害总 300
+
+
+#if
+CHECKITEMW 天使龙翼
+#act
+INC N$游戏吸收伤害总 300
+
+
+#if
+CHECKITEMW 仙の摩罗神甲
+#act
+INC N$游戏吸收伤害总 300
+
+
+#if
+CHECKITEMW 仙の寒冰守护
+#act
+INC N$游戏吸收伤害总 400
+
+
+#if
+CHECKITEMW 傳説神甲
+#act
+INC N$游戏吸收伤害总 400
+
+
+#if
+CHECKITEMW 绝对防御
+#act
+INC N$游戏吸收伤害总 1000
+
+
+#if
+CHECKITEMW 堕落·诅咒之翼
+#act
+INC N$游戏吸收伤害总 500
+
+
+#if
+CHECKITEMW 血腥の战甲
+#act
+INC N$游戏吸收伤害总 600
+
+
+#if
+CHECKITEMW 魅影神甲
+#act
+INC N$游戏吸收伤害总 600
+
+
+#if
+CHECKITEMW 真·魅影神甲
+#act
+INC N$游戏吸收伤害总 800
+
+
+#if
+CHECKITEMW 倚天战甲
+#act
+INC N$游戏吸收伤害总 600
+
+
+#if
+CHECKITEMW 真·倚天战甲
+#act
+INC N$游戏吸收伤害总 900
+
+
+#if
+CHECKITEMW 天下神铠
+#act
+INC N$游戏吸收伤害总 900
+
+
+
+#IF
+equal U24 1
+#ACT
+INC N$游戏吸收伤害总 111
+
+#IF
+equal U24 2
+#ACT
+INC N$游戏吸收伤害总 222
+
+#IF
+equal U24 3
+#ACT
+INC N$游戏吸收伤害总 333
+
+#IF
+equal U24 4
+#ACT
+INC N$游戏吸收伤害总 444
+
+#IF
+equal U24 5
+#ACT
+INC N$游戏吸收伤害总 555
+
+#IF
+equal U24 6
+#ACT
+INC N$游戏吸收伤害总 666
+
+#IF
+equal U24 7
+#ACT
+INC N$游戏吸收伤害总 888
+
+#IF
+equal U24 8
+#ACT
+INC N$游戏吸收伤害总 1111
+
+#IF
+equal U24 9
+#ACT
+INC N$游戏吸收伤害总 1333
+
+
+
+#IF
+CHECK [4] 1
+#ACT
+INC N$游戏吸收伤害总 50
+
+
+#IF
+CHECK [309] 1
+#ACT
+INC N$游戏吸收伤害总 10
+
+
+
+
+
+#if
+large N$游戏吸收伤害总 0
+#act
+div N$游戏吸收显示 N$游戏吸收伤害总 100
+div N$游戏吸收伤害总 10
+SetSuckDamage = 1999999999 <$STR(N$游戏吸收显示)> 100
+
+SENDMSG 6 你当前的吸收伤害为：<$STR(N$游戏吸收显示)>%，成功率为100%！
+goto @属性显示
+
+
+
+
+
+}
