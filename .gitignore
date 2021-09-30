@@ -4,4 +4,4 @@ Mir200/ConLog/
 .svn/
 CenterLog/
 DBServer/Log
-LoginSrv/CountLog/
+/LoginSrv/CountLog/*
