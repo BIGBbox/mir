@@ -1,4 +1,4 @@
-Mir200/Log/
+Mir200/Log/*.txt
 Mir200/ChatLog/
 Mir200/ConLog/
 .svn/
