@@ -189,13 +189,11 @@ addskill 彻地钉
 ;DEPRIVETITLE 先锋·江湖少侠
 ;DEPRIVETITLE 无畏·武林俊杰
 ;sendmsg 5 U8:<$STR(U8)>
-money RMB点 + 100
-money 元宝 + 100
-money 绑定元宝 + 100
-money 天下币 + 100
+
+#CALL [\捡取鉴定\自动使用物品.txt] @自动使用物品
 ;ChangeBindMoney 元宝 200
 ; #Call [\Mobile\特殊NPC\TOP图标.txt] @导航
-#Call [\Mobile\特殊NPC\货币记录.txt] @货币
+; #Call [\Mobile\特殊NPC\货币记录.txt] @货币
 ; #CALL [\基础按钮\主界面基础按钮QM.txt] @基础按钮QM
 
 ;CONFERTITLE 青铜会员
