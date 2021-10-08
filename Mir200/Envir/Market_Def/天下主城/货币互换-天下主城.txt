@@ -29,9 +29,9 @@ break
 
 [@提取500]
 #IF
-CHECKGAMEDIAMOND > 499
+CHECKMONEY 天下币 > 499
 #ACT
-GAMEDIAMOND - 500
+money 天下币 - 500
 GIVE 500天下币 1
 MESSAGEBOX 提示：成功提取500天下币！！
 BREAK
@@ -42,9 +42,9 @@ BREAK
 
 [@提取1000]
 #IF
-CHECKGAMEDIAMOND > 999
+CHECKMONEY 天下币 > 999
 #ACT
-GAMEDIAMOND - 1000
+money 天下币 - 1000
 GIVE 1000天下币 1
 MESSAGEBOX 提示：成功提取1000天下币！！
 BREAK
@@ -58,11 +58,11 @@ BREAK
 [@兑换100]
 
 #IF
-CHECKgamepoint > 9
+CHECKMONEY RMB点 > 9
 #ACT
-gamepoint - 10
+money RMB点 - 10
+money 天下币 + 100
 CreditPoint + 1
-GAMEDIAMOND + 100
 MESSAGEBOX 提示：成功兑换100天下币！！
 BREAK
 #ELSEACT
@@ -75,11 +75,11 @@ BREAK
 [@兑换1000]
 
 #IF
-CHECKgamepoint > 99
+CHECKMONEY RMB点 > 99
 #ACT
-gamepoint - 100
+money RMB点 - 100
+money 天下币 + 1000
 CreditPoint + 10
-GAMEDIAMOND + 1000
 MESSAGEBOX 提示：成功兑换1000天下币！！
 BREAK
 #ELSEACT
@@ -89,11 +89,11 @@ BREAK
 
 [@兑换10000]
 #IF
-CHECKgamepoint > 999
+CHECKMONEY RMB点 > 999
 #ACT
-gamepoint - 1000
+money RMB点 - 1000
+money 天下币 + 10000
 CreditPoint + 100
-GAMEDIAMOND + 10000
 MESSAGEBOX 提示：成功兑换100000天下币！！
 BREAK
 #ELSEACT
@@ -103,11 +103,11 @@ BREAK
 
 [@兑换500]
 #IF
-CHECKgamepoint > 49
+CHECKMONEY RMB点 > 49
 #ACT
-gamepoint - 50
+money RMB点 - 50
+money 天下币 + 500
 CreditPoint + 5
-GAMEDIAMOND + 500
 MESSAGEBOX 提示：成功兑换500天下币！！
 BREAK
 #ELSEACT
@@ -117,11 +117,11 @@ BREAK
 
 [@兑换5000]
 #IF
-CHECKgamepoint > 499
+CHECKMONEY RMB点 > 499
 #ACT
-gamepoint - 500
+money RMB点 - 500
+money 天下币 + 5000
 CreditPoint + 50
-GAMEDIAMOND + 5000
 MESSAGEBOX 提示：成功兑换5000天下币！！
 BREAK
 #ELSEACT
@@ -131,11 +131,11 @@ BREAK
 
 [@兑换50000]
 #IF
-CHECKgamepoint > 4999
+CHECKMONEY RMB点 > 4999
 #ACT
-gamepoint - 5000
+money RMB点 - 5000
+money 天下币 + 50000
 CreditPoint + 500
-GAMEDIAMOND + 50000
 MESSAGEBOX 提示：成功兑换50000天下币！！
 BREAK
 #ELSEACT
