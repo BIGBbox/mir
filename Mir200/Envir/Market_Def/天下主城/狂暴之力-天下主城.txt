@@ -39,9 +39,9 @@ break
 
 
 #IF
-CHECKgamepoint > 99
+CHECKMONEY RMB点 > 99
 #act
-gamepoint - 100
+money RMB点 - 100
 CONFERTITLE 狂暴
 #CALL [\属性重载\武器吸血.txt] @武器吸血
 SetIcon 2 1 2880 53 70 10 0 100 0
