@@ -244,7 +244,6 @@ NEWPICKTASK 22
 CheckContainsText <$STR(T108)> 砖石会员
 not CheckContainsText <$STR(T108)> 星耀会员
 #act
-sendmsg 5 999999999999
 NEWDELETETASK 22
 NEWPICKTASK 23
 
@@ -254,6 +253,34 @@ not CheckContainsText <$STR(T108)> 王者会员
 #act
 NEWDELETETASK 23
 NEWPICKTASK 24
+
+#if
+CheckContainsText <$STR(T108)> 王者会员
+not CheckContainsText <$STR(T108)> 荣耀会员
+#act
+NEWDELETETASK 24
+NEWPICKTASK 35
+
+#if
+CheckContainsText <$STR(T108)> 荣耀会员
+not CheckContainsText <$STR(T108)> 神圣会员
+#act
+NEWDELETETASK 35
+NEWPICKTASK 36
+
+#if
+CheckContainsText <$STR(T108)> 神圣会员
+not CheckContainsText <$STR(T108)> 永恒会员
+#act
+NEWDELETETASK 36
+NEWPICKTASK 37
+
+#if
+CheckContainsText <$STR(T108)> 永恒会员
+not CheckContainsText <$STR(T108)> 至尊会员
+#act
+NEWDELETETASK 37
+NEWPICKTASK 38
 
 #if
 not CheckContainsText <$STR(T108)> 开通狂暴

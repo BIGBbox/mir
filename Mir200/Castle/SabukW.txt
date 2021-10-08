@@ -2,7 +2,7 @@
 CastleName=É³°Í¿Ë
 ChangeDate=1899/12/30
 WarDate=1899/12/30
-IncomeToday=2021/9/30 0:00:05
+IncomeToday=2021/10/8 9:47:16
 [Defense]
 CastleMap=0
 CastleHomeMap=0
