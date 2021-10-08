@@ -1,7 +1,5 @@
 Mir200/Log/*.txt
-Mir200/ChatLog/
-Mir200/ConLog/
 .svn/
-CenterLog/
+CenterLog/*
 DBServer/Log
-/LoginSrv/CountLog/*
+LoginSrv/CountLog/*
