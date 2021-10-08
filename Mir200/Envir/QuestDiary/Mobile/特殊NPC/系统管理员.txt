@@ -199,6 +199,7 @@ addskill 彻地钉
 ;CONFERTITLE 青铜会员
 ;GiveStateItem 灵兽精石 10 0 1 0 0 1 1 1 1
 ;goto @属性刷新
+goto @发放会员每日礼包
 
 [@测试close]
 #if

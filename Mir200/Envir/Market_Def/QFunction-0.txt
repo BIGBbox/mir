@@ -7153,6 +7153,18 @@ SENDMSG 7 {增加|56:56:0}{[500]|250:56:0}{天下币，您当前元宝总数为|56:56:0}{[<$GA
 GAMEDIAMOND + 1000
 SENDMSG 7 {增加|56:56:0}{[1000]|250:56:0}{天下币，您当前元宝总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
 
+[@StdModeFunc330]
+#IF
+#ACT
+GAMEDIAMOND + 5000
+SENDMSG 7 {增加|56:56:0}{[1000]|250:56:0}{天下币，您当前元宝总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+
+[@StdModeFunc331]
+#IF
+#ACT
+GAMEDIAMOND + 10000
+SENDMSG 7 {增加|56:56:0}{[1000]|250:56:0}{天下币，您当前元宝总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+
 ;---------------------神兵礼包------------------------
 [@StdModeFunc320]
 
@@ -8183,6 +8195,24 @@ goto @充值记录回调
 goto @属性刷新
 
 #if
+large <$STR(U99)> 99
+;not small <$STR(U17)> 3
+small <$STR(U17)> 4
+not CheckContainsText <$STR(S$支线任务临时变量)> _青铜会员_白银会员_黄金会员_铂金会员
+#act
+mov U17 4
+NEWDELETETASK 18
+NEWDELETETASK 19
+NEWDELETETASK 20
+NEWDELETETASK 21
+
+mov T108 <$STR(S$支线任务临时变量)>_青铜会员_白银会员_黄金会员_铂金会员
+sendmsg 5 恭喜玩家<$USERNAME>达成充值要求,升级到了铂金会员!!
+#CALL [\任务系统\任务文本.txt] @接取支线任务
+; break
+
+
+#if
 large <$STR(U99)> 29999
 ;not small <$STR(U17)> 3
 small <$STR(U17)> 11
@@ -8263,23 +8293,6 @@ sendmsg 5 恭喜玩家<$USERNAME>达成充值要求,升级到了钻石会员!!
 #CALL [\任务系统\任务文本.txt] @接取支线任务
 
 
-#if
-large <$STR(U99)> 99
-;not small <$STR(U17)> 3
-small <$STR(U17)> 4
-#act
-mov U17 4
-NEWDELETETASK 18
-NEWDELETETASK 19
-NEWDELETETASK 20
-NEWDELETETASK 21
-
-mov T108 <$STR(S$支线任务临时变量)>_青铜会员_白银会员_黄金会员_铂金会员
-sendmsg 5 恭喜玩家<$USERNAME>达成充值要求,升级到了铂金会员!!
-#CALL [\任务系统\任务文本.txt] @接取支线任务
-break
-
-
 [@充值记录回调]
 #if
 not small U91 10
@@ -8328,7 +8341,8 @@ ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(N$会员等级)> 按钮
 GetValidstr <$STR(S$每日礼包串)> * S$道具名字 S$道具数量
 
 ;GiveStateItem <$STR(S$道具名字)> <$STR(S$道具数量)> 0 1 0 0 1 1 1 1
-MailGIVE <$STR(S$道具名字)> <$STR(S$道具数量)> 1#4#6#8
+sendmsg 5 <$STR(S$道具名字)>------<$STR(S$道具数量)>
+MailGIVE <$STR(S$道具名字)> <$STR(S$道具数量)> 1#4#5#6#8
 SendMail 1 系统奖励 <$STR(S$邮件标题)>每日礼包已发放,请尽快提取附件!
 dec N$会员等级 1
 
