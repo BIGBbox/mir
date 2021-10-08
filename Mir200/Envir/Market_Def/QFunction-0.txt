@@ -8248,7 +8248,7 @@ NEWDELETETASK 23
 NEWPICKTASK 24
 mov T108 <$STR(S$支线任务临时变量)>_星耀会员
 sendmsg 5 恭喜玩家<$USERNAME>达成充值要求,升级到了星耀会员!!
-
+#CALL [\任务系统\任务文本.txt] @接取支线任务
 
 #if
 large <$STR(U99)> 299

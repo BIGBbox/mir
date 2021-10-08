@@ -235,13 +235,14 @@ NEWPICKTASK 21
 
 #if
 CheckContainsText <$STR(T108)> 铂金会员
-not CheckContainsText <$STR(T108)> 砖石会员
+not CheckContainsText <$STR(T108)> 钻石会员
 #act
 NEWDELETETASK 21
 NEWPICKTASK 22
+sendmsg 5 钻石会员
 
 #if
-CheckContainsText <$STR(T108)> 砖石会员
+CheckContainsText <$STR(T108)> 钻石会员
 not CheckContainsText <$STR(T108)> 星耀会员
 #act
 NEWDELETETASK 22
