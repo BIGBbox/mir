@@ -8330,9 +8330,10 @@ SendCenterMsg 249 0 QF测试方法 1 30
 [@SetDay]
 
 #IF
+equal U20 0
 #ACT
-; #CALL [\QuestDiary\游戏登录\登录脚本.txt] @每日首次登录触发
-#CALL [\游戏登录\登录脚本.txt] @每日首次登录触发
+#CALL [\游戏登陆\登陆脚本.txt] @每日首次登陆触发
+mov U20 1
 
 ; ;--------清空日充---------
 ; mov U91 0

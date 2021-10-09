@@ -169,8 +169,10 @@ OPENNPCSHOWEX 76
 [@ceshi1]
 
 #IF
+equal U20 0
 #ACT
-goto @SetDay
+sendmsg 5 U20:<$str(U20)>
+mov U20 1
 ; MonGenEx 0 101 141 真·如来 1 1 0 255
 ; ChangeHumNewValue 21 90 600
 ; SENDMSG 6 增加90%暴击率 时间600秒
