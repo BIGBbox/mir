@@ -8385,7 +8385,7 @@ sendmsg 5 开始挂机!!
 ; close
 ; OPENHYPERLINK 26
 #act
-close
+; close
 #call [\系统功能\充值功能.txt] @充值主面板
 
 [@前往主城]

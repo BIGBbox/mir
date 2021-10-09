@@ -259,6 +259,7 @@ mov S$反向验证奖励串 <$STR(S$反向验证奖励串2)>
 
 ;sendmsg 5 ！！！！：已经领取！
 goto @反向验证奖励发放for
+SendMail 1 系统奖励 你好【<$USERNAME>】,<【<$STR(M0)>元】/FCOLOR=249>额外礼包已发放，请点击查收！
 break
 
 #if

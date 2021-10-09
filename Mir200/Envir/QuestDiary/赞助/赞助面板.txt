@@ -17,7 +17,7 @@ goto @绘制滑动窗口
 #if
 #ACT
 #SAY
-<Img|img=public/sf1/19/bg5.png|x=160|y=20|children={close_btn,大标题,bg0,大标题,滚动窗口,click_btn,特效控件1,特效控件2,特效控件3,特效控件4,,特效控件5,特效控件6,金额,title}|bg=1|reset=1|move=1>
+<Img|img=public/sf1/19/bg5.png|x=160|y=20|children={close_btn,大标题,bg0,大标题,滚动窗口,click_btn,累充金额bg,累充金额1,特效控件1,特效控件2,特效控件3,特效控件4,,特效控件5,特效控件6,金额,title}|bg=1|reset=1|move=1>
 <Button|id=close_btn|x=750|y=25|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
 ;<Text|id=大标题|x=359|y=12|color=249|size=35|text=赞 助>
 <Img|id=bg0|img=public/sf1/19/bg3.png|x=10.0|y=55.0>
@@ -27,8 +27,10 @@ goto @绘制滑动窗口
     <$STR(S$窗口1)>
     <$STR(S$窗口2)>
     <$STR(S$窗口3)>
-<Button|id=click_btn|x=282|y=485|text=获取赞助会员|nimg=public/sf1/19/button2.png|pimg=public/sf1/19/0.png|link=@充值界面>
-
+; <Img|id=累充金额bg|children={累充金额}|img=public/sf1/19/bg3.png|x=10.0|y=55.0>
+<RText|id=累充金额1|x=500.0|y=485.0|text=<当前累计充值:/FCOLOR=149> <<$STR(U99)>/FCOLOR=250> <元/FCOLOR=149>>
+; <TextAtlas|id=累充金额bg|x=650.0|y=460|img=public/sf1/19/artFont/00044.png|schar=0|iheight=37|iwidth=25|text=<$STR(U99)>>
+<Button|id=click_btn|x=282|y=480|text=获取赞助会员|nimg=public/sf1/19/button2.png|pimg=public/sf1/19/0.png|link=@充值界面>
 
 [@绘制滑动窗口]
 #if
@@ -96,5 +98,13 @@ goto @赞助面板显示
 
 ;GuildNoticeMsg 249 251 ):恭喜玩家[<$USERNAME>]购买赞助瞬间战斗力爆表...
 ;break
+[@充值界面]
+#if
+; #act
+; close
+; OPENHYPERLINK 26
+#act
+close
+#call [\系统功能\充值功能.txt] @充值主面板
 
 }
