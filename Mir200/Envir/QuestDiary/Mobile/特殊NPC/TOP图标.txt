@@ -46,8 +46,8 @@ MOV S$图标2 <Button|x=-230|y=<$STR(N$坐标Y1)>|nimg=official/top/1900012531.png|l
 
 #if
 #act
-; 世界BOSS按钮必须为是第一个
-goto @世界BOSS按钮
+; 游戏攻略按钮必须为是第一个
+goto @游戏攻略按钮
 goto @神兵谱按钮
 goto @异兽坊按钮
 goto @首爆奖励按钮
@@ -63,21 +63,12 @@ addbutton 102 2 <$STR(S$图标2)>
 ; not CheckContainsText <$STR(A490)> <$Str(S$首杀名0)>
 
 
-[@世界BOSS按钮]
+[@游戏攻略按钮]
 #if
-; CheckContainsText <$STR(A490)> 真·如来
-; CheckContainsText <$STR(A490)> 真·罗贯中
-; CheckContainsText <$STR(A490)> 真·帝王
-; CheckContainsText <$STR(A490)> 真·金庸
-; CheckContainsText <$STR(A490)> 真·圣斗士
-; CheckContainsText <$STR(A490)> 真·施耐庵
-; CheckContainsText <$STR(A490)> 真·萧鼎
+
 #act
-; MOV N$坐标X -320
-; INC S$图标2 <Button|id=111|children=111_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00009.png|link=@世界BOSS>
-; #elseact
 MOV N$坐标X -320
-INC S$图标2 <Button|id=111|children=111_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00010.png|link=@世界BOSS>
+INC S$图标2 <Button|id=111|children=111_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00024.png|link=@游戏攻略>
 
 [@神兵谱按钮]
 #if
@@ -176,10 +167,11 @@ addbutton 102 2 <$STR(S$展示)>
 #ACT
 addbutton 102 2 <$STR(S$图标2)>
 
-[@世界BOSS]
+[@游戏攻略]
 #IF
 #ACT
-messagebox 这是攻略图标!!
+; messagebox 这是攻略图标!!
+#CALL [\Mobile\特殊NPC\游戏攻略.txt] @攻略系统
 ; #CALL [\首杀奖励\首杀奖励.txt] @首杀奖励
 
 [@神兵谱]

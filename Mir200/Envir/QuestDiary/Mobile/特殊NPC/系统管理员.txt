@@ -168,12 +168,12 @@ OPENNPCSHOWEX 76
 
 [@ceshi1]
 
-#IF
-CheckHaveHero
-#SAY
-你已经有英雄了.
-#ELSESAY
-你还没有英雄.
+; #IF
+; CheckHaveHero
+; #SAY
+; 你已经有英雄了.
+; #ELSESAY
+; 你还没有英雄.
 
 ; #IF
 ; CHECKSLAVECOUNT < 1
@@ -203,7 +203,7 @@ addskill 彻地钉
 ; #CALL [\任务系统\任务文本.txt] @接取支线任务
 ; #CALL [\捡取鉴定\自动使用物品.txt] @自动使用物品
 ;ChangeBindMoney 元宝 200
-; #Call [\Mobile\特殊NPC\TOP图标.txt] @导航
+#Call [\Mobile\特殊NPC\TOP图标.txt] @导航
 ; #Call [\Mobile\特殊NPC\货币记录.txt] @货币
 ; #CALL [\基础按钮\主界面基础按钮QM.txt] @基础按钮QM
 ; sendmsg 5 <$str([17])>....
