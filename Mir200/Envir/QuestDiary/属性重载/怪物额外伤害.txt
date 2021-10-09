@@ -539,105 +539,110 @@ equal U15 9
 #ACT
 INC N$魔法切割 105
 
-#IF
-equal U7 1
-#ACT
-INC N$道术切割 1
+#if
+not small U7 1
+#act
+INC N$道术切割 <$str(U7)>
+
+; #IF
+; equal U7 1
+; #ACT
+; INC N$道术切割 1
+
+; #IF
+; equal U7 2
+; #ACT
+; INC N$道术切割 3
+
+; #IF
+; equal U7 3
+; #ACT
+; INC N$道术切割 6
+
+; #IF
+; equal U7 4
+; #ACT
+; INC N$道术切割 10
+
+; #IF
+; equal U7 5
+; #ACT
+; INC N$道术切割 15
+
+; #IF
+; equal U7 6
+; #ACT
+; INC N$道术切割 21
+
+; #IF
+; equal U7 7
+; #ACT
+; INC N$道术切割 28
+
+; #IF
+; equal U7 8
+; #ACT
+; INC N$道术切割 36
+
+; #IF
+; equal U7 9
+; #ACT
+; INC N$道术切割 44
+
+; #IF
+; equal U7 10
+; #ACT
+; INC N$道术切割 54
 
 #IF
-equal U7 2
+not small U6 1
 #ACT
-INC N$道术切割 3
+INC N$魔法切割 <$str(U6)>
 
-#IF
-equal U7 3
-#ACT
-INC N$道术切割 6
+; #IF
+; equal U6 2
+; #ACT
+; INC N$魔法切割 3
 
-#IF
-equal U7 4
-#ACT
-INC N$道术切割 10
+; #IF
+; equal U6 3
+; #ACT
+; INC N$魔法切割 6
 
-#IF
-equal U7 5
-#ACT
-INC N$道术切割 15
+; #IF
+; equal U6 4
+; #ACT
+; INC N$魔法切割 10
 
-#IF
-equal U7 6
-#ACT
-INC N$道术切割 21
+; #IF
+; equal U6 5
+; #ACT
+; INC N$魔法切割 15
 
-#IF
-equal U7 7
-#ACT
-INC N$道术切割 28
+; #IF
+; equal U6 6
+; #ACT
+; INC N$魔法切割 21
 
-#IF
-equal U7 8
-#ACT
-INC N$道术切割 36
+; #IF
+; equal U6 7
+; #ACT
+; INC N$魔法切割 28
 
-#IF
-equal U7 9
-#ACT
-INC N$道术切割 44
+; #IF
+; equal U6 8
+; #ACT
+; INC N$魔法切割 36
 
-#IF
-equal U7 10
-#ACT
-INC N$道术切割 54
+; #IF
+; equal U6 9
+; #ACT
+; INC N$魔法切割 44
 
-#IF
-equal U6 1
-#ACT
-INC N$魔法切割 1
-
-#IF
-equal U6 2
-#ACT
-INC N$魔法切割 3
-
-#IF
-equal U6 3
-#ACT
-INC N$魔法切割 6
-
-#IF
-equal U6 4
-#ACT
-INC N$魔法切割 10
-
-#IF
-equal U6 5
-#ACT
-INC N$魔法切割 15
-
-#IF
-equal U6 6
-#ACT
-INC N$魔法切割 21
-
-#IF
-equal U6 7
-#ACT
-INC N$魔法切割 28
-
-#IF
-equal U6 8
-#ACT
-INC N$魔法切割 36
-
-#IF
-equal U6 9
-#ACT
-INC N$魔法切割 44
-
-#IF
-equal U6 10
-#ACT
-INC N$魔法切割 54
+; #IF
+; equal U6 10
+; #ACT
+; INC N$魔法切割 54
 
 #IF
 CHECKTITLE 开拓·初出江湖
