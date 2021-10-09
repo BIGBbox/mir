@@ -15,6 +15,17 @@ CHECKTITLE 狂暴
 #act
 inc N$回收加成 50
 
+
+; 每日充值礼包增加的回收加成
+#if
+not small U113 1
+#act
+mov N$临时回收提升 <$str(U113)>
+; 增加50爆率
+mul N$临时回收提升 50
+
+INC N$回收加成 <$str(N$临时回收提升)>
+
 #if
 #act
 goto @勾勾按钮赋值
