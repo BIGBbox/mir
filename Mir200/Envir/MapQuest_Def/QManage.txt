@@ -1,6 +1,5 @@
 ;此脚为登录脚本,人物每次登录时都会执行此脚本,所有人物初始设置都可以放在此脚本中.
 ;修改脚本内容,可用@ReloadManage命令重新加载该脚本,不须重启程序.
-include("QuestDiary/3rd/json.lua")
 [@Startup]
 #IF
 #ACT
@@ -154,7 +153,7 @@ VAR STRING HUMAN 二级密码
 #CALL [\属性重载\武器吸血.txt] @武器吸血
 #CALL [\属性重载\游戏爆率.txt] @暴率
 #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
-#CALL [\游戏登陆\登陆脚本.txt] @登陆设置
+; #CALL [\游戏登陆\登陆脚本.txt] @登陆设置
 #CALL [\技术QQ198605888\沙城捐献\沙捐变量.txt] @沙捐变量
 #CALL [\属性重载\获取属性.txt] @获取属性
 #CALL [\数据文件\二级密码\二级密码.txt] @二级密码验证
@@ -726,3 +725,9 @@ BREAK
 #act
 #CALL [\充值活动\活动.txt] @Settings_hd
 ;sendmsg 5 OnTimer8
+
+[@QM测试方法]
+#if
+#act
+SendCenterMsg 249 0 QM测试方法 1 30
+; #CALL [\游戏登录\登录脚本.txt] @每日首次登录

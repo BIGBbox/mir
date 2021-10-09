@@ -42,8 +42,9 @@ break
 #if
 #act
 set [22] 1
-MailGIVE 幽影之枪 1 1#4#6#8
-MailGIVE 紫阳百衲衣 1 1#4#6#8
+MailGIVE 震天 1 1#4#6#8
+MailGIVE 风流披风 1 1#4#6#8
+MailGIVE 开天【时装】 1 1#4#6#8
 MailGIVE 绑定元宝 1000000
 MailGIVE 灵兽精石 20 1#4#6#8
 SendMail 1 系统奖励 首充10元礼包,请及时提取!

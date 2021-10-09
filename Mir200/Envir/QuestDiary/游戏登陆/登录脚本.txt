@@ -1,0 +1,49 @@
+[@每日首次登录触发]
+
+{
+#IF
+#ACT
+sendmsg 5 每日首次登录
+
+; ;--------清空日充---------
+; mov U91 0
+; ;-------清除每日活动礼包标记-------
+; mov U111 0
+; mov U112 0
+; mov U113 0
+; mov U114 0
+; CALCVAR HUMAN 今日充值领取标记 = 0
+; SAVEVAR HUMAN 今日充值领取标记
+
+; ;-------发放会员每日礼包--------
+; #IF
+; #act
+; mov N$会员等级 <$STR(U17)>
+; goto @发放会员每日礼包
+
+
+; [@发放会员每日礼包]
+; #if
+; not small <$STR(N$会员等级)> 1
+; ;not equal <$STR(S$每日礼包串)>
+; #act
+
+; ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(N$会员等级)> 每日礼包 S$每日礼包串
+; ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(N$会员等级)> 按钮文字 S$邮件标题
+; GetValidstr <$STR(S$每日礼包串)> * S$道具名字 S$道具数量
+
+; ;GiveStateItem <$STR(S$道具名字)> <$STR(S$道具数量)> 0 1 0 0 1 1 1 1
+; ; sendmsg 5 <$STR(S$道具名字)>------<$STR(S$道具数量)>
+; MailGIVE <$STR(S$道具名字)> <$STR(S$道具数量)> 1#4#5#6#8
+; SendMail 1 系统奖励 <$STR(S$邮件标题)>每日礼包已发放,请尽快提取附件!
+; dec N$会员等级 1
+
+; #if
+; ;白金之前每日礼包累加
+; small <$STR(U17)> 5
+; not small <$STR(N$会员等级)> 1
+; #act
+; goto @发放会员每日礼包
+
+}
+

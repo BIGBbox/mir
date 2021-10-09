@@ -35,52 +35,10 @@ SendCenterMsg 249 0 ┏-----------------------------------┓ 1 30
 SendCenterMsg 249 0 ┠-----------攻城战已结束------------┨ 1 30
 SendCenterMsg 249 0 ┗-----------------------------------┛ 1 30
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[@每日重置]
+#if
+#act
+SendCenterMsg 249 0 每日重置 1 30
+GMEXECUTE StartQuest @QF测试方法
+GMEXECUTE StartQuest @QM测试方法
 

@@ -502,7 +502,12 @@ goto @载入武器库
 
 [@天下の幻]
 #IF
-CHECK [222] 0
+CHECK [222] 1
+#act
+messagebox 该装备已激活!!
+break
+
+#if
 CHECKITEM 天下の幻 1
 #ACT
 SET [222] 1
@@ -515,7 +520,12 @@ goto @载入靴子库
 
 [@天妖]
 #IF
-CHECK [223] 0
+CHECK [223] 1
+#act
+messagebox 该装备已激活!!
+break
+
+#IF
 CHECKITEM 天妖 1
 #ACT
 SET [223] 1
@@ -528,7 +538,12 @@ goto @载入靴子库
 
 [@天殇英雄履]
 #IF
-CHECK [224] 0
+CHECK [224] 1
+#act
+messagebox 该装备已激活!!
+break
+
+#IF
 CHECKITEM 天殇英雄履 1
 #ACT
 SET [224] 1
@@ -2191,8 +2206,5 @@ goto @载入军火库
 #ELSEACT
 messagebox 抱歉，你背包没有[天下神剑]点亮失败！
 goto @载入军火库
-
-
-
 
 }

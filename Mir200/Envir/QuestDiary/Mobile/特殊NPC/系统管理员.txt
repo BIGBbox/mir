@@ -170,7 +170,7 @@ OPENNPCSHOWEX 76
 
 #IF
 #ACT
-
+goto @SetDay
 ; MonGenEx 0 101 141 真·如来 1 1 0 255
 ; ChangeHumNewValue 21 90 600
 ; SENDMSG 6 增加90%暴击率 时间600秒
@@ -189,17 +189,17 @@ addskill 彻地钉
 ;DEPRIVETITLE 先锋·江湖少侠
 ;DEPRIVETITLE 无畏·武林俊杰
 ;sendmsg 5 U8:<$STR(U8)>
-#CALL [\任务系统\任务文本.txt] @接取支线任务
+; #CALL [\任务系统\任务文本.txt] @接取支线任务
 ; #CALL [\捡取鉴定\自动使用物品.txt] @自动使用物品
 ;ChangeBindMoney 元宝 200
 ; #Call [\Mobile\特殊NPC\TOP图标.txt] @导航
 ; #Call [\Mobile\特殊NPC\货币记录.txt] @货币
 ; #CALL [\基础按钮\主界面基础按钮QM.txt] @基础按钮QM
-
+; sendmsg 5 <$str([17])>....
 ;CONFERTITLE 青铜会员
 ;GiveStateItem 灵兽精石 10 0 1 0 0 1 1 1 1
 ;goto @属性刷新
-goto @发放会员每日礼包
+; goto @发放会员每日礼包
 
 [@测试close]
 #if

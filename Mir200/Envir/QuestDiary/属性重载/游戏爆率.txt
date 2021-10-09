@@ -12,6 +12,15 @@ MOV N$午夜屠狗 0
 INC N$暴率加成 <$str(u0)>
 ;军火库数量U0
 
+; 每日充值礼包增加的爆率
+#if
+not small U113 1
+#act
+mov N$临时爆率提升 <$str(U113)>
+; 增加50爆率
+mul N$临时爆率提升 50
+
+INC N$暴率加成 <$str(N$临时爆率提升)>
 
 #IF
 CHECKTITLE 三星
