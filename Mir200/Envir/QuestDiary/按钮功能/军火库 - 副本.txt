@@ -3,9 +3,9 @@
 
 #IF
 #ACT
+#CALL [\属性重载\给予称号.txt] @给予称号
 #CALL [\属性重载\游戏爆率.txt] @暴率
 #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
-#CALL [\属性重载\神力倍攻.txt] @对话框倍攻
 
 #IF
 CHECKTITLE 伟大的结晶
@@ -13,1776 +13,501 @@ CHECKTITLE 伟大的结晶
 close
 MessageBox 你已经全部点亮了！！！！！
 BREAK
-;-----------------------------1---------------------------------------
-#IF
-CHECK [101] 0
-#ACT
-MOV S$101 <imgex:0:195:196:195:58:83/@光之剑>
-#ELSEACT
-MOV S$101 <img:197:0:64:86>
 
-#IF
-CHECK [102] 0
-#ACT
-MOV S$102 <imgex:0:195:196:195:161:35/@蓝灵法杖>
-#ELSEACT
-MOV S$102 <img:197:0:168:38>
+#if
+#act
+mov S$当前界面 武器库
+goto @载入武器库
 
-#IF
-CHECK [103] 0
-#ACT
-MOV S$103 <imgex:0:195:196:195:264:-12/@邪恶之剑>
-#ELSEACT
-MOV S$103 <img:197:0:270:-10>
-
-#IF
-CHECK [104] 0
-#ACT
-MOV S$104 <imgex:0:195:196:195:367:-60/@末日之斧>
-#ELSEACT
-MOV S$104 <img:197:0:372:-58>
-
-#IF
-CHECK [105] 0
-#ACT
-MOV S$105 <imgex:0:195:196:195:471:-108/@绿玉屠龙>
-#ELSEACT
-MOV S$105 <img:197:0:477:-106>
-
-#IF
-CHECK [106] 0
-#ACT
-MOV S$106 <imgex:0:195:196:195:573:-156/@绿玉裁决>
-#ELSEACT
-MOV S$106 <img:197:0:579:-154>
-
-
-;----------------------------------2--------------------------------
-
-#IF
-CHECK [107] 0
-#ACT
-MOV S$107 <imgex:0:195:196:195:59:-104/@退魔权杖>
-#ELSEACT
-MOV S$107 <img:197:0:64:-101>
-
-#IF
-CHECK [108] 0
-#ACT
-MOV S$108 <imgex:0:195:196:195:162:-152/@寒冰剑>
-#ELSEACT
-MOV S$108 <img:197:0:168:-149>
-
-#IF
-CHECK [109] 0
-#ACT
-MOV S$109 <imgex:0:195:196:195:264:-199/@幽灵の魔>
-#ELSEACT
-MOV S$109 <img:197:0:270:-197>
-
-#IF
-CHECK [110] 0
-#ACT
-MOV S$110 <imgex:0:195:196:195:367:-247/@毒龙之身>
-#ELSEACT
-MOV S$110 <img:197:0:372:-245>
-
-#IF
-CHECK [111] 0
-#ACT
-MOV S$111 <imgex:0:195:196:195:471:-295/@幽冥の鬼爪>
-#ELSEACT
-MOV S$111 <img:197:0:477:-293>
-
-#IF
-CHECK [112] 0
-#ACT
-MOV S$112 <imgex:0:195:196:195:573:-343/@倚天剑>
-#ELSEACT
-MOV S$112 <img:197:0:579:-341>
-
-;-----------------------------3----------------------------------
-
-#IF
-CHECK [113] 0
-#ACT
-MOV S$113 <imgex:0:195:196:195:59:-291/@假·破馆珍剑>
-#ELSEACT
-MOV S$113 <img:197:0:64:-288>
-
-#IF
-CHECK [114] 0
-#ACT
-MOV S$114 <imgex:0:195:196:195:162:-339/@破碎·破馆珍剑>
-#ELSEACT
-MOV S$114 <img:197:0:168:-336>
-
-#IF
-CHECK [115] 0
-#ACT
-MOV S$115 <imgex:0:195:196:195:264:-387/@破馆珍剑>
-#ELSEACT
-MOV S$115 <img:197:0:270:-384>
-
-#IF
-CHECK [116] 0
-#ACT
-MOV S$116 <imgex:0:195:196:195:367:-435/@真·破馆珍剑>
-#ELSEACT
-MOV S$116 <img:197:0:372:-432>
-
-#IF
-CHECK [117] 0
-#ACT
-MOV S$117 <imgex:0:195:196:195:471:-483/@赤血魔剑>
-#ELSEACT
-MOV S$117 <img:197:0:477:-480>
-
-#IF
-CHECK [118] 0
-#ACT
-MOV S$118 <imgex:0:195:196:195:573:-531/@小红剑>
-#ELSEACT
-MOV S$118 <img:197:0:579:-528>
-
-;------------------------------4-------------------------------------
-
-#IF
-CHECK [119] 0
-#ACT
-MOV S$119 <imgex:0:195:196:195:59:-478/@魅影之刃>
-#ELSEACT
-MOV S$119 <img:197:0:64:-478>
-
-#IF
-CHECK [120] 0
-#ACT
-MOV S$120 <imgex:0:195:196:195:162:-526/@真·倚天剑>
-#ELSEACT
-MOV S$120 <img:197:0:168:-526>
-
-#IF
-CHECK [121] 0
-#ACT
-MOV S$121 <imgex:0:195:196:195:264:-574/@真·魅影之刃>
-#ELSEACT
-MOV S$121 <img:197:0:270:-574>
-
-#IF
-CHECK [122] 0
-#ACT
-MOV S$122 <imgex:0:195:196:195:367:-622/@轩辕剑>
-#ELSEACT
-MOV S$122 <img:197:0:372:-622>
-
-#IF
-CHECK [123] 0
-#ACT
-MOV S$123 <imgex:0:195:196:195:471:-670/@天下神剑>
-#ELSEACT
-MOV S$123 <img:197:0:477:-670>
-
-
+[@载入武器库]
 #IF
 #ACT
 #SAY
-\ \ \
 
-<> \
-<ItemShow:1182:0:72:55:1>\
-<$STR(S$101)>\
+<Img|img=public/sf1/1/01389.png|x=220|y=10|children={close_btn,click_btn1,click_btn2,click_btn3,click_btn4,click_btn5,click_btn6,click_btn7,click_btn8,click_btn9,click_btn10,click_btn11,click_btn12,click_btn13,click_btn14,click_btn15,click_btn16,click_btn17,click_btn18,click_btn19,click_btn20,click_btn21,click_btn22,click_btn23
+,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,合成描述,rightTips,item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item11,item12,item13,item14,item15,item16,item17,item18,item19,item20,item21,item22,item23}|bg=1|reset=1|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=870|y=35|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 
-<> \
-<ItemShow:1183:0:175:6:1>\
-<$STR(S$102)>\
+<ItemShow|id=item1|itemid=11182|itemcount=1|x=80 |y=99.0|bgtype=1>
+<ItemShow|id=item2|itemid=11183|itemcount=1|x=183|y=99.0|bgtype=1>
+<ItemShow|id=item3|itemid=11184|itemcount=1|x=287|y=99.0|bgtype=1>
+<ItemShow|id=item4|itemid=11185|itemcount=1|x=390|y=99.0|bgtype=1>
+<ItemShow|id=item5|itemid=11186|itemcount=1|x=493|y=99.0|bgtype=1>
+<ItemShow|id=item6|itemid=11187|itemcount=1|x=596|y=99.0|bgtype=1>
 
-<> \
-<ItemShow:1184:0:278:-41:1>\
-<$STR(S$103)>\
+<ItemShow|id=item7 |itemid=11188|itemcount=1|x=80 |y=199.0|bgtype=1>
+<ItemShow|id=item8 |itemid=11189|itemcount=1|x=183|y=199.0|bgtype=1>
+<ItemShow|id=item9 |itemid=11190|itemcount=1|x=287|y=199.0|bgtype=1>
+<ItemShow|id=item10|itemid=11191|itemcount=1|x=390|y=199.0|bgtype=1>
+<ItemShow|id=item11|itemid=11192|itemcount=1|x=493|y=199.0|bgtype=1>
+<ItemShow|id=item12|itemid=11193|itemcount=1|x=596|y=199.0|bgtype=1>
 
-<> \
-<ItemShow:1185:0:380:-90:1>\
-<$STR(S$104)>\
+<ItemShow|id=item13|itemid=11194|itemcount=1|x=80 |y=299.0|bgtype=1>
+<ItemShow|id=item14|itemid=11195|itemcount=1|x=183|y=299.0|bgtype=1>
+<ItemShow|id=item15|itemid=11196|itemcount=1|x=287|y=299.0|bgtype=1>
+<ItemShow|id=item16|itemid=11197|itemcount=1|x=390|y=299.0|bgtype=1>
+<ItemShow|id=item17|itemid=11198|itemcount=1|x=493|y=299.0|bgtype=1>
+<ItemShow|id=item18|itemid=11199|itemcount=1|x=596|y=299.0|bgtype=1>
 
-<> \
-<ItemShow:1186:0:484:-138:1>\
-<$STR(S$105)>\
+<ItemShow|id=item19|itemid=11200|itemcount=1|x=80 |y=399.0|bgtype=1>
+<ItemShow|id=item20|itemid=11201|itemcount=1|x=183|y=399.0|bgtype=1>
+<ItemShow|id=item21|itemid=11202|itemcount=1|x=287|y=399.0|bgtype=1>
+<ItemShow|id=item22|itemid=11203|itemcount=1|x=390|y=399.0|bgtype=1>
+<ItemShow|id=item23|itemid=11204|itemcount=1|x=500|y=399.0|bgtype=1>
 
-<> \
-<ItemShow:1187:0:587:-186:1>\
-<$STR(S$106)>\
+<Button|id=btn1|x=30|y=100|nimg=public/sf1/1/01390.png|pimg=public/sf1/1/01392.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入军火库>
+<Button|id=btn2|x=30|y=157|nimg=public/sf1/1/01393.png|pimg=public/sf1/1/01395.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入盔甲库>
+<Button|id=btn3|x=30|y=214|nimg=public/sf1/1/01396.png|pimg=public/sf1/1/01398.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入头盔库>
+<Button|id=btn4|x=30|y=271|nimg=public/sf1/1/01399.png|pimg=public/sf1/1/01401.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入项链库>
+<Button|id=btn5|x=30|y=328|nimg=public/sf1/1/01402.png|pimg=public/sf1/1/01404.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入手镯库>
+<Button|id=btn6|x=30|y=385|nimg=public/sf1/1/01405.png|pimg=public/sf1/1/01407.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入戒指库>
+<Button|id=btn7|x=30|y=442|nimg=public/sf1/1/01408.png|pimg=public/sf1/1/01410.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入腰带库>
+<Button|id=btn8|x=30|y=499|nimg=public/sf1/1/01411.png|pimg=public/sf1/1/01413.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入靴子库>
 
-;---------------------187-------------
+<Button|id=click_btn1|x=78 |y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@光之剑>
+<Button|id=click_btn2|x=181|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@蓝灵法杖>
+<Button|id=click_btn3|x=284|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@邪恶之剑>
+<Button|id=click_btn4|x=387|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@末日之斧>
+<Button|id=click_btn5|x=490|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@绿玉屠龙>
+<Button|id=click_btn6|x=593|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@绿玉裁决>
 
-<> \
-<ItemShow:1188:0:72:-132:1>\
-<$STR(S$107)>\
+<Button|id=click_btn7 |x=78 |y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@退魔权杖>
+<Button|id=click_btn8 |x=181|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@寒冰剑>
+<Button|id=click_btn9 |x=284|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@幽灵の魔>
+<Button|id=click_btn10|x=387|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@毒龙之身>
+<Button|id=click_btn11|x=490|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@幽冥の鬼爪>
+<Button|id=click_btn12|x=593|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@倚天剑>
 
-<> \
-<ItemShow:1189:0:175:-181:1>\
-<$STR(S$108)>\
+<Button|id=click_btn13|x=78 |y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@假·破馆珍剑>
+<Button|id=click_btn14|x=181|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@破碎·破馆珍剑>
+<Button|id=click_btn15|x=284|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@破馆珍剑>
+<Button|id=click_btn16|x=387|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@真·破馆珍剑>
+<Button|id=click_btn17|x=490|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@赤血魔剑>
+<Button|id=click_btn18|x=593|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@小红剑>
 
-<> \
-<ItemShow:1190:0:278:-230:1>\
-<$STR(S$109)>\
+<Button|id=click_btn19|x=78 |y=466|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@魅影之刃>
+<Button|id=click_btn20|x=181|y=466|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@真·倚天剑>
+<Button|id=click_btn21|x=284|y=466|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@真·魅影之刃>
+<Button|id=click_btn22|x=387|y=466|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@轩辕剑>
+<Button|id=click_btn23|x=490|y=466|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天下神剑>
 
-<> \
-<ItemShow:1191:0:380:-278:1>\
-<$STR(S$110)>\
-
-<> \
-<ItemShow:1192:0:484:-326:1>\
-<$STR(S$111)>\
-
-<> \
-<ItemShow:1193:0:587:-374:1>\
-<$STR(S$112)>\
-
-
-;---------------------187-------------
-
-<> \
-<ItemShow:1194:0:72:-321:1>\
-<$STR(S$113)>\
-
-<> \
-<ItemShow:1195:0:175:-369:1>\
-<$STR(S$114)>\
-
-<> \
-<ItemShow:1196:0:278:-417:1>\
-<$STR(S$115)>\
-
-<> \
-<ItemShow:1197:0:380:-465:1>\
-<$STR(S$116)>\
-
-<> \
-<ItemShow:1198:0:484:-513:1>\
-<$STR(S$117)>\
-
-<> \
-<ItemShow:1199:0:587:-561:1>\
-<$STR(S$118)>\
-
-;---------------------187-------------
-
-<> \
-<ItemShow:1200:0:72:-508:1>\
-<$STR(S$119)>\
-
-<> \
-<ItemShow:1201:0:175:-556:1>\
-<$STR(S$120)>\
-
-<> \
-<ItemShow:1202:0:278:-604:1>\
-<$STR(S$121)>\
-
-<> \
-<ItemShow:1203:0:380:-652:1>\
-<$STR(S$122)>\
-
-<> \
-<ItemShow:1204:0:484:-700:1>\
-<$STR(S$123)>\
-
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-
-<IMGEX:0:500:500:499:8:-1420/@载入军火库>\
-<IMGEX:0:501:502:501:8:-1384/@载入盔甲库>\
-<IMGEX:0:503:504:503:8:-1348/@载入头盔库>\
-<IMGEX:0:505:506:505:8:-1313/@载入项链库>\
-<IMGEX:0:507:508:507:8:-1278/@载入手镯库>\
-<IMGEX:0:509:510:509:8:-1243/@载入戒指库>\
-<IMGEX:0:511:512:511:8:-1208/@载入腰带库>\
-<IMGEX:0:513:514:513:8:-1173/@载入靴子库>\
-<img:515:0:42:-1573>\
-<提示：每激活一个物品/FCOLOR=87><杀怪爆率+1%/FCOLOR=151><对怪伤害+1%/FCOLOR=222><全部集齐可获得强力属性特殊称号/FCOLOR=87>
+<Button|id=rightTips|x=61|y=43|nimg=public/sf1/1/00515.png|pimg=public/sf1/1/00515.png|tips={提示：每激活一个物品/FCOLOR=249}^{杀怪爆率+1%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=222}^{全部集齐可获得强力属性特殊称号/FCOLOR=87}^|tipsx=10|tipsy=100|size=18|color=249|link=>
 
 ;-------------------------------盔甲库----------------------------------
 [@载入盔甲库]
-#IF
-CHECK [124] 0
-#ACT
-MOV S$124 <imgex:0:195:196:195:58:83/@骑士战袍>
-#ELSEACT
-MOV S$124 <img:197:0:64:86>
-
-#IF
-CHECK [125] 0
-#ACT
-MOV S$125 <imgex:0:195:196:195:161:35/@猩猩战甲>
-#ELSEACT
-MOV S$125 <img:197:0:168:38>
-
-#IF
-CHECK [126] 0
-#ACT
-MOV S$126 <imgex:0:195:196:195:264:-12/@幽冥の龍>
-#ELSEACT
-MOV S$126 <img:197:0:270:-10>
-
-#IF
-CHECK [127] 0
-#ACT
-MOV S$127 <imgex:0:195:196:195:367:-60/@钢铁之铠>
-#ELSEACT
-MOV S$127 <img:197:0:372:-58>
-
-#IF
-CHECK [128] 0
-#ACT
-MOV S$128 <imgex:0:195:196:195:471:-108/@天地の防>
-#ELSEACT
-MOV S$128 <img:197:0:477:-106>
-
-#IF
-CHECK [129] 0
-#ACT
-MOV S$129 <imgex:0:195:196:195:573:-156/@天使龙翼>
-#ELSEACT
-MOV S$129 <img:197:0:579:-154>
-
-
-;----------------------------------2--------------------------------
-
-#IF
-CHECK [130] 0
-#ACT
-MOV S$130 <imgex:0:195:196:195:59:-104/@仙の摩罗神甲>
-#ELSEACT
-MOV S$130 <img:197:0:64:-101>
-
-#IF
-CHECK [131] 0
-#ACT
-MOV S$131 <imgex:0:195:196:195:162:-152/@仙の寒冰守护>
-#ELSEACT
-MOV S$131 <img:197:0:168:-149>
-
-#IF
-CHECK [132] 0
-#ACT
-MOV S$132 <imgex:0:195:196:195:264:-199/@傳説神甲>
-#ELSEACT
-MOV S$132 <img:197:0:270:-197>
-
-#IF
-CHECK [133] 0
-#ACT
-MOV S$133 <imgex:0:195:196:195:367:-247/@绝对防御>
-#ELSEACT
-MOV S$133 <img:197:0:372:-245>
-
-#IF
-CHECK [134] 0
-#ACT
-MOV S$134 <imgex:0:195:196:195:471:-295/@堕落·诅咒之翼>
-#ELSEACT
-MOV S$134 <img:197:0:477:-293>
-
-#IF
-CHECK [135] 0
-#ACT
-MOV S$135 <imgex:0:195:196:195:573:-343/@龍甲>
-#ELSEACT
-MOV S$135 <img:197:0:579:-341>
-
-;-----------------------------3----------------------------------
-
-#IF
-CHECK [136] 0
-#ACT
-MOV S$136 <imgex:0:195:196:195:59:-291/@血腥の战甲>
-#ELSEACT
-MOV S$136 <img:197:0:64:-288>
-
-#IF
-CHECK [137] 0
-#ACT
-MOV S$137 <imgex:0:195:196:195:162:-339/@魅影神甲>
-#ELSEACT
-MOV S$137 <img:197:0:168:-336>
-
-#IF
-CHECK [138] 0
-#ACT
-MOV S$138 <imgex:0:195:196:195:264:-387/@真·魅影神甲>
-#ELSEACT
-MOV S$138 <img:197:0:270:-384>
-
-#IF
-CHECK [139] 0
-#ACT
-MOV S$139 <imgex:0:195:196:195:367:-435/@倚天战甲>
-#ELSEACT
-MOV S$139 <img:197:0:372:-432>
-
-#IF
-CHECK [140] 0
-#ACT
-MOV S$140 <imgex:0:195:196:195:471:-483/@真·倚天战甲>
-#ELSEACT
-MOV S$140 <img:197:0:477:-480>
-
-#IF
-CHECK [141] 0
-#ACT
-MOV S$141 <imgex:0:195:196:195:573:-531/@天下神铠>
-#ELSEACT
-MOV S$141 <img:197:0:579:-528>
-
 
 #IF
 #SAY
-\ \ \
-<> \
-<ItemShow:1206:0:72:55:1>\
-<$STR(S$124)>\
 
-<> \
-<ItemShow:1207:0:175:6:1>\
-<$STR(S$125)>\
+<Img|img=public/sf1/1/01389.png|x=220|y=10|children={close_btn,click_btn1,click_btn2,click_btn3,click_btn4,click_btn5,click_btn6,click_btn7,click_btn8,click_btn9,click_btn10,click_btn11,click_btn12,click_btn13,click_btn14,click_btn15,click_btn16,click_btn17,click_btn18,click_btn19,click_btn20,click_btn21,click_btn22,click_btn23
+,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,合成描述,rightTips,item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item11,item12,item13,item14,item15,item16,item17,item18,item19,item20,item21,item22,item23}|bg=1|reset=0|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=870|y=35|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 
-<> \
-<ItemShow:1208:0:278:-41:1>\
-<$STR(S$126)>\
+<ItemShow|id=item1|itemid=11206|itemcount=1|x=80 |y=99.0|bgtype=1>
+<ItemShow|id=item2|itemid=11207|itemcount=1|x=183|y=99.0|bgtype=1>
+<ItemShow|id=item3|itemid=11208|itemcount=1|x=287|y=99.0|bgtype=1>
+<ItemShow|id=item4|itemid=11209|itemcount=1|x=390|y=99.0|bgtype=1>
+<ItemShow|id=item5|itemid=11210|itemcount=1|x=493|y=99.0|bgtype=1>
+<ItemShow|id=item6|itemid=11211|itemcount=1|x=596|y=99.0|bgtype=1>
 
-<> \
-<ItemShow:1209:0:380:-90:1>\
-<$STR(S$127)>\
+<ItemShow|id=item7 |itemid=11212|itemcount=1|x=80 |y=199.0|bgtype=1>
+<ItemShow|id=item8 |itemid=11213|itemcount=1|x=183|y=199.0|bgtype=1>
+<ItemShow|id=item9 |itemid=11214|itemcount=1|x=287|y=199.0|bgtype=1>
+<ItemShow|id=item10|itemid=11215|itemcount=1|x=390|y=199.0|bgtype=1>
+<ItemShow|id=item11|itemid=11216|itemcount=1|x=493|y=199.0|bgtype=1>
+<ItemShow|id=item12|itemid=11217|itemcount=1|x=596|y=199.0|bgtype=1>
 
-<> \
-<ItemShow:1210:0:484:-138:1>\
-<$STR(S$128)>\
+<ItemShow|id=item13|itemid=11218|itemcount=1|x=80 |y=299.0|bgtype=1>
+<ItemShow|id=item14|itemid=11219|itemcount=1|x=183|y=299.0|bgtype=1>
+<ItemShow|id=item15|itemid=11220|itemcount=1|x=287|y=299.0|bgtype=1>
+<ItemShow|id=item16|itemid=11221|itemcount=1|x=390|y=299.0|bgtype=1>
+<ItemShow|id=item17|itemid=11222|itemcount=1|x=493|y=299.0|bgtype=1>
+<ItemShow|id=item18|itemid=11223|itemcount=1|x=596|y=299.0|bgtype=1>
 
-<> \
-<ItemShow:1211:0:587:-186:1>\
-<$STR(S$129)>\
+<Button|id=btn1|x=30|y=100|nimg=public/sf1/1/01390.png|pimg=public/sf1/1/01392.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入军火库>
+<Button|id=btn2|x=30|y=157|nimg=public/sf1/1/01393.png|pimg=public/sf1/1/01395.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入盔甲库>
+<Button|id=btn3|x=30|y=214|nimg=public/sf1/1/01396.png|pimg=public/sf1/1/01398.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入头盔库>
+<Button|id=btn4|x=30|y=271|nimg=public/sf1/1/01399.png|pimg=public/sf1/1/01401.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入项链库>
+<Button|id=btn5|x=30|y=328|nimg=public/sf1/1/01402.png|pimg=public/sf1/1/01404.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入手镯库>
+<Button|id=btn6|x=30|y=385|nimg=public/sf1/1/01405.png|pimg=public/sf1/1/01407.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入戒指库>
+<Button|id=btn7|x=30|y=442|nimg=public/sf1/1/01408.png|pimg=public/sf1/1/01410.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入腰带库>
+<Button|id=btn8|x=30|y=499|nimg=public/sf1/1/01411.png|pimg=public/sf1/1/01413.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入靴子库>
 
-;---------------------187-------------
+<Button|id=click_btn1|x=78 |y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@骑士战袍>
+<Button|id=click_btn2|x=181|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@猩猩战甲>
+<Button|id=click_btn3|x=284|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@幽冥の龍>
+<Button|id=click_btn4|x=387|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@钢铁之铠>
+<Button|id=click_btn5|x=490|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天地の防>
+<Button|id=click_btn6|x=593|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天使龙翼>
 
-<> \
-<ItemShow:1212:0:72:-132:1>\
-<$STR(S$130)>\
+<Button|id=click_btn7 |x=78 |y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@仙の摩罗神甲>
+<Button|id=click_btn8 |x=181|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@仙の寒冰守护>
+<Button|id=click_btn9 |x=284|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@傳説神甲>
+<Button|id=click_btn10|x=387|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@绝对防御>
+<Button|id=click_btn11|x=490|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@堕落·诅咒之翼>
+<Button|id=click_btn12|x=593|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@龍甲>
 
-<> \
-<ItemShow:1213:0:175:-181:1>\
-<$STR(S$131)>\
+<Button|id=click_btn13|x=78 |y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@血腥の战甲>
+<Button|id=click_btn14|x=181|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@魅影神甲>
+<Button|id=click_btn15|x=284|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@真·魅影神甲>
+<Button|id=click_btn16|x=387|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@倚天战甲>
+<Button|id=click_btn17|x=490|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@真·倚天战甲>
+<Button|id=click_btn18|x=593|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天下神铠>
 
-<> \
-<ItemShow:1214:0:278:-230:1>\
-<$STR(S$132)>\
+<Button|id=rightTips|x=61|y=43|nimg=public/sf1/1/00516.png|pimg=public/sf1/1/00516.png|tips={提示：每激活一个物品/FCOLOR=249}^{杀怪爆率+1%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=222}^{全部集齐可获得强力属性特殊称号/FCOLOR=87}^|tipsx=10|tipsy=100|size=18|color=249|link=>
 
-<> \
-<ItemShow:1215:0:380:-278:1>\
-<$STR(S$133)>\
-
-<> \
-<ItemShow:1216:0:484:-326:1>\
-<$STR(S$134)>\
-
-<> \
-<ItemShow:1217:0:587:-374:1>\
-<$STR(S$135)>\
-
-
-;---------------------187-------------
-
-<> \
-<ItemShow:1218:0:72:-321:1>\
-<$STR(S$136)>\
-
-<> \
-<ItemShow:1219:0:175:-369:1>\
-<$STR(S$137)>\
-
-<> \
-<ItemShow:1220:0:278:-417:1>\
-<$STR(S$138)>\
-
-<> \
-<ItemShow:1221:0:380:-465:1>\
-<$STR(S$139)>\
-
-<> \
-<ItemShow:1222:0:484:-513:1>\
-<$STR(S$140)>\
-
-<> \
-<ItemShow:1223:0:587:-561:1>\
-<$STR(S$141)>\
-
-
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-\ \ \ \ \ \ \ \ \ \ \ \
-
-
-<IMGEX:0:499:500:499:8:-1420/@载入军火库>\
-<IMGEX:0:502:502:501:8:-1384/@载入盔甲库>\
-<IMGEX:0:503:504:503:8:-1348/@载入头盔库>\
-<IMGEX:0:505:506:505:8:-1313/@载入项链库>\
-<IMGEX:0:507:508:507:8:-1278/@载入手镯库>\
-<IMGEX:0:509:510:509:8:-1243/@载入戒指库>\
-<IMGEX:0:511:512:511:8:-1208/@载入腰带库>\
-<IMGEX:0:513:514:513:8:-1173/@载入靴子库>\
-<img:516:0:42:-1573>\
-<提示：每激活一个物品/FCOLOR=87><杀怪爆率+1%/FCOLOR=151><对怪伤害+1%/FCOLOR=222><全部集齐可获得强力属性特殊称号/FCOLOR=87>
 [@载入头盔库]
-#IF
-CHECK [158] 0
-#ACT
-MOV S$158 <imgex:0:195:196:195:58:83/@战神の帝>
-#ELSEACT
-MOV S$158 <img:197:0:64:86>
 
-#IF
-CHECK [159] 0
-#ACT
-MOV S$159 <imgex:0:195:196:195:161:35/@远古恶梦>
-#ELSEACT
-MOV S$159 <img:197:0:168:38>
+<Img|img=public/sf1/1/01389.png|x=220|y=10|children={close_btn,click_btn1,click_btn2,click_btn3,click_btn4,click_btn5,click_btn6,click_btn7,click_btn8,click_btn9,click_btn10,click_btn11,click_btn12,click_btn13,click_btn14,click_btn15,click_btn16,click_btn17,click_btn18,click_btn19,click_btn20,click_btn21,click_btn22,click_btn23
+,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,合成描述,rightTips,item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item11,item12,item13,item14,item15,item16,item17,item18,item19,item20,item21,item22,item23}|bg=1|reset=0|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=870|y=35|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 
-#IF
-CHECK [160] 0
-#ACT
-MOV S$160 <imgex:0:195:196:195:264:-12/@神龙之威>
-#ELSEACT
-MOV S$160 <img:197:0:270:-10>
+<ItemShow|id=item1|itemid=11242|itemcount=1|x=80 |y=99.0|bgtype=1>
+<ItemShow|id=item2|itemid=11243|itemcount=1|x=183|y=99.0|bgtype=1>
+<ItemShow|id=item3|itemid=11244|itemcount=1|x=287|y=99.0|bgtype=1>
+<ItemShow|id=item4|itemid=11245|itemcount=1|x=390|y=99.0|bgtype=1>
+<ItemShow|id=item5|itemid=11246|itemcount=1|x=493|y=99.0|bgtype=1>
+<ItemShow|id=item6|itemid=11247|itemcount=1|x=596|y=99.0|bgtype=1>
 
-#IF
-CHECK [161] 0
-#ACT
-MOV S$161 <imgex:0:195:196:195:367:-60/@魔之天灾>
-#ELSEACT
-MOV S$161 <img:197:0:372:-58>
+<ItemShow|id=item7 |itemid=11248|itemcount=1|x=80 |y=199.0|bgtype=1>
+<ItemShow|id=item8 |itemid=11249|itemcount=1|x=183|y=199.0|bgtype=1>
+<ItemShow|id=item9 |itemid=11250|itemcount=1|x=287|y=199.0|bgtype=1>
+<ItemShow|id=item10|itemid=11251|itemcount=1|x=390|y=199.0|bgtype=1>
+<ItemShow|id=item11|itemid=11252|itemcount=1|x=493|y=199.0|bgtype=1>
+<ItemShow|id=item12|itemid=11253|itemcount=1|x=596|y=199.0|bgtype=1>
 
-#IF
-CHECK [162] 0
-#ACT
-MOV S$162 <imgex:0:195:196:195:471:-108/@逆·鳞>
-#ELSEACT
-MOV S$162 <img:197:0:477:-106>
+<ItemShow|id=item13|itemid=11254|itemcount=1|x=80 |y=299.0|bgtype=1>
+<ItemShow|id=item14|itemid=11255|itemcount=1|x=183|y=299.0|bgtype=1>
+<ItemShow|id=item15|itemid=11256|itemcount=1|x=287|y=299.0|bgtype=1>
+<ItemShow|id=item16|itemid=11257|itemcount=1|x=390|y=299.0|bgtype=1>
 
-#IF
-CHECK [163] 0
-#ACT
-MOV S$163 <imgex:0:195:196:195:573:-156/@九州·苍天>
-#ELSEACT
-MOV S$163 <img:197:0:579:-154>
+<Button|id=btn1|x=30|y=100|nimg=public/sf1/1/01390.png|pimg=public/sf1/1/01392.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入军火库>
+<Button|id=btn2|x=30|y=157|nimg=public/sf1/1/01393.png|pimg=public/sf1/1/01395.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入盔甲库>
+<Button|id=btn3|x=30|y=214|nimg=public/sf1/1/01396.png|pimg=public/sf1/1/01398.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入头盔库>
+<Button|id=btn4|x=30|y=271|nimg=public/sf1/1/01399.png|pimg=public/sf1/1/01401.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入项链库>
+<Button|id=btn5|x=30|y=328|nimg=public/sf1/1/01402.png|pimg=public/sf1/1/01404.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入手镯库>
+<Button|id=btn6|x=30|y=385|nimg=public/sf1/1/01405.png|pimg=public/sf1/1/01407.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入戒指库>
+<Button|id=btn7|x=30|y=442|nimg=public/sf1/1/01408.png|pimg=public/sf1/1/01410.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入腰带库>
+<Button|id=btn8|x=30|y=499|nimg=public/sf1/1/01411.png|pimg=public/sf1/1/01413.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入靴子库>
 
+<Button|id=click_btn1|x=78 |y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@战神の帝>
+<Button|id=click_btn2|x=181|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@远古恶梦>
+<Button|id=click_btn3|x=284|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@神龙之威>
+<Button|id=click_btn4|x=387|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@魔之天灾>
+<Button|id=click_btn5|x=490|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@逆·鳞>
+<Button|id=click_btn6|x=593|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@九州·苍天>
 
-;----------------------------------2--------------------------------
+<Button|id=click_btn7 |x=78 |y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@盘龙魂>
+<Button|id=click_btn8 |x=181|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@星盔>
+<Button|id=click_btn9 |x=284|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@乾坤>
+<Button|id=click_btn10|x=387|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@冰魄之盔>
+<Button|id=click_btn11|x=490|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@冥龙·血盔>
+<Button|id=click_btn12|x=593|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@月神之裁>
 
-#IF
-CHECK [164] 0
-#ACT
-MOV S$164 <imgex:0:195:196:195:59:-104/@盘龙魂>
-#ELSEACT
-MOV S$164 <img:197:0:64:-101>
+<Button|id=click_btn13|x=78 |y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@虚无·雷动>
+<Button|id=click_btn14|x=181|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@红莲之炎>
+<Button|id=click_btn15|x=284|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@提伯斯之怒>
+<Button|id=click_btn16|x=387|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天下神盔>
 
-#IF
-CHECK [165] 0
-#ACT
-MOV S$165 <imgex:0:195:196:195:162:-152/@星盔>
-#ELSEACT
-MOV S$165 <img:197:0:168:-149>
-
-#IF
-CHECK [166] 0
-#ACT
-MOV S$166 <imgex:0:195:196:195:264:-199/@乾坤>
-#ELSEACT
-MOV S$166 <img:197:0:270:-197>
-
-#IF
-CHECK [167] 0
-#ACT
-MOV S$167 <imgex:0:195:196:195:367:-247/@冰魄之盔>
-#ELSEACT
-MOV S$167 <img:197:0:372:-245>
-
-#IF
-CHECK [168] 0
-#ACT
-MOV S$168 <imgex:0:195:196:195:471:-295/@冥龙·血盔>
-#ELSEACT
-MOV S$168 <img:197:0:477:-293>
-
-#IF
-CHECK [169] 0
-#ACT
-MOV S$169 <imgex:0:195:196:195:573:-343/@月神之裁>
-#ELSEACT
-MOV S$169 <img:197:0:579:-341>
-
-;-----------------------------3----------------------------------
-
-#IF
-CHECK [170] 0
-#ACT
-MOV S$170 <imgex:0:195:196:195:59:-291/@虚无·雷动>
-#ELSEACT
-MOV S$170 <img:197:0:64:-288>
-
-#IF
-CHECK [171] 0
-#ACT
-MOV S$171 <imgex:0:195:196:195:162:-339/@红莲之炎>
-#ELSEACT
-MOV S$171 <img:197:0:168:-336>
-
-#IF
-CHECK [172] 0
-#ACT
-MOV S$172 <imgex:0:195:196:195:264:-387/@提伯斯之怒>
-#ELSEACT
-MOV S$172 <img:197:0:270:-384>
-
-#IF
-CHECK [173] 0
-#ACT
-MOV S$173 <imgex:0:195:196:195:367:-435/@天下神盔>
-#ELSEACT
-MOV S$173 <img:197:0:372:-432>
-
-
-#IF
-#SAY
-\ \ \
-<> \
-<ItemShow:1242:0:72:55:1>\
-<$STR(S$158)>\
-
-<> \
-<ItemShow:1243:0:175:6:1>\
-<$STR(S$159)>\
-
-<> \
-<ItemShow:1244:0:278:-41:1>\
-<$STR(S$160)>\
-
-<> \
-<ItemShow:1245:0:380:-90:1>\
-<$STR(S$161)>\
-
-<> \
-<ItemShow:1246:0:484:-138:1>\
-<$STR(S$162)>\
-
-<> \
-<ItemShow:1247:0:587:-186:1>\
-<$STR(S$163)>\
-
-;---------------------187-------------
-
-<> \
-<ItemShow:1248:0:72:-132:1>\
-<$STR(S$164)>\
-
-<> \
-<ItemShow:1249:0:175:-181:1>\
-<$STR(S$165)>\
-
-<> \
-<ItemShow:1250:0:278:-230:1>\
-<$STR(S$166)>\
-
-<> \
-<ItemShow:1251:0:380:-278:1>\
-<$STR(S$167)>\
-
-<> \
-<ItemShow:1252:0:484:-326:1>\
-<$STR(S$168)>\
-
-<> \
-<ItemShow:1253:0:587:-374:1>\
-<$STR(S$169)>\
-
-
-;---------------------187-------------
-
-<> \
-<ItemShow:1254:0:72:-321:1>\
-<$STR(S$170)>\
-
-<> \
-<ItemShow:1255:0:175:-369:1>\
-<$STR(S$171)>\
-
-<> \
-<ItemShow:1256:0:278:-417:1>\
-<$STR(S$172)>\
-
-<> \
-<ItemShow:1257:0:380:-465:1>\
-<$STR(S$173)>\
-
-
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-
-
-<IMGEX:0:499:500:499:8:-1420/@载入军火库>\
-<IMGEX:0:501:502:501:8:-1384/@载入盔甲库>\
-<IMGEX:0:504:504:503:8:-1348/@载入头盔库>\
-<IMGEX:0:505:506:505:8:-1313/@载入项链库>\
-<IMGEX:0:507:508:507:8:-1278/@载入手镯库>\
-<IMGEX:0:509:510:509:8:-1243/@载入戒指库>\
-<IMGEX:0:511:512:511:8:-1208/@载入腰带库>\
-<IMGEX:0:513:514:513:8:-1173/@载入靴子库>\
-<img:517:0:42:-1573>\
-<提示：每激活一个物品/FCOLOR=87><杀怪爆率+1%/FCOLOR=151><对怪伤害+1%/FCOLOR=222><全部集齐可获得强力属性特殊称号/FCOLOR=87>
+<Button|id=rightTips|x=61|y=43|nimg=public/sf1/1/00517.png|pimg=public/sf1/1/00517.png|tips={提示：每激活一个物品/FCOLOR=249}^{杀怪爆率+1%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=222}^{全部集齐可获得强力属性特殊称号/FCOLOR=87}^|tipsx=10|tipsy=100|size=18|color=249|link=>
 
 ;-------------------------------项链库----------------------------------
 [@载入项链库]
-#IF
-CHECK [142] 0
-#ACT
-MOV S$142 <imgex:0:195:196:195:58:83/@精灵の翔>
-#ELSEACT
-MOV S$142 <img:197:0:64:86>
 
-#IF
-CHECK [143] 0
-#ACT
-MOV S$143 <imgex:0:195:196:195:161:35/@神之项链>
-#ELSEACT
-MOV S$143 <img:197:0:168:38>
+<Img|img=public/sf1/1/01389.png|x=220|y=10|children={close_btn,click_btn1,click_btn2,click_btn3,click_btn4,click_btn5,click_btn6,click_btn7,click_btn8,click_btn9,click_btn10,click_btn11,click_btn12,click_btn13,click_btn14,click_btn15,click_btn16,click_btn17,click_btn18,click_btn19,click_btn20,click_btn21,click_btn22,click_btn23
+,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,合成描述,rightTips,item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item11,item12,item13,item14,item15,item16,item17,item18,item19,item20,item21,item22,item23}|bg=1|reset=0|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=870|y=35|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 
-#IF
-CHECK [144] 0
-#ACT
-MOV S$144 <imgex:0:195:196:195:264:-12/@苍龙霸泣>
-#ELSEACT
-MOV S$144 <img:197:0:270:-10>
+<ItemShow|id=item1|itemid=11225|itemcount=1|x=80 |y=99.0|bgtype=1>
+<ItemShow|id=item2|itemid=11226|itemcount=1|x=183|y=99.0|bgtype=1>
+<ItemShow|id=item3|itemid=11227|itemcount=1|x=287|y=99.0|bgtype=1>
+<ItemShow|id=item4|itemid=11228|itemcount=1|x=390|y=99.0|bgtype=1>
+<ItemShow|id=item5|itemid=11229|itemcount=1|x=493|y=99.0|bgtype=1>
+<ItemShow|id=item6|itemid=11230|itemcount=1|x=596|y=99.0|bgtype=1>
 
-#IF
-CHECK [145] 0
-#ACT
-MOV S$145 <imgex:0:195:196:195:367:-60/@开天の链>
-#ELSEACT
-MOV S$145 <img:197:0:372:-58>
+<ItemShow|id=item7 |itemid=11231|itemcount=1|x=80 |y=199.0|bgtype=1>
+<ItemShow|id=item8 |itemid=11232|itemcount=1|x=183|y=199.0|bgtype=1>
+<ItemShow|id=item9 |itemid=11233|itemcount=1|x=287|y=199.0|bgtype=1>
+<ItemShow|id=item10|itemid=11234|itemcount=1|x=390|y=199.0|bgtype=1>
+<ItemShow|id=item11|itemid=11235|itemcount=1|x=493|y=199.0|bgtype=1>
+<ItemShow|id=item12|itemid=11236|itemcount=1|x=596|y=199.0|bgtype=1>
 
-#IF
-CHECK [146] 0
-#ACT
-MOV S$146 <imgex:0:195:196:195:471:-108/@强者之魂>
-#ELSEACT
-MOV S$146 <img:197:0:477:-106>
+<ItemShow|id=item13|itemid=11237|itemcount=1|x=80 |y=299.0|bgtype=1>
+<ItemShow|id=item14|itemid=11238|itemcount=1|x=183|y=299.0|bgtype=1>
+<ItemShow|id=item15|itemid=11239|itemcount=1|x=287|y=299.0|bgtype=1>
+<ItemShow|id=item16|itemid=11240|itemcount=1|x=390|y=299.0|bgtype=1>
 
-#IF
-CHECK [147] 0
-#ACT
-MOV S$147 <imgex:0:195:196:195:573:-156/@通天·王链>
-#ELSEACT
-MOV S$147 <img:197:0:579:-154>
+<Button|id=btn1|x=30|y=100|nimg=public/sf1/1/01390.png|pimg=public/sf1/1/01392.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入军火库>
+<Button|id=btn2|x=30|y=157|nimg=public/sf1/1/01393.png|pimg=public/sf1/1/01395.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入盔甲库>
+<Button|id=btn3|x=30|y=214|nimg=public/sf1/1/01396.png|pimg=public/sf1/1/01398.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入头盔库>
+<Button|id=btn4|x=30|y=271|nimg=public/sf1/1/01399.png|pimg=public/sf1/1/01401.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入项链库>
+<Button|id=btn5|x=30|y=328|nimg=public/sf1/1/01402.png|pimg=public/sf1/1/01404.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入手镯库>
+<Button|id=btn6|x=30|y=385|nimg=public/sf1/1/01405.png|pimg=public/sf1/1/01407.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入戒指库>
+<Button|id=btn7|x=30|y=442|nimg=public/sf1/1/01408.png|pimg=public/sf1/1/01410.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入腰带库>
+<Button|id=btn8|x=30|y=499|nimg=public/sf1/1/01411.png|pimg=public/sf1/1/01413.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入靴子库>
 
+<Button|id=click_btn1|x=78 |y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@精灵の翔>
+<Button|id=click_btn2|x=181|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@神之项链>
+<Button|id=click_btn3|x=284|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@苍龙霸泣>
+<Button|id=click_btn4|x=387|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@开天の链>
+<Button|id=click_btn5|x=490|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@强者之魂>
+<Button|id=click_btn6|x=593|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@通天·王链>
 
-;----------------------------------2--------------------------------
+<Button|id=click_btn7 |x=78 |y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天地造化链>
+<Button|id=click_btn8 |x=181|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@幸运之链>
+<Button|id=click_btn9 |x=284|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@神力之链>
+<Button|id=click_btn10|x=387|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@致命之链>
+<Button|id=click_btn11|x=490|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@炼狱裁断>
+<Button|id=click_btn12|x=593|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@血之链>
 
-#IF
-CHECK [148] 0
-#ACT
-MOV S$148 <imgex:0:195:196:195:59:-104/@天地造化链>
-#ELSEACT
-MOV S$148 <img:197:0:64:-101>
+<Button|id=click_btn13|x=78 |y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@死亡审判>
+<Button|id=click_btn14|x=181|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@八卦连环>
+<Button|id=click_btn15|x=284|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@灭世之魔眼>
+<Button|id=click_btn16|x=387|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天下神链>
 
-#IF
-CHECK [149] 0
-#ACT
-MOV S$149 <imgex:0:195:196:195:162:-152/@幸运之链>
-#ELSEACT
-MOV S$149 <img:197:0:168:-149>
-
-#IF
-CHECK [150] 0
-#ACT
-MOV S$150 <imgex:0:195:196:195:264:-199/@神力之链>
-#ELSEACT
-MOV S$150 <img:197:0:270:-197>
-
-#IF
-CHECK [151] 0
-#ACT
-MOV S$151 <imgex:0:195:196:195:367:-247/@致命之链>
-#ELSEACT
-MOV S$151 <img:197:0:372:-245>
-
-#IF
-CHECK [152] 0
-#ACT
-MOV S$152 <imgex:0:195:196:195:471:-295/@炼狱裁断>
-#ELSEACT
-MOV S$152 <img:197:0:477:-293>
-
-#IF
-CHECK [153] 0
-#ACT
-MOV S$153 <imgex:0:195:196:195:573:-343/@血之链>
-#ELSEACT
-MOV S$153 <img:197:0:579:-341>
-
-;-----------------------------3----------------------------------
-
-#IF
-CHECK [154] 0
-#ACT
-MOV S$154 <imgex:0:195:196:195:59:-291/@死亡审判>
-#ELSEACT
-MOV S$154 <img:197:0:64:-288>
-
-#IF
-CHECK [155] 0
-#ACT
-MOV S$155 <imgex:0:195:196:195:162:-339/@八卦连环>
-#ELSEACT
-MOV S$155 <img:197:0:168:-336>
-
-#IF
-CHECK [156] 0
-#ACT
-MOV S$156 <imgex:0:195:196:195:264:-387/@灭世之魔眼>
-#ELSEACT
-MOV S$156 <img:197:0:270:-384>
-
-#IF
-CHECK [157] 0
-#ACT
-MOV S$157 <imgex:0:195:196:195:367:-435/@天下神链>
-#ELSEACT
-MOV S$157 <img:197:0:372:-432>
-
-
-#IF
-#SAY
-\ \ \
-<> \
-<ItemShow:1225:0:72:55:1>\
-<$STR(S$142)>\
-
-<> \
-<ItemShow:1226:0:175:6:1>\
-<$STR(S$143)>\
-
-<> \
-<ItemShow:1227:0:278:-41:1>\
-<$STR(S$144)>\
-
-<> \
-<ItemShow:1228:0:380:-90:1>\
-<$STR(S$145)>\
-
-<> \
-<ItemShow:1229:0:484:-138:1>\
-<$STR(S$146)>\
-
-<> \
-<ItemShow:1230:0:587:-186:1>\
-<$STR(S$147)>\
-
-;---------------------187-------------
-
-<> \
-<ItemShow:1231:0:72:-132:1>\
-<$STR(S$148)>\
-
-<> \
-<ItemShow:1232:0:175:-181:1>\
-<$STR(S$149)>\
-
-<> \
-<ItemShow:1233:0:278:-230:1>\
-<$STR(S$150)>\
-
-<> \
-<ItemShow:1234:0:380:-278:1>\
-<$STR(S$151)>\
-
-<> \
-<ItemShow:1235:0:484:-326:1>\
-<$STR(S$152)>\
-
-<> \
-<ItemShow:1236:0:587:-374:1>\
-<$STR(S$153)>\
-
-
-;---------------------187-------------
-
-<> \
-<ItemShow:1237:0:72:-321:1>\
-<$STR(S$154)>\
-
-<> \
-<ItemShow:1238:0:175:-369:1>\
-<$STR(S$155)>\
-
-<> \
-<ItemShow:1239:0:278:-417:1>\
-<$STR(S$156)>\
-
-<> \
-<ItemShow:1240:0:380:-465:1>\
-<$STR(S$157)>\
-
-
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-
-
-<IMGEX:0:499:500:499:8:-1420/@载入军火库>\
-<IMGEX:0:501:502:501:8:-1384/@载入盔甲库>\
-<IMGEX:0:503:504:503:8:-1348/@载入头盔库>\
-<IMGEX:0:506:506:505:8:-1313/@载入项链库>\
-<IMGEX:0:507:508:507:8:-1278/@载入手镯库>\
-<IMGEX:0:509:510:509:8:-1243/@载入戒指库>\
-<IMGEX:0:511:512:511:8:-1208/@载入腰带库>\
-<IMGEX:0:513:514:513:8:-1173/@载入靴子库>\
-<img:518:0:42:-1573>\
-<提示：每激活一个物品/FCOLOR=87><杀怪爆率+1%/FCOLOR=151><对怪伤害+1%/FCOLOR=222><全部集齐可获得强力属性特殊称号/FCOLOR=87>
+<Button|id=rightTips|x=61|y=43|nimg=public/sf1/1/00518.png|pimg=public/sf1/1/00518.png|tips={提示：每激活一个物品/FCOLOR=249}^{杀怪爆率+1%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=222}^{全部集齐可获得强力属性特殊称号/FCOLOR=87}^|tipsx=10|tipsy=100|size=18|color=249|link=>
 
 
 [@载入手镯库]
-#IF
-CHECK [174] 0
-#ACT
-MOV S$174 <imgex:0:195:196:195:58:83/@守护の神>
-#ELSEACT
-MOV S$174 <img:197:0:64:86>
 
-#IF
-CHECK [175] 0
-#ACT
-MOV S$175 <imgex:0:195:196:195:161:35/@蝴蝶臂环>
-#ELSEACT
-MOV S$175 <img:197:0:168:38>
+<Img|img=public/sf1/1/01389.png|x=220|y=10|children={close_btn,click_btn1,click_btn2,click_btn3,click_btn4,click_btn5,click_btn6,click_btn7,click_btn8,click_btn9,click_btn10,click_btn11,click_btn12,click_btn13,click_btn14,click_btn15,click_btn16,click_btn17,click_btn18,click_btn19,click_btn20,click_btn21,click_btn22,click_btn23
+,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,合成描述,rightTips,item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item11,item12,item13,item14,item15,item16,item17,item18,item19,item20,item21,item22,item23}|bg=1|reset=0|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=870|y=35|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 
-#IF
-CHECK [176] 0
-#ACT
-MOV S$176 <imgex:0:195:196:195:264:-12/@狩猎之镯>
-#ELSEACT
-MOV S$176 <img:197:0:270:-10>
+<ItemShow|id=item1|itemid=11259|itemcount=1|x=80 |y=99.0|bgtype=1>
+<ItemShow|id=item2|itemid=11260|itemcount=1|x=183|y=99.0|bgtype=1>
+<ItemShow|id=item3|itemid=11261|itemcount=1|x=287|y=99.0|bgtype=1>
+<ItemShow|id=item4|itemid=11262|itemcount=1|x=390|y=99.0|bgtype=1>
+<ItemShow|id=item5|itemid=11263|itemcount=1|x=493|y=99.0|bgtype=1>
+<ItemShow|id=item6|itemid=11264|itemcount=1|x=596|y=99.0|bgtype=1>
 
-#IF
-CHECK [177] 0
-#ACT
-MOV S$177 <imgex:0:195:196:195:367:-60/@麒麟臂1.2>
-#ELSEACT
-MOV S$177 <img:197:0:372:-58>
+<ItemShow|id=item7 |itemid=11265|itemcount=1|x=80 |y=199.0|bgtype=1>
+<ItemShow|id=item8 |itemid=11266|itemcount=1|x=183|y=199.0|bgtype=1>
+<ItemShow|id=item9 |itemid=11267|itemcount=1|x=287|y=199.0|bgtype=1>
+<ItemShow|id=item10|itemid=11268|itemcount=1|x=390|y=199.0|bgtype=1>
+<ItemShow|id=item11|itemid=11269|itemcount=1|x=493|y=199.0|bgtype=1>
+<ItemShow|id=item12|itemid=11270|itemcount=1|x=596|y=199.0|bgtype=1>
 
-#IF
-CHECK [178] 0
-#ACT
-MOV S$178 <imgex:0:195:196:195:471:-108/@古·镯>
-#ELSEACT
-MOV S$178 <img:197:0:477:-106>
+<ItemShow|id=item13|itemid=11271|itemcount=1|x=80 |y=299.0|bgtype=1>
+<ItemShow|id=item14|itemid=11272|itemcount=1|x=183|y=299.0|bgtype=1>
+<ItemShow|id=item15|itemid=11273|itemcount=1|x=287|y=299.0|bgtype=1>
+<ItemShow|id=item16|itemid=11274|itemcount=1|x=390|y=299.0|bgtype=1>
 
-#IF
-CHECK [179] 0
-#ACT
-MOV S$179 <imgex:0:195:196:195:573:-156/@致命之镯>
-#ELSEACT
-MOV S$179 <img:197:0:579:-154>
+<Button|id=btn1|x=30|y=100|nimg=public/sf1/1/01390.png|pimg=public/sf1/1/01392.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入军火库>
+<Button|id=btn2|x=30|y=157|nimg=public/sf1/1/01393.png|pimg=public/sf1/1/01395.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入盔甲库>
+<Button|id=btn3|x=30|y=214|nimg=public/sf1/1/01396.png|pimg=public/sf1/1/01398.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入头盔库>
+<Button|id=btn4|x=30|y=271|nimg=public/sf1/1/01399.png|pimg=public/sf1/1/01401.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入项链库>
+<Button|id=btn5|x=30|y=328|nimg=public/sf1/1/01402.png|pimg=public/sf1/1/01404.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入手镯库>
+<Button|id=btn6|x=30|y=385|nimg=public/sf1/1/01405.png|pimg=public/sf1/1/01407.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入戒指库>
+<Button|id=btn7|x=30|y=442|nimg=public/sf1/1/01408.png|pimg=public/sf1/1/01410.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入腰带库>
+<Button|id=btn8|x=30|y=499|nimg=public/sf1/1/01411.png|pimg=public/sf1/1/01413.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入靴子库>
 
+<Button|id=click_btn1|x=78 |y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@守护の神>
+<Button|id=click_btn2|x=181|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@蝴蝶臂环>
+<Button|id=click_btn3|x=284|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@狩猎之镯>
+<Button|id=click_btn4|x=387|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@麒麟臂1.2>
+<Button|id=click_btn5|x=490|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@古·镯>
+<Button|id=click_btn6|x=593|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@致命之镯>
 
-;----------------------------------2--------------------------------
+<Button|id=click_btn7 |x=78 |y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@怨灵·血怒>
+<Button|id=click_btn8 |x=181|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@神镯·SSSSS>
+<Button|id=click_btn9 |x=284|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@原始·吸灵之镯>
+<Button|id=click_btn10|x=387|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天残の噬魂手>
+<Button|id=click_btn11|x=490|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@寂寞如天>
+<Button|id=click_btn12|x=593|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@魔音离魂·狂暴>
 
-#IF
-CHECK [180] 0
-#ACT
-MOV S$180 <imgex:0:195:196:195:59:-104/@怨灵·血怒>
-#ELSEACT
-MOV S$180 <img:197:0:64:-101>
+<Button|id=click_btn13|x=78 |y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@地狱·永生手>
+<Button|id=click_btn14|x=181|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@玛法救赎>
+<Button|id=click_btn15|x=284|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@承天极破>
+<Button|id=click_btn16|x=387|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天下神镯>
 
-#IF
-CHECK [181] 0
-#ACT
-MOV S$181 <imgex:0:195:196:195:162:-152/@神镯·SSSSS>
-#ELSEACT
-MOV S$181 <img:197:0:168:-149>
-
-#IF
-CHECK [182] 0
-#ACT
-MOV S$182 <imgex:0:195:196:195:264:-199/@原始·吸灵之镯>
-#ELSEACT
-MOV S$182 <img:197:0:270:-197>
-
-#IF
-CHECK [183] 0
-#ACT
-MOV S$183 <imgex:0:195:196:195:367:-247/@天残の噬魂手>
-#ELSEACT
-MOV S$183 <img:197:0:372:-245>
-
-#IF
-CHECK [184] 0
-#ACT
-MOV S$184 <imgex:0:195:196:195:471:-295/@寂寞如天>
-#ELSEACT
-MOV S$184 <img:197:0:477:-293>
-
-#IF
-CHECK [185] 0
-#ACT
-MOV S$185 <imgex:0:195:196:195:573:-343/@魔音离魂·狂暴>
-#ELSEACT
-MOV S$185 <img:197:0:579:-341>
-
-;-----------------------------3----------------------------------
-
-#IF
-CHECK [186] 0
-#ACT
-MOV S$186 <imgex:0:195:196:195:59:-291/@地狱·永生手>
-#ELSEACT
-MOV S$186 <img:197:0:64:-288>
-
-#IF
-CHECK [187] 0
-#ACT
-MOV S$187 <imgex:0:195:196:195:162:-339/@玛法救赎>
-#ELSEACT
-MOV S$187 <img:197:0:168:-336>
-
-#IF
-CHECK [188] 0
-#ACT
-MOV S$188 <imgex:0:195:196:195:264:-387/@承天极破>
-#ELSEACT
-MOV S$188 <img:197:0:270:-384>
-
-#IF
-CHECK [189] 0
-#ACT
-MOV S$189 <imgex:0:195:196:195:367:-435/@天下神镯>
-#ELSEACT
-MOV S$189 <img:197:0:372:-432>
-
-
-#IF
-#SAY
-\ \ \
-<> \
-<ItemShow:1259:0:72:55:1>\
-<$STR(S$174)>\
-
-<> \
-<ItemShow:1260:0:175:6:1>\
-<$STR(S$175)>\
-
-<> \
-<ItemShow:1261:0:278:-41:1>\
-<$STR(S$176)>\
-
-<> \
-<ItemShow:1262:0:380:-90:1>\
-<$STR(S$177)>\
-
-<> \
-<ItemShow:1263:0:484:-138:1>\
-<$STR(S$178)>\
-
-<> \
-<ItemShow:1264:0:587:-186:1>\
-<$STR(S$179)>\
-
-;---------------------187-------------
-
-<> \
-<ItemShow:1265:0:72:-132:1>\
-<$STR(S$180)>\
-
-<> \
-<ItemShow:1266:0:175:-181:1>\
-<$STR(S$181)>\
-
-<> \
-<ItemShow:1267:0:278:-230:1>\
-<$STR(S$182)>\
-
-<> \
-<ItemShow:1268:0:380:-278:1>\
-<$STR(S$183)>\
-
-<> \
-<ItemShow:1269:0:484:-326:1>\
-<$STR(S$184)>\
-
-<> \
-<ItemShow:1270:0:587:-374:1>\
-<$STR(S$185)>\
-
-
-;---------------------187-------------
-
-<> \
-<ItemShow:1271:0:72:-321:1>\
-<$STR(S$186)>\
-
-<> \
-<ItemShow:1272:0:175:-369:1>\
-<$STR(S$187)>\
-
-<> \
-<ItemShow:1273:0:278:-417:1>\
-<$STR(S$188)>\
-
-<> \
-<ItemShow:1274:0:380:-465:1>\
-<$STR(S$189)>\
-
-
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-
-
-<IMGEX:0:499:500:499:8:-1420/@载入军火库>\
-<IMGEX:0:501:502:501:8:-1384/@载入盔甲库>\
-<IMGEX:0:503:504:503:8:-1348/@载入头盔库>\
-<IMGEX:0:505:506:505:8:-1313/@载入项链库>\
-<IMGEX:0:508:508:507:8:-1278/@载入手镯库>\
-<IMGEX:0:509:510:509:8:-1243/@载入戒指库>\
-<IMGEX:0:511:512:511:8:-1208/@载入腰带库>\
-<IMGEX:0:513:514:513:8:-1173/@载入靴子库>\
-<img:519:0:42:-1573>\
-<提示：每激活一个物品/FCOLOR=87><杀怪爆率+1%/FCOLOR=151><对怪伤害+1%/FCOLOR=222><全部集齐可获得强力属性特殊称号/FCOLOR=87>
+<Button|id=rightTips|x=61|y=43|nimg=public/sf1/1/00519.png|pimg=public/sf1/1/00519.png|tips={提示：每激活一个物品/FCOLOR=249}^{杀怪爆率+1%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=222}^{全部集齐可获得强力属性特殊称号/FCOLOR=87}^|tipsx=10|tipsy=100|size=18|color=249|link=>
 
 
 [@载入戒指库]
-#IF
-CHECK [190] 0
-#ACT
-MOV S$190 <imgex:0:195:196:195:58:83/@凤凰の飞>
-#ELSEACT
-MOV S$190 <img:197:0:64:86>
 
-#IF
-CHECK [191] 0
-#ACT
-MOV S$191 <imgex:0:195:196:195:161:35/@诅咒の亡>
-#ELSEACT
-MOV S$191 <img:197:0:168:38>
+<Img|img=public/sf1/1/01389.png|x=220|y=10|children={close_btn,click_btn1,click_btn2,click_btn3,click_btn4,click_btn5,click_btn6,click_btn7,click_btn8,click_btn9,click_btn10,click_btn11,click_btn12,click_btn13,click_btn14,click_btn15,click_btn16,click_btn17,click_btn18,click_btn19,click_btn20,click_btn21,click_btn22,click_btn23
+,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,合成描述,rightTips,item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item11,item12,item13,item14,item15,item16,item17,item18,item19,item20,item21,item22,item23}|bg=1|reset=0|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=870|y=35|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 
-#IF
-CHECK [192] 0
-#ACT
-MOV S$192 <imgex:0:195:196:195:264:-12/@天地玄黄>
-#ELSEACT
-MOV S$192 <img:197:0:270:-10>
+<ItemShow|id=item1|itemid=11276|itemcount=1|x=80 |y=99.0|bgtype=1>
+<ItemShow|id=item2|itemid=11277|itemcount=1|x=183|y=99.0|bgtype=1>
+<ItemShow|id=item3|itemid=11278|itemcount=1|x=287|y=99.0|bgtype=1>
+<ItemShow|id=item4|itemid=11279|itemcount=1|x=390|y=99.0|bgtype=1>
+<ItemShow|id=item5|itemid=11280|itemcount=1|x=493|y=99.0|bgtype=1>
+<ItemShow|id=item6|itemid=11281|itemcount=1|x=596|y=99.0|bgtype=1>
 
-#IF
-CHECK [193] 0
-#ACT
-MOV S$193 <imgex:0:195:196:195:367:-60/@暴力指环>
-#ELSEACT
-MOV S$193 <img:197:0:372:-58>
+<ItemShow|id=item7 |itemid=11282|itemcount=1|x=80 |y=199.0|bgtype=1>
+<ItemShow|id=item8 |itemid=11283|itemcount=1|x=183|y=199.0|bgtype=1>
+<ItemShow|id=item9 |itemid=11284|itemcount=1|x=287|y=199.0|bgtype=1>
+<ItemShow|id=item10|itemid=11285|itemcount=1|x=390|y=199.0|bgtype=1>
+<ItemShow|id=item11|itemid=11286|itemcount=1|x=493|y=199.0|bgtype=1>
+<ItemShow|id=item12|itemid=11287|itemcount=1|x=596|y=199.0|bgtype=1>
 
-#IF
-CHECK [194] 0
-#ACT
-MOV S$194 <imgex:0:195:196:195:471:-108/@天兽>
-#ELSEACT
-MOV S$194 <img:197:0:477:-106>
+<ItemShow|id=item13|itemid=11288|itemcount=1|x=80 |y=299.0|bgtype=1>
+<ItemShow|id=item14|itemid=11289|itemcount=1|x=183|y=299.0|bgtype=1>
+<ItemShow|id=item15|itemid=11290|itemcount=1|x=287|y=299.0|bgtype=1>
+<ItemShow|id=item16|itemid=11291|itemcount=1|x=390|y=299.0|bgtype=1>
 
-#IF
-CHECK [195] 0
-#ACT
-MOV S$195 <imgex:0:195:196:195:573:-156/@鬼泣>
-#ELSEACT
-MOV S$195 <img:197:0:579:-154>
+<Button|id=btn1|x=30|y=100|nimg=public/sf1/1/01390.png|pimg=public/sf1/1/01392.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入军火库>
+<Button|id=btn2|x=30|y=157|nimg=public/sf1/1/01393.png|pimg=public/sf1/1/01395.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入盔甲库>
+<Button|id=btn3|x=30|y=214|nimg=public/sf1/1/01396.png|pimg=public/sf1/1/01398.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入头盔库>
+<Button|id=btn4|x=30|y=271|nimg=public/sf1/1/01399.png|pimg=public/sf1/1/01401.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入项链库>
+<Button|id=btn5|x=30|y=328|nimg=public/sf1/1/01402.png|pimg=public/sf1/1/01404.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入手镯库>
+<Button|id=btn6|x=30|y=385|nimg=public/sf1/1/01405.png|pimg=public/sf1/1/01407.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入戒指库>
+<Button|id=btn7|x=30|y=442|nimg=public/sf1/1/01408.png|pimg=public/sf1/1/01410.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入腰带库>
+<Button|id=btn8|x=30|y=499|nimg=public/sf1/1/01411.png|pimg=public/sf1/1/01413.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入靴子库>
 
+<Button|id=click_btn1|x=78 |y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@凤凰の飞>
+<Button|id=click_btn2|x=181|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@诅咒の亡>
+<Button|id=click_btn3|x=284|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天地玄黄>
+<Button|id=click_btn4|x=387|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@暴力指环>
+<Button|id=click_btn5|x=490|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天兽>
+<Button|id=click_btn6|x=593|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@鬼泣>
 
-;----------------------------------2--------------------------------
+<Button|id=click_btn7 |x=78 |y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@冉·遗珠>
+<Button|id=click_btn8 |x=181|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@火神·指环>
+<Button|id=click_btn9 |x=284|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@魔·戒·SSSS>
+<Button|id=click_btn10|x=387|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@幻月>
+<Button|id=click_btn11|x=490|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@伏魔·九游戒>
+<Button|id=click_btn12|x=593|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@血瞳>
 
-#IF
-CHECK [196] 0
-#ACT
-MOV S$196 <imgex:0:195:196:195:59:-104/@冉·遗珠>
-#ELSEACT
-MOV S$196 <img:197:0:64:-101>
+<Button|id=click_btn13|x=78 |y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@万灵之戒>
+<Button|id=click_btn14|x=181|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@轩墨魔戒>
+<Button|id=click_btn15|x=284|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@至尊魔戒>
+<Button|id=click_btn16|x=387|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天下神指>
 
-#IF
-CHECK [197] 0
-#ACT
-MOV S$197 <imgex:0:195:196:195:162:-152/@火神·指环>
-#ELSEACT
-MOV S$197 <img:197:0:168:-149>
-
-#IF
-CHECK [198] 0
-#ACT
-MOV S$198 <imgex:0:195:196:195:264:-199/@魔·戒·SSSS>
-#ELSEACT
-MOV S$198 <img:197:0:270:-197>
-
-#IF
-CHECK [199] 0
-#ACT
-MOV S$199 <imgex:0:195:196:195:367:-247/@幻月>
-#ELSEACT
-MOV S$199 <img:197:0:372:-245>
-
-#IF
-CHECK [200] 0
-#ACT
-MOV S$200 <imgex:0:195:196:195:471:-295/@伏魔·九游戒>
-#ELSEACT
-MOV S$200 <img:197:0:477:-293>
-
-#IF
-CHECK [201] 0
-#ACT
-MOV S$201 <imgex:0:195:196:195:573:-343/@血瞳>
-#ELSEACT
-MOV S$201 <img:197:0:579:-341>
-
-;-----------------------------3----------------------------------
-
-#IF
-CHECK [202] 0
-#ACT
-MOV S$202 <imgex:0:195:196:195:59:-291/@万灵之戒>
-#ELSEACT
-MOV S$202 <img:197:0:64:-288>
-
-#IF
-CHECK [203] 0
-#ACT
-MOV S$203 <imgex:0:195:196:195:162:-339/@轩墨魔戒>
-#ELSEACT
-MOV S$203 <img:197:0:168:-336>
-
-#IF
-CHECK [204] 0
-#ACT
-MOV S$204 <imgex:0:195:196:195:264:-387/@至尊魔戒>
-#ELSEACT
-MOV S$204 <img:197:0:270:-384>
-
-#IF
-CHECK [205] 0
-#ACT
-MOV S$205 <imgex:0:195:196:195:367:-435/@天下神指>
-#ELSEACT
-MOV S$205 <img:197:0:372:-432>
-
-
-#IF
-#SAY
-\ \ \
-<> \
-<ItemShow:1276:0:72:55:1>\
-<$STR(S$190)>\
-
-<> \
-<ItemShow:1277:0:175:6:1>\
-<$STR(S$191)>\
-
-<> \
-<ItemShow:1278:0:278:-41:1>\
-<$STR(S$192)>\
-
-<> \
-<ItemShow:1279:0:380:-90:1>\
-<$STR(S$193)>\
-
-<> \
-<ItemShow:1280:0:484:-138:1>\
-<$STR(S$194)>\
-
-<> \
-<ItemShow:1281:0:587:-186:1>\
-<$STR(S$195)>\
-
-;---------------------187-------------
-
-<> \
-<ItemShow:1282:0:72:-132:1>\
-<$STR(S$196)>\
-
-<> \
-<ItemShow:1283:0:175:-181:1>\
-<$STR(S$197)>\
-
-<> \
-<ItemShow:1284:0:278:-230:1>\
-<$STR(S$198)>\
-
-<> \
-<ItemShow:1285:0:380:-278:1>\
-<$STR(S$199)>\
-
-<> \
-<ItemShow:1286:0:484:-326:1>\
-<$STR(S$200)>\
-
-<> \
-<ItemShow:1287:0:587:-374:1>\
-<$STR(S$201)>\
-
-
-;---------------------187-------------
-
-<> \
-<ItemShow:1288:0:72:-321:1>\
-<$STR(S$202)>\
-
-<> \
-<ItemShow:1289:0:175:-369:1>\
-<$STR(S$203)>\
-
-<> \
-<ItemShow:1290:0:278:-417:1>\
-<$STR(S$204)>\
-
-<> \
-<ItemShow:1291:0:380:-465:1>\
-<$STR(S$205)>\
-
-
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-
-
-<IMGEX:0:499:500:499:8:-1420/@载入军火库>\
-<IMGEX:0:501:502:501:8:-1384/@载入盔甲库>\
-<IMGEX:0:503:504:503:8:-1348/@载入头盔库>\
-<IMGEX:0:505:506:505:8:-1313/@载入项链库>\
-<IMGEX:0:507:508:507:8:-1278/@载入手镯库>\
-<IMGEX:0:510:510:509:8:-1243/@载入戒指库>\
-<IMGEX:0:511:512:511:8:-1208/@载入腰带库>\
-<IMGEX:0:513:514:513:8:-1173/@载入靴子库>\
-<img:520:0:42:-1573>\
-<提示：每激活一个物品/FCOLOR=87><杀怪爆率+1%/FCOLOR=151><对怪伤害+1%/FCOLOR=222><全部集齐可获得强力属性特殊称号/FCOLOR=87>
+<Button|id=rightTips|x=61|y=43|nimg=public/sf1/1/00520.png|pimg=public/sf1/1/00520.png|tips={提示：每激活一个物品/FCOLOR=249}^{杀怪爆率+1%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=222}^{全部集齐可获得强力属性特殊称号/FCOLOR=87}^|tipsx=10|tipsy=100|size=18|color=249|link=>
 
 
 [@载入腰带库]
-#IF
-CHECK [206] 0
-#ACT
-MOV S$206 <imgex:0:195:196:195:58:83/@云飞の扬>
-#ELSEACT
-MOV S$206 <img:197:0:64:86>
 
-#IF
-CHECK [207] 0
-#ACT
-MOV S$207 <imgex:0:195:196:195:161:35/@韩灵阴阳>
-#ELSEACT
-MOV S$207 <img:197:0:168:38>
+<Img|img=public/sf1/1/01389.png|x=220|y=10|children={close_btn,click_btn1,click_btn2,click_btn3,click_btn4,click_btn5,click_btn6,click_btn7,click_btn8,click_btn9,click_btn10,click_btn11,click_btn12,click_btn13,click_btn14,click_btn15,click_btn16,click_btn17,click_btn18,click_btn19,click_btn20,click_btn21,click_btn22,click_btn23
+,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,合成描述,rightTips,item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item11,item12,item13,item14,item15,item16,item17,item18,item19,item20,item21,item22,item23}|bg=1|reset=0|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=870|y=35|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 
-#IF
-CHECK [208] 0
-#ACT
-MOV S$208 <imgex:0:195:196:195:264:-12/@完美守护>
-#ELSEACT
-MOV S$208 <img:197:0:270:-10>
+<ItemShow|id=item1|itemid=11293|itemcount=1|x=80 |y=99.0|bgtype=1>
+<ItemShow|id=item2|itemid=11294|itemcount=1|x=183|y=99.0|bgtype=1>
+<ItemShow|id=item3|itemid=11295|itemcount=1|x=287|y=99.0|bgtype=1>
+<ItemShow|id=item4|itemid=11296|itemcount=1|x=390|y=99.0|bgtype=1>
+<ItemShow|id=item5|itemid=11297|itemcount=1|x=493|y=99.0|bgtype=1>
+<ItemShow|id=item6|itemid=11298|itemcount=1|x=596|y=99.0|bgtype=1>
 
-#IF
-CHECK [209] 0
-#ACT
-MOV S$209 <imgex:0:195:196:195:367:-60/@玉虚葫>
-#ELSEACT
-MOV S$209 <img:197:0:372:-58>
+<ItemShow|id=item7 |itemid=11299|itemcount=1|x=80 |y=199.0|bgtype=1>
+<ItemShow|id=item8 |itemid=11300|itemcount=1|x=183|y=199.0|bgtype=1>
+<ItemShow|id=item9 |itemid=11301|itemcount=1|x=287|y=199.0|bgtype=1>
+<ItemShow|id=item10|itemid=11302|itemcount=1|x=390|y=199.0|bgtype=1>
+<ItemShow|id=item11|itemid=11303|itemcount=1|x=493|y=199.0|bgtype=1>
+<ItemShow|id=item12|itemid=11304|itemcount=1|x=596|y=199.0|bgtype=1>
 
-#IF
-CHECK [210] 0
-#ACT
-MOV S$210 <imgex:0:195:196:195:471:-108/@血染>
-#ELSEACT
-MOV S$210 <img:197:0:477:-106>
+<ItemShow|id=item13|itemid=11305|itemcount=1|x=80 |y=299.0|bgtype=1>
+<ItemShow|id=item14|itemid=11306|itemcount=1|x=183|y=299.0|bgtype=1>
+<ItemShow|id=item15|itemid=11307|itemcount=1|x=287|y=299.0|bgtype=1>
+<ItemShow|id=item16|itemid=11308|itemcount=1|x=390|y=299.0|bgtype=1>
 
-#IF
-CHECK [211] 0
-#ACT
-MOV S$211 <imgex:0:195:196:195:573:-156/@黄龙在天>
-#ELSEACT
-MOV S$211 <img:197:0:579:-154>
+<Button|id=btn1|x=30|y=100|nimg=public/sf1/1/01390.png|pimg=public/sf1/1/01392.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入军火库>
+<Button|id=btn2|x=30|y=157|nimg=public/sf1/1/01393.png|pimg=public/sf1/1/01395.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入盔甲库>
+<Button|id=btn3|x=30|y=214|nimg=public/sf1/1/01396.png|pimg=public/sf1/1/01398.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入头盔库>
+<Button|id=btn4|x=30|y=271|nimg=public/sf1/1/01399.png|pimg=public/sf1/1/01401.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入项链库>
+<Button|id=btn5|x=30|y=328|nimg=public/sf1/1/01402.png|pimg=public/sf1/1/01404.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入手镯库>
+<Button|id=btn6|x=30|y=385|nimg=public/sf1/1/01405.png|pimg=public/sf1/1/01407.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入戒指库>
+<Button|id=btn7|x=30|y=442|nimg=public/sf1/1/01408.png|pimg=public/sf1/1/01410.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入腰带库>
+<Button|id=btn8|x=30|y=499|nimg=public/sf1/1/01411.png|pimg=public/sf1/1/01413.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入靴子库>
 
+<Button|id=click_btn1|x=78 |y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@云飞の扬>
+<Button|id=click_btn2|x=181|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@韩灵阴阳>
+<Button|id=click_btn3|x=284|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@完美守护>
+<Button|id=click_btn4|x=387|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@玉虚葫>
+<Button|id=click_btn5|x=490|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@血染>
+<Button|id=click_btn6|x=593|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@黄龙在天>
 
-;----------------------------------2--------------------------------
+<Button|id=click_btn7 |x=78 |y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@断·天>
+<Button|id=click_btn8 |x=181|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@寂灭攻>
+<Button|id=click_btn9 |x=284|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@焚毒之火>
+<Button|id=click_btn10|x=387|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@冰晶之魂>
+<Button|id=click_btn11|x=490|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@混天绫>
+<Button|id=click_btn12|x=593|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@噬血灵魂>
 
-#IF
-CHECK [212] 0
-#ACT
-MOV S$212 <imgex:0:195:196:195:59:-104/@断·天>
-#ELSEACT
-MOV S$212 <img:197:0:64:-101>
+<Button|id=click_btn13|x=78 |y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@悲伤之末>
+<Button|id=click_btn14|x=181|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@救世守望带>
+<Button|id=click_btn15|x=284|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@祭祖神魔>
+<Button|id=click_btn16|x=387|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天下神带>
 
-#IF
-CHECK [213] 0
-#ACT
-MOV S$213 <imgex:0:195:196:195:162:-152/@寂灭攻>
-#ELSEACT
-MOV S$213 <img:197:0:168:-149>
+<Button|id=rightTips|x=61|y=43|nimg=public/sf1/1/00521.png|pimg=public/sf1/1/00521.png|tips={提示：每激活一个物品/FCOLOR=249}^{杀怪爆率+1%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=222}^{全部集齐可获得强力属性特殊称号/FCOLOR=87}^|tipsx=10|tipsy=100|size=18|color=249|link=>
 
-#IF
-CHECK [214] 0
-#ACT
-MOV S$214 <imgex:0:195:196:195:264:-199/@焚毒之火>
-#ELSEACT
-MOV S$214 <img:197:0:270:-197>
-
-#IF
-CHECK [215] 0
-#ACT
-MOV S$215 <imgex:0:195:196:195:367:-247/@冰晶之魂>
-#ELSEACT
-MOV S$215 <img:197:0:372:-245>
-
-#IF
-CHECK [216] 0
-#ACT
-MOV S$216 <imgex:0:195:196:195:471:-295/@混天绫>
-#ELSEACT
-MOV S$216 <img:197:0:477:-293>
-
-#IF
-CHECK [217] 0
-#ACT
-MOV S$217 <imgex:0:195:196:195:573:-343/@噬血灵魂>
-#ELSEACT
-MOV S$217 <img:197:0:579:-341>
-
-;-----------------------------3----------------------------------
-
-#IF
-CHECK [218] 0
-#ACT
-MOV S$218 <imgex:0:195:196:195:59:-291/@悲伤之末>
-#ELSEACT
-MOV S$218 <img:197:0:64:-288>
-
-#IF
-CHECK [219] 0
-#ACT
-MOV S$219 <imgex:0:195:196:195:162:-339/@救世守望带>
-#ELSEACT
-MOV S$219 <img:197:0:168:-336>
-
-#IF
-CHECK [220] 0
-#ACT
-MOV S$220 <imgex:0:195:196:195:264:-387/@祭祖神魔>
-#ELSEACT
-MOV S$220 <img:197:0:270:-384>
-
-#IF
-CHECK [221] 0
-#ACT
-MOV S$221 <imgex:0:195:196:195:367:-435/@天下神带>
-#ELSEACT
-MOV S$221 <img:197:0:372:-432>
-
-
-#IF
-#SAY
-\ \ \
-<> \
-<ItemShow:1293:0:72:55:1>\
-<$STR(S$206)>\
-
-<> \
-<ItemShow:1294:0:175:6:1>\
-<$STR(S$207)>\
-
-<> \
-<ItemShow:1295:0:278:-41:1>\
-<$STR(S$208)>\
-
-<> \
-<ItemShow:1296:0:380:-90:1>\
-<$STR(S$209)>\
-
-<> \
-<ItemShow:1297:0:484:-138:1>\
-<$STR(S$210)>\
-
-<> \
-<ItemShow:1298:0:587:-186:1>\
-<$STR(S$211)>\
-
-;---------------------187-------------
-
-<> \
-<ItemShow:1299:0:72:-132:1>\
-<$STR(S$212)>\
-
-<> \
-<ItemShow:1300:0:175:-181:1>\
-<$STR(S$213)>\
-
-<> \
-<ItemShow:1301:0:278:-230:1>\
-<$STR(S$214)>\
-
-<> \
-<ItemShow:1302:0:380:-278:1>\
-<$STR(S$215)>\
-
-<> \
-<ItemShow:1303:0:484:-326:1>\
-<$STR(S$216)>\
-
-<> \
-<ItemShow:1304:0:587:-374:1>\
-<$STR(S$217)>\
-
-
-;---------------------187-------------
-
-<> \
-<ItemShow:1305:0:72:-321:1>\
-<$STR(S$218)>\
-
-<> \
-<ItemShow:1306:0:175:-369:1>\
-<$STR(S$219)>\
-
-<> \
-<ItemShow:1307:0:278:-417:1>\
-<$STR(S$220)>\
-
-<> \
-<ItemShow:1308:0:380:-465:1>\
-<$STR(S$221)>\
-
-
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-
-
-<IMGEX:0:499:500:499:8:-1420/@载入军火库>\
-<IMGEX:0:501:502:501:8:-1384/@载入盔甲库>\
-<IMGEX:0:503:504:503:8:-1348/@载入头盔库>\
-<IMGEX:0:505:506:505:8:-1313/@载入项链库>\
-<IMGEX:0:507:508:507:8:-1278/@载入手镯库>\
-<IMGEX:0:509:510:509:8:-1243/@载入戒指库>\
-<IMGEX:0:512:512:511:8:-1208/@载入腰带库>\
-<IMGEX:0:513:514:513:8:-1173/@载入靴子库>\
-<img:521:0:42:-1573>\
-<提示：每激活一个物品/FCOLOR=87><杀怪爆率+1%/FCOLOR=151><对怪伤害+1%/FCOLOR=222><全部集齐可获得强力属性特殊称号/FCOLOR=87>
-
+; [@载入腰带库]
 [@载入靴子库]
-#IF
-CHECK [222] 0
-#ACT
-MOV S$222 <imgex:0:195:196:195:58:83/@天下の幻>
-#ELSEACT
-MOV S$222 <img:197:0:64:86>
 
-#IF
-CHECK [223] 0
-#ACT
-MOV S$223 <imgex:0:195:196:195:161:35/@天妖>
-#ELSEACT
-MOV S$223 <img:197:0:168:38>
+<Img|img=public/sf1/1/01389.png|x=220|y=10|children={close_btn,click_btn1,click_btn2,click_btn3,click_btn4,click_btn5,click_btn6,click_btn7,click_btn8,click_btn9,click_btn10,click_btn11,click_btn12,click_btn13,click_btn14,click_btn15,click_btn16,click_btn17,click_btn18,click_btn19,click_btn20,click_btn21,click_btn22,click_btn23
+,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,合成描述,rightTips,item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item11,item12,item13,item14,item15,item16,item17,item18,item19,item20,item21,item22,item23}|bg=1|reset=0|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=870|y=35|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 
-#IF
-CHECK [224] 0
-#ACT
-MOV S$224 <imgex:0:195:196:195:264:-12/@天殇英雄履>
-#ELSEACT
-MOV S$224 <img:197:0:270:-10>
+<ItemShow|id=item1|itemid=11310|itemcount=1|x=80 |y=99.0|bgtype=1>
+<ItemShow|id=item2|itemid=11311|itemcount=1|x=183|y=99.0|bgtype=1>
+<ItemShow|id=item3|itemid=11312|itemcount=1|x=287|y=99.0|bgtype=1>
+<ItemShow|id=item4|itemid=11313|itemcount=1|x=390|y=99.0|bgtype=1>
+<ItemShow|id=item5|itemid=11314|itemcount=1|x=493|y=99.0|bgtype=1>
+<ItemShow|id=item6|itemid=11315|itemcount=1|x=596|y=99.0|bgtype=1>
 
-#IF
-CHECK [225] 0
-#ACT
-MOV S$225 <imgex:0:195:196:195:367:-60/@冰河葬心靴>
-#ELSEACT
-MOV S$225 <img:197:0:372:-58>
+<ItemShow|id=item7 |itemid=11316|itemcount=1|x=80 |y=199.0|bgtype=1>
+<ItemShow|id=item8 |itemid=11317|itemcount=1|x=183|y=199.0|bgtype=1>
+<ItemShow|id=item9 |itemid=11318|itemcount=1|x=287|y=199.0|bgtype=1>
+<ItemShow|id=item10|itemid=11319|itemcount=1|x=390|y=199.0|bgtype=1>
+<ItemShow|id=item11|itemid=11320|itemcount=1|x=493|y=199.0|bgtype=1>
+<ItemShow|id=item12|itemid=11321|itemcount=1|x=596|y=199.0|bgtype=1>
 
-#IF
-CHECK [226] 0
-#ACT
-MOV S$226 <imgex:0:195:196:195:471:-108/@碎空破晓>
-#ELSEACT
-MOV S$226 <img:197:0:477:-106>
+<ItemShow|id=item13|itemid=11322|itemcount=1|x=80 |y=299.0|bgtype=1>
+<ItemShow|id=item14|itemid=11323|itemcount=1|x=183|y=299.0|bgtype=1>
+<ItemShow|id=item15|itemid=11324|itemcount=1|x=287|y=299.0|bgtype=1>
+<ItemShow|id=item16|itemid=11325|itemcount=1|x=390|y=299.0|bgtype=1>
 
-#IF
-CHECK [227] 0
-#ACT
-MOV S$227 <imgex:0:195:196:195:573:-156/@骑士的荣耀>
-#ELSEACT
-MOV S$227 <img:197:0:579:-154>
+<Button|id=btn1|x=30|y=100|nimg=public/sf1/1/01390.png|pimg=public/sf1/1/01392.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入军火库>
+<Button|id=btn2|x=30|y=157|nimg=public/sf1/1/01393.png|pimg=public/sf1/1/01395.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入盔甲库>
+<Button|id=btn3|x=30|y=214|nimg=public/sf1/1/01396.png|pimg=public/sf1/1/01398.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入头盔库>
+<Button|id=btn4|x=30|y=271|nimg=public/sf1/1/01399.png|pimg=public/sf1/1/01401.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入项链库>
+<Button|id=btn5|x=30|y=328|nimg=public/sf1/1/01402.png|pimg=public/sf1/1/01404.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入手镯库>
+<Button|id=btn6|x=30|y=385|nimg=public/sf1/1/01405.png|pimg=public/sf1/1/01407.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入戒指库>
+<Button|id=btn7|x=30|y=442|nimg=public/sf1/1/01408.png|pimg=public/sf1/1/01410.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入腰带库>
+<Button|id=btn8|x=30|y=499|nimg=public/sf1/1/01411.png|pimg=public/sf1/1/01413.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@载入靴子库>
 
+<Button|id=click_btn1|x=78 |y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天下の幻>
+<Button|id=click_btn2|x=181|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天妖>
+<Button|id=click_btn3|x=284|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天殇英雄履>
+<Button|id=click_btn4|x=387|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@冰河葬心靴>
+<Button|id=click_btn5|x=490|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@碎空破晓>
+<Button|id=click_btn6|x=593|y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@骑士的荣耀>
 
-;----------------------------------2--------------------------------
+<Button|id=click_btn7 |x=78 |y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@国王的祝福>
+<Button|id=click_btn8 |x=181|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@血兽王靴>
+<Button|id=click_btn9 |x=284|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@烛天·封神靴>
+<Button|id=click_btn10|x=387|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@咒天乾坤天罡履>
+<Button|id=click_btn11|x=490|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@帝江·九耀靴>
+<Button|id=click_btn12|x=593|y=266|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@永恒的冰封>
 
-#IF
-CHECK [228] 0
-#ACT
-MOV S$228 <imgex:0:195:196:195:59:-104/@国王的祝福>
-#ELSEACT
-MOV S$228 <img:197:0:64:-101>
+<Button|id=click_btn13|x=78 |y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@蚩尤魔靴>
+<Button|id=click_btn14|x=181|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@孔雀翎>
+<Button|id=click_btn15|x=284|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@阎王のSSSSS>
+<Button|id=click_btn16|x=387|y=366|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天下神靴>
 
-#IF
-CHECK [229] 0
-#ACT
-MOV S$229 <imgex:0:195:196:195:162:-152/@血兽王靴>
-#ELSEACT
-MOV S$229 <img:197:0:168:-149>
-
-#IF
-CHECK [230] 0
-#ACT
-MOV S$230 <imgex:0:195:196:195:264:-199/@烛天·封神靴>
-#ELSEACT
-MOV S$230 <img:197:0:270:-197>
-
-#IF
-CHECK [231] 0
-#ACT
-MOV S$231 <imgex:0:195:196:195:367:-247/@咒天乾坤天罡履>
-#ELSEACT
-MOV S$231 <img:197:0:372:-245>
-
-#IF
-CHECK [232] 0
-#ACT
-MOV S$232 <imgex:0:195:196:195:471:-295/@帝江·九耀靴>
-#ELSEACT
-MOV S$232 <img:197:0:477:-293>
-
-#IF
-CHECK [233] 0
-#ACT
-MOV S$233 <imgex:0:195:196:195:573:-343/@永恒的冰封>
-#ELSEACT
-MOV S$233 <img:197:0:579:-341>
-
-;-----------------------------3----------------------------------
-
-#IF
-CHECK [234] 0
-#ACT
-MOV S$234 <imgex:0:195:196:195:59:-291/@蚩尤魔靴>
-#ELSEACT
-MOV S$234 <img:197:0:64:-288>
-
-#IF
-CHECK [235] 0
-#ACT
-MOV S$235 <imgex:0:195:196:195:162:-339/@孔雀翎>
-#ELSEACT
-MOV S$235 <img:197:0:168:-336>
-
-#IF
-CHECK [236] 0
-#ACT
-MOV S$236 <imgex:0:195:196:195:264:-387/@阎王のSSSSS>
-#ELSEACT
-MOV S$236 <img:197:0:270:-384>
-
-#IF
-CHECK [237] 0
-#ACT
-MOV S$237 <imgex:0:195:196:195:367:-435/@天下神靴>
-#ELSEACT
-MOV S$237 <img:197:0:372:-432>
-
-
-#IF
-#SAY
-\ \ \
-<> \
-<ItemShow:1310:0:72:55:1>\
-<$STR(S$222)>\
-
-<> \
-<ItemShow:1311:0:175:6:1>\
-<$STR(S$223)>\
-
-<> \
-<ItemShow:1312:0:278:-41:1>\
-<$STR(S$224)>\
-
-<> \
-<ItemShow:1313:0:380:-90:1>\
-<$STR(S$225)>\
-
-<> \
-<ItemShow:1314:0:484:-138:1>\
-<$STR(S$226)>\
-
-<> \
-<ItemShow:1315:0:587:-186:1>\
-<$STR(S$227)>\
-
-;---------------------187-------------
-
-<> \
-<ItemShow:1316:0:72:-132:1>\
-<$STR(S$228)>\
-
-<> \
-<ItemShow:1317:0:175:-181:1>\
-<$STR(S$229)>\
-
-<> \
-<ItemShow:1318:0:278:-230:1>\
-<$STR(S$230)>\
-
-<> \
-<ItemShow:1319:0:380:-278:1>\
-<$STR(S$231)>\
-
-<> \
-<ItemShow:1320:0:484:-326:1>\
-<$STR(S$232)>\
-
-<> \
-<ItemShow:1321:0:587:-374:1>\
-<$STR(S$233)>\
-
-
-;---------------------187-------------
-
-<> \
-<ItemShow:1322:0:72:-321:1>\
-<$STR(S$234)>\
-
-<> \
-<ItemShow:1323:0:175:-369:1>\
-<$STR(S$235)>\
-
-<> \
-<ItemShow:1324:0:278:-417:1>\
-<$STR(S$236)>\
-
-<> \
-<ItemShow:1325:0:380:-465:1>\
-<$STR(S$237)>\
-
-
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-
-
-<IMGEX:0:499:500:499:8:-1420/@载入军火库>\
-<IMGEX:0:501:502:501:8:-1384/@载入盔甲库>\
-<IMGEX:0:503:504:503:8:-1348/@载入头盔库>\
-<IMGEX:0:505:506:505:8:-1313/@载入项链库>\
-<IMGEX:0:507:508:507:8:-1278/@载入手镯库>\
-<IMGEX:0:509:510:509:8:-1243/@载入戒指库>\
-<IMGEX:0:511:512:511:8:-1208/@载入腰带库>\
-<IMGEX:0:514:514:513:8:-1173/@载入靴子库>\
-<img:522:0:42:-1573>\
-<提示：每激活一个物品/FCOLOR=87><杀怪爆率+1%/FCOLOR=151><对怪伤害+1%/FCOLOR=222><全部集齐可获得强力属性特殊称号/FCOLOR=87>
-
-
-
-
+<Button|id=rightTips|x=61|y=43|nimg=public/sf1/1/00522.png|pimg=public/sf1/1/00522.png|tips={提示：每激活一个物品/FCOLOR=249}^{杀怪爆率+1%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=222}^{全部集齐可获得强力属性特殊称号/FCOLOR=87}^|tipsx=10|tipsy=100|size=18|color=249|link=>
 
 
 [@天下の幻]
 #IF
-CHECK [222] 0
+CHECK [222] 1
+#act
+messagebox 该装备已激活!!
+break
+
+#if
 CHECKITEM 天下の幻 1
 #ACT
 SET [222] 1
@@ -1790,11 +515,17 @@ take 天下の幻 1
 goto @载入靴子库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[天下の幻]点亮失败！
+messagebox 抱歉，你背包没有[天下の幻]点亮失败！
 goto @载入靴子库
+
 [@天妖]
 #IF
-CHECK [223] 0
+CHECK [223] 1
+#act
+messagebox 该装备已激活!!
+break
+
+#IF
 CHECKITEM 天妖 1
 #ACT
 SET [223] 1
@@ -1802,11 +533,17 @@ take 天妖 1
 goto @载入靴子库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[天妖]点亮失败！
+messagebox 抱歉，你背包没有[天妖]点亮失败！
 goto @载入靴子库
+
 [@天殇英雄履]
 #IF
-CHECK [224] 0
+CHECK [224] 1
+#act
+messagebox 该装备已激活!!
+break
+
+#IF
 CHECKITEM 天殇英雄履 1
 #ACT
 SET [224] 1
@@ -1814,8 +551,9 @@ take 天殇英雄履 1
 goto @载入靴子库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[天殇英雄履]点亮失败！
+messagebox 抱歉，你背包没有[天殇英雄履]点亮失败！
 goto @载入靴子库
+
 [@冰河葬心靴]
 #IF
 CHECK [225] 0
@@ -1826,7 +564,7 @@ take 冰河葬心靴 1
 goto @载入靴子库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[冰河葬心靴]点亮失败！
+messagebox 抱歉，你背包没有[冰河葬心靴]点亮失败！
 goto @载入靴子库
 
 [@碎空破晓]
@@ -1839,7 +577,7 @@ take 碎空破晓 1
 goto @载入靴子库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[碎空破晓]点亮失败！
+messagebox 抱歉，你背包没有[碎空破晓]点亮失败！
 goto @载入靴子库
 
 [@骑士的荣耀]
@@ -1852,7 +590,7 @@ take 骑士的荣耀 1
 goto @载入靴子库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[骑士的荣耀]点亮失败！
+messagebox 抱歉，你背包没有[骑士的荣耀]点亮失败！
 goto @载入靴子库
 [@国王的祝福]
 #IF
@@ -1864,7 +602,7 @@ take 国王的祝福 1
 goto @载入靴子库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[国王的祝福]点亮失败！
+messagebox 抱歉，你背包没有[国王的祝福]点亮失败！
 goto @载入靴子库
 [@血兽王靴]
 #IF
@@ -1876,7 +614,7 @@ take 血兽王靴 1
 goto @载入靴子库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[血兽王靴]点亮失败！
+messagebox 抱歉，你背包没有[血兽王靴]点亮失败！
 goto @载入靴子库
 [@烛天·封神靴]
 #IF
@@ -1888,7 +626,7 @@ take 烛天·封神靴 1
 goto @载入靴子库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[烛天·封神靴]点亮失败！
+messagebox 抱歉，你背包没有[烛天·封神靴]点亮失败！
 goto @载入靴子库
 [@咒天乾坤天罡履]
 #IF
@@ -1900,7 +638,7 @@ take 咒天乾坤天罡履 1
 goto @载入靴子库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[咒天乾坤天罡履]点亮失败！
+messagebox 抱歉，你背包没有[咒天乾坤天罡履]点亮失败！
 goto @载入靴子库
 [@帝江·九耀靴]
 #IF
@@ -1912,7 +650,7 @@ take 帝江·九耀靴 1
 goto @载入靴子库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[帝江·九耀靴]点亮失败！
+messagebox 抱歉，你背包没有[帝江·九耀靴]点亮失败！
 goto @载入靴子库
 [@永恒的冰封]
 #IF
@@ -1924,7 +662,7 @@ take 永恒的冰封 1
 goto @载入靴子库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[永恒的冰封]点亮失败！
+messagebox 抱歉，你背包没有[永恒的冰封]点亮失败！
 goto @载入靴子库
 [@蚩尤魔靴]
 #IF
@@ -1936,8 +674,9 @@ take 蚩尤魔靴 1
 goto @载入靴子库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[蚩尤魔靴]点亮失败！
+messagebox 抱歉，你背包没有[蚩尤魔靴]点亮失败！
 goto @载入靴子库
+
 [@孔雀翎]
 #IF
 CHECK [235] 0
@@ -1948,7 +687,7 @@ take 孔雀翎 1
 goto @载入靴子库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[孔雀翎]点亮失败！
+messagebox 抱歉，你背包没有[孔雀翎]点亮失败！
 goto @载入靴子库
 [@阎王のSSSSS]
 #IF
@@ -1960,7 +699,7 @@ take 阎王のSSSSS 1
 goto @载入靴子库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[阎王のSSSSS]点亮失败！
+messagebox 抱歉，你背包没有[阎王のSSSSS]点亮失败！
 goto @载入靴子库
 [@天下神靴]
 #IF
@@ -1971,7 +710,7 @@ SET [237] 1
 take 天下神靴 1
 goto @载入靴子库
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[天下神靴]点亮失败！
+messagebox 抱歉，你背包没有[天下神靴]点亮失败！
 goto @载入靴子库
 
 
@@ -1986,7 +725,7 @@ take 云飞の扬 1
 goto @载入腰带库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[云飞の扬]点亮失败！
+messagebox 抱歉，你背包没有[云飞の扬]点亮失败！
 goto @载入腰带库
 [@韩灵阴阳]
 #IF
@@ -1998,7 +737,7 @@ take 韩灵阴阳 1
 goto @载入腰带库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[韩灵阴阳]点亮失败！
+messagebox 抱歉，你背包没有[韩灵阴阳]点亮失败！
 goto @载入腰带库
 [@完美守护]
 #IF
@@ -2010,7 +749,7 @@ take 完美守护 1
 goto @载入腰带库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[完美守护]点亮失败！
+messagebox 抱歉，你背包没有[完美守护]点亮失败！
 goto @载入腰带库
 [@玉虚葫]
 #IF
@@ -2022,7 +761,7 @@ take 玉虚葫 1
 goto @载入腰带库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[玉虚葫]点亮失败！
+messagebox 抱歉，你背包没有[玉虚葫]点亮失败！
 goto @载入腰带库
 [@血染]
 #IF
@@ -2034,7 +773,7 @@ take 血染 1
 goto @载入腰带库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[血染]点亮失败！
+messagebox 抱歉，你背包没有[血染]点亮失败！
 goto @载入腰带库
 [@黄龙在天]
 #IF
@@ -2046,7 +785,7 @@ take 黄龙在天 1
 goto @载入腰带库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[黄龙在天]点亮失败！
+messagebox 抱歉，你背包没有[黄龙在天]点亮失败！
 goto @载入腰带库
 [@断·天]
 #IF
@@ -2058,7 +797,7 @@ take 断·天 1
 goto @载入腰带库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[断·天]点亮失败！
+messagebox 抱歉，你背包没有[断·天]点亮失败！
 goto @载入腰带库
 [@寂灭攻]
 #IF
@@ -2070,7 +809,7 @@ take 寂灭[攻] 1
 goto @载入腰带库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[寂灭[攻]]点亮失败！
+messagebox 抱歉，你背包没有[寂灭[攻]]点亮失败！
 goto @载入腰带库
 [@焚毒之火]
 #IF
@@ -2082,7 +821,7 @@ take 焚毒之火 1
 goto @载入腰带库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[焚毒之火]点亮失败！
+messagebox 抱歉，你背包没有[焚毒之火]点亮失败！
 goto @载入腰带库
 [@冰晶之魂]
 #IF
@@ -2094,7 +833,7 @@ take 冰晶之魂 1
 goto @载入腰带库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[冰晶之魂]点亮失败！
+messagebox 抱歉，你背包没有[冰晶之魂]点亮失败！
 goto @载入腰带库
 [@混天绫]
 #IF
@@ -2106,7 +845,7 @@ take 混天绫 1
 goto @载入腰带库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[混天绫]点亮失败！
+messagebox 抱歉，你背包没有[混天绫]点亮失败！
 goto @载入腰带库
 [@噬血灵魂]
 #IF
@@ -2118,7 +857,7 @@ take 噬血灵魂 1
 goto @载入腰带库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[噬血灵魂]点亮失败！
+messagebox 抱歉，你背包没有[噬血灵魂]点亮失败！
 goto @载入腰带库
 [@悲伤之末]
 #IF
@@ -2130,7 +869,7 @@ take 悲伤之末 1
 goto @载入腰带库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[悲伤之末]点亮失败！
+messagebox 抱歉，你背包没有[悲伤之末]点亮失败！
 goto @载入腰带库
 [@救世守望带]
 #IF
@@ -2142,7 +881,7 @@ take 救世守望带 1
 goto @载入腰带库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[救世守望带]点亮失败！
+messagebox 抱歉，你背包没有[救世守望带]点亮失败！
 goto @载入腰带库
 [@祭祖神魔]
 #IF
@@ -2154,7 +893,7 @@ take 祭祖神魔 1
 goto @载入腰带库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[祭祖神魔]点亮失败！
+messagebox 抱歉，你背包没有[祭祖神魔]点亮失败！
 goto @载入腰带库
 [@天下神带]
 #IF
@@ -2165,7 +904,7 @@ SET [221] 1
 take 天下神带 1
 goto @载入腰带库
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[天下神带]点亮失败！
+messagebox 抱歉，你背包没有[天下神带]点亮失败！
 goto @载入腰带库
 
 [@凤凰の飞]
@@ -2178,7 +917,7 @@ take 凤凰の飞 1
 goto @载入戒指库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[凤凰の飞]点亮失败！
+messagebox 抱歉，你背包没有[凤凰の飞]点亮失败！
 goto @载入戒指库
 [@诅咒の亡]
 #IF
@@ -2190,7 +929,7 @@ take 诅咒の亡 1
 goto @载入戒指库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[诅咒の亡]点亮失败！
+messagebox 抱歉，你背包没有[诅咒の亡]点亮失败！
 goto @载入戒指库
 [@天地玄黄]
 #IF
@@ -2202,7 +941,7 @@ take 天地玄黄 1
 goto @载入戒指库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[天地玄黄]点亮失败！
+messagebox 抱歉，你背包没有[天地玄黄]点亮失败！
 goto @载入戒指库
 [@暴力指环]
 #IF
@@ -2214,7 +953,7 @@ take 暴力指环 1
 goto @载入戒指库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[暴力指环]点亮失败！
+messagebox 抱歉，你背包没有[暴力指环]点亮失败！
 goto @载入戒指库
 [@天兽]
 #IF
@@ -2226,7 +965,7 @@ take 天兽 1
 goto @载入戒指库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[天兽]点亮失败！
+messagebox 抱歉，你背包没有[天兽]点亮失败！
 goto @载入戒指库
 [@鬼泣]
 #IF
@@ -2238,7 +977,7 @@ take 鬼泣 1
 goto @载入戒指库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[鬼泣]点亮失败！
+messagebox 抱歉，你背包没有[鬼泣]点亮失败！
 goto @载入戒指库
 [@冉·遗珠]
 #IF
@@ -2250,7 +989,7 @@ take 冉·遗珠 1
 goto @载入戒指库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[冉·遗珠]点亮失败！
+messagebox 抱歉，你背包没有[冉·遗珠]点亮失败！
 goto @载入戒指库
 [@火神·指环]
 #IF
@@ -2262,7 +1001,7 @@ take 火神·指环 1
 goto @载入戒指库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[火神·指环]点亮失败！
+messagebox 抱歉，你背包没有[火神·指环]点亮失败！
 goto @载入戒指库
 [@魔·戒·SSSS]
 #IF
@@ -2274,7 +1013,7 @@ take 魔·戒·SSSS 1
 goto @载入戒指库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[魔·戒·SSSS]点亮失败！
+messagebox 抱歉，你背包没有[魔·戒·SSSS]点亮失败！
 goto @载入戒指库
 [@幻月]
 #IF
@@ -2286,7 +1025,7 @@ take 幻月 1
 goto @载入戒指库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[幻月]点亮失败！
+messagebox 抱歉，你背包没有[幻月]点亮失败！
 goto @载入戒指库
 [@伏魔·九游戒]
 #IF
@@ -2298,7 +1037,7 @@ take 伏魔·九游戒 1
 goto @载入戒指库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[伏魔·九游戒]点亮失败！
+messagebox 抱歉，你背包没有[伏魔·九游戒]点亮失败！
 goto @载入戒指库
 [@血瞳]
 #IF
@@ -2310,7 +1049,7 @@ take 血瞳 1
 goto @载入戒指库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[血瞳]点亮失败！
+messagebox 抱歉，你背包没有[血瞳]点亮失败！
 goto @载入戒指库
 [@万灵之戒]
 #IF
@@ -2322,7 +1061,7 @@ take 万灵之戒 1
 goto @载入戒指库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[万灵之戒]点亮失败！
+messagebox 抱歉，你背包没有[万灵之戒]点亮失败！
 goto @载入戒指库
 [@轩墨魔戒]
 #IF
@@ -2334,7 +1073,7 @@ take 轩墨魔戒 1
 goto @载入戒指库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[轩墨魔戒]点亮失败！
+messagebox 抱歉，你背包没有[轩墨魔戒]点亮失败！
 goto @载入戒指库
 [@至尊魔戒]
 #IF
@@ -2346,7 +1085,7 @@ take 至尊魔戒 1
 goto @载入戒指库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[至尊魔戒]点亮失败！
+messagebox 抱歉，你背包没有[至尊魔戒]点亮失败！
 goto @载入戒指库
 [@天下神指]
 #IF
@@ -2357,7 +1096,7 @@ SET [205] 1
 take 天下神指 1
 goto @载入戒指库
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[天下神指]点亮失败！
+messagebox 抱歉，你背包没有[天下神指]点亮失败！
 goto @载入戒指库
 
 [@守护の神]
@@ -2370,7 +1109,7 @@ take 守护の神 1
 goto @载入手镯库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[守护の神]点亮失败！
+messagebox 抱歉，你背包没有[守护の神]点亮失败！
 goto @载入手镯库
 [@蝴蝶臂环]
 #IF
@@ -2382,7 +1121,7 @@ take 蝴蝶臂环 1
 goto @载入手镯库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[蝴蝶臂环]点亮失败！
+messagebox 抱歉，你背包没有[蝴蝶臂环]点亮失败！
 goto @载入手镯库
 [@狩猎之镯]
 #IF
@@ -2394,7 +1133,7 @@ take 狩猎之镯 1
 goto @载入手镯库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[狩猎之镯]点亮失败！
+messagebox 抱歉，你背包没有[狩猎之镯]点亮失败！
 goto @载入手镯库
 
 [@麒麟臂1.2]
@@ -2407,7 +1146,7 @@ take 麒麟臂[1.2] 1
 goto @载入手镯库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[麒麟臂[1.2]]点亮失败！
+messagebox 抱歉，你背包没有[麒麟臂[1.2]]点亮失败！
 goto @载入手镯库
 
 [@古·镯]
@@ -2420,7 +1159,7 @@ take 古·镯 1
 goto @载入手镯库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[古·镯]点亮失败！
+messagebox 抱歉，你背包没有[古·镯]点亮失败！
 goto @载入手镯库
 [@致命之镯]
 #IF
@@ -2432,7 +1171,7 @@ take 致命之镯 1
 goto @载入手镯库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[致命之镯]点亮失败！
+messagebox 抱歉，你背包没有[致命之镯]点亮失败！
 goto @载入手镯库
 [@怨灵·血怒]
 #IF
@@ -2444,7 +1183,7 @@ take 怨灵·血怒 1
 goto @载入手镯库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[怨灵·血怒]点亮失败！
+messagebox 抱歉，你背包没有[怨灵·血怒]点亮失败！
 goto @载入手镯库
 [@神镯·SSSSS]
 #IF
@@ -2456,7 +1195,7 @@ take 神镯·SSSSS 1
 goto @载入手镯库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[神镯·SSSSS]点亮失败！
+messagebox 抱歉，你背包没有[神镯·SSSSS]点亮失败！
 goto @载入手镯库
 [@原始·吸灵之镯]
 #IF
@@ -2468,7 +1207,7 @@ take 原始·吸灵之镯 1
 goto @载入手镯库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[原始·吸灵之镯]点亮失败！
+messagebox 抱歉，你背包没有[原始·吸灵之镯]点亮失败！
 goto @载入手镯库
 [@天残の噬魂手]
 #IF
@@ -2480,7 +1219,7 @@ take 天残の噬魂手 1
 goto @载入手镯库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[天残の噬魂手]点亮失败！
+messagebox 抱歉，你背包没有[天残の噬魂手]点亮失败！
 goto @载入手镯库
 [@寂寞如天]
 #IF
@@ -2492,7 +1231,7 @@ take 寂寞如天 1
 goto @载入手镯库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[寂寞如天]点亮失败！
+messagebox 抱歉，你背包没有[寂寞如天]点亮失败！
 goto @载入手镯库
 [@魔音离魂·狂暴]
 #IF
@@ -2504,7 +1243,7 @@ take 魔音离魂·狂暴 1
 goto @载入手镯库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[魔音离魂·狂暴]点亮失败！
+messagebox 抱歉，你背包没有[魔音离魂·狂暴]点亮失败！
 goto @载入手镯库
 [@地狱·永生手]
 #IF
@@ -2516,7 +1255,7 @@ take 地狱·永生手 1
 goto @载入手镯库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[地狱·永生手]点亮失败！
+messagebox 抱歉，你背包没有[地狱·永生手]点亮失败！
 goto @载入手镯库
 [@玛法救赎]
 #IF
@@ -2528,7 +1267,7 @@ take 玛法救赎 1
 goto @载入手镯库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[玛法救赎]点亮失败！
+messagebox 抱歉，你背包没有[玛法救赎]点亮失败！
 goto @载入手镯库
 [@承天极破]
 #IF
@@ -2540,7 +1279,7 @@ take 承天极破 1
 goto @载入手镯库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[承天极破]点亮失败！
+messagebox 抱歉，你背包没有[承天极破]点亮失败！
 goto @载入手镯库
 [@天下神镯]
 #IF
@@ -2551,7 +1290,7 @@ SET [189] 1
 take 天下神镯 1
 goto @载入手镯库
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[天下神镯]点亮失败！
+messagebox 抱歉，你背包没有[天下神镯]点亮失败！
 goto @载入手镯库
 
 
@@ -2566,7 +1305,7 @@ take 战神の帝 1
 goto @载入头盔库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[战神の帝]点亮失败！
+messagebox 抱歉，你背包没有[战神の帝]点亮失败！
 
 [@远古恶梦]
 #IF
@@ -2578,7 +1317,7 @@ take 远古恶梦 1
 goto @载入头盔库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[远古恶梦]点亮失败！
+messagebox 抱歉，你背包没有[远古恶梦]点亮失败！
 
 [@神龙之威]
 #IF
@@ -2590,7 +1329,7 @@ take 神龙之威 1
 goto @载入头盔库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[神龙之威]点亮失败！
+messagebox 抱歉，你背包没有[神龙之威]点亮失败！
 
 [@魔之天灾]
 #IF
@@ -2602,7 +1341,7 @@ take 魔之天灾 1
 goto @载入头盔库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[魔之天灾]点亮失败！
+messagebox 抱歉，你背包没有[魔之天灾]点亮失败！
 
 [@逆·鳞]
 #IF
@@ -2614,7 +1353,7 @@ take 逆·鳞 1
 goto @载入头盔库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[逆·鳞]点亮失败！
+messagebox 抱歉，你背包没有[逆·鳞]点亮失败！
 
 [@九州·苍天]
 #IF
@@ -2626,7 +1365,7 @@ take 九州·苍天 1
 goto @载入头盔库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[九州·苍天]点亮失败！
+messagebox 抱歉，你背包没有[九州·苍天]点亮失败！
 
 [@盘龙魂]
 #IF
@@ -2638,7 +1377,7 @@ take 盘龙魂 1
 goto @载入头盔库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[盘龙魂]点亮失败！
+messagebox 抱歉，你背包没有[盘龙魂]点亮失败！
 
 [@星盔]
 #IF
@@ -2650,7 +1389,7 @@ take 星盔 1
 goto @载入头盔库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[星盔]点亮失败！
+messagebox 抱歉，你背包没有[星盔]点亮失败！
 
 [@乾坤]
 #IF
@@ -2662,7 +1401,7 @@ take 乾坤 1
 goto @载入头盔库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[乾坤]点亮失败！
+messagebox 抱歉，你背包没有[乾坤]点亮失败！
 
 [@冰魄之盔]
 #IF
@@ -2674,7 +1413,7 @@ take 冰魄之盔 1
 goto @载入头盔库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[冰魄之盔]点亮失败！
+messagebox 抱歉，你背包没有[冰魄之盔]点亮失败！
 
 [@冥龙·血盔]
 #IF
@@ -2686,7 +1425,7 @@ take 冥龙·血盔 1
 goto @载入头盔库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[冥龙·血盔]点亮失败！
+messagebox 抱歉，你背包没有[冥龙·血盔]点亮失败！
 
 [@月神之裁]
 #IF
@@ -2698,7 +1437,7 @@ take 月神之裁 1
 goto @载入头盔库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[月神之裁]点亮失败！
+messagebox 抱歉，你背包没有[月神之裁]点亮失败！
 
 [@虚无·雷动]
 #IF
@@ -2710,7 +1449,7 @@ take 虚无·雷动 1
 goto @载入头盔库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[虚无·雷动]点亮失败！
+messagebox 抱歉，你背包没有[虚无·雷动]点亮失败！
 
 [@红莲之炎]
 #IF
@@ -2722,7 +1461,7 @@ take 红莲之炎 1
 goto @载入头盔库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[红莲之炎]点亮失败！
+messagebox 抱歉，你背包没有[红莲之炎]点亮失败！
 
 [@提伯斯之怒]
 #IF
@@ -2734,7 +1473,7 @@ take 提伯斯之怒 1
 goto @载入头盔库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[提伯斯之怒]点亮失败！
+messagebox 抱歉，你背包没有[提伯斯之怒]点亮失败！
 
 [@天下神盔]
 #IF
@@ -2745,7 +1484,7 @@ SET [173] 1
 take 天下神盔 1
 goto @载入头盔库
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[天下神盔]点亮失败！
+messagebox 抱歉，你背包没有[天下神盔]点亮失败！
 
 
 
@@ -2760,7 +1499,7 @@ take 精灵の翔 1
 goto @载入项链库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[精灵の翔]点亮失败！
+messagebox 抱歉，你背包没有[精灵の翔]点亮失败！
 goto @载入项链库
 [@神之项链]
 #IF
@@ -2772,7 +1511,7 @@ take 神之项链 1
 goto @载入项链库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[神之项链]点亮失败！
+messagebox 抱歉，你背包没有[神之项链]点亮失败！
 goto @载入项链库
 [@苍龙霸泣]
 #IF
@@ -2784,7 +1523,7 @@ take 苍龙霸泣 1
 goto @载入项链库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[苍龙霸泣]点亮失败！
+messagebox 抱歉，你背包没有[苍龙霸泣]点亮失败！
 goto @载入项链库
 [@开天の链]
 #IF
@@ -2796,7 +1535,7 @@ take 开天の链 1
 goto @载入项链库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[开天の链]点亮失败！
+messagebox 抱歉，你背包没有[开天の链]点亮失败！
 goto @载入项链库
 [@强者之魂]
 #IF
@@ -2808,7 +1547,7 @@ take 强者之魂 1
 goto @载入项链库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[强者之魂]点亮失败！
+messagebox 抱歉，你背包没有[强者之魂]点亮失败！
 goto @载入项链库
 [@通天·王链]
 #IF
@@ -2820,7 +1559,7 @@ take 通天·王链 1
 goto @载入项链库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[通天·王链]点亮失败！
+messagebox 抱歉，你背包没有[通天·王链]点亮失败！
 goto @载入项链库
 [@天地造化链]
 #IF
@@ -2832,7 +1571,7 @@ take 天地造化链 1
 goto @载入项链库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[天地造化链]点亮失败！
+messagebox 抱歉，你背包没有[天地造化链]点亮失败！
 goto @载入项链库
 [@幸运之链]
 #IF
@@ -2844,7 +1583,7 @@ take 幸运之链 1
 goto @载入项链库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[幸运之链]点亮失败！
+messagebox 抱歉，你背包没有[幸运之链]点亮失败！
 goto @载入项链库
 [@神力之链]
 #IF
@@ -2856,7 +1595,7 @@ take 神力之链 1
 goto @载入项链库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[神力之链]点亮失败！
+messagebox 抱歉，你背包没有[神力之链]点亮失败！
 goto @载入项链库
 [@致命之链]
 #IF
@@ -2868,7 +1607,7 @@ take 致命之链 1
 goto @载入项链库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[致命之链]点亮失败！
+messagebox 抱歉，你背包没有[致命之链]点亮失败！
 goto @载入项链库
 [@炼狱裁断]
 #IF
@@ -2880,7 +1619,7 @@ take 炼狱裁断 1
 goto @载入项链库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[炼狱裁断]点亮失败！
+messagebox 抱歉，你背包没有[炼狱裁断]点亮失败！
 goto @载入项链库
 [@血之链]
 #IF
@@ -2892,7 +1631,7 @@ take 血之链 1
 goto @载入项链库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[血之链]点亮失败！
+messagebox 抱歉，你背包没有[血之链]点亮失败！
 goto @载入项链库
 [@死亡审判]
 #IF
@@ -2904,7 +1643,7 @@ take 死亡审判 1
 goto @载入项链库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[死亡审判]点亮失败！
+messagebox 抱歉，你背包没有[死亡审判]点亮失败！
 goto @载入项链库
 [@八卦连环]
 #IF
@@ -2916,7 +1655,7 @@ take 八卦连环 1
 goto @载入项链库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[八卦连环]点亮失败！
+messagebox 抱歉，你背包没有[八卦连环]点亮失败！
 goto @载入项链库
 [@灭世之魔眼]
 #IF
@@ -2928,7 +1667,7 @@ take 灭世之魔眼 1
 goto @载入项链库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[灭世之魔眼]点亮失败！
+messagebox 抱歉，你背包没有[灭世之魔眼]点亮失败！
 goto @载入项链库
 [@天下神链]
 #IF
@@ -2939,7 +1678,7 @@ SET [157] 1
 take 天下神链 1
 goto @载入项链库
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[天下神链]点亮失败！
+messagebox 抱歉，你背包没有[天下神链]点亮失败！
 goto @载入项链库
 
 [@骑士战袍]
@@ -2952,7 +1691,7 @@ take 骑士战袍 1
 goto @载入盔甲库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[骑士战袍]点亮失败！
+messagebox 抱歉，你背包没有[骑士战袍]点亮失败！
 goto @载入盔甲库
 [@猩猩战甲]
 #IF
@@ -2964,7 +1703,7 @@ take 猩猩战甲 1
 goto @载入盔甲库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[猩猩战甲]点亮失败！
+messagebox 抱歉，你背包没有[猩猩战甲]点亮失败！
 goto @载入盔甲库
 [@幽冥の龍]
 #IF
@@ -2976,7 +1715,7 @@ take 幽冥の龍 1
 goto @载入盔甲库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[幽冥の龍]点亮失败！
+messagebox 抱歉，你背包没有[幽冥の龍]点亮失败！
 goto @载入盔甲库
 [@钢铁之铠]
 #IF
@@ -2988,7 +1727,7 @@ take 钢铁之铠 1
 goto @载入盔甲库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[钢铁之铠]点亮失败！
+messagebox 抱歉，你背包没有[钢铁之铠]点亮失败！
 goto @载入盔甲库
 [@天地の防]
 #IF
@@ -3000,7 +1739,7 @@ take 天地の防 1
 goto @载入盔甲库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[天地の防]点亮失败！
+messagebox 抱歉，你背包没有[天地の防]点亮失败！
 goto @载入盔甲库
 [@天使龙翼]
 #IF
@@ -3012,7 +1751,7 @@ take 天使龙翼 1
 goto @载入盔甲库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[天使龙翼]点亮失败！
+messagebox 抱歉，你背包没有[天使龙翼]点亮失败！
 goto @载入盔甲库
 [@仙の摩罗神甲]
 #IF
@@ -3024,7 +1763,7 @@ take 仙の摩罗神甲 1
 goto @载入盔甲库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[仙の摩罗神甲]点亮失败！
+messagebox 抱歉，你背包没有[仙の摩罗神甲]点亮失败！
 goto @载入盔甲库
 [@仙の寒冰守护]
 #IF
@@ -3036,7 +1775,7 @@ take 仙の寒冰守护 1
 goto @载入盔甲库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[仙の寒冰守护]点亮失败！
+messagebox 抱歉，你背包没有[仙の寒冰守护]点亮失败！
 goto @载入盔甲库
 [@傳説神甲]
 #IF
@@ -3049,7 +1788,7 @@ goto @载入盔甲库
 inc U0 1
 
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[傳説神甲]点亮失败！
+messagebox 抱歉，你背包没有[傳説神甲]点亮失败！
 goto @载入盔甲库
 [@绝对防御]
 #IF
@@ -3062,7 +1801,7 @@ goto @载入盔甲库
 inc U0 1
 
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[绝对防御]点亮失败！
+messagebox 抱歉，你背包没有[绝对防御]点亮失败！
 goto @载入盔甲库
 [@堕落·诅咒之翼]
 #IF
@@ -3075,7 +1814,7 @@ goto @载入盔甲库
 inc U0 1
 
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[堕落·诅咒之翼]点亮失败！
+messagebox 抱歉，你背包没有[堕落·诅咒之翼]点亮失败！
 goto @载入盔甲库
 [@龍甲]
 #IF
@@ -3087,7 +1826,7 @@ take 龍甲 1
 goto @载入盔甲库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[龍甲]点亮失败！
+messagebox 抱歉，你背包没有[龍甲]点亮失败！
 goto @载入盔甲库
 [@血腥の战甲]
 #IF
@@ -3100,7 +1839,7 @@ goto @载入盔甲库
 inc U0 1
 
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[血腥の战甲]点亮失败！
+messagebox 抱歉，你背包没有[血腥の战甲]点亮失败！
 goto @载入盔甲库
 [@魅影神甲]
 #IF
@@ -3113,7 +1852,7 @@ goto @载入盔甲库
 inc U0 1
 
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[魅影神甲]点亮失败！
+messagebox 抱歉，你背包没有[魅影神甲]点亮失败！
 goto @载入盔甲库
 [@真·魅影神甲]
 #IF
@@ -3126,7 +1865,7 @@ goto @载入盔甲库
 inc U0 1
 
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[真·魅影神甲]点亮失败！
+messagebox 抱歉，你背包没有[真·魅影神甲]点亮失败！
 goto @载入盔甲库
 [@倚天战甲]
 #IF
@@ -3139,7 +1878,7 @@ goto @载入盔甲库
 inc U0 1
 
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[倚天战甲]点亮失败！
+messagebox 抱歉，你背包没有[倚天战甲]点亮失败！
 goto @载入盔甲库
 [@真·倚天战甲]
 #IF
@@ -3152,7 +1891,7 @@ goto @载入盔甲库
 inc U0 1
 
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[真·倚天战甲]点亮失败！
+messagebox 抱歉，你背包没有[真·倚天战甲]点亮失败！
 goto @载入盔甲库
 [@天下神铠]
 #IF
@@ -3163,10 +1902,16 @@ SET [141] 1
 take 天下神铠 1
 goto @载入盔甲库
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[天下神铠]点亮失败！
+messagebox 抱歉，你背包没有[天下神铠]点亮失败！
 goto @载入盔甲库
 
 [@光之剑]
+#IF
+CHECK [101] 1
+#ACT
+messagebox [光之剑]已经被点亮成功了!!
+break
+
 #IF
 CHECK [101] 0
 CHECKITEM 光之剑 1
@@ -3175,9 +1920,12 @@ SET [101] 1
 take 光之剑 1
 goto @载入军火库
 inc U0 1
+messagebox [光之剑]点亮成功
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[光之剑]点亮失败！
+;messagebox 抱歉，你背包没有[光之剑]点亮失败！
+messagebox 抱歉，你背包没有[光之剑]点亮失败！
 goto @载入军火库
+
 [@蓝灵法杖]
 #IF
 CHECK [102] 0
@@ -3188,8 +1936,9 @@ take 蓝灵法杖 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[蓝灵法杖]点亮失败！
+messagebox 抱歉，你背包没有[蓝灵法杖]点亮失败！
 goto @载入军火库
+
 [@邪恶之剑]
 #IF
 CHECK [103] 0
@@ -3200,7 +1949,7 @@ take 邪恶之剑 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[邪恶之剑]点亮失败！
+messagebox 抱歉，你背包没有[邪恶之剑]点亮失败！
 goto @载入军火库
 [@末日之斧]
 #IF
@@ -3212,7 +1961,7 @@ take 末日之斧 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[末日之斧]点亮失败！
+messagebox 抱歉，你背包没有[末日之斧]点亮失败！
 goto @载入军火库
 [@绿玉屠龙]
 #IF
@@ -3224,7 +1973,7 @@ take 绿玉屠龙 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[绿玉屠龙]点亮失败！
+messagebox 抱歉，你背包没有[绿玉屠龙]点亮失败！
 goto @载入军火库
 [@绿玉裁决]
 #IF
@@ -3236,7 +1985,7 @@ take 绿玉裁决 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[绿玉裁决]点亮失败！
+messagebox 抱歉，你背包没有[绿玉裁决]点亮失败！
 goto @载入军火库
 [@退魔权杖]
 #IF
@@ -3248,10 +1997,16 @@ take 退魔权杖 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[退魔权杖]点亮失败！
+messagebox 抱歉，你背包没有[退魔权杖]点亮失败！
 goto @载入军火库
 
 [@寒冰剑]
+#IF
+CHECK [108] 1
+#ACT
+messagebox [寒冰剑]已经被点亮成功了!!
+break
+
 #IF
 CHECK [108] 0
 CHECKITEM 寒冰剑 1
@@ -3261,7 +2016,7 @@ take 寒冰剑 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[寒冰剑]点亮失败！
+messagebox 抱歉，你背包没有[寒冰剑]点亮失败！
 goto @载入军火库
 [@幽灵の魔]
 #IF
@@ -3274,7 +2029,7 @@ goto @载入军火库
 inc U0 1
 
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[幽灵の魔]点亮失败！
+messagebox 抱歉，你背包没有[幽灵の魔]点亮失败！
 goto @载入军火库
 [@毒龙之身]
 #IF
@@ -3286,7 +2041,7 @@ take  毒龙之身 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[毒龙之身]点亮失败！
+messagebox 抱歉，你背包没有[毒龙之身]点亮失败！
 goto @载入军火库
 
 [@幽冥の鬼爪]
@@ -3299,7 +2054,7 @@ take 幽冥の鬼爪 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[幽冥の鬼爪]点亮失败！
+messagebox 抱歉，你背包没有[幽冥の鬼爪]点亮失败！
 goto @载入军火库
 [@倚天剑]
 #IF
@@ -3311,7 +2066,7 @@ take 倚天剑 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[倚天剑]点亮失败！
+messagebox 抱歉，你背包没有[倚天剑]点亮失败！
 goto @载入军火库
 [@假·破馆珍剑]
 #IF
@@ -3323,7 +2078,7 @@ take 假·破馆珍剑 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[假·破馆珍剑]点亮失败！
+messagebox 抱歉，你背包没有[假·破馆珍剑]点亮失败！
 goto @载入军火库
 [@破碎·破馆珍剑]
 #IF
@@ -3335,7 +2090,7 @@ take  破碎·破馆珍剑 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[破碎·破馆珍剑]点亮失败！
+messagebox 抱歉，你背包没有[破碎·破馆珍剑]点亮失败！
 goto @载入军火库
 [@破馆珍剑]
 #IF
@@ -3347,7 +2102,7 @@ take  破馆珍剑 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[破馆珍剑]点亮失败！
+messagebox 抱歉，你背包没有[破馆珍剑]点亮失败！
 goto @载入军火库
 [@真·破馆珍剑]
 #IF
@@ -3359,7 +2114,7 @@ take  真·破馆珍剑 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[真·破馆珍剑]点亮失败！
+messagebox 抱歉，你背包没有[真·破馆珍剑]点亮失败！
 goto @载入军火库
 
 [@赤血魔剑]
@@ -3372,7 +2127,7 @@ take 赤血魔剑 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[赤血魔剑]点亮失败！
+messagebox 抱歉，你背包没有[赤血魔剑]点亮失败！
 goto @载入军火库
 
 [@小红剑]
@@ -3385,7 +2140,7 @@ take 小红剑 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[小红剑]点亮失败！
+messagebox 抱歉，你背包没有[小红剑]点亮失败！
 goto @载入军火库
 
 [@魅影之刃]
@@ -3398,7 +2153,7 @@ take 魅影之刃 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[魅影之刃]点亮失败！
+messagebox 抱歉，你背包没有[魅影之刃]点亮失败！
 goto @载入军火库
 
 [@真·倚天剑]
@@ -3411,7 +2166,7 @@ take 真·倚天剑 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[真·倚天剑]点亮失败！
+messagebox 抱歉，你背包没有[真·倚天剑]点亮失败！
 goto @载入军火库
 
 [@真·魅影之刃]
@@ -3424,7 +2179,7 @@ take 真·魅影之刃 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[真·魅影之刃]点亮失败！
+messagebox 抱歉，你背包没有[真·魅影之刃]点亮失败！
 goto @载入军火库
 
 [@轩辕剑]
@@ -3437,7 +2192,7 @@ take 轩辕剑 1
 goto @载入军火库
 inc U0 1
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[轩辕剑]点亮失败！
+messagebox 抱歉，你背包没有[轩辕剑]点亮失败！
 goto @载入军火库
 
 [@天下神剑]
@@ -3449,10 +2204,7 @@ SET [123] 1
 take 天下神剑 1
 goto @载入军火库
 #ELSEACT
-SENDMSG 7 抱歉，你背包没有[天下神剑]点亮失败！
+messagebox 抱歉，你背包没有[天下神剑]点亮失败！
 goto @载入军火库
-
-
-
 
 }
