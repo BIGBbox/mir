@@ -6929,172 +6929,171 @@ break
 [@StdModeFunc283]
 #IF
 #ACT
-GAMEGOLD + 1
+money 绑定元宝 + 1
 SENDMSG 7 {增加|56:56:0}{[1]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 
 [@StdModeFunc284]
 #IF
 #ACT
-GAMEGOLD + 2
+money 绑定元宝 + 2
 SENDMSG 7 {增加|56:56:0}{[2]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc285]
 #IF
 #ACT
-GAMEGOLD + 5
+money 绑定元宝 + 5
 SENDMSG 7 {增加|56:56:0}{[5]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc286]
 #IF
 #ACT
-GAMEGOLD + 10
+money 绑定元宝 + 10
 SENDMSG 7 {增加|56:56:0}{[10]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc287]
 #IF
 #ACT
-GAMEGOLD + 50
+money 绑定元宝 + 50
 SENDMSG 7 {增加|56:56:0}{[50]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc288]
 #IF
 #ACT
-GAMEGOLD + 100
+money 绑定元宝 + 100
 SENDMSG 7 {增加|56:56:0}{[100]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc289]
 #IF
 #ACT
-GAMEGOLD + 500
+money 绑定元宝 + 500
 SENDMSG 7 {增加|56:56:0}{[500]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc290]
 #IF
 #ACT
-GAMEGOLD + 1000
+money 绑定元宝 + 1000
 SENDMSG 7 {增加|56:56:0}{[1000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc291]
 #IF
 #ACT
-GAMEGOLD + 5000
+money 绑定元宝 + 5000
 SENDMSG 7 {增加|56:56:0}{[5000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc292]
 #IF
 #ACT
-GAMEGOLD + 10000
+money 绑定元宝 + 10000
 SENDMSG 7 {增加|56:56:0}{[10000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc293]
 #IF
 #ACT
-GAMEGOLD + 100000
+money 绑定元宝 + 100000
 SENDMSG 7 {增加|56:56:0}{[100000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc294]
 #IF
 #ACT
-GAMEGOLD + 500000
+money 绑定元宝 + 500000
 SENDMSG 7 {增加|56:56:0}{[500000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc295]
 #IF
 #ACT
-GAMEGOLD + 1000000
+money 绑定元宝 + 1000000
 SENDMSG 7 {增加|56:56:0}{[1000000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc306]
 #IF
 #ACT
-GAMEGOLD + 120000
+money 绑定元宝 + 120000
 SENDMSG 7 {增加|56:56:0}{[120000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc307]
 #IF
 #ACT
-GAMEGOLD + 150000
+money 绑定元宝 + 150000
 SENDMSG 7 {增加|56:56:0}{[150000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc308]
 #IF
 #ACT
-GAMEGOLD + 170000
+money 绑定元宝 + 170000
 SENDMSG 7 {增加|56:56:0}{[170000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc309]
 #IF
 #ACT
-GAMEGOLD + 200000
+money 绑定元宝 + 200000
 SENDMSG 7 {增加|56:56:0}{[200000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc310]
 #IF
 #ACT
-GAMEGOLD + 250000
+money 绑定元宝 + 250000
 SENDMSG 7 {增加|56:56:0}{[250000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc311]
 #IF
 #ACT
-GAMEGOLD + 300000
+money 绑定元宝 + 300000
 SENDMSG 7 {增加|56:56:0}{[300000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc312]
 #IF
 #ACT
-GAMEGOLD + 350000
+money 绑定元宝 + 350000
 SENDMSG 7 {增加|56:56:0}{[350000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc313]
 #IF
 #ACT
-GAMEGOLD + 400000
+money 绑定元宝 + 400000
 SENDMSG 7 {增加|56:56:0}{[400000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc314]
 #IF
 #ACT
-GAMEGOLD + 600000
+money 绑定元宝 + 600000
 SENDMSG 7 {增加|56:56:0}{[600000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc315]
 #IF
 #ACT
-GAMEGOLD + 750000
+money 绑定元宝 + 750000
 SENDMSG 7 {增加|56:56:0}{[750000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc316]
 #IF
 #ACT
-GAMEGOLD + 800000
+money 绑定元宝 + 800000
 SENDMSG 7 {增加|56:56:0}{[800000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc317]
 #IF
 #ACT
-GAMEGOLD + 1200000
+money 绑定元宝 + 1200000
 SENDMSG 7 {增加|56:56:0}{[1200000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc318]
 #IF
 #ACT
-GAMEGOLD + 1500000
+money 绑定元宝 + 1500000
 SENDMSG 7 {增加|56:56:0}{[1500000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc319]
 #IF
 #ACT
-GAMEGOLD + 2000000
+money 绑定元宝 + 2000000
 SENDMSG 7 {增加|56:56:0}{[2000000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
 
 [@StdModeFunc328]
 #IF
 #ACT
-GAMEGOLD + 100000
+money 绑定元宝 + 100000
 SENDMSG 7 {增加|56:56:0}{[100000]|250:56:0}{元宝，您当前元宝总数为|56:56:0}{[<$GAMEGOLD>]|250:56:0}
-
 
 
 ;---------------------天下币------------------------
