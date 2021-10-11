@@ -169,7 +169,10 @@ OPENNPCSHOWEX 76
 [@ceshi1]
 #if
 #act
-
+mov N$鞭尸几率 1
+mov S$会员_鞭尸几率 2
+inc N$鞭尸几率 <$str(S$会员_鞭尸几率)>
+sendmsg 5 <$str(N$鞭尸几率)>:几率
 ; mov S$装备标记 99
 ; #IF
 ; CHECK [<$str(S$装备标记)>] 1
@@ -215,7 +218,7 @@ OPENNPCSHOWEX 76
 ; #CALL [\任务系统\任务文本.txt] @接取支线任务
 ; #CALL [\捡取鉴定\自动使用物品.txt] @自动使用物品
 ;ChangeBindMoney 元宝 200
-#Call [\Mobile\特殊NPC\TOP图标.txt] @导航
+; #Call [\Mobile\特殊NPC\TOP图标.txt] @导航
 ; #Call [\Mobile\特殊NPC\货币记录.txt] @货币
 ; #CALL [\基础按钮\主界面基础按钮QM.txt] @基础按钮QM
 ; sendmsg 5 <$str([17])>....

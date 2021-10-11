@@ -8015,13 +8015,29 @@ break
 #if
 #act
 
-
 [@OnKillMob]
 #if
 #act
 ;统计怪物击杀数量
 GOTO @击杀怪物记录
 GOTO @世界BOSS记录
+mov N$鞭尸几率 0
+goto @鞭尸
+
+[@鞭尸]
+#if
+#act
+#CALL [\新会员系统\会员属性加成.txt] @会员属性设置
+movr N$随机数 100
+inc N$鞭尸几率 <$str(S$会员_鞭尸几率)>
+; sendmsg 5 <$str(N$鞭尸几率)>::<$str(N$随机数)>
+
+#or
+small <$str(N$随机数)> <$str(S$会员_鞭尸几率)>
+large <$str(S$会员_鞭尸几率)> 99
+#act
+SendCenterMsg 146 0 恭喜你触发鞭尸效果:召唤了一只<$KILLMONNAME>.
+MonGenEx <$MAPTITLE> <$X> <$Y> <$KILLMONNAME> 3 1 0 255
 
 
 [@世界BOSS记录]
