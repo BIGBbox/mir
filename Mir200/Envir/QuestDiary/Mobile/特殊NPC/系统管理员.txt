@@ -170,14 +170,14 @@ OPENNPCSHOWEX 76
 #if
 #act
 
-mov S$装备标记 99
-#IF
-CHECK [<$str(S$装备标记)>] 1
-#act
-; messagebox 该装备已激活!!
-sendmsg 5 标记为1
-#elseact
-sendmsg 5 标记不为1
+; mov S$装备标记 99
+; #IF
+; CHECK [<$str(S$装备标记)>] 1
+; #act
+; ; messagebox 该装备已激活!!
+; sendmsg 5 标记为1
+; #elseact
+; sendmsg 5 标记不为1
 
 
 ; #IF

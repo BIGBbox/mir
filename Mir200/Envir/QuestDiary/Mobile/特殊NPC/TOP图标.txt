@@ -135,7 +135,7 @@ break
 ; break
 
 #if
-not small <$str(U99)> 10
+; not small <$str(U99)> 10
 #act
 dec N$坐标X 65
 INC S$图标2 <Button|id=110|children=110_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00014.png|link=@新首充>

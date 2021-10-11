@@ -199,7 +199,7 @@ break
 
 #if
 #act
-sendmsg 5 T108:<$STR(T108)>
+; sendmsg 5 T108:<$STR(T108)>
 
 #if
 not CheckContainsText <$STR(T108)> 80¼¶ÈÎÎñ

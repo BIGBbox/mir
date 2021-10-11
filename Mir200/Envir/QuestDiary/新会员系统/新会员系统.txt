@@ -205,8 +205,8 @@ INC S$½±Àø±êÌâ1 <RText|id=ÓÒ±ß±êÌâ|x=50.0|y=10.0|size=20|text=<Éý¼¶µ½<$STR(S$½±À
 not small <$STR(S$²ÎÊý)> 4
 small <$STR(U17)> <$STR(S$²ÎÊý)>
 #act
-INC S$½±Àø±êÌâ1 <Button|id=ÃëÉý»áÔ±btn|x=520.0|y=370.0|size=18|nimg=public/sf1/19/button4.png|text=ÃëÉý»áÔ±|link=@³äÖµ½çÃæ>
-INC S$½±Àø±êÌâ1 <RText|id=ÓÒ±ßÃèÊö|x=260.0|y=380.0|size=20|text=<<$STR(S$Éý¼¶ËùÐè³äÖµ)>/FCOLOR=149>>
+INC S$½±Àø±êÌâ1 <Button|id=ÃëÉý»áÔ±btn|x=520.0|y=390.0|size=18|nimg=public/sf1/19/button4.png|text=ÃëÉý»áÔ±|link=@³äÖµ½çÃæ>
+INC S$½±Àø±êÌâ1 <RText|id=ÓÒ±ßÃèÊö|x=260.0|y=400.0|size=20|text=<<$STR(S$Éý¼¶ËùÐè³äÖµ)>/FCOLOR=149>>
 
 
 
@@ -231,26 +231,26 @@ small <$STR(N$ÏÂÒ»¼¶)> <$STR(S$²ÎÊý)>
 #act
 INC S$½±Àø±êÌâ1 <Img|id=ÕÚ¸Ç|x=295|y=42.0|img=public/sf1/19/coverTxt.png|link=@p>
 
-#if
-not small <$STR(S$²ÎÊý)> 4
-not small <$STR(U17)> <$STR(S$²ÎÊý)>
-#act
-INC S$½±Àø±êÌâ1 <Button|id=ÃëÉý»áÔ±btn|x=520.0|y=370.0|size=18|nimg=public/1900000611.png|height=50|width=100|text=¹ºÂòÀñ°ü|link=@¹ºÂòÀñ°ü>
-INC S$½±Àø±êÌâ1 <RText|id=ÓÒ±ß±êÌâ|x=40.0|y=380.0|size=20|text=<ÏÞ¹º1´Î/FCOLOR=149>>
+; #if
+; not small <$STR(S$²ÎÊý)> 4
+; not small <$STR(U17)> <$STR(S$²ÎÊý)>
+; #act
+; INC S$½±Àø±êÌâ1 <Button|id=ÃëÉý»áÔ±btn|x=520.0|y=370.0|size=18|nimg=public/1900000611.png|height=50|width=100|text=¹ºÂòÀñ°ü|link=@¹ºÂòÀñ°ü>
+; INC S$½±Àø±êÌâ1 <RText|id=ÓÒ±ß±êÌâ|x=40.0|y=380.0|size=20|text=<ÏÞ¹º1´Î/FCOLOR=149>>
 
-GetValidstr <$STR(S$Ã¿ÈÕÏÞ¹º´®)> & S$Ã¿ÈÕÃû×ÖºÍÊýÁ¿ S$Ã¿ÈÕÏÞ¹º´®
-GetValidstr <$STR(S$Ã¿ÈÕÃû×ÖºÍÊýÁ¿)> * S$Ã¿ÈÕµÀ¾ßÃû×Ö S$Ã¿ÈÕµÀ¾ßÊýÁ¿
-GetDBItemFieldValue <$STR(S$Ã¿ÈÕµÀ¾ßÃû×Ö)> idx S$Ã¿ÈÕµÀ¾ßID
-INC S$½±Àø±êÌâ1 <ItemShow|id=ÓÒ±ßÃèÊö1|x=260|y=360|itemid=<$STR(S$Ã¿ÈÕµÀ¾ßID)>|itemcount=<$STR(S$Ã¿ÈÕµÀ¾ßÊýÁ¿)>|showtips=1|bgtype=1|scale=0.8>
+; GetValidstr <$STR(S$Ã¿ÈÕÏÞ¹º´®)> & S$Ã¿ÈÕÃû×ÖºÍÊýÁ¿ S$Ã¿ÈÕÏÞ¹º´®
+; GetValidstr <$STR(S$Ã¿ÈÕÃû×ÖºÍÊýÁ¿)> * S$Ã¿ÈÕµÀ¾ßÃû×Ö S$Ã¿ÈÕµÀ¾ßÊýÁ¿
+; GetDBItemFieldValue <$STR(S$Ã¿ÈÕµÀ¾ßÃû×Ö)> idx S$Ã¿ÈÕµÀ¾ßID
+; INC S$½±Àø±êÌâ1 <ItemShow|id=ÓÒ±ßÃèÊö1|x=260|y=360|itemid=<$STR(S$Ã¿ÈÕµÀ¾ßID)>|itemcount=<$STR(S$Ã¿ÈÕµÀ¾ßÊýÁ¿)>|showtips=1|bgtype=1|scale=0.8>
 
 
-#if
-check [<$STR(S$ÏÞ¹º±ê¼Ç)>] 1
-not small <$STR(S$²ÎÊý)> 4
-not small <$STR(U17)> <$STR(S$²ÎÊý)>
-#act
-INC S$½±Àø±êÌâ1 <Button|id=ÃëÉý»áÔ±btn|x=520.0|y=370.0|size=18|nimg=public/1900000611.png|grey=1|height=50|width=100|text=¹ºÂòÀñ°ü>
-INC S$½±Àø±êÌâ1 <RText|id=ÓÒ±ß±êÌâ|x=40.0|y=380.0|size=20|text=<ÏÞ¹º1´Î/FCOLOR=149>>
+; #if
+; check [<$STR(S$ÏÞ¹º±ê¼Ç)>] 1
+; not small <$STR(S$²ÎÊý)> 4
+; not small <$STR(U17)> <$STR(S$²ÎÊý)>
+; #act
+; INC S$½±Àø±êÌâ1 <Button|id=ÃëÉý»áÔ±btn|x=520.0|y=370.0|size=18|nimg=public/1900000611.png|grey=1|height=50|width=100|text=¹ºÂòÀñ°ü>
+; INC S$½±Àø±êÌâ1 <RText|id=ÓÒ±ß±êÌâ|x=40.0|y=380.0|size=20|text=<ÏÞ¹º1´Î/FCOLOR=149>>
 
 
 #if
@@ -358,14 +358,14 @@ mov S$ÁìÈ¡×´Ì¬ ÒÑÁìÈ¡
 
 #if
 #act
-INC S$ÏÂ·½Àñ°ü¿Ø¼þ <Img|id=ÏÂ·½Àñ°ü±êÌâ±³¾°|children={ÏÂ·½Àñ°ü±êÌâ,ÏÂ·½Àñ°übg1,ÏÂ·½Àñ°übg2,ÏÂ·½Àñ°übg3,ÏÂ·½Àñ°ü1,ÏÂ·½Àñ°ü2,ÏÂ·½Àñ°ü3,ÁìÈ¡×´Ì¬°´Å¥}|width=200|x=220|y=340|img=public/bg_hhzy_01_1.png>
+INC S$ÏÂ·½Àñ°ü¿Ø¼þ <Img|id=ÏÂ·½Àñ°ü±êÌâ±³¾°|children={ÏÂ·½Àñ°ü±êÌâ,ÏÂ·½Àñ°übg1,ÏÂ·½Àñ°übg2,ÏÂ·½Àñ°übg3,ÏÂ·½Àñ°ü1,ÏÂ·½Àñ°ü2,ÏÂ·½Àñ°ü3,ÁìÈ¡×´Ì¬°´Å¥}|width=200|x=180|y=370|img=public/bg_hhzy_01_1.png>
 ;INC S$ÏÂ·½Àñ°ü¿Ø¼þ <Text|id=ÏÂ·½Àñ°ü±êÌâ|x=7.0|y=5.0|size=18|color=69|text=<$STR(S$½±Àø±êÌâÎÄ×Ö)>Àñ°ü>
-INC S$ÏÂ·½Àñ°ü¿Ø¼þ <Img|id=ÏÂ·½Àñ°ü±êÌâ|x=27.0|y=5.0|img=public/sf1/19/artFont/<$STR(S$Ð¡±êÌâimg)>.png>
+INC S$ÏÂ·½Àñ°ü¿Ø¼þ <Img|id=ÏÂ·½Àñ°ü±êÌâ|x=35.0|y=5.0|img=public/sf1/19/artFont/<$STR(S$Ð¡±êÌâimg)>.png>
 
-INC S$ÏÂ·½Àñ°ü¿Ø¼þ <Button|id=ÁìÈ¡×´Ì¬°´Å¥|x=-0.0|y=112.0|width=100|height=40|text=<$STR(S$ÁìÈ¡×´Ì¬)>|nimg=public/sf1/19/button1.png|link=@ÁìÈ¡Ã¿ÈÕÀñ°ü>
+INC S$ÏÂ·½Àñ°ü¿Ø¼þ <Button|id=ÁìÈ¡×´Ì¬°´Å¥|x=50.0|y=115.0|width=100|height=40|text=<$STR(S$ÁìÈ¡×´Ì¬)>|nimg=public/sf1/19/button1.png|link=@ÁìÈ¡Ã¿ÈÕÀñ°ü>
 
-mov N$ÏÂ·½Àñ°üµÀ¾ß³õÊ¼X -60
-mov N$ÏÂ·½Àñ°üµÀ¾ß³õÊ¼X1 -55
+mov N$ÏÂ·½Àñ°üµÀ¾ß³õÊ¼X -17
+mov N$ÏÂ·½Àñ°üµÀ¾ß³õÊ¼X1 -12
 mov N$ÏÂ·½Àñ°üµÀ¾ß³õÊ¼Ë÷Òý 1
 ;sendmsg 5 ´®:<$STR(S$ÏÂ·½Àñ°ü´®)>
 
