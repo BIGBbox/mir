@@ -167,6 +167,18 @@ goto @前往主城
 OPENNPCSHOWEX 76
 
 [@ceshi1]
+#if
+#act
+
+mov S$装备标记 99
+#IF
+CHECK [<$str(S$装备标记)>] 1
+#act
+; messagebox 该装备已激活!!
+sendmsg 5 标记为1
+#elseact
+sendmsg 5 标记不为1
+
 
 ; #IF
 ; CheckHaveHero
@@ -194,7 +206,7 @@ OPENNPCSHOWEX 76
 ;ChangeHumAbility 12 + 300 100
 ;ChangeModeEx 20 65535 100 8000
 ;sendmsg 5 100%几率攻击吸血80%
-addskill 彻地钉
+; addskill 彻地钉
 ;mov T1 0
 ;DEPRIVETITLE 开拓·初出江湖
 ;DEPRIVETITLE 先锋·江湖少侠

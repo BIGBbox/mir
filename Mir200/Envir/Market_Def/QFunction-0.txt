@@ -1176,7 +1176,7 @@ break
 [@ButtonClick1]
 #IF
 #ACT
-#CALL [\按钮功能\军火库.txt] @载入军火库
+; #CALL [\按钮功能\军火库.txt] @载入军火库
 
 [@ButtonClick2]
 #IF
