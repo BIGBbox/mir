@@ -27,7 +27,10 @@ mov N$Y¼¤»î°´Å¥×ø±ê 166
 
 mov N$X¼¤»îÌØĞ§×ø±ê 112
 mov N$Y¼¤»îÌØĞ§×ø±ê 148
+
 ReadConfigFileItem ..\QuestDiary\Éñ±øÆ×\<$str(S$µ±Ç°½çÃæ)>.txt <$str(S$µ±Ç°½çÃæ)>ÊıÁ¿ <$str(S$µ±Ç°½çÃæ)>ÊıÁ¿ S$×°±¸ÊıÁ¿
+ReadConfigFileItem ..\QuestDiary\Éñ±øÆ×\<$str(S$µ±Ç°½çÃæ)>.txt <$str(S$µ±Ç°½çÃæ)>ÊıÁ¿ Í·²¿ S$½çÃæÍ·²¿
+
 goto @ÔØÈë½çÃæ
 
 
@@ -42,6 +45,8 @@ ReadConfigFileItem ..\QuestDiary\Éñ±øÆ×\<$str(S$µ±Ç°½çÃæ)>.txt <$str(N$Éñ±øÆ×Ğòº
 
 GetDBItemFieldValue <$STR(S$×°±¸Ãû×Ö)> idx S$×°±¸id
 inc S$¿Ø¼ş <ItemShow|id=item<$str(N$Éñ±øÆ×ĞòºÅ)>|itemid=<$str(S$×°±¸id)>|itemcount=1|x=<$str(N$X×°±¸×ø±ê)>|y=<$str(N$Y×°±¸×ø±ê)>|bgtype=1>
+inc S$¿Ø¼ş <Button|id=rightTips|x=61|y=43|<$str(S$½çÃæÍ·²¿)>>
+
 
 #IF
 CHECK [<$str(S$×°±¸±ê¼Ç)>] 1
@@ -125,6 +130,7 @@ mov N$X¼¤»îÌØĞ§×ø±ê 112
 mov N$Y¼¤»îÌØĞ§×ø±ê 148
 
 ReadConfigFileItem ..\QuestDiary\Éñ±øÆ×\<$str(S$µ±Ç°½çÃæ)>.txt <$str(S$µ±Ç°½çÃæ)>ÊıÁ¿ <$str(S$µ±Ç°½çÃæ)>ÊıÁ¿ S$×°±¸ÊıÁ¿
+ReadConfigFileItem ..\QuestDiary\Éñ±øÆ×\<$str(S$µ±Ç°½çÃæ)>.txt <$str(S$µ±Ç°½çÃæ)>ÊıÁ¿ Í·²¿ S$½çÃæÍ·²¿
 goto @ÔØÈë½çÃæ
 
 
@@ -152,7 +158,6 @@ goto @ÔØÈë½çÃæ
 
 ; <Button|id=click_btn1|x=78 |y=166|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@¹âÖ®½£>
 
-<Button|id=rightTips|x=61|y=43|nimg=public/sf1/1/00515.png|pimg=public/sf1/1/00515.png|tips={ÌáÊ¾£ºÃ¿¼¤»îÒ»¸öÎïÆ·/FCOLOR=249}^{É±¹Ö±¬ÂÊ+1%/FCOLOR=222}^{¶Ô¹ÖÉËº¦+1%/FCOLOR=222}^{È«²¿¼¯Æë¿É»ñµÃÇ¿Á¦ÊôĞÔÌØÊâ³ÆºÅ/FCOLOR=87}^|tipsx=10|tipsy=100|size=18|color=249|link=>
 
 
 }

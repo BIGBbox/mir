@@ -442,7 +442,6 @@
 
 ; <Button|id=rightTips|x=61|y=43|nimg=public/sf1/1/00521.png|pimg=public/sf1/1/00521.png|tips={提示：每激活一个物品/FCOLOR=249}^{杀怪爆率+1%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=222}^{全部集齐可获得强力属性特殊称号/FCOLOR=87}^|tipsx=10|tipsy=100|size=18|color=249|link=>
 
-; ; [@载入腰带库]
 ; [@载入靴子库]
 
 ; <Img|img=public/sf1/1/01389.png|x=220|y=10|children={close_btn,click_btn1,click_btn2,click_btn3,click_btn4,click_btn5,click_btn6,click_btn7,click_btn8,click_btn9,click_btn10,click_btn11,click_btn12,click_btn13,click_btn14,click_btn15,click_btn16,click_btn17,click_btn18,click_btn19,click_btn20,click_btn21,click_btn22,click_btn23
