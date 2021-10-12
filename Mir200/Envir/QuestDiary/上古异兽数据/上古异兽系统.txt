@@ -33,6 +33,12 @@ mov N$获得经验值 <$STR(N$次数)>
 mul N$获得经验值 <$STR(N$次数)>
 
 #if
+large <$STR(N$次数)> 100
+#act
+messagebox 一次最多能使用100个晶石,请分多次使用
+break
+
+#if
 equal <$STR(S$是否付费)> 1
 #act
 mov N$消耗天下币 <$STR(N$次数)>

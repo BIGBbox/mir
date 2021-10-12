@@ -1,17 +1,11 @@
 [Setup]
 CastleName=É³°Í¿Ë
-ChangeDate=1899/12/30
-WarDate=1899/12/30
-<<<<<<< .mine
-IncomeToday=2021/10/12 9:49:02
-||||||| .r30817
-IncomeToday=2021/10/9 0:00:09
-=======
-IncomeToday=2021/10/11 9:48:27
->>>>>>> .r30915
-TotalGold=500
-TodayIncome=500
-OwnGuild=
+ChangeDate=2021/5/13 16:05:03
+WarDate=2021/5/27 16:00:05
+IncomeToday=2021/10/12 16:46:55
+TotalGold=0
+TodayIncome=0
+OwnGuild=0
 [Defense]
 CastleMapList=NEW0151,NEW0152,NEW0153,NEW0154,NEW0155,NEW0156,
 
