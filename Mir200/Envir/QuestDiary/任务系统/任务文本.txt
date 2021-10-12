@@ -348,6 +348,15 @@ large <$CURRTASKID> 17
 ;OPENHYPERLINK 26
 #CALL [\新会员系统\新会员系统.txt] @新会员系统面板
 
+;-------会员支线任务--------
+#if
+small <$CURRTASKID> 39
+large <$CURRTASKID> 34
+#act
+;打开充值窗口
+;OPENHYPERLINK 26
+#CALL [\新会员系统\新会员系统.txt] @新会员系统面板
+
 ;支线任务
 #if
 equal <$CURRTASKID> 27

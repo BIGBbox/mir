@@ -173,6 +173,7 @@ mov N$鞭尸几率 1
 mov S$会员_鞭尸几率 2
 inc N$鞭尸几率 <$str(S$会员_鞭尸几率)>
 sendmsg 5 <$str(N$鞭尸几率)>:几率
+sendmsg 5 U114:::<$str(U114)>
 ; mov S$装备标记 99
 ; #IF
 ; CHECK [<$str(S$装备标记)>] 1

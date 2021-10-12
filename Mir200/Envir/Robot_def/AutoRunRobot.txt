@@ -3,6 +3,8 @@
 #AutoRun NPC RUNONDAY 20:00:00 @开启攻城
 #AutoRun NPC RUNONDAY 22:01:00 @攻城结束
 #AutoRun NPC RUNONDAY 00:00:20 @每日重置
+#AutoRun NPC RUNONDAY 23:59:20 @标记重置
+
 
 ; #AutoRun NPC SEC 10 @每日重置
 

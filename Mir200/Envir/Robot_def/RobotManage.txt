@@ -40,3 +40,8 @@ SendCenterMsg 249 0 ┗-----------------------------------┛ 1 30
 #act
 GMEXECUTE StartQuest @QM零点重置
 
+[@标记重置]
+#if
+#act
+GMEXECUTE StartQuest @QM零点前标记重置
+
