@@ -1,0 +1,68 @@
+[@main]
+#if
+#act
+MOV N$总奖池金额 G9
+mul N$总奖池金额 100
+div N$总奖池金额 60
+; div N$总奖池金额 20
+#say
+<Img|width=545|height=180|img=public/bg_npc_01.png|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
+<Layout|x=545|y=0|width=80|height=80|link=@exit>
+<Button|x=545|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|color=2|tips=|tipsx=10|tipsy=80|size=18|text=尊敬的【<$USERNAME>】>
+<Text|a=0|x=32|y=45|color=249|tips=|tipsx=10|tipsy=80|size=18|text=只有拥有沙捐的沙巴克成员才可领取奖励！>
+;<Text|a=0|x=32|y=65|color=2|tips=|tipsx=10|tipsy=80|size=18|text=你们是这片玛法大陆的掌管者！>
+<Text|a=0|x=32|y=85|color=253|tips=|tipsx=10|tipsy=80|size=18|text=你可以在我这里领取[<$STR(N$总奖池金额)>]RMB点>
+
+<Text|a=0|x=32|y=105|color=249|tips=|tipsx=10|tipsy=80|size=18|text=注意：>
+<Text|a=0|x=98|y=105|color=116|tips=|tipsx=10|tipsy=80|size=18|text=奖励只发放20人，先到先得！目前发放[<$STR(G16)>]人！>
+
+<Text|a=0|x=362|y=135|color=251|tips=|tipsx=10|tipsy=80|size=18|text=我是沙巴克成员|link=@领取攻沙奖励>
+
+
+[@领取攻沙奖励]
+#IF
+ISCASTLEGUILD
+#ACT
+goto @领取攻沙奖励B
+BREAK
+#ELSEACT
+MESSAGEBOX 你不是沙城成员无法领取奖励........
+
+[@领取攻沙奖励B]
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\技术QQ198605888\沙城成员领取记录.txt <$USERNAME> 领取 N$领取沙城奖励数量
+
+#IF
+large N$领取沙城奖励数量 0
+#act
+SENDMSG 5 你已经领取过奖励了
+BREAK
+#elseact
+goto @领取攻沙奖励C
+
+
+[@领取攻沙奖励C]
+#if
+small G16 20
+#ACT
+;mov S$领取临时日期 <$YEAR>-<$MONTH>-<$DAY>
+inc G16 1
+MOV N$总金额 G9
+mul N$总金额 100
+div N$总金额 60
+div N$总金额 20
+money RMB点 + <$STR(N$总金额)>
+sendmsg 沙城奖励领取成功!
+AddTextListEx ..\QuestDiary\技术QQ198605888\沙城成员领取记录.txt <$STR(S$玩家名字数据)>:<$STR(N$总金额)>
+#if
+large G16 19
+#ACT
+sendmsg 0 沙城奖励领取完毕！
+mov G9 0
+
+
+
+
+

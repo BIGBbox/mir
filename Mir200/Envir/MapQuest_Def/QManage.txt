@@ -1,81 +1,13 @@
 ;此脚为登录脚本,人物每次登录时都会执行此脚本,所有人物初始设置都可以放在此脚本中.
 ;修改脚本内容,可用@ReloadManage命令重新加载该脚本,不须重启程序.
 [@Startup]
-#IF
-#ACT
-
-
 #if
-equal A498
-#ac
-;mov A498 <$MONTH>月<$DAY>日
-;ForceDirectories  ..\..\..\..\技术QQ198605888\
-;ForceDirectories  ..\..\..\..\技术QQ198605888\沙城捐献\
-;CreateFile ..\..\..\..\技术QQ198605888\沙城捐献\<$str(A498)>.txt
-;CLEARNAMELIST ..\QuestDiary\技术QQ198605888\沙城捐献\捐献排行.txt
-;CLEARNAMELIST ..\QuestDiary\技术QQ198605888\沙城捐献\捐献数据.txt
-;CLEARNAMELIST ..\QuestDiary\技术QQ198605888\首杀_首爆\首爆_奖励\首爆_已获得.txt
-;CLEARNAMELIST ..\QuestDiary\技术QQ198605888\首杀_首爆\首杀_奖励\首杀_已获得.txt
-
-#if
+not equal G0 <$HFCOUNT> 
 #act
-VAR Integer GLOBAL 一区捐献数量
-VAR Integer GLOBAL 二区捐献数量
-VAR Integer GLOBAL 三区捐献数量
-VAR Integer GLOBAL 四区捐献数量
-VAR Integer GLOBAL 五区捐献数量
-VAR Integer GLOBAL 合区捐献数量
-LOADVAR GLOBAL 一区捐献数量 ..\..\..\..\技术QQ198605888\沙城捐献\<$str(A498)>.txt
-LOADVAR GLOBAL 二区捐献数量 ..\..\..\..\技术QQ198605888\沙城捐献\<$str(A498)>.txt
-LOADVAR GLOBAL 三区捐献数量 ..\..\..\..\技术QQ198605888\沙城捐献\<$str(A498)>.txt
-LOADVAR GLOBAL 四区捐献数量 ..\..\..\..\技术QQ198605888\沙城捐献\<$str(A498)>.txt
-LOADVAR GLOBAL 五区捐献数量 ..\..\..\..\技术QQ198605888\沙城捐献\<$str(A498)>.txt
-LOADVAR GLOBAL 合区捐献数量 ..\..\..\..\技术QQ198605888\沙城捐献\<$str(A498)>.txt
-
-GetListString  ..\QuestDiary\技术QQ198605888\沙城捐献\捐献排行.txt 0 <$str(a491)> <$str(G491)>
-GetListString  ..\QuestDiary\技术QQ198605888\沙城捐献\捐献排行.txt 1 <$str(a492)> <$str(G492)>
-GetListString  ..\QuestDiary\技术QQ198605888\沙城捐献\捐献排行.txt 2 <$str(a493)> <$str(G493)>
-
-
-#if
-equal G499 0
-CheckContainsText <$SERVERNAME> 01区
-#act
-mov G499 1
-CALCVAR GLOBAL 一区捐献数量 = 0
-SAVEVAR GLOBAL 一区捐献数量 ..\..\..\..\技术QQ198605888\沙城捐献\<$str(A498)>.txt
-
-#if
-equal G499 0
-CheckContainsText <$SERVERNAME> 02区
-#act
-mov G499 1
-CALCVAR GLOBAL 二区捐献数量 = 0
-SAVEVAR GLOBAL 二区捐献数量 ..\..\..\..\技术QQ198605888\沙城捐献\<$str(A498)>.txt
-
-#if
-equal G499 0
-CheckContainsText <$SERVERNAME> 03区
-#act
-mov G499 1
-CALCVAR GLOBAL 三区捐献数量 = 0
-SAVEVAR GLOBAL 三区捐献数量 ..\..\..\..\技术QQ198605888\沙城捐献\<$str(A498)>.txt
-
-#if
-equal G499 0
-CheckContainsText <$SERVERNAME> 04区
-#act
-mov G499 1
-CALCVAR GLOBAL 四区捐献数量 = 0
-SAVEVAR GLOBAL 四区捐献数量 ..\..\..\..\技术QQ198605888\沙城捐献\<$str(A498)>.txt
-
-#if
-equal G499 0
-CheckContainsText <$SERVERNAME> 05区
-#act
-mov G499 1
-CALCVAR GLOBAL 五区捐献数量 = 0
-SAVEVAR GLOBAL 五区捐献数量 ..\..\..\..\技术QQ198605888\沙城捐献\<$str(A498)>.txt
+inc G0 1
+CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
+CLEARNAMELIST ..\QuestDiary\捐献系统\捐献排名.txt
+; SortHumVar 沙城捐献 S$玩家名字 N$捐献数额 0 1 3
 
 [@Login]
 
@@ -732,3 +664,27 @@ equal U20 0
 #ACT
 #CALL [\游戏登陆\登陆脚本.txt] @每日首次登陆触发
 mov U20 1
+
+[@捐献系统_属性_重新分配]
+#if
+#act
+DELAYGOTO 1000 @延迟重置沙捐属性
+DELSKILL 十步一杀
+
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 0 S$玩家名字1 N$捐献数量1
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 1 S$玩家名字2 N$捐献数量2
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 2 S$玩家名字3 N$捐献数量3
+
+#or
+equal <$USERNAME> <$str(S$玩家名字1)>
+equal <$USERNAME> <$str(S$玩家名字2)>
+equal <$USERNAME> <$str(S$玩家名字3)>
+#act
+ADDSKILL 十步一杀
+
+[@延迟重置沙捐属性]
+#if
+#act
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+#CALL [\属性重载\神力倍攻.txt] @对话框倍攻
+#CALL [\属性重载\游戏爆率.txt] @暴率

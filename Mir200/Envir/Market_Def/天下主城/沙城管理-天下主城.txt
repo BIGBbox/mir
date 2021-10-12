@@ -4,13 +4,12 @@
 #ACT
 #SAY
 
-<Img|img=public/sf1/1/01095.png|x=330|y=120|children={close_btn,click_btn,行会名,行会管理员,创建行会,增加行会人数,攻城描述,rightTips,大门,复活,仓库,服饰店,元宝}|bg=1|reset=1|move=1>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=1029|y=130|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
+<Img|img=public/sf1/1/01095.png|x=200|y=80|children={close_btn,click_btn,行会名,行会管理员,创建行会,增加行会人数,攻城描述,rightTips,大门,复活,仓库,服饰店,元宝}|bg=1|reset=1|move=1>
+<Button|x=899|y=90|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
 
 <RText|id=行会名|x=420|y=247|color=149|size=16|text=<[<$OWNERGUILD>]/FCOLOR=222>>
 <RText|id=行会管理员|x=420|y=265|color=149|size=16|text=<[<$LORD>]/FCOLOR=151>>
-;<RText|id=元宝|x=635|y=52|color=149|size=16|text=<0000000000/FCOLOR=151>>
+; <RText|id=元宝|x=635|y=52|color=149|size=16|text=<ITEMCOUNT_元宝/FCOLOR=151>>
 
 <Button|id=创建行会|x=310|y=310|nimg=public/sf1/1/00386.png|pimg=public/sf1/1/00387.png|tips={创建条件：/FCOLOR=250}^{所需等级：50级/FCOLOR=251}^{所需材料：沃玛号角 * 1/FCOLOR=251}^|tipsx=10|tipsy=80|size=18|color=249|link=@@INPUTSTRING70(请输入建立行会的名字：)>
 <Button|id=增加行会人数|x=310|y=330|nimg=public/sf1/1/00388.png|pimg=public/sf1/1/00389.png|tips={增加行会人数条件：/FCOLOR=250}^{所需天下币：10000/FCOLOR=251}^{可增加人数：+ 10/FCOLOR=251}^|tipsx=10|tipsy=80|size=18|color=249|link=@增加行会人数>
@@ -20,27 +19,29 @@
 <Button|id=仓库|x=320|y=425|nimg=public/sf1/1/00392.png|pimg=public/sf1/1/00393.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@前进沙城仓库>
 <Button|id=服饰店|x=420|y=425|nimg=public/sf1/1/00394.png|pimg=public/sf1/1/00395.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@前进沙城服装>
 
-;<Button|id=0|x=482|y=180|public/sf1/1/00386.png|pimg=public/sf1/1/00387.png|tips=|tipsx=10|tipsy=80|size=18|color=249|text=前进影之道|link=@前进影之道>
+; <Button|id=0|x=482|y=180|public/sf1/1/00386.png|pimg=public/sf1/1/00387.png|tips=|tipsx=10|tipsy=80|size=18|color=249|text=前进影之道|link=@前进影之道>
 
 ;<>  <imgex:0:396:397:396:10:12|/@前进影之道>
 
 
 [@前进沙城大门]
 #IF
-CHECKTITLE 沙城捐献
+; CHECKTITLE 沙城捐献
+not CHECKUNDERWAR 沙巴克
 #ACT
 MOVR N$随机X 674 679
 MOVR N$随机Y 332 338
 MAPMOVE N3 <$STR(N$随机X)> <$STR(N$随机Y)>
 SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|249:39:0}{进入了沙城大门区域!|116:39:0}
 #elseact
-MessageBox 传送失败??\\1、不在攻城期间或没有沙城捐献
+MessageBox 传送失败??\\1、不在攻城期间
 BREAK
 
 
 [@前进沙城仓库]
 #IF
-CHECKTITLE 沙城捐献
+check [11] 0
+CHECKUNDERWAR 沙巴克
 #ACT
 MAPMOVE N3 595 292
 SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|249:39:0}{进入了沙城仓库区域!|116:39:0}
@@ -51,7 +52,8 @@ BREAK
 
 [@前进沙城服装]
 #IF
-CHECKTITLE 沙城捐献
+check [11] 0
+CHECKUNDERWAR 沙巴克
 #ACT
 MAPMOVE N3 662 286
 SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|249:39:0}{进入了沙城服装店区域!|116:39:0}
@@ -62,7 +64,8 @@ BREAK
 
 [@前进复活点]
 #IF
-CHECKTITLE 沙城捐献
+check [11] 0
+CHECKUNDERWAR 沙巴克
 #ACT
 MAPMOVE N3 630 283
 SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|249:39:0}{进入了沙城复活点区域!|116:39:0}
@@ -75,9 +78,9 @@ BREAK
 
 [@前进影之道]
 #IF
-CHECKUNDERWAR 沙巴克
+; CHECKUNDERWAR 沙巴克
 #ACT
-MAPMOVE YZD
+MAPMOVE YZD 
 SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|249:39:0}{进入了影之道区域!|116:39:0}
 #elseact
 MessageBox 传送失败??\\1、不在攻城期间

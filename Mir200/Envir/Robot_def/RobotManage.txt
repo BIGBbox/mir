@@ -19,6 +19,9 @@ AddAttackSabukAll 0
 CheckContainsText <$SERVERNAME> 合区
 #ACT
 MOV G498 1
+CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
+CLEARNAMELIST ..\QuestDiary\捐献系统\捐献排名.txt
+ClearHumCustVar 沙城捐献 0
 SendCenterMsg 250 0 ┏-----------------------------------┓ 1 30
 SendCenterMsg 250 0 ┠-----------攻城战已开启------------┨ 1 30
 SendCenterMsg 250 0 ┗-----------------------------------┛ 1 30
@@ -31,6 +34,7 @@ SendCenterMsg 250 0 ┗-----------------------------------┛ 1 30
 [@攻城结束]
 #IF
 #ACT
+CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
 SendCenterMsg 249 0 ┏-----------------------------------┓ 1 30
 SendCenterMsg 249 0 ┠-----------攻城战已结束------------┨ 1 30
 SendCenterMsg 249 0 ┗-----------------------------------┛ 1 30
@@ -40,4 +44,9 @@ SendCenterMsg 249 0 ┗-----------------------------------┛ 1 30
 #act
 GMEXECUTE StartQuest @QM零点重置
 
+#IF
+large <$HFCOUNT> 0
+#ACT
+DELNPC 攻城奖池领取
+mov G9 0
 

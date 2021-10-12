@@ -22,6 +22,31 @@ mul N$临时爆率提升 50
 
 INC N$暴率加成 <$str(N$临时爆率提升)>
 
+;---------沙捐----------------
+; 前三倍攻加成
+#IF
+check [11] 1
+#ACT
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 0 S$玩家名字1 N$捐献数量1
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 1 S$玩家名字2 N$捐献数量2
+GetListString ..\QuestDiary\捐献系统\捐献排名.txt 2 S$玩家名字3 N$捐献数量3
+
+#if
+equal <$USERNAME> <$str(S$玩家名字1)>
+#act
+INC N$暴率加成 120
+
+#if
+equal <$USERNAME> <$str(S$玩家名字2)>
+#act
+INC N$暴率加成 70
+
+#if
+equal <$USERNAME> <$str(S$玩家名字3)>
+#act
+INC N$暴率加成 50
+
+
 #IF
 CHECKTITLE 三星
 #act
