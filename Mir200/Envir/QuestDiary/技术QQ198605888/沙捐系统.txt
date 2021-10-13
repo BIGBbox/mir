@@ -34,7 +34,7 @@ GOTO @读取数据
 
 <RText|id=5|children=5_1|x=74.0|y=60|color=249|size=16|text=<你当前的RMB点:/FCOLOR=249>                                               <你当前累计捐献金额:/FCOLOR=6> <$human(沙城捐献)>>
     <Text|id=5_1|text=$STM(ITEMCOUNT_RMB点)|x=130|y=0|size=16>
-<RText|id=6|x=74.0|y=80|color=255|size=16|text=<最低捐献:/FCOLOR=250><3000个RMB点起/FCOLOR=253> <累计捐献达到5000RMB点,即可获得属性加成/FCOLOR=228> <排名越高,属性越强!/FCOLOR=67> >
+; <RText|id=6|x=74.0|y=80|color=255|size=16|text=<最低捐献:/FCOLOR=250><3000个RMB点起/FCOLOR=253> <累计捐献达到5000RMB点,即可获得属性加成/FCOLOR=228> <排名越高,属性越强!/FCOLOR=67> >
 
 <Img|id=特效控件1|children={1_1,1_2,1_3,1_4,1_5,1_6,2_1,2_2,2_3,2_4,2_5,2_6,3_1,3_2,3_3,3_4,3_5,3_6,}|x=50|y=95|height=1|width=1|img=public/0.png>
     <Text|id=1_1|x=87|y=25|color=254|tips=|tipsx=10|tipsy=80|size=18|text=第一名:>
@@ -335,7 +335,7 @@ break
 #if
 equal S$玩家名字1
 #act
-mov N$计算数量 15000
+mov N$计算数量 10
 dec N$计算数量 <$HUMAN(沙城捐献)>
 messagebox 本次抢榜需花费<$STR(N$计算数量)>，是否一键抢榜？ @确认抢榜 @取消
 break

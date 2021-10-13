@@ -9,14 +9,15 @@ break
 
 [@攻城提示]
 #IF
-CheckContainsText <$SERVERNAME> 合区
+; CheckContainsText <$SERVERNAME> 合区
 #ACT
+SendCenterMsg 250 0 ┏------------攻城提示---------------┓ 1 30
 AddAttackSabukAll 0
 
 
 [@开启攻城]
 #IF
-CheckContainsText <$SERVERNAME> 合区
+; CheckContainsText <$SERVERNAME> 合区
 #ACT
 MOV G498 1
 CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt

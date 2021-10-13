@@ -27,7 +27,7 @@
 [@前进沙城大门]
 #IF
 ; CHECKTITLE 沙城捐献
-not CHECKUNDERWAR 沙巴克
+CHECKUNDERWAR 沙巴克
 #ACT
 MOVR N$随机X 674 679
 MOVR N$随机Y 332 338
@@ -40,7 +40,7 @@ BREAK
 
 [@前进沙城仓库]
 #IF
-check [11] 0
+check [11] 1
 CHECKUNDERWAR 沙巴克
 #ACT
 MAPMOVE N3 595 292
@@ -52,7 +52,7 @@ BREAK
 
 [@前进沙城服装]
 #IF
-check [11] 0
+check [11] 1
 CHECKUNDERWAR 沙巴克
 #ACT
 MAPMOVE N3 662 286
@@ -64,7 +64,7 @@ BREAK
 
 [@前进复活点]
 #IF
-check [11] 0
+check [11] 1
 CHECKUNDERWAR 沙巴克
 #ACT
 MAPMOVE N3 630 283
