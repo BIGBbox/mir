@@ -106,6 +106,36 @@ CHECKITEM 50天下币
 take 50天下币 1
 goto @StdModeFunc301
 
+#IF
+CHECKITEM 100天下币
+#ACT
+take 100天下币 1
+goto @StdModeFunc302
+
+#IF
+CHECKITEM 500天下币
+#ACT
+take 500天下币 1
+goto @StdModeFunc303
+
+#IF
+CHECKITEM 1000天下币
+#ACT
+take 1000天下币 1
+goto @StdModeFunc304
+
+#IF
+CHECKITEM 5000天下币
+#ACT
+take 5000天下币 1
+goto @StdModeFunc330
+
+#IF
+CHECKITEM 10000天下币
+#ACT
+take 10000天下币 1
+goto @StdModeFunc331
+
 ; GAMEDIAMOND + 50
 ; SENDMSG 7
 
