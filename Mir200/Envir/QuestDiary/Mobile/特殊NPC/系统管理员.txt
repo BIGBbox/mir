@@ -14,7 +14,7 @@ ISADMIN
 
 <Button|x=40|y=70|nimg=public/bg_hhzy_01_3.png|text=提升等级|link=@@InPutString98(请输入增加的等级)>
 <Button|x=40|y=110|nimg=public/bg_hhzy_01_3.png|text=转生5级|link=@02>
-<Button|x=40|y=150|nimg=public/bg_hhzy_01_3.png|text=无敌模式|link=@03>
+<Button|x=40|y=150|nimg=public/bg_hhzy_01_3.png|text=无敌模式|link=@@InPutString33(是否开启无敌? 1:开启,0关闭)>
 <Button|x=40|y=190|nimg=public/bg_hhzy_01_3.png|text=增加RMB点|link=@04>
 ;<Button|x=40|y=230|nimg=public/bg_hhzy_01_3.png|text=打开仓库|link=@05>
 <Button|x=40|y=230|nimg=public/bg_hhzy_01_3.png|text=打开仓库|link=@getback>
@@ -87,6 +87,7 @@ OPENNPCSHOWEX 21
 SetOffTimer 235
 sendmsg 5 定时器自动销毁
 close
+
 
 [@InPutString99]
 ;检测变量是否合法
@@ -175,12 +176,14 @@ inc N$鞭尸几率 <$str(S$会员_鞭尸几率)>
 sendmsg 5 <$str(N$鞭尸几率)>:几率
 sendmsg 5 U114:::<$str(U114)>:::<$HFCOUNT>::::<$str(U20)>
 ; #IF
+REPAIRCASTLE
 ; #ACT
 GetBindMoney 绑定元宝 S1
 SENDMSG 6 你当前关联元宝的货1币有:<$STR(S1)>个。
-CreateNPC 攻城奖池领取 天下主城 151 105 1192 攻城奖池NPC
+; CreateNPC 攻城奖池领取 天下主城 151 85 1192 攻城奖池NPC
+; sendmsg  5 测试
 ; DELNPC 攻城奖池领取
-; CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
+CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
 ; mov S$装备标记 99
 ; #IF
 ; CHECK [<$str(S$装备标记)>] 1
@@ -850,12 +853,19 @@ RENEWLEVEL 5 0 0
 
 
 
-[@03]
-#IF
-#ACT
-ChangeModeEx 1 65530
-sendmsg 5 开启无敌模式!
+[@InPutString33]
 
+#IF
+equal <$STR(S33)> 1
+#ACT
+ChangeModeEx 1 65535
+sendmsg 5 开启无敌模式成功!
+
+#IF
+equal <$STR(S33)> 0
+#ACT
+ChangeModeEx 1 1
+sendmsg 5 关闭无敌模式成功!
 
 [@04]
 

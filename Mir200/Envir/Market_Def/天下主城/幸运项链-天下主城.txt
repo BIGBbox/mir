@@ -17,11 +17,12 @@ GETITEMADDVALUE 3 5 N$项链幸运
 <Layout|x=597|y=3|width=80|height=80|link=@exit>
 <Button|x=769|y=140|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
 
-<Img|id=合成描述|children={1_0,1_1,1_2,1_3}|x=36|y=0|height=1|width=1|img=public/1900000665.png>
+<Img|id=合成描述|children={1_0,1_1,1_2,1_3,1_4}|x=36|y=0|height=1|width=1|img=public/1900000665.png>
     <Text|id=1_0|x=16|y=65|color=70|tips=|tipsx=10|tipsy=80|size=16|text=1、游戏内最高幸运 +12 可以触发最高攻击>
     <Text|id=1_1|x=16|y=95|color=250|tips=|tipsx=10|tipsy=80|size=16|text=2、游戏内所有怪物掉落的项链均有几率 +5 幸运极品>
     <Text|id=1_2|x=16|y=125|color=70|tips=|tipsx=10|tipsy=80|size=16|text=3、洗炼项链的幸运值随机增加1-5点>
     <Text|id=1_3|x=16|y=155|color=70|tips=|tipsx=10|tipsy=80|size=16|text=4、请将要洗炼的项链穿戴在项链部位再点击按钮>
+    <Text|id=1_4|x=260|y=230|color=250|tips=|tipsx=10|tipsy=80|size=16|text=洗练费用：50000元宝>
 
 <RText|id=道具信息|x=80.0|y=184.0|color=250|size=17|text=<你佩戴的项链是：/FCOLOR=253><[<$NECKLACE>]/FCOLOR=254><当前幸运：/FCOLOR=253><+<$STR(N$项链幸运)>/FCOLOR=254>>
 

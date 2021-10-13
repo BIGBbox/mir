@@ -22,6 +22,8 @@ AddAttackSabukAll 0
 MOV G498 1
 CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
 CLEARNAMELIST ..\QuestDiary\捐献系统\捐献排名.txt
+CLEARNAMELIST ..\QuestDiary\捐献系统\捐献数据.txt
+CLEARNAMELIST ..\QuestDiary\技术QQ198605888\沙城成员领取记录.txt
 ClearHumCustVar 沙城捐献 0
 SendCenterMsg 250 0 ┏-----------------------------------┓ 1 30
 SendCenterMsg 250 0 ┠-----------攻城战已开启------------┨ 1 30

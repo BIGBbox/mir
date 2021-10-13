@@ -119,8 +119,13 @@ equal  S$玩家名字3 <$USERNAME>
 #act
 mov S$你的当前排名 第3名
 
+#if
+check [11] 1
+#act
+mov S$你的当前排名 已捐献
+
 #IF
-LARGE N$捐献数量1 14999
+; LARGE N$捐献数量1 14999
 #ACT
 MOV S$玩家1_排版 <$STR(S$玩家名字1)>
 MOV S$捐献数量1_排版 <$STR(N$捐献数量1)>
@@ -129,7 +134,7 @@ MOV S$玩家1_排版 暂无
 MOV S$捐献数量1_排版 暂无
 
 #IF
-LARGE N$捐献数量2 9999
+; LARGE N$捐献数量2 9999
 #ACT
 MOV S$玩家2_排版 <$STR(S$玩家名字2)>
 MOV S$捐献数量2_排版 <$STR(N$捐献数量2)>
@@ -138,7 +143,7 @@ MOV S$玩家2_排版 暂无
 MOV S$捐献数量2_排版 暂无
 
 #IF
-LARGE N$捐献数量3 
+; LARGE N$捐献数量3 
 #ACT
 MOV S$玩家3_排版 <$STR(S$玩家名字3)>
 MOV S$捐献数量3_排版 <$STR(N$捐献数量3)>
@@ -174,7 +179,7 @@ MESsAGEBOX 当前RMB点数量不足【<$STR(N$捐献_输入数量)>】...
 break
 
 #IF
-NOT CHECKTEXTLIST ..\QuestDiary\捐献系统\捐献名单.txt <$USERNAME>
+check [11] 0
 SMALL N$捐献_输入数量 300
 #ACT
 MESsAGEBOX 首次捐献必须大于300RMB点！
@@ -208,9 +213,7 @@ messagebox 捐献成功!
 #IF
 NOT CHECKTEXTLIST ..\QuestDiary\捐献系统\捐献名单.txt <$USERNAME>
 #ACT
-
 money RMB点 - <$STR(N$捐献_输入数量)>
-
 SET [11] 1
 
 ; INC G9 <$STR(N$捐献_输入数量)>

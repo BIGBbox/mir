@@ -22,7 +22,7 @@ mov <$STR(S$狂暴显示2)> <PlayImg:1:2880:10:100:0:-20:0:0>
 <Img|id=特效控件1|children={1_1,1_2,1_3,1_4,1_5,1_6,1_7,1_8,1_9,2_1,2_2,2_3,2_4,2_5,2_6,2_7,2_8,2_9,2_10,3_1,3_2,3_3,3_4,3_5,3_6,button_click}|x=0|y=75|height=1|width=1|img=public/0.png>
     <Text|id=1_1|x=140|y=65|color=70|size=16|text=提升自身修炼境界，获取狂暴>
 
-    <RText|id=1_2|x=57|y=85|size=16|color=255|text=<1、/FCOLOR=251><开启狂暴模式需要:/FCOLOR=146><100RMB点/FCOLOR=58>>
+    <RText|id=1_2|x=57|y=85|size=16|color=255|text=<1、/FCOLOR=251><开启狂暴模式需要:/FCOLOR=146><200RMB点/FCOLOR=58>>
     <RText|id=1_5|x=57|y=110|size=16|color=255|text=<2、/FCOLOR=251><开启狂暴获得:/FCOLOR=146><1.1/FCOLOR=151><倍属性提升且升华/FCOLOR=146><全属性:/FCOLOR=19><+50！/FCOLOR=253>>
     <RText|id=2_2|x=57|y=135|size=16|color=255|text=<3、/FCOLOR=251><开启狂暴获得:/FCOLOR=146><回收加成+50%/FCOLOR=58><吸血+5%/FCOLOR=19>>
     <RText|id=2_6|x=57|y=160|size=16|color=255|text=<4、/FCOLOR=251><被人物击杀后状态消失:/FCOLOR=146><（击杀者可获得50RMB点奖励）/FCOLOR=58>>
@@ -39,9 +39,9 @@ break
 
 
 #IF
-CHECKMONEY RMB点 > 99
+CHECKMONEY RMB点 > 199
 #act
-money RMB点 - 100
+money RMB点 - 200
 CONFERTITLE 狂暴
 #CALL [\属性重载\武器吸血.txt] @武器吸血
 SetIcon 2 1 2880 53 70 10 0 100 0

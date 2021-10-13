@@ -170,17 +170,19 @@ inc U114 1
 
 [@OnTimer5]
 
-#if
-check [18] 1
-not small <$STR(U17)> 2
-#act
-#CALL [\装备回收\自动回收.txt] @自动回收
+; #if
+; check [18] 1
+; not small <$STR(U17)> 2
+; not CHECKBAGSIZE 7
+; #act
+; #CALL [\装备回收\自动回收.txt] @自动回收
 
-#if
-check [18] 1
-large <$STR(U19)> <$UTCNOW8>
-#act
-#CALL [\装备回收\自动回收.txt] @自动回收
+; #if
+; check [18] 1
+; large <$STR(U19)> <$UTCNOW8>
+; not CHECKBAGSIZE 7
+; #act
+; #CALL [\装备回收\自动回收.txt] @自动回收
 
 [@OnTimer3]
 #IF

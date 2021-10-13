@@ -32,14 +32,14 @@ MESSAGEBOX 你不是沙城成员无法领取奖励........
 [@领取攻沙奖励B]
 #if
 #act
-ReadConfigFileItem ..\QuestDiary\技术QQ198605888\沙城成员领取记录.txt <$USERNAME> 领取 N$领取沙城奖励数量
+GetListString ..\QuestDiary\技术QQ198605888\沙城成员领取记录.txt <$USERNAME> 领取 N$领取沙城奖励数量
 
 #IF
-large N$领取沙城奖励数量 0
+;large <$str(N$领取沙城奖励数量)> 0
 #act
-SENDMSG 5 你已经领取过奖励了
-BREAK
-#elseact
+;messagebox 你已经领取过奖励了
+;BREAK
+;#elseact
 goto @领取攻沙奖励C
 
 
@@ -54,15 +54,11 @@ mul N$总金额 100
 div N$总金额 60
 div N$总金额 20
 money RMB点 + <$STR(N$总金额)>
-sendmsg 沙城奖励领取成功!
+sendmsg 5 沙城奖励领取成功!
 AddTextListEx ..\QuestDiary\技术QQ198605888\沙城成员领取记录.txt <$STR(S$玩家名字数据)>:<$STR(N$总金额)>
 #if
 large G16 19
 #ACT
-sendmsg 0 沙城奖励领取完毕！
+messagebox 沙城奖励领取完毕！
+DELNPC 攻城奖池领取
 mov G9 0
-
-
-
-
-

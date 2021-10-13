@@ -1991,6 +1991,22 @@ break
 ;捡取触发-------------------
 
 [@PickUpItemEx]
+
+#if
+check [18] 1
+not small <$STR(U17)> 2
+not CHECKBAGSIZE 7
+#act
+#CALL [\装备回收\自动回收.txt] @自动回收
+
+#if
+check [18] 1
+large <$STR(U19)> <$UTCNOW8>
+not CHECKBAGSIZE 7
+#act
+#CALL [\装备回收\自动回收.txt] @自动回收
+
+
 #if
 #act
 LINKPICKUPITEM
@@ -7653,7 +7669,7 @@ CHECKCURRTARGETRACE = 0
 NOT CHECKUNDERWAR 沙巴克
 #ACT
 
-SendCenterMsg 250 0 战报：【<$USERNAME>】干掉了拥有【狂暴之力】的[<$CURRRTARGETNAME>]获得50RMB点奖励！！ 1 5
+SendCenterMsg 250 0 战报：【<$USERNAME>】干掉了拥有【狂暴之力】的[<$CURRRTARGETNAME>]获得100RMB点奖励！！ 1 5
 
 #IF
 #ACT
