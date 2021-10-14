@@ -7960,6 +7960,7 @@ BREAK
 
 #if
 #act
+goto @开启自动挂机
 ; sendmsg 5 进入地图:<$str(U99)>
 #if
 equal <$MAPTITLE> 新手训练营
@@ -8408,7 +8409,6 @@ mov U20 1
 
 [@开启自动挂机]
 #act
-sendmsg 5 开始挂机!!
 #Call [\自动挂机\执行自动挂机.txt] @执行自动挂机
 
 [@充值界面]

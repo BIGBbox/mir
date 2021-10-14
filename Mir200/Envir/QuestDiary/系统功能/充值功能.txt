@@ -48,7 +48,6 @@ ReadConfigFileItem ..\QuestDiary\ÏµÍ³¹¦ÄÜ\³äÖµÔùËÍÁÐ±í.ini »õ±Ò²ÎÊý ±ÈÀý N$³äÖµ±
 ;sendmsg 5 ###<$STR(N$×ÜÐÐÊý)>
 
 mov N$ÁÙÊ±ÁÐ±íid 0
-
 goto @³äÖµÁÐ±ífor
 
 
