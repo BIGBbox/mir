@@ -279,7 +279,7 @@ mov N$捐献数额数据 <$STR(N$捐献数额<$STR(N$编号)>)>
 
 #if
 not EQUAL S$玩家名字数据
-; LARGE N$捐献数额数据 14999
+LARGE N$捐献数额数据 0
 EQUAL N$名次 0
 #act
 AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 0
@@ -288,7 +288,7 @@ inc N$编号 1
 
 #if
 not EQUAL S$玩家名字数据
-; LARGE N$捐献数额数据 9999
+LARGE N$捐献数额数据 0
 EQUAL N$名次 1
 #act
 AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 1
@@ -297,7 +297,7 @@ inc N$编号 1
 
 #if
 not EQUAL S$玩家名字数据
-; LARGE N$捐献数额数据 0
+LARGE N$捐献数额数据 0
 EQUAL N$名次 2
 #act
 AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 2

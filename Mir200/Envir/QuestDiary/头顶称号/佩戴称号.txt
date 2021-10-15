@@ -17,22 +17,17 @@ SetIcon 1 1 480 10 5 0 0
 #if
 #act
 mov S$称号变量 <$str(T2)>
-sendmsg 5 T2:::<$str(S$称号变量)>
-
 goto @执行佩戴称号
 
 [@佩戴剧情称号]
 #if
 #act
 mov S$称号变量 <$str(T3)>
-sendmsg 5 T3:::<$str(S$称号变量)>
+
 goto @执行佩戴称号
 
 
 [@佩戴会员称号]
-#if
-#act
-mov N$会员等级 <$str(U17)>
 
 #if
 large <$STR(N$会员等级)> 11

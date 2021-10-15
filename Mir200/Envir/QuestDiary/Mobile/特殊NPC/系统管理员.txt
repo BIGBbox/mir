@@ -170,12 +170,32 @@ OPENNPCSHOWEX 76
 [@ceshi1]
 
 #if
-;-----没有升级过称号判断-----
-not CheckContainsText <$STR(T1)> 西游之力①
 #act
-sendmsg 5 无
-#elseact
-sendmsg 5 有
+; mov S$max攻击 <$MAXDC>
+; GetHumVar 於伯纳 N1 <$LEVEL>
+; sendmsg 5 等级:<$str(N1)>
+; WriteConfigFileItem ..\QuestDiary\测试变量\测试文件.txt <$USERNAME> 等级 996M2
+; WriteConfigFileItem ..\QuestDiary\测试变量\测试文件.txt <$USERNAME> 攻击力 <$MAXDC>
+; VIEWPLAYER <$STR(S$角色ID)> 101
+SortHumVar 角色攻击力 S$角色名字 N$角色攻击力 0 1 50
+
+sendmsg 5 <$STR(S$角色名字1)>___<$str(N$角色攻击力1)>
+sendmsg 5 <$STR(S$角色名字2)>___<$str(N$角色攻击力2)>
+sendmsg 5 <$STR(S$角色名字3)>___<$str(N$角色攻击力3)>
+sendmsg 5 <$STR(S$角色名字4)>___<$str(N$角色攻击力4)>
+sendmsg 5 <$STR(S$角色名字5)>___<$str(N$角色攻击力5)>
+sendmsg 5 <$STR(S$角色名字6)>___<$str(N$角色攻击力6)>
+sendmsg 5 <$STR(S$角色名字7)>___<$str(N$角色攻击力7)>
+sendmsg 5 <$STR(S$角色名字8)>___<$str(N$角色攻击力8)>
+
+; SortHumVar 角色攻击力 S$排序写入变量字符 N$排序写入变量数字 0 1 3
+; SENDMSG 0 -<$str(S$排序写入变量字符1)>:<$STR(N$排序写入变量数字1)>
+; SENDMSG 0 -<$str(S$排序写入变量字符2)>:<$STR(N$排序写入变量数字2)>
+; SENDMSG 0 -<$str(S$排序写入变量字符3)>:<$STR(N$排序写入变量数字3)>
+
+; #call [\排行榜\排行榜数据记录.txt] @获取角色属性
+
+
 ; SetIcon 0 1 586 -25 60 0 0
 ; SetIcon 1 1 597 -25 40 0 0
 ; SetIcon 2 1 583 -40 50 0 0
@@ -192,7 +212,7 @@ REPAIRCASTLE
 ; #ACT
 GetBindMoney 绑定元宝 S1
 SENDMSG 6 你当前关联元宝的货1币有:<$STR(S1)>个。
-#call [\头顶称号\佩戴称号.txt] @佩戴称号
+; #call [\头顶称号\佩戴称号.txt] @佩戴称号
 
 ; sendmsg  5 测试
 ; DELNPC 攻城奖池领取

@@ -137,6 +137,7 @@ VAR Integer HUMAN 累计充值天数
 VAR String  HUMAN 充值最后日期
 VAR String  HUMAN 登录日期
 
+VAR Integer HUMAN 角色攻击力
 
 
 [@延迟开启登录限制]
@@ -144,6 +145,14 @@ VAR String  HUMAN 登录日期
 #act
 EXTBAGOPENITEMCOUNT 126
 #call [\头顶称号\佩戴称号.txt] @佩戴称号
+
+CALCVAR HUMAN 角色攻击力 = <$MAXDC>
+SAVEVAR HUMAN 角色攻击力
+
+WriteConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$USERNAME> 角色UID <$USERID>
+WriteConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$USERNAME> 角色攻击力 <$MAXDC>
+WriteConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$USERNAME> 角色等级 <$LEVEL>
+
 
 #if
 equal U108 0
@@ -169,6 +178,9 @@ inc U114 1
 
 
 [@OnTimer5]
+#if
+#act
+#call [\排行榜\排行榜数据记录.txt] @获取角色属性
 
 ; #if
 ; check [18] 1

@@ -38,7 +38,7 @@ inc N$参数1 1
 
 mov S$参数 <$STR(N$参数)>
 mov S$参数1 <$STR(N$参数1)>
-sendmsg 5 <$STR(U17)>:::<$str(S$按钮数量)>
+; sendmsg 5 <$STR(U17)>:::<$str(S$按钮数量)>
 
 #if
 large <$STR(U17)> <$str(S$按钮数量)>

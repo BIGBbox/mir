@@ -1,0 +1,24 @@
+[@获取角色属性]
+{
+
+#if
+#act
+goto @写入排行榜
+
+
+[@写入排行榜]
+
+#if
+#act
+CALCVAR HUMAN 角色攻击力 = <$MAXDC>
+SAVEVAR HUMAN 角色攻击力
+
+SortHumVar 角色攻击力 S$角色名字 N$角色攻击力 0 1 50
+
+WriteConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$USERNAME> 角色UID <$USERID>
+WriteConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$USERNAME> 角色攻击力 <$HUMAN(角色攻击力)>
+WriteConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$USERNAME> 角色等级 <$LEVEL>
+
+
+
+}

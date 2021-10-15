@@ -11,8 +11,8 @@ mov S$是否下一步 1
 <Button|id=close_btn|x=440.0|y=5.0|size=18|nimg=public/sf1/2/00010.png|link=@exit>
 
 <RText|id=1|x=205|y=5|size=20|text=<灵兽精石/FCOLOR=89>>
-<RText|id=2|x=15|y=65|size=14|text=<灵兽精石分为免费使用和付费使用,免费每消耗一颗晶石会获得/FCOLOR=251><1点/FCOLOR=250><灵兽经验/FCOLOR=251>>
-<RText|id=3|x=15|y=90|size=14|text=<付费使用,每颗晶石需要/FCOLOR=251><支付10天下币/FCOLOR=249><获得/FCOLOR=251><10倍/FCOLOR=250><兽灵经验!!/FCOLOR=251>>
+<RText|id=2|x=15|y=65|size=14|text=<灵兽精石分为免费使用和付费使用,免费每消耗一颗精石会获得/FCOLOR=251><1点/FCOLOR=250><灵兽经验/FCOLOR=251>>
+<RText|id=3|x=15|y=90|size=14|text=<付费使用,每颗精石需要/FCOLOR=251><支付10天下币/FCOLOR=249><获得/FCOLOR=251><10倍/FCOLOR=250><兽灵经验!!/FCOLOR=251>>
 <Layout|submitInput=1|id=button1|children={4}|x=220|y=150|width=80|height=30|color=243|link=@升级按钮#参数=0>
 <RText|id=4|x=10|y=5|size=14|text=<免费使用/FCOLOR=0>>
 ;<Button|id=button1|x=513.0|y=341.0|nimg=public/1900000660.png|submitInput=1|pimg=public/1900000661.png|size=18|color=1003|text=密码登录|link=@免费使用>
@@ -20,7 +20,7 @@ mov S$是否下一步 1
 <RText|id=5|x=10|y=5|size=14|text=<付费使用/FCOLOR=0>>
 <Img|id=输入框背景|width=120|height=30|children={输入框,countCoin}|x=20|y=150|move=1|img=public/sf1/6/00213.png|>
 <Input|id=输入框|inputid=1|x=0.0|y=0.0|type=1|text=1|width=120|height=30|color=250|size=18|mincount=1|maxcount=3|errortips=1>
-<RText|id=countCoin|x=15|y=38|size=14|text=<输入晶石数量/FCOLOR=251>>
+<RText|id=countCoin|x=15|y=38|size=14|text=<输入精石数量/FCOLOR=251>>
 
 
 [@升级按钮]
@@ -30,12 +30,12 @@ mov N$次数 <$NPCINPUT(1)>
 mov S$是否付费 <$STR(S$参数)>
 mov N$消耗天下币 0
 mov N$获得经验值 <$STR(N$次数)>
-mul N$获得经验值 <$STR(N$次数)>
-
+; mul N$获得经验值 <$STR(N$次数)>
+sendmsg 5 付费:::<$STR(S$是否付费)>
 #if
 large <$STR(N$次数)> 100
 #act
-messagebox 一次最多能使用100个晶石,请分多次使用
+messagebox 一次最多能使用100个精石,请分多次使用
 break
 
 #if
@@ -45,7 +45,10 @@ mov N$消耗天下币 <$STR(N$次数)>
 mul N$消耗天下币 10
 mov N$获得经验值 <$STR(N$次数)>
 mul N$获得经验值 10
+sendmsg 5 消耗天下币:::<$STR(S$消耗天下币)>
 
+#if
+#act
 ;------------------判断是否穿戴异兽和是否满级-------------------
 goto @判断异兽状态
 
@@ -64,7 +67,7 @@ break
 #if
 not CHECKITEM 灵兽精石 <$STR(N$次数)>
 #act
-messagebox 灵兽晶石数量不足!!
+messagebox 灵兽精石数量不足!!
 break
 
 
@@ -87,13 +90,14 @@ not small <$STR(N$次数)> 1
 dec N$次数 1
 
 #if
+equal <$STR(S$是否付费)> 1
 not CHECKGAMEDIAMOND < <$STR(N$消耗天下币)>
 #act
+money 天下币 - 10
 
 #if
 #act
 take 灵兽精石 1
-money 天下币 - 10
 
 goto @升级
 

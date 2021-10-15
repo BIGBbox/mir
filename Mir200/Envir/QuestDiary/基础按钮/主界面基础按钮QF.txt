@@ -59,11 +59,13 @@ OPENHYPERLINK 9
 
 [@排行榜]
 #IF
-CHECKLEVELEX > 99
+; CHECKLEVELEX > 99
 #ACT
-OPENHYPERLINK 32
-#elseact
-messagebox 100级才能开启排行榜！
+; OPENHYPERLINK 32
+#CALL [\排行榜\排行榜面板.txt] @排行榜面板
+
+; #elseact
+; messagebox 100级才能开启排行榜！
 
 ;[@回收系统]
 ;#IF
