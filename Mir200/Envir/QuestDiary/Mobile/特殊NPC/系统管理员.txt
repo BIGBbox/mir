@@ -168,22 +168,35 @@ goto @前往主城
 OPENNPCSHOWEX 76
 
 [@ceshi1]
+
 #if
+;-----没有升级过称号判断-----
+not CheckContainsText <$STR(T1)> 西游之力①
 #act
-mov N$鞭尸几率 1
-mov S$会员_鞭尸几率 2
-inc N$鞭尸几率 <$str(S$会员_鞭尸几率)>
+sendmsg 5 无
+#elseact
+sendmsg 5 有
+; SetIcon 0 1 586 -25 60 0 0
+; SetIcon 1 1 597 -25 40 0 0
+; SetIcon 2 1 583 -40 50 0 0
+; SetIcon 3 1 480 13 5 0 0
+
+; #act
+; mov N$鞭尸几率 1
+; mov S$会员_鞭尸几率 2
+; inc N$鞭尸几率 <$str(S$会员_鞭尸几率)>
 sendmsg 5 <$str(N$鞭尸几率)>:几率
-sendmsg 5 U114:::<$str(U114)>:::<$HFCOUNT>::::<$str(U20)>
+; sendmsg 5 U114:::<$str(U114)>:::<$HFCOUNT>::::<$str(U20)>
 ; #IF
 REPAIRCASTLE
 ; #ACT
 GetBindMoney 绑定元宝 S1
 SENDMSG 6 你当前关联元宝的货1币有:<$STR(S1)>个。
-; CreateNPC 攻城奖池领取 天下主城 151 85 1192 攻城奖池NPC
+#call [\头顶称号\佩戴称号.txt] @佩戴称号
+
 ; sendmsg  5 测试
 ; DELNPC 攻城奖池领取
-CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
+; CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
 ; mov S$装备标记 99
 ; #IF
 ; CHECK [<$str(S$装备标记)>] 1
@@ -910,8 +923,8 @@ sendmsg 6 增加1000万元宝
 #IF
 #ACT
 
-GAMEDIAMOND + 10000
-sendmsg 6 增加1万天下币
+GAMEDIAMOND + 10000000
+sendmsg 6 增加1千万天下币
 
 
 [@13]

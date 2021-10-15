@@ -1,672 +1,675 @@
 [@main]
-#or
-CHECKTITLE 三国之力⑩
-CHECKTITLE 帝王之力①
-CHECKTITLE 帝王之力②
-CHECKTITLE 帝王之力③
-CHECKTITLE 帝王之力④
-CHECKTITLE 帝王之力⑤
-CHECKTITLE 帝王之力⑥
-CHECKTITLE 帝王之力⑦
-CHECKTITLE 帝王之力⑧
-CHECKTITLE 帝王之力⑨
-CHECKTITLE 帝王之力⑩
-CHECKTITLE 金庸之力①
-CHECKTITLE 金庸之力②
-CHECKTITLE 金庸之力③
-CHECKTITLE 金庸之力④
-CHECKTITLE 金庸之力⑤
-CHECKTITLE 金庸之力⑥
-CHECKTITLE 金庸之力⑦
-CHECKTITLE 金庸之力⑧
-CHECKTITLE 金庸之力⑨
-CHECKTITLE 金庸之力⑩
-CHECKTITLE 圣斗士之力①
-CHECKTITLE 圣斗士之力②
-CHECKTITLE 圣斗士之力③
-CHECKTITLE 圣斗士之力④
-CHECKTITLE 圣斗士之力⑤
-CHECKTITLE 圣斗士之力⑥
-CHECKTITLE 圣斗士之力⑦
-CHECKTITLE 圣斗士之力⑧
-CHECKTITLE 圣斗士之力⑨
-CHECKTITLE 圣斗士之力⑩
-CHECKTITLE 水浒之力①
-CHECKTITLE 水浒之力②
-CHECKTITLE 水浒之力③
-CHECKTITLE 水浒之力④
-CHECKTITLE 水浒之力⑤
-CHECKTITLE 水浒之力⑥
-CHECKTITLE 水浒之力⑦
-CHECKTITLE 水浒之力⑧
-CHECKTITLE 水浒之力⑨
-CHECKTITLE 水浒之力⑩
-CHECKTITLE 诛仙之力①
-CHECKTITLE 诛仙之力②
-CHECKTITLE 诛仙之力③
-CHECKTITLE 诛仙之力④
-CHECKTITLE 诛仙之力⑤
-CHECKTITLE 诛仙之力⑥
-CHECKTITLE 诛仙之力⑦
-CHECKTITLE 诛仙之力⑧
-CHECKTITLE 诛仙之力⑨
-CHECKTITLE 诛仙之力⑩
-CHECKTITLE 暗黑之力①
-CHECKTITLE 暗黑之力②
-CHECKTITLE 暗黑之力③
-CHECKTITLE 暗黑之力④
-CHECKTITLE 暗黑之力⑤
-CHECKTITLE 暗黑之力⑥
-CHECKTITLE 暗黑之力⑦
-CHECKTITLE 暗黑之力⑧
-CHECKTITLE 暗黑之力⑨
-CHECKTITLE 暗黑之力⑩
-CHECKTITLE 神域之力①
-CHECKTITLE 神域之力②
-CHECKTITLE 神域之力③
-CHECKTITLE 神域之力④
-CHECKTITLE 神域之力⑤
-CHECKTITLE 神域之力⑥
-CHECKTITLE 神域之力⑦
-CHECKTITLE 神域之力⑧
-CHECKTITLE 神域之力⑨
-CHECKTITLE 神域之力⑩
-#ACT
-close
-MessageBox 当前大陆称号已满级,不能再升级了!
-BREAK
+#CALL [\称号系统\三国称号\三国称号面板.txt] @三国称号面板
 
-;#IF
-;NOT CHECKTITLE 三国之力①
-;NOT CHECKTITLE 三国之力②
-;NOT CHECKTITLE 三国之力③
-;NOT CHECKTITLE 三国之力④
-;NOT CHECKTITLE 三国之力⑤
-;NOT CHECKTITLE 三国之力⑥
-;NOT CHECKTITLE 三国之力⑦
-;NOT CHECKTITLE 三国之力⑧
-;NOT CHECKTITLE 三国之力⑨
-;NOT CHECKTITLE 西游之力⑩
-;#ACT
-;close
-;MessageBox 请您晋升[西游之力⑩]称号再来这里晋升!
-;BREAK
+; [@main]
+; #or
+; CHECKTITLE 三国之力⑩
+; CHECKTITLE 帝王之力①
+; CHECKTITLE 帝王之力②
+; CHECKTITLE 帝王之力③
+; CHECKTITLE 帝王之力④
+; CHECKTITLE 帝王之力⑤
+; CHECKTITLE 帝王之力⑥
+; CHECKTITLE 帝王之力⑦
+; CHECKTITLE 帝王之力⑧
+; CHECKTITLE 帝王之力⑨
+; CHECKTITLE 帝王之力⑩
+; CHECKTITLE 金庸之力①
+; CHECKTITLE 金庸之力②
+; CHECKTITLE 金庸之力③
+; CHECKTITLE 金庸之力④
+; CHECKTITLE 金庸之力⑤
+; CHECKTITLE 金庸之力⑥
+; CHECKTITLE 金庸之力⑦
+; CHECKTITLE 金庸之力⑧
+; CHECKTITLE 金庸之力⑨
+; CHECKTITLE 金庸之力⑩
+; CHECKTITLE 圣斗士之力①
+; CHECKTITLE 圣斗士之力②
+; CHECKTITLE 圣斗士之力③
+; CHECKTITLE 圣斗士之力④
+; CHECKTITLE 圣斗士之力⑤
+; CHECKTITLE 圣斗士之力⑥
+; CHECKTITLE 圣斗士之力⑦
+; CHECKTITLE 圣斗士之力⑧
+; CHECKTITLE 圣斗士之力⑨
+; CHECKTITLE 圣斗士之力⑩
+; CHECKTITLE 水浒之力①
+; CHECKTITLE 水浒之力②
+; CHECKTITLE 水浒之力③
+; CHECKTITLE 水浒之力④
+; CHECKTITLE 水浒之力⑤
+; CHECKTITLE 水浒之力⑥
+; CHECKTITLE 水浒之力⑦
+; CHECKTITLE 水浒之力⑧
+; CHECKTITLE 水浒之力⑨
+; CHECKTITLE 水浒之力⑩
+; CHECKTITLE 诛仙之力①
+; CHECKTITLE 诛仙之力②
+; CHECKTITLE 诛仙之力③
+; CHECKTITLE 诛仙之力④
+; CHECKTITLE 诛仙之力⑤
+; CHECKTITLE 诛仙之力⑥
+; CHECKTITLE 诛仙之力⑦
+; CHECKTITLE 诛仙之力⑧
+; CHECKTITLE 诛仙之力⑨
+; CHECKTITLE 诛仙之力⑩
+; CHECKTITLE 暗黑之力①
+; CHECKTITLE 暗黑之力②
+; CHECKTITLE 暗黑之力③
+; CHECKTITLE 暗黑之力④
+; CHECKTITLE 暗黑之力⑤
+; CHECKTITLE 暗黑之力⑥
+; CHECKTITLE 暗黑之力⑦
+; CHECKTITLE 暗黑之力⑧
+; CHECKTITLE 暗黑之力⑨
+; CHECKTITLE 暗黑之力⑩
+; CHECKTITLE 神域之力①
+; CHECKTITLE 神域之力②
+; CHECKTITLE 神域之力③
+; CHECKTITLE 神域之力④
+; CHECKTITLE 神域之力⑤
+; CHECKTITLE 神域之力⑥
+; CHECKTITLE 神域之力⑦
+; CHECKTITLE 神域之力⑧
+; CHECKTITLE 神域之力⑨
+; CHECKTITLE 神域之力⑩
+; #ACT
+; ; close
+; ; MessageBox 当前大陆称号已满级,不能再升级了!
+; ; BREAK
 
-#IF
-NOT CHECKTITLE 三国之力①
-NOT CHECKTITLE 三国之力②
-NOT CHECKTITLE 三国之力③
-NOT CHECKTITLE 三国之力④
-NOT CHECKTITLE 三国之力⑤
-NOT CHECKTITLE 三国之力⑥
-NOT CHECKTITLE 三国之力⑦
-NOT CHECKTITLE 三国之力⑧
-NOT CHECKTITLE 三国之力⑨
-NOT CHECKTITLE 三国之力⑩
-NOT CHECKTITLE 帝王之力①
-NOT CHECKTITLE 帝王之力②
-NOT CHECKTITLE 帝王之力③
-NOT CHECKTITLE 帝王之力④
-NOT CHECKTITLE 帝王之力⑤
-NOT CHECKTITLE 帝王之力⑥
-NOT CHECKTITLE 帝王之力⑦
-NOT CHECKTITLE 帝王之力⑧
-NOT CHECKTITLE 帝王之力⑨
-NOT CHECKTITLE 帝王之力⑩
-NOT CHECKTITLE 金庸之力①
-NOT CHECKTITLE 金庸之力②
-NOT CHECKTITLE 金庸之力③
-NOT CHECKTITLE 金庸之力④
-NOT CHECKTITLE 金庸之力⑤
-NOT CHECKTITLE 金庸之力⑥
-NOT CHECKTITLE 金庸之力⑦
-NOT CHECKTITLE 金庸之力⑧
-NOT CHECKTITLE 金庸之力⑨
-NOT CHECKTITLE 金庸之力⑩
-NOT CHECKTITLE 圣斗士之力①
-NOT CHECKTITLE 圣斗士之力②
-NOT CHECKTITLE 圣斗士之力③
-NOT CHECKTITLE 圣斗士之力④
-NOT CHECKTITLE 圣斗士之力⑤
-NOT CHECKTITLE 圣斗士之力⑥
-NOT CHECKTITLE 圣斗士之力⑦
-NOT CHECKTITLE 圣斗士之力⑧
-NOT CHECKTITLE 圣斗士之力⑨
-NOT CHECKTITLE 圣斗士之力⑩
-NOT CHECKTITLE 水浒之力①
-NOT CHECKTITLE 水浒之力②
-NOT CHECKTITLE 水浒之力③
-NOT CHECKTITLE 水浒之力④
-NOT CHECKTITLE 水浒之力⑤
-NOT CHECKTITLE 水浒之力⑥
-NOT CHECKTITLE 水浒之力⑦
-NOT CHECKTITLE 水浒之力⑧
-NOT CHECKTITLE 水浒之力⑨
-NOT CHECKTITLE 水浒之力⑩
-NOT CHECKTITLE 诛仙之力①
-NOT CHECKTITLE 诛仙之力②
-NOT CHECKTITLE 诛仙之力③
-NOT CHECKTITLE 诛仙之力④
-NOT CHECKTITLE 诛仙之力⑤
-NOT CHECKTITLE 诛仙之力⑥
-NOT CHECKTITLE 诛仙之力⑦
-NOT CHECKTITLE 诛仙之力⑧
-NOT CHECKTITLE 诛仙之力⑨
-NOT CHECKTITLE 诛仙之力⑩
-NOT CHECKTITLE 暗黑之力①
-NOT CHECKTITLE 暗黑之力②
-NOT CHECKTITLE 暗黑之力③
-NOT CHECKTITLE 暗黑之力④
-NOT CHECKTITLE 暗黑之力⑤
-NOT CHECKTITLE 暗黑之力⑥
-NOT CHECKTITLE 暗黑之力⑦
-NOT CHECKTITLE 暗黑之力⑧
-NOT CHECKTITLE 暗黑之力⑨
-NOT CHECKTITLE 暗黑之力⑩
-NOT CHECKTITLE 神域之力①
-NOT CHECKTITLE 神域之力②
-NOT CHECKTITLE 神域之力③
-NOT CHECKTITLE 神域之力④
-NOT CHECKTITLE 神域之力⑤
-NOT CHECKTITLE 神域之力⑥
-NOT CHECKTITLE 神域之力⑦
-NOT CHECKTITLE 神域之力⑧
-NOT CHECKTITLE 神域之力⑨
-NOT CHECKTITLE 神域之力⑩
+; ;#IF
+; ;NOT CHECKTITLE 三国之力①
+; ;NOT CHECKTITLE 三国之力②
+; ;NOT CHECKTITLE 三国之力③
+; ;NOT CHECKTITLE 三国之力④
+; ;NOT CHECKTITLE 三国之力⑤
+; ;NOT CHECKTITLE 三国之力⑥
+; ;NOT CHECKTITLE 三国之力⑦
+; ;NOT CHECKTITLE 三国之力⑧
+; ;NOT CHECKTITLE 三国之力⑨
+; ;NOT CHECKTITLE 西游之力⑩
+; ;#ACT
+; ;close
+; ;MessageBox 请您晋升[西游之力⑩]称号再来这里晋升!
+; ;BREAK
 
-#ACT
-MOV S$称号名称 三国之力①
-MOV S$称号属性 全属性55-55
-MOV S$称号爆率 爆率+11%
-MOV S$称号伤害 对怪伤害+11%
-MOV S$称号体力 生命值+550
-MOV S$晋升条件1 神器碎片*12
-MOV S$晋升条件2 元宝*120000
-MOV S$称号详情_1 public/sf1/1/01611.png
-MOV S$称号详情_2 public/sf1/1/01613.png
-MOV S$称号详情_3 public/sf1/1/01615.png
-MOV S$称号详情_4 public/sf1/1/01617.png
-MOV S$称号详情_5 public/sf1/1/01619.png
-MOV S$称号详情_6 public/sf1/1/01621.png
-MOV S$称号详情_7 public/sf1/1/01623.png
-MOV S$称号详情_8 public/sf1/1/01625.png
-MOV S$称号详情_9 public/sf1/1/01627.png
-MOV S$称号详情_10 public/sf1/1/01629.png
+; #IF
+; NOT CHECKTITLE 三国之力①
+; NOT CHECKTITLE 三国之力②
+; NOT CHECKTITLE 三国之力③
+; NOT CHECKTITLE 三国之力④
+; NOT CHECKTITLE 三国之力⑤
+; NOT CHECKTITLE 三国之力⑥
+; NOT CHECKTITLE 三国之力⑦
+; NOT CHECKTITLE 三国之力⑧
+; NOT CHECKTITLE 三国之力⑨
+; NOT CHECKTITLE 三国之力⑩
+; NOT CHECKTITLE 帝王之力①
+; NOT CHECKTITLE 帝王之力②
+; NOT CHECKTITLE 帝王之力③
+; NOT CHECKTITLE 帝王之力④
+; NOT CHECKTITLE 帝王之力⑤
+; NOT CHECKTITLE 帝王之力⑥
+; NOT CHECKTITLE 帝王之力⑦
+; NOT CHECKTITLE 帝王之力⑧
+; NOT CHECKTITLE 帝王之力⑨
+; NOT CHECKTITLE 帝王之力⑩
+; NOT CHECKTITLE 金庸之力①
+; NOT CHECKTITLE 金庸之力②
+; NOT CHECKTITLE 金庸之力③
+; NOT CHECKTITLE 金庸之力④
+; NOT CHECKTITLE 金庸之力⑤
+; NOT CHECKTITLE 金庸之力⑥
+; NOT CHECKTITLE 金庸之力⑦
+; NOT CHECKTITLE 金庸之力⑧
+; NOT CHECKTITLE 金庸之力⑨
+; NOT CHECKTITLE 金庸之力⑩
+; NOT CHECKTITLE 圣斗士之力①
+; NOT CHECKTITLE 圣斗士之力②
+; NOT CHECKTITLE 圣斗士之力③
+; NOT CHECKTITLE 圣斗士之力④
+; NOT CHECKTITLE 圣斗士之力⑤
+; NOT CHECKTITLE 圣斗士之力⑥
+; NOT CHECKTITLE 圣斗士之力⑦
+; NOT CHECKTITLE 圣斗士之力⑧
+; NOT CHECKTITLE 圣斗士之力⑨
+; NOT CHECKTITLE 圣斗士之力⑩
+; NOT CHECKTITLE 水浒之力①
+; NOT CHECKTITLE 水浒之力②
+; NOT CHECKTITLE 水浒之力③
+; NOT CHECKTITLE 水浒之力④
+; NOT CHECKTITLE 水浒之力⑤
+; NOT CHECKTITLE 水浒之力⑥
+; NOT CHECKTITLE 水浒之力⑦
+; NOT CHECKTITLE 水浒之力⑧
+; NOT CHECKTITLE 水浒之力⑨
+; NOT CHECKTITLE 水浒之力⑩
+; NOT CHECKTITLE 诛仙之力①
+; NOT CHECKTITLE 诛仙之力②
+; NOT CHECKTITLE 诛仙之力③
+; NOT CHECKTITLE 诛仙之力④
+; NOT CHECKTITLE 诛仙之力⑤
+; NOT CHECKTITLE 诛仙之力⑥
+; NOT CHECKTITLE 诛仙之力⑦
+; NOT CHECKTITLE 诛仙之力⑧
+; NOT CHECKTITLE 诛仙之力⑨
+; NOT CHECKTITLE 诛仙之力⑩
+; NOT CHECKTITLE 暗黑之力①
+; NOT CHECKTITLE 暗黑之力②
+; NOT CHECKTITLE 暗黑之力③
+; NOT CHECKTITLE 暗黑之力④
+; NOT CHECKTITLE 暗黑之力⑤
+; NOT CHECKTITLE 暗黑之力⑥
+; NOT CHECKTITLE 暗黑之力⑦
+; NOT CHECKTITLE 暗黑之力⑧
+; NOT CHECKTITLE 暗黑之力⑨
+; NOT CHECKTITLE 暗黑之力⑩
+; NOT CHECKTITLE 神域之力①
+; NOT CHECKTITLE 神域之力②
+; NOT CHECKTITLE 神域之力③
+; NOT CHECKTITLE 神域之力④
+; NOT CHECKTITLE 神域之力⑤
+; NOT CHECKTITLE 神域之力⑥
+; NOT CHECKTITLE 神域之力⑦
+; NOT CHECKTITLE 神域之力⑧
+; NOT CHECKTITLE 神域之力⑨
+; NOT CHECKTITLE 神域之力⑩
 
-MOV S$晋升称号1 @晋升1
-GOTO @称号主界面
-BREAK
+; #ACT
+; MOV S$称号名称 三国之力①
+; MOV S$称号属性 全属性55-55
+; MOV S$称号爆率 爆率+11%
+; MOV S$称号伤害 对怪伤害+11%
+; MOV S$称号体力 生命值+550
+; MOV S$晋升条件1 神器碎片*12
+; MOV S$晋升条件2 元宝*120000
+; MOV S$称号详情_1 public/sf1/1/01611.png
+; MOV S$称号详情_2 public/sf1/1/01613.png
+; MOV S$称号详情_3 public/sf1/1/01615.png
+; MOV S$称号详情_4 public/sf1/1/01617.png
+; MOV S$称号详情_5 public/sf1/1/01619.png
+; MOV S$称号详情_6 public/sf1/1/01621.png
+; MOV S$称号详情_7 public/sf1/1/01623.png
+; MOV S$称号详情_8 public/sf1/1/01625.png
+; MOV S$称号详情_9 public/sf1/1/01627.png
+; MOV S$称号详情_10 public/sf1/1/01629.png
 
-#IF
-CHECKTITLE 三国之力①
-#ACT
-MOV S$称号名称 三国之力②
-MOV S$称号属性 全属性60-60
-MOV S$称号爆率 爆率+12%
-MOV S$称号伤害 对怪伤害+12%
-MOV S$称号体力 生命值+600
-MOV S$晋升条件1 神器碎片*14
-MOV S$晋升条件2 元宝*140000
-MOV S$称号详情_1 public/sf1/1/01610.png
-MOV S$称号详情_2 public/sf1/1/01613.png
-MOV S$称号详情_3 public/sf1/1/01615.png
-MOV S$称号详情_4 public/sf1/1/01617.png
-MOV S$称号详情_5 public/sf1/1/01619.png
-MOV S$称号详情_6 public/sf1/1/01621.png
-MOV S$称号详情_7 public/sf1/1/01623.png
-MOV S$称号详情_8 public/sf1/1/01625.png
-MOV S$称号详情_9 public/sf1/1/01627.png
-MOV S$称号详情_10 public/sf1/1/01629.png
+; MOV S$晋升称号1 @晋升1
+; GOTO @称号主界面
+; BREAK
 
-MOV S$晋升称号1 @晋升2
-GOTO @称号主界面
-BREAK
+; #IF
+; CHECKTITLE 三国之力①
+; #ACT
+; MOV S$称号名称 三国之力②
+; MOV S$称号属性 全属性60-60
+; MOV S$称号爆率 爆率+12%
+; MOV S$称号伤害 对怪伤害+12%
+; MOV S$称号体力 生命值+600
+; MOV S$晋升条件1 神器碎片*14
+; MOV S$晋升条件2 元宝*140000
+; MOV S$称号详情_1 public/sf1/1/01610.png
+; MOV S$称号详情_2 public/sf1/1/01613.png
+; MOV S$称号详情_3 public/sf1/1/01615.png
+; MOV S$称号详情_4 public/sf1/1/01617.png
+; MOV S$称号详情_5 public/sf1/1/01619.png
+; MOV S$称号详情_6 public/sf1/1/01621.png
+; MOV S$称号详情_7 public/sf1/1/01623.png
+; MOV S$称号详情_8 public/sf1/1/01625.png
+; MOV S$称号详情_9 public/sf1/1/01627.png
+; MOV S$称号详情_10 public/sf1/1/01629.png
 
-#IF
-CHECKTITLE 三国之力②
-#ACT
-MOV S$称号名称 三国之力③
-MOV S$称号属性 全属性65-65
-MOV S$称号爆率 爆率+13%
-MOV S$称号伤害 对怪伤害+13%
-MOV S$称号体力 生命值+650
-MOV S$晋升条件1 神器碎片*16
-MOV S$晋升条件2 元宝*160000
-MOV S$称号详情_1 public/sf1/1/01610.png
-MOV S$称号详情_2 public/sf1/1/01612.png
-MOV S$称号详情_3 public/sf1/1/01615.png
-MOV S$称号详情_4 public/sf1/1/01617.png
-MOV S$称号详情_5 public/sf1/1/01619.png
-MOV S$称号详情_6 public/sf1/1/01621.png
-MOV S$称号详情_7 public/sf1/1/01623.png
-MOV S$称号详情_8 public/sf1/1/01625.png
-MOV S$称号详情_9 public/sf1/1/01627.png
-MOV S$称号详情_10 public/sf1/1/01629.png
+; MOV S$晋升称号1 @晋升2
+; GOTO @称号主界面
+; BREAK
 
-MOV S$晋升称号1 @晋升3
-GOTO @称号主界面
-BREAK
+; #IF
+; CHECKTITLE 三国之力②
+; #ACT
+; MOV S$称号名称 三国之力③
+; MOV S$称号属性 全属性65-65
+; MOV S$称号爆率 爆率+13%
+; MOV S$称号伤害 对怪伤害+13%
+; MOV S$称号体力 生命值+650
+; MOV S$晋升条件1 神器碎片*16
+; MOV S$晋升条件2 元宝*160000
+; MOV S$称号详情_1 public/sf1/1/01610.png
+; MOV S$称号详情_2 public/sf1/1/01612.png
+; MOV S$称号详情_3 public/sf1/1/01615.png
+; MOV S$称号详情_4 public/sf1/1/01617.png
+; MOV S$称号详情_5 public/sf1/1/01619.png
+; MOV S$称号详情_6 public/sf1/1/01621.png
+; MOV S$称号详情_7 public/sf1/1/01623.png
+; MOV S$称号详情_8 public/sf1/1/01625.png
+; MOV S$称号详情_9 public/sf1/1/01627.png
+; MOV S$称号详情_10 public/sf1/1/01629.png
 
-#IF
-CHECKTITLE 三国之力③
-#ACT
-MOV S$称号名称 三国之力④
-MOV S$称号属性 全属性70-70
-MOV S$称号爆率 爆率+14%
-MOV S$称号伤害 对怪伤害+14%
-MOV S$称号体力 生命值+700
-MOV S$晋升条件1 神器碎片*18
-MOV S$晋升条件2 元宝*180000
-MOV S$称号详情_1 public/sf1/1/01610.png
-MOV S$称号详情_2 public/sf1/1/01612.png
-MOV S$称号详情_3 public/sf1/1/01614.png
-MOV S$称号详情_4 public/sf1/1/01617.png
-MOV S$称号详情_5 public/sf1/1/01619.png
-MOV S$称号详情_6 public/sf1/1/01621.png
-MOV S$称号详情_7 public/sf1/1/01623.png
-MOV S$称号详情_8 public/sf1/1/01625.png
-MOV S$称号详情_9 public/sf1/1/01627.png
-MOV S$称号详情_10 public/sf1/1/01629.png
+; MOV S$晋升称号1 @晋升3
+; GOTO @称号主界面
+; BREAK
 
-MOV S$晋升称号1 @晋升4
-GOTO @称号主界面
-BREAK
+; #IF
+; CHECKTITLE 三国之力③
+; #ACT
+; MOV S$称号名称 三国之力④
+; MOV S$称号属性 全属性70-70
+; MOV S$称号爆率 爆率+14%
+; MOV S$称号伤害 对怪伤害+14%
+; MOV S$称号体力 生命值+700
+; MOV S$晋升条件1 神器碎片*18
+; MOV S$晋升条件2 元宝*180000
+; MOV S$称号详情_1 public/sf1/1/01610.png
+; MOV S$称号详情_2 public/sf1/1/01612.png
+; MOV S$称号详情_3 public/sf1/1/01614.png
+; MOV S$称号详情_4 public/sf1/1/01617.png
+; MOV S$称号详情_5 public/sf1/1/01619.png
+; MOV S$称号详情_6 public/sf1/1/01621.png
+; MOV S$称号详情_7 public/sf1/1/01623.png
+; MOV S$称号详情_8 public/sf1/1/01625.png
+; MOV S$称号详情_9 public/sf1/1/01627.png
+; MOV S$称号详情_10 public/sf1/1/01629.png
 
-#IF
-CHECKTITLE 三国之力④
-#ACT
-MOV S$称号名称 三国之力⑤
-MOV S$称号属性 全属性75-75
-MOV S$称号爆率 爆率+15%
-MOV S$称号伤害 对怪伤害+15%
-MOV S$称号体力 生命值+750
-MOV S$晋升条件1 神器碎片*20
-MOV S$晋升条件2 元宝*200000
-MOV S$称号详情_1 public/sf1/1/01610.png
-MOV S$称号详情_2 public/sf1/1/01612.png
-MOV S$称号详情_3 public/sf1/1/01614.png
-MOV S$称号详情_4 public/sf1/1/01616.png
-MOV S$称号详情_5 public/sf1/1/01619.png
-MOV S$称号详情_6 public/sf1/1/01621.png
-MOV S$称号详情_7 public/sf1/1/01623.png
-MOV S$称号详情_8 public/sf1/1/01625.png
-MOV S$称号详情_9 public/sf1/1/01627.png
-MOV S$称号详情_10 public/sf1/1/01629.png
+; MOV S$晋升称号1 @晋升4
+; GOTO @称号主界面
+; BREAK
 
-MOV S$晋升称号1 @晋升5
-GOTO @称号主界面
-BREAK
+; #IF
+; CHECKTITLE 三国之力④
+; #ACT
+; MOV S$称号名称 三国之力⑤
+; MOV S$称号属性 全属性75-75
+; MOV S$称号爆率 爆率+15%
+; MOV S$称号伤害 对怪伤害+15%
+; MOV S$称号体力 生命值+750
+; MOV S$晋升条件1 神器碎片*20
+; MOV S$晋升条件2 元宝*200000
+; MOV S$称号详情_1 public/sf1/1/01610.png
+; MOV S$称号详情_2 public/sf1/1/01612.png
+; MOV S$称号详情_3 public/sf1/1/01614.png
+; MOV S$称号详情_4 public/sf1/1/01616.png
+; MOV S$称号详情_5 public/sf1/1/01619.png
+; MOV S$称号详情_6 public/sf1/1/01621.png
+; MOV S$称号详情_7 public/sf1/1/01623.png
+; MOV S$称号详情_8 public/sf1/1/01625.png
+; MOV S$称号详情_9 public/sf1/1/01627.png
+; MOV S$称号详情_10 public/sf1/1/01629.png
 
-#IF
-CHECKTITLE 三国之力⑤
-#ACT
-MOV S$称号名称 三国之力⑥
-MOV S$称号属性 全属性80-80
-MOV S$称号爆率 爆率+16%
-MOV S$称号伤害 对怪伤害+16%
-MOV S$称号体力 生命值+800
-MOV S$晋升条件1 神器碎片*22
-MOV S$晋升条件2 元宝*220000
-MOV S$称号详情_1 public/sf1/1/01610.png
-MOV S$称号详情_2 public/sf1/1/01612.png
-MOV S$称号详情_3 public/sf1/1/01614.png
-MOV S$称号详情_4 public/sf1/1/01616.png
-MOV S$称号详情_5 public/sf1/1/01618.png
-MOV S$称号详情_6 public/sf1/1/01621.png
-MOV S$称号详情_7 public/sf1/1/01623.png
-MOV S$称号详情_8 public/sf1/1/01625.png
-MOV S$称号详情_9 public/sf1/1/01627.png
-MOV S$称号详情_10 public/sf1/1/01629.png
+; MOV S$晋升称号1 @晋升5
+; GOTO @称号主界面
+; BREAK
 
-MOV S$晋升称号1 @晋升6
-GOTO @称号主界面
-BREAK
+; #IF
+; CHECKTITLE 三国之力⑤
+; #ACT
+; MOV S$称号名称 三国之力⑥
+; MOV S$称号属性 全属性80-80
+; MOV S$称号爆率 爆率+16%
+; MOV S$称号伤害 对怪伤害+16%
+; MOV S$称号体力 生命值+800
+; MOV S$晋升条件1 神器碎片*22
+; MOV S$晋升条件2 元宝*220000
+; MOV S$称号详情_1 public/sf1/1/01610.png
+; MOV S$称号详情_2 public/sf1/1/01612.png
+; MOV S$称号详情_3 public/sf1/1/01614.png
+; MOV S$称号详情_4 public/sf1/1/01616.png
+; MOV S$称号详情_5 public/sf1/1/01618.png
+; MOV S$称号详情_6 public/sf1/1/01621.png
+; MOV S$称号详情_7 public/sf1/1/01623.png
+; MOV S$称号详情_8 public/sf1/1/01625.png
+; MOV S$称号详情_9 public/sf1/1/01627.png
+; MOV S$称号详情_10 public/sf1/1/01629.png
 
-#IF
-CHECKTITLE 三国之力⑥
-#ACT
-MOV S$称号名称 三国之力⑦
-MOV S$称号属性 全属性85-85
-MOV S$称号爆率 爆率+17%
-MOV S$称号伤害 对怪伤害+17%
-MOV S$称号体力 生命值+850
-MOV S$晋升条件1 神器碎片*24
-MOV S$晋升条件2 元宝*240000
-MOV S$称号详情_1 public/sf1/1/01610.png
-MOV S$称号详情_2 public/sf1/1/01612.png
-MOV S$称号详情_3 public/sf1/1/01614.png
-MOV S$称号详情_4 public/sf1/1/01616.png
-MOV S$称号详情_5 public/sf1/1/01618.png
-MOV S$称号详情_6 public/sf1/1/01620.png
-MOV S$称号详情_7 public/sf1/1/01623.png
-MOV S$称号详情_8 public/sf1/1/01625.png
-MOV S$称号详情_9 public/sf1/1/01627.png
-MOV S$称号详情_10 public/sf1/1/01629.png
+; MOV S$晋升称号1 @晋升6
+; GOTO @称号主界面
+; BREAK
 
-MOV S$晋升称号1 @晋升7
-GOTO @称号主界面
-BREAK
+; #IF
+; CHECKTITLE 三国之力⑥
+; #ACT
+; MOV S$称号名称 三国之力⑦
+; MOV S$称号属性 全属性85-85
+; MOV S$称号爆率 爆率+17%
+; MOV S$称号伤害 对怪伤害+17%
+; MOV S$称号体力 生命值+850
+; MOV S$晋升条件1 神器碎片*24
+; MOV S$晋升条件2 元宝*240000
+; MOV S$称号详情_1 public/sf1/1/01610.png
+; MOV S$称号详情_2 public/sf1/1/01612.png
+; MOV S$称号详情_3 public/sf1/1/01614.png
+; MOV S$称号详情_4 public/sf1/1/01616.png
+; MOV S$称号详情_5 public/sf1/1/01618.png
+; MOV S$称号详情_6 public/sf1/1/01620.png
+; MOV S$称号详情_7 public/sf1/1/01623.png
+; MOV S$称号详情_8 public/sf1/1/01625.png
+; MOV S$称号详情_9 public/sf1/1/01627.png
+; MOV S$称号详情_10 public/sf1/1/01629.png
 
-#IF
-CHECKTITLE 三国之力⑦
-#ACT
-MOV S$称号名称 三国之力⑧
-MOV S$称号属性 全属性90-90
-MOV S$称号爆率 爆率+18%
-MOV S$称号伤害 对怪伤害+18%
-MOV S$称号体力 生命值+900
-MOV S$晋升条件1 神器碎片*26
-MOV S$晋升条件2 元宝*260000
-MOV S$称号详情_1 public/sf1/1/01610.png
-MOV S$称号详情_2 public/sf1/1/01612.png
-MOV S$称号详情_3 public/sf1/1/01614.png
-MOV S$称号详情_4 public/sf1/1/01616.png
-MOV S$称号详情_5 public/sf1/1/01618.png
-MOV S$称号详情_6 public/sf1/1/01620.png
-MOV S$称号详情_7 public/sf1/1/01622.png
-MOV S$称号详情_8 public/sf1/1/01625.png
-MOV S$称号详情_9 public/sf1/1/01627.png
-MOV S$称号详情_10 public/sf1/1/01629.png
+; MOV S$晋升称号1 @晋升7
+; GOTO @称号主界面
+; BREAK
 
-MOV S$晋升称号1 @晋升8
-GOTO @称号主界面
-BREAK
+; #IF
+; CHECKTITLE 三国之力⑦
+; #ACT
+; MOV S$称号名称 三国之力⑧
+; MOV S$称号属性 全属性90-90
+; MOV S$称号爆率 爆率+18%
+; MOV S$称号伤害 对怪伤害+18%
+; MOV S$称号体力 生命值+900
+; MOV S$晋升条件1 神器碎片*26
+; MOV S$晋升条件2 元宝*260000
+; MOV S$称号详情_1 public/sf1/1/01610.png
+; MOV S$称号详情_2 public/sf1/1/01612.png
+; MOV S$称号详情_3 public/sf1/1/01614.png
+; MOV S$称号详情_4 public/sf1/1/01616.png
+; MOV S$称号详情_5 public/sf1/1/01618.png
+; MOV S$称号详情_6 public/sf1/1/01620.png
+; MOV S$称号详情_7 public/sf1/1/01622.png
+; MOV S$称号详情_8 public/sf1/1/01625.png
+; MOV S$称号详情_9 public/sf1/1/01627.png
+; MOV S$称号详情_10 public/sf1/1/01629.png
 
-#IF
-CHECKTITLE 三国之力⑧
-#ACT
-MOV S$称号名称 三国之力⑨
-MOV S$称号属性 全属性95-95
-MOV S$称号爆率 爆率+19%
-MOV S$称号伤害 对怪伤害+19%
-MOV S$称号体力 生命值+950
-MOV S$晋升条件1 神器碎片*28
-MOV S$晋升条件2 元宝*280000
-MOV S$称号详情_1 public/sf1/1/01610.png
-MOV S$称号详情_2 public/sf1/1/01612.png
-MOV S$称号详情_3 public/sf1/1/01614.png
-MOV S$称号详情_4 public/sf1/1/01616.png
-MOV S$称号详情_5 public/sf1/1/01618.png
-MOV S$称号详情_6 public/sf1/1/01620.png
-MOV S$称号详情_7 public/sf1/1/01622.png
-MOV S$称号详情_8 public/sf1/1/01624.png
-MOV S$称号详情_9 public/sf1/1/01627.png
-MOV S$称号详情_10 public/sf1/1/01629.png
+; MOV S$晋升称号1 @晋升8
+; GOTO @称号主界面
+; BREAK
 
-MOV S$晋升称号1 @晋升9
-GOTO @称号主界面
-BREAK
+; #IF
+; CHECKTITLE 三国之力⑧
+; #ACT
+; MOV S$称号名称 三国之力⑨
+; MOV S$称号属性 全属性95-95
+; MOV S$称号爆率 爆率+19%
+; MOV S$称号伤害 对怪伤害+19%
+; MOV S$称号体力 生命值+950
+; MOV S$晋升条件1 神器碎片*28
+; MOV S$晋升条件2 元宝*280000
+; MOV S$称号详情_1 public/sf1/1/01610.png
+; MOV S$称号详情_2 public/sf1/1/01612.png
+; MOV S$称号详情_3 public/sf1/1/01614.png
+; MOV S$称号详情_4 public/sf1/1/01616.png
+; MOV S$称号详情_5 public/sf1/1/01618.png
+; MOV S$称号详情_6 public/sf1/1/01620.png
+; MOV S$称号详情_7 public/sf1/1/01622.png
+; MOV S$称号详情_8 public/sf1/1/01624.png
+; MOV S$称号详情_9 public/sf1/1/01627.png
+; MOV S$称号详情_10 public/sf1/1/01629.png
 
-#IF
-CHECKTITLE 三国之力⑨
-#ACT
-MOV S$称号名称 三国之力⑩
-MOV S$称号属性 全属性100-100
-MOV S$称号爆率 爆率+20%
-MOV S$称号伤害 对怪伤害+20%
-MOV S$称号体力 生命值+1000
-MOV S$晋升条件1 神器碎片*30
-MOV S$晋升条件2 元宝*300000
-MOV S$称号详情_1 public/sf1/1/01610.png
-MOV S$称号详情_2 public/sf1/1/01612.png
-MOV S$称号详情_3 public/sf1/1/01614.png
-MOV S$称号详情_4 public/sf1/1/01616.png
-MOV S$称号详情_5 public/sf1/1/01618.png
-MOV S$称号详情_6 public/sf1/1/01620.png
-MOV S$称号详情_7 public/sf1/1/01622.png
-MOV S$称号详情_8 public/sf1/1/01624.png
-MOV S$称号详情_9 public/sf1/1/01626.png
-MOV S$称号详情_10 public/sf1/1/01629.png
+; MOV S$晋升称号1 @晋升9
+; GOTO @称号主界面
+; BREAK
 
-MOV S$晋升称号1 @晋升10
-GOTO @称号主界面
-BREAK
+; #IF
+; CHECKTITLE 三国之力⑨
+; #ACT
+; MOV S$称号名称 三国之力⑩
+; MOV S$称号属性 全属性100-100
+; MOV S$称号爆率 爆率+20%
+; MOV S$称号伤害 对怪伤害+20%
+; MOV S$称号体力 生命值+1000
+; MOV S$晋升条件1 神器碎片*30
+; MOV S$晋升条件2 元宝*300000
+; MOV S$称号详情_1 public/sf1/1/01610.png
+; MOV S$称号详情_2 public/sf1/1/01612.png
+; MOV S$称号详情_3 public/sf1/1/01614.png
+; MOV S$称号详情_4 public/sf1/1/01616.png
+; MOV S$称号详情_5 public/sf1/1/01618.png
+; MOV S$称号详情_6 public/sf1/1/01620.png
+; MOV S$称号详情_7 public/sf1/1/01622.png
+; MOV S$称号详情_8 public/sf1/1/01624.png
+; MOV S$称号详情_9 public/sf1/1/01626.png
+; MOV S$称号详情_10 public/sf1/1/01629.png
 
-
-
-
-[@称号主界面]
-#IF
-#ACT
-#SAY
-
-<Img|img=public/sf1/1/01089.png|x=330|y=120|children={close_btn,click_btn1,click_btn2,称号1,称号2,称号3,称号4,称号5,称号6,称号7,称号8,称号9,称号10,称号11,称号信息,升级条件}|bg=1|reset=1|move=1>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=860|y=130|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
-
-<Img|id=称号1|img=<$STR(S$称号详情_1)>|x=10|y=65>
-<Img|id=称号2|img=<$STR(S$称号详情_2)>|x=10|y=95>
-<Img|id=称号3|img=<$STR(S$称号详情_3)>|x=10|y=125>
-<Img|id=称号4|img=<$STR(S$称号详情_4)>|x=10|y=155>
-<Img|id=称号5|img=<$STR(S$称号详情_5)>|x=10|y=185>
-<Img|id=称号6|img=<$STR(S$称号详情_6)>|x=10|y=215>
-<Img|id=称号7|img=<$STR(S$称号详情_7)>|x=10|y=245>
-<Img|id=称号8|img=<$STR(S$称号详情_8)>|x=10|y=275>
-<Img|id=称号9|img=<$STR(S$称号详情_9)>|x=10|y=305>
-<Img|id=称号10|img=<$STR(S$称号详情_10)>|x=10|y=335>
-
-<Img|id=称号信息|children={称号名称,称号属性,称号爆率,称号伤害,称号体力}|x=320|y=70.0|height=1|width=1|img=public/1900000665.png>
-    <Text|id=称号名称|x=0|y=0|color=222|size=14|text=[<$STR(S$称号名称)>]>
-    <Text|id=称号属性|x=0|y=17|color=70|size=14|text=[<$STR(S$称号属性)>]>
-    <Text|id=称号爆率|x=0|y=34|color=58|size=14|text=[<$STR(S$称号爆率)>]>
-    <Text|id=称号伤害|x=0|y=51|color=146|size=14|text=[<$STR(S$称号伤害)>]>
-    <Text|id=称号体力|x=0|y=68|color=58|size=14|text=[<$STR(S$称号体力)>]>
-
-<Img|id=升级条件|children={条件1,条件2}|x=280|y=180.0|height=1|width=1|img=public/1900000665.png>
-    <Text|id=条件1|x=0|y=10|color=222|size=15|text=[<$STR(S$晋升条件1)>]>
-    <Text|id=条件2|x=0|y=35|color=222|size=15|text=[<$STR(S$晋升条件2)>]>
-
-<Button|id=click_btn1|x=300|y=335|nimg=public/sf1/1/00724.png|pimg=public/sf1/2/00726.png|link=<$STR(S$晋升称号1)>>
-;<Button|id=click_btn2|x=420|y=335|nimg=public/sf1/1/01347.png|pimg=public/sf1/2/01349.png|link=<$STR(S$晋升称号2)>>
+; MOV S$晋升称号1 @晋升10
+; GOTO @称号主界面
+; BREAK
 
 
-[@晋升1]
-#IF
-CHECKTITLE 西游之力⑩
-CHECKITEM 神器碎片 12
-CheckBindMoney 元宝 > 119999
-#ACT
-ChangeBindMoney 元宝 120000
-TAKE  神器碎片 12
-DEPRIVETITLE 西游之力⑩
-CONFERTITLE 三国之力①
-#CALL [\属性重载\游戏爆率.txt] @暴率
-#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
-MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力①】称号/FCOLOR=58>
-GOTO @MAIN
-BREAK
-#elseact
-MESSAGEBOX 打造条件不足??\\1、材料不足
-GOTO @MAIN
-BREAK
 
-[@晋升2]
-#IF
-CHECKTITLE 三国之力①
-CHECKITEM 神器碎片 14
-CheckBindMoney 元宝 > 139999
-#ACT
-ChangeBindMoney 元宝 140000
-TAKE  神器碎片 14
-DEPRIVETITLE 三国之力①
-CONFERTITLE 三国之力②
-#CALL [\属性重载\游戏爆率.txt] @暴率
-#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
-MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力②】称号/FCOLOR=58>
-GOTO @MAIN
-BREAK
-#elseact
-MESSAGEBOX 打造条件不足??\\1、材料不足
-GOTO @MAIN
-BREAK
 
-[@晋升3]
-#IF
-CHECKTITLE 三国之力②
-CHECKITEM 神器碎片 16
-CheckBindMoney 元宝 > 159999
-#ACT
-ChangeBindMoney 元宝 160000
-TAKE  神器碎片 16
-DEPRIVETITLE 三国之力②
-CONFERTITLE 三国之力③
-#CALL [\属性重载\游戏爆率.txt] @暴率
-#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
-MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力③】称号/FCOLOR=58>
-GOTO @MAIN
-BREAK
-#elseact
-MESSAGEBOX 打造条件不足??\\1、材料不足
-GOTO @MAIN
-BREAK
+; [@称号主界面]
+; #IF
+; #ACT
+; #SAY
 
-[@晋升4]
-#IF
-CHECKTITLE 三国之力③
-CHECKITEM 神器碎片 18
-CheckBindMoney 元宝 > 179999
-#ACT
-ChangeBindMoney 元宝 180000
-TAKE  神器碎片 18
-DEPRIVETITLE 三国之力③
-CONFERTITLE 三国之力④
-#CALL [\属性重载\游戏爆率.txt] @暴率
-#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
-MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力④】称号/FCOLOR=58>
-GOTO @MAIN
-BREAK
-#elseact
-MESSAGEBOX 打造条件不足??\\1、材料不足
-GOTO @MAIN
-BREAK
+; <Img|img=public/sf1/1/01089.png|x=330|y=120|children={close_btn,click_btn1,click_btn2,称号1,称号2,称号3,称号4,称号5,称号6,称号7,称号8,称号9,称号10,称号11,称号信息,升级条件}|bg=1|reset=1|move=1>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=860|y=130|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
 
-[@晋升5]
-#IF
-CHECKTITLE 三国之力④
-CHECKITEM 神器碎片 20
-CheckBindMoney 元宝 > 199999
-#ACT
-ChangeBindMoney 元宝 200000
-TAKE  神器碎片 20
-DEPRIVETITLE 三国之力④
-CONFERTITLE 三国之力⑤
-#CALL [\属性重载\游戏爆率.txt] @暴率
-#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
-MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力⑤】称号/FCOLOR=58>
-GOTO @MAIN
-BREAK
-#elseact
-MESSAGEBOX 打造条件不足??\\1、材料不足
-GOTO @MAIN
-BREAK
+; <Img|id=称号1|img=<$STR(S$称号详情_1)>|x=10|y=65>
+; <Img|id=称号2|img=<$STR(S$称号详情_2)>|x=10|y=95>
+; <Img|id=称号3|img=<$STR(S$称号详情_3)>|x=10|y=125>
+; <Img|id=称号4|img=<$STR(S$称号详情_4)>|x=10|y=155>
+; <Img|id=称号5|img=<$STR(S$称号详情_5)>|x=10|y=185>
+; <Img|id=称号6|img=<$STR(S$称号详情_6)>|x=10|y=215>
+; <Img|id=称号7|img=<$STR(S$称号详情_7)>|x=10|y=245>
+; <Img|id=称号8|img=<$STR(S$称号详情_8)>|x=10|y=275>
+; <Img|id=称号9|img=<$STR(S$称号详情_9)>|x=10|y=305>
+; <Img|id=称号10|img=<$STR(S$称号详情_10)>|x=10|y=335>
 
-[@晋升6]
-#IF
-CHECKTITLE 三国之力⑤
-CHECKITEM 神器碎片 22
-CheckBindMoney 元宝 > 219999
-#ACT
-ChangeBindMoney 元宝 220000
-TAKE  神器碎片 22
-DEPRIVETITLE 三国之力⑤
-CONFERTITLE 三国之力⑥
-#CALL [\属性重载\游戏爆率.txt] @暴率
-#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
-MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力⑥】称号/FCOLOR=58>
-GOTO @MAIN
-BREAK
-#elseact
-MESSAGEBOX 打造条件不足??\\1、材料不足
-GOTO @MAIN
-BREAK
+; <Img|id=称号信息|children={称号名称,称号属性,称号爆率,称号伤害,称号体力}|x=320|y=70.0|height=1|width=1|img=public/1900000665.png>
+;     <Text|id=称号名称|x=0|y=0|color=222|size=14|text=[<$STR(S$称号名称)>]>
+;     <Text|id=称号属性|x=0|y=17|color=70|size=14|text=[<$STR(S$称号属性)>]>
+;     <Text|id=称号爆率|x=0|y=34|color=58|size=14|text=[<$STR(S$称号爆率)>]>
+;     <Text|id=称号伤害|x=0|y=51|color=146|size=14|text=[<$STR(S$称号伤害)>]>
+;     <Text|id=称号体力|x=0|y=68|color=58|size=14|text=[<$STR(S$称号体力)>]>
 
-[@晋升7]
-#IF
-CHECKTITLE 三国之力⑥
-CHECKITEM 神器碎片 24
-CheckBindMoney 元宝 > 239999
-#ACT
-ChangeBindMoney 元宝 240000
-TAKE  神器碎片 24
-DEPRIVETITLE 三国之力⑥
-CONFERTITLE 三国之力⑦
-#CALL [\属性重载\游戏爆率.txt] @暴率
-#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
-MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力⑦】称号/FCOLOR=58>
-GOTO @MAIN
-BREAK
-#elseact
-MESSAGEBOX 打造条件不足??\\1、材料不足
-GOTO @MAIN
-BREAK
+; <Img|id=升级条件|children={条件1,条件2}|x=280|y=180.0|height=1|width=1|img=public/1900000665.png>
+;     <Text|id=条件1|x=0|y=10|color=222|size=15|text=[<$STR(S$晋升条件1)>]>
+;     <Text|id=条件2|x=0|y=35|color=222|size=15|text=[<$STR(S$晋升条件2)>]>
 
-[@晋升8]
-#IF
-CHECKTITLE 三国之力⑦
-CHECKITEM 神器碎片 26
-CheckBindMoney 元宝 > 259999
-#ACT
-ChangeBindMoney 元宝 260000
-TAKE  神器碎片 26
-DEPRIVETITLE 三国之力⑦
-CONFERTITLE 三国之力⑧
-#CALL [\属性重载\游戏爆率.txt] @暴率
-#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
-MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力⑧】称号/FCOLOR=58>
-GOTO @MAIN
-BREAK
-#elseact
-MESSAGEBOX 打造条件不足??\\1、材料不足
-GOTO @MAIN
-BREAK
+; <Button|id=click_btn1|x=300|y=335|nimg=public/sf1/1/00724.png|pimg=public/sf1/2/00726.png|link=<$STR(S$晋升称号1)>>
+; ;<Button|id=click_btn2|x=420|y=335|nimg=public/sf1/1/01347.png|pimg=public/sf1/2/01349.png|link=<$STR(S$晋升称号2)>>
 
-[@晋升9]
-#IF
-CHECKTITLE 三国之力⑧
-CHECKITEM 神器碎片 28
-CheckBindMoney 元宝 > 279999
-#ACT
-ChangeBindMoney 元宝 280000
-TAKE  神器碎片 28
-DEPRIVETITLE 三国之力⑧
-CONFERTITLE 三国之力⑨
-#CALL [\属性重载\游戏爆率.txt] @暴率
-#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
-MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力⑨】称号/FCOLOR=58>
-GOTO @MAIN
-BREAK
-#elseact
-MESSAGEBOX 打造条件不足??\\1、材料不足
-GOTO @MAIN
-BREAK
 
-[@晋升10]
-#IF
-CHECKTITLE 三国之力⑨
-CHECKITEM 神器碎片 30
-CheckBindMoney 元宝 > 299999
-#ACT
-ChangeBindMoney 元宝 300000
-TAKE  神器碎片 30
-DEPRIVETITLE 三国之力⑨
-CONFERTITLE 三国之力⑩
-#CALL [\属性重载\游戏爆率.txt] @暴率
-#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
-MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力⑩】称号/FCOLOR=58>
-GOTO @MAIN
-BREAK
-#elseact
-MESSAGEBOX 打造条件不足??\\1、材料不足
-GOTO @MAIN
-BREAK
+; [@晋升1]
+; #IF
+; CHECKTITLE 西游之力⑩
+; CHECKITEM 神器碎片 12
+; CheckBindMoney 元宝 > 119999
+; #ACT
+; ChangeBindMoney 元宝 120000
+; TAKE  神器碎片 12
+; DEPRIVETITLE 西游之力⑩
+; CONFERTITLE 三国之力①
+; #CALL [\属性重载\游戏爆率.txt] @暴率
+; #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+; MOVR <$STR(N$纵轴坐标)> 100 500
+; SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力①】称号/FCOLOR=58>
+; GOTO @MAIN
+; BREAK
+; #elseact
+; MESSAGEBOX 打造条件不足??\\1、材料不足
+; GOTO @MAIN
+; BREAK
+
+; [@晋升2]
+; #IF
+; CHECKTITLE 三国之力①
+; CHECKITEM 神器碎片 14
+; CheckBindMoney 元宝 > 139999
+; #ACT
+; ChangeBindMoney 元宝 140000
+; TAKE  神器碎片 14
+; DEPRIVETITLE 三国之力①
+; CONFERTITLE 三国之力②
+; #CALL [\属性重载\游戏爆率.txt] @暴率
+; #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+; MOVR <$STR(N$纵轴坐标)> 100 500
+; SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力②】称号/FCOLOR=58>
+; GOTO @MAIN
+; BREAK
+; #elseact
+; MESSAGEBOX 打造条件不足??\\1、材料不足
+; GOTO @MAIN
+; BREAK
+
+; [@晋升3]
+; #IF
+; CHECKTITLE 三国之力②
+; CHECKITEM 神器碎片 16
+; CheckBindMoney 元宝 > 159999
+; #ACT
+; ChangeBindMoney 元宝 160000
+; TAKE  神器碎片 16
+; DEPRIVETITLE 三国之力②
+; CONFERTITLE 三国之力③
+; #CALL [\属性重载\游戏爆率.txt] @暴率
+; #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+; MOVR <$STR(N$纵轴坐标)> 100 500
+; SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力③】称号/FCOLOR=58>
+; GOTO @MAIN
+; BREAK
+; #elseact
+; MESSAGEBOX 打造条件不足??\\1、材料不足
+; GOTO @MAIN
+; BREAK
+
+; [@晋升4]
+; #IF
+; CHECKTITLE 三国之力③
+; CHECKITEM 神器碎片 18
+; CheckBindMoney 元宝 > 179999
+; #ACT
+; ChangeBindMoney 元宝 180000
+; TAKE  神器碎片 18
+; DEPRIVETITLE 三国之力③
+; CONFERTITLE 三国之力④
+; #CALL [\属性重载\游戏爆率.txt] @暴率
+; #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+; MOVR <$STR(N$纵轴坐标)> 100 500
+; SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力④】称号/FCOLOR=58>
+; GOTO @MAIN
+; BREAK
+; #elseact
+; MESSAGEBOX 打造条件不足??\\1、材料不足
+; GOTO @MAIN
+; BREAK
+
+; [@晋升5]
+; #IF
+; CHECKTITLE 三国之力④
+; CHECKITEM 神器碎片 20
+; CheckBindMoney 元宝 > 199999
+; #ACT
+; ChangeBindMoney 元宝 200000
+; TAKE  神器碎片 20
+; DEPRIVETITLE 三国之力④
+; CONFERTITLE 三国之力⑤
+; #CALL [\属性重载\游戏爆率.txt] @暴率
+; #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+; MOVR <$STR(N$纵轴坐标)> 100 500
+; SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力⑤】称号/FCOLOR=58>
+; GOTO @MAIN
+; BREAK
+; #elseact
+; MESSAGEBOX 打造条件不足??\\1、材料不足
+; GOTO @MAIN
+; BREAK
+
+; [@晋升6]
+; #IF
+; CHECKTITLE 三国之力⑤
+; CHECKITEM 神器碎片 22
+; CheckBindMoney 元宝 > 219999
+; #ACT
+; ChangeBindMoney 元宝 220000
+; TAKE  神器碎片 22
+; DEPRIVETITLE 三国之力⑤
+; CONFERTITLE 三国之力⑥
+; #CALL [\属性重载\游戏爆率.txt] @暴率
+; #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+; MOVR <$STR(N$纵轴坐标)> 100 500
+; SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力⑥】称号/FCOLOR=58>
+; GOTO @MAIN
+; BREAK
+; #elseact
+; MESSAGEBOX 打造条件不足??\\1、材料不足
+; GOTO @MAIN
+; BREAK
+
+; [@晋升7]
+; #IF
+; CHECKTITLE 三国之力⑥
+; CHECKITEM 神器碎片 24
+; CheckBindMoney 元宝 > 239999
+; #ACT
+; ChangeBindMoney 元宝 240000
+; TAKE  神器碎片 24
+; DEPRIVETITLE 三国之力⑥
+; CONFERTITLE 三国之力⑦
+; #CALL [\属性重载\游戏爆率.txt] @暴率
+; #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+; MOVR <$STR(N$纵轴坐标)> 100 500
+; SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力⑦】称号/FCOLOR=58>
+; GOTO @MAIN
+; BREAK
+; #elseact
+; MESSAGEBOX 打造条件不足??\\1、材料不足
+; GOTO @MAIN
+; BREAK
+
+; [@晋升8]
+; #IF
+; CHECKTITLE 三国之力⑦
+; CHECKITEM 神器碎片 26
+; CheckBindMoney 元宝 > 259999
+; #ACT
+; ChangeBindMoney 元宝 260000
+; TAKE  神器碎片 26
+; DEPRIVETITLE 三国之力⑦
+; CONFERTITLE 三国之力⑧
+; #CALL [\属性重载\游戏爆率.txt] @暴率
+; #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+; MOVR <$STR(N$纵轴坐标)> 100 500
+; SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力⑧】称号/FCOLOR=58>
+; GOTO @MAIN
+; BREAK
+; #elseact
+; MESSAGEBOX 打造条件不足??\\1、材料不足
+; GOTO @MAIN
+; BREAK
+
+; [@晋升9]
+; #IF
+; CHECKTITLE 三国之力⑧
+; CHECKITEM 神器碎片 28
+; CheckBindMoney 元宝 > 279999
+; #ACT
+; ChangeBindMoney 元宝 280000
+; TAKE  神器碎片 28
+; DEPRIVETITLE 三国之力⑧
+; CONFERTITLE 三国之力⑨
+; #CALL [\属性重载\游戏爆率.txt] @暴率
+; #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+; MOVR <$STR(N$纵轴坐标)> 100 500
+; SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力⑨】称号/FCOLOR=58>
+; GOTO @MAIN
+; BREAK
+; #elseact
+; MESSAGEBOX 打造条件不足??\\1、材料不足
+; GOTO @MAIN
+; BREAK
+
+; [@晋升10]
+; #IF
+; CHECKTITLE 三国之力⑨
+; CHECKITEM 神器碎片 30
+; CheckBindMoney 元宝 > 299999
+; #ACT
+; ChangeBindMoney 元宝 300000
+; TAKE  神器碎片 30
+; DEPRIVETITLE 三国之力⑨
+; CONFERTITLE 三国之力⑩
+; #CALL [\属性重载\游戏爆率.txt] @暴率
+; #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+; MOVR <$STR(N$纵轴坐标)> 100 500
+; SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【三国之力⑩】称号/FCOLOR=58>
+; GOTO @MAIN
+; BREAK
+; #elseact
+; MESSAGEBOX 打造条件不足??\\1、材料不足
+; GOTO @MAIN
+; BREAK
 

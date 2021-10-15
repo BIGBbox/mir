@@ -2,7 +2,6 @@
 
 {
 
-
 #if
 CHECKTEXTLIST ..\QuestDiary\自动挂机\挂机地图.txt <$MAPTITLE>
 #act
