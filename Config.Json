@@ -1,7 +1,7 @@
 {
  "DBInfo": {
   "sDBUser": "sa",
-  "sDBName": "cqDB",
+  "sDBName": "local",
   "sDBPsw": "Aa123123",
   "sDBIpAddr": "47.101.145.151",
   "nDBPort": 1433

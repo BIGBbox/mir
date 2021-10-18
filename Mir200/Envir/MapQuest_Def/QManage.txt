@@ -69,7 +69,7 @@ CHECKLEVELEX > 0
 #ACT
 SetOnTimer 1 10
 SetOnTimer 2 1
-SetOnTimer 5 2
+SetOnTimer 5 20
 SetOnTimer 7 1
 ;SETSHOWITEMMSG 0
 VAR STRING HUMAN 二级密码
@@ -405,19 +405,19 @@ NOT EQUAL <$STR(U18)> 0
 NOT EQUAL <$CHARM>
 #ACT
 
-;ADDBUTTON 102 19 1307 1307 1307 680 20 0 　　　　　<$STR(U18)>s 复活冷却中
-delbutton 101 10
-addbutton 101 10 <RText|id=1|x=820|y=2|size=16|text=<复活冷却中:/FCOLOR=250><<$STR(U18)>s/FCOLOR=249>>
-;addbutton 101 10 <Text|id=1|x=820|y=2|size=16|color=249|text=复活冷却中>
-;addbutton 101 10 <Text|id=2|x=820|y=2|size=16|color=250,251|text=<$STR(U18)>s>
+;ADDBUTTON 102 19 1307 1307 1307 680 20 0 　　　　　<$STR(U18)>s 复活冷却中-62 -92
+delbutton 103 10
+addbutton 103 10 <RText|id=1|x=558|y=-25|size=16|text=<复活冷却中:/FCOLOR=250><<$STR(U18)>s/FCOLOR=249>>
+;addbutton 103 10 <Text|id=1|x=820|y=2|size=16|color=249|text=复活冷却中>
+;addbutton 103 10 <Text|id=2|x=820|y=2|size=16|color=250,251|text=<$STR(U18)>s>
 
 #IF
 EQUAL <$CHARM>
 #ACT
 ;sendmsg 5 倒计时:未佩戴复活装备
 ;ADDBUTTON 0 19 1307 1307 1307 680 20 0 -1 未佩戴复活装备
-delbutton 101 10
-addbutton 101 10 <RText|id=1|x=820|y=2|size=16|text=<未佩戴复活装备/FCOLOR=249>>
+delbutton 103 10
+addbutton 103 10 <RText|id=1|x=558|y=-25|size=16|text=<未佩戴复活装备/FCOLOR=249>>
 
 #IF
 EQUAL <$STR(U18)> 0
@@ -425,8 +425,8 @@ NOT EQUAL <$CHARM>
 #ACT
 ;sendmsg 5 倒计时:可复活
 ;ADDBUTTON 0 19 1306 1306 1306 680 20 0 -1 可复活
-delbutton 101 10
-addbutton 101 10 <RText|id=1|x=820|y=2|size=16|text=<复活状态:/FCOLOR=250><可复活/FCOLOR=251>>
+delbutton 103 10
+addbutton 103 10 <RText|id=1|x=558|y=-25|size=16|text=<复活状态:/FCOLOR=250><可复活/FCOLOR=251>>
 
 
 

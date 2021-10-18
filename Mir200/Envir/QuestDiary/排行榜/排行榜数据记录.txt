@@ -3,6 +3,8 @@
 
 #if
 #act
+SortHumVar 角色攻击力 S$角色名字 N$角色攻击力 0 1 50
+
 goto @写入排行榜
 
 
@@ -12,8 +14,7 @@ goto @写入排行榜
 #act
 CALCVAR HUMAN 角色攻击力 = <$MAXDC>
 SAVEVAR HUMAN 角色攻击力
-
-SortHumVar 角色攻击力 S$角色名字 N$角色攻击力 0 1 50
+sendmsg 5 写入排行榜::<$MAXDC>
 
 WriteConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$USERNAME> 角色UID <$USERID>
 WriteConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$USERNAME> 角色攻击力 <$HUMAN(角色攻击力)>

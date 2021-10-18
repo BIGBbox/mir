@@ -17,7 +17,7 @@
  "M2DB-Config": {
   "M2DBUser": "sa",
   "M2DBPort": 1433,
-  "M2DBName": "cqDB",
+  "M2DBName": "local",
   "M2DBIpaddr": "47.101.145.151",
   "M2DBPsw": "Aa123123",
   "Help": "ÕÊº“ ˝æ›ø‚≈‰÷√"
@@ -25,7 +25,7 @@
  "PayDB-Config": {
   "PayDBUser": "sa",
   "PayDBPort": 1433,
-  "PayDBName": "cqDB",
+  "PayDBName": "local",
   "PayDBIpaddr": "47.101.145.151",
   "PayDBPsw": "Aa123123"
  },

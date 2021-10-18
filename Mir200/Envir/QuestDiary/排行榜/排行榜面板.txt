@@ -5,7 +5,7 @@
 
 #if
 #act
-mov N$窗口序号 0
+mov N$窗口序号 1
 
 mov S$窗口1
 mov S$窗口2
@@ -56,26 +56,28 @@ mov S$窗口49
 mov S$窗口50
 mov S$我的行会 <$GUILDNAME>
 mov S$我的排名 未上榜
+SortHumVar 角色攻击力 S$角色名字 N$角色攻击力 0 1 50
 
-goto @绘制滑动窗口
+goto @绘制排行榜窗口
 ; goto @排行榜面板显示
 
 [@排行榜面板显示]
 #if
 #ACT
 #SAY
-<Img|img=public/1900000681.png|x=160|y=40|children={close_btn,大标题,bg0,大标题,滚动窗口,click_btn,累充金额bg,特效控件6,金额,title,我的排名,我的行会}|width=600|height=540|bg=1|reset=1|move=1>
-<Button|id=close_btn|x=750|y=42|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Img|img=public/1900000681.png|x=160|y=40|children={close_btn,大标题,bg0,大标题,排名抬头,滚动窗口,click_btn,累充金额bg,特效控件6,金额,title,我的排名,我的行会}|width=600|height=540|bg=1|reset=1|move=1>
+<Button|id=close_btn|x=592|y=12|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
 ;<Text|id=大标题|x=359|y=12|color=249|size=35|text=赞 助>
 <Img|id=bg0|img=0.png|x=10.0|y=55.0>
-<Img|id=大标题|img=private/rank_ui/rank_ui_mobile/1900020024.png|x=355.0|y=5.0>
+<Img|id=大标题|img=private/rank_ui/rank_ui_mobile/1900020024.png|x=245.0|y=5.0>
+<RText|id=排名抬头|x=45.0|y=60.0|text=<排名/FCOLOR=149>             <名字/FCOLOR=149>                  <战斗力/FCOLOR=149>          <等级/FCOLOR=149>>
 ;<Text|id=金额|x=519|y=77|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<$CREDITPOINT>元>
 <ListView|id=滚动窗口|children={窗口1,窗口2,窗口3,窗口4,窗口5,窗口6,窗口7,窗口8,
 窗口9,窗口10,窗口11,窗口12,窗口13,窗口14,窗口15,窗口16,
 窗口17,窗口18,窗口19,窗口20,窗口21,窗口22,窗口23,窗口24,
 窗口25,窗口26,窗口27,窗口28,窗口29,窗口30,窗口31,窗口32,
 窗口33,窗口34,窗口37,窗口38,窗口39,窗口40,窗口41,窗口42,
-窗口43,窗口44,窗口45,窗口47,窗口48,窗口49,窗口50,}|direction=1|bounce=0|x=45|y=100.0|margin=5|height=350|width=700|loadDelay=1>
+窗口43,窗口44,窗口45,窗口47,窗口48,窗口49,窗口50,}|direction=1|bounce=0|x=25|y=100.0|margin=5|height=350|width=700|loadDelay=1>
     
 <$STR(S$窗口1)> <$STR(S$窗口2)> <$STR(S$窗口3)> <$STR(S$窗口4)> <$STR(S$窗口5)> <$STR(S$窗口6)> <$STR(S$窗口7)> <$STR(S$窗口8)> <$STR(S$窗口9)> <$STR(S$窗口10)>
 <$STR(S$窗口11)> <$STR(S$窗口12)> <$STR(S$窗口13)> <$STR(S$窗口14)> <$STR(S$窗口15)> <$STR(S$窗口16)> <$STR(S$窗口17)> <$STR(S$窗口18)> <$STR(S$窗口19)> <$STR(S$窗口10)>
@@ -86,15 +88,14 @@ goto @绘制滑动窗口
 <RText|id=我的排名|x=55.0|y=465.0|text=<我的排名:/FCOLOR=250> <<$str(S$我的排名)>/FCOLOR=255>>
 <RText|id=我的行会|x=255.0|y=465.0|text=<所属行会:/FCOLOR=250> <<$str(S$我的行会)>/FCOLOR=250>>
 
-[@绘制滑动窗口]
+[@绘制排行榜窗口]
 #if
 #act
-SortHumVar 角色攻击力 S$角色名字 N$角色攻击力 0 1 50
-inc N$窗口序号 1
 
 ReadConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$STR(S$角色名字<$STR(N$窗口序号)>)> 角色UID S$角色UID
 ReadConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$STR(S$角色名字<$str(N$窗口序号)>)> 角色攻击力 S$角色攻击力
 ReadConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$STR(S$角色名字<$str(N$窗口序号)>)> 角色等级 S$角色等级
+sendmsg 5 窗口<$STR(N$窗口序号)>是是是<$STR(S$角色名字<$str(N$窗口序号)>)>
 
 #if
 equal <$STR(S$角色名字<$STR(N$窗口序号)>)> <$USERNAME>
@@ -102,11 +103,8 @@ equal <$STR(S$角色名字<$STR(N$窗口序号)>)> <$USERNAME>
 mov S$我的排名 第<$str(N$窗口序号)>名
 
 
-; sendmsg 5 窗口<$STR(N$窗口序号)>是是是<$STR(S$角色名字<$str(N$窗口序号)>)>
-
 #if
 not equal <$STR(S$角色名字<$STR(N$窗口序号)>)>
-
 #act
 inc S$窗口<$STR(N$窗口序号)> <Img|id=窗口<$STR(N$窗口序号)>|children={窗口<$STR(N$窗口序号)>_排名序号,窗口<$STR(N$窗口序号)>_角色名,窗口<$STR(N$窗口序号)>_角色攻击力,窗口<$STR(N$窗口序号)>_角色等级,窗口<$STR(N$窗口序号)>_查看按钮}|img=public/1900000651_2.png|x=0.0|y=0.0|scale9t=10|scale9b=10|scale9l=5|scale9r=40|width=550|height=50>
 inc S$窗口<$STR(N$窗口序号)> <RText|id=窗口<$STR(N$窗口序号)>_排名序号|x=8.0|y=12.0|text=<第<$STR(N$窗口序号)>名:/FCOLOR=149>>
@@ -131,7 +129,8 @@ inc S$窗口<$STR(N$窗口序号)> <RText|id=窗口<$STR(N$窗口序号)>_排名_名|x=40.0|y=0
 small <$STR(N$窗口序号)> 20
 not equal <$STR(S$角色名字<$STR(N$窗口序号)>)>
 #act
-goto @绘制滑动窗口
+inc N$窗口序号 1
+goto @绘制排行榜窗口
 #elseact
 goto @排行榜面板显示
 
