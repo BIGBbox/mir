@@ -68,7 +68,7 @@ GOTO @读取数据
 ; <RText|id=add1|x=74.0|y=200|color=255|size=16|text=<第一名捐献需大于15000RMB点。第二名需大于10000RMB点，第三名大于7000RMB点/FCOLOR=146>>
 
     <RText|id=18|x=74.0|y=270|color=250|size=16|text=<沙巴克获胜行会将获得捐献值60%奖励/FCOLOR=251>>
-    <RText|id=11|x=74.0|y=290|color=255|size=16|text=<凡是累计捐献达到3000RMB点,即可获得以下属性/FCOLOR=250>>
+    ; <RText|id=11|x=74.0|y=270|color=255|size=16|text=<凡是累计捐献达到300RMB点,即可获得以下属性/FCOLOR=250>>
     <RText|id=14|x=74.0|y=310|color=146|size=16|text=<参与捐献将获得攻魔道+50，生命+3000，魔切道切+20%>>
     <RText|id=15|children=15_1|x=74.0|y=330|color=255|size=16|text=<注：沙巴克结束时捐献数据会清零,请玩家们理性捐献！/FCOLOR=251>>
     <RText|id=17|x=80.0|y=370|color=255|size=16|text=<你的当前排名：/FCOLOR=146><<$STR(S$你的当前排名)>/FCOLOR=250>>

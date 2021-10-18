@@ -177,29 +177,21 @@ OPENNPCSHOWEX 76
 ; WriteConfigFileItem ..\QuestDiary\测试变量\测试文件.txt <$USERNAME> 等级 996M2
 ; WriteConfigFileItem ..\QuestDiary\测试变量\测试文件.txt <$USERNAME> 攻击力 <$MAXDC>
 ; VIEWPLAYER <$STR(S$角色ID)> 101
-SortHumVar 角色攻击力 S$角色名字 N$角色攻击力 0 1 50
+; SortHumVar 角色攻击力 S$角色名字 N$角色攻击力 0 1 50
 
-sendmsg 5 <$STR(S$角色名字1)>___<$str(N$角色攻击力1)>
-sendmsg 5 <$STR(S$角色名字2)>___<$str(N$角色攻击力2)>
-sendmsg 5 <$STR(S$角色名字3)>___<$str(N$角色攻击力3)>
-sendmsg 5 <$STR(S$角色名字4)>___<$str(N$角色攻击力4)>
-sendmsg 5 <$STR(S$角色名字5)>___<$str(N$角色攻击力5)>
-sendmsg 5 <$STR(S$角色名字6)>___<$str(N$角色攻击力6)>
-sendmsg 5 <$STR(S$角色名字7)>___<$str(N$角色攻击力7)>
-sendmsg 5 <$STR(S$角色名字8)>___<$str(N$角色攻击力8)>
-
-; SortHumVar 角色攻击力 S$排序写入变量字符 N$排序写入变量数字 0 1 3
-; SENDMSG 0 -<$str(S$排序写入变量字符1)>:<$STR(N$排序写入变量数字1)>
-; SENDMSG 0 -<$str(S$排序写入变量字符2)>:<$STR(N$排序写入变量数字2)>
-; SENDMSG 0 -<$str(S$排序写入变量字符3)>:<$STR(N$排序写入变量数字3)>
+; sendmsg 5 <$STR(S$角色名字1)>___<$str(N$角色攻击力1)>
+; sendmsg 5 <$STR(S$角色名字2)>___<$str(N$角色攻击力2)>
+; sendmsg 5 <$STR(S$角色名字3)>___<$str(N$角色攻击力3)>
+; sendmsg 5 <$STR(S$角色名字4)>___<$str(N$角色攻击力4)>
+; sendmsg 5 <$STR(S$角色名字5)>___<$str(N$角色攻击力5)>
+; sendmsg 5 <$STR(S$角色名字6)>___<$str(N$角色攻击力6)>
+; sendmsg 5 <$STR(S$角色名字7)>___<$str(N$角色攻击力7)>
+; sendmsg 5 <$STR(S$角色名字8)>___<$str(N$角色攻击力8)>
 
 ; #call [\排行榜\排行榜数据记录.txt] @获取角色属性
 
 
 ; SetIcon 0 1 586 -25 60 0 0
-; SetIcon 1 1 597 -25 40 0 0
-; SetIcon 2 1 583 -40 50 0 0
-; SetIcon 3 1 480 13 5 0 0
 
 ; #act
 ; mov N$鞭尸几率 1
@@ -217,14 +209,7 @@ SENDMSG 6 你当前关联元宝的货1币有:<$STR(S1)>个。
 ; sendmsg  5 测试
 ; DELNPC 攻城奖池领取
 ; CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
-; mov S$装备标记 99
-; #IF
-; CHECK [<$str(S$装备标记)>] 1
-; #act
-; ; messagebox 该装备已激活!!
-; sendmsg 5 标记为1
-; #elseact
-; sendmsg 5 标记不为1
+
 
 
 ; #IF
@@ -234,12 +219,12 @@ SENDMSG 6 你当前关联元宝的货1币有:<$STR(S1)>个。
 ; #ELSESAY
 ; 你还没有英雄.
 
-; #IF
-; CHECKSLAVECOUNT < 1
-; #ACT
-; SENDMSG 6 你的宝宝总数量为0个。
-; #ELSEACT
-; SENDMSG 6 你的宝宝总数量不为0个。
+#IF
+CHECKSLAVECOUNT < 1
+#ACT
+SENDMSG 6 你的宝宝总数量为0个。
+#ELSEACT
+SENDMSG 6 你的宝宝总数量不为0个。
 
 ; MonGenEx 0 101 141 真·如来 1 1 0 255
 ; ChangeHumNewValue 21 90 600

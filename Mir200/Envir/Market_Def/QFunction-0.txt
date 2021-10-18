@@ -2115,10 +2115,692 @@ MOV N$平定三藩 60
 
 ; --------------召唤骷髅-----------------
 [@MagSelfFunc17]
+
+#IF
+EQUAL N$分身CD 0
+#ACT
+MOV N$分身CD 15
+#ELSEACT
+SENDMSG 7 守护者CD时间剩余<$STR(N$分身CD)>秒！
+break
+
+; #OR
+; IsOnMap 天下主城
+; IsOnMap N3
+; IsOnMap new0150
+; #ACT
+; SENDMSG 7 此地图不允许召唤！！！！
+; break
+
+
+; #IF
+; #ACT
+; KILLCALLMOB <$USERNAME>的分身 99 1
+
 #if
 #act
-sendmsg 5 释放技能召唤骷髅!!
+KILLCALLMOB 守护者 99 1
+mov N$分身攻击计算 0
+mov N$分身魔法计算 0
+mov N$分身道术计算 0
+mov N$分身防御计算 0
+mov N$分身魔御计算 0
+mov N$分身血量计算 0
+mov N$分身蓝量计算 0
 
+#IF
+equal U8 15
+#ACT
+mov N$分身攻击计算 <$MAXDC>
+mov N$分身魔法计算 <$MAXMC>
+mov N$分身道术计算 <$MAXSC>
+mov N$分身防御计算 <$MAXAC>
+mov N$分身魔御计算 <$MAXMAC>
+mov N$分身血量计算 <$MAXHP>
+mov N$分身蓝量计算 <$MAXMP>
+mul N$分身攻击计算 25
+mul N$分身魔法计算 25
+mul N$分身道术计算 25
+mul N$分身防御计算 25
+mul N$分身魔御计算 25
+mul N$分身血量计算 25
+mul N$分身蓝量计算 25
+div N$分身攻击计算 10
+div N$分身魔法计算 10
+div N$分身道术计算 10
+div N$分身防御计算 10
+div N$分身魔御计算 10
+div N$分身血量计算 10
+div N$分身蓝量计算 10
+inc N$分身攻击计算 <$STR(N$人物攻击计算)>
+inc N$分身魔法计算 <$STR(N$人物魔法计算)>
+inc N$分身道术计算 <$STR(N$人物道术计算)>
+inc N$分身防御计算 <$STR(N$人物防御计算)>
+inc N$分身魔御计算 <$STR(N$人物魔御计算)>
+inc N$分身血量计算 <$STR(N$人物血量计算)>
+inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
+; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
+; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
+; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
+; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
+; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
+; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
+; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
+DELAYGOTO 100 @守护者属性加成
+
+; CHANGECUSTOMITEMABIL 0 1 1 10
+; CHANGECUSTOMITEMVALUE 0 1 = <$STR(N$分身防御计算)>
+; CHANGECUSTOMITEMABIL 0 2 1 12
+; CHANGECUSTOMITEMVALUE 0 2 = <$STR(N$分身魔御计算)>
+; CHANGECUSTOMITEMABIL 0 3 1 4
+; CHANGECUSTOMITEMVALUE 0 3 = <$STR(N$分身攻击计算)>
+; CHANGECUSTOMITEMABIL 0 4 1 6
+; CHANGECUSTOMITEMVALUE 0 4 = <$STR(N$分身魔法计算)>
+; CHANGECUSTOMITEMABIL 0 5 1 8
+; CHANGECUSTOMITEMVALUE 0 5 = <$STR(N$分身道术计算)>
+; CHANGECUSTOMITEMABIL 0 6 1 1
+; CHANGECUSTOMITEMVALUE 0 6 = <$STR(N$分身血量计算)>
+; CHANGECUSTOMITEMABIL 0 7 1 2
+; CHANGECUSTOMITEMVALUE 0 7 = <$STR(N$分身蓝量计算)>
+;RecallSelf 48
+; DELAYGOTO 100 @分身恢复
+break
+
+#IF
+equal U8 14
+#ACT
+mov N$分身攻击计算 <$MAXDC>
+mov N$分身魔法计算 <$MAXMC>
+mov N$分身道术计算 <$MAXSC>
+mov N$分身防御计算 <$MAXAC>
+mov N$分身魔御计算 <$MAXMAC>
+mov N$分身血量计算 <$MAXHP>
+mov N$分身蓝量计算 <$MAXMP>
+mul N$分身攻击计算 24
+mul N$分身魔法计算 24
+mul N$分身道术计算 24
+mul N$分身防御计算 24
+mul N$分身魔御计算 24
+mul N$分身血量计算 24
+mul N$分身蓝量计算 24
+div N$分身攻击计算 10
+div N$分身魔法计算 10
+div N$分身道术计算 10
+div N$分身防御计算 10
+div N$分身魔御计算 10
+div N$分身血量计算 10
+div N$分身蓝量计算 10
+inc N$分身攻击计算 <$STR(N$人物攻击计算)>
+inc N$分身魔法计算 <$STR(N$人物魔法计算)>
+inc N$分身道术计算 <$STR(N$人物道术计算)>
+inc N$分身防御计算 <$STR(N$人物防御计算)>
+inc N$分身魔御计算 <$STR(N$人物魔御计算)>
+inc N$分身血量计算 <$STR(N$人物血量计算)>
+inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
+DELAYGOTO 100 @守护者属性加成
+
+; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
+; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
+; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
+; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
+; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
+; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
+; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
+break
+
+
+#IF
+equal U8 13
+#ACT
+mov N$分身攻击计算 <$MAXDC>
+mov N$分身魔法计算 <$MAXMC>
+mov N$分身道术计算 <$MAXSC>
+mov N$分身防御计算 <$MAXAC>
+mov N$分身魔御计算 <$MAXMAC>
+mov N$分身血量计算 <$MAXHP>
+mov N$分身蓝量计算 <$MAXMP>
+mul N$分身攻击计算 23
+mul N$分身魔法计算 23
+mul N$分身道术计算 23
+mul N$分身防御计算 23
+mul N$分身魔御计算 23
+mul N$分身血量计算 23
+mul N$分身蓝量计算 23
+div N$分身攻击计算 10
+div N$分身魔法计算 10
+div N$分身道术计算 10
+div N$分身防御计算 10
+div N$分身魔御计算 10
+div N$分身血量计算 10
+div N$分身蓝量计算 10
+inc N$分身攻击计算 <$STR(N$人物攻击计算)>
+inc N$分身魔法计算 <$STR(N$人物魔法计算)>
+inc N$分身道术计算 <$STR(N$人物道术计算)>
+inc N$分身防御计算 <$STR(N$人物防御计算)>
+inc N$分身魔御计算 <$STR(N$人物魔御计算)>
+inc N$分身血量计算 <$STR(N$人物血量计算)>
+inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
+DELAYGOTO 100 @守护者属性加成
+
+; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
+; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
+; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
+; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
+; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
+; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
+; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
+break
+
+#IF
+equal U8 12
+#ACT
+mov N$分身攻击计算 <$MAXDC>
+mov N$分身魔法计算 <$MAXMC>
+mov N$分身道术计算 <$MAXSC>
+mov N$分身防御计算 <$MAXAC>
+mov N$分身魔御计算 <$MAXMAC>
+mov N$分身血量计算 <$MAXHP>
+mov N$分身蓝量计算 <$MAXMP>
+mul N$分身攻击计算 22
+mul N$分身魔法计算 22
+mul N$分身道术计算 22
+mul N$分身防御计算 22
+mul N$分身魔御计算 22
+mul N$分身血量计算 22
+mul N$分身蓝量计算 22
+div N$分身攻击计算 10
+div N$分身魔法计算 10
+div N$分身道术计算 10
+div N$分身防御计算 10
+div N$分身魔御计算 10
+div N$分身血量计算 10
+div N$分身蓝量计算 10
+inc N$分身攻击计算 <$STR(N$人物攻击计算)>
+inc N$分身魔法计算 <$STR(N$人物魔法计算)>
+inc N$分身道术计算 <$STR(N$人物道术计算)>
+inc N$分身防御计算 <$STR(N$人物防御计算)>
+inc N$分身魔御计算 <$STR(N$人物魔御计算)>
+inc N$分身血量计算 <$STR(N$人物血量计算)>
+inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
+DELAYGOTO 100 @守护者属性加成
+
+; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
+; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
+; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
+; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
+; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
+; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
+; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
+break
+
+
+
+#IF
+equal U8 11
+#ACT
+mov N$分身攻击计算 <$MAXDC>
+mov N$分身魔法计算 <$MAXMC>
+mov N$分身道术计算 <$MAXSC>
+mov N$分身防御计算 <$MAXAC>
+mov N$分身魔御计算 <$MAXMAC>
+mov N$分身血量计算 <$MAXHP>
+mov N$分身蓝量计算 <$MAXMP>
+mul N$分身攻击计算 21
+mul N$分身魔法计算 21
+mul N$分身道术计算 21
+mul N$分身防御计算 21
+mul N$分身魔御计算 21
+mul N$分身血量计算 21
+mul N$分身蓝量计算 21
+div N$分身攻击计算 10
+div N$分身魔法计算 10
+div N$分身道术计算 10
+div N$分身防御计算 10
+div N$分身魔御计算 10
+div N$分身血量计算 10
+div N$分身蓝量计算 10
+inc N$分身攻击计算 <$STR(N$人物攻击计算)>
+inc N$分身魔法计算 <$STR(N$人物魔法计算)>
+inc N$分身道术计算 <$STR(N$人物道术计算)>
+inc N$分身防御计算 <$STR(N$人物防御计算)>
+inc N$分身魔御计算 <$STR(N$人物魔御计算)>
+inc N$分身血量计算 <$STR(N$人物血量计算)>
+inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
+DELAYGOTO 100 @守护者属性加成
+
+; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
+; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
+; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
+; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
+; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
+; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
+; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
+break
+
+
+
+#IF
+equal U8 10
+#ACT
+mov N$分身攻击计算 <$MAXDC>
+mov N$分身魔法计算 <$MAXMC>
+mov N$分身道术计算 <$MAXSC>
+mov N$分身防御计算 <$MAXAC>
+mov N$分身魔御计算 <$MAXMAC>
+mov N$分身血量计算 <$MAXHP>
+mov N$分身蓝量计算 <$MAXMP>
+mul N$分身攻击计算 20
+mul N$分身魔法计算 20
+mul N$分身道术计算 20
+mul N$分身防御计算 20
+mul N$分身魔御计算 20
+mul N$分身血量计算 20
+mul N$分身蓝量计算 20
+div N$分身攻击计算 10
+div N$分身魔法计算 10
+div N$分身道术计算 10
+div N$分身防御计算 10
+div N$分身魔御计算 10
+div N$分身血量计算 10
+div N$分身蓝量计算 10
+inc N$分身攻击计算 <$STR(N$人物攻击计算)>
+inc N$分身魔法计算 <$STR(N$人物魔法计算)>
+inc N$分身道术计算 <$STR(N$人物道术计算)>
+inc N$分身防御计算 <$STR(N$人物防御计算)>
+inc N$分身魔御计算 <$STR(N$人物魔御计算)>
+inc N$分身血量计算 <$STR(N$人物血量计算)>
+inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
+DELAYGOTO 100 @守护者属性加成
+
+; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
+; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
+; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
+; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
+; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
+; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
+; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
+break
+
+#IF
+equal U8 9
+#ACT
+mov N$分身攻击计算 <$MAXDC>
+mov N$分身魔法计算 <$MAXMC>
+mov N$分身道术计算 <$MAXSC>
+mov N$分身防御计算 <$MAXAC>
+mov N$分身魔御计算 <$MAXMAC>
+mov N$分身血量计算 <$MAXHP>
+mov N$分身蓝量计算 <$MAXMP>
+mul N$分身攻击计算 9
+mul N$分身魔法计算 9
+mul N$分身道术计算 9
+mul N$分身防御计算 9
+mul N$分身魔御计算 9
+mul N$分身血量计算 9
+mul N$分身蓝量计算 9
+div N$分身攻击计算 10
+div N$分身魔法计算 10
+div N$分身道术计算 10
+div N$分身防御计算 10
+div N$分身魔御计算 10
+div N$分身血量计算 10
+div N$分身蓝量计算 10
+inc N$分身攻击计算 <$STR(N$人物攻击计算)>
+inc N$分身魔法计算 <$STR(N$人物魔法计算)>
+inc N$分身道术计算 <$STR(N$人物道术计算)>
+inc N$分身防御计算 <$STR(N$人物防御计算)>
+inc N$分身魔御计算 <$STR(N$人物魔御计算)>
+inc N$分身血量计算 <$STR(N$人物血量计算)>
+inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
+DELAYGOTO 100 @守护者属性加成
+
+; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
+; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
+; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
+; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
+; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
+; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
+; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
+break
+
+#IF
+equal U8 8
+#ACT
+mov N$分身攻击计算 <$MAXDC>
+mov N$分身魔法计算 <$MAXMC>
+mov N$分身道术计算 <$MAXSC>
+mov N$分身防御计算 <$MAXAC>
+mov N$分身魔御计算 <$MAXMAC>
+mov N$分身血量计算 <$MAXHP>
+mov N$分身蓝量计算 <$MAXMP>
+mul N$分身攻击计算 8
+mul N$分身魔法计算 8
+mul N$分身道术计算 8
+mul N$分身防御计算 8
+mul N$分身魔御计算 8
+mul N$分身血量计算 8
+mul N$分身蓝量计算 8
+div N$分身攻击计算 10
+div N$分身魔法计算 10
+div N$分身道术计算 10
+div N$分身防御计算 10
+div N$分身魔御计算 10
+div N$分身血量计算 10
+div N$分身蓝量计算 10
+inc N$分身攻击计算 <$STR(N$人物攻击计算)>
+inc N$分身魔法计算 <$STR(N$人物魔法计算)>
+inc N$分身道术计算 <$STR(N$人物道术计算)>
+inc N$分身防御计算 <$STR(N$人物防御计算)>
+inc N$分身魔御计算 <$STR(N$人物魔御计算)>
+inc N$分身血量计算 <$STR(N$人物血量计算)>
+inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
+DELAYGOTO 100 @守护者属性加成
+
+; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
+; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
+; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
+; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
+; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
+; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
+; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
+break
+
+#IF
+equal U8 7
+#ACT
+mov N$分身攻击计算 <$MAXDC>
+mov N$分身魔法计算 <$MAXMC>
+mov N$分身道术计算 <$MAXSC>
+mov N$分身防御计算 <$MAXAC>
+mov N$分身魔御计算 <$MAXMAC>
+mov N$分身血量计算 <$MAXHP>
+mov N$分身蓝量计算 <$MAXMP>
+mul N$分身攻击计算 7
+mul N$分身魔法计算 7
+mul N$分身道术计算 7
+mul N$分身防御计算 7
+mul N$分身魔御计算 7
+mul N$分身血量计算 7
+mul N$分身蓝量计算 7
+div N$分身攻击计算 10
+div N$分身魔法计算 10
+div N$分身道术计算 10
+div N$分身防御计算 10
+div N$分身魔御计算 10
+div N$分身血量计算 10
+div N$分身蓝量计算 10
+inc N$分身攻击计算 <$STR(N$人物攻击计算)>
+inc N$分身魔法计算 <$STR(N$人物魔法计算)>
+inc N$分身道术计算 <$STR(N$人物道术计算)>
+inc N$分身防御计算 <$STR(N$人物防御计算)>
+inc N$分身魔御计算 <$STR(N$人物魔御计算)>
+inc N$分身血量计算 <$STR(N$人物血量计算)>
+inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
+DELAYGOTO 100 @守护者属性加成
+
+; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
+; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
+; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
+; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
+; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
+; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
+; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
+break
+
+#IF
+equal U8 6
+#ACT
+mov N$分身攻击计算 <$MAXDC>
+mov N$分身魔法计算 <$MAXMC>
+mov N$分身道术计算 <$MAXSC>
+mov N$分身防御计算 <$MAXAC>
+mov N$分身魔御计算 <$MAXMAC>
+mov N$分身血量计算 <$MAXHP>
+mov N$分身蓝量计算 <$MAXMP>
+mul N$分身攻击计算 6
+mul N$分身魔法计算 6
+mul N$分身道术计算 6
+mul N$分身防御计算 6
+mul N$分身魔御计算 6
+mul N$分身血量计算 6
+mul N$分身蓝量计算 6
+div N$分身攻击计算 10
+div N$分身魔法计算 10
+div N$分身道术计算 10
+div N$分身防御计算 10
+div N$分身魔御计算 10
+div N$分身血量计算 10
+div N$分身蓝量计算 10
+inc N$分身攻击计算 <$STR(N$人物攻击计算)>
+inc N$分身魔法计算 <$STR(N$人物魔法计算)>
+inc N$分身道术计算 <$STR(N$人物道术计算)>
+inc N$分身防御计算 <$STR(N$人物防御计算)>
+inc N$分身魔御计算 <$STR(N$人物魔御计算)>
+inc N$分身血量计算 <$STR(N$人物血量计算)>
+inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
+DELAYGOTO 100 @守护者属性加成
+
+; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
+; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
+; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
+; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
+; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
+; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
+; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
+break
+
+#IF
+equal U8 5
+#ACT
+mov N$分身攻击计算 <$MAXDC>
+mov N$分身魔法计算 <$MAXMC>
+mov N$分身道术计算 <$MAXSC>
+mov N$分身防御计算 <$MAXAC>
+mov N$分身魔御计算 <$MAXMAC>
+mov N$分身血量计算 <$MAXHP>
+mov N$分身蓝量计算 <$MAXMP>
+mul N$分身攻击计算 5
+mul N$分身魔法计算 5
+mul N$分身道术计算 5
+mul N$分身防御计算 5
+mul N$分身魔御计算 5
+mul N$分身血量计算 5
+mul N$分身蓝量计算 5
+div N$分身攻击计算 10
+div N$分身魔法计算 10
+div N$分身道术计算 10
+div N$分身防御计算 10
+div N$分身魔御计算 10
+div N$分身血量计算 10
+div N$分身蓝量计算 10
+inc N$分身攻击计算 <$STR(N$人物攻击计算)>
+inc N$分身魔法计算 <$STR(N$人物魔法计算)>
+inc N$分身道术计算 <$STR(N$人物道术计算)>
+inc N$分身防御计算 <$STR(N$人物防御计算)>
+inc N$分身魔御计算 <$STR(N$人物魔御计算)>
+inc N$分身血量计算 <$STR(N$人物血量计算)>
+inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
+DELAYGOTO 100 @守护者属性加成
+
+; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
+; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
+; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
+; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
+; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
+; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
+; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
+break
+
+#IF
+equal U8 4
+#ACT
+mov N$分身攻击计算 <$MAXDC>
+mov N$分身魔法计算 <$MAXMC>
+mov N$分身道术计算 <$MAXSC>
+mov N$分身防御计算 <$MAXAC>
+mov N$分身魔御计算 <$MAXMAC>
+mov N$分身血量计算 <$MAXHP>
+mov N$分身蓝量计算 <$MAXMP>
+mul N$分身攻击计算 4
+mul N$分身魔法计算 4
+mul N$分身道术计算 4
+mul N$分身防御计算 4
+mul N$分身魔御计算 4
+mul N$分身血量计算 4
+mul N$分身蓝量计算 4
+div N$分身攻击计算 10
+div N$分身魔法计算 10
+div N$分身道术计算 10
+div N$分身防御计算 10
+div N$分身魔御计算 10
+div N$分身血量计算 10
+div N$分身蓝量计算 10
+inc N$分身攻击计算 <$STR(N$人物攻击计算)>
+inc N$分身魔法计算 <$STR(N$人物魔法计算)>
+inc N$分身道术计算 <$STR(N$人物道术计算)>
+inc N$分身防御计算 <$STR(N$人物防御计算)>
+inc N$分身魔御计算 <$STR(N$人物魔御计算)>
+inc N$分身血量计算 <$STR(N$人物血量计算)>
+inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
+DELAYGOTO 100 @守护者属性加成
+
+break
+
+#IF
+equal U8 3
+#ACT
+mov N$分身攻击计算 <$MAXDC>
+mov N$分身魔法计算 <$MAXMC>
+mov N$分身道术计算 <$MAXSC>
+mov N$分身防御计算 <$MAXAC>
+mov N$分身魔御计算 <$MAXMAC>
+mov N$分身血量计算 <$MAXHP>
+mov N$分身蓝量计算 <$MAXMP>
+mul N$分身攻击计算 3
+mul N$分身魔法计算 3
+mul N$分身道术计算 3
+mul N$分身防御计算 3
+mul N$分身魔御计算 3
+mul N$分身血量计算 3
+mul N$分身蓝量计算 3
+div N$分身攻击计算 10
+div N$分身魔法计算 10
+div N$分身道术计算 10
+div N$分身防御计算 10
+div N$分身魔御计算 10
+div N$分身血量计算 10
+div N$分身蓝量计算 10
+inc N$分身攻击计算 <$STR(N$人物攻击计算)>
+inc N$分身魔法计算 <$STR(N$人物魔法计算)>
+inc N$分身道术计算 <$STR(N$人物道术计算)>
+inc N$分身防御计算 <$STR(N$人物防御计算)>
+inc N$分身魔御计算 <$STR(N$人物魔御计算)>
+inc N$分身血量计算 <$STR(N$人物血量计算)>
+inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
+DELAYGOTO 100 @守护者属性加成
+
+
+break
+
+
+
+
+#IF
+equal U8 2
+#ACT
+mov N$分身攻击计算 <$MAXDC>
+mov N$分身魔法计算 <$MAXMC>
+mov N$分身道术计算 <$MAXSC>
+mov N$分身防御计算 <$MAXAC>
+mov N$分身魔御计算 <$MAXMAC>
+mov N$分身血量计算 <$MAXHP>
+mov N$分身蓝量计算 <$MAXMP>
+div N$分身攻击计算 5
+div N$分身魔法计算 5
+div N$分身道术计算 5
+div N$分身防御计算 5
+div N$分身魔御计算 5
+div N$分身血量计算 5
+div N$分身蓝量计算 5
+inc N$分身攻击计算 <$STR(N$人物攻击计算)>
+inc N$分身魔法计算 <$STR(N$人物魔法计算)>
+inc N$分身道术计算 <$STR(N$人物道术计算)>
+inc N$分身防御计算 <$STR(N$人物防御计算)>
+inc N$分身魔御计算 <$STR(N$人物魔御计算)>
+inc N$分身血量计算 <$STR(N$人物血量计算)>
+inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
+DELAYGOTO 100 @守护者属性加成
+
+; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
+; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
+; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
+; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
+; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
+; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
+; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
+break
+
+
+
+#IF
+equal U8 1
+#ACT
+mov N$分身攻击计算 <$MAXDC>
+mov N$分身魔法计算 <$MAXMC>
+mov N$分身道术计算 <$MAXSC>
+mov N$分身防御计算 <$MAXAC>
+mov N$分身魔御计算 <$MAXMAC>
+mov N$分身血量计算 <$MAXHP>
+mov N$分身蓝量计算 <$MAXMP>
+div N$分身攻击计算 10
+div N$分身魔法计算 10
+div N$分身道术计算 10
+div N$分身防御计算 10
+div N$分身魔御计算 10
+div N$分身血量计算 10
+div N$分身蓝量计算 10
+inc N$分身攻击计算 <$STR(N$人物攻击计算)>
+inc N$分身魔法计算 <$STR(N$人物魔法计算)>
+inc N$分身道术计算 <$STR(N$人物道术计算)>
+inc N$分身防御计算 <$STR(N$人物防御计算)>
+inc N$分身魔御计算 <$STR(N$人物魔御计算)>
+inc N$分身血量计算 <$STR(N$人物血量计算)>
+inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
+DELAYGOTO 100 @守护者属性加成
+
+; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
+; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
+; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
+; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
+; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
+; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
+; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
+break
+
+#if
+#act
+; mov N$分身攻击计算 1888
+; mov N$分身魔法计算 888
+; mov N$分身道术计算 888
+; mov N$分身防御计算 888
+; mov N$分身魔御计算 888
+; mov N$分身血量计算 888
+; mov N$分身蓝量计算 888
+; DELAYGOTO 100 @守护者属性加成
+
+[@守护者属性加成]
+#if
+#act
+CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
+CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
+CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
+CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
+CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
+CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
+CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
+; sendmsg 5 释放技能召唤骷髅!!守护者等级=0
+; CHANGEMOBABILITY 守护者 11 + 5000 9999
+; SENDMSG 7 你的守护者增加了HP+10000
 ;---------------分身术------------
 [@MagSelfFunc74]
 
@@ -2874,7 +3556,7 @@ CHANGECUSTOMITEMVALUE 0 6 = <$STR(N$分身血量计算)>
 CHANGECUSTOMITEMABIL 0 7 1 2
 CHANGECUSTOMITEMVALUE 0 7 = <$STR(N$分身蓝量计算)>
 ;RecallSelf 48
-DELAYGOTO 100 @分身恢复
+; DELAYGOTO 100 @分身恢复
 break
 
 #IF

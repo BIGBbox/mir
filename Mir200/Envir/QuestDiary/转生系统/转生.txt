@@ -20,11 +20,18 @@ goto @获取当前转生等级
 #act
 ReadConfigFileItem ..\QuestDiary\转生系统\转生数据.txt <$STR(N$转生等级)> 下级转生 S$下级转生
 ReadConfigFileItem ..\QuestDiary\转生系统\转生数据.txt <$STR(N$转生等级)> 当前转生 S$当前转生
-ReadConfigFileItem ..\QuestDiary\转生系统\转生数据.txt <$STR(N$转生等级)> 转生需要元宝 S$转生需要元宝
+ReadConfigFileItem ..\QuestDiary\转生系统\转生数据.txt <$STR(N$转生等级)> 货币类型 S$转生需要货币类型
+ReadConfigFileItem ..\QuestDiary\转生系统\转生数据.txt <$STR(N$转生等级)> 转生需要货币数量 S$转生需要货币数量
 ReadConfigFileItem ..\QuestDiary\转生系统\转生数据.txt <$STR(N$转生等级)> 所需材料数量 S$转生需要证明
 ReadConfigFileItem ..\QuestDiary\转生系统\转生数据.txt <$STR(N$转生等级)> 转生属性 S$转生属性
 ReadConfigFileItem ..\QuestDiary\转生系统\转生数据.txt <$STR(N$转生等级)> 转生材料 S$转生材料
 ReadConfigFileItem ..\QuestDiary\转生系统\转生数据.txt <$STR(N$转生等级)> 倍攻 S$转生倍攻
+
+#if
+equal S$转生需要货币类型 绑定元宝
+#act
+mov S$货币类型 元宝
+
 GOTO @转生主界面
 
 [@转生主界面]
@@ -37,7 +44,7 @@ GOTO @转生主界面
 
 <Text|id=当前等级|x=120|y=280|color=103|size=15|text=[当前转生：<$STR(S$当前转生)>]>
 <RText|id=材料|x=35.0|y=310.0|size=15|text=<消耗材料：<$STR(S$转生材料)>*/FCOLOR=103><[<$STR(S$转生需要证明)>]/FCOLOR=222>>
-<RText|id=消耗元宝|x=35.0|y=330.0|size=15|text=<消耗元宝：/FCOLOR=103><[<$STR(S$转生需要元宝)>]/FCOLOR=222>>
+<RText|id=消耗元宝|x=35.0|y=330.0|size=15|text=<消耗货币：/FCOLOR=103><[<$STR(S$货币类型)>*<$str(S$转生需要货币数量)>]/FCOLOR=222>>
 <RText|id=下级转生|x=35.0|y=350.0|size=15|text=<下级属性加成：/FCOLOR=103><[<$STR(S$转生属性)>]/FCOLOR=253>>
 
 <Button|id=click_btn|x=230|y=320|nimg=public/sf1/1/01547.png|pimg=public/sf1/1/01549.png|link=@开始转生>
@@ -65,12 +72,12 @@ goto @获取当前转生等级
 
 #IF
 CHECKITEM <$STR(S$转生材料)> <$STR(S$转生需要证明)>
-CheckBindMoney 元宝 > 49999
+CheckBindMoney 绑定元宝 > <$str(S$转生需要货币数量)>
 #ACT
 
 INC U49 <$STR(S$转生倍攻)>
 TAKE  <$STR(S$转生材料)> <$STR(S$转生需要证明)>
-ChangeBindMoney 元宝 50000
+ChangeBindMoney 元宝 <$str(S$转生需要货币数量)>
 RENEWLEVEL 1 0 0
 MOVR <$STR(N$纵轴坐标)> 100 500
 SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功转生/FCOLOR=253>{<【<$str(S$下级转生)>】/FCOLOR=58>}
