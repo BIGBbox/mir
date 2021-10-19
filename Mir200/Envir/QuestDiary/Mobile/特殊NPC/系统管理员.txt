@@ -172,6 +172,7 @@ OPENNPCSHOWEX 76
 
 #if
 #act
+goto @真·如来刷触发
 ; mov S$max攻击 <$MAXDC>
 ; GetHumVar 於伯纳 N1 <$LEVEL>
 ; sendmsg 5 等级:<$str(N1)>
@@ -180,9 +181,9 @@ OPENNPCSHOWEX 76
 ; VIEWPLAYER <$STR(S$角色ID)> 101
 ; SortHumVar 角色攻击力 S$角色名字 N$角色攻击力 0 1 50
 ; #Call [\Mobile\特殊NPC\货币记录.txt] @货币
-mov S$充值额度 100
-Pullpay <$STR(S$充值额度)> 3 8
-sendmsg 5 充值接口测试
+; mov S$充值额度 100
+; Pullpay <$STR(S$充值额度)> 3 8
+; sendmsg 5 充值接口测试
 ; sendmsg 5 <$STR(S$角色名字1)>___<$str(N$角色攻击力1)>
 ; sendmsg 5 <$STR(S$角色名字2)>___<$str(N$角色攻击力2)>
 ; sendmsg 5 <$STR(S$角色名字3)>___<$str(N$角色攻击力3)>
