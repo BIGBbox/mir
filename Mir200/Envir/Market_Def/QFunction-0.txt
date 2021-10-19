@@ -2798,6 +2798,7 @@ CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
 CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
 CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
 CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
+; MEBabyHP 守护者 = <$STR(N$分身血量计算)> 0
 ; sendmsg 5 释放技能召唤骷髅!!守护者等级=0
 ; CHANGEMOBABILITY 守护者 11 + 5000 9999
 ; SENDMSG 7 你的守护者增加了HP+10000
@@ -8516,20 +8517,24 @@ MESSAGEBOX 仓库三已解锁
 
 
 [@打开仓库]
+#if
+#act
+CHANGESTORAGE 120
+#CALL [\装备回收\分解神器碎片.txt] @分解碎片
 ; #if
 ; small <$STR(U17)> 2
 ; #act
 ; messagebox 白银会员以上的玩家,才可以随身仓库！！！
 ; break
 
-#if
-#act
-#say
+; #if
+; #act
+; #say
 
-<贵重物品，放入仓库。/FCOLOR=103>\
-<误被爆出，后悔莫及。/FCOLOR=103>\
-<Button|x=35|y=90|nimg=public/sf1/1/01362.png|pimg=public/sf1/1/01364.png|link=@getback>
-<Button|x=185|y=90|nimg=public/sf1/1/01365.png|pimg=public/sf1/1/01367.png|link=@分解按钮>
+; <贵重物品，放入仓库。/FCOLOR=103>\
+; <误被爆出，后悔莫及。/FCOLOR=103>\
+; <Button|x=35|y=90|nimg=public/sf1/1/01362.png|pimg=public/sf1/1/01364.png|link=@getback>
+; <Button|x=185|y=90|nimg=public/sf1/1/01365.png|pimg=public/sf1/1/01367.png|link=@分解按钮>
 
 
 [@分解按钮]
@@ -9109,13 +9114,50 @@ mov U20 1
 #call [\系统功能\充值功能.txt] @充值主面板
 
 [@爆稀有装备检测]
-#OR
-equal <$CURRTEMNAME> 屠龙
-equal <$CURRTEMNAME> 嗜魂法杖
-equal <$CURRTEMNAME> 裁决之杖
+#if
 #act
-goto @爆出稀有装备条件检测
+mov N$转生等级 0
+goto @获取当前转生等级
+delaygoto 50 @判断掉落规则
+
+[@判断掉落规则]
+#if
+#act
+sendmsg 5 道具名字:<$CURRTEMNAME>
+ReadConfigFileItem ..\QuestDiary\装备爆出\掉落规则.txt <$STR(N$转生等级)> <$CURRTEMNAME> S$获取标记
+sendmsg 5 道具标记:<$str(S$获取标记)>
+
+#if
+equal <$str(S$获取标记)> 1
+#act
+sendmsg 5 判断掉落
+ALLOWDROP 1
 break
+
+#if
+not equal <$str(S$获取标记)> 1
+#act
+ALLOWDROP 0
+sendmsg 5 判断不掉落
+
+
+[@获取当前转生等级]
+#if
+not large <$STR(N$转生等级)> 20
+#act
+GetListString ..\QuestDiary\转生系统\转生等级.txt <$STR(N$转生等级)> S$玩家转生等级
+
+#if
+CHECKRENEWLEVEL = <$STR(S$玩家转生等级)>
+#act
+mov N$转生等级 <$STR(S$玩家转生等级)>
+break
+
+#if
+not large <$STR(N$转生等级)> 20
+#act
+inc N$转生等级 1
+goto @获取当前转生等级
 
 [@前往主城]
 #if
