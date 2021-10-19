@@ -9045,11 +9045,6 @@ SAVEVAR HUMAN 充值最后日期
 CALCVAR HUMAN 累计充值天数 + 1
 SAVEVAR HUMAN 累计充值天数
 
-[@QF测试方法]
-#if
-#act
-SendCenterMsg 249 0 QF测试方法 1 30
-
 
 ;-----------每日首次登录触发--------------
 [@SetDay]
@@ -9059,6 +9054,7 @@ equal U20 0
 #ACT
 #CALL [\游戏登陆\登陆脚本.txt] @每日首次登陆触发
 mov U20 1
+mov N$技能点击cd 0
 
 ; ;--------清空日充---------
 ; mov U91 0
