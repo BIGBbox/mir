@@ -95,7 +95,7 @@ goto @绘制排行榜窗口
 ReadConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$STR(S$角色名字<$STR(N$窗口序号)>)> 角色UID S$角色UID
 ReadConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$STR(S$角色名字<$str(N$窗口序号)>)> 角色攻击力 S$角色攻击力
 ReadConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$STR(S$角色名字<$str(N$窗口序号)>)> 角色等级 S$角色等级
-sendmsg 5 窗口<$STR(N$窗口序号)>是是是<$STR(S$角色名字<$str(N$窗口序号)>)>
+; sendmsg 5 窗口<$STR(N$窗口序号)>是是是<$STR(S$角色名字<$str(N$窗口序号)>)>
 
 #if
 equal <$STR(S$角色名字<$STR(N$窗口序号)>)> <$USERNAME>
@@ -130,9 +130,9 @@ small <$STR(N$窗口序号)> 20
 not equal <$STR(S$角色名字<$STR(N$窗口序号)>)>
 #act
 inc N$窗口序号 1
-goto @绘制排行榜窗口
+DELAYGOTO 10 @绘制排行榜窗口
 #elseact
-goto @排行榜面板显示
+DELAYGOTO 10 @排行榜面板显示
 
 [@查看玩家界面]
 #if

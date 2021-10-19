@@ -30,8 +30,8 @@ Equal <$CLIENTFLAG> 2
 MOV S$图标1 <Img|x=5|y=-32|img=item/item_0/000123.png>
 INC S$图标1 <Text|text=$STM(ITEMCOUNT_天下币)|x=50|y=-25|size=18>
 
-INC S$图标1 <Img|x=118|y=-32|img=item/item_0/000124.png>
-INC S$图标1 <Text|text=$STM(ITEMCOUNT_元宝)|x=160|y=-25|size=18>
+; INC S$图标1 <Img|x=118|y=-32|img=item/item_0/000124.png>
+; INC S$图标1 <Text|text=$STM(ITEMCOUNT_元宝)|x=160|y=-25|size=18>
 
 addbutton 103 1 <$STR(S$图标1)>
 

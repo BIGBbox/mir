@@ -8357,7 +8357,7 @@ CHECKCURRTARGETRACE = 0
 NOT CHECKUNDERWAR 沙巴克
 #ACT
 
-SendCenterMsg 250 0 战报：【<$USERNAME>】干掉了拥有【狂暴之力】的[<$CURRRTARGETNAME>]获得100RMB点奖励！！ 1 5
+; SendCenterMsg 250 0 战报：【<$USERNAME>】干掉了拥有【狂暴之力】的[<$CURRRTARGETNAME>]获得100RMB点奖励！！ 1 5
 
 #IF
 #ACT
@@ -9107,6 +9107,15 @@ mov U20 1
 #act
 ; close
 #call [\系统功能\充值功能.txt] @充值主面板
+
+[@爆稀有装备检测]
+#OR
+equal <$CURRTEMNAME> 屠龙
+equal <$CURRTEMNAME> 嗜魂法杖
+equal <$CURRTEMNAME> 裁决之杖
+#act
+goto @爆出稀有装备条件检测
+break
 
 [@前往主城]
 #if

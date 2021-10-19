@@ -14,7 +14,7 @@ goto @写入排行榜
 #act
 CALCVAR HUMAN 角色攻击力 = <$MAXDC>
 SAVEVAR HUMAN 角色攻击力
-sendmsg 5 写入排行榜::<$MAXDC>
+; sendmsg 5 写入排行榜::<$MAXDC>
 
 WriteConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$USERNAME> 角色UID <$USERID>
 WriteConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$USERNAME> 角色攻击力 <$HUMAN(角色攻击力)>

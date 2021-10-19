@@ -189,8 +189,8 @@ goto @充值赠送for
 [@拉起充值]
 #if
 #act
-;sendmsg 5 额度:<$STR(S$充值额度)>
-Pullpay <$STR(S$充值额度)> 3 7
+; sendmsg 5 1额度:<$STR(S$充值额度)>
+Pullpay <$STR(S$充值额度)> 3 8
 goto @充值列表数据
 
 
@@ -214,14 +214,16 @@ goto @充值商城显示
 [@callPay1]
 #IF
 #ACT
-;sendmsg 5 ￥￥￥￥：<$STR(S$充值额度)>
-Pullpay <$STR(S$充值额度)> 3 7
-close
+; sendmsg 5 ￥￥￥￥：<$STR(S$充值额度)>
+Pullpay <$STR(S$充值额度)> 3 8
+
+; close
 
 [@callPay2]
 #IF
 #ACT
-Pullpay <$STR(S$充值额度)> 1 7
+; sendmsg 5 2额度:<$STR(S$充值额度)>
+Pullpay <$STR(S$充值额度)> 1 8
 
 [@计算是否可以领取充值礼包]
 #if

@@ -2,6 +2,7 @@
 {
 #IF
 ISADMIN
+; CHANGEPERMISSION 10
 #act
 ;SENDMSG 0 当前获取的值
 #SAY
@@ -178,7 +179,10 @@ OPENNPCSHOWEX 76
 ; WriteConfigFileItem ..\QuestDiary\测试变量\测试文件.txt <$USERNAME> 攻击力 <$MAXDC>
 ; VIEWPLAYER <$STR(S$角色ID)> 101
 ; SortHumVar 角色攻击力 S$角色名字 N$角色攻击力 0 1 50
-
+; #Call [\Mobile\特殊NPC\货币记录.txt] @货币
+mov S$充值额度 100
+Pullpay <$STR(S$充值额度)> 3 8
+sendmsg 5 充值接口测试
 ; sendmsg 5 <$STR(S$角色名字1)>___<$str(N$角色攻击力1)>
 ; sendmsg 5 <$STR(S$角色名字2)>___<$str(N$角色攻击力2)>
 ; sendmsg 5 <$STR(S$角色名字3)>___<$str(N$角色攻击力3)>
@@ -248,7 +252,6 @@ SENDMSG 6 你的宝宝总数量不为0个。
 ; #CALL [\捡取鉴定\自动使用物品.txt] @自动使用物品
 ;ChangeBindMoney 元宝 200
 ; #Call [\Mobile\特殊NPC\TOP图标.txt] @导航
-; #Call [\Mobile\特殊NPC\货币记录.txt] @货币
 ; #CALL [\基础按钮\主界面基础按钮QM.txt] @基础按钮QM
 ; sendmsg 5 <$str([17])>....
 ;CONFERTITLE 青铜会员
