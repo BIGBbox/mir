@@ -70,13 +70,13 @@ SetOffTimer 235
 #act
 #say
 
-<Text|a=0|x=20|y=20|color=255|tips=|tipsx=10|tipsy=80|size=18|text=出门前商队领队就说最近不太安生,\魔物蠢蠢欲动,路上快要千万小心啊!!>
-<RText|a=0|x=20|y=95|size=18|text=<奖励:/FCOLOR=250><<$STR(S$任务状态)>>>
-<Button|id=click_btn1|x=25|y=125|nimg=public/0.png|pimg=public/0.png|text=完成任务|color=251|link=@延迟测试打印>
-<TextAtlas|x=145.0|y=-5|img=public/sf1/19/artFont/00043.png|schar=0|iheight=50|iwidth=31|text=999>
-<TextAtlas|x=151.0|y=79.0|img=public/word_tywz_01.png|schar=0|iheight=28|iwidth=18|text=0123456789>
-<TextAtlas|x=151.0|y=109.0|img=public/word_tywz_01.png|schar=0|iheight=28|iwidth=18|text=1>
-<Img|x=280|y=50.0|img=public/sf1/19/00010.png|link=@p>
+<Text|a=0|x=20|y=20|color=255|tips=|tipsx=10|tipsy=80|size=18|text=资源测试!!>
+; <RText|a=0|x=20|y=95|size=18|text=<奖励:/FCOLOR=250><<$STR(S$任务状态)>>>
+; <Button|id=click_btn1|x=25|y=125|nimg=public/0.png|pimg=public/0.png|text=完成任务|color=251|link=@延迟测试打印>
+; <TextAtlas|x=145.0|y=-5|img=public/sf1/19/artFont/00043.png|schar=0|iheight=50|iwidth=31|text=999>
+; <TextAtlas|x=151.0|y=79.0|img=public/word_tywz_01.png|schar=0|iheight=28|iwidth=18|text=0123456789>
+; <TextAtlas|x=151.0|y=109.0|img=public/word_tywz_01.png|schar=0|iheight=28|iwidth=18|text=1>
+<Img|x=280|y=50.0|img=public/sf1/1/01557.png|link=@p>
 #IF
 #ACT
 ;Navigation 0 click_btn1 点击完成任务

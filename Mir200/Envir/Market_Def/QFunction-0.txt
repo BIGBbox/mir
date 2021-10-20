@@ -9113,15 +9113,17 @@ mov N$技能点击cd 0
 #if
 #act
 mov N$转生等级 0
+mov S$道具名字 <$CURRTEMNAME>
 goto @获取当前转生等级
-delaygoto 50 @判断掉落规则
+goto @判断掉落规则
+; delaygoto 50 @判断掉落规则
 
 [@判断掉落规则]
 #if
 #act
-sendmsg 5 道具名字:<$CURRTEMNAME>
-ReadConfigFileItem ..\QuestDiary\装备爆出\掉落规则.txt <$STR(N$转生等级)> <$CURRTEMNAME> S$获取标记
-sendmsg 5 道具标记:<$str(S$获取标记)>
+; sendmsg 5 道具名字:<$CURRTEMNAME>::<$str(S$道具名字)>
+ReadConfigFileItem ..\QuestDiary\装备爆出\掉落规则.txt <$STR(N$转生等级)> <$str(S$道具名字)> S$获取标记
+; sendmsg 5 道具标记:<$str(S$获取标记)>
 
 #if
 equal <$str(S$获取标记)> 1
