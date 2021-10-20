@@ -51,6 +51,7 @@ SENDMOVEMSG 0 251 0 50 1 注意:玩家{[<$USERNAME>]/FCOLOR=70}已经开启{狂暴/FCOLOR=
 goto @main
 goto @狂暴之力支线任务
 #call [\头顶称号\佩戴称号.txt] @佩戴称号
+#CALL [\游戏登陆\顶部属性.txt] @顶部属性显示
 #ELSEACT
 MESSAGEBOX 开启失败??\\1、当前RMB点不足
 

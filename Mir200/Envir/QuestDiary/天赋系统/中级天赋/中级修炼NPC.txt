@@ -562,12 +562,12 @@ BREAK
 equal U9 8
 CHECKITEM 修炼石 320
 CHECKITEM 天外陨石 320
-CHECKITEM 神器碎片 560
+CHECKITEM 神器碎片 520
 CheckBindMoney 元宝 > 8999999
 #ACT
 TAKE 修炼石 320
 TAKE 天外陨石 320
-TAKE 神器碎片 560
+TAKE 神器碎片 520
 money 绑定元宝 - 9000000
 MOV U9 9
 inc U155 1
@@ -759,12 +759,12 @@ BREAK
 equal U10 8
 CHECKITEM 修炼石 320
 CHECKITEM 天外陨石 320
-CHECKITEM 神器碎片 560
+CHECKITEM 神器碎片 520
 CheckBindMoney 元宝 > 8999999
 #ACT
 TAKE 修炼石 320
 TAKE 天外陨石 320
-TAKE 神器碎片 560
+TAKE 神器碎片 520
 money 绑定元宝 - 9000000
 MOV U10 9
 inc U155 1
@@ -953,12 +953,12 @@ BREAK
 equal U11 8
 CHECKITEM 修炼石 320
 CHECKITEM 天外陨石 320
-CHECKITEM 神器碎片 560
+CHECKITEM 神器碎片 520
 CheckBindMoney 元宝 > 8999999
 #ACT
 TAKE 修炼石 320
 TAKE 天外陨石 320
-TAKE 神器碎片 560
+TAKE 神器碎片 520
 money 绑定元宝 - 9000000
 MOV U11 9
 inc U155 1
@@ -1148,12 +1148,12 @@ BREAK
 equal U12 8
 CHECKITEM 修炼石 320
 CHECKITEM 天外陨石 320
-CHECKITEM 神器碎片 560
+CHECKITEM 神器碎片 520
 CheckBindMoney 元宝 > 8999999
 #ACT
 TAKE 修炼石 320
 TAKE 天外陨石 320
-TAKE 神器碎片 560
+TAKE 神器碎片 520
 money 绑定元宝 - 9000000
 MOV U12 9
 inc U155 1
@@ -1343,12 +1343,12 @@ BREAK
 equal U13 8
 CHECKITEM 修炼石 320
 CHECKITEM 天外陨石 320
-CHECKITEM 神器碎片 560
+CHECKITEM 神器碎片 520
 CheckBindMoney 元宝 > 8999999
 #ACT
 TAKE 修炼石 320
 TAKE 天外陨石 320
-TAKE 神器碎片 560
+TAKE 神器碎片 520
 money 绑定元宝 - 9000000
 MOV U13 9
 inc U155 1
@@ -1524,12 +1524,12 @@ BREAK
 equal U5 8
 CHECKITEM 修炼石 320
 CHECKITEM 天外陨石 320
-CHECKITEM 神器碎片 560
+CHECKITEM 神器碎片 520
 CheckBindMoney 元宝 > 8999999
 #ACT
 TAKE 修炼石 320
 TAKE 天外陨石 320
-TAKE 神器碎片 560
+TAKE 神器碎片 520
 money 绑定元宝 - 9000000
 MOV U5 9
 inc U155 1

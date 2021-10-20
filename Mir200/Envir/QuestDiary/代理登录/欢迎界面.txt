@@ -38,7 +38,7 @@ Navigation 0 51 点击开始游戏
 [@start]
 #IF
 #ACT
-; mapmove 0 290 618
+mapmove 0 290 618
 OPENNPCSHOWEX 63
 #CALL [\任务系统\任务文本.txt] @接取任务
 CLEARDELAYGOTO

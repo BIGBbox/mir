@@ -13,12 +13,20 @@ dec N$moveY N$SizeY
 div N$moveX 2
 div N$moveY 2
 goto @更新会员任务
-;GOTO @新会员系统主面板
+GOTO @新会员系统主面板
+
+#or
+equal <$str(S$参数)>
+equal <$str(S$参数1)>
+#act
+; mov S$参数 1
+; mov S$参数1 1
+GOTO @默认会员等级窗口
 
 #if
 #act
-mov S$参数 1
-mov S$参数1 1
+; mov S$参数 1
+; mov S$参数1 1
 mov N$1序号 1
 mov S$会员按钮
 mov S$奖励标题1
@@ -26,6 +34,60 @@ mov S$奖励标题1
 ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt 会员数量 会员数量 S$按钮数量
 #CALL [\新会员系统\会员属性加成.txt] @会员属性设置
 
+#if
+#act
+; close
+; sendmsg 5 打开窗口
+; GOTO @默认会员等级窗口
+; mov S$参数 2
+; mov S$参数1 2
+GOTO @创建会员按钮列表
+GOTO @左边会员按钮
+GOTO @新会员系统主面板
+
+[@新会员系统主面板]
+#IF
+#ACT
+
+#SAY
+<Img|layerid=99|children={close_btn,bg0,1111,0_0,0_1,标题,下方礼包标题背景,人物,特效,特效文字,大标题}|height=550|width=830|x=120|y=60|show=0|reset=0|move=1|img=public/sf1/19/bg5.png|bg=1|reset=1>
+
+<Img|id=bg0|x=10|y=60.0|height=480|width=810|img=public/sf1/19/bg4.png>
+<Img|id=大标题|x=370|y=25.0|img=public/sf1/19/title2.png>
+<Img|id=1111|x=465|y=75.0|width=330|height=350|img=public/sf1/19/coverBG.png>
+<Button|id=close_btn|x=790.0|y=30.0|size=18|nimg=public/sf1/2/00010.png|link=@exit>
+;<Frames|id=人物|x=125|y=108|suffix=.png|prefix=public/sf1/img/pic_|count=238|loop=-1|speed=5>
+
+<ListView|id=0_0|children={1_1,1_2,1_3,1_4,1_5,1_6,1_7,1_8,1_9,1_10,1_11,1_12,1_13}|direction=1|bounce=0|x=15|y=65.0|margin=3|height=470|width=100|img=public/1900000665.png>
+    <$STR(S$点击特效)>
+    <$STR(S$会员按钮)>
+    <$STR(S$奖励标题1)>
+    <$STR(S$奖励1列表)>
+    <$STR(S$下方礼包控件)>
+<ListView|id=0_1|children={2_1,2_2,2_3,2_4,2_5,2_6,2_7,2_8,2_9,2_10,2_11,2_12,2_13}|direction=1|bounce=1|x=470|y=120.0|margin=3|height=300|width=320|img=public/1900000678_3.png>
+    <$STR(S$右边所需条件控件)>
+
+[@CloseLayer99]
+#if
+#act
+; sendmsg 5 关闭窗口
+
+[@OpenLayer99]
+; #IF
+; equal U20 0
+; #ACT
+; #CALL [\游戏登陆\登陆脚本.txt] @每日首次登陆触发
+
+; close
+; sendmsg 5 打开窗口
+; GOTO @默认会员等级窗口
+; ; mov S$参数 2
+; ; mov S$参数1 2
+; GOTO @创建会员按钮列表
+; GOTO @左边会员按钮
+; GOTO @新会员系统主面板
+
+[@默认会员等级窗口]
 ;------默认打开下级会员窗口-----
 #if
 large <$STR(U17)> 0
@@ -45,36 +107,6 @@ large <$STR(U17)> <$str(S$按钮数量)>
 #act
 mov S$参数 11
 mov S$参数1 11
-
-
-
-#if
-#act
-GOTO @创建会员按钮列表
-GOTO @左边会员按钮
-GOTO @@新会员系统主面板
-
-[@新会员系统主面板]
-#IF
-#ACT
-
-#SAY
-<Img|children={close_btn,bg0,1111,0_0,0_1,标题,下方礼包标题背景,人物,特效,特效文字,大标题}|height=550|width=830|x=120|y=60|show=0|reset=0|move=1|img=public/sf1/19/bg5.png|bg=1|reset=1>
-
-<Img|id=bg0|x=10|y=60.0|height=480|width=810|img=public/sf1/19/bg4.png>
-<Img|id=大标题|x=370|y=25.0|img=public/sf1/19/title2.png>
-<Img|id=1111|x=465|y=75.0|width=330|height=350|img=public/sf1/19/coverBG.png>
-<Button|id=close_btn|x=790.0|y=30.0|size=18|nimg=public/sf1/2/00010.png|link=@exit>
-;<Frames|id=人物|x=125|y=108|suffix=.png|prefix=public/sf1/img/pic_|count=238|loop=-1|speed=5>
-
-<ListView|id=0_0|children={1_1,1_2,1_3,1_4,1_5,1_6,1_7,1_8,1_9,1_10,1_11,1_12,1_13}|direction=1|bounce=0|x=15|y=65.0|margin=3|height=470|width=100|img=public/1900000665.png>
-    <$STR(S$点击特效)>
-    <$STR(S$会员按钮)>
-    <$STR(S$奖励标题1)>
-    <$STR(S$奖励1列表)>
-    <$STR(S$下方礼包控件)>
-<ListView|id=0_1|children={2_1,2_2,2_3,2_4,2_5,2_6,2_7,2_8,2_9,2_10,2_11,2_12,2_13}|direction=1|bounce=1|x=470|y=120.0|margin=3|height=300|width=320|img=public/1900000678_3.png>
-    <$STR(S$右边所需条件控件)>
 
 [@创建会员按钮列表]
 #if
@@ -476,11 +508,11 @@ close
 
 [@领取每日礼包]
 
-#if
-check [<$STR(S$领取标记)>] 1
-#act
-messagebox 该礼包只能领取一次!!
-break
+; #if
+; check [<$STR(S$领取标记)>] 1
+; #act
+; messagebox 该礼包只能领取一次!!
+; break
 
 #if
 #act
@@ -516,27 +548,29 @@ not equal S$下方礼包串
 #act
 GetValidstr <$STR(S$下方礼包串)> & S$道具名字和数量 S$下方礼包串
 GetValidstr <$STR(S$道具名字和数量)> * S$道具名字 S$道具数量
-GIVE <$STR(S$道具名字)> <$STR(S$道具数量)>
+; GIVE <$STR(S$道具名字)> <$STR(S$道具数量)>
+; sendmsg 5 :::<$str(S$道具名字)>___<$str(S$道具数量)>
+MailGIVE <$STR(S$道具名字)> <$STR(S$道具数量)> 1#4#6#8
 GOTO @发放每日礼包
 set [<$STR(S$领取标记)>] 1
-
 #elseact
-messagebox 会员礼包领取成功!!
-ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(S$参数)> 礼包 S$下方礼包串
-
-ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(N$参数)> 每日礼包 S$每日礼包串
 ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(S$参数)> 按钮文字 S$邮件标题
-GetValidstr <$STR(S$每日礼包串)> * S$道具名字 S$道具数量
+SendMail 1 系统奖励 <$STR(S$邮件标题)>礼包已发放,请尽快提取附件!
+; messagebox 会员礼包领取成功!!
+; ; ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(S$参数)> 礼包 S$下方礼包串
+; ; ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(N$参数)> 每日礼包 S$每日礼包串
+; ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(S$参数)> 按钮文字 S$邮件标题
+; ; GetValidstr <$STR(S$每日礼包串)> * S$道具名字 S$道具数量
+; sendmsg 5 :::<$str(S$道具名字)>___<$str(S$道具数量)>
+; ;GiveStateItem <$STR(S$道具名字)> <$STR(S$道具数量)> 0 1 0 0 1 1 1 1
+; MailGIVE <$STR(S$道具名字)> <$STR(S$道具数量)> 1#4#6#8
+; SendMail 1 系统奖励 <$STR(S$邮件标题)>每日礼包已发放,请尽快提取附件!
+; ; close
+; ;GOTO @左边会员按钮
+; mov S$参数 <$STR(S$参数)>
+; mov S$参数1 <$STR(S$参数)>
+GOTO @新会员系统面板
 
-;GiveStateItem <$STR(S$道具名字)> <$STR(S$道具数量)> 0 1 0 0 1 1 1 1
-MailGIVE <$STR(S$道具名字)> <$STR(S$道具数量)> 1#4#6#8
-SendMail 1 系统奖励 <$STR(S$邮件标题)>每日礼包已发放,请尽快提取附件!
-
-;GOTO @左边会员按钮
-;GOTO @新会员系统面板
-;#CALL [\新会员系统\新会员系统.txt] @新会员系统面板
-;GOTO @创建下方物品框
-;GOTO @创建会员按钮列表
 
 
 ;装备部位加星标记   U26-U35

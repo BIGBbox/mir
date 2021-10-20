@@ -172,7 +172,7 @@ OPENNPCSHOWEX 76
 
 #if
 #act
-goto @真·如来刷触发
+#CALL [\游戏登陆\登陆脚本.txt] @每日首次登陆触发
 ; mov S$max攻击 <$MAXDC>
 ; GetHumVar 於伯纳 N1 <$LEVEL>
 ; sendmsg 5 等级:<$str(N1)>

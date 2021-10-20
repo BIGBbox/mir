@@ -7143,7 +7143,7 @@ break
 CHECK [251] 0
 #ACT
 SET [251] 1
-MessageBox 恭喜你激活了[枣红马]，请在马厩幻化！
+MessageBox 恭喜你激活了[枣红马]！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7159,7 +7159,7 @@ break
 CHECK [252] 0
 #ACT
 SET [252] 1
-MessageBox 恭喜你激活了[乌黑马]，请在马厩幻化！
+MessageBox 恭喜你激活了[乌黑马]！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7175,7 +7175,7 @@ break
 CHECK [253] 0
 #ACT
 SET [253] 1
-MessageBox 恭喜你激活了[白马]，请在马厩幻化！
+MessageBox 恭喜你激活了[白马]！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7191,7 +7191,7 @@ break
 CHECK [254] 0
 #ACT
 SET [254] 1
-MessageBox 恭喜你激活了[赤炎马]，请在马厩幻化！
+MessageBox 恭喜你激活了[赤炎马]！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7208,7 +7208,7 @@ break
 CHECK [255] 0
 #ACT
 SET [255] 1
-MessageBox 恭喜你激活了[高头大马]，请在马厩幻化！
+MessageBox 恭喜你激活了[高头大马]！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7224,7 +7224,7 @@ break
 CHECK [256] 0
 #ACT
 SET [256] 1
-MessageBox 恭喜你激活了[迎亲马]，请在马厩幻化！
+MessageBox 恭喜你激活了[迎亲马]！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7240,7 +7240,7 @@ break
 CHECK [257] 0
 #ACT
 SET [257] 1
-MessageBox 恭喜你激活了[金色马]，请在马厩幻化！
+MessageBox 恭喜你激活了[金色马]！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7256,7 +7256,7 @@ break
 CHECK [258] 0
 #ACT
 SET [258] 1
-MessageBox 恭喜你激活了[骐骥]，请在马厩幻化！
+MessageBox 恭喜你激活了[骐骥]！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7272,7 +7272,7 @@ break
 CHECK [259] 0
 #ACT
 SET [259] 1
-MessageBox 恭喜你激活了[幼麒麟]，请在马厩幻化！
+MessageBox 恭喜你激活了[幼麒麟]！
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
 
@@ -7288,7 +7288,7 @@ break
 CHECK [260] 0
 #ACT
 SET [260] 1
-MessageBox 恭喜你激活了[黄金虎]，请在马厩幻化！
+MessageBox 恭喜你激活了[黄金虎]！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7304,7 +7304,7 @@ break
 CHECK [261] 0
 #ACT
 SET [261] 1
-MessageBox 恭喜你激活了[独角战马]，请在马厩幻化！
+MessageBox 恭喜你激活了[独角战马]！
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
 
@@ -7320,7 +7320,7 @@ break
 CHECK [262] 0
 #ACT
 SET [262] 1
-MessageBox 恭喜你激活了[赤兔]，请在马厩幻化！
+MessageBox 恭喜你激活了[赤兔]！
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
 
@@ -7336,7 +7336,7 @@ break
 CHECK [263] 0
 #ACT
 SET [263] 1
-MessageBox 恭喜你激活了[烈焰独角]，请在马厩幻化！
+MessageBox 恭喜你激活了[烈焰独角]！
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
 
@@ -7352,7 +7352,7 @@ break
 CHECK [264] 0
 #ACT
 SET [264] 1
-MessageBox 恭喜你激活了[天子之骏]，请在马厩幻化！
+MessageBox 恭喜你激活了[天子之骏]！
 #CALL [\属性重载\武器吸血.txt] @武器吸血
 break
 
@@ -7368,7 +7368,7 @@ break
 CHECK [265] 0
 #ACT
 SET [265] 1
-MessageBox 恭喜你激活了[百兽之王]，请在马厩幻化！
+MessageBox 恭喜你激活了[百兽之王]！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7384,7 +7384,7 @@ break
 CHECK [266] 0
 #ACT
 SET [266] 1
-MessageBox 恭喜你激活了[飒露紫]，请在马厩幻化！
+MessageBox 恭喜你激活了[飒露紫]！
 #CALL [\属性重载\属性加成.txt] @属性设置
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
@@ -7401,7 +7401,7 @@ break
 CHECK [267] 0
 #ACT
 SET [267] 1
-MessageBox 恭喜你激活了[乌骓]，请在马厩幻化！
+MessageBox 恭喜你激活了[乌骓]！
 #CALL [\属性重载\属性加成.txt] @属性设置
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
@@ -7418,7 +7418,7 @@ break
 CHECK [268] 0
 #ACT
 SET [268] 1
-MessageBox 恭喜你激活了[白熊]，请在马厩幻化！
+MessageBox 恭喜你激活了[白熊]！
 #CALL [\属性重载\属性加成.txt] @属性设置
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
@@ -7435,7 +7435,7 @@ break
 CHECK [269] 0
 #ACT
 SET [269] 1
-MessageBox 恭喜你激活了[森林白斑]，请在马厩幻化！
+MessageBox 恭喜你激活了[森林白斑]！
 #CALL [\属性重载\武器吸血.txt] @武器吸血
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
@@ -7452,7 +7452,7 @@ break
 CHECK [270] 0
 #ACT
 SET [270] 1
-MessageBox 恭喜你激活了[烈焰]，请在马厩幻化！
+MessageBox 恭喜你激活了[烈焰]！
 #CALL [\属性重载\属性加成.txt] @属性设置
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
@@ -7469,7 +7469,7 @@ break
 CHECK [271] 0
 #ACT
 SET [271] 1
-MessageBox 恭喜你激活了[至尊白虎]，请在马厩幻化！
+MessageBox 恭喜你激活了[至尊白虎]！
 #CALL [\属性重载\属性加成.txt] @属性设置
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
@@ -7486,7 +7486,7 @@ break
 CHECK [272] 0
 #ACT
 SET [272] 1
-MessageBox 恭喜你激活了[拳毛騧]，请在马厩幻化！
+MessageBox 恭喜你激活了[拳毛騧]！
 #CALL [\属性重载\属性加成.txt] @属性设置
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
@@ -7503,7 +7503,7 @@ break
 CHECK [273] 0
 #ACT
 SET [273] 1
-MessageBox 恭喜你激活了[骕骦]，请在马厩幻化！
+MessageBox 恭喜你激活了[骕骦]！
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
 
@@ -7519,7 +7519,7 @@ break
 CHECK [274] 0
 #ACT
 SET [274] 1
-MessageBox 恭喜你激活了[黄骠]，请在马厩幻化！
+MessageBox 恭喜你激活了[黄骠]！
 #CALL [\触发系列\元素触发.txt] @元素伤害
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
@@ -7536,7 +7536,7 @@ break
 CHECK [275] 0
 #ACT
 SET [275] 1
-MessageBox 恭喜你激活了[天驷]，请在马厩幻化！
+MessageBox 恭喜你激活了[天驷]！
 #CALL [\属性重载\属性加成.txt] @属性设置
 #CALL [\属性重载\游戏爆率.txt] @暴率
 #CALL [\属性重载\武器吸血.txt] @武器吸血
@@ -7554,7 +7554,7 @@ break
 CHECK [276] 0
 #ACT
 SET [276] 1
-MessageBox 恭喜你激活了[森林狼]，请在马厩幻化！
+MessageBox 恭喜你激活了[森林狼]！
 #CALL [\触发系列\元素触发.txt] @元素伤害
 #CALL [\属性重载\属性加成.txt] @属性设置
 #CALL [\属性重载\游戏爆率.txt] @暴率
@@ -7572,7 +7572,7 @@ break
 CHECK [277] 0
 #ACT
 SET [277] 1
-MessageBox 恭喜你激活了[雪狼]，请在马厩幻化！
+MessageBox 恭喜你激活了[雪狼]！
 #CALL [\属性重载\游戏爆率.txt] @暴率
 #CALL [\触发系列\元素触发.txt] @元素伤害
 #CALL [\属性重载\属性加成.txt] @属性设置
@@ -7590,7 +7590,7 @@ break
 CHECK [278] 0
 #ACT
 SET [278] 1
-MessageBox 恭喜你激活了[照夜玉狼]，请在马厩幻化！
+MessageBox 恭喜你激活了[照夜玉狼]！
 #CALL [\属性重载\武器吸血.txt] @武器吸血
 #CALL [\触发系列\元素触发.txt] @元素伤害
 #CALL [\属性重载\属性加成.txt] @属性设置
@@ -7608,7 +7608,7 @@ break
 CHECK [279] 0
 #ACT
 SET [279] 1
-MessageBox 恭喜你激活了[八骏]，请在马厩幻化！
+MessageBox 恭喜你激活了[八骏]！
 #CALL [\触发系列\元素触发.txt] @元素伤害
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
@@ -7625,7 +7625,7 @@ break
 CHECK [280] 0
 #ACT
 SET [280] 1
-MessageBox 恭喜你激活了[青骓]，请在马厩幻化！
+MessageBox 恭喜你激活了[青骓]！
 #CALL [\触发系列\元素触发.txt] @元素伤害
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
@@ -9053,9 +9053,10 @@ SAVEVAR HUMAN 累计充值天数
 equal U20 0
 #ACT
 #CALL [\游戏登陆\登陆脚本.txt] @每日首次登陆触发
-mov U20 1
-mov N$技能点击cd 0
 
+mov U20 0
+mov N$技能点击cd 0
+sendmsg 5 每日首次登录打印!!!
 ; ;--------清空日充---------
 ; mov U91 0
 ; ;-------清除每日活动礼包标记-------

@@ -2,6 +2,7 @@
 [@main]
 #IF
 #ACT
+sendmsg 5 $STM(ITEMCOUNT_元宝)11111$STM(ITEMCOUNT_元宝)
 #SAY
 
 <Img|img=public/sf1/1/01095.png|x=200|y=80|children={close_btn,click_btn,行会名,行会管理员,创建行会,增加行会人数,攻城描述,rightTips,大门,复活,仓库,服饰店,元宝}|bg=1|reset=1|move=1>
@@ -9,7 +10,7 @@
 
 <RText|id=行会名|x=420|y=247|color=149|size=16|text=<[<$OWNERGUILD>]/FCOLOR=222>>
 <RText|id=行会管理员|x=420|y=265|color=149|size=16|text=<[<$LORD>]/FCOLOR=151>>
-; <RText|id=元宝|x=635|y=52|color=149|size=16|text=<ITEMCOUNT_元宝/FCOLOR=151>>
+<Text|id=元宝|x=635|y=52|color=149|size=16|text=$STM(ITEMCOUNT_元宝)>
 
 <Button|id=创建行会|x=310|y=310|nimg=public/sf1/1/00386.png|pimg=public/sf1/1/00387.png|tips={创建条件：/FCOLOR=250}^{所需等级：50级/FCOLOR=251}^{所需材料：沃玛号角 * 1/FCOLOR=251}^|tipsx=10|tipsy=80|size=18|color=249|link=@@INPUTSTRING70(请输入建立行会的名字：)>
 <Button|id=增加行会人数|x=310|y=330|nimg=public/sf1/1/00388.png|pimg=public/sf1/1/00389.png|tips={增加行会人数条件：/FCOLOR=250}^{所需天下币：10000/FCOLOR=251}^{可增加人数：+ 10/FCOLOR=251}^|tipsx=10|tipsy=80|size=18|color=249|link=@增加行会人数>

@@ -377,7 +377,7 @@ INC N0 1
 SOCKETABLEITEM -1 3 <$str(N0)>
 GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\武器基础buff.txt N0
 INC N0 1
-sendmsg 5 n:<$str(N0)>
+; sendmsg 5 n:<$str(N0)>
 
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1

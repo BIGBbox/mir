@@ -71,16 +71,17 @@ mov N$按钮 N$SizeX
 dec N$按钮 45
 mov N$按钮0 N$SizeX
 dec N$按钮0 55
+sendmsg 5测试刷所所所所
 
 #SAY
-<Img|children={bg1,界面偏移,}|x=<$STR(N$moveX)>|y=<$STR(N$moveY)>|width=<$STR(N$SizeX)>|height=<$STR(N$SizeY)>|show=0|reset=1|move=1|img=public/ui3/00003.png|bg=1>
-<Img|id=bg1|x=44.0|y=50.0|img=public/sf1/1/01805.png>
+<Img|children={bg1,界面偏移,}|x=<$STR(N$moveX)>|y=<$STR(N$moveY)>|show=0|reset=1|move=1|img=public/sf1/1/01805.png|bg=1>
+; <Img|id=bg1|x=44.0|y=50.0|img=public/sf1/1/01805.png>
 
 <Img|id=界面偏移|children={_网格,btn1,btn2,btn3,btn4,btn5,btn6,btn7,page1,page2,2,3,4,5,6,7,8,9,10,11,12,13,14,
 15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,
 51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,
 87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,
-117,118,119}|x=35|y=58|height=1|width=1|img=public/1900000665.png>
+117,118,119}|x=-10|y=8|height=1|width=1|img=public/1900000665.png>
 
 <Button|id=4|x=630|y=0.0|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
 

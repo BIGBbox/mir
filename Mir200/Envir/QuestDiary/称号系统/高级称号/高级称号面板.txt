@@ -131,7 +131,7 @@ equal <$STR(S$高级称号是否满级)> 1
 messagebox 当前大陆称号已满级,不能再升级了!
 break
 
-#if
+#or
 CHECKGAMEDIAMOND < <$STR(S$所需天下币)>
 not CHECKITEM 高级称号证明 <$STR(S$高级称号证明数量)>
 #act

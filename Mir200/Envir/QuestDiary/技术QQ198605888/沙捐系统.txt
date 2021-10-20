@@ -264,51 +264,26 @@ goto @新捐献排名for
 GMEXECUTE StartQuest @捐献系统_属性_重新分配
 
 [@新捐献排名for]
-#if
-LARGE N$名次 2
-#act
-break
+; #if
+; LARGE N$名次 2
+; #act
+; break
 
 #if
 #act
 mov S$玩家名字数据 <$STR(S$玩家名字<$STR(N$编号)>)>
 mov N$捐献数额数据 <$STR(N$捐献数额<$STR(N$编号)>)>
 ;SENDMSG 6 名次:<$STR(N$名次)>
-;SENDMSG 0 玩家:<$STR(S$玩家名字数据)>..<$STR(N$编号)>,捐献<$STR(N$捐献数额数据)>
-
-
-#if
-not EQUAL S$玩家名字数据
-LARGE N$捐献数额数据 0
-EQUAL N$名次 0
-#act
-AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 0
-inc N$编号 1
-;break
+; sendmsg 5 999请问
 
 #if
 not EQUAL S$玩家名字数据
 LARGE N$捐献数额数据 0
-EQUAL N$名次 1
+; EQUAL N$名次 0
 #act
-AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 1
+; SENDMSG 0 a玩家:<$STR(S$玩家名字数据)>..<$STR(N$编号)>,捐献<$STR(N$捐献数额数据)>.名次..<$str(N$名次)>
+AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> <$str(N$名次)>
 inc N$编号 1
-;break
-
-#if
-not EQUAL S$玩家名字数据
-LARGE N$捐献数额数据 0
-EQUAL N$名次 2
-#act
-AddTextListEx ..\QuestDiary\捐献系统\捐献排名.txt <$STR(S$玩家名字数据)>:<$STR(N$捐献数额数据)> 2
-inc N$编号 1
-;break
-
-
-#if
-large N$编号 2
-#act
-break
 
 #if
 small N$名次 2

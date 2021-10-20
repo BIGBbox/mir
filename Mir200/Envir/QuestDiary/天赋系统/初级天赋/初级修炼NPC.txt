@@ -186,9 +186,9 @@ CHECKITEM 修炼石 5
 CHECKITEM 天外陨石 5
 CheckBindMoney 元宝 > 49999
 #ACT
-TAKE 修炼石 5
-TAKE 天外陨石 5
-money 绑定元宝 - 50000
+TAKE 修炼石 10
+TAKE 天外陨石 10
+money 绑定元宝 - 100000
 MOV U1 1
 GOTO @神之天赋支线任务
 #CALL [\属性重载\属性加成.txt] @属性设置
@@ -203,9 +203,9 @@ CHECKITEM 修炼石 10
 CHECKITEM 天外陨石 10
 CheckBindMoney 元宝 > 99999
 #ACT
-TAKE 修炼石 10
-TAKE 天外陨石 10
-money 绑定元宝 - 100000
+TAKE 修炼石 20
+TAKE 天外陨石 20
+money 绑定元宝 - 200000
 MOV U1 2
 GOTO @main
 #CALL [\属性重载\属性加成.txt] @属性设置
@@ -219,9 +219,9 @@ CHECKITEM 修炼石 15
 CHECKITEM 天外陨石 15
 CheckBindMoney 元宝 > 149999
 #ACT
-TAKE 修炼石 15
-TAKE 天外陨石 15
-money 绑定元宝 - 150000
+TAKE 修炼石 30
+TAKE 天外陨石 30
+money 绑定元宝 - 300000
 MOV U1 3
 inc U139 1
 GOTO @main
@@ -236,9 +236,9 @@ CHECKITEM 修炼石 20
 CHECKITEM 天外陨石 20
 CheckBindMoney 元宝 > 199999
 #ACT
-TAKE 修炼石 20
-TAKE 天外陨石 20
-money 绑定元宝 - 200000
+TAKE 修炼石 40
+TAKE 天外陨石 40
+money 绑定元宝 - 400000
 MOV U1 4
 inc U140 1
 GOTO @main
@@ -253,9 +253,9 @@ CHECKITEM 修炼石 25
 CHECKITEM 天外陨石 25
 CheckBindMoney 元宝 > 249999
 #ACT
-TAKE 修炼石 25
-TAKE 天外陨石 25
-money 绑定元宝 - 250000
+TAKE 修炼石 50
+TAKE 天外陨石 50
+money 绑定元宝 - 500000
 MOV U1 5
 inc U141 1
 GOTO @main
@@ -270,9 +270,9 @@ CHECKITEM 修炼石 30
 CHECKITEM 天外陨石 30
 CheckBindMoney 元宝 > 299999
 #ACT
-TAKE 修炼石 30
-TAKE 天外陨石 30
-money 绑定元宝 - 300000
+TAKE 修炼石 60
+TAKE 天外陨石 60
+money 绑定元宝 - 600000
 MOV U1 6
 inc U142 1
 GOTO @main
@@ -287,9 +287,9 @@ CHECKITEM 修炼石 35
 CHECKITEM 天外陨石 35
 CheckBindMoney 元宝 > 349999
 #ACT
-TAKE 修炼石 35
-TAKE 天外陨石 35
-money 绑定元宝 - 350000
+TAKE 修炼石 70
+TAKE 天外陨石 70
+money 绑定元宝 - 700000
 MOV U1 7
 inc U143 1
 GOTO @main
@@ -304,9 +304,9 @@ CHECKITEM 修炼石 40
 CHECKITEM 天外陨石 40
 CheckBindMoney 元宝 > 399999
 #ACT
-TAKE 修炼石 40
-TAKE 天外陨石 40
-money 绑定元宝 - 400000
+TAKE 修炼石 80
+TAKE 天外陨石 80
+money 绑定元宝 - 800000
 MOV U1 8
 inc U144 1
 GOTO @main
@@ -321,9 +321,9 @@ CHECKITEM 修炼石 45
 CHECKITEM 天外陨石 45
 CheckBindMoney 元宝 > 449999
 #ACT
-TAKE 修炼石 45
-TAKE 天外陨石 45
-money 绑定元宝 - 450000
+TAKE 修炼石 90
+TAKE 天外陨石 90
+money 绑定元宝 - 900000
 MOV U1 9
 inc U145 1
 GOTO @main
@@ -338,9 +338,9 @@ CHECKITEM 修炼石 50
 CHECKITEM 天外陨石 50
 CheckBindMoney 元宝 > 499999
 #ACT
-TAKE 修炼石 50
-TAKE 天外陨石 50
-money 绑定元宝 - 500000
+TAKE 修炼石 100
+TAKE 天外陨石 100
+money 绑定元宝 - 1000000
 MOV U1 10
 inc U146 1
 GOTO @main
@@ -365,9 +365,9 @@ CHECKITEM 修炼石 5
 CHECKITEM 天外陨石 5
 CheckBindMoney 元宝 > 49999
 #ACT
-TAKE 修炼石 5
-TAKE 天外陨石 5
-money 绑定元宝 - 50000
+TAKE 修炼石 10
+TAKE 天外陨石 10
+money 绑定元宝 - 100000
 MOV U2 1
 GOTO @神之天赋支线任务
 DELAYGOTO 10 @MAIN
@@ -382,9 +382,9 @@ CHECKITEM 修炼石 10
 CHECKITEM 天外陨石 10
 CheckBindMoney 元宝 > 99999
 #ACT
-TAKE 修炼石 10
-TAKE 天外陨石 10
-money 绑定元宝 - 100000
+TAKE 修炼石 20
+TAKE 天外陨石 20
+money 绑定元宝 - 200000
 MOV U2 2
 GOTO @main
 #CALL [\属性重载\属性加成.txt] @属性设置
@@ -398,9 +398,9 @@ CHECKITEM 修炼石 15
 CHECKITEM 天外陨石 15
 CheckBindMoney 元宝 > 149999
 #ACT
-TAKE 修炼石 15
-TAKE 天外陨石 15
-money 绑定元宝 - 150000
+TAKE 修炼石 30
+TAKE 天外陨石 30
+money 绑定元宝 - 300000
 MOV U2 3
 inc U139 1
 
@@ -416,9 +416,9 @@ CHECKITEM 修炼石 20
 CHECKITEM 天外陨石 20
 CheckBindMoney 元宝 > 199999
 #ACT
-TAKE 修炼石 20
-TAKE 天外陨石 20
-money 绑定元宝 - 200000
+TAKE 修炼石 40
+TAKE 天外陨石 40
+money 绑定元宝 - 400000
 MOV U2 4
 inc U140 1
 GOTO @main
@@ -433,9 +433,9 @@ CHECKITEM 修炼石 25
 CHECKITEM 天外陨石 25
 CheckBindMoney 元宝 > 249999
 #ACT
-TAKE 修炼石 25
-TAKE 天外陨石 25
-money 绑定元宝 - 250000
+TAKE 修炼石 50
+TAKE 天外陨石 50
+money 绑定元宝 - 500000
 MOV U2 5
 inc U141 1
 GOTO @main
@@ -450,9 +450,9 @@ CHECKITEM 修炼石 30
 CHECKITEM 天外陨石 30
 CheckBindMoney 元宝 > 299999
 #ACT
-TAKE 修炼石 30
-TAKE 天外陨石 30
-money 绑定元宝 - 300000
+TAKE 修炼石 60
+TAKE 天外陨石 60
+money 绑定元宝 - 600000
 MOV U2 6
 inc U142 1
 GOTO @main
@@ -467,9 +467,9 @@ CHECKITEM 修炼石 35
 CHECKITEM 天外陨石 35
 CheckBindMoney 元宝 > 349999
 #ACT
-TAKE 修炼石 35
-TAKE 天外陨石 35
-money 绑定元宝 - 350000
+TAKE 修炼石 70
+TAKE 天外陨石 70
+money 绑定元宝 - 700000
 MOV U2 7
 inc U143 1
 GOTO @main
@@ -484,9 +484,9 @@ CHECKITEM 修炼石 40
 CHECKITEM 天外陨石 40
 CheckBindMoney 元宝 > 499999
 #ACT
-TAKE 修炼石 40
-TAKE 天外陨石 40
-money 绑定元宝 - 400000
+TAKE 修炼石 80
+TAKE 天外陨石 80
+money 绑定元宝 - 800000
 MOV U2 8
 inc U144 1
 GOTO @main
@@ -501,9 +501,9 @@ CHECKITEM 修炼石 45
 CHECKITEM 天外陨石 45
 CheckBindMoney 元宝 > 449999
 #ACT
-TAKE  修炼石 45
-TAKE  天外陨石 45
-money 绑定元宝 - 450000
+TAKE  修炼石 90
+TAKE  天外陨石 90
+money 绑定元宝 - 900000
 MOV U2 9
 inc U145 1
 GOTO @main
@@ -518,9 +518,9 @@ CHECKITEM 修炼石 50
 CHECKITEM 天外陨石 50
 CheckBindMoney 元宝 > 499999
 #ACT
-TAKE 修炼石 50
-TAKE 天外陨石 50
-money 绑定元宝 - 500000
+TAKE 修炼石 100
+TAKE 天外陨石 100
+money 绑定元宝 - 1000000
 MOV U2 10
 inc U146 1
 GOTO @main
@@ -545,9 +545,9 @@ CHECKITEM 修炼石 5
 CHECKITEM 天外陨石 5
 CheckBindMoney 元宝 > 49999
 #ACT
-TAKE 修炼石 5
-TAKE 天外陨石 5
-money 绑定元宝 - 50000
+TAKE 修炼石 10
+TAKE 天外陨石 10
+money 绑定元宝 - 100000
 MOV U3 1
 GOTO @神之天赋支线任务
 GOTO @main
@@ -562,9 +562,9 @@ CHECKITEM 修炼石 10
 CHECKITEM 天外陨石 10
 CheckBindMoney 元宝 > 99999
 #ACT
-TAKE 修炼石 10
-TAKE 天外陨石 10
-money 绑定元宝 - 100000
+TAKE 修炼石 20
+TAKE 天外陨石 20
+money 绑定元宝 - 200000
 MOV U3 2
 GOTO @main
 #CALL [\属性重载\属性加成.txt] @属性设置
@@ -578,9 +578,9 @@ CHECKITEM 修炼石 15
 CHECKITEM 天外陨石 15
 CheckBindMoney 元宝 > 149999
 #ACT
-TAKE 修炼石 15
-TAKE 天外陨石 15
-money 绑定元宝 - 150000
+TAKE 修炼石 30
+TAKE 天外陨石 30
+money 绑定元宝 - 300000
 MOV U3 3
 inc U139 1
 
@@ -596,9 +596,9 @@ CHECKITEM 修炼石 20
 CHECKITEM 天外陨石 20
 CheckBindMoney 元宝 > 199999
 #ACT
-TAKE  修炼石 20
-TAKE  天外陨石 20
-money 绑定元宝 - 200000
+TAKE  修炼石 40
+TAKE  天外陨石 40
+money 绑定元宝 - 400000
 MOV U3 4
 inc U140 1
 GOTO @main
@@ -613,9 +613,9 @@ CHECKITEM 修炼石 25
 CHECKITEM 天外陨石 25
 CheckBindMoney 元宝 > 249999
 #ACT
-TAKE 修炼石 25
-TAKE 天外陨石 25
-money 绑定元宝 - 250000
+TAKE 修炼石 50
+TAKE 天外陨石 50
+money 绑定元宝 - 500000
 MOV U3 5
 inc U141 1
 GOTO @main
@@ -630,9 +630,9 @@ CHECKITEM 修炼石 30
 CHECKITEM 天外陨石 30
 CheckBindMoney 元宝 > 299999
 #ACT
-TAKE 修炼石 30
-TAKE 天外陨石 30
-money 绑定元宝 - 300000
+TAKE 修炼石 60
+TAKE 天外陨石 60
+money 绑定元宝 - 600000
 MOV U3 6
 inc U142 1
 GOTO @main
@@ -647,9 +647,9 @@ CHECKITEM 修炼石 35
 CHECKITEM 天外陨石 35
 CheckBindMoney 元宝 > 349999
 #ACT
-TAKE 修炼石 35
-TAKE 天外陨石 35
-money 绑定元宝 - 350000
+TAKE 修炼石 70
+TAKE 天外陨石 70
+money 绑定元宝 - 700000
 MOV U3 7
 inc U143 1
 GOTO @main
@@ -664,9 +664,9 @@ CHECKITEM 修炼石 40
 CHECKITEM 天外陨石 40
 CheckBindMoney 元宝 > 399999
 #ACT
-TAKE 修炼石 40
-TAKE 天外陨石 40
-money 绑定元宝 - 400000
+TAKE 修炼石 80
+TAKE 天外陨石 80
+money 绑定元宝 - 800000
 MOV U3 8
 inc U144 1
 GOTO @main
@@ -681,9 +681,9 @@ CHECKITEM 修炼石 45
 CHECKITEM 天外陨石 45
 CheckBindMoney 元宝 > 449999
 #ACT
-TAKE 修炼石 45
-TAKE 天外陨石 45
-money 绑定元宝 - 450000
+TAKE 修炼石 90
+TAKE 天外陨石 90
+money 绑定元宝 - 900000
 MOV U3 9
 inc U145 1
 GOTO @main
@@ -698,9 +698,9 @@ CHECKITEM 修炼石 50
 CHECKITEM 天外陨石 50
 CheckBindMoney 元宝 > 499999
 #ACT
-TAKE 修炼石 50
-TAKE 天外陨石 50
-money 绑定元宝 - 500000
+TAKE 修炼石 100
+TAKE 天外陨石 100
+money 绑定元宝 - 1000000
 MOV U3 10
 inc U146 1
 GOTO @main
@@ -725,9 +725,9 @@ CHECKITEM 修炼石 5
 CHECKITEM 天外陨石 5
 CheckBindMoney 元宝 > 49999
 #ACT
-TAKE 修炼石 5
-TAKE 天外陨石 5
-money 绑定元宝 - 50000
+TAKE 修炼石 10
+TAKE 天外陨石 10
+money 绑定元宝 - 100000
 MOV U4 1
 GOTO @神之天赋支线任务
 GOTO @main
@@ -742,9 +742,9 @@ CHECKITEM 修炼石 10
 CHECKITEM 天外陨石 10
 CheckBindMoney 元宝 > 99999
 #ACT
-TAKE 修炼石 10
-TAKE 天外陨石 10
-money 绑定元宝 - 100000
+TAKE 修炼石 20
+TAKE 天外陨石 20
+money 绑定元宝 - 200000
 MOV U4 2
 GOTO @main
 #CALL [\属性重载\属性加成.txt] @属性设置
@@ -758,9 +758,9 @@ CHECKITEM 修炼石 15
 CHECKITEM 天外陨石 15
 CheckBindMoney 元宝 > 149999
 #ACT
-TAKE 修炼石 15
-TAKE 天外陨石 15
-money 绑定元宝 - 150000
+TAKE 修炼石 30
+TAKE 天外陨石 30
+money 绑定元宝 - 300000
 MOV U4 3
 inc U139 1
 
@@ -776,9 +776,9 @@ CHECKITEM 修炼石 20
 CHECKITEM 天外陨石 20
 CheckBindMoney 元宝 > 199999
 #ACT
-TAKE 修炼石 20
-TAKE 天外陨石 20
-money 绑定元宝 - 200000
+TAKE 修炼石 40
+TAKE 天外陨石 40
+money 绑定元宝 - 400000
 MOV U4 4
 inc U140 1
 GOTO @main
@@ -793,9 +793,9 @@ CHECKITEM 修炼石 25
 CHECKITEM 天外陨石 25
 CheckBindMoney 元宝 > 249999
 #ACT
-TAKE 修炼石 25
-TAKE 天外陨石 25
-money 绑定元宝 - 250000
+TAKE 修炼石 50
+TAKE 天外陨石 50
+money 绑定元宝 - 500000
 MOV U4 5
 inc U141 1
 GOTO @main
@@ -810,9 +810,9 @@ CHECKITEM 修炼石 30
 CHECKITEM 天外陨石 30
 CheckBindMoney 元宝 > 299999
 #ACT
-TAKE 修炼石 30
-TAKE 天外陨石 30
-money 绑定元宝 - 300000
+TAKE 修炼石 60
+TAKE 天外陨石 60
+money 绑定元宝 - 600000
 MOV U4 6
 inc U142 1
 GOTO @main
@@ -827,9 +827,9 @@ CHECKITEM 修炼石 35
 CHECKITEM 天外陨石 35
 CheckBindMoney 元宝 > 349999
 #ACT
-TAKE 修炼石 35
-TAKE 天外陨石 35
-money 绑定元宝 - 350000
+TAKE 修炼石 70
+TAKE 天外陨石 70
+money 绑定元宝 - 700000
 MOV U4 7
 inc U143 1
 GOTO @main
@@ -844,9 +844,9 @@ CHECKITEM 修炼石 40
 CHECKITEM 天外陨石 40
 CheckBindMoney 元宝 > 399999
 #ACT
-TAKE 修炼石 40
-TAKE 天外陨石 40
-money 绑定元宝 - 400000
+TAKE 修炼石 80
+TAKE 天外陨石 80
+money 绑定元宝 - 800000
 MOV U4 8
 inc U144 1
 GOTO @main
@@ -861,9 +861,9 @@ CHECKITEM 修炼石 45
 CHECKITEM 天外陨石 45
 CheckBindMoney 元宝 > 449999
 #ACT
-TAKE 修炼石 45
-TAKE 天外陨石 45
-money 绑定元宝 - 450000
+TAKE 修炼石 90
+TAKE 天外陨石 90
+money 绑定元宝 - 900000
 MOV U4 9
 inc U145 1
 GOTO @main
@@ -878,9 +878,9 @@ CHECKITEM 修炼石 50
 CHECKITEM 天外陨石 50
 CheckBindMoney 元宝 > 499999
 #ACT
-TAKE 修炼石 50
-TAKE 天外陨石 50
-money 绑定元宝 - 500000
+TAKE 修炼石 100
+TAKE 天外陨石 100
+money 绑定元宝 - 1000000
 MOV U4 10
 inc U146 1
 GOTO @main
@@ -904,9 +904,9 @@ CHECKITEM 修炼石 5
 CHECKITEM 天外陨石 5
 CheckBindMoney 元宝 > 49999
 #ACT
-TAKE 修炼石 5
-TAKE 天外陨石 5
-money 绑定元宝 - 50000
+TAKE 修炼石 10
+TAKE 天外陨石 10
+money 绑定元宝 - 100000
 MOV U6 1
 GOTO @神之天赋支线任务
 GOTO @main
@@ -921,9 +921,9 @@ CHECKITEM 修炼石 10
 CHECKITEM 天外陨石 10
 CheckBindMoney 元宝 > 99999
 #ACT
-TAKE 修炼石 10
-TAKE 天外陨石 10
-money 绑定元宝 - 100000
+TAKE 修炼石 20
+TAKE 天外陨石 20
+money 绑定元宝 - 200000
 MOV U6 2
 GOTO @main
 #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
@@ -937,9 +937,9 @@ CHECKITEM 修炼石 15
 CHECKITEM 天外陨石 15
 CheckBindMoney 元宝 > 299999
 #ACT
-TAKE 修炼石 15
-TAKE 天外陨石 15
-money 绑定元宝 - 150000
+TAKE 修炼石 30
+TAKE 天外陨石 30
+money 绑定元宝 - 300000
 MOV U6 3
 inc U139 1
 
@@ -955,9 +955,9 @@ CHECKITEM 修炼石 20
 CHECKITEM 天外陨石 20
 CheckBindMoney 元宝 > 399999
 #ACT
-TAKE 修炼石 20
-TAKE 天外陨石 20
-money 绑定元宝 - 200000
+TAKE 修炼石 40
+TAKE 天外陨石 40
+money 绑定元宝 - 400000
 MOV U6 4
 inc U140 1
 GOTO @main
@@ -972,9 +972,9 @@ CHECKITEM 修炼石 25
 CHECKITEM 天外陨石 25
 CheckBindMoney 元宝 > 249999
 #ACT
-TAKE 修炼石 25
-TAKE 天外陨石 25
-money 绑定元宝 - 250000
+TAKE 修炼石 50
+TAKE 天外陨石 50
+money 绑定元宝 - 500000
 MOV U6 5
 inc U141 1
 GOTO @main
@@ -989,9 +989,9 @@ CHECKITEM 修炼石 30
 CHECKITEM 天外陨石 30
 CheckBindMoney 元宝 > 299999
 #ACT
-TAKE 修炼石 30
-TAKE 天外陨石 30
-money 绑定元宝 - 300000
+TAKE 修炼石 60
+TAKE 天外陨石 60
+money 绑定元宝 - 600000
 MOV U6 6
 inc U142 1
 GOTO @main
@@ -1006,9 +1006,9 @@ CHECKITEM 修炼石 35
 CHECKITEM 天外陨石 35
 CheckBindMoney 元宝 > 349999
 #ACT
-TAKE 修炼石 35
-TAKE 天外陨石 35
-money 绑定元宝 - 350000
+TAKE 修炼石 70
+TAKE 天外陨石 70
+money 绑定元宝 - 700000
 MOV U6 7
 inc U143 1
 GOTO @main
@@ -1023,9 +1023,9 @@ CHECKITEM 修炼石 40
 CHECKITEM 天外陨石 40
 CheckBindMoney 元宝 > 399999
 #ACT
-TAKE 修炼石 40
-TAKE 天外陨石 40
-money 绑定元宝 - 400000
+TAKE 修炼石 80
+TAKE 天外陨石 80
+money 绑定元宝 - 800000
 MOV U6 8
 inc U144 1
 GOTO @main
@@ -1041,9 +1041,9 @@ CHECKITEM 修炼石 45
 CHECKITEM 天外陨石 45
 CheckBindMoney 元宝 > 449999
 #ACT
-TAKE 修炼石 45
-TAKE 天外陨石 45
-money 绑定元宝 - 450000
+TAKE 修炼石 90
+TAKE 天外陨石 90
+money 绑定元宝 - 900000
 MOV U6 9
 inc U145 1
 GOTO @main
@@ -1058,9 +1058,9 @@ CHECKITEM 修炼石 50
 CHECKITEM 天外陨石 50
 CheckBindMoney 元宝 > 499999
 #ACT
-TAKE 修炼石 50
-TAKE 天外陨石 50
-money 绑定元宝 - 500000
+TAKE 修炼石 100
+TAKE 天外陨石 100
+money 绑定元宝 - 1000000
 MOV U6 10
 inc U146 1
 GOTO @main
@@ -1084,9 +1084,9 @@ CHECKITEM 修炼石 5
 CHECKITEM 天外陨石 5
 CheckBindMoney 元宝 > 49999
 #ACT
-TAKE 修炼石 5
-TAKE 天外陨石 5
-money 绑定元宝 - 50000
+TAKE 修炼石 10
+TAKE 天外陨石 10
+money 绑定元宝 - 100000
 MOV U7 1
 GOTO @神之天赋支线任务
 GOTO @main
@@ -1101,9 +1101,9 @@ CHECKITEM 修炼石 10
 CHECKITEM 天外陨石 10
 CheckBindMoney 元宝 > 99999
 #ACT
-TAKE 修炼石 10
-TAKE 天外陨石 10
-money 绑定元宝 - 100000
+TAKE 修炼石 20
+TAKE 天外陨石 20
+money 绑定元宝 - 200000
 MOV U7 2
 GOTO @main
 #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
@@ -1117,9 +1117,9 @@ CHECKITEM 修炼石 15
 CHECKITEM 天外陨石 15
 CheckBindMoney 元宝 > 149999
 #ACT
-TAKE 修炼石 15
-TAKE 天外陨石 15
-money 绑定元宝 - 150000
+TAKE 修炼石 30
+TAKE 天外陨石 30
+money 绑定元宝 - 300000
 MOV U7 3
 inc U139 1
 GOTO @main
@@ -1135,9 +1135,9 @@ CHECKITEM 修炼石 20
 CHECKITEM 天外陨石 20
 CheckBindMoney 元宝 > 199999
 #ACT
-TAKE 修炼石 20
-TAKE 天外陨石 20
-money 绑定元宝 - 200000
+TAKE 修炼石 40
+TAKE 天外陨石 40
+money 绑定元宝 - 400000
 MOV U7 4
 inc U140 1
 GOTO @main
@@ -1152,9 +1152,9 @@ CHECKITEM 修炼石 25
 CHECKITEM 天外陨石 25
 CheckBindMoney 元宝 > 249999
 #ACT
-TAKE 修炼石 25
-TAKE 天外陨石 25
-money 绑定元宝 - 250000
+TAKE 修炼石 50
+TAKE 天外陨石 50
+money 绑定元宝 - 500000
 MOV U7 5
 inc U141 1
 GOTO @main
@@ -1169,9 +1169,9 @@ CHECKITEM 修炼石 30
 CHECKITEM 天外陨石 30
 CheckBindMoney 元宝 > 299999
 #ACT
-TAKE 修炼石 30
-TAKE 天外陨石 30
-money 绑定元宝 - 300000
+TAKE 修炼石 60
+TAKE 天外陨石 60
+money 绑定元宝 - 600000
 MOV U7 6
 inc U142 1
 GOTO @main
@@ -1186,9 +1186,9 @@ CHECKITEM 修炼石 35
 CHECKITEM 天外陨石 35
 CheckBindMoney 元宝 > 349999
 #ACT
-TAKE 修炼石 35
-TAKE 天外陨石 35
-money 绑定元宝 - 350000
+TAKE 修炼石 70
+TAKE 天外陨石 70
+money 绑定元宝 - 700000
 MOV U7 7
 inc U143 1
 GOTO @main
@@ -1203,9 +1203,9 @@ CHECKITEM 修炼石 40
 CHECKITEM 天外陨石 40
 CheckBindMoney 元宝 > 399999
 #ACT
-TAKE 修炼石 40
-TAKE 天外陨石 40
-money 绑定元宝 - 400000
+TAKE 修炼石 80
+TAKE 天外陨石 80
+money 绑定元宝 - 800000
 MOV U7 8
 inc U144 1
 GOTO @main
@@ -1220,9 +1220,9 @@ CHECKITEM 修炼石 45
 CHECKITEM 天外陨石 45
 CheckBindMoney 元宝 > 449999
 #ACT
-TAKE 修炼石 45
-TAKE 天外陨石 45
-money 绑定元宝 - 450000
+TAKE 修炼石 90
+TAKE 天外陨石 90
+money 绑定元宝 - 900000
 MOV U7 9
 inc U145 1
 GOTO @main
@@ -1237,9 +1237,9 @@ CHECKITEM 修炼石 50
 CHECKITEM 天外陨石 50
 CheckBindMoney 元宝 > 499999
 #ACT
-TAKE 修炼石 50
-TAKE 天外陨石 50
-money 绑定元宝 - 500000
+TAKE 修炼石 100
+TAKE 天外陨石 100
+money 绑定元宝 - 1000000
 MOV U7 10
 inc U146 1
 GOTO @main

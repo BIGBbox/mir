@@ -126,7 +126,7 @@ inc S$窗口<$STR(N$窗口序号)> <RText|id=窗口<$STR(N$窗口序号)>_排名_名|x=40.0|y=0
 
 
 #if
-small <$STR(N$窗口序号)> 20
+small <$STR(N$窗口序号)> 50
 not equal <$STR(S$角色名字<$STR(N$窗口序号)>)>
 #act
 inc N$窗口序号 1

@@ -30,10 +30,10 @@ inc S$守护者升级条件 <RText|id=天下币晋升条件1|x=130.0|y=100|color=250|size=16|t
 #if
 not large <$str(U8)> 5
 #act
-inc S$守护者升级按钮 <Button|id=升级按钮1|x=100|y=210|nimg=public/sf1/1/01344.png|pimg=public/sf1/1/01346.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@天下守护者晋升>
-inc S$守护者升级按钮 <Button|id=升级按钮2|x=270|y=210|nimg=public/sf1/1/01347.png|pimg=public/sf1/1/01349.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@天下守护者晋升>
+inc S$守护者升级按钮 <Button|id=升级按钮1|x=100|y=210|nimg=public/sf1/1/01344.png|pimg=public/sf1/1/01346.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@天下守护者晋升#参数=1>
+inc S$守护者升级按钮 <Button|id=升级按钮2|x=270|y=210|nimg=public/sf1/1/01347.png|pimg=public/sf1/1/01349.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@天下守护者晋升#参数=2>
 #elseact
-inc S$守护者升级按钮 <Button|id=升级按钮2|x=190|y=210|nimg=public/sf1/1/01347.png|pimg=public/sf1/1/01349.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@天下守护者晋升>
+inc S$守护者升级按钮 <Button|id=升级按钮2|x=190|y=210|nimg=public/sf1/1/01347.png|pimg=public/sf1/1/01349.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@天下守护者晋升#参数=2>
 
 
 #if
@@ -78,22 +78,31 @@ messagebox 当前天下守护者满级,不能再升级了!
 break
 
 #if
+equal <$str(S$参数)> 1
 CheckBindMoney 元宝  < <$str(S$所需元宝)>
 #ACT
 messagebox 元宝数量不足!!
 BREAK
 
 #if
+equal <$str(S$参数)> 2
 CHECKMONEY 天下币 < <$str(S$所需天下币)>
 #ACT
 messagebox 天下币数量不足!!
 BREAK
 
 #if
+equal <$str(S$参数)> 1
 #act
-
 money 绑定元宝  - <$str(S$所需元宝)>
+
+#if
+equal <$str(S$参数)> 2
+#act
 money 天下币  - <$str(S$所需天下币)>
+
+#if
+#act
 inc U8 1
 MOVR <$STR(N$纵轴坐标)> 100 500
 GOTO @MAIN
