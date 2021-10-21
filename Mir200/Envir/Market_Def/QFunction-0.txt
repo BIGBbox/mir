@@ -3749,20 +3749,7 @@ break
 #IF
 #ACT
 ;CLOSEMERCHANTBIGDLG
-#SAY
-\ \ \ \ \
-<>        　　　　　　　 <【天下沉默】/FCOLOR=222>\ \
-<>                   <请输入您要喊话的内容/FCOLOR=7> \ \
-<>                      <点击输入内容/@@InPutString88>
-
-[@InPutString88]
-#IF
-#act
-SENDMOVEMSG 0 253 255 500 1 {世界喊话:/FCOLOR=254}<玩家/FCOLOR=250><【<$USERNAME>】/FCOLOR=253>：{<$STR(S88)>/FCOLOR=215}
-;Close
-#ELSEACT
-MESSAGEBOX 您输入的内容中包含关键字.请检查重新输入！
-BREAK
+#CALL [\小喇叭\小喇叭.txt] @使用小喇叭
 
 ;------红名清洗卷-------------------------------
 [@StdModeFunc7]
