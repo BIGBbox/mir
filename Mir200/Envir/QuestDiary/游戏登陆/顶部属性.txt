@@ -42,11 +42,11 @@ Equal <$CLIENTFLAG> 2
 mov S$上部属性
 mov N$爆率 <$VALUE6>
 mul N$爆率 100
-
-#if
-not large <$str(N$爆率)> 100
-#act
-mov N$爆率 100
+; sendmsg 5 <$VALUE6>：：：<$str(N$暴率显示)>
+; #if
+; not large <$str(N$爆率)> 100
+; #act
+; mov N$爆率 100
 
 #IF
 Equal <$CLIENTFLAG> 2
@@ -68,7 +68,7 @@ inc S$上部属性 <Text|text=道术:|x=690|y=2|size=15|color=250>
 inc S$上部属性 <Text|text=<$SC>-<$MAXSC>|x=735|y=2|size=15|color=250>
 
 inc S$上部属性 <Text|text=爆率:|x=850|y=2|size=15|color=250>
-inc S$上部属性 <Text|text=<$str(N$爆率)>%|x=895|y=2|size=15|color=250>
+inc S$上部属性 <Text|text=<$str(N$暴率显示)>%|x=895|y=2|size=15|color=250>
 
 addbutton 101 1 <$STR(S$上部属性)>
 

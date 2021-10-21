@@ -1792,6 +1792,8 @@ KILLMONBURSTRATE <$STR(N$±©ÂÊÏÔÊ¾)> 60000
 
 #if
 #act
-#CALL [\ÓÎÏ·µÇÂ½\ÓÒÏÂÏÔÊ¾.txt] @ÊôÐÔÏÔÊ¾
+; #CALL [\ÓÎÏ·µÇÂ½\ÓÒÏÂÏÔÊ¾.txt] @ÊôÐÔÏÔÊ¾
+#CALL [\ÓÎÏ·µÇÂ½\¶¥²¿ÊôÐÔ.txt] @¶¥²¿ÊôÐÔÏÔÊ¾
+
 
 }
