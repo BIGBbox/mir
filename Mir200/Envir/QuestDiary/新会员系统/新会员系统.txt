@@ -90,6 +90,11 @@ GOTO @新会员系统主面板
 [@默认会员等级窗口]
 ;------默认打开下级会员窗口-----
 #if
+#act
+mov S$参数 1
+mov S$参数1 1
+
+#if
 large <$STR(U17)> 0
 #act
 mov N$参数 <$STR(U17)>
@@ -492,19 +497,23 @@ break
 #if
 not equal <$STR(S$地图名)> 击杀怪物
 not equal <$MAPTITLE> <$STR(S$地图名)>
+equal <$STR(S$地图名)> 天下主城
 #act
 mapmove <$STR(S$地图名)> <$STR(S$X坐标)> <$STR(S$Y坐标)>
 
 
-#if
-not equal <$STR(S$地图名)> 击杀怪物
+#or
+equal <$STR(S$地图名)> 击杀怪物
+not equal <$STR(S$地图名)> 天下主城
 #act
-
-OPENNPCSHOWEX <$STR(S$npcId)>
 close
-#elseact
 #CALL [\按钮功能\世界地图.txt] @世界地图堆栈
+break
 
+#if
+#act
+close
+OPENNPCSHOWEX <$STR(S$npcId)>
 
 [@领取每日礼包]
 
