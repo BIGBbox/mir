@@ -1,0 +1,66 @@
+[1]
+名字=烈焰独角
+EffectId=411
+Effectx=80
+Effecty=110
+namex=95
+namey=48
+备注x=45
+备注y=48
+属性说明={属性说明：/FCOLOR=253}^{伤害减免 +1%/FCOLOR=254}
+
+
+[2]
+名字=天子之骏
+EffectId=407
+Effectx=180
+Effecty=20
+namex=265
+namey=48
+备注x=221
+备注y=48
+属性说明={属性说明：/FCOLOR=253}^{吸血 +1%/FCOLOR=254}
+
+[3]
+名字=百兽之王
+EffectId=417
+Effectx=420
+Effecty=100
+namex=445
+namey=48
+备注x=394
+备注y=48
+属性说明={属性说明：/FCOLOR=253}^{攻魔道 +1%/FCOLOR=254}|}
+
+[4]
+名字=飒露紫
+EffectId=414
+Effectx=80
+Effecty=310
+namex=95
+namey=252
+备注x=45
+备注y=250
+属性说明={属性说明：/FCOLOR=253}^{暴伤 +3%/FCOLOR=254}
+
+[5]
+名字=乌骓
+EffectId=430
+Effectx=250
+Effecty=310
+namex=265
+namey=252
+备注x=221
+备注y=250
+属性说明={属性说明：/FCOLOR=253}^{准确敏捷 +10/FCOLOR=254}
+
+[6]
+名字=白熊
+EffectId=416
+Effectx=420
+Effecty=310
+namex=445
+namey=252
+备注x=394
+备注y=250
+属性说明={属性说明：/FCOLOR=253}^{HP +2%/FCOLOR=254}

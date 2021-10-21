@@ -1,0 +1,66 @@
+[1]
+名字=森林白斑
+EffectId=425
+Effectx=10
+Effecty=40
+namex=95
+namey=48
+备注x=45
+备注y=48
+属性说明={属性说明：/FCOLOR=253}^{吸血 +1%/FCOLOR=254}
+
+
+[2]
+名字=烈焰
+EffectId=429
+Effectx=250
+Effecty=100
+namex=265
+namey=48
+备注x=221
+备注y=48
+属性说明={属性说明：/FCOLOR=253}^{暴伤 +3%/FCOLOR=254}
+
+[3]
+名字=至尊白虎
+EffectId=418
+Effectx=420
+Effecty=100
+namex=445
+namey=48
+备注x=394
+备注y=48
+属性说明={属性说明：/FCOLOR=253}^{准确敏捷 +5/FCOLOR=254}|}
+
+[4]
+名字=拳毛騧
+EffectId=431
+Effectx=30
+Effecty=290
+namex=95
+namey=252
+备注x=45
+备注y=250
+属性说明={属性说明：/FCOLOR=253}^{伤害减免 +1%/FCOLOR=254}
+
+[5]
+名字=骕骦
+EffectId=415
+Effectx=250
+Effecty=310
+namex=265
+namey=252
+备注x=221
+备注y=250
+属性说明={属性说明：/FCOLOR=253}^{忽视防御 +2%/FCOLOR=254}
+
+[6]
+名字=黄骠
+EffectId=419
+Effectx=410
+Effecty=240
+namex=445
+namey=252
+备注x=394
+备注y=250
+属性说明={属性说明：/FCOLOR=253}^{暴伤 +5%/FCOLOR=254}

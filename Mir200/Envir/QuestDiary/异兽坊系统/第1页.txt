@@ -1,29 +1,66 @@
 [1]
 名字=枣红马
 EffectId=400
+Effectx=80
+Effecty=120
+namex=95
+namey=48
+备注x=45
+备注y=48
 属性说明={属性说明：/FCOLOR=253}^{攻魔道 +5/FCOLOR=254}
+
 
 [2]
 名字=乌黑马
 EffectId=401
+Effectx=250
+Effecty=120
+namex=265
+namey=48
+备注x=221
+备注y=48
 属性说明={属性说明：/FCOLOR=253}^{攻魔道 +10/FCOLOR=254}
 
 [3]
 名字=白马
 EffectId=402
+Effectx=420
+Effecty=120
+namex=445
+namey=48
+备注x=394
+备注y=48
 属性说明={属性说明：/FCOLOR=253}^{攻魔道 +15/FCOLOR=254}|}
 
 [4]
 名字=赤炎马
 EffectId=403
+Effectx=80
+Effecty=320
+namex=95
+namey=252
+备注x=45
+备注y=250
 属性说明={属性说明：/FCOLOR=253}^{攻魔道 +20/FCOLOR=254}
 
 [5]
 名字=头大马
 EffectId=404
+Effectx=250
+Effecty=300
+namex=265
+namey=252
+备注x=221
+备注y=250
 属性说明={属性说明：/FCOLOR=253}^{攻魔道 +25/FCOLOR=254}
 
 [6]
 名字=迎亲马
 EffectId=405
+Effectx=420
+Effecty=300
+namex=445
+namey=252
+备注x=394
+备注y=250
 属性说明={属性说明：/FCOLOR=253}^{准确 +5/FCOLOR=254}

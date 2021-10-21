@@ -1,0 +1,66 @@
+[1]
+名字=金色马
+EffectId=406
+Effectx=80
+Effecty=100
+namex=95
+namey=48
+备注x=45
+备注y=48
+属性说明={属性说明：/FCOLOR=253}^{敏捷 +5/FCOLOR=254}
+
+
+[2]
+名字=骐骥
+EffectId=428
+Effectx=250
+Effecty=120
+namex=265
+namey=48
+备注x=221
+备注y=48
+属性说明={属性说明：/FCOLOR=253}^{准确敏捷 +5/FCOLOR=254}
+
+[3]
+名字=幼麒麟
+EffectId=423
+Effectx=420
+Effecty=100
+namex=445
+namey=48
+备注x=394
+备注y=48
+属性说明={属性说明：/FCOLOR=253}^{暴伤 +3%/FCOLOR=254}|}
+
+[4]
+名字=黄金虎
+EffectId=413
+Effectx=80
+Effecty=310
+namex=95
+namey=252
+备注x=45
+备注y=250
+属性说明={属性说明：/FCOLOR=253}^{HP +1%/FCOLOR=254}
+
+[5]
+名字=独角战马
+EffectId=412
+Effectx=250
+Effecty=320
+namex=265
+namey=252
+备注x=221
+备注y=250
+属性说明={属性说明：/FCOLOR=253}^{忽视防御 +1%/FCOLOR=254}
+
+[6]
+名字=赤兔
+EffectId=410
+Effectx=420
+Effecty=320
+namex=445
+namey=252
+备注x=394
+备注y=250
+属性说明={属性说明：/FCOLOR=253}^{攻击伤害 +1%/FCOLOR=254}

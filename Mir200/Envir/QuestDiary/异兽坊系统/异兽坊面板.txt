@@ -9,7 +9,9 @@ mov N$序号 1
 mov S$马特效
 mov S$马名字
 mov S$马备注
-messagebox 功能暂时关闭
+
+; mov S$参数 <$str(S$页数)>
+; messagebox 功能暂时关闭
 goto @获取数据
 
 
@@ -57,6 +59,13 @@ btn1,btn2,btn3,btn4,btn5,合成描述,item1,item2,item3,item4,item5,item6,tips1,tips
 
 ;----------------------------------------------------------------------------------------------------
 
+[@马厩翻页]
+#if
+#act
+mov S$页数 <$str(S$参数)>
+mov N$序号 1
+goto @获取数据
+
 [@获取数据]
 #if
 #act
@@ -65,18 +74,24 @@ ReadConfigFileItem ..\QuestDiary\异兽坊系统\第<$str(S$页数)>页.txt <$str(N$序号)
 ReadConfigFileItem ..\QuestDiary\异兽坊系统\第<$str(S$页数)>页.txt <$str(N$序号)> EffectId S$EffectId
 ReadConfigFileItem ..\QuestDiary\异兽坊系统\第<$str(S$页数)>页.txt <$str(N$序号)> Effectx S$Effectx
 ReadConfigFileItem ..\QuestDiary\异兽坊系统\第<$str(S$页数)>页.txt <$str(N$序号)> Effecty S$Effecty
+ReadConfigFileItem ..\QuestDiary\异兽坊系统\第<$str(S$页数)>页.txt <$str(N$序号)> namex S$namex
+ReadConfigFileItem ..\QuestDiary\异兽坊系统\第<$str(S$页数)>页.txt <$str(N$序号)> namey S$namey
+ReadConfigFileItem ..\QuestDiary\异兽坊系统\第<$str(S$页数)>页.txt <$str(N$序号)> 备注x S$备注x
+ReadConfigFileItem ..\QuestDiary\异兽坊系统\第<$str(S$页数)>页.txt <$str(N$序号)> 备注y S$备注y
 ReadConfigFileItem ..\QuestDiary\异兽坊系统\第<$str(S$页数)>页.txt <$str(N$序号)> 属性说明 S$属性说明
 
-sendmsg 5 <$str(S$名字)>
-sendmsg 5 <$str(S$EffectId)>
-sendmsg 5 <$str(S$属性说明)>
-sendmsg 5 -------------------
-inc S$马特效 <Effect|id=形象<$str(N$序号)>|x=<$str(S$Effectx)>|y=<$str(S$Effecty)>|effectid=400|effecttype=0|speed=0.5>
-inc S$马名字
-inc S$马备注
+; sendmsg 5 <$str(S$名字)>
+; sendmsg 5 <$str(S$EffectId)>
+; sendmsg 5 <$str(S$属性说明)>
+; sendmsg 5 形象<$str(N$序号)>|x=<$str(S$Effectx)>|y=<$str(S$Effecty)>|effectid=<$str(S$EffectId)>
+; sendmsg 5 -------------------
+
+inc S$马特效 <Effect|id=形象<$str(N$序号)>|x=<$str(S$Effectx)>|y=<$str(S$Effecty)>|effectid=<$str(S$EffectId)>|effecttype=0|speed=0.5>
+inc S$马名字 <RText|id=name<$str(N$序号)>|x=<$str(S$namex)>|y=<$str(S$namey)>|color=87|size=15|text=<<$str(S$名字)>/FCOLOR=103>>
+inc S$马备注 <Button|id=tips<$str(N$序号)>|x=<$str(S$备注x)>|y=<$str(S$备注y)>|nimg=public/sf1/1/00284.png|tips=<$str(S$属性说明)>|tipsx=10|tipsy=100|size=18|color=249|link=1>
 
 #if
-not large <$str(N$序号)> 6
+small <$str(N$序号)> 6
 #act
 inc N$序号 1
 goto @获取数据
