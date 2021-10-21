@@ -159,6 +159,15 @@ equal U108 0
 #act
 #Call [\代理登录\欢迎界面.txt] @欢迎界面展示
 
+#if
+#act
+delaygoto 1500 @刷新顶部属性栏
+
+[@刷新顶部属性栏]
+#act
+#CALL [\游戏登陆\顶部属性.txt] @顶部属性显示
+
+
 [@OnTimer7]
 #if
 #act
