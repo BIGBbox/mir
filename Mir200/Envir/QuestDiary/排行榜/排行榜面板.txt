@@ -6,6 +6,7 @@
 #if
 #act
 mov N$窗口序号 1
+#call [\排行榜\排行榜数据记录.txt] @获取角色属性
 
 mov S$窗口1
 mov S$窗口2

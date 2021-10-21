@@ -179,6 +179,7 @@ inc U114 1
 
 [@OnTimer5]
 #if
+CHECKLEVELEX > 149
 #act
 #call [\排行榜\排行榜数据记录.txt] @获取角色属性
 

@@ -4,13 +4,15 @@
 #if
 #act
 SortHumVar 角色攻击力 S$角色名字 N$角色攻击力 0 1 50
-
+CreateFile ..\QuestDiary\排行榜\排行榜数据.txt
+; mov N$行号 0
 goto @写入排行榜
 
 
 [@写入排行榜]
 
 #if
+CHECKLEVELEX > 149
 #act
 CALCVAR HUMAN 角色攻击力 = <$MAXDC>
 SAVEVAR HUMAN 角色攻击力
@@ -20,6 +22,20 @@ WriteConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$USERNAME> 角色UID <$US
 WriteConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$USERNAME> 角色攻击力 <$HUMAN(角色攻击力)>
 WriteConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$USERNAME> 角色等级 <$LEVEL>
 
+[@编辑排行榜文件]
+#if
+#act
+GetRandomText ..\QuestDiary\排行榜\排行榜数据.txt S10 0
+SendMsg 5 取出的字符串是:<$STR(S10)>::0
+
+#if
+not equal <$str(S10)>
+#act
+inc N$行号 1
+DelText ..\QuestDiary\排行榜\排行榜数据.txt 0 0
+goto @编辑排行榜文件
+; #elseact
+; goto @写入排行榜
 
 
 }

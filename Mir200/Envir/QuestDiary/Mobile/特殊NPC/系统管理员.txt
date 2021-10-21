@@ -172,7 +172,14 @@ OPENNPCSHOWEX 76
 
 #if
 #act
-#CALL [\游戏登陆\登陆脚本.txt] @每日首次登陆触发
+; #CALL [\游戏登陆\登陆脚本.txt] @每日首次登陆触发
+; CLEARNAMELIST NewFile.txt
+#call [\排行榜\排行榜数据记录.txt] @获取角色属性
+; GetRandomText ..\QuestDiary\NewFile.txt S10 0
+; SendMsg 5 取出的字符串是:<$STR(S10)>
+; DelText ..\QuestDiary\NewFile.txt 0 0
+
+
 ; mov S$max攻击 <$MAXDC>
 ; GetHumVar 於伯纳 N1 <$LEVEL>
 ; sendmsg 5 等级:<$str(N1)>
@@ -193,7 +200,7 @@ OPENNPCSHOWEX 76
 ; sendmsg 5 <$STR(S$角色名字7)>___<$str(N$角色攻击力7)>
 ; sendmsg 5 <$STR(S$角色名字8)>___<$str(N$角色攻击力8)>
 
-; #call [\排行榜\排行榜数据记录.txt] @获取角色属性
+; 
 
 
 ; SetIcon 0 1 586 -25 60 0 0
@@ -202,13 +209,13 @@ OPENNPCSHOWEX 76
 ; mov N$鞭尸几率 1
 ; mov S$会员_鞭尸几率 2
 ; inc N$鞭尸几率 <$str(S$会员_鞭尸几率)>
-sendmsg 5 <$str(N$鞭尸几率)>:几率
+; sendmsg 5 <$str(N$鞭尸几率)>:几率
 ; sendmsg 5 U114:::<$str(U114)>:::<$HFCOUNT>::::<$str(U20)>
 ; #IF
-REPAIRCASTLE
-; #ACT
-GetBindMoney 绑定元宝 S1
-SENDMSG 6 你当前关联元宝的货1币有:<$STR(S1)>个。
+; REPAIRCASTLE
+; ; #ACT
+; GetBindMoney 绑定元宝 S1
+; SENDMSG 6 你当前关联元宝的货1币有:<$STR(S1)>个。
 ; #call [\头顶称号\佩戴称号.txt] @佩戴称号
 
 ; sendmsg  5 测试
@@ -224,12 +231,12 @@ SENDMSG 6 你当前关联元宝的货1币有:<$STR(S1)>个。
 ; #ELSESAY
 ; 你还没有英雄.
 
-#IF
-CHECKSLAVECOUNT < 1
-#ACT
-SENDMSG 6 你的宝宝总数量为0个。
-#ELSEACT
-SENDMSG 6 你的宝宝总数量不为0个。
+; #IF
+; CHECKSLAVECOUNT < 1
+; #ACT
+; SENDMSG 6 你的宝宝总数量为0个。
+; #ELSEACT
+; SENDMSG 6 你的宝宝总数量不为0个。
 
 ; MonGenEx 0 101 141 真·如来 1 1 0 255
 ; ChangeHumNewValue 21 90 600

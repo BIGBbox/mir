@@ -181,7 +181,7 @@ delaycall 50 @世界地图面板
 #ACT
 #say
 
-<Img|img=public/sf1/1/00779.png|x=70|y=0|children={close_btn,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,合成描述,rightTips,}|bg=1|reset=1|move=1>
+<Img|img=public/sf1/1/00779.png|x=70|y=0|children={close_btn,btn1,btn3,btn4,btn5,btn6,btn7,btn8,btn11,btn12,btn13,btn14,btn15,btn2,btn10,btn9,合成描述,rightTips,}|bg=1|reset=1|move=1>
 <Button|x=1010|y=35|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 <Button|id=btn1|x=172|y=50|nimg=public/sf1/1/<$STR(S$西游异世界)>.png|pimg=public/sf1/1/<$STR(S$西游异世界1)>.png|link=@西游异世界>
 <Button|id=btn2|x=355|y=280|nimg=public/sf1/1/<$STR(S$三国异世界)>.png|pimg=public/sf1/1/<$STR(S$三国异世界1)>.png|link=@三国异世界>
