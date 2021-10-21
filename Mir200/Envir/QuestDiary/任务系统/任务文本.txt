@@ -650,7 +650,7 @@ NEWCOMPLETETASK 9
 NEWDELETETASK 9
 mov U108 11
 sendmsg 完成任务啦
-CHANGEEXP + 5000000
+CHANGEEXP + 10000000
 mapmove 新手村 127 85
 OPENNPCSHOWEX 69
 #CALL [\任务系统\任务文本.txt] @接取任务
@@ -669,7 +669,7 @@ mov U108 14
 mapmove 新手村 123 85
 OPENNPCSHOWEX 70
 sendmsg 完成任务啦
-CHANGEEXP + 10000000
+CHANGEEXP + 20000000
 #CALL [\任务系统\任务文本.txt] @接取任务
 break
 #elseact
@@ -686,7 +686,7 @@ mov U108 17
 mapmove 新手村 119 85
 OPENNPCSHOWEX 71
 sendmsg 完成任务啦
-CHANGEEXP + 20000000
+CHANGEEXP + 30000000
 #CALL [\任务系统\任务文本.txt] @接取任务
 goto @刷新等级任务5
 goto @刷新等级任务4
@@ -704,8 +704,8 @@ mov T108 <$STR(S$支线任务临时变量)>_60级任务
 NEWCOMPLETETASK 12
 NEWDELETETASK 12
 
-MailGIVE 修炼石 15 1#4#6#8
-MailGIVE 天外陨石 15 1#4#6#8
+MailGIVE 修炼石 30 1#4#6#8
+MailGIVE 天外陨石 30 1#4#6#8
 MailGIVE 绑定元宝 3000000
 SendMail 1 系统奖励 你已完成70级任务,奖励发放!!
 CHANGEEXP + 30000000
@@ -730,7 +730,8 @@ NEWCOMPLETETASK 13
 NEWDELETETASK 13
 CHANGEEXP + 20000000
 
-
+MailGIVE 修炼石 30 1#4#6#8
+MailGIVE 天外陨石 30 1#4#6#8
 MailGIVE 绑定元宝 5000000
 MailGIVE 初级称号证明 25 1#4#6#8
 

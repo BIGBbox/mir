@@ -54,7 +54,7 @@ GOTO @笢撰備瘍翋賜醱
 
 
 #SAY
-<Img|img=public/sf1/1/01087.png|x=430|y=120|children={close_btn,click_btn1,click_btn2,備瘍1,備瘍2,備瘍3,備瘍4,備瘍5,備瘍6,備瘍7,備瘍8,備瘍9,備瘍10,備瘍11,備瘍陓洘,汔撰沭璃}|bg=1|reset=1|move=1>
+<Img|img=public/sf1/1/01088.png|x=430|y=120|children={close_btn,click_btn1,click_btn2,備瘍1,備瘍2,備瘍3,備瘍4,備瘍5,備瘍6,備瘍7,備瘍8,備瘍9,備瘍10,備瘍11,備瘍陓洘,汔撰沭璃}|bg=1|reset=1|move=1>
 <Layout|x=597|y=3|width=80|height=80|link=@exit>
 <Button|x=960|y=130|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
 

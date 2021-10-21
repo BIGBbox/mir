@@ -7,6 +7,7 @@
 
 #Call [\Mobile\特殊NPC\TOP图标.txt] @导航
 #CALL [\游戏登陆\顶部属性.txt] @顶部属性显示
+;delaygoto 50 @更新顶部属性显示
 
 #IF
 #ACT
@@ -39,5 +40,9 @@ addbutton 105 99 <$STR(S$小面板str)>
 delbutton 105 99
 addbutton 105 98 <$STR(S$btn)>
 
+[@更新顶部属性显示]
+#if
+#act
+#CALL [\游戏登陆\顶部属性.txt] @顶部属性显示
 
 }

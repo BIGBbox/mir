@@ -1,5 +1,13 @@
 [@顶部属性显示]
 {
+; #if
+; #act
+; delaygoto 100 @顶部属性延迟显示
+
+; [@顶部属性延迟显示]
+; #if
+; #act
+; sendmsg 5 顶部属性延迟显示
 
 #IF
 Equal <$CLIENTFLAG> 1
@@ -34,6 +42,16 @@ Equal <$CLIENTFLAG> 2
 mov S$上部属性
 mov N$爆率 <$VALUE6>
 mul N$爆率 100
+
+#if
+not large <$str(N$爆率)> 100
+#act
+mov N$爆率 100
+
+#IF
+Equal <$CLIENTFLAG> 2
+#ACT
+sendmsg 5 <$DC>-<$MAXDC>
 inc S$上部属性 <Text|text=防御:|x=60|y=2|size=15|color=250>
 inc S$上部属性 <Text|text=<$AC>-<$MAXAC>|x=105|y=2|size=15|color=250>
 
