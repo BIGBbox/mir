@@ -42,6 +42,8 @@ mov S$窗口31
 mov S$窗口32
 mov S$窗口33
 mov S$窗口34
+mov S$窗口35
+mov S$窗口36
 mov S$窗口37
 mov S$窗口38
 mov S$窗口39
