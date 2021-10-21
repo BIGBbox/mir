@@ -1,6 +1,7 @@
 [1]
 名字=金色马
 EffectId=406
+标记=257
 Effectx=80
 Effecty=100
 namex=95
@@ -13,6 +14,7 @@ namey=48
 [2]
 名字=骐骥
 EffectId=428
+标记=258
 Effectx=250
 Effecty=120
 namex=265
@@ -24,6 +26,7 @@ namey=48
 [3]
 名字=幼麒麟
 EffectId=423
+标记=259
 Effectx=420
 Effecty=100
 namex=445
@@ -35,6 +38,7 @@ namey=48
 [4]
 名字=黄金虎
 EffectId=413
+标记=260
 Effectx=80
 Effecty=310
 namex=95
@@ -46,6 +50,7 @@ namey=252
 [5]
 名字=独角战马
 EffectId=412
+标记=261
 Effectx=250
 Effecty=320
 namex=265
@@ -57,6 +62,7 @@ namey=252
 [6]
 名字=赤兔
 EffectId=410
+标记=262
 Effectx=420
 Effecty=320
 namex=445

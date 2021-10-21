@@ -135,25 +135,25 @@ goto @main
 
 [@左手]
 #act
-mov S$装备部位A 5
+mov S$装备部位A 6
 mov S$装备部位 左手
 goto @main
 
 [@右手]
 #act
-mov S$装备部位A 6
+mov S$装备部位A 5
 mov S$装备部位 右手
 goto @main
 
 [@左戒]
 #act
-mov S$装备部位A 7
+mov S$装备部位A 8
 mov S$装备部位 左戒
 goto @main
 
 [@右戒]
 #act
-mov S$装备部位A 8
+mov S$装备部位A 7
 mov S$装备部位 右戒
 goto @main
 

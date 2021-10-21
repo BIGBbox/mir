@@ -9,7 +9,9 @@ mov N$序号 1
 mov S$马特效
 mov S$马名字
 mov S$马备注
-
+mov S$激活图片
+mov N$X激活特效坐标 70
+mov N$Y激活特效坐标 170
 ; mov S$参数 <$str(S$页数)>
 ; messagebox 功能暂时关闭
 goto @获取数据
@@ -21,7 +23,7 @@ goto @获取数据
 mov S$幻化马牌名
 #SAY
 
-<Img|img=public/sf1/1/01438.png|x=260|y=105|children={close_btn,形象1,形象2,形象3,形象4,形象5,形象6,click_btn1,click_btn2,click_btn3,click_btn4,click_btn5,click_btn6,
+<Img|img=public/sf1/1/01438.png|x=260|y=105|children={close_btn,形象1,形象2,形象3,形象4,形象5,形象6,激活特效1,激活特效2,激活特效3,激活特效4,激活特效5,激活特效6,click_btn1,click_btn2,click_btn3,click_btn4,click_btn5,click_btn6,
 btn1,btn2,btn3,btn4,btn5,合成描述,item1,item2,item3,item4,item5,item6,tips1,tips2,tips3,tips4,tips5,tips6,name1,name2,name3,name4,name5,name6}|bg=1|reset=1|move=1>
 <Button|x=770|y=105|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 
@@ -34,27 +36,12 @@ btn1,btn2,btn3,btn4,btn5,合成描述,item1,item2,item3,item4,item5,item6,tips1,tips
 <$str(S$马特效)>
 <$str(S$马名字)>
 <$str(S$马备注)>
+<$str(S$激活图片)>
 
 ; <Effect|id=形象1|x=80|y=100|effectid=400|effecttype=0|speed=0.5>
-; <Effect|id=形象2|x=250|y=100|effectid=401|effecttype=0|speed=0.5>
-; <Effect|id=形象3|x=420|y=100|effectid=402|effecttype=0|speed=0.5>
-; <Effect|id=形象4|x=80|y=300|effectid=403|effecttype=0|speed=0.5>
-; <Effect|id=形象5|x=250|y=280|effectid=404|effecttype=0|speed=0.5>
-; <Effect|id=形象6|x=420|y=280|effectid=405|effecttype=0|speed=0.5>
-
 
 ; <RText|id=name1|x=95|y=48|color=87|size=15|text=<枣红马/FCOLOR=103>>
-; <RText|id=name2|x=265|y=48|color=87|size=15|text=<乌黑马/FCOLOR=103>>
-; <RText|id=name3|x=445|y=48|color=87|size=15|text=<白马/FCOLOR=103>>
-; <RText|id=name4|x=95|y=252|color=87|size=15|text=<赤炎马/FCOLOR=103>>
-; <RText|id=name5|x=265|y=252|color=87|size=15|text=<高头大马/FCOLOR=103>>
-; <RText|id=name6|x=445|y=252|color=87|size=15|text=<迎亲马/FCOLOR=103>>
 
-; <Button|id=tips1|x=45|y=48|nimg=public/sf1/1/00284.png|tips={属性说明：/FCOLOR=253}^{攻魔道 +5/FCOLOR=254}|tipsx=10|tipsy=100|size=18|color=249|link=1>
-; <Button|id=tips2|x=221|y=48|nimg=public/sf1/1/00284.png|tips={属性说明：/FCOLOR=253}^{攻魔道 +10/FCOLOR=254}|tipsx=10|tipsy=100|size=18|color=249|link=1>
-; <Button|id=tips3|x=394|y=48|nimg=public/sf1/1/00284.png|tips={属性说明：/FCOLOR=253}^{攻魔道 +15/FCOLOR=254}|tipsx=10|tipsy=100|size=18|color=249|link=1>
-; <Button|id=tips4|x=45|y=250|nimg=public/sf1/1/00284.png|tips={属性说明：/FCOLOR=253}^{攻魔道 +20/FCOLOR=254}|tipsx=10|tipsy=100|size=18|color=249|link=1>
-; <Button|id=tips5|x=221|y=250|nimg=public/sf1/1/00284.png|tips={属性说明：/FCOLOR=253}^{攻魔道 +25/FCOLOR=254}|tipsx=10|tipsy=100|size=18|color=249|link=1>
 ; <Button|id=tips6|x=394|y=250|nimg=public/sf1/1/00284.png|tips={属性说明：/FCOLOR=253}^{准确 +5/FCOLOR=254}|tipsx=10|tipsy=100|size=18|color=249|link=1>
 
 ;----------------------------------------------------------------------------------------------------
@@ -64,6 +51,10 @@ btn1,btn2,btn3,btn4,btn5,合成描述,item1,item2,item3,item4,item5,item6,tips1,tips
 #act
 mov S$页数 <$str(S$参数)>
 mov N$序号 1
+mov N$X激活特效坐标 70
+mov N$Y激活特效坐标 170
+mov S$激活图片
+
 goto @获取数据
 
 [@获取数据]
@@ -79,6 +70,7 @@ ReadConfigFileItem ..\QuestDiary\异兽坊系统\第<$str(S$页数)>页.txt <$str(N$序号)
 ReadConfigFileItem ..\QuestDiary\异兽坊系统\第<$str(S$页数)>页.txt <$str(N$序号)> 备注x S$备注x
 ReadConfigFileItem ..\QuestDiary\异兽坊系统\第<$str(S$页数)>页.txt <$str(N$序号)> 备注y S$备注y
 ReadConfigFileItem ..\QuestDiary\异兽坊系统\第<$str(S$页数)>页.txt <$str(N$序号)> 属性说明 S$属性说明
+ReadConfigFileItem ..\QuestDiary\异兽坊系统\第<$str(S$页数)>页.txt <$str(N$序号)> 标记 N$标记
 
 ; sendmsg 5 <$str(S$名字)>
 ; sendmsg 5 <$str(S$EffectId)>
@@ -89,6 +81,21 @@ ReadConfigFileItem ..\QuestDiary\异兽坊系统\第<$str(S$页数)>页.txt <$str(N$序号)
 inc S$马特效 <Effect|id=形象<$str(N$序号)>|x=<$str(S$Effectx)>|y=<$str(S$Effecty)>|effectid=<$str(S$EffectId)>|effecttype=0|speed=0.5>
 inc S$马名字 <RText|id=name<$str(N$序号)>|x=<$str(S$namex)>|y=<$str(S$namey)>|color=87|size=15|text=<<$str(S$名字)>/FCOLOR=103>>
 inc S$马备注 <Button|id=tips<$str(N$序号)>|x=<$str(S$备注x)>|y=<$str(S$备注y)>|nimg=public/sf1/1/00284.png|tips=<$str(S$属性说明)>|tipsx=10|tipsy=100|size=18|color=249|link=1>
+
+#if
+check [<$str(N$标记)>] 1
+#act
+; sendmsg 5 激活特效<$str(N$序号)>
+inc S$激活图片 <Img|id=激活特效<$str(N$序号)>|x=<$str(N$X激活特效坐标)>|y=<$str(N$Y激活特效坐标)>|img=public/icon/common1017.png>
+
+#if
+equal <$str(N$序号)> 3
+#act
+mov N$X激活特效坐标 70
+mov N$Y激活特效坐标 370
+#elseact
+inc N$X激活特效坐标 165
+
 
 #if
 small <$str(N$序号)> 6

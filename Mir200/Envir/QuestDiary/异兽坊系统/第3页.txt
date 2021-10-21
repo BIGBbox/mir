@@ -1,6 +1,8 @@
 [1]
 名字=烈焰独角
 EffectId=411
+EffectId=410
+标记=263
 Effectx=80
 Effecty=110
 namex=95
@@ -13,6 +15,7 @@ namey=48
 [2]
 名字=天子之骏
 EffectId=407
+标记=264
 Effectx=180
 Effecty=20
 namex=265
@@ -24,6 +27,7 @@ namey=48
 [3]
 名字=百兽之王
 EffectId=417
+标记=265
 Effectx=420
 Effecty=100
 namex=445
@@ -35,6 +39,7 @@ namey=48
 [4]
 名字=飒露紫
 EffectId=414
+标记=266
 Effectx=80
 Effecty=310
 namex=95
@@ -46,6 +51,7 @@ namey=252
 [5]
 名字=乌骓
 EffectId=430
+标记=267
 Effectx=250
 Effecty=310
 namex=265
@@ -57,6 +63,7 @@ namey=252
 [6]
 名字=白熊
 EffectId=416
+标记=268
 Effectx=420
 Effecty=310
 namex=445

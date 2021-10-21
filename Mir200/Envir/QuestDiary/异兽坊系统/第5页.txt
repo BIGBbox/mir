@@ -1,6 +1,7 @@
 [1]
 名字=天驷
 EffectId=428
+标记=275
 Effectx=80
 Effecty=100
 namex=95
@@ -13,6 +14,7 @@ namey=48
 [2]
 名字=森林狼
 EffectId=421
+标记=276
 Effectx=250
 Effecty=30
 namex=265
@@ -24,6 +26,7 @@ namey=48
 [3]
 名字=雪狼
 EffectId=422
+标记=277
 Effectx=420
 Effecty=30
 namex=445
@@ -35,6 +38,7 @@ namey=48
 [4]
 名字=照夜玉狼
 EffectId=420
+标记=278
 Effectx=50
 Effecty=260
 namex=95
@@ -46,6 +50,7 @@ namey=252
 [5]
 名字=八骏
 EffectId=432
+标记=279
 Effectx=250
 Effecty=300
 namex=265
@@ -57,6 +62,7 @@ namey=252
 [6]
 名字=青骓
 EffectId=424
+标记=280
 Effectx=410
 Effecty=300
 namex=445

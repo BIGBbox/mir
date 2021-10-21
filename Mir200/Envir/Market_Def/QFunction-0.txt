@@ -7971,12 +7971,15 @@ sendmsg 7 使用远程回收体验卡成功!
 [@takeon16]
 #act
 
+GetUserItemName 16 12
+ReadConfigFileItem ..\QuestDiary\上古异兽数据\上古异兽升级数据.txt <$STR(S12)> 最大经验值 S$最大经验值数值
+
 CHANGECUSTOMITEMPROGRESSBAR 16 0 0 1
 CHANGECUSTOMITEMPROGRESSBAR 16 0 1 经验值:
 CHANGECUSTOMITEMPROGRESSBAR 16 0 2 70
 CHANGECUSTOMITEMPROGRESSBAR 16 0 3 1
 CHANGECUSTOMITEMPROGRESSBAR 16 0 4 2
-CHANGECUSTOMITEMPROGRESSBARVALUE 16 0 1 = 100
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 0 1 = <$str(S$最大经验值数值)>
 
 
 [@takeoff16]
@@ -8065,7 +8068,7 @@ goto @属性刷新
 
 [@takeoff5]
 #act
-BAGITEMINTOBOX <$str(S$左手名字)> 0
+BAGITEMINTOBOX <$str(S$右手名字)> 0
 SetUpgradeItem 0
 CHANGEITEMUPGRADECOUNT -1 = 0
 CHANGEITEMADDVALUE -1 2 = 0
@@ -8081,7 +8084,7 @@ goto @属性刷新
 
 [@takeoff6]
 #act
-BAGITEMINTOBOX <$str(S$右手名字)> 0
+BAGITEMINTOBOX <$str(S$左手名字)> 0
 SetUpgradeItem 0
 CHANGEITEMUPGRADECOUNT -1 = 0
 CHANGEITEMADDVALUE -1 2 = 0
@@ -8097,7 +8100,7 @@ goto @属性刷新
 
 [@takeoff7]
 #act
-BAGITEMINTOBOX <$str(S$左戒名字)> 0
+BAGITEMINTOBOX <$str(S$右戒名字)> 0
 SetUpgradeItem 0
 CHANGEITEMUPGRADECOUNT -1 = 0
 CHANGEITEMADDVALUE -1 2 = 0
@@ -8113,7 +8116,7 @@ goto @属性刷新
 
 [@takeoff8]
 #act
-BAGITEMINTOBOX <$str(S$右戒名字)> 0
+BAGITEMINTOBOX <$str(S$左戒名字)> 0
 SetUpgradeItem 0
 CHANGEITEMUPGRADECOUNT -1 = 0
 CHANGEITEMADDVALUE -1 2 = 0
@@ -9122,14 +9125,14 @@ goto @判断掉落规则
 [@判断掉落规则]
 #if
 #act
-; sendmsg 5 道具名字:<$CURRTEMNAME>::<$str(S$道具名字)>
+; sendmsg 5 道具名字:<$str(S$道具名字)>.道具标记:<$str(S$获取标记)>
 ReadConfigFileItem ..\QuestDiary\装备爆出\掉落规则.txt <$STR(N$转生等级)> <$str(S$道具名字)> S$获取标记
 ; sendmsg 5 道具标记:<$str(S$获取标记)>
 
 #if
 equal <$str(S$获取标记)> 1
 #act
-sendmsg 5 判断掉落
+; sendmsg 5 判断掉落
 ALLOWDROP 1
 break
 
@@ -9137,7 +9140,7 @@ break
 not equal <$str(S$获取标记)> 1
 #act
 ALLOWDROP 0
-sendmsg 5 判断不掉落
+; sendmsg 5 判断不掉落
 
 
 [@获取当前转生等级]
