@@ -7956,14 +7956,14 @@ sendmsg 7 使用远程回收体验卡成功!
 ; 装备任意穿戴触发
 [@TakeOnEx]
 #ACT
-SENDMSG 6 人物穿装备，位置[<$CURRTAKETEMPOS>]，物品<$CURRTEMNAME>，ID<$CURRTEMMAKEINDEX> 
+; SENDMSG 6 人物穿装备，位置[<$CURRTAKETEMPOS>]，物品<$CURRTEMNAME>，ID<$CURRTEMMAKEINDEX> 
 ; #CALL [\游戏登陆\顶部属性.txt] @顶部属性显示
 delaygoto 1000 @刷新顶部属性栏
 
 ; ; 装备任意脱触发
 [@TakeOffEx]
 #ACT
-SENDMSG 6 人物脱装备，位置[<$CURRTAKETEMPOS>]，物品<$CURRTEMNAME>，ID<$CURRTEMMAKEINDEX> 
+; SENDMSG 6 人物脱装备，位置[<$CURRTAKETEMPOS>]，物品<$CURRTEMNAME>，ID<$CURRTEMMAKEINDEX> 
 ; #CALL [\游戏登陆\顶部属性.txt] @顶部属性显示
 delaygoto 1000 @刷新顶部属性栏
 
@@ -8873,7 +8873,7 @@ break
 #IF
 CheckTextList ..\QuestDiary\新会员系统\怪物击杀统计\西游异世界.txt <$MAPTITLE>
 #ACT
-INC U125 10
+INC U125 1
 
 #if
 CheckTextList ..\QuestDiary\新会员系统\怪物击杀统计\西游异世界.txt <$MAPTITLE>

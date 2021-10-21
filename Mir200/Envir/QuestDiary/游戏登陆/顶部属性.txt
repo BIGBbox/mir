@@ -51,7 +51,7 @@ mov N$爆率 100
 #IF
 Equal <$CLIENTFLAG> 2
 #ACT
-sendmsg 5 <$DC>-<$MAXDC>
+
 inc S$上部属性 <Text|text=防御:|x=60|y=2|size=15|color=250>
 inc S$上部属性 <Text|text=<$AC>-<$MAXAC>|x=105|y=2|size=15|color=250>
 
