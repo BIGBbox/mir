@@ -22,52 +22,52 @@ mov N$攻击基数 <$str(U2)>
 mov N$攻击基数1 <$str(U2)>
 inc N$攻击基数1 1
 mul N$攻击数值 N$攻击基数 10
-mul N$攻击材料数量1 N$攻击基数1 5
-mul N$攻击材料数量2 N$攻击基数1 5
-mul N$攻击元宝数量 N$攻击基数1 50000
+mul N$攻击材料数量1 N$攻击基数1 10
+mul N$攻击材料数量2 N$攻击基数1 10
+mul N$攻击元宝数量 N$攻击基数1 100000
 MOV S$晋升修炼1 @晋升11
 
 mov N$道术基数 <$str(U4)>
 mov N$道术基数1 <$str(U4)>
 inc N$道术基数1 1
 mul N$道术数值 N$道术基数 10
-mul N$道术材料数量1 N$道术基数1 5
-mul N$道术材料数量2 N$道术基数1 5
-mul N$道术元宝数量 N$道术基数1 50000
+mul N$道术材料数量1 N$道术基数1 10
+mul N$道术材料数量2 N$道术基数1 10
+mul N$道术元宝数量 N$道术基数1 100000
 MOV S$晋升修炼3 @晋升31
 
 mov N$HPMP基数 <$str(U1)>
 mov N$HPMP基数1 <$str(U1)>
 inc N$HPMP基数1 1
 mul N$HPMP数值 N$HPMP基数 100
-mul N$HPMP材料数量1 N$HPMP基数1 5
-mul N$HPMP材料数量2 N$HPMP基数1 5
-mul N$HPMP元宝数量 N$HPMP基数1 50000
+mul N$HPMP材料数量1 N$HPMP基数1 10
+mul N$HPMP材料数量2 N$HPMP基数1 10
+mul N$HPMP元宝数量 N$HPMP基数1 100000
 MOV S$晋升修炼 @晋升1
 
 mov N$道切基数 <$str(U7)>
 mov N$道切基数1 <$str(U7)>
 inc N$道切基数1 1
-mul N$道切材料数量1 N$道切基数1 5
-mul N$道切材料数量2 N$道切基数1 5
-mul N$道切元宝数量 N$道切基数1 50000
+mul N$道切材料数量1 N$道切基数1 10
+mul N$道切材料数量2 N$道切基数1 10
+mul N$道切元宝数量 N$道切基数1 100000
 MOV S$晋升修炼6 @晋升61
 
 mov N$魔法基数 <$str(U3)>
 mov N$魔法基数1 <$str(U3)>
 inc N$魔法基数1 1
 mul N$魔法数值 N$魔法基数 10
-mul N$魔法材料数量1 N$魔法基数1 5
-mul N$魔法材料数量2 N$魔法基数1 5
-mul N$魔法元宝数量 N$魔法基数1 50000
+mul N$魔法材料数量1 N$魔法基数1 10
+mul N$魔法材料数量2 N$魔法基数1 10
+mul N$魔法元宝数量 N$魔法基数1 100000
 MOV S$晋升修炼2 @晋升21
 
 mov N$法切基数 <$str(U6)>
 mov N$法切基数1 <$str(U6)>
 inc N$法切基数1 1
-mul N$法切材料数量1 N$法切基数1 5
-mul N$法切材料数量2 N$法切基数1 5
-mul N$法切元宝数量 N$法切基数1 50000
+mul N$法切材料数量1 N$法切基数1 10
+mul N$法切材料数量2 N$法切基数1 10
+mul N$法切元宝数量 N$法切基数1 100000
 MOV S$晋升修炼5 @晋升51
 
 
