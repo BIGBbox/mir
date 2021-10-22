@@ -172,6 +172,7 @@ OPENNPCSHOWEX 76
 
 #if
 #act
+
 ; CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
 ; #CALL [\游戏登陆\登陆脚本.txt] @每日首次登陆触发
 ; CLEARNAMELIST NewFile.txt
