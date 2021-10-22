@@ -5,9 +5,9 @@
 not equal G0 <$HFCOUNT> 
 #act
 inc G0 1
-CLEARNAMELIST ..\QuestDiary\¾èÏ×ÏµÍ³\¾èÏ×Ãûµ¥.txt
-CLEARNAMELIST ..\QuestDiary\¾èÏ×ÏµÍ³\¾èÏ×ÅÅÃû.txt
-; SortHumVar É³³Ç¾èÏ× S$Íæ¼ÒÃû×Ö N$¾èÏ×Êý¶î 0 1 3
+; CLEARNAMELIST ..\QuestDiary\¾èÏ×ÏµÍ³\¾èÏ×Ãûµ¥.txt
+; CLEARNAMELIST ..\QuestDiary\¾èÏ×ÏµÍ³\¾èÏ×ÅÅÃû.txt
+SortHumVar É³³Ç¾èÏ× S$Íæ¼ÒÃû×Ö N$¾èÏ×Êý¶î 0 1 3
 
 [@Login]
 
@@ -146,6 +146,9 @@ VAR Integer HUMAN ½ÇÉ«¹¥»÷Á¦
 EXTBAGOPENITEMCOUNT 126
 #call [\Í·¶¥³ÆºÅ\Åå´÷³ÆºÅ.txt] @Åå´÷³ÆºÅ
 
+#if
+CHECKLEVELEX > 149
+#act
 CALCVAR HUMAN ½ÇÉ«¹¥»÷Á¦ = <$MAXDC>
 SAVEVAR HUMAN ½ÇÉ«¹¥»÷Á¦
 

@@ -2,7 +2,7 @@
 [@main]
 #IF
 #ACT
-sendmsg 5 $STM(ITEMCOUNT_元宝)11111$STM(ITEMCOUNT_元宝)
+
 #SAY
 
 <Img|img=public/sf1/1/01095.png|x=200|y=80|children={close_btn,click_btn,行会名,行会管理员,创建行会,增加行会人数,攻城描述,rightTips,大门,复活,仓库,服饰店,元宝}|bg=1|reset=1|move=1>
@@ -126,15 +126,15 @@ BREAK
 
 #IF
 ISGUILDMASTER
-CHECKMONEY 天下币 > 999
+CHECKMONEY 天下币 > 9999
 #ACT
 ; GAMEDIAMOND - 1000
-money 天下币 - 1000
+money 天下币 - 10000
 SETGUILDINFO + 10
 MessageBox 行会人数上限增加10！
 BREAK
 #elseact
-MessageBox 增加行会人数上限需要1000天下币！
+MessageBox 增加行会人数上限需要10000天下币！
 BREAK
 
 
