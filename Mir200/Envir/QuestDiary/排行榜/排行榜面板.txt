@@ -59,7 +59,7 @@ mov S$窗口49
 mov S$窗口50
 mov S$我的行会 <$GUILDNAME>
 mov S$我的排名 未上榜
-SortHumVar 角色攻击力 S$角色名字 N$角色攻击力 0 1 50
+; SortHumVar 角色攻击力 S$角色名字 N$角色攻击力 0 1 50
 
 goto @绘制排行榜窗口
 ; goto @排行榜面板显示
