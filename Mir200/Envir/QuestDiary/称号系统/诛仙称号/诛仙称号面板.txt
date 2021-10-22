@@ -106,6 +106,7 @@ TAKE  神器碎片 <$STR(S$神器碎片数量)>
 CONFERTITLE <$STR(S$给予称号)>
 money 绑定元宝 - <$STR(S$所需元宝)>
 #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+#CALL [\属性重载\游戏爆率.txt] @暴率
 MOVR <$STR(N$纵轴坐标)> 100 500
 
 SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【<$STR(S$给予称号)>】称号/FCOLOR=58>

@@ -172,7 +172,17 @@ OPENNPCSHOWEX 76
 
 #if
 #act
-
+; mov S$称号 暗黑称号
+; mov S$this称号 暗黑之力①
+#CALL [\属性重载\游戏爆率.txt] @暴率
+; ReadConfigFileItem ..\QuestDiary\称号系统\<$str(S$称号)>\<$str(S$称号)>数据.txt <$str(S$this称号)> 爆率加成 N$爆率加成
+; sendmsg 5 <$str(N$爆率加成)>:::::::
+; #IF
+; CHECKTITLE 驭风·罕有敌手
+; #act
+; sendmsg 5 有驭风·罕有敌手
+; #elseact
+; sendmsg 5 没有
 ; CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
 ; #CALL [\游戏登陆\登陆脚本.txt] @每日首次登陆触发
 ; CLEARNAMELIST NewFile.txt

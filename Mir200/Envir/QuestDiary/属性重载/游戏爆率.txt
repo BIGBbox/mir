@@ -10,8 +10,11 @@ MOV N$午夜屠狗 0
 #If
 #ACT
 INC N$暴率加成 <$str(u0)>
+mov N$称号行数 0
+mov S$我的称号 <$str(T1)>
+goto @获取称号文件夹名
+; goto @称号爆率加成
 ;军火库数量U0
-
 ; 每日充值礼包增加的爆率
 #if
 not small U113 1
@@ -147,10 +150,6 @@ INC N$暴率加成 <$str(N$午夜屠狗)>
 UpDateBoxItem 0
 ReturnBoxItem 0
 
-
-
-
-
 #IF
 CHECKITEMW 至高の荣耀
 #ACT
@@ -263,76 +262,6 @@ CHECKITEMW 陆雪琪的清冷
 INC N$暴率加成 30
 
 
-
-
-#IF
-CHECKTITLE 踏碎天地·众生朝
-#ACT
-ChangeModeEx 14 65535
-SENDMSG 6 65535秒内可以防麻痹
-
-#IF
-CHECKTITLE 血染诸天·涅阴阳
-#ACT
-ChangeModeEx 14 65535
-SENDMSG 6 65535秒内可以防麻痹
-
-#IF
-CHECKTITLE 一念天道·化三千
-#ACT
-ChangeModeEx 14 65535
-SENDMSG 6 65535秒内可以防麻痹
-
-#IF
-CHECKTITLE 混化阴阳·断生念
-#ACT
-ChangeModeEx 14 65535
-SENDMSG 6 65535秒内可以防麻痹
-
-#IF
-CHECKTITLE 一笑沧海·化桑田
-#ACT
-ChangeModeEx 14 65535
-SENDMSG 6 65535秒内可以防麻痹
-
-#IF
-CHECKTITLE 万剑归宗·阴阳间
-#ACT
-ChangeModeEx 14 65535
-SENDMSG 6 65535秒内可以防麻痹
-
-#IF
-CHECKTITLE 修罗战火·焚尽天
-#ACT
-ChangeModeEx 14 65535
-SENDMSG 6 65535秒内可以防麻痹
-
-#IF
-CHECKTITLE 人非圣贤·斩情绝
-#ACT
-ChangeModeEx 14 65535
-SENDMSG 6 65535秒内可以防麻痹
-
-#IF
-CHECKTITLE 浮华无忌·百化仙
-#ACT
-ChangeModeEx 14 65535
-SENDMSG 6 65535秒内可以防麻痹
-
-#IF
-CHECKTITLE 唯我独尊·屠苍生
-#ACT
-ChangeModeEx 14 65535
-SENDMSG 6 65535秒内可以防麻痹
-
-#IF
-CHECKTITLE 世界之巅·诸神灭
-#ACT
-ChangeModeEx 14 65535
-SENDMSG 6 65535秒内可以防麻痹
-
-
-
 #IF
 CHECK [300] 1
 #ACT
@@ -429,162 +358,6 @@ INC N$暴率加成 44
 equal U5 10
 #ACT
 INC N$暴率加成 54
-
-#IF
-CHECKTITLE 开拓·初出江湖
-#ACT
-INC N$暴率加成 10
-
-#IF
-CHECKTITLE 先锋·江湖少侠
-#ACT
-INC N$暴率加成 20
-
-#IF
-CHECKTITLE 无畏·武林俊杰
-#ACT
-INC N$暴率加成 30
-
-#IF
-CHECKTITLE 驭风·罕有敌手
-#ACT
-INC N$暴率加成 40
-
-#IF
-CHECKTITLE 破焰·绝世高手
-#ACT
-INC N$暴率加成 50
-
-#IF
-CHECKTITLE 毁灭·傲视群雄
-#ACT
-INC N$暴率加成 60
-
-#IF
-CHECKTITLE 审判·独孤求败
-#ACT
-INC N$暴率加成 70
-
-#IF
-CHECKTITLE 屠龙·凶神恶煞
-#ACT
-INC N$暴率加成 80
-
-#IF
-CHECKTITLE 修罗·屠戮成性
-#ACT
-INC N$暴率加成 90
-
-#IF
-CHECKTITLE 神谕·武林魔头
-#ACT
-INC N$暴率加成 100
-
-#IF
-CHECKTITLE 乾坤·风华绝月
-#ACT
-INC N$暴率加成 110
-
-#IF
-CHECKTITLE 破天·烽火无极
-#ACT
-INC N$暴率加成 120
-
-#IF
-CHECKTITLE 天下·问鼎争锋
-#ACT
-INC N$暴率加成 130
-
-#IF
-CHECKTITLE 证道·鬼面罗刹
-#ACT
-INC N$暴率加成 140
-
-#IF
-CHECKTITLE 玄冥·逆道违天
-#ACT
-INC N$暴率加成 150
-
-#IF
-CHECKTITLE 狂舞·百步屠魔
-#ACT
-INC N$暴率加成 160
-
-#IF
-CHECKTITLE 浮沉·青天苍茫
-#ACT
-INC N$暴率加成 170
-
-#IF
-CHECKTITLE 无敌·死躯灭魂
-#ACT
-INC N$暴率加成 180
-
-#IF
-CHECKTITLE 轮回·天地难葬
-#ACT
-INC N$暴率加成 190
-
-#IF
-CHECKTITLE 归一·终极审判
-#ACT
-INC N$暴率加成 200
-
-#IF
-CHECKTITLE 踏碎天地·众生朝
-#ACT
-INC N$暴率加成 220
-
-#IF
-CHECKTITLE 血染诸天·涅阴阳
-#ACT
-INC N$暴率加成 240
-
-#IF
-CHECKTITLE 一念天道·化三千
-#ACT
-INC N$暴率加成 260
-
-#IF
-CHECKTITLE 混化阴阳·断生念
-#ACT
-INC N$暴率加成 280
-
-#IF
-CHECKTITLE 一笑沧海·化桑田
-#ACT
-INC N$暴率加成 300
-
-#IF
-CHECKTITLE 万剑归宗·阴阳间
-#ACT
-INC N$暴率加成 320
-
-#IF
-CHECKTITLE 修罗战火·焚尽天
-#ACT
-INC N$暴率加成 340
-
-#IF
-CHECKTITLE 人非圣贤·斩情绝
-#ACT
-INC N$暴率加成 360
-
-#IF
-CHECKTITLE 浮华无忌·百化仙
-#ACT
-INC N$暴率加成 380
-
-#IF
-CHECKTITLE 唯我独尊·屠苍生
-#ACT
-INC N$暴率加成 400
-
-#IF
-CHECKTITLE 世界之巅·诸神灭
-#ACT
-INC N$暴率加成 450
-
 
 
 #IF
@@ -853,459 +626,6 @@ INC N$暴率加成 10
 CHECKITEMW 乔[Jah]
 #ACT
 INC N$暴率加成 10
-
-
-
-#IF
-CHECKTITLE 西游之力①
-#act
-INC N$暴率加成 1
-
-#IF
-CHECKTITLE 西游之力②
-#act
-INC N$暴率加成 2
-
-#IF
-CHECKTITLE 西游之力③
-#act
-INC N$暴率加成 3
-
-#IF
-CHECKTITLE 西游之力④
-#act
-INC N$暴率加成 4
-
-#IF
-CHECKTITLE 西游之力⑤
-#act
-INC N$暴率加成 5
-
-#IF
-CHECKTITLE 西游之力⑥
-#act
-INC N$暴率加成 6
-
-#IF
-CHECKTITLE 西游之力⑦
-#act
-INC N$暴率加成 7
-
-#IF
-CHECKTITLE 西游之力⑧
-#act
-INC N$暴率加成 8
-
-#IF
-CHECKTITLE 西游之力⑨
-#act
-INC N$暴率加成 9
-
-#IF
-CHECKTITLE 西游之力⑩
-#act
-INC N$暴率加成 20
-
-#IF
-CHECKTITLE 三国之力①
-#act
-INC N$暴率加成 21
-
-#IF
-CHECKTITLE 三国之力②
-#act
-INC N$暴率加成 22
-
-#IF
-CHECKTITLE 三国之力③
-#act
-INC N$暴率加成 23
-
-#IF
-CHECKTITLE 三国之力④
-#act
-INC N$暴率加成 24
-
-#IF
-CHECKTITLE 三国之力⑤
-#act
-INC N$暴率加成 25
-
-#IF
-CHECKTITLE 三国之力⑥
-#act
-INC N$暴率加成 26
-
-#IF
-CHECKTITLE 三国之力⑦
-#act
-INC N$暴率加成 27
-
-#IF
-CHECKTITLE 三国之力⑧
-#act
-INC N$暴率加成 28
-
-#IF
-CHECKTITLE 三国之力⑨
-#act
-INC N$暴率加成 29
-
-#IF
-CHECKTITLE 三国之力⑩
-#act
-INC N$暴率加成 40
-
-#IF
-CHECKTITLE 帝王之力①
-#act
-INC N$暴率加成 41
-
-#IF
-CHECKTITLE 帝王之力②
-#act
-INC N$暴率加成 42
-
-#IF
-CHECKTITLE 帝王之力③
-#act
-INC N$暴率加成 43
-
-#IF
-CHECKTITLE 帝王之力④
-#act
-INC N$暴率加成 44
-
-#IF
-CHECKTITLE 帝王之力⑤
-#act
-INC N$暴率加成 45
-
-#IF
-CHECKTITLE 帝王之力⑥
-#act
-INC N$暴率加成 46
-
-#IF
-CHECKTITLE 帝王之力⑦
-#act
-INC N$暴率加成 47
-
-#IF
-CHECKTITLE 帝王之力⑧
-#act
-INC N$暴率加成 48
-
-#IF
-CHECKTITLE 帝王之力⑨
-#act
-INC N$暴率加成 49
-
-#IF
-CHECKTITLE 帝王之力⑩
-#act
-INC N$暴率加成 60
-
-#IF
-CHECKTITLE 金庸之力①
-#act
-INC N$暴率加成 61
-
-#IF
-CHECKTITLE 金庸之力②
-#act
-INC N$暴率加成 62
-
-#IF
-CHECKTITLE 金庸之力③
-#act
-INC N$暴率加成 63
-
-#IF
-CHECKTITLE 金庸之力④
-#act
-INC N$暴率加成 64
-
-#IF
-CHECKTITLE 金庸之力⑤
-#act
-INC N$暴率加成 65
-
-#IF
-CHECKTITLE 金庸之力⑥
-#act
-INC N$暴率加成 66
-
-#IF
-CHECKTITLE 金庸之力⑦
-#act
-INC N$暴率加成 67
-
-#IF
-CHECKTITLE 金庸之力⑧
-#act
-INC N$暴率加成 68
-
-#IF
-CHECKTITLE 金庸之力⑨
-#act
-INC N$暴率加成 69
-
-#IF
-CHECKTITLE 金庸之力⑩
-#act
-INC N$暴率加成 80
-
-#IF
-CHECKTITLE 圣斗士之力①
-#act
-INC N$暴率加成 81
-
-#IF
-CHECKTITLE 圣斗士之力②
-#act
-INC N$暴率加成 82
-
-#IF
-CHECKTITLE 圣斗士之力③
-#act
-INC N$暴率加成 83
-
-#IF
-CHECKTITLE 圣斗士之力④
-#act
-INC N$暴率加成 84
-
-#IF
-CHECKTITLE 圣斗士之力⑤
-#act
-INC N$暴率加成 85
-
-#IF
-CHECKTITLE 圣斗士之力⑥
-#act
-INC N$暴率加成 86
-
-#IF
-CHECKTITLE 圣斗士之力⑦
-#act
-INC N$暴率加成 87
-
-#IF
-CHECKTITLE 圣斗士之力⑧
-#act
-INC N$暴率加成 88
-
-#IF
-CHECKTITLE 圣斗士之力⑨
-#act
-INC N$暴率加成 89
-
-#IF
-CHECKTITLE 圣斗士之力⑩
-#act
-INC N$暴率加成 100
-
-#IF
-CHECKTITLE 水浒之力①
-#act
-INC N$暴率加成 101
-
-#IF
-CHECKTITLE 水浒之力②
-#act
-INC N$暴率加成 102
-
-#IF
-CHECKTITLE 水浒之力③
-#act
-INC N$暴率加成 103
-
-#IF
-CHECKTITLE 水浒之力④
-#act
-INC N$暴率加成 104
-
-#IF
-CHECKTITLE 水浒之力⑤
-#act
-INC N$暴率加成 105
-
-#IF
-CHECKTITLE 水浒之力⑥
-#act
-INC N$暴率加成 106
-
-#IF
-CHECKTITLE 水浒之力⑦
-#act
-INC N$暴率加成 107
-
-#IF
-CHECKTITLE 水浒之力⑧
-#act
-INC N$暴率加成 108
-
-#IF
-CHECKTITLE 水浒之力⑨
-#act
-INC N$暴率加成 109
-
-#IF
-CHECKTITLE 水浒之力⑩
-#act
-INC N$暴率加成 120
-
-#IF
-CHECKTITLE 诛仙之力①
-#act
-INC N$暴率加成 121
-
-#IF
-CHECKTITLE 诛仙之力②
-#act
-INC N$暴率加成 122
-
-#IF
-CHECKTITLE 诛仙之力③
-#act
-INC N$暴率加成 123
-
-#IF
-CHECKTITLE 诛仙之力④
-#act
-INC N$暴率加成 124
-
-#IF
-CHECKTITLE 诛仙之力⑤
-#act
-INC N$暴率加成 125
-
-#IF
-CHECKTITLE 诛仙之力⑥
-#act
-INC N$暴率加成 126
-
-#IF
-CHECKTITLE 诛仙之力⑦
-#act
-INC N$暴率加成 127
-
-#IF
-CHECKTITLE 诛仙之力⑧
-#act
-INC N$暴率加成 128
-
-#IF
-CHECKTITLE 诛仙之力⑨
-#act
-INC N$暴率加成 129
-
-#IF
-CHECKTITLE 诛仙之力⑩
-#act
-INC N$暴率加成 140
-
-#IF
-CHECKTITLE 暗黑之力①
-#act
-INC N$暴率加成 142
-
-#IF
-CHECKTITLE 暗黑之力②
-#act
-INC N$暴率加成 144
-
-#IF
-CHECKTITLE 暗黑之力③
-#act
-INC N$暴率加成 146
-
-#IF
-CHECKTITLE 暗黑之力④
-#act
-INC N$暴率加成 148
-
-#IF
-CHECKTITLE 暗黑之力⑤
-#act
-INC N$暴率加成 150
-
-#IF
-CHECKTITLE 暗黑之力⑥
-#act
-INC N$暴率加成 152
-
-#IF
-CHECKTITLE 暗黑之力⑦
-#act
-INC N$暴率加成 154
-
-#IF
-CHECKTITLE 暗黑之力⑧
-#act
-INC N$暴率加成 156
-
-#IF
-CHECKTITLE 暗黑之力⑨
-#act
-INC N$暴率加成 158
-
-#IF
-CHECKTITLE 暗黑之力⑩
-#act
-INC N$暴率加成 180
-
-#IF
-CHECKTITLE 神域之力①
-#act
-INC N$暴率加成 182
-
-#IF
-CHECKTITLE 神域之力②
-#act
-INC N$暴率加成 184
-
-#IF
-CHECKTITLE 神域之力③
-#act
-INC N$暴率加成 186
-
-#IF
-CHECKTITLE 神域之力④
-#act
-INC N$暴率加成 188
-
-#IF
-CHECKTITLE 神域之力⑤
-#act
-INC N$暴率加成 190
-
-#IF
-CHECKTITLE 神域之力⑥
-#act
-INC N$暴率加成 192
-
-#IF
-CHECKTITLE 神域之力⑦
-#act
-INC N$暴率加成 194
-
-#IF
-CHECKTITLE 神域之力⑧
-#act
-INC N$暴率加成 196
-
-#IF
-CHECKTITLE 神域之力⑨
-#act
-INC N$暴率加成 198
-
-#IF
-CHECKTITLE 神域之力⑩
-#act
-INC N$暴率加成 200
-
 
 
 ;---------------------------头盔------------------------------------
@@ -1788,12 +1108,50 @@ inc N$暴率显示 <$str(S$会员_爆率)>
 #if
 #act
 KILLMONBURSTRATE <$STR(N$暴率显示)> 60000
-;SENDMSG 7 杀怪爆率<$STR(N$暴率显示)>%，时长：60000秒!
+SENDMSG 7 杀怪爆率<$STR(N$暴率显示)>%，时长：60000秒!
 
 #if
 #act
 ; #CALL [\游戏登陆\右下显示.txt] @属性显示
 #CALL [\游戏登陆\顶部属性.txt] @顶部属性显示
+
+
+[@称号爆率加成]
+
+#if
+#act
+GetValidstr <$STR(S$我的称号)> & S$this称号 S$我的称号
+
+ReadConfigFileItem ..\QuestDiary\称号系统\<$str(S$称号)>\<$str(S$称号)>数据.txt <$str(S$this称号)> 爆率加成 N$爆率加成
+#if
+CHECKTITLE <$str(S$this称号)>
+not equal <$str(N$爆率加成)> 0
+#act
+INC N$暴率加成 <$str(N$爆率加成)>
+; sendmsg 5 称号#<$str(S$称号)>::<$str(S$this称号)>::<$str(N$爆率加成)>::
+; mov S$this称号
+break
+
+#if
+not equal <$STR(S$我的称号)>
+#act
+goto @称号爆率加成
+
+
+[@获取称号文件夹名]
+#if
+#act
+mov S$我的称号 <$str(T1)>
+GetListString ..\QuestDiary\称号系统\称号.txt <$str(N$称号行数)> S$称号
+
+goto @称号爆率加成
+; sendmsg 5 称号*<$str(S$称号)>:::<$str(N$称号行数)>
+
+inc N$称号行数 1
+#if
+not equal <$str(S$称号)>
+#act
+goto @获取称号文件夹名
 
 
 }

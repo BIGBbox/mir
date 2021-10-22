@@ -2722,5 +2722,22 @@ inc N$魔法切割 <$str(S$腰带位置五)>
 #act
 #CALL [\游戏登陆\右下显示.txt] @属性显示
 
+[@称号对怪伤害加成]
+
+#if
+#act
+GetValidstr <$STR(S$我的称号)> & S$this称号 S$我的称号
+
+#if
+CHECKTITLE <$str(S$this称号)>
+#act
+ReadConfigFileItem ..\QuestDiary\称号系统\暗黑称号\暗黑称号数据.txt <$str(S$this称号)> 爆率加成 N$爆率加成
+INC N$暴率加成 <$str(N$爆率加成)>
+
+#if
+not equal <$STR(S$我的称号)>
+#act
+goto @称号对怪伤害加成
+
 
 }
