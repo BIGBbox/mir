@@ -3,3 +3,13 @@ Mir200/Log/*.txt
 CenterLog/*
 DBServer/Log
 LoginSrv/CountLog/*
+/Config.Json
+/996M2引擎帮助文档.chm
+Mir200/GTcpSvr_Log.ini
+Mir200/GlobalVal.ini
+RunGate/config.ini
+RunGate/GTcpSvr_Log.ini
+LoginSrv/Logsrv.ini
+DBServer/dbsrc.ini
+Mir200/Envir/QuestDiary/排行榜/排行榜数据.txt
+Mir200/Envir/Market_Def/QFunction-0.txt
