@@ -1,5 +1,5 @@
 [盔甲库数量]
-盔甲库数量=17
+盔甲库数量=16
 头部=nimg=public/sf1/1/00516.png|pimg=public/sf1/1/00516.png|tips={提示：每激活一个物品/FCOLOR=249}^{杀怪爆率+1%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=222}^{全部集齐可获得强力属性特殊称号/FCOLOR=87}^|tipsx=10|tipsy=100|size=18|color=249
 
 [1]

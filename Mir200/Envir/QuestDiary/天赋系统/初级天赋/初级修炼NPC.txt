@@ -22,52 +22,52 @@ mov N$攻击基数 <$str(U2)>
 mov N$攻击基数1 <$str(U2)>
 inc N$攻击基数1 1
 mul N$攻击数值 N$攻击基数 10
-mul N$攻击材料数量1 N$攻击基数1 5
-mul N$攻击材料数量2 N$攻击基数1 5
-mul N$攻击元宝数量 N$攻击基数1 50000
+mul N$攻击材料数量1 N$攻击基数1 10
+mul N$攻击材料数量2 N$攻击基数1 10
+mul N$攻击元宝数量 N$攻击基数1 100000
 MOV S$晋升修炼1 @晋升11
 
 mov N$道术基数 <$str(U4)>
 mov N$道术基数1 <$str(U4)>
 inc N$道术基数1 1
 mul N$道术数值 N$道术基数 10
-mul N$道术材料数量1 N$道术基数1 5
-mul N$道术材料数量2 N$道术基数1 5
-mul N$道术元宝数量 N$道术基数1 50000
+mul N$道术材料数量1 N$道术基数1 10
+mul N$道术材料数量2 N$道术基数1 10
+mul N$道术元宝数量 N$道术基数1 100000
 MOV S$晋升修炼3 @晋升31
 
 mov N$HPMP基数 <$str(U1)>
 mov N$HPMP基数1 <$str(U1)>
 inc N$HPMP基数1 1
 mul N$HPMP数值 N$HPMP基数 100
-mul N$HPMP材料数量1 N$HPMP基数1 5
-mul N$HPMP材料数量2 N$HPMP基数1 5
-mul N$HPMP元宝数量 N$HPMP基数1 50000
+mul N$HPMP材料数量1 N$HPMP基数1 10
+mul N$HPMP材料数量2 N$HPMP基数1 10
+mul N$HPMP元宝数量 N$HPMP基数1 100000
 MOV S$晋升修炼 @晋升1
 
 mov N$道切基数 <$str(U7)>
 mov N$道切基数1 <$str(U7)>
 inc N$道切基数1 1
-mul N$道切材料数量1 N$道切基数1 5
-mul N$道切材料数量2 N$道切基数1 5
-mul N$道切元宝数量 N$道切基数1 50000
+mul N$道切材料数量1 N$道切基数1 10
+mul N$道切材料数量2 N$道切基数1 10
+mul N$道切元宝数量 N$道切基数1 100000
 MOV S$晋升修炼6 @晋升61
 
 mov N$魔法基数 <$str(U3)>
 mov N$魔法基数1 <$str(U3)>
 inc N$魔法基数1 1
 mul N$魔法数值 N$魔法基数 10
-mul N$魔法材料数量1 N$魔法基数1 5
-mul N$魔法材料数量2 N$魔法基数1 5
-mul N$魔法元宝数量 N$魔法基数1 50000
+mul N$魔法材料数量1 N$魔法基数1 10
+mul N$魔法材料数量2 N$魔法基数1 10
+mul N$魔法元宝数量 N$魔法基数1 100000
 MOV S$晋升修炼2 @晋升21
 
 mov N$法切基数 <$str(U6)>
 mov N$法切基数1 <$str(U6)>
 inc N$法切基数1 1
-mul N$法切材料数量1 N$法切基数1 5
-mul N$法切材料数量2 N$法切基数1 5
-mul N$法切元宝数量 N$法切基数1 50000
+mul N$法切材料数量1 N$法切基数1 10
+mul N$法切材料数量2 N$法切基数1 10
+mul N$法切元宝数量 N$法切基数1 100000
 MOV S$晋升修炼5 @晋升51
 
 
@@ -182,9 +182,9 @@ DELAYGOTO 10 @初级修炼npc
 
 #if
 equal U1 0
-CHECKITEM 修炼石 5
-CHECKITEM 天外陨石 5
-CheckBindMoney 元宝 > 49999
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CheckBindMoney 元宝 > 99999
 #ACT
 TAKE 修炼石 10
 TAKE 天外陨石 10
@@ -199,9 +199,9 @@ BREAK
 
 #if
 equal U1 1
-CHECKITEM 修炼石 10
-CHECKITEM 天外陨石 10
-CheckBindMoney 元宝 > 99999
+CHECKITEM 修炼石 20
+CHECKITEM 天外陨石 20
+CheckBindMoney 元宝 > 199999
 #ACT
 TAKE 修炼石 20
 TAKE 天外陨石 20
@@ -215,9 +215,9 @@ BREAK
 
 #if
 equal U1 2
-CHECKITEM 修炼石 15
-CHECKITEM 天外陨石 15
-CheckBindMoney 元宝 > 149999
+CHECKITEM 修炼石 30
+CHECKITEM 天外陨石 30
+CheckBindMoney 元宝 > 299999
 #ACT
 TAKE 修炼石 30
 TAKE 天外陨石 30
@@ -232,9 +232,9 @@ BREAK
 
 #if
 equal U1 3
-CHECKITEM 修炼石 20
-CHECKITEM 天外陨石 20
-CheckBindMoney 元宝 > 199999
+CHECKITEM 修炼石 40
+CHECKITEM 天外陨石 40
+CheckBindMoney 元宝 > 399999
 #ACT
 TAKE 修炼石 40
 TAKE 天外陨石 40
@@ -249,9 +249,9 @@ BREAK
 
 #if
 equal U1 4
-CHECKITEM 修炼石 25
-CHECKITEM 天外陨石 25
-CheckBindMoney 元宝 > 249999
+CHECKITEM 修炼石 50
+CHECKITEM 天外陨石 50
+CheckBindMoney 元宝 > 499999
 #ACT
 TAKE 修炼石 50
 TAKE 天外陨石 50
@@ -266,9 +266,9 @@ BREAK
 
 #if
 equal U1 5
-CHECKITEM 修炼石 30
-CHECKITEM 天外陨石 30
-CheckBindMoney 元宝 > 299999
+CHECKITEM 修炼石 60
+CHECKITEM 天外陨石 60
+CheckBindMoney 元宝 > 599999
 #ACT
 TAKE 修炼石 60
 TAKE 天外陨石 60
@@ -283,9 +283,9 @@ BREAK
 
 #if
 equal U1 6
-CHECKITEM 修炼石 35
-CHECKITEM 天外陨石 35
-CheckBindMoney 元宝 > 349999
+CHECKITEM 修炼石 70
+CHECKITEM 天外陨石 70
+CheckBindMoney 元宝 > 699999
 #ACT
 TAKE 修炼石 70
 TAKE 天外陨石 70
@@ -300,9 +300,9 @@ BREAK
 
 #if
 equal U1 7
-CHECKITEM 修炼石 40
-CHECKITEM 天外陨石 40
-CheckBindMoney 元宝 > 399999
+CHECKITEM 修炼石 80
+CHECKITEM 天外陨石 80
+CheckBindMoney 元宝 > 799999
 #ACT
 TAKE 修炼石 80
 TAKE 天外陨石 80
@@ -317,9 +317,9 @@ BREAK
 
 #if
 equal U1 8
-CHECKITEM 修炼石 45
-CHECKITEM 天外陨石 45
-CheckBindMoney 元宝 > 449999
+CHECKITEM 修炼石 90
+CHECKITEM 天外陨石 90
+CheckBindMoney 元宝 > 899999
 #ACT
 TAKE 修炼石 90
 TAKE 天外陨石 90
@@ -334,9 +334,9 @@ BREAK
 
 #if
 equal U1 9
-CHECKITEM 修炼石 50
-CHECKITEM 天外陨石 50
-CheckBindMoney 元宝 > 499999
+CHECKITEM 修炼石 100
+CHECKITEM 天外陨石 100
+CheckBindMoney 元宝 > 999999
 #ACT
 TAKE 修炼石 100
 TAKE 天外陨石 100
@@ -361,9 +361,9 @@ BREAK
 
 #if
 equal U2 0
-CHECKITEM 修炼石 5
-CHECKITEM 天外陨石 5
-CheckBindMoney 元宝 > 49999
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CheckBindMoney 元宝 > 99999
 #ACT
 TAKE 修炼石 10
 TAKE 天外陨石 10
@@ -378,9 +378,9 @@ BREAK
 
 #if
 equal U2 1
-CHECKITEM 修炼石 10
-CHECKITEM 天外陨石 10
-CheckBindMoney 元宝 > 99999
+CHECKITEM 修炼石 20
+CHECKITEM 天外陨石 20
+CheckBindMoney 元宝 > 199999
 #ACT
 TAKE 修炼石 20
 TAKE 天外陨石 20
@@ -394,9 +394,9 @@ BREAK
 
 #if
 equal U2 2
-CHECKITEM 修炼石 15
-CHECKITEM 天外陨石 15
-CheckBindMoney 元宝 > 149999
+CHECKITEM 修炼石 30
+CHECKITEM 天外陨石 30
+CheckBindMoney 元宝 > 299999
 #ACT
 TAKE 修炼石 30
 TAKE 天外陨石 30
@@ -412,9 +412,9 @@ BREAK
 
 #if
 equal U2 3
-CHECKITEM 修炼石 20
-CHECKITEM 天外陨石 20
-CheckBindMoney 元宝 > 199999
+CHECKITEM 修炼石 40
+CHECKITEM 天外陨石 40
+CheckBindMoney 元宝 > 399999
 #ACT
 TAKE 修炼石 40
 TAKE 天外陨石 40
@@ -429,9 +429,9 @@ BREAK
 
 #if
 equal U2 4
-CHECKITEM 修炼石 25
-CHECKITEM 天外陨石 25
-CheckBindMoney 元宝 > 249999
+CHECKITEM 修炼石 50
+CHECKITEM 天外陨石 50
+CheckBindMoney 元宝 > 499999
 #ACT
 TAKE 修炼石 50
 TAKE 天外陨石 50
@@ -446,9 +446,9 @@ BREAK
 
 #if
 equal U2 5
-CHECKITEM 修炼石 30
-CHECKITEM 天外陨石 30
-CheckBindMoney 元宝 > 299999
+CHECKITEM 修炼石 60
+CHECKITEM 天外陨石 60
+CheckBindMoney 元宝 > 599999
 #ACT
 TAKE 修炼石 60
 TAKE 天外陨石 60
@@ -463,9 +463,9 @@ BREAK
 
 #if
 equal U2 6
-CHECKITEM 修炼石 35
-CHECKITEM 天外陨石 35
-CheckBindMoney 元宝 > 349999
+CHECKITEM 修炼石 70
+CHECKITEM 天外陨石 70
+CheckBindMoney 元宝 > 699999
 #ACT
 TAKE 修炼石 70
 TAKE 天外陨石 70
@@ -480,9 +480,9 @@ BREAK
 
 #if
 equal U2 7
-CHECKITEM 修炼石 40
-CHECKITEM 天外陨石 40
-CheckBindMoney 元宝 > 499999
+CHECKITEM 修炼石 80
+CHECKITEM 天外陨石 80
+CheckBindMoney 元宝 > 799999
 #ACT
 TAKE 修炼石 80
 TAKE 天外陨石 80
@@ -497,9 +497,9 @@ BREAK
 
 #if
 equal U2 8
-CHECKITEM 修炼石 45
-CHECKITEM 天外陨石 45
-CheckBindMoney 元宝 > 449999
+CHECKITEM 修炼石 90
+CHECKITEM 天外陨石 90
+CheckBindMoney 元宝 > 899999
 #ACT
 TAKE  修炼石 90
 TAKE  天外陨石 90
@@ -514,9 +514,9 @@ BREAK
 
 #if
 equal U2 9
-CHECKITEM 修炼石 50
-CHECKITEM 天外陨石 50
-CheckBindMoney 元宝 > 499999
+CHECKITEM 修炼石 100
+CHECKITEM 天外陨石 100
+CheckBindMoney 元宝 > 999999
 #ACT
 TAKE 修炼石 100
 TAKE 天外陨石 100
@@ -541,9 +541,9 @@ BREAK
 [@晋升21]
 #if
 equal U3 0
-CHECKITEM 修炼石 5
-CHECKITEM 天外陨石 5
-CheckBindMoney 元宝 > 49999
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CheckBindMoney 元宝 > 99999
 #ACT
 TAKE 修炼石 10
 TAKE 天外陨石 10
@@ -558,9 +558,9 @@ BREAK
 
 #if
 equal U3 1
-CHECKITEM 修炼石 10
-CHECKITEM 天外陨石 10
-CheckBindMoney 元宝 > 99999
+CHECKITEM 修炼石 20
+CHECKITEM 天外陨石 20
+CheckBindMoney 元宝 > 199999
 #ACT
 TAKE 修炼石 20
 TAKE 天外陨石 20
@@ -574,9 +574,9 @@ BREAK
 
 #if
 equal U3 2
-CHECKITEM 修炼石 15
-CHECKITEM 天外陨石 15
-CheckBindMoney 元宝 > 149999
+CHECKITEM 修炼石 30
+CHECKITEM 天外陨石 30
+CheckBindMoney 元宝 > 299999
 #ACT
 TAKE 修炼石 30
 TAKE 天外陨石 30
@@ -592,9 +592,9 @@ BREAK
 
 #if
 equal U3 3
-CHECKITEM 修炼石 20
-CHECKITEM 天外陨石 20
-CheckBindMoney 元宝 > 199999
+CHECKITEM 修炼石 40
+CHECKITEM 天外陨石 40
+CheckBindMoney 元宝 > 399999
 #ACT
 TAKE  修炼石 40
 TAKE  天外陨石 40
@@ -609,9 +609,9 @@ BREAK
 
 #if
 equal U3 4
-CHECKITEM 修炼石 25
-CHECKITEM 天外陨石 25
-CheckBindMoney 元宝 > 249999
+CHECKITEM 修炼石 50
+CHECKITEM 天外陨石 50
+CheckBindMoney 元宝 > 499999
 #ACT
 TAKE 修炼石 50
 TAKE 天外陨石 50
@@ -626,9 +626,9 @@ BREAK
 
 #if
 equal U3 5
-CHECKITEM 修炼石 30
-CHECKITEM 天外陨石 30
-CheckBindMoney 元宝 > 299999
+CHECKITEM 修炼石 60
+CHECKITEM 天外陨石 60
+CheckBindMoney 元宝 > 599999
 #ACT
 TAKE 修炼石 60
 TAKE 天外陨石 60
@@ -643,9 +643,9 @@ BREAK
 
 #if
 equal U3 6
-CHECKITEM 修炼石 35
-CHECKITEM 天外陨石 35
-CheckBindMoney 元宝 > 349999
+CHECKITEM 修炼石 70
+CHECKITEM 天外陨石 70
+CheckBindMoney 元宝 > 699999
 #ACT
 TAKE 修炼石 70
 TAKE 天外陨石 70
@@ -660,9 +660,9 @@ BREAK
 
 #if
 equal U3 7
-CHECKITEM 修炼石 40
-CHECKITEM 天外陨石 40
-CheckBindMoney 元宝 > 399999
+CHECKITEM 修炼石 80
+CHECKITEM 天外陨石 80
+CheckBindMoney 元宝 > 799999
 #ACT
 TAKE 修炼石 80
 TAKE 天外陨石 80
@@ -677,9 +677,9 @@ BREAK
 
 #if
 equal U3 8
-CHECKITEM 修炼石 45
-CHECKITEM 天外陨石 45
-CheckBindMoney 元宝 > 449999
+CHECKITEM 修炼石 90
+CHECKITEM 天外陨石 90
+CheckBindMoney 元宝 > 899999
 #ACT
 TAKE 修炼石 90
 TAKE 天外陨石 90
@@ -694,9 +694,9 @@ BREAK
 
 #if
 equal U3 9
-CHECKITEM 修炼石 50
-CHECKITEM 天外陨石 50
-CheckBindMoney 元宝 > 499999
+CHECKITEM 修炼石 100
+CHECKITEM 天外陨石 100
+CheckBindMoney 元宝 > 999999
 #ACT
 TAKE 修炼石 100
 TAKE 天外陨石 100
@@ -721,9 +721,9 @@ BREAK
 [@晋升31]
 #if
 equal U4 0
-CHECKITEM 修炼石 5
-CHECKITEM 天外陨石 5
-CheckBindMoney 元宝 > 49999
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CheckBindMoney 元宝 > 99999
 #ACT
 TAKE 修炼石 10
 TAKE 天外陨石 10
@@ -738,9 +738,9 @@ BREAK
 
 #if
 equal U4 1
-CHECKITEM 修炼石 10
-CHECKITEM 天外陨石 10
-CheckBindMoney 元宝 > 99999
+CHECKITEM 修炼石 20
+CHECKITEM 天外陨石 20
+CheckBindMoney 元宝 > 199999
 #ACT
 TAKE 修炼石 20
 TAKE 天外陨石 20
@@ -754,9 +754,9 @@ BREAK
 
 #if
 equal U4 2
-CHECKITEM 修炼石 15
-CHECKITEM 天外陨石 15
-CheckBindMoney 元宝 > 149999
+CHECKITEM 修炼石 30
+CHECKITEM 天外陨石 30
+CheckBindMoney 元宝 > 299999
 #ACT
 TAKE 修炼石 30
 TAKE 天外陨石 30
@@ -772,9 +772,9 @@ BREAK
 
 #if
 equal U4 3
-CHECKITEM 修炼石 20
-CHECKITEM 天外陨石 20
-CheckBindMoney 元宝 > 199999
+CHECKITEM 修炼石 40
+CHECKITEM 天外陨石 40
+CheckBindMoney 元宝 > 399999
 #ACT
 TAKE 修炼石 40
 TAKE 天外陨石 40
@@ -789,9 +789,9 @@ BREAK
 
 #if
 equal U4 4
-CHECKITEM 修炼石 25
-CHECKITEM 天外陨石 25
-CheckBindMoney 元宝 > 249999
+CHECKITEM 修炼石 50
+CHECKITEM 天外陨石 50
+CheckBindMoney 元宝 > 499999
 #ACT
 TAKE 修炼石 50
 TAKE 天外陨石 50
@@ -806,9 +806,9 @@ BREAK
 
 #if
 equal U4 5
-CHECKITEM 修炼石 30
-CHECKITEM 天外陨石 30
-CheckBindMoney 元宝 > 299999
+CHECKITEM 修炼石 60
+CHECKITEM 天外陨石 60
+CheckBindMoney 元宝 > 599999
 #ACT
 TAKE 修炼石 60
 TAKE 天外陨石 60
@@ -823,9 +823,9 @@ BREAK
 
 #if
 equal U4 6
-CHECKITEM 修炼石 35
-CHECKITEM 天外陨石 35
-CheckBindMoney 元宝 > 349999
+CHECKITEM 修炼石 70
+CHECKITEM 天外陨石 70
+CheckBindMoney 元宝 > 699999
 #ACT
 TAKE 修炼石 70
 TAKE 天外陨石 70
@@ -840,9 +840,9 @@ BREAK
 
 #if
 equal U4 7
-CHECKITEM 修炼石 40
-CHECKITEM 天外陨石 40
-CheckBindMoney 元宝 > 399999
+CHECKITEM 修炼石 80
+CHECKITEM 天外陨石 80
+CheckBindMoney 元宝 > 799999
 #ACT
 TAKE 修炼石 80
 TAKE 天外陨石 80
@@ -857,9 +857,9 @@ BREAK
 
 #if
 equal U4 8
-CHECKITEM 修炼石 45
-CHECKITEM 天外陨石 45
-CheckBindMoney 元宝 > 449999
+CHECKITEM 修炼石 90
+CHECKITEM 天外陨石 90
+CheckBindMoney 元宝 > 899999
 #ACT
 TAKE 修炼石 90
 TAKE 天外陨石 90
@@ -874,9 +874,9 @@ BREAK
 
 #if
 equal U4 9
-CHECKITEM 修炼石 50
-CHECKITEM 天外陨石 50
-CheckBindMoney 元宝 > 499999
+CHECKITEM 修炼石 100
+CHECKITEM 天外陨石 100
+CheckBindMoney 元宝 > 999999
 #ACT
 TAKE 修炼石 100
 TAKE 天外陨石 100
@@ -900,9 +900,9 @@ BREAK
 [@晋升51]
 #if
 equal U6 0
-CHECKITEM 修炼石 5
-CHECKITEM 天外陨石 5
-CheckBindMoney 元宝 > 49999
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CheckBindMoney 元宝 > 99999
 #ACT
 TAKE 修炼石 10
 TAKE 天外陨石 10
@@ -917,9 +917,9 @@ BREAK
 
 #if
 equal U6 1
-CHECKITEM 修炼石 10
-CHECKITEM 天外陨石 10
-CheckBindMoney 元宝 > 99999
+CHECKITEM 修炼石 20
+CHECKITEM 天外陨石 20
+CheckBindMoney 元宝 > 199999
 #ACT
 TAKE 修炼石 20
 TAKE 天外陨石 20
@@ -933,8 +933,8 @@ BREAK
 
 #if
 equal U6 2
-CHECKITEM 修炼石 15
-CHECKITEM 天外陨石 15
+CHECKITEM 修炼石 30
+CHECKITEM 天外陨石 30
 CheckBindMoney 元宝 > 299999
 #ACT
 TAKE 修炼石 30
@@ -951,8 +951,8 @@ BREAK
 
 #if
 equal U6 3
-CHECKITEM 修炼石 20
-CHECKITEM 天外陨石 20
+CHECKITEM 修炼石 40
+CHECKITEM 天外陨石 40
 CheckBindMoney 元宝 > 399999
 #ACT
 TAKE 修炼石 40
@@ -968,9 +968,9 @@ BREAK
 
 #if
 equal U6 4
-CHECKITEM 修炼石 25
-CHECKITEM 天外陨石 25
-CheckBindMoney 元宝 > 249999
+CHECKITEM 修炼石 50
+CHECKITEM 天外陨石 50
+CheckBindMoney 元宝 > 499999
 #ACT
 TAKE 修炼石 50
 TAKE 天外陨石 50
@@ -985,9 +985,9 @@ BREAK
 
 #if
 equal U6 5
-CHECKITEM 修炼石 30
-CHECKITEM 天外陨石 30
-CheckBindMoney 元宝 > 299999
+CHECKITEM 修炼石 60
+CHECKITEM 天外陨石 60
+CheckBindMoney 元宝 > 599999
 #ACT
 TAKE 修炼石 60
 TAKE 天外陨石 60
@@ -1002,9 +1002,9 @@ BREAK
 
 #if
 equal U6 6
-CHECKITEM 修炼石 35
-CHECKITEM 天外陨石 35
-CheckBindMoney 元宝 > 349999
+CHECKITEM 修炼石 70
+CHECKITEM 天外陨石 70
+CheckBindMoney 元宝 > 699999
 #ACT
 TAKE 修炼石 70
 TAKE 天外陨石 70
@@ -1019,9 +1019,9 @@ BREAK
 
 #if
 equal U6 7
-CHECKITEM 修炼石 40
-CHECKITEM 天外陨石 40
-CheckBindMoney 元宝 > 399999
+CHECKITEM 修炼石 80
+CHECKITEM 天外陨石 80
+CheckBindMoney 元宝 > 799999
 #ACT
 TAKE 修炼石 80
 TAKE 天外陨石 80
@@ -1037,9 +1037,9 @@ BREAK
 
 #if
 equal U6 8
-CHECKITEM 修炼石 45
-CHECKITEM 天外陨石 45
-CheckBindMoney 元宝 > 449999
+CHECKITEM 修炼石 90
+CHECKITEM 天外陨石 90
+CheckBindMoney 元宝 > 899999
 #ACT
 TAKE 修炼石 90
 TAKE 天外陨石 90
@@ -1054,9 +1054,9 @@ BREAK
 
 #if
 equal U6 9
-CHECKITEM 修炼石 50
-CHECKITEM 天外陨石 50
-CheckBindMoney 元宝 > 499999
+CHECKITEM 修炼石 100
+CHECKITEM 天外陨石 100
+CheckBindMoney 元宝 > 999999
 #ACT
 TAKE 修炼石 100
 TAKE 天外陨石 100
@@ -1080,9 +1080,9 @@ BREAK
 [@晋升61]
 #if
 equal U7 0
-CHECKITEM 修炼石 5
-CHECKITEM 天外陨石 5
-CheckBindMoney 元宝 > 49999
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CheckBindMoney 元宝 > 99999
 #ACT
 TAKE 修炼石 10
 TAKE 天外陨石 10
@@ -1097,9 +1097,9 @@ BREAK
 
 #if
 equal U7 1
-CHECKITEM 修炼石 10
-CHECKITEM 天外陨石 10
-CheckBindMoney 元宝 > 99999
+CHECKITEM 修炼石 20
+CHECKITEM 天外陨石 20
+CheckBindMoney 元宝 > 199999
 #ACT
 TAKE 修炼石 20
 TAKE 天外陨石 20
@@ -1113,9 +1113,9 @@ BREAK
 
 #if
 equal U7 2
-CHECKITEM 修炼石 15
-CHECKITEM 天外陨石 15
-CheckBindMoney 元宝 > 149999
+CHECKITEM 修炼石 30
+CHECKITEM 天外陨石 30
+CheckBindMoney 元宝 > 299999
 #ACT
 TAKE 修炼石 30
 TAKE 天外陨石 30
@@ -1131,9 +1131,9 @@ BREAK
 
 #if
 equal U7 3
-CHECKITEM 修炼石 20
-CHECKITEM 天外陨石 20
-CheckBindMoney 元宝 > 199999
+CHECKITEM 修炼石 40
+CHECKITEM 天外陨石 40
+CheckBindMoney 元宝 > 399999
 #ACT
 TAKE 修炼石 40
 TAKE 天外陨石 40
@@ -1148,9 +1148,9 @@ BREAK
 
 #if
 equal U7 4
-CHECKITEM 修炼石 25
-CHECKITEM 天外陨石 25
-CheckBindMoney 元宝 > 249999
+CHECKITEM 修炼石 50
+CHECKITEM 天外陨石 50
+CheckBindMoney 元宝 > 499999
 #ACT
 TAKE 修炼石 50
 TAKE 天外陨石 50
@@ -1165,9 +1165,9 @@ BREAK
 
 #if
 equal U7 5
-CHECKITEM 修炼石 30
-CHECKITEM 天外陨石 30
-CheckBindMoney 元宝 > 299999
+CHECKITEM 修炼石 60
+CHECKITEM 天外陨石 60
+CheckBindMoney 元宝 > 599999
 #ACT
 TAKE 修炼石 60
 TAKE 天外陨石 60
@@ -1182,9 +1182,9 @@ BREAK
 
 #if
 equal U7 6
-CHECKITEM 修炼石 35
-CHECKITEM 天外陨石 35
-CheckBindMoney 元宝 > 349999
+CHECKITEM 修炼石 70
+CHECKITEM 天外陨石 70
+CheckBindMoney 元宝 > 699999
 #ACT
 TAKE 修炼石 70
 TAKE 天外陨石 70
@@ -1199,9 +1199,9 @@ BREAK
 
 #if
 equal U7 7
-CHECKITEM 修炼石 40
-CHECKITEM 天外陨石 40
-CheckBindMoney 元宝 > 399999
+CHECKITEM 修炼石 80
+CHECKITEM 天外陨石 80
+CheckBindMoney 元宝 > 799999
 #ACT
 TAKE 修炼石 80
 TAKE 天外陨石 80
@@ -1216,9 +1216,9 @@ BREAK
 
 #if
 equal U7 8
-CHECKITEM 修炼石 45
-CHECKITEM 天外陨石 45
-CheckBindMoney 元宝 > 449999
+CHECKITEM 修炼石 90
+CHECKITEM 天外陨石 90
+CheckBindMoney 元宝 > 899999
 #ACT
 TAKE 修炼石 90
 TAKE 天外陨石 90
@@ -1233,9 +1233,9 @@ BREAK
 
 #if
 equal U7 9
-CHECKITEM 修炼石 50
-CHECKITEM 天外陨石 50
-CheckBindMoney 元宝 > 499999
+CHECKITEM 修炼石 100
+CHECKITEM 天外陨石 100
+CheckBindMoney 元宝 > 999999
 #ACT
 TAKE 修炼石 100
 TAKE 天外陨石 100

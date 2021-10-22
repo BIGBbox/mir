@@ -15,7 +15,9 @@ GETHUMCUSTOMITEMVALUE -1 8 N$怪物额外 N$怪物额外伤害
 #if
 #act
 inc N$怪物额外伤害 <$STR(S$赞助_对怪伤害)>
-
+mov N$怪物称号行数 0
+mov S$怪物称号 <$str(T1)>
+goto @获取怪物伤害称号文件夹名
 ;---------沙捐----------------
 ; 前三倍攻加成
 #IF
@@ -2721,6 +2723,45 @@ inc N$魔法切割 <$str(S$腰带位置五)>
 #if
 #act
 #CALL [\游戏登陆\右下显示.txt] @属性显示
+
+
+[@称号对怪伤害加成]
+
+#if
+#act
+GetValidstr <$STR(S$我的称号)> & S$this称号 S$我的称号
+ReadConfigFileItem ..\QuestDiary\称号系统\<$str(S$称号)>\<$str(S$称号)>数据.txt <$str(S$this称号)> 对怪伤害加成 N$对怪伤害加成
+
+#if
+CHECKTITLE <$str(S$this称号)>
+not equal <$str(N$对怪伤害加成)> 0
+#act
+INC N$怪物额外伤害 <$str(N$对怪伤害加成)>
+; sendmsg 5 怪物称号#<$str(S$称号)>::<$str(S$this称号)>::<$str(N$对怪伤害加成)>::
+; mov S$this称号
+break
+
+#if
+not equal <$STR(S$我的称号)>
+#act
+goto @称号对怪伤害加成
+
+
+[@获取怪物伤害称号文件夹名]
+#if
+#act
+mov S$我的称号 <$str(T1)>
+GetListString ..\QuestDiary\称号系统\称号.txt <$str(N$怪物称号行数)> S$称号
+
+goto @称号对怪伤害加成
+; sendmsg 5 称号*<$str(S$称号)>:::<$str(N$怪物称号行数)>
+
+inc N$怪物称号行数 1
+#if
+not equal <$str(S$称号)>
+#act
+goto @获取怪物伤害称号文件夹名
+
 
 
 }

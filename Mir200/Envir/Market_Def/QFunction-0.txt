@@ -7953,6 +7953,15 @@ sendmsg 7 使用远程回收体验卡成功!
 #ACT
 ; sendmsg 5 回收加成
 
+[@StdModeFunc334]
+#if
+#act
+money 金币 + 2000000
+SENDMSG 7 {增加|56:56:0}{[2000000]|250:56:0}{金币，您当前金币总数为|56:56:0}{[<$GOLDCOUNT>]|250:56:0}
+; sendmsg 5 使用金条触发
+
+
+
 ; 装备任意穿戴触发
 [@TakeOnEx]
 #ACT

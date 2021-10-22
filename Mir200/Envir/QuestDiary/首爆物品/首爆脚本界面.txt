@@ -71,7 +71,7 @@ mov N$按钮 N$SizeX
 dec N$按钮 45
 mov N$按钮0 N$SizeX
 dec N$按钮0 55
-sendmsg 5测试刷所所所所
+; sendmsg 5测试刷所所所所
 
 #SAY
 <Img|children={bg1,界面偏移,}|x=<$STR(N$moveX)>|y=<$STR(N$moveY)>|show=0|reset=1|move=1|img=public/sf1/1/01805.png|bg=1>

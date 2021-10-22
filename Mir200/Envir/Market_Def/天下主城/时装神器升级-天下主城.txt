@@ -220,6 +220,8 @@ MOVR <$STR(N$纵轴坐标)> 100 500
 SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功合成/FCOLOR=253><【至高の荣耀】/FCOLOR=58>
 GOTO @时装神器支线任务
 GOTO @MAIN
+mov S$新增神器 至高の荣耀
+goto @时装神器记录
 BREAK
 #elseact
 MESSAGEBOX 打造条件不足??\\1、材料货币不足\\2、你没有佩戴破界の无边！！
@@ -237,10 +239,113 @@ AutoTakeOnItem 永生の不灭 18
 MOVR <$STR(N$纵轴坐标)> 100 500
 SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功合成/FCOLOR=253><【永生の不灭】/FCOLOR=58>
 GOTO @MAIN
+mov S$新增神器 永生の不灭
+goto @时装神器记录
 BREAK
 #elseact
 MESSAGEBOX 打造条件不足??\\1、材料货币不足\\2、你没有佩戴至高の荣耀！！
 BREAK
+
+[@晋升3]
+#if
+checkitEmW 永生の不灭 1
+CHECKGAMEDIAMOND > 9999
+#ACT
+GAMEDIAMOND - 10000
+TAKEW 永生の不灭 1
+GIVE 神之の庇护 1
+AutoTakeOnItem 神之の庇护 18
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功合成/FCOLOR=253><【神之の庇护】/FCOLOR=58>
+GOTO @MAIN
+mov S$新增神器 神之の庇护
+goto @时装神器记录
+BREAK
+#elseact
+MESSAGEBOX 打造条件不足??\\1、材料货币不足\\2、你没有佩戴永生の不灭！！
+BREAK
+
+[@晋升4]
+#if
+checkitEmW 神之の庇护 1
+CHECKGAMEDIAMOND > 13999
+#ACT
+GAMEDIAMOND - 14000
+TAKEW 神之の庇护 1
+GIVE 冰霜の之心 1
+AutoTakeOnItem 冰霜の之心 18
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功合成/FCOLOR=253><【冰霜の之心】/FCOLOR=58>
+GOTO @MAIN
+mov S$新增神器 冰霜の之心
+goto @时装神器记录
+BREAK
+#elseact
+MESSAGEBOX 打造条件不足??\\1、材料货币不足\\2、你没有佩戴神之の庇护！！
+BREAK
+
+[@晋升5]
+#if
+checkitEmW 冰霜の之心 1
+CHECKGAMEDIAMOND > 17999
+#ACT
+GAMEDIAMOND - 18000
+TAKEW 冰霜の之心 1
+GIVE 禁忌の之王 1
+AutoTakeOnItem 禁忌の之王 18
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功合成/FCOLOR=253><【禁忌の之王】/FCOLOR=58>
+GOTO @MAIN
+mov S$新增神器 禁忌の之王
+goto @时装神器记录
+BREAK
+#elseact
+MESSAGEBOX 打造条件不足??\\1、材料货币不足\\2、你没有佩戴冰霜の之心！！
+BREAK
+
+[@晋升6]
+#if
+checkitEmW 禁忌の之王 1
+CHECKGAMEDIAMOND > 23999
+#ACT
+GAMEDIAMOND - 24000
+TAKEW 禁忌の之王 1
+GIVE 復仇の之魂 1
+AutoTakeOnItem 復仇の之魂 18
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功合成/FCOLOR=253><【復仇の之魂】/FCOLOR=58>
+GOTO @MAIN
+mov S$新增神器 復仇の之魂
+goto @时装神器记录
+BREAK
+#elseact
+MESSAGEBOX 打造条件不足??\\1、材料货币不足\\2、你没有佩戴禁忌の之王！！
+BREAK
+
+[@晋升7]
+#if
+checkitEmW 復仇の之魂 1
+CHECKGAMEDIAMOND > 29999
+#ACT
+GAMEDIAMOND - 30000
+TAKEW 復仇の之魂 1
+GIVE 身份の象征 1
+AutoTakeOnItem 身份の象征 18
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功合成/FCOLOR=253><【身份の象征】/FCOLOR=58>
+;GOTO @MAIN
+mov S$新增神器 身份の象征
+goto @时装神器记录
+close
+BREAK
+#elseact
+MESSAGEBOX 打造条件不足??\\1、材料货币不足\\2、你没有佩戴復仇の之魂！！
+BREAK
+
+[@时装神器记录]
+#if
+#act
+mov T4 <$STR(T4)>&<$STR(S$新增神器)>
 
 [@时装神器支线任务]
 #if
@@ -262,91 +367,3 @@ not CheckContainsText <$STR(T108)> 时装神器
 #act
 mov S$支线任务临时变量 <$STR(T108)>
 mov T108 <$STR(S$支线任务临时变量)>_时装神器
-
-
-
-[@晋升3]
-#if
-checkitEmW 永生の不灭 1
-CHECKGAMEDIAMOND > 9999
-#ACT
-GAMEDIAMOND - 10000
-TAKEW 永生の不灭 1
-GIVE 神之の庇护 1
-AutoTakeOnItem 神之の庇护 18
-MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功合成/FCOLOR=253><【神之の庇护】/FCOLOR=58>
-GOTO @MAIN
-BREAK
-#elseact
-MESSAGEBOX 打造条件不足??\\1、材料货币不足\\2、你没有佩戴永生の不灭！！
-BREAK
-
-[@晋升4]
-#if
-checkitEmW 神之の庇护 1
-CHECKGAMEDIAMOND > 13999
-#ACT
-GAMEDIAMOND - 14000
-TAKEW 神之の庇护 1
-GIVE 冰霜の之心 1
-AutoTakeOnItem 冰霜の之心 18
-MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功合成/FCOLOR=253><【冰霜の之心】/FCOLOR=58>
-GOTO @MAIN
-BREAK
-#elseact
-MESSAGEBOX 打造条件不足??\\1、材料货币不足\\2、你没有佩戴神之の庇护！！
-BREAK
-
-[@晋升5]
-#if
-checkitEmW 冰霜の之心 1
-CHECKGAMEDIAMOND > 17999
-#ACT
-GAMEDIAMOND - 18000
-TAKEW 冰霜の之心 1
-GIVE 禁忌の之王 1
-AutoTakeOnItem 禁忌の之王 18
-MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功合成/FCOLOR=253><【禁忌の之王】/FCOLOR=58>
-GOTO @MAIN
-BREAK
-#elseact
-MESSAGEBOX 打造条件不足??\\1、材料货币不足\\2、你没有佩戴冰霜の之心！！
-BREAK
-
-[@晋升6]
-#if
-checkitEmW 禁忌の之王 1
-CHECKGAMEDIAMOND > 23999
-#ACT
-GAMEDIAMOND - 24000
-TAKEW 禁忌の之王 1
-GIVE 復仇の之魂 1
-AutoTakeOnItem 復仇の之魂 18
-MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功合成/FCOLOR=253><【復仇の之魂】/FCOLOR=58>
-GOTO @MAIN
-BREAK
-#elseact
-MESSAGEBOX 打造条件不足??\\1、材料货币不足\\2、你没有佩戴禁忌の之王！！
-BREAK
-
-[@晋升7]
-#if
-checkitEmW 復仇の之魂 1
-CHECKGAMEDIAMOND > 29999
-#ACT
-GAMEDIAMOND - 30000
-TAKEW 復仇の之魂 1
-GIVE 身份の象征 1
-AutoTakeOnItem 身份の象征 18
-MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功合成/FCOLOR=253><【身份の象征】/FCOLOR=58>
-;GOTO @MAIN
-close
-BREAK
-#elseact
-MESSAGEBOX 打造条件不足??\\1、材料货币不足\\2、你没有佩戴復仇の之魂！！
-BREAK

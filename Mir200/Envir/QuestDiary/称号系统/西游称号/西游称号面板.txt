@@ -105,9 +105,10 @@ TAKE  神器碎片 <$STR(S$神器碎片数量)>
 CONFERTITLE <$STR(S$给予称号)>
 money 绑定元宝 - <$STR(S$所需元宝)>
 #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+#CALL [\属性重载\游戏爆率.txt] @暴率
 MOVR <$STR(N$纵轴坐标)> 100 500
 
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【<$STR(S$给予称号)>】称号/FCOLOR=58>
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升123/FCOLOR=253><【<$STR(S$给予称号)>】称号/FCOLOR=58>
 mov S$新增称号 <$STR(S$给予称号)>
 GOTO @称号标记记录
 GOTO @西游称号面板
@@ -147,7 +148,7 @@ ReadConfigFileItem ..\QuestDiary\称号系统\西游称号\西游称号数据.txt <$STR(S$当前
 ReadConfigFileItem ..\QuestDiary\称号系统\西游称号\西游称号数据.txt <$STR(S$当前称号)> 对怪伤害 S$对怪伤害增加
 ReadConfigFileItem ..\QuestDiary\称号系统\西游称号\西游称号数据.txt <$STR(S$当前称号)> 称号img S$称号img串
 ReadConfigFileItem ..\QuestDiary\称号系统\西游称号\西游称号数据.txt <$STR(S$当前称号)> 称号花翎 S$称号称号花翎
-sendmsg 5 当前称号:::<$STR(S$当前称号)>***<$STR(S$给予称号)>
+; sendmsg 5 当前称号:::<$STR(S$当前称号)>***<$STR(S$给予称号)>
 
 ;------所有字段非空判断-------
 #or
@@ -189,7 +190,7 @@ GetListString ..\QuestDiary\称号系统\西游称号\西游称号列表.txt <$STR(N$称号序号)
 not equal <$STR(S$称号变量)>
 CHECKTITLE <$STR(S$称号变量)>
 #act
-sendmsg 5 <$STR(S$称号变量)>:::###
+; sendmsg 5 <$STR(S$称号变量)>:::###
 
 mov S$当前称号 <$STR(S$称号变量)>
 break

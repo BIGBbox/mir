@@ -65,7 +65,14 @@ AutoTakeOnItem 無敵の之力 18
 MOVR <$STR(N$纵轴坐标)> 100 500
 SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功合成/FCOLOR=253><【無敵の之力】/FCOLOR=58>
 GOTO @MAIN
+mov S$新增神器 無敵の之力
+goto @时装神器记录
 BREAK
 #elseact
 MESSAGEBOX 打造条件不足??\\1、材料货币不足\\2、你没有佩戴不死の之身！！
 BREAK
+
+[@时装神器记录]
+#if
+#act
+mov T4 <$STR(T4)>&<$STR(S$新增神器)>
