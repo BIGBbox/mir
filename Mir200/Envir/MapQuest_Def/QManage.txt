@@ -161,10 +161,12 @@ WriteConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$USERNAME> 角色等级 <$L
 equal U108 0
 #act
 #Call [\代理登录\欢迎界面.txt] @欢迎界面展示
+#elseact
+delaygoto 1500 @刷新顶部属性栏
 
 #if
 #act
-delaygoto 1500 @刷新顶部属性栏
+; delaygoto 1500 @刷新顶部属性栏
 
 [@刷新顶部属性栏]
 #act

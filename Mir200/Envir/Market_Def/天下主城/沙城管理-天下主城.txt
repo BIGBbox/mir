@@ -13,14 +13,15 @@
 <Text|id=元宝|x=635|y=52|color=149|size=16|text=$STM(ITEMCOUNT_元宝)>
 
 <Button|id=创建行会|x=310|y=310|nimg=public/sf1/1/00386.png|pimg=public/sf1/1/00387.png|tips={创建条件：/FCOLOR=250}^{所需等级：50级/FCOLOR=251}^{所需材料：沃玛号角 * 1/FCOLOR=251}^|tipsx=10|tipsy=80|size=18|color=249|link=@@INPUTSTRING70(请输入建立行会的名字：)>
-<Button|id=增加行会人数|x=310|y=330|nimg=public/sf1/1/00388.png|pimg=public/sf1/1/00389.png|tips={增加行会人数条件：/FCOLOR=250}^{所需天下币：10000/FCOLOR=251}^{可增加人数：+ 10/FCOLOR=251}^|tipsx=10|tipsy=80|size=18|color=249|link=@增加行会人数>
+<Button|id=增加行会人数|x=310|y=330|nimg=public/sf1/1/00388.png|pimg=public/sf1/1/00389.png|size=18|color=249|link=@增加行会人数>
+; |tips={增加行会人数条件：/FCOLOR=250}^{所需天下币：10000/FCOLOR=251}^{可增加人数：+ 10/FCOLOR=251}^|tipsx=10|tipsy=80|
 <Text|id=攻城描述|x=330|y=355|color=87|tips=|tipsx=10|tipsy=80|size=13|text=每次合区之后自动开启沙巴克攻城战，我可用帮你快速前往沙城参战>
 <Button|id=大门|x=320|y=400|nimg=public/sf1/1/00390.png|pimg=public/sf1/1/00391.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@前进沙城大门>
 <Button|id=复活|x=420|y=400|nimg=public/sf1/1/00398.png|pimg=public/sf1/1/00399.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@前进复活点>
 <Button|id=仓库|x=320|y=425|nimg=public/sf1/1/00392.png|pimg=public/sf1/1/00393.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@前进沙城仓库>
 <Button|id=服饰店|x=420|y=425|nimg=public/sf1/1/00394.png|pimg=public/sf1/1/00395.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@前进沙城服装>
 
-; <Button|id=0|x=482|y=180|public/sf1/1/00386.png|pimg=public/sf1/1/00387.png|tips=|tipsx=10|tipsy=80|size=18|color=249|text=前进影之道|link=@前进影之道>
+; <Button|id=0|x=482|y=180|public/sf1/1/00386.png|pimg=public/sf1/1/00387.png|tips=|tipsx=10|tipsy=80|size18|color=249|text=前进影之道|link=@前进影之道>
 
 ;<>  <imgex:0:396:397:396:10:12|/@前进影之道>
 
@@ -125,6 +126,19 @@ MessageBox 你不是行会老大，无法操作！
 BREAK
 
 #IF
+CHECKMONEY 天下币 < 10000
+#ACT
+MessageBox 天下币数量不足10000!
+break
+
+
+#IF
+#ACT
+messagebox 增加行会人数上限需要10000天下币!是否确定 @行会人数增加确认 @取消
+
+[@行会人数增加确认]
+
+#IF
 ISGUILDMASTER
 CHECKMONEY 天下币 > 9999
 #ACT
@@ -136,7 +150,6 @@ BREAK
 #elseact
 MessageBox 增加行会人数上限需要10000天下币！
 BREAK
-
 
 [@开始领取攻沙奖励]
 #IF
