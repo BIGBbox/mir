@@ -1561,202 +1561,202 @@ INC N$分解装备数量 1
 INC N$分解碎片数量 10
 
 #IF
-CHECKITEM 九黎披风[灵阶] 1
+CHECKITEM 九黎披风【灵阶】 1
 #ACT
 GIVE 神器碎片 12
-TAKE 九黎披风[灵阶] 1
+TAKE 九黎披风【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 12
 
 #IF
-CHECKITEM 仙元紫天[灵阶] 1
+CHECKITEM 仙元紫天【灵阶】 1
 #ACT
 GIVE 神器碎片 14
-TAKE 仙元紫天[灵阶] 1
+TAKE 仙元紫天【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 14
 
 #IF
-CHECKITEM 死亡魔魂[灵阶] 1
+CHECKITEM 死亡魔魂【灵阶】 1
 #ACT
 GIVE 神器碎片 16
-TAKE 死亡魔魂[灵阶] 1
+TAKE 死亡魔魂【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 16
 
 #IF
-CHECKITEM 暗黑之袍[灵阶] 1
+CHECKITEM 暗黑之袍【灵阶】 1
 #ACT
 GIVE 神器碎片 18
-TAKE 暗黑之袍[灵阶] 1
+TAKE 暗黑之袍【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 18
 
 #IF
-CHECKITEM 风流披风[灵阶] 1
+CHECKITEM 风流披风【灵阶】 1
 #ACT
 GIVE 神器碎片 20
-TAKE 风流披风[灵阶] 1
+TAKE 风流披风【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 20
 
 #IF
-CHECKITEM 龙骨灵铠[仙阶] 1
+CHECKITEM 龙骨灵铠【仙阶】 1
 #ACT
 GIVE 神器碎片 22
-TAKE 龙骨灵铠[仙阶] 1
+TAKE 龙骨灵铠【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 22
 
 #IF
-CHECKITEM 原始蛇夫座[仙阶] 1
+CHECKITEM 原始无双【仙阶】 1
 #ACT
 GIVE 神器碎片 24
-TAKE 原始蛇夫座[仙阶] 1
+TAKE 原始无双【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 24
 
 #IF
-CHECKITEM 火神愤怒[仙阶] 1
+CHECKITEM 火神愤怒【仙阶】 1
 #ACT
 GIVE 神器碎片 26
-TAKE 火神愤怒[仙阶] 1
+TAKE 火神愤怒【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 26
 
 #IF
-CHECKITEM 天罡灭魂[仙阶] 1
+CHECKITEM 天罡灭魂【仙阶】 1
 #ACT
 GIVE 神器碎片 28
-TAKE 天罡灭魂[仙阶] 1
+TAKE 天罡灭魂【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 28
 
 #IF
-CHECKITEM 猩红[仙阶] 1
+CHECKITEM 猩红【仙阶】 1
 #ACT
 GIVE 神器碎片 30
-TAKE 猩红[仙阶] 1
+TAKE 猩红【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 30
 
 #IF
-CHECKITEM 血魔[仙阶] 1
+CHECKITEM 血魔【仙阶】 1
 #ACT
 GIVE 神器碎片 32
-TAKE 血魔[仙阶] 1
+TAKE 血魔【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 32
 
 #IF
-CHECKITEM 海神破天[仙阶] 1
+CHECKITEM 海神破天【仙阶】 1
 #ACT
 GIVE 神器碎片 34
-TAKE 海神破天[仙阶] 1
+TAKE 海神破天【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 34
 
 #IF
-CHECKITEM 魔鲨[仙阶] 1
+CHECKITEM 魔鲨【仙阶】 1
 #ACT
 GIVE 神器碎片 36
-TAKE 魔鲨[仙阶] 1
+TAKE 魔鲨【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 36
 
 #IF
-CHECKITEM 人马冰霜[仙阶] 1
+CHECKITEM 人马冰霜【仙阶】 1
 #ACT
 GIVE 神器碎片 38
-TAKE 人马冰霜[仙阶] 1
+TAKE 人马冰霜【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 38
 
 #IF
-CHECKITEM 封龙[仙阶] 1
+CHECKITEM 封龙【仙阶】 1
 #ACT
 GIVE 神器碎片 40
-TAKE 封龙[仙阶] 1
+TAKE 封龙【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 40
 
 #IF
-CHECKITEM 孤星战月[神阶] 1
+CHECKITEM 孤星战月【神阶】 1
 #ACT
 GIVE 神器碎片 42
-TAKE 孤星战月[神阶] 1
+TAKE 孤星战月【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 42
 
 #IF
-CHECKITEM 不死鸟披风[神阶] 1
+CHECKITEM 不死鸟披风【神阶】 1
 #ACT
 GIVE 神器碎片 44
-TAKE 不死鸟披风[神阶] 1
+TAKE 不死鸟披风【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 44
 
 #IF
-CHECKITEM 白夜荒天铠[神阶] 1
+CHECKITEM 白夜荒天铠【神阶】 1
 #ACT
 GIVE 神器碎片 46
-TAKE 白夜荒天铠[神阶] 1
+TAKE 白夜荒天铠【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 46
 
 #IF
-CHECKITEM 镇魂[神阶] 1
+CHECKITEM 镇魂【神阶】 1
 #ACT
 GIVE 神器碎片 48
-TAKE 镇魂[神阶] 1
+TAKE 镇魂【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 48
 
 #IF
-CHECKITEM 八崩[神阶] 1
+CHECKITEM 八崩【神阶】 1
 #ACT
 GIVE 神器碎片 50
-TAKE 八崩[神阶] 1
+TAKE 八崩【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 50
 
 #IF
-CHECKITEM 噬浪罗杉[神阶] 1
+CHECKITEM 噬浪罗杉【神阶】 1
 #ACT
 GIVE 神器碎片 52
-TAKE 噬浪罗杉[神阶] 1
+TAKE 噬浪罗杉【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 52
 
 #IF
-CHECKITEM 天武神雷[神阶] 1
+CHECKITEM 天武神雷【神阶】 1
 #ACT
 GIVE 神器碎片 54
-TAKE 天武神雷[神阶] 1
+TAKE 天武神雷【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 54
 
 #IF
-CHECKITEM 冥铠[神阶] 1
+CHECKITEM 冥铠【神阶】 1
 #ACT
 GIVE 神器碎片 56
-TAKE 冥铠[神阶] 1
+TAKE 冥铠【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 56
 
 #IF
-CHECKITEM 上古魔甲[神阶] 1
+CHECKITEM 上古魔甲【神阶】 1
 #ACT
 GIVE 神器碎片 58
-TAKE 上古魔甲[神阶] 1
+TAKE 上古魔甲【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 58
 
 #IF
-CHECKITEM 逆水寒[神阶] 1
+CHECKITEM 逆水寒【神阶】 1
 #ACT
 GIVE 神器碎片 60
-TAKE 逆水寒[神阶] 1
+TAKE 逆水寒【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 60
 
@@ -3584,10 +3584,10 @@ INC N$分解装备数量 1
 INC N$分解碎片数量 38
 
 #IF
-CHECKITEM 封龙[仙阶] 1
+CHECKITEM 封龙【仙阶】 1
 #ACT
 GIVE 神器碎片 40
-TAKE 封龙[仙阶] 1
+TAKE 封龙【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 40
 

@@ -39,7 +39,7 @@ TAKE 开天残④
 TAKE 开天残⑤
 TAKE 开天残⑥
 TAKE 开天残⑦
-GIVE 开天[时装]
+GIVE 开天【时装】
 MOVR <$STR(N$纵轴坐标)> 100 500
 SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【开天[时装]】/FCOLOR=58>
 GOTO @MAIN

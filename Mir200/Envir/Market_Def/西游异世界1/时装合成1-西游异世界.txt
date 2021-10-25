@@ -40,7 +40,7 @@ TAKE 黄金残④
 TAKE 黄金残⑤
 TAKE 黄金残⑥
 TAKE 黄金残⑦
-GIVE 黄金[时装]
+GIVE 黄金【时装】
 MOVR <$STR(N$纵轴坐标)> 100 500
 SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【黄金[时装]】/FCOLOR=58>
 GOTO @MAIN

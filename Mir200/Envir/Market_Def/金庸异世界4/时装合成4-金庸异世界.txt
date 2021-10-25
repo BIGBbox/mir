@@ -40,7 +40,7 @@ take 天使残④
 take 天使残⑤
 take 天使残⑥
 take 天使残⑦
-GIVE 天使[时装]
+GIVE 天使【时装】
 MOVR <$STR(N$纵轴坐标)> 100 500
 SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【天使[时装]】/FCOLOR=58>
 GOTO @MAIN
