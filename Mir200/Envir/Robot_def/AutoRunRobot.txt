@@ -1,4 +1,4 @@
-;#AutoRun NPC SEC 30 @随机地图链接
+#AutoRun NPC SEC 30 @随机地图链接
 #AutoRun NPC RUNONWEEK 2:10:55 @攻城提示
 #AutoRun NPC RUNONWEEK 2:20:00 @开启攻城
 #AutoRun NPC RUNONWEEK 2:22:00 @攻城结束
