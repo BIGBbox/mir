@@ -31,6 +31,12 @@ MOV S$给予称号 1
 mov S$称号佩戴按钮
 
 #if
+not CheckContainsText <$STR(T1)> 乾坤·风华绝月
+#act
+messagebox 需要将初级称号升满,才能升级中级称号
+break
+
+#if
 #act
 ReadConfigFileItem ..\QuestDiary\称号系统\高级称号\高级称号数据.txt 称号数量 称号数量 S$高级称号数量
 goto @获取当前中级称号
@@ -78,8 +84,8 @@ GOTO @中级称号主界面
     <Text|id=称号体力|x=0|y=68|color=58|size=14|text=[<$STR(S$体力增加)>]>
 
 <Img|id=升级条件|children={条件1,条件2,花翎特效,佩戴花翎}|x=280|y=180.0|height=1|width=1|img=public/1900000665.png>
-    <Text|id=条件1|x=0|y=10|color=222|size=15|text=[高级称号证明*<$STR(S$高级称号证明数量)>]>
-    <Text|id=条件2|x=0|y=35|color=222|size=15|text=[天下币*<$STR(S$所需天下币)>]>
+    <Text|id=条件1|x=0|y=10|color=222|size=15|text=[高级称号证明*<$STR(S$高级称号证明数量)>+天下币*<$STR(S$所需天下币)>]>
+;<Text|id=条件2|x=0|y=35|color=222|size=15|text=[天下币*<$STR(S$所需天下币)>]>
     <Effect|id=花翎特效|x=80|y=230|effectid=<$str(S$称号称号花翎)>|effecttype=0|scale=1|speed=1|act=0|dir=4>
     <$STR(S$称号佩戴按钮)>
 

@@ -22,14 +22,14 @@
 
 [@晋升1]
 #IF
-CHECKgamepoint > 8887
+CHECKMONEY RMB点 > 8887
 CHECKITEM 开天【时装】
 CHECKITEM 黄金【时装】
 CHECKITEM 嗜血【时装】
 CHECKITEM 制裁【时装】
 CHECKITEM 天使【时装】
 #ACT
-gamepoint - 8888
+money RMB点 - 8888
 TAKE 开天【时装】
 TAKE 黄金【时装】
 TAKE 嗜血【时装】
@@ -48,16 +48,16 @@ BREAK
 
 [@回收1]
 #IF
-CHECKITEM 天下杀戮[时装] 1
+CHECKITEM 天下杀戮【时装】 1
 #ACT
-gamepoint + 1888
-TAKE 天下杀戮[时装] 1
+money RMB点 + 1888
+TAKE 天下杀戮【时装】 1
 MOVR <$STR(N$纵轴坐标)> 100 500
 SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功回收/FCOLOR=253><【天下杀戮[时装]】/FCOLOR=58>
 GOTO @MAIN
 BREAK
 #elseact
-MESSAGEBOX 回收条件不足??\\1、你没有天下杀戮[时装] 1！
+MESSAGEBOX 回收条件不足??\\1、你没有天下杀戮【时装】 1！
 BREAK
 
 

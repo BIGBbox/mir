@@ -2,10 +2,13 @@
 {
 
 #if
+equal U108 3
 #act
 mov S$任务状态 修复神水,破界の无边和上古异兽/FCOLOR=250
 DELAYGOTO 10 @村长
-
+#elseact
+messagebox 尊敬的勇士,你已经做过这个任务了!!
+break
 
 [@村长]
 

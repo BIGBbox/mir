@@ -2,10 +2,13 @@
 {
 
 #if
+equal U108 6
 #act
 mov S$任务状态 10W经验,野蛮冲撞,盟重回城石,随机传送石,2小时远程回收体验卡/FCOLOR=250
 DELAYGOTO 10 @衣服店老板
-
+#elseact
+messagebox 尊敬的勇士,你已经做过这个任务了!!
+break
 
 [@衣服店老板]
 #If

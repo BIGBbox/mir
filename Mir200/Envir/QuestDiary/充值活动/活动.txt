@@ -396,13 +396,14 @@ GetValidstr <$STR(S$每日奖励串)> & S$奖品内容 S$每日奖励串
 GetValidstr <$STR(S$奖品内容)> * S$奖品 S$数量
 ;GetDBItemFieldValue <$STR(S$奖品)> idx S$奖品id
 
-#IF
-NOT EQUAL <$STR(S$奖品)> 爆率提升
-NOT EQUAL <$STR(S$奖品)> 回收加成
+#if
+; #or
+; NOT EQUAL <$STR(S$奖品)> 爆率提升
+; NOT EQUAL <$STR(S$奖品)> 回收加成
 #ACT
 GiveStateItem <$STR(S$奖品)> <$STR(S$数量)> 0 1 0 0 1 1 1 1
 ;GIVE <$STR(S$奖品)> <$STR(S$数量)>
-;SENDMSG 5 <$STR(S$奖品)>----<$STR(S$数量)>
+; SENDMSG 5 <$STR(S$奖品)>----<$STR(S$数量)>
 #IF
 NOT EQUAL S$每日奖励串
 #ACT
@@ -636,12 +637,16 @@ GetValidstr <$STR(S$累充绑定串)> & S$奖品是否绑定 S$累充绑定串
 #if
 equal <$STR(S$奖品是否绑定)> 1
 not CheckContainsText <$STR(S$奖品)> 元宝
+NOT EQUAL <$STR(S$奖品)> 爆率提升
+NOT EQUAL <$STR(S$奖品)> 回收加成
 #act
 GiveStateItem <$STR(S$奖品)> <$STR(S$数量)> 0 1 0 0 1 1 1 1
 
 #if
 equal <$STR(S$奖品是否绑定)> 0
 not CheckContainsText <$STR(S$奖品)> 元宝
+NOT EQUAL <$STR(S$奖品)> 爆率提升
+NOT EQUAL <$STR(S$奖品)> 回收加成
 #act
 GiveStateItem <$STR(S$奖品)> <$STR(S$数量)> 0 0 0 0 0 0 0 0
 

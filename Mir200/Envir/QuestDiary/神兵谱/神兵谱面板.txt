@@ -51,10 +51,15 @@ inc S$控件 <Button|id=rightTips|x=61|y=43|<$str(S$界面头部)>>
 #IF
 CHECK [<$str(S$装备标记)>] 1
 #act
-inc S$控件 <Button|id=click_btn<$str(N$神兵谱序号)>|x=<$str(N$X激活按钮坐标)>|y=<$str(N$Y激活按钮坐标)>|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|grey=1>
-inc S$控件 <Effect|id=激活特效<$str(N$神兵谱序号)>|x=<$str(N$X激活特效坐标)>|y=<$str(N$Y激活特效坐标)>|effectid=4529|effecttype=0|scale=2.5|speed=1>
+; inc S$控件 <Button|id=click_btn<$str(N$神兵谱序号)>|x=<$str(N$X激活按钮坐标)>|y=<$str(N$Y激活按钮坐标)>|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|grey=1>
+; inc S$控件 <Effect|id=激活特效<$str(N$神兵谱序号)>|x=<$str(N$X激活特效坐标)>|y=<$str(N$Y激活特效坐标)>|effectid=4529|effecttype=0|scale=2.5|speed=1>
+; mov N$新Y <$str(N$Y激活按钮坐标)>
+; inc N$新Y 30
+; sendmsg 5 <$str(N$Y激活按钮坐标)>____<$str(N$新Y)>
+inc S$控件 <Img|id=激活特效<$str(N$神兵谱序号)>|x=<$str(N$X激活按钮坐标)>|y=<$str(N$Y激活按钮坐标)>|width=67|height=26|img=public/icon/common1055.png>
 #elseact
 inc S$控件 <Button|id=click_btn<$str(N$神兵谱序号)>|x=<$str(N$X激活按钮坐标)>|y=<$str(N$Y激活按钮坐标)>|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|link=@激活#装备名字=<$str(S$装备名字)>#装备标记=<$str(S$装备标记)>>
+
 
 
 #IF

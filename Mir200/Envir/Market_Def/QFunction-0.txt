@@ -7964,6 +7964,8 @@ SENDMSG 7 {增加|56:56:0}{[2000000]|250:56:0}{金币，您当前金币总数为|56:56:0}{[<$
 
 ; 装备任意穿戴触发
 [@TakeOnEx]
+#if
+not equal <$MAPTITLE> 比奇城
 #ACT
 ; SENDMSG 6 人物穿装备，位置[<$CURRTAKETEMPOS>]，物品<$CURRTEMNAME>，ID<$CURRTEMMAKEINDEX> 
 ; #CALL [\游戏登陆\顶部属性.txt] @顶部属性显示
@@ -7971,6 +7973,8 @@ delaygoto 1000 @刷新顶部属性栏
 
 ; ; 装备任意脱触发
 [@TakeOffEx]
+#if
+not equal <$MAPTITLE> 比奇城
 #ACT
 ; SENDMSG 6 人物脱装备，位置[<$CURRTAKETEMPOS>]，物品<$CURRTEMNAME>，ID<$CURRTEMMAKEINDEX> 
 ; #CALL [\游戏登陆\顶部属性.txt] @顶部属性显示

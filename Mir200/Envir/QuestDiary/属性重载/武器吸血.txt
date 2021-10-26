@@ -9,7 +9,7 @@ mov N$¹¥»÷ÎüÑª 0
 #IF
 CHECKTITLE ¿ñ±©
 #ACT
-INC N$¹¥»÷ÎüÑª 1
+INC N$¹¥»÷ÎüÑª 5
 
 #IF
 CHECKTITLE É³³Ç¾èÏ×

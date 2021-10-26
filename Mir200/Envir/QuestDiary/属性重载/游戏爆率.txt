@@ -361,269 +361,269 @@ INC N$暴率加成 54
 
 
 #IF
-CHECKITEMW 观世音面纱[西游神器]
+CHECKITEMW 观世音面纱【西游神器】
 #ACT
 INC N$暴率加成 20
 
 #IF
-CHECKITEMW 金刚伏魔盾[西游神器]
+CHECKITEMW 金刚伏魔盾【西游神器】
 #ACT
 INC N$暴率加成 20
 
 #IF
-CHECKITEMW 羽扇纶巾[三国神器]
+CHECKITEMW 羽扇纶巾【三国神器】
 #ACT
 INC N$暴率加成 20
 
 #IF
-CHECKITEMW 过五关斩六将[三国神器]
+CHECKITEMW 过五关斩六将【三国神器】
 #ACT
 INC N$暴率加成 20
 
 #IF
-CHECKITEMW 挟天子以令诸侯[三国神器]
+CHECKITEMW 挟天子以令诸侯【三国神器】
 #ACT
 INC N$暴率加成 20
 
 #IF
-CHECKITEMW 一骑当千[三国神器]
+CHECKITEMW 一骑当千【三国神器】
 #ACT
 INC N$暴率加成 20
 
 #IF
-CHECKITEMW 金龙玉凤[帝王神器]
+CHECKITEMW 金龙玉凤【帝王神器】
 #ACT
 INC N$暴率加成 20
 
 #IF
-CHECKITEMW 励精图治[帝王神器]
+CHECKITEMW 励精图治【帝王神器】
 #ACT
 INC N$暴率加成 20
 
 #IF
-CHECKITEMW 九重天子[帝王神器]
+CHECKITEMW 九重天子【帝王神器】
 #ACT
 INC N$暴率加成 20
 
 #IF
-CHECKITEMW 南征北战[帝王神器]
+CHECKITEMW 南征北战【帝王神器】
 #ACT
 INC N$暴率加成 20
 
 #IF
-CHECKITEMW 乾坤大挪移[金庸神器]
+CHECKITEMW 乾坤大挪移【金庸神器】
 #ACT
 INC N$暴率加成 30
 
 #IF
-CHECKITEMW 凌波微步[金庸神器]
+CHECKITEMW 凌波微步【金庸神器】
 #ACT
 INC N$暴率加成 30
 
 #IF
-CHECKITEMW 黯然销魂掌[金庸神器]
+CHECKITEMW 黯然销魂掌【金庸神器】
 #ACT
 INC N$暴率加成 30
 
 #IF
-CHECKITEMW 天山折梅手[金庸神器]
+CHECKITEMW 天山折梅手【金庸神器】
 #ACT
 INC N$暴率加成 30
 
 #IF
-CHECKITEMW 雅典娜的召唤[圣斗士神器]
+CHECKITEMW 雅典娜的召唤【圣斗士神器】
 #ACT
 INC N$暴率加成 30
 
 #IF
-CHECKITEMW 曙光女神之宽恕[圣斗士神器]
+CHECKITEMW 曙光女神之宽恕【圣斗士神器】
 #ACT
 INC N$暴率加成 30
 
 #IF
-CHECKITEMW 修罗圣剑[圣斗士神器]
+CHECKITEMW 修罗圣剑【圣斗士神器】
 #ACT
 INC N$暴率加成 30
 
 #IF
-CHECKITEMW 星红旋风[圣斗士神器]
+CHECKITEMW 星红旋风【圣斗士神器】
 #ACT
 INC N$暴率加成 30
 
 #IF
-CHECKITEMW 雪夜上梁山[水浒神器]
+CHECKITEMW 雪夜上梁山【水浒神器】
 #ACT
 INC N$暴率加成 40
 
 #IF
-CHECKITEMW 智取生辰纲[水浒神器]
+CHECKITEMW 智取生辰纲【水浒神器】
 #ACT
 INC N$暴率加成 40
 
 #IF
-CHECKITEMW 血溅鸳鸯楼[水浒神器]
+CHECKITEMW 血溅鸳鸯楼【水浒神器】
 #ACT
 INC N$暴率加成 40
 
 #IF
-CHECKITEMW 拳打镇关西[水浒神器]
+CHECKITEMW 拳打镇关西【水浒神器】
 #ACT
 INC N$暴率加成 40
 
 #IF
-CHECKITEMW 伏龙鼎[诛仙神器]
+CHECKITEMW 伏龙鼎【诛仙神器】
 #ACT
 INC N$暴率加成 50
 
 #IF
-CHECKITEMW 摄魂[诛仙神器]
+CHECKITEMW 摄魂【诛仙神器】
 #ACT
 INC N$暴率加成 50
 
 #IF
-CHECKITEMW 大悲金轮[诛仙神器]
+CHECKITEMW 大悲金轮【诛仙神器】
 #ACT
 INC N$暴率加成 50
 
 #IF
-CHECKITEMW 玄火鉴[诛仙神器]
+CHECKITEMW 玄火鉴【诛仙神器】
 #ACT
 INC N$暴率加成 50
 
 #IF
-CHECKITEMW 量天尺[诛仙神器]
+CHECKITEMW 量天尺【诛仙神器】
 #ACT
 INC N$暴率加成 50
 
 #IF
-CHECKITEMW 暴君之怒[暗黑神器]
+CHECKITEMW 暴君之怒【暗黑神器】
 #ACT
 INC N$暴率加成 60
 
 #IF
-CHECKITEMW 不死皇冠[暗黑神器]
+CHECKITEMW 不死皇冠【暗黑神器】
 #ACT
 INC N$暴率加成 60
 
 #IF
-CHECKITEMW 吸魂者[暗黑神器]
+CHECKITEMW 吸魂者【暗黑神器】
 #ACT
 INC N$暴率加成 60
 
 #IF
-CHECKITEMW 乔丹之石[暗黑神器]
+CHECKITEMW 乔丹之石【暗黑神器】
 #ACT
 INC N$暴率加成 60
 
 #IF
-CHECKITEMW 天堂的信徒[暗黑神器]
+CHECKITEMW 天堂的信徒【暗黑神器】
 #ACT
 INC N$暴率加成 60
 
 #IF
-CHECKITEMW 地狱的伪装[暗黑神器]
+CHECKITEMW 地狱的伪装【暗黑神器】
 #ACT
 INC N$暴率加成 60
 
 
 
 #IF
-CHECKITEMW 盘古幡[上古神器]
+CHECKITEMW 盘古幡【上古神器】
 #ACT
 INC N$暴率加成 80
 
 #IF
-CHECKITEMW 补天石[上古神器]
+CHECKITEMW 补天石【上古神器】
 #ACT
 INC N$暴率加成 80
 
 #IF
-CHECKITEMW 东皇钟[上古神器]
+CHECKITEMW 东皇钟【上古神器】
 #ACT
 INC N$暴率加成 80
 
 #IF
-CHECKITEMW 昆仑镜[上古神器]
+CHECKITEMW 昆仑镜【上古神器】
 #ACT
 INC N$暴率加成 80
 
 #IF
-CHECKITEMW 先天五行旗[上古神器]
+CHECKITEMW 先天五行旗【上古神器】
 #ACT
 INC N$暴率加成 80
 
 #IF
-CHECKITEMW 追日靴[上古神器]
+CHECKITEMW 追日靴【上古神器】
 #ACT
 INC N$暴率加成 80
 
 #IF
-CHECKITEMW 封天印[上古神器]
+CHECKITEMW 封天印【上古神器】
 #ACT
 INC N$暴率加成 80
 
 #IF
-CHECKITEMW 崆峒印[上古神器]
+CHECKITEMW 崆峒印【上古神器】
 #ACT
 INC N$暴率加成 80
 
 #IF
-CHECKITEMW 轩辕剑[上古神器]
+CHECKITEMW 轩辕剑【上古神器】
 #ACT
 INC N$暴率加成 80
 
 #IF
-CHECKITEMW 太极图[上古神器]
+CHECKITEMW 太极图【上古神器】
 #ACT
 INC N$暴率加成 80
 
 #IF
-CHECKITEMW 玲珑塔[上古神器]
+CHECKITEMW 玲珑塔【上古神器】
 #ACT
 INC N$暴率加成 80
 
 #IF
-CHECKITEMW 昊天塔[上古神器]
+CHECKITEMW 昊天塔【上古神器】
 #ACT
 INC N$暴率加成 80
 
 #IF
-CHECKITEMW 萨德[Zod]
+CHECKITEMW 萨德【Zod】
 #ACT
 INC N$暴率加成 10
 
 #IF
-CHECKITEMW 查姆[Cham]
+CHECKITEMW 查姆【Cham】
 #ACT
 INC N$暴率加成 10
 
 #IF
-CHECKITEMW 古尔[Gul]
+CHECKITEMW 古尔【Gul】
 #ACT
 INC N$暴率加成 10
 
 #IF
-CHECKITEMW 那夫[Nef]
+CHECKITEMW 那夫【Nef】
 #ACT
 INC N$暴率加成 10
 
 #IF
-CHECKITEMW 罗[Lo]
+CHECKITEMW 罗【Lo】
 #ACT
 INC N$暴率加成 10
 
 #IF
-CHECKITEMW 瑟[Sur]
+CHECKITEMW 瑟【Sur】
 #ACT
 INC N$暴率加成 10
 
 #IF
-CHECKITEMW 贝[Ber]
+CHECKITEMW 贝【Ber】
 #ACT
 INC N$暴率加成 10
 
 #IF
-CHECKITEMW 乔[Jah]
+CHECKITEMW 乔【Jah】
 #ACT
 INC N$暴率加成 10
 

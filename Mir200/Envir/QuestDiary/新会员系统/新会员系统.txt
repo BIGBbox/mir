@@ -595,6 +595,7 @@ ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(S$参数)> 所需装备
 ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(S$参数)> 所需时装 S$所需时装串
 ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(S$参数)> 所需神器 S$所需神器串
 ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(S$参数)> 所需转生 S$所需转生串
+ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(S$参数)> 人物等级 S$所需人物等级
 mov S$时装串 <$STR(T4)>
 
 GOTO @获取怪物击杀
@@ -655,7 +656,10 @@ mov S$flag1 0
 
 #if
 equal <$STR(S$击杀怪物串)> 学习技能
+not CHECKSKILL <$STR(S$击杀怪物串)> = 1
 #act
+mov S$flag1 0
+
 
 
 
@@ -667,6 +671,14 @@ mov S$flag2 1
 #if
 equal <$STR(S$所需称号串)>
 #act
+break
+
+; 所需人物等级
+#if
+not equal <$STR(S$所需人物等级)> 
+not checklevelex > <$STR(S$所需人物等级)> 
+#act
+mov S$flag2 0
 break
 
 #if
@@ -734,6 +746,8 @@ break
 
 #if
 not CheckTakeOnItem <$STR(S$所需时装串)>
+not CheckContainsText <$str(T5)> <$STR(S$所需时装串)> 
+
 #act
 mov S$flag5 = 0
 

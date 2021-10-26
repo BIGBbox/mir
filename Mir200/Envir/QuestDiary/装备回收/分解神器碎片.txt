@@ -1281,282 +1281,282 @@ INC N$分解装备数量 1
 INC N$分解碎片数量 3
 
 #IF
-CHECKITEM 幽影之枪[灵阶] 1
+CHECKITEM 幽影之枪【灵阶】 1
 #ACT
 GIVE 神器碎片 2
-TAKE 幽影之枪[灵阶] 1
+TAKE 幽影之枪【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 2
 
 #IF
-CHECKITEM 神圣之剑[灵阶] 1
+CHECKITEM 神圣之剑【灵阶】 1
 #ACT
 GIVE 神器碎片 4
-TAKE 神圣之剑[灵阶] 1
+TAKE 神圣之剑【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 4
 
 #IF
-CHECKITEM 胜利之匕[灵阶] 1
+CHECKITEM 胜利之匕【灵阶】 1
 #ACT
 GIVE 神器碎片 6
-TAKE 胜利之匕[灵阶] 1
+TAKE 胜利之匕【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 6
 
 #IF
-CHECKITEM 涅幻之刃[灵阶] 1
+CHECKITEM 涅幻之刃【灵阶】 1
 #ACT
 GIVE 神器碎片 8
-TAKE 涅幻之刃[灵阶] 1
+TAKE 涅幻之刃【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 8
 
 #IF
-CHECKITEM 嗜血之矛[灵阶] 1
+CHECKITEM 嗜血之矛【灵阶】 1
 #ACT
 GIVE 神器碎片 10
-TAKE 嗜血之矛[灵阶] 1
+TAKE 嗜血之矛【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 10
 
 #IF
-CHECKITEM 冰之枪[灵阶] 1
+CHECKITEM 冰之枪【灵阶】 1
 #ACT
 GIVE 神器碎片 12
-TAKE 冰之枪[灵阶] 1
+TAKE 冰之枪【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 12
 
 #IF
-CHECKITEM 天御牙[灵阶] 1
+CHECKITEM 天御牙【灵阶】 1
 #ACT
 GIVE 神器碎片 14
-TAKE 天御牙[灵阶] 1
+TAKE 天御牙【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 14
 
 #IF
-CHECKITEM 黄金圣龙之剑[灵阶] 1
+CHECKITEM 黄金圣龙之剑【灵阶】 1
 #ACT
 GIVE 神器碎片 16
-TAKE 黄金圣龙之剑[灵阶] 1
+TAKE 黄金圣龙之剑【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 16
 
 #IF
-CHECKITEM 血矛[灵阶] 1
+CHECKITEM 血矛【灵阶】 1
 #ACT
 GIVE 神器碎片 18
-TAKE 血矛[灵阶] 1
+TAKE 血矛【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 18
 
 #IF
-CHECKITEM 震天[灵阶] 1
+CHECKITEM 震天【灵阶】 1
 #ACT
 GIVE 神器碎片 20
-TAKE 震天[灵阶] 1
+TAKE 震天【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 20
 
 #IF
-CHECKITEM 咆哮之刀[仙阶] 1
+CHECKITEM 咆哮之刀【仙阶】 1
 #ACT
 GIVE 神器碎片 22
-TAKE 咆哮之刀[仙阶] 1
+TAKE 咆哮之刀【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 22
 
 #IF
-CHECKITEM 邪恶之戟[仙阶] 1
+CHECKITEM 邪恶之戟【仙阶】 1
 #ACT
 GIVE 神器碎片 24
-TAKE 邪恶之戟[仙阶] 1
+TAKE 邪恶之戟【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 24
 
 #IF
-CHECKITEM 风华之鞭[仙阶] 1
+CHECKITEM 风华之鞭【仙阶】 1
 #ACT
 GIVE 神器碎片 26
-TAKE 风华之鞭[仙阶] 1
+TAKE 风华之鞭【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 26
 
 #IF
-CHECKITEM 灵魂之锤[仙阶] 1
+CHECKITEM 灵魂之锤【仙阶】 1
 #ACT
 GIVE 神器碎片 28
-TAKE 灵魂之锤[仙阶] 1
+TAKE 灵魂之锤【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 28
 
 #IF
-CHECKITEM 愤怒咆哮之刃[仙阶] 1
+CHECKITEM 愤怒咆哮之刃【仙阶】 1
 #ACT
 GIVE 神器碎片 30
-TAKE 愤怒咆哮之刃[仙阶] 1
+TAKE 愤怒咆哮之刃【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 30
 
 #IF
-CHECKITEM 乾坤一剑[仙阶] 1
+CHECKITEM 乾坤一剑【仙阶】 1
 #ACT
 GIVE 神器碎片 32
-TAKE 乾坤一剑[仙阶] 1
+TAKE 乾坤一剑【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 32
 
 #IF
-CHECKITEM 绝望[仙阶] 1
+CHECKITEM 绝望【仙阶】 1
 #ACT
 GIVE 神器碎片 34
-TAKE 绝望[仙阶] 1
+TAKE 绝望【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 34
 
 #IF
-CHECKITEM 玄铁剑[仙阶] 1
+CHECKITEM 玄铁剑【仙阶】 1
 #ACT
 GIVE 神器碎片 36
-TAKE 玄铁剑[仙阶] 1
+TAKE 玄铁剑【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 36
 
 #IF
-CHECKITEM 玄铁枪[仙阶] 1
+CHECKITEM 玄铁枪【仙阶】 1
 #ACT
 GIVE 神器碎片 38
-TAKE 玄铁枪[仙阶] 1
+TAKE 玄铁枪【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 38
 
 #IF
-CHECKITEM 嗜血杀戮斧[仙阶] 1
+CHECKITEM 嗜血杀戮斧【仙阶】 1
 #ACT
 GIVE 神器碎片 40
-TAKE 嗜血杀戮斧[仙阶] 1
+TAKE 嗜血杀戮斧【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 40
 
 #IF
-CHECKITEM 破灭[神阶] 1
+CHECKITEM 破灭【神阶】 1
 #ACT
 GIVE 神器碎片 42
-TAKE 破灭[神阶] 1
+TAKE 破灭【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 42
 
 #IF
-CHECKITEM 追魂之剑[神阶] 1
+CHECKITEM 追魂之剑【神阶】 1
 #ACT
 GIVE 神器碎片 44
-TAKE 追魂之剑[神阶] 1
+TAKE 追魂之剑【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 44
 
 #IF
-CHECKITEM 胜利之不灭枪[神阶] 1
+CHECKITEM 胜利之不灭枪【神阶】 1
 #ACT
 GIVE 神器碎片 46
-TAKE 胜利之不灭枪[神阶] 1
+TAKE 胜利之不灭枪【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 46
 
 #IF
-CHECKITEM 寒冬之刃[神阶] 1
+CHECKITEM 寒冬之刃【神阶】 1
 #ACT
 GIVE 神器碎片 48
-TAKE 寒冬之刃[神阶] 1
+TAKE 寒冬之刃【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 48
 
 #IF
-CHECKITEM 献祭血羽刃[神阶] 1
+CHECKITEM 献祭血羽刃【神阶】 1
 #ACT
 GIVE 神器碎片 50
-TAKE 献祭血羽刃[神阶] 1
+TAKE 献祭血羽刃【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 50
 
 #IF
-CHECKITEM 人皇匕[神阶] 1
+CHECKITEM 人皇匕【神阶】 1
 #ACT
 GIVE 神器碎片 52
-TAKE 人皇匕[神阶] 1
+TAKE 人皇匕【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 52
 
 #IF
-CHECKITEM 战炎[神阶] 1
+CHECKITEM 战炎【神阶】 1
 #ACT
 GIVE 神器碎片 54
-TAKE 战炎[神阶] 1
+TAKE 战炎【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 54
 
 #IF
-CHECKITEM 星隐[神阶] 1
+CHECKITEM 星隐【神阶】 1
 #ACT
 GIVE 神器碎片 56
-TAKE 星隐[神阶] 1
+TAKE 星隐【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 56
 
 #IF
-CHECKITEM 天炼[神阶] 1
+CHECKITEM 天炼【神阶】 1
 #ACT
 GIVE 神器碎片 58
-TAKE 天炼[神阶] 1
+TAKE 天炼【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 58
 
 #IF
-CHECKITEM 恶魔弯刀[神阶] 1
+CHECKITEM 恶魔弯刀【神阶】 1
 #ACT
 GIVE 神器碎片 60
-TAKE 恶魔弯刀[神阶] 1
+TAKE 恶魔弯刀【神阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 60
 
 #IF
-CHECKITEM 乌金战铠[灵阶] 1
+CHECKITEM 乌金战铠【灵阶】 1
 #ACT
 GIVE 神器碎片 2
-TAKE 乌金战铠[灵阶] 1
+TAKE 乌金战铠【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 2
 
 #IF
-CHECKITEM 天心铠甲[灵阶] 1
+CHECKITEM 天心铠甲【灵阶】 1
 #ACT
 GIVE 神器碎片 4
-TAKE 天心铠甲[灵阶] 1
+TAKE 天心铠甲【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 4
 
 #IF
-CHECKITEM 玄武战袍[灵阶] 1
+CHECKITEM 玄武战袍【灵阶】 1
 #ACT
 GIVE 神器碎片 6
-TAKE 玄武战袍[灵阶] 1
+TAKE 玄武战袍【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 6
 
 #IF
-CHECKITEM 乾坤无畏铠[灵阶] 1
+CHECKITEM 乾坤无畏铠【灵阶】 1
 #ACT
 GIVE 神器碎片 8
-TAKE 乾坤无畏铠[灵阶] 1
+TAKE 乾坤无畏铠【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 8
 
 #IF
-CHECKITEM 紫阳百衲衣[灵阶] 1
+CHECKITEM 紫阳百衲衣【灵阶】 1
 #ACT
 GIVE 神器碎片 10
-TAKE 紫阳百衲衣[灵阶] 1
+TAKE 紫阳百衲衣【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 10
 
@@ -3272,314 +3272,314 @@ MOV N$分解碎片数量 0
 
 
 #IF
-CHECKITEM 幽影之枪[灵阶] 1
+CHECKITEM 幽影之枪【灵阶】 1
 #ACT
 GIVE 神器碎片 2
-TAKE 幽影之枪[灵阶] 1
+TAKE 幽影之枪【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 2
 
 #IF
-CHECKITEM 神圣之剑[灵阶] 1
+CHECKITEM 神圣之剑【灵阶】 1
 #ACT
 GIVE 神器碎片 4
-TAKE 神圣之剑[灵阶] 1
+TAKE 神圣之剑【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 4
 
 #IF
-CHECKITEM 胜利之匕[灵阶] 1
+CHECKITEM 胜利之匕【灵阶】 1
 #ACT
 GIVE 神器碎片 6
-TAKE 胜利之匕[灵阶] 1
+TAKE 胜利之匕【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 6
 
 #IF
-CHECKITEM 涅幻之刃[灵阶] 1
+CHECKITEM 涅幻之刃【灵阶】 1
 #ACT
 GIVE 神器碎片 8
-TAKE 涅幻之刃[灵阶] 1
+TAKE 涅幻之刃【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 8
 
 #IF
-CHECKITEM 嗜血之矛[灵阶] 1
+CHECKITEM 嗜血之矛【灵阶】 1
 #ACT
 GIVE 神器碎片 10
-TAKE 嗜血之矛[灵阶] 1
+TAKE 嗜血之矛【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 10
 
 #IF
-CHECKITEM 冰之枪[灵阶] 1
+CHECKITEM 冰之枪【灵阶】 1
 #ACT
 GIVE 神器碎片 12
-TAKE 冰之枪[灵阶] 1
+TAKE 冰之枪【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 12
 
 #IF
-CHECKITEM 天御牙[灵阶] 1
+CHECKITEM 天御牙【灵阶】 1
 #ACT
 GIVE 神器碎片 14
-TAKE 天御牙[灵阶] 1
+TAKE 天御牙【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 14
 
 #IF
-CHECKITEM 黄金圣龙之剑[灵阶] 1
+CHECKITEM 黄金圣龙之剑【灵阶】 1
 #ACT
 GIVE 神器碎片 16
-TAKE 黄金圣龙之剑[灵阶] 1
+TAKE 黄金圣龙之剑【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 16
 
 #IF
-CHECKITEM 血矛[灵阶] 1
+CHECKITEM 血矛【灵阶】 1
 #ACT
 GIVE 神器碎片 18
-TAKE 血矛[灵阶] 1
+TAKE 血矛【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 18
 
 #IF
-CHECKITEM 震天[灵阶] 1
+CHECKITEM 震天【灵阶】 1
 #ACT
 GIVE 神器碎片 20
-TAKE 震天[灵阶] 1
+TAKE 震天【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 20
 
 #IF
-CHECKITEM 咆哮之刀[仙阶] 1
+CHECKITEM 咆哮之刀【仙阶】 1
 #ACT
 GIVE 神器碎片 22
-TAKE 咆哮之刀[仙阶] 1
+TAKE 咆哮之刀【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 22
 
 #IF
-CHECKITEM 邪恶之戟[仙阶] 1
+CHECKITEM 邪恶之戟【仙阶】 1
 #ACT
 GIVE 神器碎片 24
-TAKE 邪恶之戟[仙阶] 1
+TAKE 邪恶之戟【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 24
 
 #IF
-CHECKITEM 风华之鞭[仙阶] 1
+CHECKITEM 风华之鞭【仙阶】 1
 #ACT
 GIVE 神器碎片 26
-TAKE 风华之鞭[仙阶] 1
+TAKE 风华之鞭【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 26
 
 #IF
-CHECKITEM 灵魂之锤[仙阶] 1
+CHECKITEM 灵魂之锤【仙阶】 1
 #ACT
 GIVE 神器碎片 28
-TAKE 灵魂之锤[仙阶] 1
+TAKE 灵魂之锤【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 28
 
 #IF
-CHECKITEM 愤怒咆哮之刃[仙阶] 1
+CHECKITEM 愤怒咆哮之刃【仙阶】 1
 #ACT
 GIVE 神器碎片 30
-TAKE 愤怒咆哮之刃[仙阶] 1
+TAKE 愤怒咆哮之刃【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 30
 
 #IF
-CHECKITEM 乾坤一剑[仙阶] 1
+CHECKITEM 乾坤一剑【仙阶】 1
 #ACT
 GIVE 神器碎片 32
-TAKE 乾坤一剑[仙阶] 1
+TAKE 乾坤一剑【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 32
 
 #IF
-CHECKITEM 绝望[仙阶] 1
+CHECKITEM 绝望【仙阶】 1
 #ACT
 GIVE 神器碎片 34
-TAKE 绝望[仙阶] 1
+TAKE 绝望【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 34
 
 #IF
-CHECKITEM 玄铁剑[仙阶] 1
+CHECKITEM 玄铁剑【仙阶】 1
 #ACT
 GIVE 神器碎片 36
-TAKE 玄铁剑[仙阶] 1
+TAKE 玄铁剑【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 36
 
 #IF
-CHECKITEM 玄铁枪[仙阶] 1
+CHECKITEM 玄铁枪【仙阶】 1
 #ACT
 GIVE 神器碎片 38
-TAKE 玄铁枪[仙阶] 1
+TAKE 玄铁枪【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 38
 
 #IF
-CHECKITEM 嗜血杀戮斧[仙阶] 1
+CHECKITEM 嗜血杀戮斧【仙阶】 1
 #ACT
 GIVE 神器碎片 40
-TAKE 嗜血杀戮斧[仙阶] 1
+TAKE 嗜血杀戮斧【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 40
 
 #IF
-CHECKITEM 乌金战铠[灵阶] 1
+CHECKITEM 乌金战铠【灵阶】 1
 #ACT
 GIVE 神器碎片 2
-TAKE 乌金战铠[灵阶] 1
+TAKE 乌金战铠【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 2
 
 #IF
-CHECKITEM 天心铠甲[灵阶] 1
+CHECKITEM 天心铠甲【灵阶】 1
 #ACT
 GIVE 神器碎片 4
-TAKE 天心铠甲[灵阶] 1
+TAKE 天心铠甲【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 4
 
 #IF
-CHECKITEM 玄武战袍[灵阶] 1
+CHECKITEM 玄武战袍【灵阶】 1
 #ACT
 GIVE 神器碎片 6
-TAKE 玄武战袍[灵阶] 1
+TAKE 玄武战袍【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 6
 
 #IF
-CHECKITEM 乾坤无畏铠[灵阶] 1
+CHECKITEM 乾坤无畏铠【灵阶】 1
 #ACT
 GIVE 神器碎片 8
-TAKE 乾坤无畏铠[灵阶] 1
+TAKE 乾坤无畏铠【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 8
 
 #IF
-CHECKITEM 紫阳百衲衣[灵阶] 1
+CHECKITEM 紫阳百衲衣【灵阶】 1
 #ACT
 GIVE 神器碎片 10
-TAKE 紫阳百衲衣[灵阶] 1
+TAKE 紫阳百衲衣【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 10
 
 #IF
-CHECKITEM 九黎披风[灵阶] 1
+CHECKITEM 九黎披风【灵阶】 1
 #ACT
 GIVE 神器碎片 12
-TAKE 九黎披风[灵阶] 1
+TAKE 九黎披风【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 12
 
 #IF
-CHECKITEM 仙元紫天[灵阶] 1
+CHECKITEM 仙元紫天【灵阶】 1
 #ACT
 GIVE 神器碎片 14
-TAKE 仙元紫天[灵阶] 1
+TAKE 仙元紫天【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 14
 
 #IF
-CHECKITEM 死亡魔魂[灵阶] 1
+CHECKITEM 死亡魔魂【灵阶】 1
 #ACT
 GIVE 神器碎片 16
-TAKE 死亡魔魂[灵阶] 1
+TAKE 死亡魔魂【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 16
 
 #IF
-CHECKITEM 暗黑之袍[灵阶] 1
+CHECKITEM 暗黑之袍【灵阶】 1
 #ACT
 GIVE 神器碎片 18
-TAKE 暗黑之袍[灵阶] 1
+TAKE 暗黑之袍【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 18
 
 #IF
-CHECKITEM 风流披风[灵阶] 1
+CHECKITEM 风流披风【灵阶】 1
 #ACT
 GIVE 神器碎片 20
-TAKE 风流披风[灵阶] 1
+TAKE 风流披风【灵阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 20
 
 #IF
-CHECKITEM 龙骨灵铠[仙阶] 1
+CHECKITEM 龙骨灵铠【仙阶】 1
 #ACT
 GIVE 神器碎片 22
-TAKE 龙骨灵铠[仙阶] 1
+TAKE 龙骨灵铠【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 22
 
 #IF
-CHECKITEM 原始蛇夫座[仙阶] 1
+CHECKITEM 原始蛇夫座【仙阶】 1
 #ACT
 GIVE 神器碎片 24
-TAKE 原始蛇夫座[仙阶] 1
+TAKE 原始蛇夫座【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 24
 
 #IF
-CHECKITEM 火神愤怒[仙阶] 1
+CHECKITEM 火神愤怒【仙阶】 1
 #ACT
 GIVE 神器碎片 26
-TAKE 火神愤怒[仙阶] 1
+TAKE 火神愤怒【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 26
 
 #IF
-CHECKITEM 天罡灭魂[仙阶] 1
+CHECKITEM 天罡灭魂【仙阶】 1
 #ACT
 GIVE 神器碎片 28
-TAKE 天罡灭魂[仙阶] 1
+TAKE 天罡灭魂【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 28
 
 #IF
-CHECKITEM 猩红[仙阶] 1
+CHECKITEM 猩红【仙阶】 1
 #ACT
 GIVE 神器碎片 30
-TAKE 猩红[仙阶] 1
+TAKE 猩红【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 30
 
 #IF
-CHECKITEM 血魔[仙阶] 1
+CHECKITEM 血魔【仙阶】 1
 #ACT
 GIVE 神器碎片 32
-TAKE 血魔[仙阶] 1
+TAKE 血魔【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 32
 
 #IF
-CHECKITEM 海神破天[仙阶] 1
+CHECKITEM 海神破天【仙阶】 1
 #ACT
 GIVE 神器碎片 34
-TAKE 海神破天[仙阶] 1
+TAKE 海神破天【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 34
 
 #IF
-CHECKITEM 魔鲨[仙阶] 1
+CHECKITEM 魔鲨【仙阶】 1
 #ACT
 GIVE 神器碎片 36
-TAKE 魔鲨[仙阶] 1
+TAKE 魔鲨【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 36
 
 #IF
-CHECKITEM 人马冰霜[仙阶] 1
+CHECKITEM 人马冰霜【仙阶】 1
 #ACT
 GIVE 神器碎片 38
-TAKE 人马冰霜[仙阶] 1
+TAKE 人马冰霜【仙阶】 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 38
 

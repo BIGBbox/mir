@@ -2,9 +2,13 @@
 {
 
 #if
+checklevelex < 15
 #act
 mov S$任务状态 10W经验,黑铁头盔和绿色项链/FCOLOR=250
 DELAYGOTO 10 @药店老板
+#elseact
+messagebox 尊敬的勇士,你已经做过这个任务了!!
+break
 
 [@药店老板]
 #If

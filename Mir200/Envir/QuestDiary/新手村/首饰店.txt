@@ -2,11 +2,14 @@
 {
 
 #if
+equal U108 4
 #act
 
 mov S$任务状态 10W经验,攻杀剑术,新手宝石,鹿皮靴,新手面巾/FCOLOR=250
 DELAYGOTO 10 @首饰店老板
-
+#elseact
+messagebox 尊敬的勇士,你已经做过这个任务了!!
+break
 
 [@首饰店老板]
 #If

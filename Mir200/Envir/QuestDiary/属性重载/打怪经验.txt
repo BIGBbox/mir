@@ -11,7 +11,7 @@ CHECKTITLE 至尊会员
 INC N$装备经验 80
 
 #IF
-CHECKITEMW 过五关斩六将[三国神器]
+CHECKITEMW 过五关斩六将【三国神器】
 #ACT
 INC N$装备经验 250
 
@@ -111,7 +111,7 @@ CHECKITEMW 阿波罗的愤怒
 INC N$装备经验 400
 
 #IF
-CHECKITEMW 昆仑镜[上古神器]
+CHECKITEMW 昆仑镜【上古神器】
 #ACT
 INC N$装备经验 550
 
