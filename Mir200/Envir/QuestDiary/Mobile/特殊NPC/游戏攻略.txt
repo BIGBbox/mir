@@ -48,25 +48,25 @@ GOTO @新手攻略
 mov S$攻略按钮 <$STR(S$攻略按钮01)>
 inc S$攻略按钮 <$STR(S$攻略按钮A2)>
 inc S$攻略按钮 <$STR(S$攻略按钮A3)>
-; inc S$攻略按钮 <$STR(S$攻略按钮A4)>
+inc S$攻略按钮 <$STR(S$攻略按钮A4)>
 ; inc S$攻略按钮 <$STR(S$攻略按钮A5)>
 ; inc S$攻略按钮 <$STR(S$攻略按钮A6)>
 ; inc S$攻略按钮 <$STR(S$攻略按钮A7)>
 ; inc S$攻略按钮 <$STR(S$攻略按钮A8)>
-mov S$攻略说明 <RText|id=7|children=7_1,7_2,7_3,7_4,7_5|x=210.0|y=75.0|size=20|text=<升级篇/FCOLOR=146>>
+mov S$攻略说明 <RText|id=7|children=7_1,7_2,7_3,7_4,7_5|x=210.0|y=75.0|size=20|text=<沉默攻略/FCOLOR=146>>
 inc S$攻略说明 <Img|id=7_1|x=-30|y=0|img=public/btn_6.png>
-; inc S$攻略说明 <RText|id=7_2|x=0|y=30|size=18|text=<新手上线关注公众号领取微信礼包和QQ礼包。/FCOLOR=135>>
-; inc S$攻略说明 <RText|id=7_3|x=0|y=60|size=18|text=<有能力的开个狂暴+沙捐+会员/FCOLOR=131>>
-; inc S$攻略说明 <RText|id=7_4|x=0|y=90|size=18|text=<随身经验一直涨到100级，升级更简单！/FCOLOR=135>>
-; inc S$攻略说明 <RText|id=7_5|x=0|y=120|size=18|text=<打怪会获得大量经验，怪物还会爆出经验卷。/FCOLOR=131>>
-inc S$攻略说明 <RText|id=8|children=8_1,8_2,8_3,8_4,8_5,8_6|x=210.0|y=240.0|size=20|text=<打金篇>>
+inc S$攻略说明 <RText|id=7_2|x=-30|y=30|size=18|text=<开服第一时间进入游戏，完成主线任务获取新手装备，完/FCOLOR=135>>
+inc S$攻略说明 <RText|id=7_3|x=-30|y=60|size=18|text=<成主线任务后可领取微信礼包和QQ礼包，领取礼包自动/FCOLOR=131>>
+inc S$攻略说明 <RText|id=7_4|x=-30|y=90|size=18|text=<学习召唤骷髅，可召唤一只强力宝宝配合打怪。此时建议/FCOLOR=135>>
+inc S$攻略说明 <RText|id=7_5|x=-30|y=120|size=18|text=<完成首充，领取40级武器衣服和完整时装，快人一步！/FCOLOR=131>>
+inc S$攻略说明 <RText|id=8|children=8_1,8_2,8_3,8_4,8_5,8_6|x=210.0|y=240.0|size=20|text=<少走弯路>>
 inc S$攻略说明 <Img|id=8_1|x=-30|y=0|img=public/btn_6.png>
-; inc S$攻略说明 <RText|id=8_2|x=0|y=30|size=18|text=<打怪会爆出元宝和绑定灵符/FCOLOR=135>>
-; inc S$攻略说明 <RText|id=8_3|x=0|y=60|size=18|text=<元宝可以在商城购买绑定灵符/FCOLOR=131>>
-; inc S$攻略说明 <RText|id=8_4|x=0|y=90|size=18|text=<打怪获得的多余装备可以回收获得元宝/FCOLOR=135>>
-; inc S$攻略说明 <RText|id=8_5|x=0|y=120|size=18|text=<开启狂暴可以增加50%的元宝回收收益/FCOLOR=131>>
-; inc S$攻略说明 <RText|id=8_6|x=0|y=150|size=18|text=<升级官职也可以增加元宝回收的收益（最高增加100%）/FCOLOR=135>>
-; inc S$攻略说明 <RText|id=15|x=250.0|y=465.0|size=16|text=<镇派群侠官方：承诺一切装备材料都可以打怪爆出！/FCOLOR=250>>
+inc S$攻略说明 <RText|id=8_2|x=-30|y=30|size=18|text=<本服有九大异世界，对应转生才可进入。所以转生很重要，/FCOLOR=135>>
+inc S$攻略说明 <RText|id=8_3|x=-30|y=60|size=18|text=<本服转生材料所有怪均可爆出，前5转材料爆率高，6到10/FCOLOR=131>>
+inc S$攻略说明 <RText|id=8_4|x=-30|y=90|size=18|text=<爆率低，如想快速获取可在会员礼包中充值获取。11到20/FCOLOR=135>>
+inc S$攻略说明 <RText|id=8_5|x=-30|y=120|size=18|text=<唯一转生道具怪物可爆出，也可在商城中购买。本服各大/FCOLOR=131>>
+inc S$攻略说明 <RText|id=8_6|x=-30|y=150|size=18|text=<陆均有专属各自专属装备，脸白起飞，脸黑多洗！/FCOLOR=135>>
+inc S$攻略说明 <RText|id=15|x=220.0|y=465.0|size=16|text=<沉默天下正版授权：承诺一切装备材料都可以打怪爆出！/FCOLOR=250>>
 GOTO @main_gl
 
 [@进阶攻略]
@@ -75,22 +75,22 @@ GOTO @main_gl
 mov S$攻略按钮 <$STR(S$攻略按钮A1)>
 inc S$攻略按钮 <$STR(S$攻略按钮02)>
 inc S$攻略按钮 <$STR(S$攻略按钮A3)>
-; inc S$攻略按钮 <$STR(S$攻略按钮A4)>
+inc S$攻略按钮 <$STR(S$攻略按钮A4)>
 ; inc S$攻略按钮 <$STR(S$攻略按钮A5)>
 ; inc S$攻略按钮 <$STR(S$攻略按钮A6)>
 ; inc S$攻略按钮 <$STR(S$攻略按钮A7)>
 ; inc S$攻略按钮 <$STR(S$攻略按钮A8)>
-mov S$攻略说明 <RText|id=7|children=7_1,7_2,7_3,7_4,7_5|x=210.0|y=75.0|size=20|text=<前期篇/FCOLOR=146>>
+mov S$攻略说明 <RText|id=7|children=7_1,7_2,7_3,7_4,7_5|x=210.0|y=75.0|size=20|text=<升级指南/FCOLOR=146>>
 inc S$攻略说明 <Img|id=7_1|x=-30|y=0|img=public/btn_6.png>
-; inc S$攻略说明 <RText|id=7_2|x=0|y=30|size=18|text=<尽快进入游戏首充后领取首充奖励提升打怪速度/FCOLOR=135>>
-; inc S$攻略说明 <RText|id=7_3|x=0|y=60|size=18|text=<多余的灵符可以购买赞助特权，可以获得打怪爆率和攻速/FCOLOR=131>>
-; inc S$攻略说明 <RText|id=7_4|x=0|y=90|size=18|text=<打怪还有额外的经验加成，升级快人一步/FCOLOR=135>>
-; inc S$攻略说明 <RText|id=7_5|x=0|y=120|size=18|text=<会员还会赠送转生礼包，让你转生快人一步/FCOLOR=131>>
-inc S$攻略说明 <RText|id=8|children=8_1,8_2,8_3,8_4,8_5,8_6|x=210.0|y=240.0|size=20|text=<中期篇>>
+inc S$攻略说明 <RText|id=7_2|x=-30|y=30|size=18|text=<进入游戏后完成主线任务可升到85级，除打怪可获取少量/FCOLOR=135>>
+inc S$攻略说明 <RText|id=7_3|x=-30|y=60|size=18|text=<经验外，本服唯一获取经验的方式就是挂机，挂机，挂机！/FCOLOR=131>>
+inc S$攻略说明 <RText|id=7_4|x=-30|y=90|size=18|text=<每秒5W经验值，升到200级毫无压力！/FCOLOR=135>>
+; inc S$攻略说明 <RText|id=7_5|x=-30|y=120|size=18|text=<会员还会赠送转生礼包，让你转生快人一步/FCOLOR=131>>
+inc S$攻略说明 <RText|id=8|children=8_1,8_2,8_3,8_4,8_5,8_6|x=210.0|y=240.0|size=20|text=<白日飞升>>
 inc S$攻略说明 <Img|id=8_1|x=-30|y=0|img=public/btn_6.png>
-; inc S$攻略说明 <RText|id=8_2|x=0|y=30|size=18|text=<每日限购的材料购买之后升级时装和奇经八脉/FCOLOR=135>>
+inc S$攻略说明 <RText|id=8_2|x=-30|y=30|size=18|text=<200级后新增加飞升玩法，长期服玩家的归属！/FCOLOR=135>>
 ; inc S$攻略说明 <RText|id=8_3|x=0|y=60|size=18|text=<限购分为元宝、绑定灵符、灵符多种可根据自身情况购买/FCOLOR=131>>
-; inc S$攻略说明 <RText|id=15|x=250.0|y=465.0|size=16|text=<镇派群侠官方：承诺一切装备材料都可以打怪爆出！/FCOLOR=250>>
+inc S$攻略说明 <RText|id=15|x=220.0|y=465.0|size=16|text=<沉默天下正版授权：承诺一切装备材料都可以打怪爆出！/FCOLOR=250>>
 GOTO @main_gl
 
 [@转生系统]
@@ -99,47 +99,47 @@ GOTO @main_gl
 mov S$攻略按钮 <$STR(S$攻略按钮A1)>
 inc S$攻略按钮 <$STR(S$攻略按钮A2)>
 inc S$攻略按钮 <$STR(S$攻略按钮03)>
-; inc S$攻略按钮 <$STR(S$攻略按钮A4)>
+inc S$攻略按钮 <$STR(S$攻略按钮A4)>
 ; inc S$攻略按钮 <$STR(S$攻略按钮A5)>
 ; inc S$攻略按钮 <$STR(S$攻略按钮A6)>
 ; inc S$攻略按钮 <$STR(S$攻略按钮A7)>
 ; inc S$攻略按钮 <$STR(S$攻略按钮A8)>
-mov S$攻略说明 <RText|id=7|children=7_1,7_2,7_3,7_4,7_5|x=210.0|y=75.0|size=20|text=<转生篇/FCOLOR=146>>
+mov S$攻略说明 <RText|id=7|children=7_1,7_2,7_3,7_4,7_5|x=210.0|y=75.0|size=20|text=<我要元宝/FCOLOR=146>>
 inc S$攻略说明 <Img|id=7_1|x=-30|y=0|img=public/btn_6.png>
-; inc S$攻略说明 <RText|id=7_2|x=0|y=30|size=18|text=<转生可以提高角色的攻击倍率，打架打怪必备/FCOLOR=135>>
-; inc S$攻略说明 <RText|id=7_3|x=0|y=60|size=18|text=<高级专属装备佩戴也需要转生等级/FCOLOR=131>>
-; inc S$攻略说明 <RText|id=7_4|x=0|y=90|size=18|text=<转生所需材料：转生神石+元宝/FCOLOR=135>>
-inc S$攻略说明 <RText|id=8|children=8_1,8_2,8_3,8_4,8_5,8_6|x=210.0|y=240.0|size=20|text=<材料篇>>
+inc S$攻略说明 <RText|id=7_2|x=-30|y=30|size=18|text=<①击杀怪物必定掉落元宝。/FCOLOR=135>>
+inc S$攻略说明 <RText|id=7_3|x=-30|y=60|size=18|text=<②装备回收获得大量元宝，日充礼包可获得回收加成道具。/FCOLOR=131>>
+inc S$攻略说明 <RText|id=7_4|x=-30|y=90|size=18|text=<③如果你大米充足，可在拍卖行购买他人寄售的元宝。/FCOLOR=135>>
+inc S$攻略说明 <RText|id=8|children=8_1,8_2,8_3,8_4,8_5,8_6|x=210.0|y=240.0|size=20|text=<我要天下币>>
 inc S$攻略说明 <Img|id=8_1|x=-30|y=0|img=public/btn_6.png>
-; inc S$攻略说明 <RText|id=8_2|x=0|y=30|size=18|text=<本服所有材料都可以从怪身上爆出/FCOLOR=135>>
-; inc S$攻略说明 <RText|id=8_3|x=0|y=60|size=18|text=<赞助、狂暴、沙捐、占卜、福源之玉可以提升打怪爆率/FCOLOR=131>>
-; inc S$攻略说明 <RText|id=8_4|x=0|y=90|size=18|text=<在镇派山庄327.328“万能商人”可以合成高级转生石/FCOLOR=135>>
-; inc S$攻略说明 <RText|id=15|x=250.0|y=465.0|size=16|text=<镇派群侠官方：承诺一切装备材料都可以打怪爆出！/FCOLOR=250>>
+inc S$攻略说明 <RText|id=8_2|x=-30|y=30|size=18|text=<①充值RMB点赠送天下币。/FCOLOR=135>>
+inc S$攻略说明 <RText|id=8_3|x=-30|y=60|size=18|text=<②天下币可在主城货币互换处由RMB点换取。/FCOLOR=131>>
+inc S$攻略说明 <RText|id=8_4|x=-30|y=90|size=18|text=<③天下币可由挑战BOSS，神魔BOSS，触发BOSS掉落。/FCOLOR=135>>
+inc S$攻略说明 <RText|id=15|x=220.0|y=465.0|size=16|text=<沉默天下正版授权：承诺一切装备材料都可以打怪爆出！/FCOLOR=250>>
 GOTO @main_gl
 
-; [@官职系统]
-; #IF
-; #ACT
-; mov S$攻略按钮 <$STR(S$攻略按钮A1)>
-; inc S$攻略按钮 <$STR(S$攻略按钮A2)>
-; inc S$攻略按钮 <$STR(S$攻略按钮A3)>
-; inc S$攻略按钮 <$STR(S$攻略按钮04)>
+[@官职系统]
+#IF
+#ACT
+mov S$攻略按钮 <$STR(S$攻略按钮A1)>
+inc S$攻略按钮 <$STR(S$攻略按钮A2)>
+inc S$攻略按钮 <$STR(S$攻略按钮A3)>    
+inc S$攻略按钮 <$STR(S$攻略按钮04)>
 ; inc S$攻略按钮 <$STR(S$攻略按钮A5)>
 ; inc S$攻略按钮 <$STR(S$攻略按钮A6)>
 ; inc S$攻略按钮 <$STR(S$攻略按钮A7)>
-; inc S$攻略按钮 <$STR(S$攻略按钮A8)>
-; mov S$攻略说明 <RText|id=7|children=7_1,7_2,7_3,7_4,7_5|x=210.0|y=75.0|size=20|text=<官职篇/FCOLOR=146>>
-; inc S$攻略说明 <Img|id=7_1|x=-30|y=0|img=public/btn_6.png>
-; inc S$攻略说明 <RText|id=7_2|x=0|y=30|size=18|text=<官职可以提高角色的爆率和元宝回收收益，打金必备/FCOLOR=135>>
-; inc S$攻略说明 <RText|id=7_3|x=0|y=60|size=18|text=<满级官职可以提高100%爆率、100%元宝回收收益/FCOLOR=131>>
-; inc S$攻略说明 <RText|id=7_4|x=0|y=90|size=18|text=<官职所需材料：官职证明+元宝/FCOLOR=135>>
-; inc S$攻略说明 <RText|id=8|children=8_1,8_2,8_3,8_4,8_5,8_6|x=210.0|y=240.0|size=20|text=<材料篇>>
-; inc S$攻略说明 <Img|id=8_1|x=-30|y=0|img=public/btn_6.png>
-; inc S$攻略说明 <RText|id=8_2|x=0|y=30|size=18|text=<本服所有材料都可以从怪身上爆出/FCOLOR=135>>
-; inc S$攻略说明 <RText|id=8_3|x=0|y=60|size=18|text=<赞助、狂暴、沙捐、占卜、福源之玉可以提升打怪爆率/FCOLOR=131>>
-; inc S$攻略说明 <RText|id=8_4|x=0|y=90|size=18|text=<在镇派山庄327.328“万能商人”可以合成高级官职证明/FCOLOR=135>>
-; inc S$攻略说明 <RText|id=15|x=250.0|y=465.0|size=16|text=<镇派群侠官方：承诺一切装备材料都可以打怪爆出！/FCOLOR=250>>
-; GOTO @main_gl
+; inc S$攻略按钮 <$STR(S$攻略按钮A8)>18:32 2021/10/26
+mov S$攻略说明 <RText|id=7|children=7_1,7_2,7_3,7_4,7_5|x=210.0|y=75.0|size=20|text=<快人一步/FCOLOR=146>>
+inc S$攻略说明 <Img|id=7_1|x=-30|y=0|img=public/btn_6.png>
+inc S$攻略说明 <RText|id=7_2|x=-30|y=30|size=18|text=<①本服赞助为88元，388元，888元，主城查看赞助大使。/FCOLOR=135>>
+inc S$攻略说明 <RText|id=7_3|x=-30|y=60|size=18|text=<②开启狂暴之力增加吸血5%，提高打怪生存率。/FCOLOR=131>>
+inc S$攻略说明 <RText|id=7_4|x=-30|y=90|size=18|text=<③开启沙城捐献增加爆率和打怪伤害，助你快人一步。/FCOLOR=135>>
+inc S$攻略说明 <RText|id=8|children=8_1,8_2,8_3,8_4,8_5,8_6|x=210.0|y=240.0|size=20|text=<飞驰电掣>>
+inc S$攻略说明 <Img|id=8_1|x=-30|y=0|img=public/btn_6.png>
+inc S$攻略说明 <RText|id=8_2|x=-30|y=30|size=18|text=<④提高时装神器增加大量打怪伤害，爆率和切割。/FCOLOR=135>>
+inc S$攻略说明 <RText|id=8_3|x=-30|y=60|size=18|text=<⑤本服称号属性强大，满级后可穿戴，获取拉轰效果。/FCOLOR=131>>
+inc S$攻略说明 <RText|id=8_4|x=-30|y=90|size=18|text=<⑥装备洗练，神之天赋，装备加星，均可获取大量属性。/FCOLOR=135>>
+inc S$攻略说明 <RText|id=15|x=220.0|y=465.0|size=16|text=<沉默天下正版授权：承诺一切装备材料都可以打怪爆出！/FCOLOR=250>>
+GOTO @main_gl
 
 ; [@玩法流程]
 ; #IF
@@ -270,18 +270,18 @@ GOTO @main_gl
 #IF
 #ACT
 MOV S$攻略按钮01 <Button|id=页签1|x=15.0|y=60.0|color=254|nimg=public/1900000662.png|text=新手攻略|size=18|link=@新手攻略>
-MOV S$攻略按钮02 <Button|id=页签2|x=15.0|y=60.0|color=254|nimg=public/1900000662.png|text=进阶攻略|size=18|link=@进阶攻略>
-MOV S$攻略按钮03 <Button|id=页签3|x=15.0|y=60.0|color=254|nimg=public/1900000662.png|text=转生系统|size=18|link=@转生系统>
-; MOV S$攻略按钮04 <Button|id=页签4|x=15.0|y=60.0|color=254|nimg=public/1900000662.png|text=官职系统|size=18|link=@官职系统>
+MOV S$攻略按钮02 <Button|id=页签2|x=15.0|y=60.0|color=254|nimg=public/1900000662.png|text=我要经验|size=18|link=@进阶攻略>
+MOV S$攻略按钮03 <Button|id=页签3|x=15.0|y=60.0|color=254|nimg=public/1900000662.png|text=我要货币|size=18|link=@转生系统>
+MOV S$攻略按钮04 <Button|id=页签4|x=15.0|y=60.0|color=254|nimg=public/1900000662.png|text=我要变强|size=18|link=@官职系统>
 ; MOV S$攻略按钮05 <Button|id=页签5|x=15.0|y=60.0|color=254|nimg=public/1900000662.png|text=玩法流程|size=18|link=@玩法流程>
 ; MOV S$攻略按钮06 <Button|id=页签6|x=15.0|y=60.0|color=254|nimg=public/1900000662.png|text=内功心法|size=18|link=@内功心法1>
 ; MOV S$攻略按钮07 <Button|id=页签7|x=15.0|y=60.0|color=254|nimg=public/1900000662.png|text=武林绝学①|size=18|link=@武林绝学>
 ; MOV S$攻略按钮08 <Button|id=页签8|x=15.0|y=60.0|color=254|nimg=public/1900000662.png|text=武林绝学②|size=18|link=@武林绝学1>
 ;灰色按钮
 MOV S$攻略按钮A1 <Button|id=页签1|x=15.0|y=60.0|color=247|nimg=public/1900000663.png|text=新手攻略|size=18|link=@新手攻略>
-MOV S$攻略按钮A2 <Button|id=页签2|x=15.0|y=60.0|color=247|nimg=public/1900000663.png|text=进阶攻略|size=18|link=@进阶攻略>
-MOV S$攻略按钮A3 <Button|id=页签3|x=15.0|y=60.0|color=247|nimg=public/1900000663.png|text=转生系统|size=18|link=@转生系统>
-; MOV S$攻略按钮A4 <Button|id=页签4|x=15.0|y=60.0|color=247|nimg=public/1900000663.png|text=官职系统|size=18|link=@官职系统>
+MOV S$攻略按钮A2 <Button|id=页签2|x=15.0|y=60.0|color=247|nimg=public/1900000663.png|text=我要经验|size=18|link=@进阶攻略>
+MOV S$攻略按钮A3 <Button|id=页签3|x=15.0|y=60.0|color=247|nimg=public/1900000663.png|text=我要货币|size=18|link=@转生系统>
+MOV S$攻略按钮A4 <Button|id=页签4|x=15.0|y=60.0|color=247|nimg=public/1900000663.png|text=我要变强|size=18|link=@官职系统>
 ; MOV S$攻略按钮A5 <Button|id=页签5|x=15.0|y=60.0|color=247|nimg=public/1900000663.png|text=玩法流程|size=18|link=@玩法流程>
 ; MOV S$攻略按钮A6 <Button|id=页签6|x=15.0|y=60.0|color=247|nimg=public/1900000663.png|text=内功心法|size=18|link=@内功心法1>
 ; MOV S$攻略按钮A7 <Button|id=页签7|x=15.0|y=60.0|color=247|nimg=public/1900000663.png|text=武林绝学①|size=18|link=@武林绝学>

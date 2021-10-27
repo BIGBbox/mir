@@ -172,10 +172,14 @@ OPENNPCSHOWEX 76
 
 #if
 #act
+
+sendmsg 5 ::::<$REVIVALTIME>
+; MAPEFFECT 1 天下主城 120 87 4210 30 0
+; MAPEFFECT 1 天下主城 120 90 4210 30 0
 ; mov S$称号 暗黑称号
 ; mov S$this称号 暗黑之力①
-#CALL [\属性重载\游戏爆率.txt] @暴率
-#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+; #CALL [\属性重载\游戏爆率.txt] @暴率
+; #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
 ; ReadConfigFileItem ..\QuestDiary\称号系统\<$str(S$称号)>\<$str(S$称号)>数据.txt <$str(S$this称号)> 爆率加成 N$爆率加成
 ; sendmsg 5 <$str(N$爆率加成)>:::::::
 ; #IF
