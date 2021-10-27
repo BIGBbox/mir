@@ -27,22 +27,35 @@ mov S$是否下一步 1
 #if
 #act
 mov N$次数 <$NPCINPUT(1)>
+div N$次数 10
+
+#if
+equal <$str(N$次数)> 0
+#act
+messagebox 一次最少需要使用10个灵兽精石!!
+break
+
+#if
+#act
+
 mov S$是否付费 <$STR(S$参数)>
 mov N$消耗天下币 0
 mov N$获得经验值 <$STR(N$次数)>
+mov N$精石数量 <$str(N$次数)>
+mul N$精石数量 10
 ; mul N$获得经验值 <$STR(N$次数)>
 ; sendmsg 5 付费:::<$STR(S$是否付费)>
 #if
 large <$STR(N$次数)> 100
 #act
-messagebox 一次最多能使用100个精石,请分多次使用
+messagebox 一次最多能使用1000个精石,请分多次使用
 break
 
 #if
 equal <$STR(S$是否付费)> 1
 #act
-mov N$消耗天下币 <$STR(N$次数)>
-mul N$消耗天下币 10
+mov N$消耗天下币 <$STR(N$精石数量)>
+mul N$消耗天下币 100
 mov N$获得经验值 <$STR(N$次数)>
 mul N$获得经验值 10
 ; sendmsg 5 消耗天下币:::<$STR(S$消耗天下币)>
@@ -65,7 +78,7 @@ messagebox 你的天下币不足!!
 break
 
 #if
-not CHECKITEM 灵兽精石 <$STR(N$次数)>
+not CHECKITEM 灵兽精石 <$STR(N$精石数量)>
 #act
 messagebox 灵兽精石数量不足!!
 break
