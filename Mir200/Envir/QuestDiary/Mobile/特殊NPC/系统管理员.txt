@@ -172,8 +172,10 @@ OPENNPCSHOWEX 76
 
 #if
 #act
-
-sendmsg 5 ::::<$REVIVALTIME>
+mov N$一个变量 253
+sendmsg 5 <$str(N$一个变量)>::::<$REVIVALTIME>
+div N$一个变量 10
+sendmsg 5 <$str(N$一个变量)>::::<$REVIVALTIME>
 ; MAPEFFECT 1 天下主城 120 87 4210 30 0
 ; MAPEFFECT 1 天下主城 120 90 4210 30 0
 ; mov S$称号 暗黑称号
