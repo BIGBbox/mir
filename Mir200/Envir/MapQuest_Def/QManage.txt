@@ -72,7 +72,7 @@ SetOnTimer 2 1
 SetOnTimer 5 600
 SetOnTimer 7 1
 ;SETSHOWITEMMSG 0
-VAR STRING HUMAN 二级密码
+; VAR STRING HUMAN 二级密码
 ;LOADVAR HUMAN 二级密码 ..\QuestDiary\数据文件\二级密码\密码数据.txt
 #CALL [\触发系列\元素触发.txt] @元素伤害
 #CALL [\属性重载\称号刷新.txt] @称号刷新
@@ -88,7 +88,7 @@ VAR STRING HUMAN 二级密码
 ; #CALL [\游戏登陆\登陆脚本.txt] @登陆设置
 #CALL [\技术QQ198605888\沙城捐献\沙捐变量.txt] @沙捐变量
 #CALL [\属性重载\获取属性.txt] @获取属性
-#CALL [\数据文件\二级密码\二级密码.txt] @二级密码验证
+; #CALL [\数据文件\二级密码\二级密码.txt] @二级密码验证
 
 #CALL [\任务系统\任务文本.txt] @接取任务
 
