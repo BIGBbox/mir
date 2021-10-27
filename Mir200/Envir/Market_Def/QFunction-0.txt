@@ -7861,7 +7861,7 @@ SENDMSG 7 {增加|56:56:0}{[1000]|250:56:0}{天下币，您当前元宝总数为|56:56:0}{[<$G
 
 #if
 #act
-movr N$Ran 1 6
+movr N$Ran 1 7
 ReadConfigFileItem ..\QuestDiary\礼包\礼包列表.txt 神兵谱鞋子礼包 <$STR(N$Ran)> S$道具串
 GetValidstr <$STR(S$道具串)> * S$道具名 S$道具数量
 GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
@@ -7870,7 +7870,7 @@ GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
 
 #if
 #act
-movr N$Ran 1 6
+movr N$Ran 1 7
 ReadConfigFileItem ..\QuestDiary\礼包\礼包列表.txt 神兵谱腰带礼包 <$STR(N$Ran)> S$道具串
 GetValidstr <$STR(S$道具串)> * S$道具名 S$道具数量
 GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
@@ -7878,7 +7878,7 @@ GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
 [@StdModeFunc322]
 #if
 #act
-movr N$Ran 1 6
+movr N$Ran 1 7
 ReadConfigFileItem ..\QuestDiary\礼包\礼包列表.txt 神兵谱戒指礼包 <$STR(N$Ran)> S$道具串
 GetValidstr <$STR(S$道具串)> * S$道具名 S$道具数量
 GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
@@ -7888,7 +7888,7 @@ GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
 
 #if
 #act
-movr N$Ran 1 6
+movr N$Ran 1 7
 ReadConfigFileItem ..\QuestDiary\礼包\礼包列表.txt 神兵谱手镯礼包 <$STR(N$Ran)> S$道具串
 GetValidstr <$STR(S$道具串)> * S$道具名 S$道具数量
 GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
@@ -7897,7 +7897,7 @@ GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
 
 #if
 #act
-movr N$Ran 1 6
+movr N$Ran 1 7
 ReadConfigFileItem ..\QuestDiary\礼包\礼包列表.txt 神兵谱项链礼包 <$STR(N$Ran)> S$道具串
 GetValidstr <$STR(S$道具串)> * S$道具名 S$道具数量
 GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
@@ -7907,7 +7907,7 @@ GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
 
 #if
 #act
-movr N$Ran 1 6
+movr N$Ran 1 7
 ReadConfigFileItem ..\QuestDiary\礼包\礼包列表.txt 神兵谱头盔礼包 <$STR(N$Ran)> S$道具串
 GetValidstr <$STR(S$道具串)> * S$道具名 S$道具数量
 GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
@@ -7916,7 +7916,7 @@ GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
 
 #if
 #act
-movr N$Ran 1 6
+movr N$Ran 1 7
 ReadConfigFileItem ..\QuestDiary\礼包\礼包列表.txt 神兵谱衣服礼包 <$STR(N$Ran)> S$道具串
 GetValidstr <$STR(S$道具串)> * S$道具名 S$道具数量
 GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
@@ -7925,8 +7925,17 @@ GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
 
 #if
 #act
-movr N$Ran 1 6
+movr N$Ran 1 7
 ReadConfigFileItem ..\QuestDiary\礼包\礼包列表.txt 神兵谱武器礼包 <$STR(N$Ran)> S$道具串
+GetValidstr <$STR(S$道具串)> * S$道具名 S$道具数量
+GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
+
+[@StdModeFunc335]
+
+#if
+#act
+movr N$Ran 1 13
+ReadConfigFileItem ..\QuestDiary\礼包\礼包列表.txt 星座时装礼盒 <$STR(N$Ran)> S$道具串
 GetValidstr <$STR(S$道具串)> * S$道具名 S$道具数量
 GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
 

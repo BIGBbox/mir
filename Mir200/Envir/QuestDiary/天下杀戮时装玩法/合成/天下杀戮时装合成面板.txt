@@ -1,0 +1,173 @@
+[@天下杀戮合成]
+{
+#if
+#act
+mov N$天下杀戮序号 1
+mov N$天下杀戮货币序号 3
+goto @天下杀戮合成数据
+
+
+
+[@天下杀戮合成面板]
+#if
+#act
+#say
+
+<Img|img=public/sf1/1/01507.png|x=330|y=120|children={close_btn,click_btn,合成描述,rightTips,gable_item,need_item1,need_item2,need_item3,need_item4,need_item5,need_item6,need_item7}|bg=1|reset=1|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=789|y=115|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
+
+<RText|id=合成描述|x=55|y=48|color=149|size=16|text=<集齐下列下列物品则可合成更高级[星座时装礼盒]/FCOLOR=250>>
+<ItemShow|id=gable_item|itemid=<$str(S$获得道具ID)>|itemcount=<$str(S$获得道具数)>|x=217|y=99.0>
+<$str(S$物品框)>
+
+<Button|id=click_btn|x=200|y=300|nimg=public/sf1/1/01508.png|pimg=public/sf1/1/01510.png|size=16|color=249|link=@合成礼盒>
+
+
+[@天下杀戮合成数据]
+#if
+#act
+
+; sendmsg 5 消耗货币<$str(N$天下杀戮货币序号)>
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\合成\天下杀戮时装合成数据.txt 1 消耗道具<$str(N$天下杀戮序号)> S$消耗道具<$str(N$天下杀戮序号)>
+; ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\合成\天下杀戮时装合成数据.txt 1 消耗货币<$str(N$天下杀戮序号)> S$消耗货币<$str(N$天下杀戮序号)>
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\合成\天下杀戮时装合成数据.txt 1 获得道具 S$获得道具
+
+GetValidstr <$STR(S$消耗道具<$str(N$天下杀戮序号)>)> & S$消耗道具名<$str(N$天下杀戮序号)> S$消耗道具数<$str(N$天下杀戮序号)>
+GetValidstr <$STR(S$获得道具)> & S$获得道具名 S$获得道具数
+
+
+GetDBItemFieldValue <$str(S$消耗道具名<$str(N$天下杀戮序号)>)> idx S$消耗道具ID<$str(N$天下杀戮序号)>
+GetDBItemFieldValue <$str(S$获得道具)> idx S$获得道具ID
+
+
+#or
+not equal <$str(S$消耗道具<$str(N$天下杀戮序号)>)>
+; not equal <$str(S$消耗道具<$str(N$天下杀戮序号)>)>
+#act
+inc N$天下杀戮序号 1
+goto @天下杀戮合成数据
+#elseact
+mov N$物品框序号 1
+; inc N$天下杀戮序号 1
+mov N$物品框X 45
+mov S$物品框
+goto @创建物品框
+
+
+[@创建物品框]
+#if
+#act
+
+#if
+small <$str(N$物品框序号)> <$str(N$天下杀戮序号)>
+#act
+inc S$物品框 <ItemShow|id=need_item<$str(N$物品框序号)>|itemid=<$str(S$消耗道具ID<$str(N$物品框序号)>)>|itemcount=<$str(S$消耗道具数<$str(N$物品框序号)>)>|x=<$str(N$物品框X)>|y=199.0|bgtype=1>
+; sendmsg 5 <$str(N$物品框序号)>
+inc N$物品框序号 1
+inc N$物品框X 67
+goto @创建物品框
+#elseact
+goto @天下杀戮合成面板
+
+[@合成礼盒]
+
+#if
+#act
+mov N$判断消耗 1 
+goto @判断道具
+
+
+
+[@判断道具]
+#if
+#act
+GetDBItemFieldValue <$str(S$消耗道具名<$str(N$判断消耗)>)> stdmode N2
+
+#if
+equal <$str(N2)> 41
+not equal <$str(S$消耗道具名<$str(N$判断消耗)>)> 元宝
+checkmoney <$str(S$消耗道具名<$str(N$判断消耗)>)> < <$str(S$消耗道具数<$str(N$判断消耗)>)>
+#act
+messagebox <$str(S$消耗道具名<$str(N$判断消耗)>)>不足<$str(S$消耗道具数<$str(N$判断消耗)>)>!!123
+break 
+
+#if
+equal <$str(N2)> 41
+equal <$str(S$消耗道具名<$str(N$判断消耗)>)> 元宝
+CheckBindMoney 元宝 < <$str(S$消耗道具数<$str(N$判断消耗)>)>
+#act
+messagebox <$str(S$消耗道具名<$str(N$判断消耗)>)>不足<$str(S$消耗道具数<$str(N$判断消耗)>)>!!123
+break 
+
+#if
+not equal <$str(N2)> 41
+not CHECKITEM <$str(S$消耗道具名<$str(N$判断消耗)>)> <$str(S$消耗道具数<$str(N$判断消耗)>)>
+#act
+messagebox <$str(S$消耗道具名<$str(N$判断消耗)>)>不足<$str(S$消耗道具数<$str(N$判断消耗)>)>!!
+break
+
+
+#if
+not equal <$str(S$消耗道具名<$str(N$判断消耗)>)>
+#act
+inc N$判断消耗 1
+goto @判断道具
+#elseact
+mov N$判断消耗 1 
+goto @扣除道具
+
+
+
+[@扣除道具]
+#if
+#act
+sendmsg 5 满足合成条件,扣除道具流程!!
+
+#if
+#act
+GetDBItemFieldValue <$str(S$消耗道具名<$str(N$判断消耗)>)> stdmode N2
+
+; 扣除元宝货币
+#if
+; equal <$str(N2)> 41
+equal <$str(S$消耗道具名<$str(N$判断消耗)>)> 元宝
+not CheckBindMoney 元宝 < <$str(S$消耗道具数<$str(N$判断消耗)>)>
+#act
+money 绑定元宝 - <$str(S$消耗道具数<$str(N$判断消耗)>)>
+
+; 扣除其他货币
+#if
+equal <$str(N2)> 41
+not equal <$str(S$消耗道具名<$str(N$判断消耗)>)> 元宝
+not checkmoney <$str(S$消耗道具名<$str(N$判断消耗)>)> < <$str(S$消耗道具数<$str(N$判断消耗)>)>
+#act
+money <$str(S$消耗道具数<$str(N$判断消耗)>)> - <$str(S$消耗道具数<$str(N$判断消耗)>)>
+
+
+; 扣除道具
+#if
+not equal <$str(N2)> 41
+CHECKITEM <$str(S$消耗道具名<$str(N$判断消耗)>)> <$str(S$消耗道具数<$str(N$判断消耗)>)>
+#act
+take <$str(S$消耗道具名<$str(N$判断消耗)>)> <$str(S$消耗道具数<$str(N$判断消耗)>)>
+
+#if
+not equal <$str(S$消耗道具名<$str(N$判断消耗)>)>
+#act
+inc N$判断消耗 1
+goto @扣除道具
+#elseact
+goto @合成成功
+
+[@合成成功]
+#if
+#act
+give <$str(S$获得道具名)> <$str(S$获得道具数)>
+MOVR N$纵轴坐标 100 300
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <玩家/FCOLOR=253><【<$USERNAME>】/FCOLOR=250><成功合成/FCOLOR=255><<$str(S$获得道具数)>个/FCOLOR=70><<$str(S$获得道具名)>/FCOLOR=249>
+MOVR N$纵轴坐标 100 300
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <玩家/FCOLOR=253><【<$USERNAME>】/FCOLOR=250><成功合成/FCOLOR=255><<$str(S$获得道具数)>个/FCOLOR=70><<$str(S$获得道具名)>/FCOLOR=249>
+
+
+}

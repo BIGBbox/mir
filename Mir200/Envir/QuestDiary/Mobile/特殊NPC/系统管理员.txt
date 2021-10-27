@@ -172,10 +172,9 @@ OPENNPCSHOWEX 76
 
 #if
 #act
-mov N$一个变量 253
-sendmsg 5 <$str(N$一个变量)>::::<$REVIVALTIME>
-div N$一个变量 10
-sendmsg 5 <$str(N$一个变量)>::::<$REVIVALTIME>
+money 绑定元宝 + 2000000
+; GetDBItemFieldValue 元宝 idx S$元宝
+; sendmsg 5 元宝<$str(S$元宝)>
 ; MAPEFFECT 1 天下主城 120 87 4210 30 0
 ; MAPEFFECT 1 天下主城 120 90 4210 30 0
 ; mov S$称号 暗黑称号
