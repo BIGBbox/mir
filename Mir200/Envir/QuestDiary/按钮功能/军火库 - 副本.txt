@@ -799,17 +799,17 @@ inc U0 1
 #ELSEACT
 messagebox 抱歉，你背包没有[断·天]点亮失败！
 goto @载入腰带库
-[@寂灭攻]
+[@寂灭【攻】]
 #IF
 CHECK [213] 0
-CHECKITEM 寂灭[攻] 1
+CHECKITEM 寂灭【攻】 1
 #ACT
 SET [213] 1
-take 寂灭[攻] 1
+take 寂灭【攻】 1
 goto @载入腰带库
 inc U0 1
 #ELSEACT
-messagebox 抱歉，你背包没有[寂灭[攻]]点亮失败！
+messagebox 抱歉，你背包没有[寂灭【攻】]点亮失败！
 goto @载入腰带库
 [@焚毒之火]
 #IF
@@ -1136,17 +1136,17 @@ inc U0 1
 messagebox 抱歉，你背包没有[狩猎之镯]点亮失败！
 goto @载入手镯库
 
-[@麒麟臂1.2]
+[@麒麟臂【1.2】]
 #IF
 CHECK [177] 0
-CHECKITEM 麒麟臂[1.2] 1
+CHECKITEM 麒麟臂【1.2】 1
 #ACT
 SET [177] 1
-take 麒麟臂[1.2] 1
+take 麒麟臂【1.2】 1
 goto @载入手镯库
 inc U0 1
 #ELSEACT
-messagebox 抱歉，你背包没有[麒麟臂[1.2]]点亮失败！
+messagebox 抱歉，你背包没有[麒麟臂【1.2】]点亮失败！
 goto @载入手镯库
 
 [@古·镯]
