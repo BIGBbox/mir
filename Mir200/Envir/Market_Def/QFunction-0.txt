@@ -7934,7 +7934,7 @@ GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
 
 #if
 #act
-movr N$Ran 1 13
+movr N$Ran 1 30
 ReadConfigFileItem ..\QuestDiary\礼包\礼包列表.txt 星座时装礼盒 <$STR(N$Ran)> S$道具串
 GetValidstr <$STR(S$道具串)> * S$道具名 S$道具数量
 GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
