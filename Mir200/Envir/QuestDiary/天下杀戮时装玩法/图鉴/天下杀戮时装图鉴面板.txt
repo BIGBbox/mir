@@ -1,57 +1,172 @@
 [@天下杀戮图鉴]
 {
+;<IMGEX:0:250:251:252:64:158/@幻化枣红马><IMGEX:0:259:251:252:64:158/@属性>
+
 #if
 #act
-#say
-
-<Img|img=public/sf1/1/01507.png|x=330|y=120|children={close_btn,click_btn,合成描述,rightTips,gable_item,need_item1,need_item2,need_item3,need_item4,need_item5,need_item6,need_item7}|bg=1|reset=1|move=1>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=789|y=115|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
-
-<RText|id=合成描述|x=45|y=48|color=149|size=16|text=<时装全靠打/FCOLOR=250><集齐这七种时装合成更高级时装（制裁[时装]）/FCOLOR=149>>
-<ItemShow|id=gable_item|itemid=10983|itemcount=1|x=217|y=99.0>
-
-<ItemShow|id=need_item1|itemid=10976|itemcount=1|x=10|y=199.0|bgtype=1>
-<ItemShow|id=need_item2|itemid=10977|itemcount=1|x=77|y=199.0|bgtype=1>
-<ItemShow|id=need_item3|itemid=10978|itemcount=1|x=144|y=199.0|bgtype=1>
-<ItemShow|id=need_item4|itemid=10979|itemcount=1|x=211|y=199.0|bgtype=1>
-<ItemShow|id=need_item5|itemid=10980|itemcount=1|x=278|y=199.0|bgtype=1>
-<ItemShow|id=need_item6|itemid=10981|itemcount=1|x=345|y=199.0|bgtype=1>
-<ItemShow|id=need_item7|itemid=10982|itemcount=1|x=412|y=199.0|bgtype=1>
-
-<Button|id=click_btn|x=200|y=300|nimg=public/sf1/1/01508.png|pimg=public/sf1/1/01510.png|tips={合成条件：/FCOLOR=249}^{七种时装+2000W元宝/FCOLOR=251}^|tipsx=10|tipsy=100|size=16|color=249|link=@晋升4>
+mov S$页数 1
+mov N$序号 1
+mov S$马特效
+mov S$马名字
+mov S$马备注
+mov S$激活图片
+mov S$激活按钮
+mov N$X激活特效坐标 70
+mov N$Y激活特效坐标 170
+mov N$X激活按钮坐标 90
+mov N$Y激活按钮坐标 210
+; mov S$参数 <$str(S$页数)>
+; messagebox 功能暂时关闭
+goto @获取数据
 
 
-
-
-
-[@晋升4]
+[@异兽坊主面板]
 #IF
-CheckBindMoney 元宝 > 19999999
-CHECKITEM 制裁残①
-CHECKITEM 制裁残②
-CHECKITEM 制裁残③
-CHECKITEM 制裁残④
-CHECKITEM 制裁残⑤
-CHECKITEM 制裁残⑥
-CHECKITEM 制裁残⑦
 #ACT
-ChangeBindMoney 元宝 20000000
-take 制裁残①
-take 制裁残②
-take 制裁残③
-take 制裁残④
-take 制裁残⑤
-take 制裁残⑥
-take 制裁残⑦
-GIVE 制裁【时装】
-MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【制裁[时装]】/FCOLOR=58>
-GOTO @MAIN
-BREAK
-#elseact
-MESSAGEBOX 打造条件不足??\\1、请凑齐(制裁残①、制裁残②、制裁残③、制裁残④\\制裁残⑤、制裁残⑥、制裁残⑦)这七种时装！
-BREAK
+mov S$幻化马牌名
+#SAY
 
+<Img|img=public/sf1/1/01438.png|x=260|y=105|children={close_btn,item1,item2,item3,item4,item5,item6,tips1,tips2,tips3,tips4,tips5,tips6,形象1,形象2,形象3,形象4,形象5,形象6,激活特效1,激活特效2,激活特效3,激活特效4,激活特效5,激活特效6,click_btn1,click_btn2,click_btn3,click_btn4,click_btn5,click_btn6,
+btn1,btn2,btn3,btn4,btn5,合成描述,name1,name2,name3,name4,name5,name6,cliBtn1,cliBtn2,cliBtn3,cliBtn4,cliBtn5,cliBtn6}|bg=1|reset=0|move=1>
+<Button|x=770|y=105|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
+
+<Button|id=btn1|x=8|y=45 |nimg=public/sf1/1/01417.png|pimg=public/sf1/1/01419.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@马厩翻页#参数=1>
+<Button|id=btn2|x=8|y=102|nimg=public/sf1/1/01420.png|pimg=public/sf1/1/01422.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@马厩翻页#参数=2>
+
+<$str(S$马特效)>
+<$str(S$马名字)>
+<$str(S$马备注)>
+<$str(S$激活图片)>
+<$str(S$激活按钮)>
+
+; <Effect|id=形象1|x=80|y=100|effectid=400|effecttype=0|speed=0.5>
+
+; <RText|id=name1|x=95|y=48|color=87|size=15|text=<枣红马/FCOLOR=103>>
+
+; <Button|id=tips6|x=394|y=250|nimg=public/sf1/1/00284.png|tips={属性说明：/FCOLOR=253}^{准确 +5/FCOLOR=254}|tipsx=10|tipsy=100|size=18|color=249|link=1>
+
+;----------------------------------------------------------------------------------------------------
+
+[@马厩翻页]
+#if
+#act
+; close
+mov S$页数 <$str(S$参数)>
+mov N$序号 1
+mov N$X激活特效坐标 70
+mov N$Y激活特效坐标 170
+mov N$X激活按钮坐标 90
+mov N$Y激活按钮坐标 210
+mov S$激活图片
+
+goto @获取数据
+
+[@获取数据]
+#if
+#act
+
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第<$str(S$页数)>页.txt <$str(N$序号)> 名字 S$名字
+; ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第<$str(S$页数)>页.txt <$str(N$序号)> EffectId S$EffectId
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第<$str(S$页数)>页.txt <$str(N$序号)> Effectx S$Effectx
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第<$str(S$页数)>页.txt <$str(N$序号)> Effecty S$Effecty
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第<$str(S$页数)>页.txt <$str(N$序号)> namex S$namex
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第<$str(S$页数)>页.txt <$str(N$序号)> namey S$namey
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第<$str(S$页数)>页.txt <$str(N$序号)> 备注x S$备注x
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第<$str(S$页数)>页.txt <$str(N$序号)> 备注y S$备注y
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第<$str(S$页数)>页.txt <$str(N$序号)> 属性说明 S$属性说明
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第<$str(S$页数)>页.txt <$str(N$序号)> 标记 N$标记
+
+GetDBItemFieldValue <$str(S$名字)> sEffect S$EffectId
+inc S$马特效 <Effect|id=形象<$str(N$序号)>|x=<$str(S$Effectx)>|y=<$str(S$Effecty)>|effectid=<$str(S$EffectId)>|effecttype=0|speed=0.5>
+inc S$马名字 <RText|id=name<$str(N$序号)>|x=<$str(S$namex)>|y=<$str(S$namey)>|color=87|size=15|text=<<$str(S$名字)>/FCOLOR=103>>
+inc S$马备注 <Button|id=tips<$str(N$序号)>|x=<$str(S$备注x)>|y=<$str(S$备注y)>|nimg=public/sf1/1/00284.png|tips=<$str(S$属性说明)>|tipsx=10|tipsy=100|size=18|color=249|link=1>
+
+#if
+; check [<$str(N$标记)>] 1
+#act
+; sendmsg 5 激活特效<$str(N$序号)>
+; inc S$激活图片 <Img|id=激活特效<$str(N$序号)>|x=<$str(N$X激活特效坐标)>|y=<$str(N$Y激活特效坐标)>|img=public/icon/common1017.png>
+; #elseact
+inc S$激活按钮 <Button|id=cliBtn<$str(N$序号)>|x=<$str(N$X激活按钮坐标)>|y=<$str(N$Y激活按钮坐标)>|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|link=@图鉴收集#装备名字=<$str(S$名字)>#装备标记=<$str(S$标记)>>
+
+#if
+equal <$str(N$序号)> 3
+#act
+mov N$X激活特效坐标 70
+mov N$Y激活特效坐标 370
+mov N$X激活按钮坐标 90
+mov N$Y激活按钮坐标 415
+#elseact
+inc N$X激活特效坐标 165
+inc N$X激活按钮坐标 170
+
+
+#if
+small <$str(N$序号)> 6
+#act
+inc N$序号 1
+goto @获取数据
+#elseact
+goto @异兽坊主面板
+
+[@图鉴收集]
+#if
+CheckContainsText <$STR(T6)> <$str(S$装备名字)>
+#act
+messagebox 该图鉴已经收集了,不可以重复收集!!
+break
+
+#if
+not checkitem <$str(S$装备名字)> 1
+#act
+messagebox 你没有<$str(S$装备名字)>,无法收集!!
+break
+
+take <$str(S$装备名字)> 1
+mov <$str(T6)>&<$str(S$装备名字)>
+MOVR N$纵轴坐标 100 300
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <玩家/FCOLOR=253><【<$USERNAME>】/FCOLOR=250><成功点亮/FCOLOR=255><<$str(S$装备名字)>/FCOLOR=70>
+
+
+[@幻化八骏]
+#IF
+check [279] 1
+#ACT
+mov S$幻化马牌名 幻化马牌[八骏]
+goto @马牌幻化
+#elseact
+sendmsg 7 你还没有激活(御兽石[八骏])无法幻化!
+
+[@幻化青骓]
+#IF
+check [280] 1
+#ACT
+mov S$幻化马牌名 幻化马牌[青骓]
+goto @马牌幻化
+#elseact
+sendmsg 7 你还没有激活(御兽石[青骓])无法幻化!
+
+
+[@马牌幻化]
+; #IF
+; CHECKBAGSIZE 2
+; #ELSEACT
+; messagebox 背包格子不足2!
+; BREAK
+; #if
+; #act
+; sendmsg 5 horse:<$HORSE>
+; sendmsg 5 horse:<$str(S$幻化马牌名)>
+; #IF
+; NOT EQUAL <$HORSE>
+; not equal <$str(S$幻化马牌名)>
+; ;CHECKTEXTLIST ..\QuestDiary\幻化马牌\马牌名字.txt <$HORSE>
+; #ACT
+; ; TAKEW <$HORSE> 1
+; GIVE <$str(S$幻化马牌名)> 1
+; AutoTakeOnItem <$str(S$幻化马牌名)> 15
+#if
+#act
+MessageBox 提示:恭喜你幻化成功！！！！！！！！！！
 
 }
