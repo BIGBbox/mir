@@ -4,6 +4,10 @@
 #ACT
 goto @手游top1
 
+#if
+check [22] 0
+#act
+#CALL [\首充\首充.txt] @首充面板
 
 #IF
 ISADMIN
