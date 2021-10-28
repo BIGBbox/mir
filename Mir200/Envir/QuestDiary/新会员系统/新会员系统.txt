@@ -375,6 +375,8 @@ mov S$领取状态 可领取
 ; sendmsg 5 flag:<$str(S$flag4)>
 ; sendmsg 5 flag:<$str(S$flag5)>
 ; sendmsg 5 flag:<$str(S$flag5)>
+; sendmsg 5 flag:<$str(S$flag6)>
+; sendmsg 5 flag:<$str(S$flag7)>
 ; sendmsg 5 U17:<$str(U17)>::::<$STR(S$参数)>
 
 
@@ -517,11 +519,11 @@ OPENNPCSHOWEX <$STR(S$npcId)>
 
 [@领取每日礼包]
 
-; #if
-; check [<$STR(S$领取标记)>] 1
-; #act
-; messagebox 该礼包只能领取一次!!
-; break
+#if
+check [<$STR(S$领取标记)>] 1
+#act
+messagebox 该礼包只能领取一次!!
+break
 
 #if
 #act
@@ -533,7 +535,6 @@ not small <$STR(U17)> <$STR(S$参数)>
 
 GOTO @发放每日礼包
 break
-
 
 #or
 equal S$flag1 0
@@ -596,6 +597,7 @@ ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(S$参数)> 所需时装
 ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(S$参数)> 所需神器 S$所需神器串
 ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(S$参数)> 所需转生 S$所需转生串
 ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(S$参数)> 人物等级 S$所需人物等级
+ReadConfigFileItem ..\QuestDiary\新会员系统\会员奖励.txt <$STR(S$参数)> 学习技能 S$所需学习技能
 mov S$时装串 <$STR(T4)>
 
 GOTO @获取怪物击杀
@@ -614,6 +616,7 @@ GOTO @获取所需转生
 ; sendmsg 5 6<$str(S$flag6)>
 ; sendmsg 5 7<$str(S$flag7)>
 ; sendmsg 5 <$STR(S$参数)>======<$STR(U17)>
+
 #if
 equal S$flag1 1
 equal S$flag2 1
@@ -636,11 +639,11 @@ mov U17 <$STR(S$参数)>
 #act
 mov S$flag1 1
 
-#if
-equal <$STR(S$击杀怪物串)>
-#act
-break
-
+; #if
+; equal <$STR(S$击杀怪物串)>
+; #act
+; break
+; sendmsg 5 <$STR(S$击杀怪物串)>_123123__<$str(S$所需学习技能)>
 #if
 not equal <$STR(S$击杀怪物串)>
 not equal <$STR(S$击杀怪物串)> 学习技能
@@ -656,7 +659,7 @@ mov S$flag1 0
 
 #if
 equal <$STR(S$击杀怪物串)> 学习技能
-not CHECKSKILL <$STR(S$击杀怪物串)> = 1
+not CheckMagicName <$STR(S$所需学习技能)>
 #act
 mov S$flag1 0
 
@@ -667,11 +670,12 @@ mov S$flag1 0
 #if
 #act
 mov S$flag2 1
+; sendmsg 5 <$STR(S$所需称号串)>___
 
-#if
-equal <$STR(S$所需称号串)>
-#act
-break
+; #if
+; equal <$STR(S$所需称号串)>
+; #act
+; break
 
 ; 所需人物等级
 #if
@@ -758,17 +762,13 @@ mov S$flag5 = 0
 
 mov S$flag6 1
 ; <$STR(T4)>
-
-
 #if
 not equal <$STR(S$所需神器串)>
-CheckContainsText <$str(S$时装串)> <$STR(S$所需神器串)> 
+not CheckContainsText <$str(S$时装串)> <$STR(S$所需神器串)> 
 #act
-break
 
-#if
-#act
 mov S$flag6 0
+break
 
 
 [@获取所需转生]
