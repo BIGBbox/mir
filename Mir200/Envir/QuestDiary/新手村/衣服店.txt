@@ -41,9 +41,9 @@ break
 mov U108 8
 CHANGEEXP + 100000
 ADDSKILL 野蛮冲撞
-GiveStateItem 盟重回城石 1 1 0 1 0 0 1 1 1
-GiveStateItem 随机传送石 1 1 0 1 0 0 1 1 1
-GiveStateItem 远程回收（2小时） 1 1 0 1 0 0 1 1 1
+GiveStateItem 盟重回城石 1 0 1 0 0 1 1 1 1
+GiveStateItem 随机传送石 1 0 1 0 0 1 1 1 1
+GiveStateItem 远程回收（2小时） 1 0 1 0 0 1 1 1 1
 
 
 NEWCOMPLETETASK 7

@@ -1,4 +1,5 @@
 #AutoRun NPC SEC 30 @随机地图链接
+
 #AutoRun NPC RUNONWEEK 2:10:55 @攻城提示
 #AutoRun NPC RUNONWEEK 2:20:00 @开启攻城
 #AutoRun NPC RUNONWEEK 2:22:00 @攻城结束
@@ -13,15 +14,11 @@
 ; #AutoRun NPC SEC 10 @每日重置
 
 
-
-
 ; ;#AutoRun NPC SEC 30 @随机地图链接
 ; #AutoRun NPC RUNONDAY 19:00:00 @攻城提示
 ; #AutoRun NPC RUNONDAY 20:00:00 @开启攻城
 ; #AutoRun NPC RUNONDAY 22:01:00 @攻城结束
 ; #AutoRun NPC RUNONDAY 00:00:20 @每日重置
-
-
 ; ; #AutoRun NPC SEC 10 @每日重置
 
 

@@ -48,7 +48,7 @@ NEWCOMPLETETASK 4
 NEWDELETETASK 4
 
 GiveStateItem 破界の无边 1 0 1 0 0 1 1 1 1
-GiveStateItem 修复神水 1 0 1 1 0 1 1 1 1
+GiveStateItem 修复神水 1 0 1 0 0 1 1 1 1
 GiveStateItem 上古异兽1级 1 0 1 0 0 1 1 1 1
 TakeOnItem 破界の无边 18
 TakeOnItem 上古异兽1级 0

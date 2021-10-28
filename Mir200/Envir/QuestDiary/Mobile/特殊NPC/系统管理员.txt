@@ -168,13 +168,60 @@ Navigation 2 0 角色界面提示21
 goto @前往主城
 OPENNPCSHOWEX 76
 
+[@获取图鉴]
+#if
+#act
+
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$爆率使用序号)> 名字 S$爆率使用名字1
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$爆率使用序号)> 名字 S$爆率使用名字2
+; sendmsg 5 c:<$str(S$爆率使用名字)>_2__<$str(T6)>___<$str(N$爆率使用序号)>
+
+; 第一页
+#if
+CheckContainsText <$STR(T6)> <$str(S$爆率使用名字1)>
+#act
+GetValidstr <$STR(S$图鉴收集变量)> & S$获得道具名 S$图鉴收集变量
+sendmsg 5 <$str(S$爆率使用名字1)>____<$str(N$爆率使用序号)>
+
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$爆率使用序号)> 爆率提升 S$爆率提升2
+INC N$暴率加成 <$str(S$爆率提升1)>
+
+; 第二页
+#if
+CheckContainsText <$STR(T6)> <$str(S$爆率使用名字2)>
+#act
+GetValidstr <$STR(S$图鉴收集变量)> & S$获得道具名 S$图鉴收集变量
+sendmsg 5 <$str(S$爆率使用名字2)>____<$str(N$爆率使用序号)>
+
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$爆率使用序号)> 爆率提升 S$爆率提升2
+INC N$暴率加成 <$str(S$爆率提升2)>
+; INC N$暴率加成 <$str(S$爆率提升2)>
+
+#if
+not equal <$str(S$图鉴收集变量)>
+not equal <$str(S$爆率使用名字1)>
+not equal <$str(S$爆率使用名字2)>
+#act
+inc N$爆率使用序号 1
+; sendmsg 5 时间a:<$UTCNOW8>
+goto @获取图鉴
+
 [@ceshi1]
 
 #if
 #act
-money 绑定元宝 + 2000000
-; GetDBItemFieldValue 元宝 idx S$元宝
-; sendmsg 5 元宝<$str(S$元宝)>
+mov N$爆率使用序号 1 
+; 双鱼の翼&白羊の翼&
+mov T6 巨蟹の翼&双子の翼&金牛の翼&水瓶の翼&狮子の翼&处女の翼&天秤の翼&天蝎の翼&射手の翼&摩羯の翼
+mov S$图鉴收集变量 <$str(T6)>
+; mov T6 狮子の翼&处女の翼&天秤の翼&天蝎の翼&射手の翼&摩羯の翼
+goto @获取图鉴123
+sendmsg 5 时间11b:<$UTCNOW8>
+; sendmsg 5 c:<$str(S$爆率使用名字)>____<$STR(T6)>
+
+
+; GetDBItemFieldValue 金牛の翼 sEffect S$sEffect
+; sendmsg 5 元宝<$str(S$sEffect)>
 ; MAPEFFECT 1 天下主城 120 87 4210 30 0
 ; MAPEFFECT 1 天下主城 120 90 4210 30 0
 ; mov S$称号 暗黑称号

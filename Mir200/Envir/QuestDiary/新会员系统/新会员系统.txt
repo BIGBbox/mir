@@ -335,7 +335,7 @@ break
 #act
 money <$STR(S$每日货币类型)> - <$STR(S$每日货币数量)>
 ;GiveStateItem <$STR(S$每日道具名字)> <$STR(S$每日道具数量)> 0 1 0 0 1 1 1 1
-MailGIVE <$STR(S$每日道具名字)> <$STR(S$每日道具数量)> 1#4#6#8
+MailGIVE <$STR(S$每日道具名字)> <$STR(S$每日道具数量)> 1#4#5#6#8
 SendMail 1 系统奖励 会员每日礼包,请点提取附件!
 messagebox <$STR(S$每日道具名字)>已发放你的邮件,请及时提取附件!!
 set [<$STR(S$限购标记)>] 1
@@ -560,7 +560,7 @@ GetValidstr <$STR(S$下方礼包串)> & S$道具名字和数量 S$下方礼包串
 GetValidstr <$STR(S$道具名字和数量)> * S$道具名字 S$道具数量
 ; GIVE <$STR(S$道具名字)> <$STR(S$道具数量)>
 ; sendmsg 5 :::<$str(S$道具名字)>___<$str(S$道具数量)>
-MailGIVE <$STR(S$道具名字)> <$STR(S$道具数量)> 1#4#6#8
+MailGIVE <$STR(S$道具名字)> <$STR(S$道具数量)> 1#4#5#6#8
 GOTO @发放每日礼包
 set [<$STR(S$领取标记)>] 1
 #elseact
@@ -573,7 +573,7 @@ SendMail 1 系统奖励 <$STR(S$邮件标题)>礼包已发放,请尽快提取附件!
 ; ; GetValidstr <$STR(S$每日礼包串)> * S$道具名字 S$道具数量
 ; sendmsg 5 :::<$str(S$道具名字)>___<$str(S$道具数量)>
 ; ;GiveStateItem <$STR(S$道具名字)> <$STR(S$道具数量)> 0 1 0 0 1 1 1 1
-; MailGIVE <$STR(S$道具名字)> <$STR(S$道具数量)> 1#4#6#8
+; MailGIVE <$STR(S$道具名字)> <$STR(S$道具数量)> 1#4#5#6#8
 ; SendMail 1 系统奖励 <$STR(S$邮件标题)>每日礼包已发放,请尽快提取附件!
 ; ; close
 ; ;GOTO @左边会员按钮

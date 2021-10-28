@@ -34,9 +34,9 @@ check [100] 0
 ;SKILLLEVEL 逐日剑法 = 3
 ;SKILLLEVEL 隐身术 = 3
 
-MailGIVE 灵兽精石 10 1#4#6#8
-MailGIVE 一转证明 10 1#4#6#8
-MailGIVE 初级称号证明 5 1#4#6#8
+MailGIVE 灵兽精石 10 1#4#5#6#8
+MailGIVE 一转证明 10 1#4#5#6#8
+MailGIVE 初级称号证明 5 1#4#5#6#8
 
 SendMail 1 系统奖励 你好<$USERNAME>QQ礼包已发放到你的邮箱,请尽快提取!!
 set [100] 1

@@ -286,7 +286,7 @@ sendmsg 1 已完成任务!
 
 CHANGEEXP + 100000
 MailGIVE 绑定元宝 100000
-MailGIVE 灵兽精石 10 1#4#6#8
+MailGIVE 灵兽精石 10 1#4#5#6#8
 SendMail 1 系统奖励 你已完成称号任务,10万经验,10万元宝和灵兽精石*10已发放!!
 
 #if
