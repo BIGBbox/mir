@@ -8019,54 +8019,54 @@ SENDMSG 7 {增加|56:56:0}{[2000000]|250:56:0}{金币，您当前金币总数为|56:56:0}{[<$
 ; sendmsg 5 使用金条触发
 
 ; 红包道具
-[@StdModeFunc336]
+[@StdModeFunc344]
 #act
 mov M0 10
 money RMB点 + 100
 goto @ReCharge
 
-[@StdModeFunc337]
+[@StdModeFunc345]
 #act
 mov M0 50
 money RMB点 + 500
 goto @ReCharge
 
-[@StdModeFunc338]
+[@StdModeFunc346]
 mov M0 100
 money RMB点 + 1000
 goto @ReCharge
 
-[@StdModeFunc339]
+[@StdModeFunc347]
 mov M0 200
 money RMB点 + 2000
 goto @ReCharge
 
-[@StdModeFunc340]
+[@StdModeFunc348]
 mov M0 300
 money RMB点 + 3000
 goto @ReCharge
 
-[@StdModeFunc341]
+[@StdModeFunc349]
 mov M0 500
 money RMB点 + 5000
 goto @ReCharge
 
-[@StdModeFunc342]
+[@StdModeFunc350]
 mov M0 1000
 money RMB点 + 10000
 goto @ReCharge
 
-[@StdModeFunc343]
+[@StdModeFunc351]
 mov M0 3000
 money RMB点 + 30000
 goto @ReCharge
 
-[@StdModeFunc344]
+[@StdModeFunc352]
 mov M0 5000
 money RMB点 + 50000
 goto @ReCharge
 
-[@StdModeFunc345]
+[@StdModeFunc353]
 mov M0 10000
 money RMB点 + 100000
 goto @ReCharge

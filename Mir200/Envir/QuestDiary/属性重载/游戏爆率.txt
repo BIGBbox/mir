@@ -34,46 +34,6 @@ mov S$图鉴收集变量 <$str(T6)>
 mov N$爆率使用序号 1 
 goto @获取时装图鉴爆率
 
-
-[@获取时装图鉴爆率]
-#if
-#act
-
-ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$爆率使用序号)> 名字 S$爆率使用名字1
-ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$爆率使用序号)> 名字 S$爆率使用名字2
-; sendmsg 5 c:<$str(S$爆率使用名字1)>_2__<$str(T6)>___<$str(N$爆率使用序号)>
-; sendmsg 5 c:<$str(S$爆率使用名字2)>_2__<$str(T6)>___<$str(N$爆率使用序号)>
-
-; 第一页
-#if
-CheckContainsText <$STR(T6)> <$str(S$爆率使用名字1)>
-#act
-GetValidstr <$STR(S$图鉴收集变量)> & S$获得道具名 S$图鉴收集变量
-
-sendmsg 5 1:<$str(S$爆率使用名字1)>_1
-ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$爆率使用序号)> 爆率提升 S$爆率提升1
-INC N$暴率加成 <$str(S$爆率提升1)>
-
-; 第二页
-#if
-CheckContainsText <$STR(T6)> <$str(S$爆率使用名字2)>
-#act
-GetValidstr <$STR(S$图鉴收集变量)> & S$获得道具名 S$图鉴收集变量
-sendmsg 5 2:<$str(S$爆率使用名字1)>_2
-
-ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$爆率使用序号)> 爆率提升 S$爆率提升2
-INC N$暴率加成 <$str(S$爆率提升2)>
-
-
-#if
-not equal <$str(S$图鉴收集变量)>
-not equal <$str(S$爆率使用名字1)>
-not equal <$str(S$爆率使用名字2)>
-#act
-inc N$爆率使用序号 1
-; sendmsg 5 时间a:<$UTCNOW8>
-goto @获取时装图鉴爆率
-
 ;---------沙捐----------------
 ; 前三倍攻加成
 #IF
@@ -1201,6 +1161,45 @@ inc N$称号行数 1
 not equal <$str(S$称号)>
 #act
 goto @获取称号文件夹名
+
+
+[@获取时装图鉴爆率]
+#if
+#act
+
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$爆率使用序号)> 名字 S$爆率使用名字1
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$爆率使用序号)> 名字 S$爆率使用名字2
+; sendmsg 5 c:<$str(S$爆率使用名字1)>_2__<$str(T6)>___<$str(N$爆率使用序号)>
+; sendmsg 5 c:<$str(S$爆率使用名字2)>_2__<$str(T6)>___<$str(N$爆率使用序号)>
+
+; 第一页
+#if
+CheckContainsText <$STR(T6)> <$str(S$爆率使用名字1)>
+#act
+GetValidstr <$STR(S$图鉴收集变量)> & S$获得道具名 S$图鉴收集变量
+
+; sendmsg 5 1:<$str(S$爆率使用名字1)>_1
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$爆率使用序号)> 爆率提升 S$爆率提升1
+INC N$暴率加成 <$str(S$爆率提升1)>
+
+; 第二页
+#if
+CheckContainsText <$STR(T6)> <$str(S$爆率使用名字2)>
+#act
+GetValidstr <$STR(S$图鉴收集变量)> & S$获得道具名 S$图鉴收集变量
+; sendmsg 5 2:<$str(S$爆率使用名字1)>_2
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$爆率使用序号)> 爆率提升 S$爆率提升2
+INC N$暴率加成 <$str(S$爆率提升2)>
+
+
+#if
+not equal <$str(S$图鉴收集变量)>
+not equal <$str(S$爆率使用名字1)>
+not equal <$str(S$爆率使用名字2)>
+#act
+inc N$爆率使用序号 1
+; sendmsg 5 时间a:<$UTCNOW8>
+goto @获取时装图鉴爆率
 
 
 }
