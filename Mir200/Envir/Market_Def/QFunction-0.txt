@@ -7973,43 +7973,53 @@ SENDMSG 7 {增加|56:56:0}{[2000000]|250:56:0}{金币，您当前金币总数为|56:56:0}{[<$
 [@StdModeFunc336]
 #act
 mov M0 10
+money RMB点 + 100
 goto @ReCharge
 
 [@StdModeFunc337]
 #act
 mov M0 50
+money RMB点 + 500
 goto @ReCharge
 
 [@StdModeFunc338]
 mov M0 100
+money RMB点 + 1000
 goto @ReCharge
 
 [@StdModeFunc339]
 mov M0 200
+money RMB点 + 2000
 goto @ReCharge
 
 [@StdModeFunc340]
 mov M0 300
+money RMB点 + 3000
 goto @ReCharge
 
 [@StdModeFunc341]
 mov M0 500
+money RMB点 + 5000
 goto @ReCharge
 
 [@StdModeFunc342]
 mov M0 1000
+money RMB点 + 10000
 goto @ReCharge
 
 [@StdModeFunc343]
 mov M0 3000
+money RMB点 + 30000
 goto @ReCharge
 
 [@StdModeFunc344]
 mov M0 5000
+money RMB点 + 50000
 goto @ReCharge
 
 [@StdModeFunc345]
 mov M0 10000
+money RMB点 + 100000
 goto @ReCharge
 
 
