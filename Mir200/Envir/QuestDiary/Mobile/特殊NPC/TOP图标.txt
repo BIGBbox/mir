@@ -6,6 +6,7 @@ goto @手游top1
 
 #if
 check [22] 0
+not small U99 10
 #act
 #CALL [\首充\首充.txt] @首充面板
 

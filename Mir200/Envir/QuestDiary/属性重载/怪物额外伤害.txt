@@ -18,6 +18,62 @@ inc N$怪物额外伤害 <$STR(S$赞助_对怪伤害)>
 mov N$怪物称号行数 0
 mov S$怪物称号 <$str(T1)>
 goto @获取怪物伤害称号文件夹名
+
+
+; 
+
+; 时装图鉴相关
+#if
+not equal <$str(T6)>
+#act
+mov S$图鉴收集变量 <$str(T6)>
+mov N$额伤使用序号 1 
+goto @获取时装图鉴额外伤害
+
+
+[@获取时装图鉴额外伤害]
+#if
+#act
+
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$额伤使用序号)> 名字 S$额伤使用名字1
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$额伤使用序号)> 名字 S$额伤使用名字2
+; sendmsg 5 c:<$str(S$额伤使用名字)>_2__<$str(T6)>___<$str(N$额伤使用序号)>
+
+; 第一页
+#if
+CheckContainsText <$STR(T6)> <$str(S$额伤使用名字1)>
+#act
+GetValidstr <$STR(S$图鉴收集变量)> & S$获得道具名 S$图鉴收集变量
+
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$额伤使用序号)> 对怪伤害 S$额伤提升1
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$额伤使用序号)> 道术切割 S$道术切割1
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$额伤使用序号)> 魔法切割 S$魔法提升1
+INC N$怪物额外伤害 <$str(S$额伤提升1)>
+INC N$魔法切割 <$str(S$道术切割1)>
+INC N$道术切割 <$str(S$魔法提升1)>
+
+; 第二页
+#if
+CheckContainsText <$STR(T6)> <$str(S$额伤使用名字2)>
+#act
+GetValidstr <$STR(S$图鉴收集变量)> & S$获得道具名 S$图鉴收集变量
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$额伤使用序号)> 对怪伤害 S$额伤提升2
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$额伤使用序号)> 道术切割 S$道术切割2
+ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$额伤使用序号)> 魔法切割 S$魔法提升2
+INC N$怪物额外伤害 <$str(S$额伤提升2)>
+INC N$魔法切割 <$str(S$道术切割2)>
+INC N$道术切割 <$str(S$魔法提升2)>
+
+
+#if
+not equal <$str(S$图鉴收集变量)>
+not equal <$str(S$额伤使用名字1)>
+not equal <$str(S$额伤使用名字2)>
+#act
+inc N$额伤使用序号 1
+; sendmsg 5 时间a:<$UTCNOW8>
+goto @获取时装图鉴额外伤害
+
 ;---------沙捐----------------
 ; 前三倍攻加成
 #IF

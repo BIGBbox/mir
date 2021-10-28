@@ -38,7 +38,7 @@ GetValidstr <$STR(S$获得道具)> & S$获得道具名 S$获得道具数
 
 
 GetDBItemFieldValue <$str(S$消耗道具名<$str(N$天下杀戮序号)>)> idx S$消耗道具ID<$str(N$天下杀戮序号)>
-GetDBItemFieldValue <$str(S$获得道具)> idx S$获得道具ID
+GetDBItemFieldValue <$str(S$获得道具名)> idx S$获得道具ID
 
 
 #or
@@ -120,9 +120,6 @@ goto @扣除道具
 
 
 [@扣除道具]
-#if
-#act
-sendmsg 5 满足合成条件,扣除道具流程!!
 
 #if
 #act
@@ -142,7 +139,7 @@ equal <$str(N2)> 41
 not equal <$str(S$消耗道具名<$str(N$判断消耗)>)> 元宝
 not checkmoney <$str(S$消耗道具名<$str(N$判断消耗)>)> < <$str(S$消耗道具数<$str(N$判断消耗)>)>
 #act
-money <$str(S$消耗道具数<$str(N$判断消耗)>)> - <$str(S$消耗道具数<$str(N$判断消耗)>)>
+money <$str(S$消耗道具名<$str(N$判断消耗)>)> - <$str(S$消耗道具数<$str(N$判断消耗)>)>
 
 
 ; 扣除道具

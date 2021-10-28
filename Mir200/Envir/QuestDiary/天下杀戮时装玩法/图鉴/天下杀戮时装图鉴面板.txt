@@ -17,10 +17,13 @@ mov N$X激活按钮坐标 90
 mov N$Y激活按钮坐标 210
 ; mov S$参数 <$str(S$页数)>
 ; messagebox 功能暂时关闭
-goto @获取数据
+goto @获取图鉴数据
+; #CALL [\属性重载\游戏爆率.txt] @暴率
+; #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
 
 
-[@异兽坊主面板]
+
+[@天下杀戮图鉴主面板]
 #IF
 #ACT
 mov S$幻化马牌名
@@ -30,8 +33,8 @@ mov S$幻化马牌名
 btn1,btn2,btn3,btn4,btn5,合成描述,name1,name2,name3,name4,name5,name6,cliBtn1,cliBtn2,cliBtn3,cliBtn4,cliBtn5,cliBtn6}|bg=1|reset=0|move=1>
 <Button|x=770|y=105|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 
-<Button|id=btn1|x=8|y=45 |nimg=public/sf1/1/01417.png|pimg=public/sf1/1/01419.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@马厩翻页#参数=1>
-<Button|id=btn2|x=8|y=102|nimg=public/sf1/1/01420.png|pimg=public/sf1/1/01422.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@马厩翻页#参数=2>
+<Button|id=btn1|x=8|y=45 |nimg=public/sf1/1/01417.png|pimg=public/sf1/1/01419.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天下杀戮图鉴翻页#参数=1>
+<Button|id=btn2|x=8|y=102|nimg=public/sf1/1/01420.png|pimg=public/sf1/1/01422.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@天下杀戮图鉴翻页#参数=2>
 
 <$str(S$马特效)>
 <$str(S$马名字)>
@@ -47,21 +50,27 @@ btn1,btn2,btn3,btn4,btn5,合成描述,name1,name2,name3,name4,name5,name6,cliBtn1,cl
 
 ;----------------------------------------------------------------------------------------------------
 
-[@马厩翻页]
+[@天下杀戮图鉴翻页]
 #if
 #act
 ; close
 mov S$页数 <$str(S$参数)>
+; sendmsg 5 <$str(S$参数)>__a
+mov S$马特效
+mov S$马名字
+mov S$马备注
+mov S$激活图片
+mov S$激活按钮
 mov N$序号 1
 mov N$X激活特效坐标 70
 mov N$Y激活特效坐标 170
 mov N$X激活按钮坐标 90
 mov N$Y激活按钮坐标 210
-mov S$激活图片
 
-goto @获取数据
 
-[@获取数据]
+goto @获取图鉴数据
+
+[@获取图鉴数据]
 #if
 #act
 
@@ -83,10 +92,11 @@ inc S$马备注 <Button|id=tips<$str(N$序号)>|x=<$str(S$备注x)>|y=<$str(S$备注y)>|n
 
 #if
 ; check [<$str(N$标记)>] 1
+CheckContainsText <$STR(T6)> <$str(S$名字)>
 #act
 ; sendmsg 5 激活特效<$str(N$序号)>
-; inc S$激活图片 <Img|id=激活特效<$str(N$序号)>|x=<$str(N$X激活特效坐标)>|y=<$str(N$Y激活特效坐标)>|img=public/icon/common1017.png>
-; #elseact
+inc S$激活图片 <Img|id=激活特效<$str(N$序号)>|x=<$str(N$X激活特效坐标)>|y=<$str(N$Y激活特效坐标)>|img=public/icon/common1017.png>
+#elseact
 inc S$激活按钮 <Button|id=cliBtn<$str(N$序号)>|x=<$str(N$X激活按钮坐标)>|y=<$str(N$Y激活按钮坐标)>|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|link=@图鉴收集#装备名字=<$str(S$名字)>#装备标记=<$str(S$标记)>>
 
 #if
@@ -105,9 +115,9 @@ inc N$X激活按钮坐标 170
 small <$str(N$序号)> 6
 #act
 inc N$序号 1
-goto @获取数据
+goto @获取图鉴数据
 #elseact
-goto @异兽坊主面板
+goto @天下杀戮图鉴主面板
 
 [@图鉴收集]
 #if
@@ -122,12 +132,21 @@ not checkitem <$str(S$装备名字)> 1
 messagebox 你没有<$str(S$装备名字)>,无法收集!!
 break
 
+#if
+#act
+delaygoto 100 @刷新界面
+
 take <$str(S$装备名字)> 1
-mov <$str(T6)>&<$str(S$装备名字)>
+mov T6 <$str(T6)>&<$str(S$装备名字)>
+sendmsg 5 T6___<$str(T6)>
 MOVR N$纵轴坐标 100 300
 SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <玩家/FCOLOR=253><【<$USERNAME>】/FCOLOR=250><成功点亮/FCOLOR=255><<$str(S$装备名字)>/FCOLOR=70>
 
-
+[@刷新界面]
+#act
+goto @天下杀戮图鉴翻页
+#CALL [\属性重载\游戏爆率.txt] @暴率
+#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
 [@幻化八骏]
 #IF
 check [279] 1
