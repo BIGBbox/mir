@@ -7793,68 +7793,117 @@ SENDMSG 7 {增加|56:56:0}{[100000]|250:56:0}{绑元，您当前绑元总数为|56:56:0}{[<$M
 [@StdModeFunc296]
 #IF
 #ACT
-GAMEDIAMOND + 1
-SENDMSG 7 {增加|56:56:0}{[1]|250:56:0}{天下币，您当前元宝总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+GAMEDIAMOND + 5
+SENDMSG 7 {增加|56:56:0}{[5]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
 
 [@StdModeFunc297]
 #IF
 #ACT
-GAMEDIAMOND + 2
-SENDMSG 7 {增加|56:56:0}{[2]|250:56:0}{天下币，您当前元宝总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+GAMEDIAMOND + 10
+SENDMSG 7 {增加|56:56:0}{[10]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
 
 [@StdModeFunc298]
 #IF
 #ACT
-GAMEDIAMOND + 5
-SENDMSG 7 {增加|56:56:0}{[5]|250:56:0}{天下币，您当前元宝总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+GAMEDIAMOND + 50
+SENDMSG 7 {增加|56:56:0}{[50]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
 
 [@StdModeFunc299]
 #IF
 #ACT
-GAMEDIAMOND + 10
-SENDMSG 7 {增加|56:56:0}{[10]|250:56:0}{天下币，您当前元宝总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+GAMEDIAMOND + 100
+SENDMSG 7 {增加|56:56:0}{[100]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
 
 [@StdModeFunc300]
 #IF
 #ACT
-GAMEDIAMOND + 20
-SENDMSG 7 {增加|56:56:0}{[20]|250:56:0}{天下币，您当前元宝总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+GAMEDIAMOND + 500
+SENDMSG 7 {增加|56:56:0}{[500]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
 
 [@StdModeFunc301]
 #IF
 #ACT
-GAMEDIAMOND + 50
-SENDMSG 7 {增加|56:56:0}{[50]|250:56:0}{天下币，您当前元宝总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+GAMEDIAMOND + 1000
+SENDMSG 7 {增加|56:56:0}{[1000]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
 
 [@StdModeFunc302]
 #IF
 #ACT
-GAMEDIAMOND + 100
-SENDMSG 7 {增加|56:56:0}{[100]|250:56:0}{天下币，您当前元宝总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+GAMEDIAMOND + 2500
+SENDMSG 7 {增加|56:56:0}{[2500]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
 
 [@StdModeFunc303]
 #IF
 #ACT
-GAMEDIAMOND + 500
-SENDMSG 7 {增加|56:56:0}{[500]|250:56:0}{天下币，您当前元宝总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+GAMEDIAMOND + 3000
+SENDMSG 7 {增加|56:56:0}{[3000]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
 
 [@StdModeFunc304]
 #IF
 #ACT
-GAMEDIAMOND + 1000
-SENDMSG 7 {增加|56:56:0}{[1000]|250:56:0}{天下币，您当前元宝总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+GAMEDIAMOND + 5000
+SENDMSG 7 {增加|56:56:0}{[5000]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
 
 [@StdModeFunc330]
 #IF
 #ACT
-GAMEDIAMOND + 5000
-SENDMSG 7 {增加|56:56:0}{[1000]|250:56:0}{天下币，您当前元宝总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+GAMEDIAMOND + 7000
+SENDMSG 7 {增加|56:56:0}{[7000]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
 
 [@StdModeFunc331]
 #IF
 #ACT
 GAMEDIAMOND + 10000
-SENDMSG 7 {增加|56:56:0}{[1000]|250:56:0}{天下币，您当前元宝总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+SENDMSG 7 {增加|56:56:0}{[10000]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+
+[@StdModeFunc336]
+#IF
+#ACT
+GAMEDIAMOND + 15000
+SENDMSG 7 {增加|56:56:0}{[15000]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+
+[@StdModeFunc337]
+#IF
+#ACT
+GAMEDIAMOND + 20000
+SENDMSG 7 {增加|56:56:0}{[20000]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+
+[@StdModeFunc338]
+#IF
+#ACT
+GAMEDIAMOND + 50000
+SENDMSG 7 {增加|56:56:0}{[50000]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+
+[@StdModeFunc339]
+#IF
+#ACT
+GAMEDIAMOND + 70000
+SENDMSG 7 {增加|56:56:0}{[70000]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+
+[@StdModeFunc340]
+#IF
+#ACT
+GAMEDIAMOND + 150000
+SENDMSG 7 {增加|56:56:0}{[150000]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+
+[@StdModeFunc341]
+#IF
+#ACT
+GAMEDIAMOND + 250000
+SENDMSG 7 {增加|56:56:0}{[250000]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+
+[@StdModeFunc342]
+#IF
+#ACT
+GAMEDIAMOND + 350000
+SENDMSG 7 {增加|56:56:0}{[350000]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+
+[@StdModeFunc343]
+#IF
+#ACT
+GAMEDIAMOND + 500000
+SENDMSG 7 {增加|56:56:0}{[500000]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+
 
 ;---------------------神兵礼包------------------------
 [@StdModeFunc320]
