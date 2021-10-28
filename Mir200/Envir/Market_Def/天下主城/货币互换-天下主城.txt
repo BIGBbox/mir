@@ -1,11 +1,12 @@
 [@main]
-#IF
-#ACT
-#IF
-CheckContainsText <$SERVERNAME> ²âÊÔ
-#ACT
-MESSAGEBOX ±§Ç¸£º²âÊÔÇø£¬ÎÞ·¨»¥»»£¡£¡
-break
+; #IF
+; #ACT
+
+; #IF
+; CheckContainsText <$SERVERNAME> ²âÊÔ
+; #ACT
+; MESSAGEBOX ±§Ç¸£º²âÊÔÇø£¬ÎÞ·¨»¥»»£¡£¡
+; break
 
 
 
