@@ -28,6 +28,9 @@ goto @执行佩戴称号
 
 
 [@佩戴会员称号]
+#if
+#act
+mov N$会员等级 <$STR(U17)>
 
 #if
 large <$STR(N$会员等级)> 11
