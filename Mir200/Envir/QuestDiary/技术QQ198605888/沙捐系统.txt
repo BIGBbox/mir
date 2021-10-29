@@ -42,21 +42,21 @@ GOTO @读取数据
     <Text|id=1_3|x=300|y=25|color=253|tips=|tipsx=10|tipsy=80|size=18|text=累计捐献:>
     <Text|id=1_4|x=380|y=25|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$捐献数量1_排版)>>
     <Text|id=1_5|x=480|y=25|color=249|tips=|tipsx=10|tipsy=80|size=18|text=RMB>
-    <Button|id=1_6|x=47|y=25|color=103|tips={第一名属性：/FCOLOR=249}^{神力倍攻+1.10/FCOLOR=251}^{爆率+120%/FCOLOR=251}^{打怪伤害+15%/FCOLOR=251}^{排行与沙捐属性叠加/FCOLOR=249}^|tipsx=70|tipsy=0|nimg=public/sf1/1/00284.png>
+    <Button|id=1_6|x=47|y=25|color=103|tips={第一名属性：/FCOLOR=249}^{神力倍攻+1.10/FCOLOR=251}^{爆率+120%/FCOLOR=251}^{打怪伤害+15%/FCOLOR=251}^{获得十步一杀技能/FCOLOR=250}^{排行与沙捐属性叠加/FCOLOR=249}^|tipsx=70|tipsy=0|nimg=public/sf1/1/00284.png>
 
     <Text|id=2_1|x=87|y=65|color=254|tips=|tipsx=10|tipsy=80|size=18|text=第二名:>
     <Text|id=2_2|x=164|y=65|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$玩家2_排版)>>
     <Text|id=2_3|x=300|y=65|color=253|tips=|tipsx=10|tipsy=80|size=18|text=累计捐献:>
     <Text|id=2_4|x=380|y=65|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$捐献数量2_排版)>>
     <Text|id=2_5|x=480|y=65|color=249|tips=|tipsx=10|tipsy=80|size=18|text=RMB>
-    <Button|id=2_6|x=47|y=65|color=103|tips={第二名属性：/FCOLOR=249}^{神力倍攻+1.05/FCOLOR=251}^{爆率+70%/FCOLOR=251}^{打怪伤害+10%/FCOLOR=251}^{排行与沙捐属性叠加/FCOLOR=249}^|tipsx=70|tipsy=0|nimg=public/sf1/1/00284.png>
+    <Button|id=2_6|x=47|y=65|color=103|tips={第二名属性：/FCOLOR=249}^{神力倍攻+1.05/FCOLOR=251}^{爆率+70%/FCOLOR=251}^{打怪伤害+10%/FCOLOR=251}^{获得十步一杀技能/FCOLOR=250}^{排行与沙捐属性叠加/FCOLOR=249}^|tipsx=70|tipsy=0|nimg=public/sf1/1/00284.png>
 
     <Text|id=3_1|x=87|y=105|color=254|tips=|tipsx=10|tipsy=80|size=18|text=第三名:>
     <Text|id=3_2|x=164|y=105|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$玩家3_排版)>>
     <Text|id=3_3|x=300|y=105|color=253|tips=|tipsx=10|tipsy=80|size=18|text=累计捐献:>
     <Text|id=3_4|x=380|y=105|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$STR(S$捐献数量3_排版)>>
     <Text|id=3_5|x=480|y=105|color=249|tips=|tipsx=10|tipsy=80|size=18|text=RMB>
-    <Button|id=3_6|x=47|y=105|color=103|tips={第三名属性：/FCOLOR=249}^{神力倍攻+1.03/FCOLOR=251}^{爆率+50%/FCOLOR=251}^{打怪伤害+5%/FCOLOR=251}^{排行与沙捐属性叠加/FCOLOR=249}^|tipsx=70|tipsy=0|nimg=public/sf1/1/00284.png>
+    <Button|id=3_6|x=47|y=105|color=103|tips={第三名属性：/FCOLOR=249}^{神力倍攻+1.03/FCOLOR=251}^{爆率+50%/FCOLOR=251}^{打怪伤害+5%/FCOLOR=251}^{获得十步一杀技能/FCOLOR=250}^{排行与沙捐属性叠加/FCOLOR=249}^|tipsx=70|tipsy=0|nimg=public/sf1/1/00284.png>
 
 
 ;<RText|id=8_3|x=334.0|y=0|color=255|size=16|text=<爆率+100% 攻击+15% 血量+15%/FCOLOR=250> >

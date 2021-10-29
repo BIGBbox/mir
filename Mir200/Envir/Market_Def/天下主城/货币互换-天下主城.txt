@@ -29,6 +29,12 @@
 
 
 [@提取500]
+
+#if
+#act
+messagebox 是否确定提取500天下币兑换 @提取500确定 @取消
+
+[@提取500确定]
 #IF
 CHECKMONEY 天下币 > 499
 #ACT
@@ -42,6 +48,13 @@ BREAK
 
 
 [@提取1000]
+
+#if
+#act
+messagebox 是否确定提取1000天下币兑换 @提取1000确定 @取消
+
+
+[@提取1000确定]
 #IF
 CHECKMONEY 天下币 > 999
 #ACT
@@ -58,12 +71,17 @@ BREAK
 
 [@兑换100]
 
+#if
+#act
+messagebox 是否确定使用10RMB点兑换100天下币 @兑换100确定 @取消
+
+[@兑换100确定]
 #IF
 CHECKMONEY RMB点 > 9
 #ACT
 money RMB点 - 10
 money 天下币 + 100
-CreditPoint + 1
+; CreditPoint + 1
 MESSAGEBOX 提示：成功兑换100天下币！！
 BREAK
 #ELSEACT
@@ -74,13 +92,17 @@ BREAK
 
 
 [@兑换1000]
+#if
+#act
+messagebox 是否确定使用100RMB点兑换1000天下币 @兑换1000确定 @取消
 
+[@兑换1000确定]
 #IF
 CHECKMONEY RMB点 > 99
 #ACT
 money RMB点 - 100
 money 天下币 + 1000
-CreditPoint + 10
+; CreditPoint + 10
 MESSAGEBOX 提示：成功兑换1000天下币！！
 BREAK
 #ELSEACT
@@ -89,12 +111,19 @@ BREAK
 
 
 [@兑换10000]
+
+#if
+#act
+messagebox 是否确定使用1000RMB点兑换10000天下币 @兑换10000确定 @取消
+
+
+[@兑换10000确定]
 #IF
 CHECKMONEY RMB点 > 999
 #ACT
 money RMB点 - 1000
 money 天下币 + 10000
-CreditPoint + 100
+; CreditPoint + 100
 MESSAGEBOX 提示：成功兑换100000天下币！！
 BREAK
 #ELSEACT
@@ -103,12 +132,17 @@ BREAK
 
 
 [@兑换500]
+#if
+#act
+messagebox 是否确定使用50RMB点兑换500天下币 @兑换500确定 @取消
+
+[@兑换500确定]
 #IF
 CHECKMONEY RMB点 > 49
 #ACT
 money RMB点 - 50
 money 天下币 + 500
-CreditPoint + 5
+; CreditPoint + 5
 MESSAGEBOX 提示：成功兑换500天下币！！
 BREAK
 #ELSEACT
@@ -117,12 +151,18 @@ BREAK
 
 
 [@兑换5000]
+
+#if
+#act
+messagebox 是否确定使用500RMB点兑换5000天下币 @兑换5000确定 @取消
+
+
 #IF
 CHECKMONEY RMB点 > 499
 #ACT
 money RMB点 - 500
 money 天下币 + 5000
-CreditPoint + 50
+; CreditPoint + 50
 MESSAGEBOX 提示：成功兑换5000天下币！！
 BREAK
 #ELSEACT
@@ -131,12 +171,17 @@ BREAK
 
 
 [@兑换50000]
+#if
+#act
+messagebox 是否确定使用5000RMB点兑换50000天下币 @兑换50000确定 @取消
+
+[@兑换50000确定]
 #IF
 CHECKMONEY RMB点 > 4999
 #ACT
 money RMB点 - 5000
 money 天下币 + 50000
-CreditPoint + 500
+; CreditPoint + 500
 MESSAGEBOX 提示：成功兑换50000天下币！！
 BREAK
 #ELSEACT
