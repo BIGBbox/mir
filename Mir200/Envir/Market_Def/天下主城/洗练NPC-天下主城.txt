@@ -43,7 +43,7 @@ messagebox 你未放入装备无法洗练！！！
 break
 
 #if
-not CheckBindMoney 天下币 > 199
+not CheckMoney 天下币 > 199
 #act
 messagebox 天下币不足200个
 break
@@ -56,9 +56,9 @@ messagebox 该装备不能鉴定！！！
 break
 
 #if
-CheckBindMoney 天下币 > 199
+CheckMoney 天下币 > 199
 #act
-ChangeBindMoney 天下币 200
+money 天下币 - 200
 SetUpgradeItem 1
 
 #if
