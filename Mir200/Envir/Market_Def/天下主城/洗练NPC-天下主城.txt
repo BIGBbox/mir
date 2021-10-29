@@ -7,10 +7,10 @@
 <Button|x=839|y=125|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 
 <Text|id=rightTips|x=395|y=40|color=215|tips={鉴定说明：/FCOLOR=251}^{1.普通装备、特殊装备有概率出现1个附加属性/FCOLOR=154}^{2.超级特殊装备、专属装备有概率出现0-2个附加属性/FCOLOR=215}^{3.图纸装备有概率鉴定出1-2个附加属性/FCOLOR=70}^{4.神器装备有概率鉴定出1-3个附加属性/FCOLOR=249}^|tipsx=200|tipsy=180|size=16|text=鉴定说明>
-<Button|id=click_btn|x=112|y=315|nimg=public/sf1/1/00690.png|pimg=public/sf1/1/00692.png|tips={鉴定一次需要：50000元宝/FCOLOR=94}|tipsx=10|tipsy=80|size=16|color=249|link=@洗练一次>
+<Button|id=click_btn|x=112|y=315|nimg=public/sf1/1/00690.png|pimg=public/sf1/1/00692.png|tips={鉴定一次需要：200天下币/FCOLOR=94}|tipsx=10|tipsy=80|size=16|color=249|link=@洗练一次>
 <ITEMBOX|id=item|x=140.0|y=160|width=55|height=55|tips={请放入您要洗练的装备/FCOLOR=255}|boxindex=1|stdmode=*|tipsx=1|tipsy=65|img=public/0.png>
 
-<Text|id=yb|x=130|y=240|color=222|tips=|tipsx=10|tipsy=80|size=16|text=[50000元宝]>
+<Text|id=yb|x=130|y=240|color=222|tips=|tipsx=10|tipsy=80|size=16|text=[200天下币]>
 ;<Text|id=特效控件1|x=32|y=165|color=251|tips=|tipsx=10|tipsy=80|size=16|text=鉴定属性鼠标移动查看>
 <Text|id=特效控件2|x=375|y=60|color=9|tips={暴击伤害+5%/FCOLOR=146}^{暴击伤害+10%/FCOLOR=146}^{暴击伤害+15%/FCOLOR=146}^{暴击伤害+20%/FCOLOR=146}^{暴击伤害+25%/FCOLOR=146}^{吸血+1%/FCOLOR=19}^{吸血+2%/FCOLOR=19}^{吸血+3%/FCOLOR=19}^{吸血+4%/FCOLOR=19}^{吸血+5%/FCOLOR=19}^{对怪伤害+2%/FCOLOR=253}^{对怪伤害+4%/FCOLOR=253}^{对怪伤害+6%/FCOLOR=253}^{对怪伤害+8%/FCOLOR=253}^{对怪伤害+10%/FCOLOR=253}^{第一刀斩杀怪物2%HP/FCOLOR=58}^{第一刀斩杀怪物4%HP/FCOLOR=58}^{第一刀斩杀怪物6%HP/FCOLOR=58}^{第一刀斩杀怪物8%HP/FCOLOR=58}^{第一刀斩杀怪物10%HP/FCOLOR=58}^|tipsx=50|tipsy=280|size=15|text=武器鉴定介绍>
 <Text|id=特效控件3|x=375|y=100|color=9|tips={永久吸收+1%/FCOLOR=2}^{永久吸收+2%/FCOLOR=2}^{永久吸收+3%/FCOLOR=2}^{永久吸收+4%/FCOLOR=2}^{永久吸收+5%/FCOLOR=2}^{体力魔力+3%/FCOLOR=6}^{体力魔力+6%/FCOLOR=6}^{体力魔力+9%/FCOLOR=6}^{体力魔力+12%/FCOLOR=6}^{体力魔力+15%/FCOLOR=6}^{伤害反弹+3%/FCOLOR=21}^{伤害反弹+6%/FCOLOR=21}^{伤害反弹+9%/FCOLOR=21}^{伤害反弹+12%/FCOLOR=21}^{伤害反弹+15%/FCOLOR=21}^{杀人爆率+2%/FCOLOR=19}^{杀人爆率+4%/FCOLOR=19}^{杀人爆率+6%/FCOLOR=19}^{杀人爆率+8%/FCOLOR=19}^{杀人爆率+10%/FCOLOR=19}^|tipsx=10|tipsy=220|size=15|text=衣服鉴定介绍>
@@ -43,9 +43,9 @@ messagebox 你未放入装备无法洗练！！！
 break
 
 #if
-not CheckBindMoney 元宝 > 49999
+not CheckBindMoney 天下币 > 199
 #act
-messagebox 元宝不足50000个
+messagebox 天下币不足200个
 break
 
 #if
@@ -56,9 +56,9 @@ messagebox 该装备不能鉴定！！！
 break
 
 #if
-CheckBindMoney 元宝 > 49999
+CheckBindMoney 天下币 > 199
 #act
-ChangeBindMoney 元宝 50000
+ChangeBindMoney 天下币 200
 SetUpgradeItem 1
 
 #if
