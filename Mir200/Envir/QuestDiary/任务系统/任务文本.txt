@@ -173,26 +173,6 @@ NEWCHANGETASK 13 <$LEVEL>
 ;OPENNPCSHOWEX 72
 break
 
-;未完成QQ礼包领取引导
-#if
-check [100] 0
-CheckContainsText <$STR(T108)> 80级任务
-#act
-NEWPICKTASK 16
-NEWCHANGETASK 16 0
-#CALL [\技术QQ198605888\QQ礼品.txt] @领取QQ
-break
-
-;未完成微信礼包领取引导
-#if
-check [99] 0
-check [100] 1
-CheckContainsText <$STR(T108)> 80级任务
-#act
-NEWPICKTASK 17
-NEWCHANGETASK 17 0
-#CALL [\技术QQ198605888\微信礼包.txt] @领取微信
-break
 
 
 [@接取支线任务]
@@ -206,6 +186,26 @@ not CheckContainsText <$STR(T108)> 80级任务
 #act
 break
 
+;未完成QQ礼包领取引导
+#if
+check [100] 0
+CheckContainsText <$STR(T108)> 80级任务
+#act
+NEWPICKTASK 16
+NEWCHANGETASK 16 0
+; #CALL [\技术QQ198605888\QQ礼品.txt] @领取QQ
+; break
+
+;未完成微信礼包领取引导
+#if
+check [99] 0
+check [100] 1
+CheckContainsText <$STR(T108)> 80级任务
+#act
+NEWPICKTASK 17
+NEWCHANGETASK 17 0
+; #CALL [\技术QQ198605888\微信礼包.txt] @领取微信
+; break
 
 #if
 not CheckContainsText <$STR(T108)> 青铜会员
