@@ -168,6 +168,15 @@ break
 #IF
 #ACT
 MOV N$捐献_输入数量  <$STR(N4)>
+
+#if
+check [11] 0
+#act
+MOV N$捐献_输入数量  300
+
+#if
+#act
+
 MOV N$当前升级_需要RMB点  <$STR(N$捐献_输入数量)>
 MOV S$人物财产 $STM(ITEMCOUNT_RMB点)
 
