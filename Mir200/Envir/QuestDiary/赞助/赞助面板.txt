@@ -9,6 +9,7 @@ mov N$窗口序号 1
 mov S$窗口1
 mov S$窗口2
 mov S$窗口3
+mov S$激活图片
 ReadConfigFileItem ..\QuestDiary\赞助\赞助数据.txt 窗口数量 窗口数量 S$窗口数量
 
 goto @绘制滑动窗口
@@ -27,6 +28,7 @@ goto @绘制滑动窗口
     <$STR(S$窗口1)>
     <$STR(S$窗口2)>
     <$STR(S$窗口3)>
+    <$STR(S$激活图片)>
 ; <Img|id=累充金额bg|children={累充金额}|img=public/sf1/19/bg3.png|x=10.0|y=55.0>
 <RText|id=累充金额1|x=500.0|y=485.0|text=<当前累计充值:/FCOLOR=149> <<$STR(U99)>/FCOLOR=250> <元/FCOLOR=149>>
 ; <TextAtlas|id=累充金额bg|x=650.0|y=460|img=public/sf1/19/artFont/00044.png|schar=0|iheight=37|iwidth=25|text=<$STR(U99)>>
@@ -39,15 +41,21 @@ not large <$STR(N$窗口序号)> <$STR(S$窗口数量)>
 
 ReadConfigFileItem ..\QuestDiary\赞助\赞助数据.txt <$STR(N$窗口序号)> 充值金额 S$充值金额串
 ReadConfigFileItem ..\QuestDiary\赞助\赞助数据.txt <$STR(N$窗口序号)> 面板显示 S$面板显示串
-INC S$窗口<$STR(N$窗口序号)> <Img|id=窗口<$STR(N$窗口序号)>|children={title<$STR(N$窗口序号)>,title<$STR(N$窗口序号)>,title<$STR(N$窗口序号)>,<$STR(N$窗口序号)>_1,<$STR(N$窗口序号)>_2,<$STR(N$窗口序号)>_3,<$STR(N$窗口序号)>_4,<$STR(N$窗口序号)>_5,<$STR(N$窗口序号)>_6,<$STR(N$窗口序号)>_7,<$STR(N$窗口序号)>_8,<$STR(N$窗口序号)>_9,<$STR(N$窗口序号)>_10,金额_<$STR(N$窗口序号)>,<$STR(N$窗口序号)>_11,<$STR(N$窗口序号)>_21,<$STR(N$窗口序号)>_31,<$STR(N$窗口序号)>_41,<$STR(N$窗口序号)>_51,<$STR(N$窗口序号)>_61,<$STR(N$窗口序号)>_71,<$STR(N$窗口序号)>_81,<$STR(N$窗口序号)>_91,<$STR(N$窗口序号)>_101}|x=40|y=55.0|width=220|height=360|img=public/sf1/19/bg8.png>
-
+INC S$窗口<$STR(N$窗口序号)> <Img|id=窗口<$STR(N$窗口序号)>|children={激活特效<$STR(N$窗口序号)>,title<$STR(N$窗口序号)>,title<$STR(N$窗口序号)>,title<$STR(N$窗口序号)>,<$STR(N$窗口序号)>_1,<$STR(N$窗口序号)>_2,<$STR(N$窗口序号)>_3,<$STR(N$窗口序号)>_4,<$STR(N$窗口序号)>_5,<$STR(N$窗口序号)>_6,<$STR(N$窗口序号)>_7,<$STR(N$窗口序号)>_8,<$STR(N$窗口序号)>_9,<$STR(N$窗口序号)>_10,金额_<$STR(N$窗口序号)>,<$STR(N$窗口序号)>_11,<$STR(N$窗口序号)>_21,<$STR(N$窗口序号)>_31,<$STR(N$窗口序号)>_41,<$STR(N$窗口序号)>_51,<$STR(N$窗口序号)>_61,<$STR(N$窗口序号)>_71,<$STR(N$窗口序号)>_81,<$STR(N$窗口序号)>_91,<$STR(N$窗口序号)>_101}|x=40|y=55.0|width=220|height=360|img=public/sf1/19/bg8.png>
+; sendmsg 5 <$str(S$充值金额串)>___123
 INC S$窗口<$STR(N$窗口序号)> <TextAtlas|id=金额_<$STR(N$窗口序号)>|x=75.0|y=7.0|img=public/sf1/19/artFont/00058.png|schar=0|iheight=26|iwidth=15|text=<$STR(S$充值金额串)>>
 ;INC S$窗口<$STR(N$窗口序号)> <TextAtlas|id=金额_<$STR(N$窗口序号)>|x=65.0|y=5.0|img=public/sf1/19/artFont/00046.png|schar=0|iheight=46|iwidth=32|text=<$STR(S$充值金额串)>>
 ;INC S$窗口<$STR(N$窗口序号)> <TextAtlas|id=金额_<$STR(N$窗口序号)>|x=65.0|y=5.0|img=public/word_tywz_01.png|schar=0|iheight=28|iwidth=18|text=<$STR(S$充值金额串)>>
 INC S$窗口<$STR(N$窗口序号)> <Img|id=title<$STR(N$窗口序号)>|x=115.0|y=5.0|img=public/sf1/19/artFont/00020.png>
 
+#if
+large U99 <$str(S$充值金额串)>
+#act
+inc S$窗口<$STR(N$窗口序号)> <Img|id=激活特效<$str(N$窗口序号)>|x=50|y=180|img=public/icon/common1038.png>
 
-
+#if
+not large <$STR(N$窗口序号)> <$STR(S$窗口数量)>
+#act
 mov N$窗口数据序号 1
 mov N$窗口数据Y 70
 mov N$窗口数据Y1 75
@@ -100,9 +108,6 @@ goto @赞助面板显示
 ;break
 [@充值界面]
 #if
-; #act
-; close
-; OPENHYPERLINK 26
 #act
 close
 #call [\系统功能\充值功能.txt] @充值主面板
