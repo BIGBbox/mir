@@ -7094,17 +7094,17 @@ RECALLMOB 死亡呼唤者 7 35535 0
 #ELSEACT
 SENDMSG 7 召唤失败：你已经召唤过一只[死亡呼唤者]
 
-[@StdModeFunc300]
-#IF
-NOT CheckMagicName 乾纲独断
-#ACT
-ADDSKILL 乾纲独断
-;;Close
-MessageBox 恭喜你学习了乾纲独断技能！
-#ELSEACT
-give 乾纲独断
-MessageBox 你已经学习过了！！！
-break
+; [@StdModeFunc300]
+; #IF
+; NOT CheckMagicName 乾纲独断
+; #ACT
+; ADDSKILL 乾纲独断
+; ;;Close
+; MessageBox 恭喜你学习了乾纲独断技能！
+; #ELSEACT
+; give 乾纲独断
+; MessageBox 你已经学习过了！！！
+; break
 
 
 
