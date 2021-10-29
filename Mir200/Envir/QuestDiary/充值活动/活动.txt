@@ -622,8 +622,14 @@ ReadConfigFileItem ..\QuestDiary\³äÖµ»î¶¯\ÈÕ³äÀÛ³ä½±Æ·Êý¾Ý.txt ³¬ÖµÀñ°ü<$STR(S$À
 #act
 GOTO @³¬ÖµÀñ°ü·¢·ÅFOR
 GOTO @³¬ÖµÀñ°ü
+delaygoto 100 @Ã¿ÈÕ³äÖµÌáÉý±¬ÂÊ
 messagebox ÁìÈ¡³¬ÖµÀñ°ü³É¹¦£¡
 
+[@Ã¿ÈÕ³äÖµÌáÉý±¬ÂÊ]
+#if
+#act
+
+#CALL [\ÊôÐÔÖØÔØ\ÓÎÏ·±¬ÂÊ.txt] @±©ÂÊ
 
 [@³¬ÖµÀñ°ü·¢·ÅFOR]
 #IF
