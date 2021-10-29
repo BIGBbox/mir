@@ -10,6 +10,7 @@ MOV N$午夜屠狗 0
 #If
 #ACT
 INC N$暴率加成 <$str(u0)>
+
 mov N$称号行数 0
 mov S$我的称号 <$str(T1)>
 goto @获取称号文件夹名
@@ -82,33 +83,30 @@ INC N$暴率加成 200
 
 
 
-#if
-CheckContainsText <$SERVERNAME> 01区
-#act
-INC N$暴率加成 20
+; #if
+; CheckContainsText <$SERVERNAME> 01区
+; #act
+; INC N$暴率加成 20
 
-#if
-CheckContainsText <$SERVERNAME> 02区
-#act
-INC N$暴率加成 40
+; #if
+; CheckContainsText <$SERVERNAME> 02区
+; #act
+; INC N$暴率加成 40
 
-#if
-CheckContainsText <$SERVERNAME> 03区
-#act
-INC N$暴率加成 60
+; #if
+; CheckContainsText <$SERVERNAME> 03区
+; #act
+; INC N$暴率加成 60
 
-#if
-CheckContainsText <$SERVERNAME> 04区
-#act
-INC N$暴率加成 80
+; #if
+; CheckContainsText <$SERVERNAME> 04区
+; #act
+; INC N$暴率加成 80
 
-#if
-CheckContainsText <$SERVERNAME> 05区
-#act
-INC N$暴率加成 100
-
-
-
+; #if
+; CheckContainsText <$SERVERNAME> 05区
+; #act
+; INC N$暴率加成 100
 
 
 
@@ -203,10 +201,6 @@ INC N$暴率加成 160
 CHECKITEMW 無敵の之力
 #ACT
 INC N$暴率加成 200
-
-
-
-
 
 
 #If
@@ -1117,7 +1111,7 @@ inc N$暴率显示 <$str(S$会员_爆率)>
 #if
 #act
 KILLMONBURSTRATE <$STR(N$暴率显示)> 60000
-SENDMSG 7 杀怪爆率<$STR(N$暴率显示)>%，时长：60000秒!
+; SENDMSG 7 杀怪爆率<$STR(N$暴率显示)>%，时长：60000秒!
 
 #if
 #act
@@ -1129,16 +1123,16 @@ SENDMSG 7 杀怪爆率<$STR(N$暴率显示)>%，时长：60000秒!
 
 #if
 #act
-GetValidstr <$STR(S$我的称号)> & S$this称号 S$我的称号
+GetValidstr <$STR(S$我的称号)> & S$爆率this称号 S$我的称号
 
-ReadConfigFileItem ..\QuestDiary\称号系统\<$str(S$称号)>\<$str(S$称号)>数据.txt <$str(S$this称号)> 爆率加成 N$爆率加成
+ReadConfigFileItem ..\QuestDiary\称号系统\<$str(S$称号)>\<$str(S$称号)>数据.txt <$str(S$爆率this称号)> 爆率加成 N$爆率加成称号
 #if
-CHECKTITLE <$str(S$this称号)>
-not equal <$str(N$爆率加成)> 0
+CHECKTITLE <$str(S$爆率this称号)>
+not equal <$str(N$爆率加成称号)> 0
 #act
-INC N$暴率加成 <$str(N$爆率加成)>
-; sendmsg 5 称号#<$str(S$称号)>::<$str(S$this称号)>::<$str(N$爆率加成)>::
-; mov S$this称号
+INC N$暴率加成 <$str(N$爆率加成称号)>
+; sendmsg 5 称号#<$str(S$称号)>::<$str(S$爆率this称号)>::<$str(N$爆率加成)>::
+; mov S$爆率this称号
 break
 
 #if
