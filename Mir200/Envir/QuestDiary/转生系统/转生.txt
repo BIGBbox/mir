@@ -1,6 +1,13 @@
 [@转生面板]
 {
 
+#if
+; large U108 23
+not CheckContainsText <$STR(T108)> 80级任务
+#act
+messagebox 请先完成主线任务再进行转生!!
+break
+
 #IF
 CHECKRENEWLEVEL = 20
 #ACT

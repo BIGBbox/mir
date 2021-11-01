@@ -35,24 +35,35 @@ check [100] 0
 ;SKILLLEVEL 隐身术 = 3
 
 MailGIVE 灵兽精石 10 1#4#5#6#8
-MailGIVE 一转证明 10 1#4#5#6#8
+MailGIVE 一转证明 5 1#4#5#6#8
 MailGIVE 初级称号证明 5 1#4#5#6#8
 
 SendMail 1 系统奖励 你好<$USERNAME>QQ礼包已发放到你的邮箱,请尽快提取!!
 set [100] 1
-mov U108 23
+; mov U108 23
 #Call [\Mobile\特殊NPC\TOP图标.txt] @导航
 NEWCOMPLETETASK 16
 NEWDELETETASK 16
-#CALL [\任务系统\任务文本.txt] @接取任务
+; #CALL [\任务系统\任务文本.txt] @接取任务
 SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|254:39:0}{成功领取|116:39:0}{QQ群礼包|253:39:0}
 close
+
+; #if
+; check [99] 0
+; #act
+; #CALL [\技术QQ198605888\微信礼包.txt] @领取微信
+
+#if
+check [99] 0
+check [100] 1
+#act
 #CALL [\技术QQ198605888\微信礼包.txt] @领取微信
 break
 
+
 #if
 #act
-messagebox 领取失败??\\1、输入错误,请重新输入!
+messagebox 领取失败??\\1、输入错误,请重新输入!\2、已经领取过!
 break
 
 

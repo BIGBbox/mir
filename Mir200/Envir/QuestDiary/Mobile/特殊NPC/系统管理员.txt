@@ -210,8 +210,29 @@ goto @获取图鉴
 
 #if
 #act
-#CALL [\属性重载\怪物额外伤害.txt] @额外掉血
-#CALL [\属性重载\游戏爆率.txt] @暴率
+; CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
+mov S0 <$DATETIME>
+AnsiReplaceText S0 年 -
+AnsiReplaceText S0 月 -
+AnsiReplaceText S0 日
+GetValidstr <$str(S0)> , S$年月日 S$剩下串
+; AnsiReplaceText S0 : -
+; AnsiReplaceText S0 ：-
+mov s0 <$str(S$年月日)>-00-00-00
+sendmsg 5 ____<$str(S0)>
+; mov s0 2021-11-1-00-00-00
+; mov s1 2021-11-1-00-00-00
+; Taketime S0 S1
+; SENDMSG 5 一共相差<$Timeresult>秒
+
+
+; GetValidstr <$str(S$剩下串)> , S$星期 S$时间
+; ; sendmsg 5 清楚列表___<$str(S$年月日)>_____<$str(S$剩下串)>
+; sendmsg 5 清楚列表___<$str(S$年月日)>_____<$str(S$星期)>___<$str(S$时间)>
+; mov S$时间A <$str(S$年月日)> <$str(S$时间)>
+; #Call [\Mobile\特殊NPC\TOP图标.txt] @导航
+; #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
+; #CALL [\属性重载\游戏爆率.txt] @暴率
 
 ; mov N$爆率使用序号 1 
 ; ; 双鱼の翼&白羊の翼&

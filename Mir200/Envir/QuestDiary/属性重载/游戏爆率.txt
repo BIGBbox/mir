@@ -138,10 +138,10 @@ INC N$暴率加成 5
 
 
 #IF
-CHECKITEMW 無敵の之力 1
+CHECKITEMW 天下の至尊 1
 #ACT
 ChangeModeEx 16 65535
-SENDMSG 6 無敵の之力65535秒内可以防冰冻
+SENDMSG 6 天下の至尊65535秒内可以防冰冻
 
 
 
@@ -202,6 +202,15 @@ CHECKITEMW 無敵の之力
 #ACT
 INC N$暴率加成 200
 
+#IF
+CHECKITEMW 戰神の籠罩
+#ACT
+INC N$暴率加成 300
+
+#IF
+CHECKITEMW 天下の至尊
+#ACT
+INC N$暴率加成 400
 
 #If
 CHECKTITLE 沙城捐献

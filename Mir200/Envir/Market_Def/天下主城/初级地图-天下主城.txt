@@ -92,7 +92,7 @@ NEWDELETETASK 9
 ADDSKILL 烈火剑法
 CHANGEEXP + 100000
 MailGIVE 绑定元宝 1000000
-MailGIVE 神器碎片 100 1#4#5#6#8
+MailGIVE 神器碎片 50 1#4#5#6#8
 SendMail 1 系统奖励 你已完成初级地图任务,奖励已发放!!
 
 sendmsg 7 完成任务了!!

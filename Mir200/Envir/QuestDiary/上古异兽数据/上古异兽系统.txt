@@ -7,12 +7,13 @@ mov S$是否付费 0
 mov S$是否下一步 1
 #say
 
-<Img|children={1,2,3,click_btn1,close_btn,button1,button2,输入框背景}|x=320|y=120|move=1|img=public/sf1/2/00008.png|bg=1|reset=0>
+<Img|children={1,2,3,8,click_btn1,close_btn,button1,button2,输入框背景}|x=320|y=120|move=1|img=public/sf1/2/00008.png|bg=1|reset=0>
 <Button|id=close_btn|x=440.0|y=5.0|size=18|nimg=public/sf1/2/00010.png|link=@exit>
 
 <RText|id=1|x=205|y=5|size=20|text=<灵兽精石/FCOLOR=89>>
 <RText|id=2|x=15|y=65|size=14|text=<灵兽精石分为免费使用和付费使用,免费每消耗10颗精石会获得/FCOLOR=251><1点/FCOLOR=250><灵兽经验/FCOLOR=251>>
 <RText|id=3|x=15|y=90|size=14|text=<付费使用,每颗精石需要/FCOLOR=251><支付100天下币/FCOLOR=249><获得/FCOLOR=251><10倍/FCOLOR=250><兽灵经验!!/FCOLOR=251>>
+<RText|id=8|x=15|y=115|size=14|text=<自动行下取整保留10的倍数。/FCOLOR=250>>
 <Layout|submitInput=1|id=button1|children={4}|x=220|y=150|width=80|height=30|color=243|link=@升级按钮#参数=0>
 <RText|id=4|x=10|y=5|size=14|text=<免费使用/FCOLOR=0>>
 ;<Button|id=button1|x=513.0|y=341.0|nimg=public/1900000660.png|submitInput=1|pimg=public/1900000661.png|size=18|color=1003|text=密码登录|link=@免费使用>

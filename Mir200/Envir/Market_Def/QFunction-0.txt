@@ -7868,6 +7868,12 @@ SENDMSG 7 {增加|56:56:0}{[15000]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[
 GAMEDIAMOND + 20000
 SENDMSG 7 {增加|56:56:0}{[20000]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
 
+[@StdModeFunc334]
+#IF
+#ACT
+GAMEDIAMOND + 25000
+SENDMSG 7 {增加|56:56:0}{[25000]|250:56:0}{天下币，您当前天下币总数为|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+
 [@StdModeFunc338]
 #IF
 #ACT
@@ -8032,41 +8038,57 @@ money RMB点 + 500
 goto @ReCharge
 
 [@StdModeFunc346]
+#act
+
 mov M0 100
 money RMB点 + 1000
 goto @ReCharge
 
 [@StdModeFunc347]
+#act
+
 mov M0 200
 money RMB点 + 2000
 goto @ReCharge
 
 [@StdModeFunc348]
+#act
+
 mov M0 300
 money RMB点 + 3000
 goto @ReCharge
 
 [@StdModeFunc349]
+#act
+
 mov M0 500
 money RMB点 + 5000
 goto @ReCharge
 
 [@StdModeFunc350]
+#act
+
 mov M0 1000
 money RMB点 + 10000
 goto @ReCharge
 
 [@StdModeFunc351]
+#act
+
 mov M0 3000
 money RMB点 + 30000
 goto @ReCharge
 
 [@StdModeFunc352]
+#act
+
 mov M0 5000
 money RMB点 + 50000
 goto @ReCharge
 
 [@StdModeFunc353]
+#act
+
 mov M0 10000
 money RMB点 + 100000
 goto @ReCharge
@@ -8757,7 +8779,7 @@ OPENNPCSHOWEX 71
 
 
 #if
-small <$CURRTASKID> 18
+small <$CURRTASKID> 16
 not equal <$CURRTASKID> 15
 #act
 #CALL [\任务系统\任务文本.txt] @接取任务
@@ -8766,6 +8788,7 @@ break
 #if
 #ACT
 #CALL [\任务系统\任务文本.txt] @点击支线任务
+; sendmsg 5 进入支线任务
 break
 
 

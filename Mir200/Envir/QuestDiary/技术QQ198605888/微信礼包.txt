@@ -20,20 +20,29 @@ equal S11 888888
 check [99] 0
 #act
 set [99] 1
-mov U108 24
+; mov U108 24
 ADDSKILL 召唤骷髅
 ;CONFERTITLE 天下骨灰玩家
 SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|254:39:0}{成功领取|116:39:0}{微信礼包|253:39:0}{奖励!|116:39:0}！！！
 #Call [\Mobile\特殊NPC\TOP图标.txt] @导航
 NEWCOMPLETETASK 17
 NEWDELETETASK 17
-#CALL [\任务系统\任务文本.txt] @接取支线任务
-
-close
+; #CALL [\任务系统\任务文本.txt] @接取支线任务
 break
+
 #if
+check [99] 1
+check [100] 0
 #act
-messagebox 领取失败??\\1、输入错误,请重新输入!
+#CALL [\技术QQ198605888\QQ礼品.txt] @领取QQ
+break
+
+
+#or
+equal S11 888888
+check [99] 0
+#act
+messagebox 领取失败??\\1、输入错误,请重新输入!\2、已经领取过!
 break
 
 

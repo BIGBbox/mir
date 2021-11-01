@@ -1,13 +1,23 @@
 [@攻城提示]
+#if
+#act
+goto @判断开区时间差
+
 #IF
-CheckContainsText <$SERVERNAME> 合区
+equal <$str(S$开启)> 1
+; CheckContainsText <$SERVERNAME> 合区
 #ACT
 AddAttackSabukAll 0
 
 
 [@开启攻城]
+#if
+#act
+goto @判断开区时间差
+
 #IF
-CheckContainsText <$SERVERNAME> 合区
+equal <$str(S$开启)> 1
+; CheckContainsText <$SERVERNAME> 合区
 #ACT
 MOV G498 1
 CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
@@ -18,15 +28,21 @@ ClearHumCustVar 沙城捐献 0
 SendCenterMsg 250 0 ┏-----------------------------------┓ 1 30
 SendCenterMsg 250 0 ┠-----------攻城战已开启------------┨ 1 30
 SendCenterMsg 250 0 ┗-----------------------------------┛ 1 30
-#elseact
-SendCenterMsg 250 0 ┏-----------------------------------┓ 1 30
-SendCenterMsg 250 0 ┠-----------攻城三天开启------------┨ 1 30
-SendCenterMsg 250 0 ┗-----------------------------------┛ 1 30
+; #elseact
+; SendCenterMsg 250 0 ┏-----------------------------------┓ 1 30
+; SendCenterMsg 250 0 ┠-----------攻城三天开启------------┨ 1 30
+; SendCenterMsg 250 0 ┗-----------------------------------┛ 1 30
 
 
 [@攻城结束]
+#if
+#act
+goto @判断开区时间差
+
 #IF
-#ACT
+equal <$str(S$开启)> 1
+#act
+
 CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
 SendCenterMsg 249 0 ┏---------------------------------------┓ 1 30
 SendCenterMsg 249 0 ┠-----------攻城战已结束-----------------┨ 1 30
@@ -43,6 +59,33 @@ large <$HFCOUNT> 0
 #ACT
 DELNPC 攻城奖池领取
 mov G9 0
+
+[@判断开区时间差]
+#if
+#act
+mov S$开启 0
+; 当前时间
+mov S0 <$DATETIME>
+AnsiReplaceText S0 年 -
+AnsiReplaceText S0 月 -
+AnsiReplaceText S0 日
+GetValidstr <$str(S0)> , S$年月日1 S$剩下串1
+mov S0 <$str(S$年月日1)>-00-00-00
+
+; 合区时间
+mov S1 <$HFTIME>
+AnsiReplaceText S1 年 -
+AnsiReplaceText S1 月 -
+AnsiReplaceText S1 日
+GetValidstr <$str(S1)> , S$年月日2 S$剩下串2
+mov S1 <$str(S$年月日2)>-00-00-00
+
+Taketime S0 S1
+#if
+equal <$Timeresult> 0
+#act
+mov S$开启 1
+
 
 [@随机地图链接]
 #if

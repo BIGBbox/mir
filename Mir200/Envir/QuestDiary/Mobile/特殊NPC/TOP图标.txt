@@ -34,20 +34,23 @@ MOV N$坐标Y3 50
 ;delbutton 102 2
 MOV S$展示 <Button|x=-230|y=<$STR(N$坐标Y1)>|nimg=official/top/1900012531.png|link=@伸缩>
 MOV S$图标2 <Button|x=-230|y=<$STR(N$坐标Y1)>|nimg=official/top/1900012531.png|link=@伸缩>
+MOV N$坐标X2 -320
 
-;#if
-;check [99] 0
+#if
+check [99] 0
+; not equal <$MAPTITLE> 比奇城
+; large U108 19
+#act
+; dec N$坐标X2 65
+INC S$图标2 <Button|id=103|children=103_0|x=<$STR(N$坐标X2)>|y=<$STR(N$坐标Y2)>|nimg=public/sf1/19/top/00018.png|link=@微信礼包>
+; sendmsg 5 123__<$STR(N$坐标X)>
+#if
+check [100] 0
+; not equal <$MAPTITLE> 比奇城
 ;large U108 19
-;#act
-;dec N$坐标X 65
-;INC S$图标2 <Button|id=103|children=103_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/1/01319.png|link=@微信礼包>
-
-;#if
-;;check [100] 0
-;;large U108 19
-;#act
-;dec N$坐标X 65
-;INC S$图标2 <Button|id=101|children=101_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/1/01277.png|link=@QQ礼包>
+#act
+dec N$坐标X2 65
+INC S$图标2 <Button|id=101|children=101_0|x=<$STR(N$坐标X2)>|y=<$STR(N$坐标Y2)>|nimg=public/sf1/19/top/00002.png|link=@QQ礼包>
 
 #if
 #act

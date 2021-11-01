@@ -108,7 +108,7 @@ delaygoto 200 @更新属性面板
 
 MOVR <$STR(N$纵轴坐标)> 100 500
 
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升123/FCOLOR=253><【<$STR(S$给予称号)>】称号/FCOLOR=58>
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功晋升/FCOLOR=253><【<$STR(S$给予称号)>】称号/FCOLOR=58>
 mov S$新增称号 <$STR(S$给予称号)>
 GOTO @称号标记记录
 GOTO @西游称号面板

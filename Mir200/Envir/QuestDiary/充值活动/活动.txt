@@ -433,14 +433,14 @@ INC S$超值礼包显示 <RText|id=buy_gift<$STR(N$超值礼包编号)>_daybg_1|x=25.0|y=3.0
 #IF
 equal <$STR(S$超值礼包币种)> 1
 not equal <$STR(S$分)> 00
-not equal <$STR(S$秒)> 00
+; not equal <$STR(S$秒)> 00
 #ACT
-INC S$超值礼包显示 <RText|id=buy_gift<$STR(N$超值礼包编号)>_dayPrice|x=70.0|y=247.0|color=7|size=18|text=<<$STR(S$分)>:<$STR(S$秒)>/FCOLOR=250><可领取/FCOLOR=250>>
+INC S$超值礼包显示 <RText|id=buy_gift<$STR(N$超值礼包编号)>_dayPrice|x=70.0|y=247.0|color=7|size=18|text=<<$STR(S$分)>/FCOLOR=250><分可领取/FCOLOR=250>>
 
 #IF
 equal <$STR(S$超值礼包币种)> 1
 equal <$STR(S$分)> 00
-equal <$STR(S$秒)> 00
+; equal <$STR(S$秒)> 00
 #ACT
 INC S$超值礼包显示 <RText|id=buy_gift<$STR(N$超值礼包编号)>_dayPrice|x=95.0|y=247.0|color=7|size=18|text=<可领取/FCOLOR=250>>
 
@@ -669,7 +669,7 @@ GOTO @超值礼包发放FOR
 [@OpenLayer101]
 #if
 #act
-SetOnTimer 8 1
+SetOnTimer 8 60
 
 [@CloseLayer101]
 #if

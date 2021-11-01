@@ -2,7 +2,8 @@
 {
 
 #if
-large U108 23
+; large U108 23
+CheckContainsText <$STR(T108)> 80级任务
 #act
 goto @接取支线任务
 
@@ -193,7 +194,7 @@ CheckContainsText <$STR(T108)> 80级任务
 #act
 NEWPICKTASK 16
 NEWCHANGETASK 16 0
-; #CALL [\技术QQ198605888\QQ礼品.txt] @领取QQ
+;#CALL [\技术QQ198605888\QQ礼品.txt] @领取QQ
 ; break
 
 ;未完成微信礼包领取引导
@@ -204,7 +205,7 @@ CheckContainsText <$STR(T108)> 80级任务
 #act
 NEWPICKTASK 17
 NEWCHANGETASK 17 0
-; #CALL [\技术QQ198605888\微信礼包.txt] @领取微信
+;#CALL [\技术QQ198605888\微信礼包.txt] @领取微信
 ; break
 
 #if
@@ -383,6 +384,17 @@ NEWPICKTASK 34
 
 
 [@点击支线任务]
+;-------礼包支线任务--------
+#if
+equal <$CURRTASKID> 16
+#act
+#CALL [\技术QQ198605888\QQ礼品.txt] @领取QQ
+
+#if
+equal <$CURRTASKID> 17
+#act
+#CALL [\技术QQ198605888\微信礼包.txt] @领取微信
+
 
 ;-------会员支线任务--------
 #if
