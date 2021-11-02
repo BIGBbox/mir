@@ -3,8 +3,10 @@
 #act
 goto @判断开区时间差
 
-#IF
+#or
 equal <$str(S$开启)> 1
+equal <$DAY> 2
+equal <$DAY> 6
 ; CheckContainsText <$SERVERNAME> 合区
 #ACT
 AddAttackSabukAll 0
@@ -15,8 +17,10 @@ AddAttackSabukAll 0
 #act
 goto @判断开区时间差
 
-#IF
+#or
 equal <$str(S$开启)> 1
+equal <$DAY> 2
+equal <$DAY> 6
 ; CheckContainsText <$SERVERNAME> 合区
 #ACT
 MOV G498 1
@@ -39,8 +43,10 @@ SendCenterMsg 250 0 ┗-----------------------------------┛ 1 30
 #act
 goto @判断开区时间差
 
-#IF
+#or
 equal <$str(S$开启)> 1
+equal <$DAY> 2
+equal <$DAY> 6
 #act
 
 CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
