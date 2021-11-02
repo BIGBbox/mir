@@ -63,1222 +63,2118 @@ MOV N$分解装备数量 0
 MOV N$分解碎片数量 0
 
 #IF
+CHECKITEM 末日毁灭者 1
+#ACT
+GIVE 神器碎片 50
+TAKE 末日毁灭者 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 扩散黑暗 1
+#ACT
+GIVE 神器碎片 50
+TAKE 扩散黑暗 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 炽天使之韵 1
+#ACT
+GIVE 神器碎片 50
+TAKE 炽天使之韵 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 安达利尔的面貌 1
+#ACT
+GIVE 神器碎片 50
+TAKE 安达利尔的面貌 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 霜燃 1
+#ACT
+GIVE 神器碎片 50
+TAKE 霜燃 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 腐肉之风 1
+#ACT
+GIVE 神器碎片 50
+TAKE 腐肉之风 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 吸血圣王之圈 1
+#ACT
+GIVE 神器碎片 50
+TAKE 吸血圣王之圈 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 骨髓行走 1
+#ACT
+GIVE 神器碎片 50
+TAKE 骨髓行走 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 毁灭 1
+#ACT
+GIVE 神器碎片 50
+TAKE 毁灭 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 魂系结果 1
+#ACT
+GIVE 神器碎片 50
+TAKE 魂系结果 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 格利风之眼 1
+#ACT
+GIVE 神器碎片 50
+TAKE 格利风之眼 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 夜翼面纱 1
+#ACT
+GIVE 神器碎片 50
+TAKE 夜翼面纱 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 巨骷髅 1
+#ACT
+GIVE 神器碎片 50
+TAKE 巨骷髅 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 玛哈姆橡木古董 1
+#ACT
+GIVE 神器碎片 50
+TAKE 玛哈姆橡木古董 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 卓古拉之握 1
+#ACT
+GIVE 神器碎片 50
+TAKE 卓古拉之握 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 鬼火投射者 1
+#ACT
+GIVE 神器碎片 50
+TAKE 鬼火投射者 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 剃刀之尾 1
+#ACT
+GIVE 神器碎片 50
+TAKE 剃刀之尾 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 泪之臀 1
+#ACT
+GIVE 神器碎片 50
+TAKE 泪之臀 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 萨德【Zod】 1
+#ACT
+GIVE 神器碎片 50
+TAKE 萨德【Zod】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50                     
+
+#IF
+CHECKITEM 查姆【Cham】 1
+#ACT
+GIVE 神器碎片 50
+TAKE 查姆【Cham】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 古尔【Gul】 1
+#ACT
+GIVE 神器碎片 50
+TAKE 古尔【Gul】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 那夫【Nef】 1
+#ACT
+GIVE 神器碎片 50
+TAKE 那夫【Nef】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 乔【Jah】 1
+#ACT
+GIVE 神器碎片 50
+TAKE 乔【Jah】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 贝【Ber】 1
+#ACT
+GIVE 神器碎片 50
+TAKE 贝【Ber】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 瑟【Sur】 1
+#ACT
+GIVE 神器碎片 50
+TAKE 瑟【Sur】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 罗【Lo】 1
+#ACT
+GIVE 神器碎片 50
+TAKE 罗【Lo】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
 CHECKITEM 合欢铃 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 合欢铃 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 苏茹魔戒 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 苏茹魔戒 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 灵儿铠甲 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 灵儿铠甲 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 斩龙剑 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 斩龙剑 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 苍松道人的堕落 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 苍松道人的堕落 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 陆雪琪的清冷 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 陆雪琪的清冷 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 诛仙剑 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 诛仙剑 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 田不易之链 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 田不易之链 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 水月禁言术 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 水月禁言术 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 曾书书之宠 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 曾书书之宠 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 谷主神秘盔 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 谷主神秘盔 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 玄火吊坠 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 玄火吊坠 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 天音寺手链 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 天音寺手链 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 兄弟豪杰令 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 兄弟豪杰令 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 朱雀·腰带 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 朱雀·腰带 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 青龙·战靴 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 青龙·战靴 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 日行一骗 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 日行一骗 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 万毒归宗 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 万毒归宗 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 神秘莫测 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 神秘莫测 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 心机深沉 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 心机深沉 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 痛不欲生 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 痛不欲生 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 伤心欲绝 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 伤心欲绝 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 李洵之戒 1
 #ACT
-GIVE 神器碎片 60
+GIVE 神器碎片 30
 TAKE 李洵之戒 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 60
+INC N$分解碎片数量 30
 
 #IF
 CHECKITEM 小李广木牌 1
 #ACT
-GIVE 神器碎片 40
+GIVE 神器碎片 20
 TAKE 小李广木牌 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 40
+INC N$分解碎片数量 20
 
 #IF
 CHECKITEM 智多星链 1
 #ACT
-GIVE 神器碎片 40
+GIVE 神器碎片 20
 TAKE 智多星链 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 40
+INC N$分解碎片数量 20
 
 #IF
 CHECKITEM 铁扇子 1
 #ACT
-GIVE 神器碎片 40
+GIVE 神器碎片 20
 TAKE 铁扇子 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 40
+INC N$分解碎片数量 20
 
 #IF
 CHECKITEM 黑旋风 1
 #ACT
-GIVE 神器碎片 40
+GIVE 神器碎片 20
 TAKE 黑旋风 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 40
+INC N$分解碎片数量 20
 
 #IF
 CHECKITEM 玉麒麟面巾 1
 #ACT
-GIVE 神器碎片 40
+GIVE 神器碎片 20
 TAKE 玉麒麟面巾 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 40
+INC N$分解碎片数量 20
 
 #IF
 CHECKITEM 魔王之刃 1
 #ACT
-GIVE 神器碎片 40
+GIVE 神器碎片 20
 TAKE 魔王之刃 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 40
+INC N$分解碎片数量 20
 
 #IF
 CHECKITEM 军师卡牌 1
 #ACT
-GIVE 神器碎片 40
+GIVE 神器碎片 20
 TAKE 军师卡牌 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 40
+INC N$分解碎片数量 20
 
 #IF
 CHECKITEM 锦豹子披风 1
 #ACT
-GIVE 神器碎片 40
+GIVE 神器碎片 20
 TAKE 锦豹子披风 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 40
+INC N$分解碎片数量 20
 
 #IF
-CHECKITEM 铁面孔目之刃 1
+CHECKITEM 铁面孔目之盾 1
 #ACT
-GIVE 神器碎片 40
-TAKE 铁面孔目之刃 1
+GIVE 神器碎片 20
+TAKE 铁面孔目之盾 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 40
+INC N$分解碎片数量 20
 
 #IF
 CHECKITEM 一枝花盾牌 1
 #ACT
-GIVE 神器碎片 40
+GIVE 神器碎片 20
 TAKE 一枝花盾牌 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 40
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 母大虫魔剑 1
+#ACT
+GIVE 神器碎片 20
+TAKE 母大虫魔剑 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 小尉迟之刃 1
+#ACT
+GIVE 神器碎片 20
+TAKE 小尉迟之刃 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 病尉迟圣剑 1
+#ACT
+GIVE 神器碎片 20
+TAKE 病尉迟圣剑 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 镇三山神者 1
+#ACT
+GIVE 神器碎片 20
+TAKE 镇三山神者 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 美髯公裁决 1
+#ACT
+GIVE 神器碎片 20
+TAKE 美髯公裁决 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 双鞭 1
+#ACT
+GIVE 神器碎片 20
+TAKE 双鞭 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 大刀 1
+#ACT
+GIVE 神器碎片 20
+TAKE 大刀 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 鬼脸儿 1
+#ACT
+GIVE 神器碎片 20
+TAKE 鬼脸儿 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 扑天雕之铠 1
+#ACT
+GIVE 神器碎片 20
+TAKE 扑天雕之铠 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 小旋风战甲 1
+#ACT
+GIVE 神器碎片 20
+TAKE 小旋风战甲 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 活阎王魔铠 1
+#ACT
+GIVE 神器碎片 20
+TAKE 活阎王魔铠 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 神行太保魇铠 1
+#ACT
+GIVE 神器碎片 20
+TAKE 神行太保魇铠 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 翻江蜃披风 1
+#ACT
+GIVE 神器碎片 20
+TAKE 翻江蜃披风 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 出洞蛟板甲 1
+#ACT
+GIVE 神器碎片 20
+TAKE 出洞蛟板甲 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 混江龙魔甲 1
+#ACT
+GIVE 神器碎片 20
+TAKE 混江龙魔甲 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 浪子皮肤 1
+#ACT
+GIVE 神器碎片 20
+TAKE 浪子皮肤 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 鼓上蚤战甲 1
+#ACT
+GIVE 神器碎片 20
+TAKE 鼓上蚤战甲 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
 
 #IF
 CHECKITEM 天马流星拳 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 天马流星拳 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 庐山升龙霸 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 庐山升龙霸 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 钻石星尘拳 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 钻石星尘拳 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 凤凰幻魔拳 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 凤凰幻魔拳 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 魔铃之戒 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 魔铃之戒 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 蛇夫座 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 蛇夫座 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 美斯迪之玉 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 美斯迪之玉 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 魔西斯面纱 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 魔西斯面纱 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 亚迪里安的吊坠 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 亚迪里安的吊坠 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 巴比伦之血 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 巴比伦之血 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 亚鲁歌路之血 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 亚鲁歌路之血 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 镇魂 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 镇魂 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 地狱犬 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 地狱犬 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 仙皇之座 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 仙皇之座 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 穆之石 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 穆之石 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 亚鲁迪巴之戒 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 亚鲁迪巴之戒 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 双子之镯 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 双子之镯 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 巨蟹之盔 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 巨蟹之盔 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 狮子之翼 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 狮子之翼 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 处女之锤 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 处女之锤 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 天秤之镰 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 天秤之镰 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 天蝎权杖 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 天蝎权杖 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 山羊·修罗 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 山羊·修罗 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 水瓶天平 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 水瓶天平 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 #IF
 CHECKITEM 双鱼剑魂 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 双鱼剑魂 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 
 #IF
 CHECKITEM 乌鸦基米安 1
 #ACT
-GIVE 神器碎片 25
+GIVE 神器碎片 15
 TAKE 乌鸦基米安 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 25
+INC N$分解碎片数量 15
 
 
 #IF
 CHECKITEM 蛤蟆功 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 蛤蟆功 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 先天功 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 先天功 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 弹指神通 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 弹指神通 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 降龙十八掌 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 降龙十八掌 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 九阴真经 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 九阴真经 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 双手互搏 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 双手互搏 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 武穆遗书 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 武穆遗书 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 铁掌水上漂 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 铁掌水上漂 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 打狗棒 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 打狗棒 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 九阴白骨爪 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 九阴白骨爪 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 嘴强王者 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 嘴强王者 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 藏书万卷 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 藏书万卷 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 北冥神功 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 北冥神功 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 凌波微步 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 凌波微步 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 八荒六合唯我独尊功 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 八荒六合唯我独尊功 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 化功大法 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 化功大法 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 生死符 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 生死符 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 擒龙功 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 擒龙功 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 六脉神剑 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 六脉神剑 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 百科全书 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 百科全书 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 神木王鼎 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 神木王鼎 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 吸星大法 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 吸星大法 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 葵花宝典 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 葵花宝典 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 斗转星移 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 斗转星移 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 妻妾成群 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 妻妾成群 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 恶贯满盈 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 恶贯满盈 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 独孤九剑 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 独孤九剑 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 凶神恶煞 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 凶神恶煞 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 穷凶极恶 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 穷凶极恶 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 无恶不做 1
 #ACT
-GIVE 神器碎片 15
+GIVE 神器碎片 8
 TAKE 无恶不做 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 15
+INC N$分解碎片数量 8
 
 #IF
 CHECKITEM 三下江南 1
 #ACT
-GIVE 神器碎片 9
+GIVE 神器碎片 6
 TAKE 三下江南 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 9
+INC N$分解碎片数量 6
 
 #IF
 CHECKITEM 千年之志 1
 #ACT
-GIVE 神器碎片 9
+GIVE 神器碎片 6
 TAKE 千年之志 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 9
+INC N$分解碎片数量 6
 
 #IF
 CHECKITEM 雄才伟略 1
 #ACT
-GIVE 神器碎片 9
+GIVE 神器碎片 6
 TAKE 雄才伟略 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 9
+INC N$分解碎片数量 6
 
 #IF
 CHECKITEM 英武圣文 1
 #ACT
-GIVE 神器碎片 9
+GIVE 神器碎片 6
 TAKE 英武圣文 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 9
+INC N$分解碎片数量 6
 
 #IF
 CHECKITEM 祸国殃民 1
 #ACT
-GIVE 神器碎片 9
+GIVE 神器碎片 6
 TAKE 祸国殃民 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 9
+INC N$分解碎片数量 6
 
 #IF
 CHECKITEM 英明神武 1
 #ACT
-GIVE 神器碎片 9
+GIVE 神器碎片 6
 TAKE 英明神武 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 9
+INC N$分解碎片数量 6
 
 #IF
 CHECKITEM 靖难之役 1
 #ACT
-GIVE 神器碎片 9
+GIVE 神器碎片 6
 TAKE 靖难之役 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 9
+INC N$分解碎片数量 6
 
 #IF
 CHECKITEM 人不知兵 1
 #ACT
-GIVE 神器碎片 9
+GIVE 神器碎片 6
 TAKE 人不知兵 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 9
+INC N$分解碎片数量 6
 
 #IF
 CHECKITEM 屈辱求和 1
 #ACT
-GIVE 神器碎片 9
+GIVE 神器碎片 6
 TAKE 屈辱求和 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 9
+INC N$分解碎片数量 6
 
 #IF
 CHECKITEM 一统天下 1
 #ACT
-GIVE 神器碎片 9
+GIVE 神器碎片 6
 TAKE 一统天下 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 9
+INC N$分解碎片数量 6
 
 #IF
 CHECKITEM 贞观之治 1
 #ACT
-GIVE 神器碎片 9
+GIVE 神器碎片 6
 TAKE 贞观之治 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 9
+INC N$分解碎片数量 6
 
 #IF
 CHECKITEM 政通人和 1
 #ACT
-GIVE 神器碎片 9
+GIVE 神器碎片 6
 TAKE 政通人和 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 9
+INC N$分解碎片数量 6
 
 #IF
 CHECKITEM 均田免粮 1
 #ACT
-GIVE 神器碎片 9
+GIVE 神器碎片 6
 TAKE 均田免粮 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 9
+INC N$分解碎片数量 6
 
 #IF
 CHECKITEM 统一女真 1
 #ACT
-GIVE 神器碎片 9
+GIVE 神器碎片 6
 TAKE 统一女真 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 9
+INC N$分解碎片数量 6
 
 #IF
 CHECKITEM 建立大清 1
 #ACT
-GIVE 神器碎片 9
+GIVE 神器碎片 6
 TAKE 建立大清 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 9
+INC N$分解碎片数量 6
 
 #IF
 CHECKITEM 苟且偷生 1
 #ACT
-GIVE 神器碎片 9
+GIVE 神器碎片 6
 TAKE 苟且偷生 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 9
+INC N$分解碎片数量 6
 
 #IF
 CHECKITEM 和申跌倒 1
 #ACT
-GIVE 神器碎片 9
+GIVE 神器碎片 6
 TAKE 和申跌倒 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 9
+INC N$分解碎片数量 6
 
 #IF
 CHECKITEM 建武盛世 1
 #ACT
-GIVE 神器碎片 9
+GIVE 神器碎片 6
 TAKE 建武盛世 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 9
+INC N$分解碎片数量 6
 
 #IF
 CHECKITEM 赤胆忠心 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 赤胆忠心 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 古之恶来 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 古之恶来 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 常胜将军 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 常胜将军 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 三姓家奴 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 三姓家奴 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 人中赤兔 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 人中赤兔 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 欢乐肥宅 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 欢乐肥宅 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 英年早逝 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 英年早逝 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 有借无还 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 有借无还 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 人强货硬 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 人强货硬 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 天妒英才 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 天妒英才 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 公瑾糜烂 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 公瑾糜烂 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 虎痴许褚 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 虎痴许褚 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 勇者得前 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 勇者得前 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 超人一等 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 超人一等 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 桀骜不驯 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 桀骜不驯 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 沉鱼落雁 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 沉鱼落雁 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 闭月羞花 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 闭月羞花 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 张角巾 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 张角巾 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 太清丹经 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 太清丹经 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 无名火 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 无名火 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 援军令 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 援军令 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 虎痴 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 虎痴 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 九节杖 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 九节杖 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 张凌剑 1
 #ACT
-GIVE 神器碎片 6
+GIVE 神器碎片 4
 TAKE 张凌剑 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 6
+INC N$分解碎片数量 4
 
 #IF
 CHECKITEM 红烧狮子头 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 红烧狮子头 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 三味真火 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 三味真火 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 百变妖姬 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 百变妖姬 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 第三只眼 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 第三只眼 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 大力牛魔拳 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 大力牛魔拳 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 长庚锻金丹 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 长庚锻金丹 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 三头六臂 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 三头六臂 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 快请如来佛 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 快请如来佛 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 斜月三星 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 斜月三星 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 金箍棒 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 金箍棒 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 月牙铲 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 月牙铲 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 九齿钉耙 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 九齿钉耙 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 净瓶杨柳 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 净瓶杨柳 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 灵骨舍利 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 灵骨舍利 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 牛魔披风 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 牛魔披风 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 海刺银胆 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 海刺银胆 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 蛛王戒 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 蛛王戒 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 鼠王巫觋 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 鼠王巫觋 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 紫金红葫芦 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 紫金红葫芦 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 羊脂玉净瓶 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 羊脂玉净瓶 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
 
 #IF
 CHECKITEM 锦蓝袈裟 1
 #ACT
-GIVE 神器碎片 3
+GIVE 神器碎片 2
 TAKE 锦蓝袈裟 1
 INC N$分解装备数量 1
-INC N$分解碎片数量 3
+INC N$分解碎片数量 2
+
+#IF
+CHECKITEM 邪恶的源泉 1
+#ACT
+GIVE 神器碎片 70
+TAKE 邪恶的源泉 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 邪恶的延伸 1
+#ACT
+GIVE 神器碎片 70
+TAKE 邪恶的延伸 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 哈迪斯之怒 1
+#ACT
+GIVE 神器碎片 70
+TAKE 哈迪斯之怒 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 雅典娜的邪恶 1
+#ACT
+GIVE 神器碎片 70
+TAKE 雅典娜的邪恶 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 德墨忒尔的生机 1
+#ACT
+GIVE 神器碎片 70
+TAKE 德墨忒尔的生机 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 月光女神的彩靴 1
+#ACT
+GIVE 神器碎片 70
+TAKE 月光女神的彩靴 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 女神的祝福 1
+#ACT
+GIVE 神器碎片 70
+TAKE 女神的祝福 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 阿波罗的愤怒 1
+#ACT
+GIVE 神器碎片 70
+TAKE 阿波罗的愤怒 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 鸿钧的傲慢 1
+#ACT
+GIVE 神器碎片 70
+TAKE 鸿钧的傲慢 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 盘古的虚饰 1
+#ACT
+GIVE 神器碎片 70
+TAKE 盘古的虚饰 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 女娲的易怒 1
+#ACT
+GIVE 神器碎片 70
+TAKE 女娲的易怒 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 道德的忧郁 1
+#ACT
+GIVE 神器碎片 70
+TAKE 道德的忧郁 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 灵宝的怠惰 1
+#ACT
+GIVE 神器碎片 70
+TAKE 灵宝的怠惰 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 元始的贪婪 1
+#ACT
+GIVE 神器碎片 70
+TAKE 元始的贪婪 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 大禹的暴食 1
+#ACT
+GIVE 神器碎片 70
+TAKE 大禹的暴食 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 后羿的色欲 1
+#ACT
+GIVE 神器碎片 70
+TAKE 后羿的色欲 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 月光祝福 1
+#ACT
+GIVE 神器碎片 70
+TAKE 月光祝福 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 太阳神的葬礼 1
+#ACT
+GIVE 神器碎片 70
+TAKE 太阳神的葬礼 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 山海经 1
+#ACT
+GIVE 神器碎片 70
+TAKE 山海经 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 战神指环 1
+#ACT
+GIVE 神器碎片 70
+TAKE 战神指环 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 蚩尤神坠 1
+#ACT
+GIVE 神器碎片 70
+TAKE 蚩尤神坠 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 三十三世靴 1
+#ACT
+GIVE 神器碎片 70
+TAKE 三十三世靴 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 世祖神腰 1
+#ACT
+GIVE 神器碎片 70
+TAKE 世祖神腰 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 帝喾神盔 1
+#ACT
+GIVE 神器碎片 70
+TAKE 帝喾神盔 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 观世音面纱【西游神器】 1
+#ACT
+GIVE 神器碎片 2
+TAKE 观世音面纱【西游神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 2
+
+#IF
+CHECKITEM 金刚伏魔盾【西游神器】 1
+#ACT
+GIVE 神器碎片 2
+TAKE 金刚伏魔盾【西游神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 2
+
+#IF
+CHECKITEM 羽扇纶巾【三国神器】 1
+#ACT
+GIVE 神器碎片 4
+TAKE 羽扇纶巾【三国神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 4
+
+#IF
+CHECKITEM 过五关斩六将【三国神器】 1
+#ACT
+GIVE 神器碎片 4
+TAKE 过五关斩六将【三国神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 4
+
+#IF
+CHECKITEM 挟天子以令诸侯【三国神器】 1
+#ACT
+GIVE 神器碎片 4
+TAKE 挟天子以令诸侯【三国神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 4
+
+#IF
+CHECKITEM 一骑当千【三国神器】 1
+#ACT
+GIVE 神器碎片 4
+TAKE 一骑当千【三国神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 4
+
+#IF
+CHECKITEM 金龙玉凤【帝王神器】 1
+#ACT
+GIVE 神器碎片 6
+TAKE 金龙玉凤【帝王神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 6
+
+#IF
+CHECKITEM 励精图治【帝王神器】 1
+#ACT
+GIVE 神器碎片 6
+TAKE 励精图治【帝王神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 6
+
+#IF
+CHECKITEM 九重天子【帝王神器】 1
+#ACT
+GIVE 神器碎片 6
+TAKE 九重天子【帝王神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 6
+
+#IF
+CHECKITEM 南征北战【帝王神器】 1
+#ACT
+GIVE 神器碎片 6
+TAKE 南征北战【帝王神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 6
+
+#IF
+CHECKITEM 乾坤大挪移【金庸神器】 1
+#ACT
+GIVE 神器碎片 8
+TAKE 乾坤大挪移【金庸神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 8
+
+#IF
+CHECKITEM 凌波微步【金庸神器】 1
+#ACT
+GIVE 神器碎片 8
+TAKE 凌波微步【金庸神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 8
+
+#IF
+CHECKITEM 黯然销魂掌【金庸神器】 1
+#ACT
+GIVE 神器碎片 8
+TAKE 黯然销魂掌【金庸神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 8
+
+#IF
+CHECKITEM 天山折梅手【金庸神器】 1
+#ACT
+GIVE 神器碎片 8
+TAKE 天山折梅手【金庸神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 8
+
+#IF
+CHECKITEM 雅典娜的召唤【圣斗士神器】 1
+#ACT
+GIVE 神器碎片 15
+TAKE 雅典娜的召唤【圣斗士神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 15
+
+#IF
+CHECKITEM 曙光女神之宽恕【圣斗士神器】 1
+#ACT
+GIVE 神器碎片 15
+TAKE 曙光女神之宽恕【圣斗士神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 15
+
+#IF
+CHECKITEM 修罗圣剑【圣斗士神器】 1
+#ACT
+GIVE 神器碎片 15
+TAKE 修罗圣剑【圣斗士神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 15
+
+#IF
+CHECKITEM 星红旋风【圣斗士神器】 1
+#ACT
+GIVE 神器碎片 15
+TAKE 星红旋风【圣斗士神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 15
+
+#IF
+CHECKITEM 雪夜上梁山【水浒神器】 1
+#ACT
+GIVE 神器碎片 20
+TAKE 雪夜上梁山【水浒神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 智取生辰纲【水浒神器】 1
+#ACT
+GIVE 神器碎片 20
+TAKE 智取生辰纲【水浒神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 血溅鸳鸯楼【水浒神器】 1
+#ACT
+GIVE 神器碎片 20
+TAKE 血溅鸳鸯楼【水浒神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 拳打镇关西【水浒神器】 1
+#ACT
+GIVE 神器碎片 20
+TAKE 拳打镇关西【水浒神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 伏龙鼎【诛仙神器】 1
+#ACT
+GIVE 神器碎片 30
+TAKE 伏龙鼎【诛仙神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 30
+
+#IF
+CHECKITEM 摄魂【诛仙神器】 1
+#ACT
+GIVE 神器碎片 30
+TAKE 摄魂【诛仙神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 30
+
+#IF
+CHECKITEM 大悲金轮【诛仙神器】 1
+#ACT
+GIVE 神器碎片 30
+TAKE 大悲金轮【诛仙神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 30
+
+#IF
+CHECKITEM 玄火鉴【诛仙神器】 1
+#ACT
+GIVE 神器碎片 30
+TAKE 玄火鉴【诛仙神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 30
+
+#IF
+CHECKITEM 量天尺【诛仙神器】 1
+#ACT
+GIVE 神器碎片 30
+TAKE 量天尺【诛仙神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 30
+
+#IF
+CHECKITEM 暴君之怒【暗黑神器】 1
+#ACT
+GIVE 神器碎片 50
+TAKE 暴君之怒【暗黑神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 不死皇冠【暗黑神器】 1
+#ACT
+GIVE 神器碎片 50
+TAKE 不死皇冠【暗黑神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 吸魂者【暗黑神器】 1
+#ACT
+GIVE 神器碎片 50
+TAKE 吸魂者【暗黑神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 乔丹之石【暗黑神器】 1
+#ACT
+GIVE 神器碎片 50
+TAKE 乔丹之石【暗黑神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 天堂的信徒【暗黑神器】 1
+#ACT
+GIVE 神器碎片 50
+TAKE 天堂的信徒【暗黑神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 地狱的伪装【暗黑神器】 1
+#ACT
+GIVE 神器碎片 50
+TAKE 地狱的伪装【暗黑神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 盘古幡【上古神器】 1
+#ACT
+GIVE 神器碎片 70
+TAKE 盘古幡【上古神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 补天石【上古神器】 1
+#ACT
+GIVE 神器碎片 70
+TAKE 补天石【上古神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 东皇钟【上古神器】 1
+#ACT
+GIVE 神器碎片 70
+TAKE 东皇钟【上古神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 昆仑镜【上古神器】 1
+#ACT
+GIVE 神器碎片 70
+TAKE 昆仑镜【上古神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 先天五行旗【上古神器】 1
+#ACT
+GIVE 神器碎片 70
+TAKE 先天五行旗【上古神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 追日靴【上古神器】 1
+#ACT
+GIVE 神器碎片 70
+TAKE 追日靴【上古神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 封天印【上古神器】 1
+#ACT
+GIVE 神器碎片 70
+TAKE 封天印【上古神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 崆峒印【上古神器】 1
+#ACT
+GIVE 神器碎片 70
+TAKE 崆峒印【上古神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 轩辕剑【上古神器】 1
+#ACT
+GIVE 神器碎片 70
+TAKE 轩辕剑【上古神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 太极图【上古神器】 1
+#ACT
+GIVE 神器碎片 70
+TAKE 太极图【上古神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 玲珑塔【上古神器】 1
+#ACT
+GIVE 神器碎片 70
+TAKE 玲珑塔【上古神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
+CHECKITEM 昊天塔【上古神器】 1
+#ACT
+GIVE 神器碎片 70
+TAKE 昊天塔【上古神器】 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
 
 #IF
 CHECKITEM 幽影之枪【灵阶】 1
