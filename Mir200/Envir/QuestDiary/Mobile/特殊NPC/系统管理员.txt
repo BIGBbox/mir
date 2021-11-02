@@ -210,16 +210,21 @@ goto @获取图鉴
 
 #if
 #act
+MOVR N$纵轴坐标 100 300
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <西游挑战的/FCOLOR=253><【真·如来】/FCOLOR=250><已刷新/FCOLOR=255><各位勇士赶快前往击杀吧/FCOLOR=255>
+MOVR N$纵轴坐标 100 300
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <西游挑战的/FCOLOR=253><【真·如来】/FCOLOR=250><已刷新/FCOLOR=255><各位勇士赶快前往击杀吧/FCOLOR=255>
+
 ; CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
-mov S0 <$DATETIME>
-AnsiReplaceText S0 年 -
-AnsiReplaceText S0 月 -
-AnsiReplaceText S0 日
-GetValidstr <$str(S0)> , S$年月日 S$剩下串
-; AnsiReplaceText S0 : -
-; AnsiReplaceText S0 ：-
-mov s0 <$str(S$年月日)>-00-00-00
-sendmsg 5 ____<$str(S0)>
+; mov S0 <$DATETIME>
+; AnsiReplaceText S0 年 -
+; AnsiReplaceText S0 月 -
+; AnsiReplaceText S0 日
+; GetValidstr <$str(S0)> , S$年月日 S$剩下串
+; ; AnsiReplaceText S0 : -
+; ; AnsiReplaceText S0 ：-
+; mov s0 <$str(S$年月日)>-00-00-00
+sendmsg 5 ____<$DAY>
 ; mov s0 2021-11-1-00-00-00
 ; mov s1 2021-11-1-00-00-00
 ; Taketime S0 S1
