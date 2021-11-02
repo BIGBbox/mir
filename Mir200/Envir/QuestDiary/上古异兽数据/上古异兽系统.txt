@@ -12,7 +12,7 @@ mov S$йг╥Яобр╩╡╫ 1
 
 <RText|id=1|x=205|y=5|size=20|text=<аИйч╬╚й╞/FCOLOR=89>>
 <RText|id=2|x=15|y=65|size=14|text=<аИйч╬╚й╞╥жн╙цБ╥яй╧сц╨м╦╤╥яй╧сц,цБ╥яц©оШ╨д10©е╬╚й╞╩А╩Я╣ц/FCOLOR=251><1╣Ц/FCOLOR=250><аИйч╬╜яИ/FCOLOR=251>>
-<RText|id=3|x=15|y=90|size=14|text=<╦╤╥яй╧сц,ц©©е╬╚й╞пХр╙/FCOLOR=251><ж╖╦╤100лЛоб╠р/FCOLOR=249><╩Я╣ц/FCOLOR=251><10╠╤/FCOLOR=250><йчаИ╬╜яИ!!/FCOLOR=251>>
+<RText|id=3|x=15|y=90|size=14|text=<╦╤╥яй╧сц,ц©10©е╬╚й╞пХр╙/FCOLOR=251><ж╖╦╤100лЛоб╠р/FCOLOR=249><╩Я╣ц/FCOLOR=251><10╠╤/FCOLOR=250><йчаИ╬╜яИ!!/FCOLOR=251>>
 <RText|id=8|x=15|y=115|size=14|text=<вт╤╞ппобх║уШ╠ёаТ10╣д╠╤йЩ║ё/FCOLOR=250>>
 <Layout|submitInput=1|id=button1|children={4}|x=220|y=150|width=80|height=30|color=243|link=@иЩ╪╤╟╢е╔#╡нйЩ=0>
 <RText|id=4|x=10|y=5|size=14|text=<цБ╥яй╧сц/FCOLOR=0>>
@@ -56,7 +56,7 @@ break
 equal <$STR(S$йг╥Я╦╤╥я)> 1
 #act
 mov N$оШ╨длЛоб╠р <$STR(N$╬╚й╞йЩа©)>
-mul N$оШ╨длЛоб╠р 100
+mul N$оШ╨длЛоб╠р 10
 mov N$╩Я╣ц╬╜яИж╣ <$STR(N$╢нйЩ)>
 mul N$╩Я╣ц╬╜яИж╣ 10
 ; sendmsg 5 оШ╨длЛоб╠р:::<$STR(S$оШ╨длЛоб╠р)>
@@ -150,7 +150,7 @@ ReadConfigFileItem ..\QuestDiary\ио╧ерЛйчйЩ╬щ\ио╧ерЛйчиЩ╪╤йЩ╬щ.txt <$STR(S12)> о
 ReadConfigFileItem ..\QuestDiary\ио╧ерЛйчйЩ╬щ\ио╧ерЛйчиЩ╪╤йЩ╬щ.txt <$STR(S12)> обр╩╪╤рЛйч S$обр╩╪╤рЛйчцШ
 
 #if
-CHECKCUSTOMITEMPROGRESSBARPERCENT 16 0 = 100
+CHECKCUSTOMITEMPROGRESSBARPERCENT 16 0 > 99
 ;CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 1 = <$STR(S$вН╢С╬╜яИж╣йЩж╣)>
 #act
 
@@ -163,7 +163,7 @@ mov T5 <$str(T5)>_<$STR(S$обр╩╪╤рЛйчцШ)>
 
 CHANGECUSTOMITEMPROGRESSBAR 16 0 0 1
 CHANGECUSTOMITEMPROGRESSBAR 16 0 1 ╬╜яИж╣:
-CHANGECUSTOMITEMPROGRESSBAR 16 0 2 70
+CHANGECUSTOMITEMPROGRESSBAR 16 0 2 70 
 CHANGECUSTOMITEMPROGRESSBAR 16 0 3 1
 CHANGECUSTOMITEMPROGRESSBAR 16 0 4 2
 CHANGECUSTOMITEMPROGRESSBARVALUE 16 0 2 + 1
