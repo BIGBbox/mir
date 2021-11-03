@@ -28,7 +28,7 @@ check [99] 0
 #act
 set [99] 1
 ; mov U108 24
-ADDSKILL 召唤骷髅
+ADDSKILL 召唤守护者
 ;CONFERTITLE 天下骨灰玩家
 SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|254:39:0}{成功领取|116:39:0}{微信礼包|253:39:0}{奖励!|116:39:0}！！！
 #Call [\Mobile\特殊NPC\TOP图标.txt] @导航
