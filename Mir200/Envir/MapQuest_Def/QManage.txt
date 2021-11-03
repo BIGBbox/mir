@@ -98,7 +98,8 @@ SetOnTimer 7 1
 DELAYGOTO 100 @延迟开启登录限制
 
 VAR Integer HUMAN 今日充值
-
+VAR Integer GLOBAL 沙捐总值
+; CHECKVAR GLOBAL G9 = <$str(G9)>
 VAR Integer HUMAN 累计充值领取标记1
 VAR Integer HUMAN 累计充值领取标记2
 VAR Integer HUMAN 累计充值领取标记3
@@ -141,6 +142,11 @@ VAR Integer HUMAN 角色攻击力
 
 
 [@延迟开启登录限制]
+#if
+equal <$USERNAME> 胡清风如我
+#act
+sendmsg 5 U20:<$str(U20)>-U17:<$STR(U17)>-合区时间:<$HFTIME>
+
 #if
 #act
 EXTBAGOPENITEMCOUNT 126
@@ -690,7 +696,8 @@ BREAK
 
 [@QM零点重置]
 #IF
-equal U20 0
+; equal U20 0
+Checkonline
 #ACT
 #CALL [\游戏登陆\登陆脚本.txt] @每日首次登陆触发
 mov U20 1
@@ -718,3 +725,10 @@ ADDSKILL 十步一杀
 #CALL [\属性重载\怪物额外伤害.txt] @额外掉血
 #CALL [\属性重载\神力倍攻.txt] @对话框倍攻
 #CALL [\属性重载\游戏爆率.txt] @暴率
+
+[@排行榜列表抓取]
+#if
+Checkonline
+#act
+
+#call [\排行榜\排行榜数据记录.txt] @获取角色属性
