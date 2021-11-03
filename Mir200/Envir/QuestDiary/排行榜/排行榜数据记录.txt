@@ -3,8 +3,12 @@
 
 #if
 #act
-SortHumVar 角色攻击力 S$角色名字 N$角色攻击力 0 1 50
 CreateFile ..\QuestDiary\排行榜\排行榜数据.txt
+#if
+CHECKLEVELEX > 149
+#act
+SortHumVar 角色攻击力 S$角色名字 N$角色攻击力 0 1 50
+
 
 ; mov N$行号 0
 goto @写入排行榜
@@ -13,7 +17,6 @@ goto @写入排行榜
 [@写入排行榜]
 
 #if
-CHECKLEVELEX > 149
 #act
 CALCVAR HUMAN 角色攻击力 = <$MAXDC>
 SAVEVAR HUMAN 角色攻击力

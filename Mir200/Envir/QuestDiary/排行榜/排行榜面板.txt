@@ -60,7 +60,7 @@ mov S$╢╟©з50
 mov S$нр╣дпп╩А <$GUILDNAME>
 mov S$нр╣деецШ н╢ио╟Я
 ; SortHumVar ╫ги╚╧╔╩Ва╕ S$╫ги╚цШвж N$╫ги╚╧╔╩Ва╕ 0 1 50
-
+GMEXECUTE StartQuest @еепп╟Яап╠Мв╔х║
 goto @╩Фжфеепп╟Я╢╟©з
 ; goto @еепп╟ЯцФ╟Еотй╬
 
@@ -102,12 +102,14 @@ ReadConfigFileItem ..\QuestDiary\еепп╟Я\еепп╟ЯйЩ╬щ.txt <$STR(S$╫ги╚цШвж<$str(N$╢
 
 #if
 equal <$STR(S$╫ги╚цШвж<$STR(N$╢╟©зпР╨е)>)> <$USERNAME>
+not equal <$str(S$╫ги╚╧╔╩Ва╕)>
 #act
 mov S$нр╣деецШ ╣з<$str(N$╢╟©зпР╨е)>цШ
 
 
 #if
 not equal <$STR(S$╫ги╚цШвж<$STR(N$╢╟©зпР╨е)>)>
+not equal <$str(S$╫ги╚╧╔╩Ва╕)>
 #act
 inc S$╢╟©з<$STR(N$╢╟©зпР╨е)> <Img|id=╢╟©з<$STR(N$╢╟©зпР╨е)>|children={╢╟©з<$STR(N$╢╟©зпР╨е)>_еецШпР╨е,╢╟©з<$STR(N$╢╟©зпР╨е)>_╫ги╚цШ,╢╟©з<$STR(N$╢╟©зпР╨е)>_╫ги╚╧╔╩Ва╕,╢╟©з<$STR(N$╢╟©зпР╨е)>_╫ги╚╣х╪╤,╢╟©з<$STR(N$╢╟©зпР╨е)>_╡И©╢╟╢е╔}|img=public/1900000651_2.png|x=0.0|y=0.0|scale9t=10|scale9b=10|scale9l=5|scale9r=40|width=550|height=50>
 inc S$╢╟©з<$STR(N$╢╟©зпР╨е)> <RText|id=╢╟©з<$STR(N$╢╟©зпР╨е)>_еецШпР╨е|x=8.0|y=12.0|text=<╣з<$STR(N$╢╟©зпР╨е)>цШ:/FCOLOR=149>>
@@ -119,6 +121,7 @@ inc S$╢╟©з<$STR(N$╢╟©зпР╨е)> <Button|id=╢╟©з<$STR(N$╢╟©зпР╨е)>_╡И©╢╟╢е╔|x=452|y=
 
 #if
 not equal <$STR(S$╫ги╚цШвж<$STR(N$╢╟©зпР╨е)>)>
+not equal <$str(S$╫ги╚╧╔╩Ва╕)>
 not large <$str(N$╢╟©зпР╨е)> 3
 #act
 inc S$╢╟©з<$STR(N$╢╟©зпР╨е)> <RText|id=╢╟©з<$STR(N$╢╟©зпР╨е)>_еецШпР╨е|children={╢╟©з<$STR(N$╢╟©зпР╨е)>_еецШ_цШ,╢╟©з<$STR(N$╢╟©зпР╨е)>_еецШ_img}|x=8.0|y=12.0|text=<╣з/FCOLOR=149>>
@@ -130,7 +133,7 @@ inc S$╢╟©з<$STR(N$╢╟©зпР╨е)> <RText|id=╢╟©з<$STR(N$╢╟©зпР╨е)>_еецШ_цШ|x=40.0|y=0
 
 #if
 small <$STR(N$╢╟©зпР╨е)> 50
-not equal <$STR(S$╫ги╚цШвж<$STR(N$╢╟©зпР╨е)>)>
+; not equal <$STR(S$╫ги╚цШвж<$STR(N$╢╟©зпР╨е)>)>
 #act
 inc N$╢╟©зпР╨е 1
 goto @╩Фжфеепп╟Я╢╟©з
