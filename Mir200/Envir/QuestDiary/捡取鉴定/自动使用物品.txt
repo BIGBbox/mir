@@ -70,47 +70,30 @@ goto @StdModeFunc292
 ; --------------------天下币-------------------------
 
 
-#IF
-CHECKITEM 1天下币
-#ACT
-take 1天下币 1
-goto @StdModeFunc296
-
-#IF
-CHECKITEM 2天下币
-#ACT
-take 2天下币 1
-goto @StdModeFunc297
 
 #IF
 CHECKITEM 5天下币
 #ACT
 take 5天下币 1
-goto @StdModeFunc298
+goto @StdModeFunc296
 
 #IF
 CHECKITEM 10天下币
 #ACT
 take 10天下币 1
-goto @StdModeFunc299
-
-#IF
-CHECKITEM 20天下币
-#ACT
-take 20天下币 1
-goto @StdModeFunc300
+goto @StdModeFunc297
 
 #IF
 CHECKITEM 50天下币
 #ACT
 take 50天下币 1
-goto @StdModeFunc301
+goto @StdModeFunc298
 
 #IF
 CHECKITEM 100天下币
 #ACT
 take 100天下币 1
-goto @StdModeFunc302
+goto @StdModeFunc299
 
 ; GAMEDIAMOND + 50
 ; SENDMSG 7
