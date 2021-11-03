@@ -35,9 +35,12 @@ ReadConfigFileItem ..\QuestDiary\转生系统\转生数据.txt <$STR(N$转生等级)> 转生材
 ReadConfigFileItem ..\QuestDiary\转生系统\转生数据.txt <$STR(N$转生等级)> 倍攻 S$转生倍攻
 
 #if
-equal S$转生需要货币类型 绑定元宝
+equal S$转生需要货币类型 绑定元宝 
 #act
-mov S$货币类型 元宝
+mov S$货币类型 元宝 
+#elseact
+mov S$货币类型 <$str(S$转生需要货币类型)>
+
 
 #if
 #act
@@ -79,15 +82,32 @@ inc N$转生等级 1
 goto @获取当前转生等级
 
 [@开始转生]
+#if
+equal <$STR(S$货币类型)> 元宝
+CheckBindMoney 元宝 < <$str(S$转生需要货币数量)>
+#act
+MESSAGEBOX 转生所需元宝不足!!
+break
+
+#if
+not equal <$STR(S$货币类型)> 元宝
+CheckMoney <$STR(S$货币类型)> < <$str(S$转生需要货币数量)>
+#act
+MESSAGEBOX 转生所需<$STR(S$货币类型)>不足!!
+break
 
 #IF
-CHECKITEM <$STR(S$转生材料)> <$STR(S$转生需要证明)>
-CheckBindMoney 绑定元宝 > <$str(S$转生需要货币数量)>
+not CHECKITEM <$STR(S$转生材料)> <$STR(S$转生需要证明)>
 #ACT
+MESSAGEBOX 转生所需<$STR(S$转生材料)>不足!!
+break
 
-INC U49 <$STR(S$转生倍攻)>
+#if
+#act
+money <$str(S$转生需要货币类型)> - <$str(S$转生需要货币数量)>
 TAKE  <$STR(S$转生材料)> <$STR(S$转生需要证明)>
-ChangeBindMoney 元宝 <$str(S$转生需要货币数量)>
+INC U49 <$STR(S$转生倍攻)>
+
 RENEWLEVEL 1 0 0
 MOVR <$STR(N$纵轴坐标)> 100 500
 SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功转生/FCOLOR=253>{<【<$str(S$下级转生)>】/FCOLOR=58>}
