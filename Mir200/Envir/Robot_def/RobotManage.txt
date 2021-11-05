@@ -7,10 +7,11 @@ break
 #or
 equal <$str(G300)> 3
 equal <$DAY> 2
-equal <$DAY> 4
 equal <$DAY> 6
 #ACT
-
+SendCenterMsg 250 0 ┏-------------------------------------------------------┓ 1 60
+SendCenterMsg 250 0 ┠-----------攻城战30分钟后已开启------------┨ 1 60
+SendCenterMsg 250 0 ┗-------------------------------------------------------┛ 1 60
 AddAttackSabukAll 0
 
 
@@ -23,15 +24,14 @@ break
 #or
 equal <$str(G300)> 3
 equal <$DAY> 2
-equal <$DAY> 4
 equal <$DAY> 6
 #ACT
 
 MOV G498 1
 
-SendCenterMsg 250 0 ┏-----------------------------------┓ 1 30
-SendCenterMsg 250 0 ┠-----------攻城战已开启------------┨ 1 30
-SendCenterMsg 250 0 ┗-----------------------------------┛ 1 30
+SendCenterMsg 250 0 ┏-------------------------------------------┓ 1 60
+SendCenterMsg 250 0 ┠-----------攻城战已开启------------┨ 1 60
+SendCenterMsg 250 0 ┗-------------------------------------------┛ 1 60
 ; #elseact
 ; SendCenterMsg 250 0 ┏-----------------------------------┓ 1 30
 ; SendCenterMsg 250 0 ┠-----------攻城三天开启------------┨ 1 30
@@ -47,17 +47,15 @@ break
 #or
 equal <$str(G300)> 3
 equal <$DAY> 2
-equal <$DAY> 4
 equal <$DAY> 6
 #ACT
 
 
 CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
-SendCenterMsg 249 0 ┏---------------------------------------┓ 1 30
-SendCenterMsg 249 0 ┠-----------攻城战已结束-----------------┨ 1 30
-SendCenterMsg 249 0 ┠沙城奖励领取npc已在天下主城(141,86)刷新-┨ 1 30
-SendCenterMsg 249 0 ┗---------------------------------------┛ 1 30
-
+SendCenterMsg 249 0 ┏---------------------------------------------------------------┓ 1 60
+SendCenterMsg 249 0 ┠-------------------攻城战已结束-------------------------┨ 1 60
+SendCenterMsg 249 0 ┠沙城奖励领取npc已在天下主城(141,86)刷新-┨ 1 60
+SendCenterMsg 249 0 ┗---------------------------------------------------------------┛ 1 60
 [@每日重置]
 #if
 #act
@@ -73,16 +71,15 @@ break
 #or
 equal <$str(G300)> 3
 equal <$DAY> 2
-equal <$DAY> 4
 equal <$DAY> 6
 #ACT
+DELNPC 攻城奖池领取
 CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
 CLEARNAMELIST ..\QuestDiary\捐献系统\捐献排名.txt
 CLEARNAMELIST ..\QuestDiary\捐献系统\捐献数据.txt
 CLEARNAMELIST ..\QuestDiary\技术QQ198605888\沙城成员领取记录.txt
 ClearHumCustVar 沙城捐献 0
 
-DELNPC 攻城奖池领取
 ; mov G9 0
 CALCVAR GLOBAL 沙捐总值 = 0
 SAVEVAR GLOBAL 沙捐总值
