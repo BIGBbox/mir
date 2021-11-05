@@ -2,6 +2,12 @@
 %100
 [@main]
 #IF
+CHECKUNDERWAR 沙巴克
+#ACT
+messagebox [抱歉]：攻沙状态不允许逃跑！
+
+
+#IF
 #ACT
 MESSAGEBOX 是否要去【西游异世界】逛一逛？\\那个地方会使你变强！\\来域外的强者都会进去挑战！ @传送 @取消
 [@传送]
