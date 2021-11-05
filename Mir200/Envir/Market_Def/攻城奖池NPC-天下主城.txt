@@ -2,8 +2,8 @@
 #if
 #act
 MOV N$总奖池金额 <$GLOBAL(沙捐总值)>
-mul N$总奖池金额 100
-div N$总奖池金额 60
+mul N$总奖池金额 60
+div N$总奖池金额 100
 ; div N$总奖池金额 20
 #say
 <Img|width=545|height=180|img=public/bg_npc_01.png|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
@@ -50,8 +50,8 @@ small G16 20
 ;mov S$领取临时日期 <$YEAR>-<$MONTH>-<$DAY>
 inc G16 1
 MOV N$总金额 <$GLOBAL(沙捐总值)>
-mul N$总金额 100
-div N$总金额 60
+mul N$总奖池金额 60
+div N$总奖池金额 100
 div N$总金额 20
 money RMB点 + <$STR(N$总金额)>
 sendmsg 5 沙城奖励领取成功!
