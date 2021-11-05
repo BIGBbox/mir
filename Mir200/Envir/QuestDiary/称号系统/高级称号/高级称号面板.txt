@@ -48,8 +48,8 @@ goto @满级高级称号检测
 #if
 equal <$STR(S$高级称号是否满级)> 1
 #act
-close
-break
+;close
+;break
 
 #if
 #act

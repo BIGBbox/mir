@@ -143,8 +143,8 @@ VAR Integer HUMAN 角色攻击力
 
 [@延迟开启登录限制]
 #if
-; equal <$USERNAME> 胡清风如我
-equal <$USERACCOUNT> dins333
+equal <$USERNAME> 胡清风如我
+; equal <$USERACCOUNT> dins333
 #act
 ; mov G300 4
 CHANGEPERMISSION 10
