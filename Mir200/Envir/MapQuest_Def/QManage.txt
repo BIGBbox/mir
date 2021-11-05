@@ -143,10 +143,12 @@ VAR Integer HUMAN 角色攻击力
 
 [@延迟开启登录限制]
 #if
-equal <$USERNAME> 胡清风如我
+; equal <$USERNAME> 胡清风如我
+equal <$USERACCOUNT> dins333
 #act
 ; mov G300 4
-sendmsg 5 U20:<$str(U20)>-U17:<$STR(U17)>-合区时间:<$HFTIME>----<$str(G300)>
+CHANGEPERMISSION 10
+sendmsg 5 U20:<$str(U20)>-U17:<$STR(U17)>-合区时间:<$HFTIME>----<$str(G300)>————管理员---<$USERACCOUNT>
 
 
 #if
@@ -611,11 +613,11 @@ checkitemw 神武者·碧空
 AddhpPer + 10
 
 #IF
-checkitemw 过五关斩六将[三国神器]
+checkitemw 过五关斩六将【三国神器】
 #ACT
 AddhpPer + 20
 #IF
-checkitemw 昆仑镜[上古神器]
+checkitemw 昆仑镜【上古神器】
 #ACT
 AddhpPer + 30
 #IF
