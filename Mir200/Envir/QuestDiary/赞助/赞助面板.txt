@@ -2,6 +2,22 @@
 [@赞助面板]
 {
 
+#if
+#act
+goto @开启赞助面板显示
+
+[@开启赞助面板显示]
+#if
+check [26] 0
+#act
+mov N$开关状态 0
+
+#if
+check [26] 1
+#act
+mov N$开关状态 1
+
+
 
 #if
 #act
@@ -10,15 +26,26 @@ mov S$窗口1
 mov S$窗口2
 mov S$窗口3
 mov S$激活图片
+mov S$批量拾取开关按钮
+
 ReadConfigFileItem ..\QuestDiary\赞助\赞助数据.txt 窗口数量 窗口数量 S$窗口数量
 
+
+#if
+not small <$str(U99)>  888
+#act
+INC S$批量拾取开关按钮 <CheckBox|id=批量拾取开关|children={复选框描述}|x=100.0|y=480.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(N$开关状态)>|checkboxid=1|link=@开启批量拾取>
+INC S$批量拾取开关按钮 <RText|id=复选框描述|x=33.0|y=3.0|text=<开启批量拾取/FCOLOR=149>>
+
+#if
+#act
 goto @绘制滑动窗口
 
 [@赞助面板显示]
 #if
 #ACT
 #SAY
-<Img|img=public/sf1/19/bg5.png|x=160|y=20|children={close_btn,大标题,bg0,大标题,滚动窗口,click_btn,累充金额bg,累充金额1,特效控件1,特效控件2,特效控件3,特效控件4,,特效控件5,特效控件6,金额,title}|bg=1|reset=1|move=1>
+<Img|img=public/sf1/19/bg5.png|x=160|y=20|children={close_btn,大标题,bg0,大标题,滚动窗口,click_btn,批量拾取开关,累充金额bg,累充金额1,特效控件1,特效控件2,特效控件3,特效控件4,,特效控件5,特效控件6,金额,title}|bg=1|reset=1|move=1>
 <Button|id=close_btn|x=750|y=25|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
 ;<Text|id=大标题|x=359|y=12|color=249|size=35|text=赞 助>
 <Img|id=bg0|img=public/sf1/19/bg3.png|x=10.0|y=55.0>
@@ -29,11 +56,34 @@ goto @绘制滑动窗口
     <$STR(S$窗口2)>
     <$STR(S$窗口3)>
     <$STR(S$激活图片)>
+    <$STR(S$批量拾取开关按钮)>
 ; <Img|id=累充金额bg|children={累充金额}|img=public/sf1/19/bg3.png|x=10.0|y=55.0>
 <RText|id=累充金额1|x=500.0|y=485.0|text=<当前累计充值:/FCOLOR=149> <<$STR(U99)>/FCOLOR=250> <元/FCOLOR=149>>
 ; <TextAtlas|id=累充金额bg|x=650.0|y=460|img=public/sf1/19/artFont/00044.png|schar=0|iheight=37|iwidth=25|text=<$STR(U99)>>
 <Button|id=click_btn|x=282|y=480|text=获取赞助会员|nimg=public/sf1/19/button2.png|pimg=public/sf1/19/0.png|link=@充值界面>
 
+
+
+[@开启批量拾取]
+#if
+not large <$str(U99)>  888
+#act
+messagebox 充值金额不足888,无法开启自动批量拾取功能!
+break
+
+
+#if
+check [26] 0
+#act
+set [26] 1
+sendmsg 7 已开启批量拾取
+#elseact
+set [26] 0
+sendmsg 7 已关闭批量拾取
+
+
+
+; [26]
 [@绘制滑动窗口]
 #if
 not large <$STR(N$窗口序号)> <$STR(S$窗口数量)>
