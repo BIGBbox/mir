@@ -1782,13 +1782,13 @@ break
 
 
 #IF
-CHECKITEMW ·üÁú¶¦[ÖïÏÉÉñÆ÷]
+CHECKITEMW ·üÁú¶¦¡¾ÖïÏÉÉñÆ÷¡¿
 #ACT
 mov N$ÁÙÊ±»Ö¸´ 10
 break
 
 #IF
-CHECKITEMW ²¹ÌìÊ¯[ÉÏ¹ÅÉñÆ÷]
+CHECKITEMW ²¹ÌìÊ¯¡¾ÉÏ¹ÅÉñÆ÷¡¿
 #ACT
 mov N$ÁÙÊ±»Ö¸´4 10
 break
@@ -5482,14 +5482,14 @@ money °ó¶¨Ôª±¦ - 200000
 TAKE ÐÞÁ¶Ê¯ 20
 TAKE ÌìÍâÔÉÊ¯ 20
 TAKE ÉñÆ÷ËéÆ¬ 20
-GIVE ÷è÷ë±Û[1.2] 1
-mov S$¶ÍÔì×¨Êô ÷è÷ë±Û[1.2]
+GIVE ÷è÷ë±Û÷è÷ë±Û¡¾1.2¡¿ 1
+mov S$¶ÍÔì×¨Êô ÷è÷ë±Û¡¾1.2¡¿
 mov S$¶ÍÔìÎ»ÖÃ ÊÖïí
 MOVR <$STR(N$×ÝÖá×ø±ê)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$×ÝÖá×ø±ê)> 1 <¹§Ï²Íæ¼Ò/FCOLOR=250><¡¾<$USERNAME>¡¿³É¹¦»ñµÃ/FCOLOR=253><¡¾÷è÷ë±Û[1.2]¡¿ÊÖïí/FCOLOR=58>
+SENDMOVEMSG 0 253 0 <$STR(N$×ÝÖá×ø±ê)> 1 <¹§Ï²Íæ¼Ò/FCOLOR=250><¡¾<$USERNAME>¡¿³É¹¦»ñµÃ/FCOLOR=253><¡¾÷è÷ë±Û¡¾1.2¡¿¡¿ÊÖïí/FCOLOR=58>
 BREAK
 #ELSEACT
-GIVE ÷è÷ë±Û[1.2]Í¼Ö½ 1
+GIVE ÷è÷ë±Û¡¾1.2¡¿Í¼Ö½ 1
 MESSAGEBOX ´òÔìÌõ¼þ²»×ã??\\1¡¢²ÄÁÏ²»×ã£¡
 
 [@StdModeFunc85]
@@ -6283,14 +6283,14 @@ money °ó¶¨Ôª±¦ - 400000
 TAKE ÐÞÁ¶Ê¯ 40
 TAKE ÌìÍâÔÉÊ¯ 40
 TAKE ÉñÆ÷ËéÆ¬ 40
-GIVE ¼ÅÃð[¹¥] 1
-mov S$¶ÍÔì×¨Êô ¼ÅÃð[¹¥]
+GIVE ¼ÅÃð¡¾¹¥¡¿ 1
+mov S$¶ÍÔì×¨Êô ¼ÅÃð¡¾¹¥¡¿
 mov S$¶ÍÔìÎ»ÖÃ Ñü´ø
 MOVR <$STR(N$×ÝÖá×ø±ê)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$×ÝÖá×ø±ê)> 1 <¹§Ï²Íæ¼Ò/FCOLOR=250><¡¾<$USERNAME>¡¿³É¹¦»ñµÃ/FCOLOR=253><¡¾¼ÅÃð[¹¥]¡¿Ñü´ø/FCOLOR=58>
+SENDMOVEMSG 0 253 0 <$STR(N$×ÝÖá×ø±ê)> 1 <¹§Ï²Íæ¼Ò/FCOLOR=250><¡¾<$USERNAME>¡¿³É¹¦»ñµÃ/FCOLOR=253><¡¾¼ÅÃð¡¾¹¥¡¿¡¿Ñü´ø/FCOLOR=58>
 BREAK
 #ELSEACT
-GIVE ¼ÅÃð[¹¥]Í¼Ö½ 1
+GIVE ¼ÅÃð¡¾¹¥¡¿Í¼Ö½ 1
 MESSAGEBOX ´òÔìÌõ¼þ²»×ã??\\1¡¢²ÄÁÏ²»×ã£¡
 
 [@StdModeFunc121]
@@ -7852,8 +7852,8 @@ SENDMSG 7 {Ôö¼Ó|56:56:0}{[5000]|250:56:0}{ÌìÏÂ±Ò£¬Äúµ±Ç°ÌìÏÂ±Ò×ÜÊýÎª|56:56:0}{[<
 [@StdModeFunc330]
 #IF
 #ACT
-GAMEDIAMOND + 7000
-SENDMSG 7 {Ôö¼Ó|56:56:0}{[7000]|250:56:0}{ÌìÏÂ±Ò£¬Äúµ±Ç°ÌìÏÂ±Ò×ÜÊýÎª|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+GAMEDIAMOND + 7500
+SENDMSG 7 {Ôö¼Ó|56:56:0}{[7500]|250:56:0}{ÌìÏÂ±Ò£¬Äúµ±Ç°ÌìÏÂ±Ò×ÜÊýÎª|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
 
 [@StdModeFunc331]
 #IF
@@ -7888,8 +7888,8 @@ SENDMSG 7 {Ôö¼Ó|56:56:0}{[50000]|250:56:0}{ÌìÏÂ±Ò£¬Äúµ±Ç°ÌìÏÂ±Ò×ÜÊýÎª|56:56:0}{[
 [@StdModeFunc339]
 #IF
 #ACT
-GAMEDIAMOND + 70000
-SENDMSG 7 {Ôö¼Ó|56:56:0}{[70000]|250:56:0}{ÌìÏÂ±Ò£¬Äúµ±Ç°ÌìÏÂ±Ò×ÜÊýÎª|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
+GAMEDIAMOND + 75000
+SENDMSG 7 {Ôö¼Ó|56:56:0}{[75000]|250:56:0}{ÌìÏÂ±Ò£¬Äúµ±Ç°ÌìÏÂ±Ò×ÜÊýÎª|56:56:0}{[<$GAMEDIAMOND>]|250:56:0}
 
 [@StdModeFunc340]
 #IF
@@ -8827,7 +8827,7 @@ setautogetexp 1 30000 0 ÐÂÊÖÑµÁ·Óª 0 65535 200
 DELAYGOTO 10 @¹Ò»úÒýµ¼
 
 #if
-not small U99 888
+check [26] 1
 not CheckTextList ..\QuestDiary\¼ñÎï¾«Áé\½ûÓÃ¼ñÎïµØÍ¼.txt <$MAPTITLE>
 #act
 goto @ÕÙ»½¼ñÎï¾«Áé
@@ -9090,9 +9090,36 @@ mov S$Ö§ÏßÈÎÎñÁÙÊ±±äÁ¿ <$STR(T108)>
 #CALL [\ÏµÍ³¹¦ÄÜ\³äÖµ¹¦ÄÜ.txt] @¼ÆËãÊÇ·ñ¿ÉÒÔÁìÈ¡³äÖµÀñ°ü
 ; ¸üÐÂÊ×³äÍ¼±êÑùÊ½
 #Call [\Mobile\ÌØÊâNPC\TOPÍ¼±ê.txt] @µ¼º½
-
 goto @³äÖµ¼ÇÂ¼»Øµ÷
 goto @ÊôÐÔË¢ÐÂ
+goto @ÀÛ¼Æ³äÖµ½±Àø·¢·Å
+
+#if
+not small <$str(U91)> 50
+small <$str(U113)> 1
+#act
+mov U113 1
+MailGIVE °ó¶¨Ôª±¦ 1000000
+SendMail 1 ÏµÍ³½±Àø ½ñÈÕ³äÖµÀÛ¼Æ²»µÍÓÚ50,100W°ó¶¨Ôª±¦ÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+
+#if
+not small <$str(U91)> 100
+small <$str(U113)> 2
+#act
+mov U113 2
+MailGIVE °ó¶¨Ôª±¦ 1000000
+SendMail 1 ÏµÍ³½±Àø ½ñÈÕ³äÖµÀÛ¼Æ²»µÍÓÚ100,100W°ó¶¨Ôª±¦ÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+
+#if
+not small <$str(U91)> 200
+small <$str(U113)> 3
+#act
+mov U113 3
+MailGIVE °ó¶¨Ôª±¦ 1000000
+SendMail 1 ÏµÍ³½±Àø ½ñÈÕ³äÖµÀÛ¼Æ²»µÍÓÚ200,100W°ó¶¨Ôª±¦ÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+
+
+
 
 #if
 large <$STR(U99)> 99
@@ -9370,3 +9397,376 @@ SENDMOVEMSG 0 253 0 <$STR(N$×ÝÖá×ø±ê)> 1 <ÖïÏÉÌôÕ½µØÍ¼µÄ/FCOLOR=253><¡¾Õæ¡¤Ïô¶¦¡
 MOVR N$×ÝÖá×ø±ê 100 300
 SENDMOVEMSG 0 253 0 <$STR(N$×ÝÖá×ø±ê)> 1 <ÖïÏÉÌôÕ½µØÍ¼µÄ/FCOLOR=253><¡¾Õæ¡¤Ïô¶¦¡¿/FCOLOR=250><ÒÑË¢ÐÂ/FCOLOR=255><¸÷Î»ÓÂÊ¿¸Ï¿ìÇ°Íù»÷É±°É/FCOLOR=255>
 
+[@ÀÛ¼Æ³äÖµ½±Àø·¢·Å]
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 1
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç1 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç1 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç1
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ1Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 2
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç2 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç2 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç2
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾ÔæºìÂí¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ2Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 3
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç3 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç3 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç3
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾ÎÚºÚÂí¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ3Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 4
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç4 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç4 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç4
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾°×Âí¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ4Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 5
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç5 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç5 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç5
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾³àÑ×Âí¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ5Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 6
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç6 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç6 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç6
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾¸ßÍ·´óÂí¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ6Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 7
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç7 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç7 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç7
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾Ó­Ç×Âí¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ7Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 8
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç8 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç8 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç8
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾½ðÉ«Âí¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ8Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 9
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç9 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç9 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç9
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾æëæ÷¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ9Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 10
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç10 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç10 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç10
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾Ó×÷è÷ë¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ10Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 11
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç11 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç11 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç11
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾»Æ½ð»¢¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ11Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 12
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç12 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç12 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç12
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾¶À½ÇÕ½Âí¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ12Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 13
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç13 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç13 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç13
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾³àÍÃ¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ13Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 14
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç14 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç14 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç14
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾ÁÒÑæ¶À½Ç¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ14Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 15
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç15 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç15 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç15
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾Ìì×ÓÖ®¿¥¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ15Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 16
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç16 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç16 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç16
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾°ÙÊÞÖ®Íõ¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ16Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 17
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç17 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç17 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç17
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾ìªÂ¶×Ï¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ17Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 18
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç18 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç18 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç18
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾ÎÚæí¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ18Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 19
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç19 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç19 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç19
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾°×ÐÜ¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ19Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 20
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç20 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç20 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç20
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾É­ÁÖ°×°ß¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ20Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 21
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç21 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç21 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç21
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾ÁÒÑæ¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ21Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 22
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç22 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç22 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç22
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾ÖÁ×ð°×»¢¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ22Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 23
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç23 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç23 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç23
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾È­Ã«òm¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ23Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 24
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç24 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç24 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç24
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾óXóZ¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ24Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 25
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç25 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç25 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç25
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾»Ææô¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ25Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 26
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç26 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç26 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç26
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾Ììæá¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ26Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 27
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç27 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç27 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç27
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾É­ÁÖÀÇ¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ27Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 28
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç28 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç28 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç28
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾Ñ©ÀÇ¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ8Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 29
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç29 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç29 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç29
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾ÕÕÒ¹ÓñÀÇ¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ9Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 30
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç30 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç30 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç30
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾°Ë¿¥¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ30Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
+
+#if
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÌìÊý ? 31
+CHECKVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç31 = 0
+#act
+CALCVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç31 = 1
+SAVEVAR HUMAN ÀÛ¼Æ³äÖµÁìÈ¡±ê¼Ç31
+MailGIVE °ó¶¨Ôª±¦ 1000000
+MailGIVE ÌìÏÂ±Ò 1000
+MailGIVE ÓùÊÞÊ¯¡¾Çàæí¡¿ 1 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø ÀÛ¼Æ³äÖµ31Ìì½±ÀøÒÑ·¢·ÅÍê±Ï,Çë¾¡¿ìÌáÈ¡¸½¼þ!!
+break
