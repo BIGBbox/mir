@@ -83,32 +83,6 @@ INC N$暴率加成 200
 
 
 
-; #if
-; CheckContainsText <$SERVERNAME> 01区
-; #act
-; INC N$暴率加成 20
-
-; #if
-; CheckContainsText <$SERVERNAME> 02区
-; #act
-; INC N$暴率加成 40
-
-; #if
-; CheckContainsText <$SERVERNAME> 03区
-; #act
-; INC N$暴率加成 60
-
-; #if
-; CheckContainsText <$SERVERNAME> 04区
-; #act
-; INC N$暴率加成 80
-
-; #if
-; CheckContainsText <$SERVERNAME> 05区
-; #act
-; INC N$暴率加成 100
-
-
 
 #IF
 CHECK [275] 1
@@ -137,6 +111,7 @@ INC N$暴率加成 5
 
 
 
+
 #IF
 CHECKITEMW 天下の至尊 1
 #ACT
@@ -156,6 +131,18 @@ MOV N$午夜屠狗 <$BOXITEM[0].CUSTOMVALUE.VALUE-1>
 INC N$暴率加成 <$str(N$午夜屠狗)>
 UpDateBoxItem 0
 ReturnBoxItem 0
+
+#IF
+CHECKITEMW 戰神の籠罩
+#ACT
+INC N$暴率加成 300
+
+
+#IF
+CHECKITEMW 天下の至尊
+#ACT
+INC N$暴率加成 400
+
 
 #IF
 CHECKITEMW 至高の荣耀

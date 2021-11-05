@@ -1,30 +1,34 @@
 [@攻城提示]
 #if
+not large <$str(G300)> 3
 #act
-goto @判断开区时间差
+break
 
-#if
-equal <$str(S$开启)> 1
-; CheckContainsText <$SERVERNAME> 合区
+#or
+equal <$str(G300)> 3
+equal <$DAY> 2
+equal <$DAY> 4
+equal <$DAY> 6
 #ACT
+
 AddAttackSabukAll 0
 
 
 [@开启攻城]
 #if
+not large <$str(G300)> 3
 #act
-goto @判断开区时间差
+break
 
-#if
-equal <$str(S$开启)> 1
-; CheckContainsText <$SERVERNAME> 合区
+#or
+equal <$str(G300)> 3
+equal <$DAY> 2
+equal <$DAY> 4
+equal <$DAY> 6
 #ACT
+
 MOV G498 1
-CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
-CLEARNAMELIST ..\QuestDiary\捐献系统\捐献排名.txt
-CLEARNAMELIST ..\QuestDiary\捐献系统\捐献数据.txt
-CLEARNAMELIST ..\QuestDiary\技术QQ198605888\沙城成员领取记录.txt
-ClearHumCustVar 沙城捐献 0
+
 SendCenterMsg 250 0 ┏-----------------------------------┓ 1 30
 SendCenterMsg 250 0 ┠-----------攻城战已开启------------┨ 1 30
 SendCenterMsg 250 0 ┗-----------------------------------┛ 1 30
@@ -36,12 +40,17 @@ SendCenterMsg 250 0 ┗-----------------------------------┛ 1 30
 
 [@攻城结束]
 #if
+not large <$str(G300)> 3
 #act
-goto @判断开区时间差
+break
 
-#if
-equal <$str(S$开启)> 1
-#act
+#or
+equal <$str(G300)> 3
+equal <$DAY> 2
+equal <$DAY> 4
+equal <$DAY> 6
+#ACT
+
 
 CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
 SendCenterMsg 249 0 ┏---------------------------------------┓ 1 30
@@ -52,18 +61,34 @@ SendCenterMsg 249 0 ┗---------------------------------------┛ 1 30
 [@每日重置]
 #if
 #act
+inc G300 1
 GMEXECUTE StartQuest @QM零点重置
 goto @判断开区时间差
 
 #if
-equal <$str(S$开启)> 1
+not large <$str(G300)> 3
+#act
+break
+
+#or
+equal <$str(G300)> 3
+equal <$DAY> 2
+equal <$DAY> 4
+equal <$DAY> 6
 #ACT
+CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
+CLEARNAMELIST ..\QuestDiary\捐献系统\捐献排名.txt
+CLEARNAMELIST ..\QuestDiary\捐献系统\捐献数据.txt
+CLEARNAMELIST ..\QuestDiary\技术QQ198605888\沙城成员领取记录.txt
+ClearHumCustVar 沙城捐献 0
+
 DELNPC 攻城奖池领取
 ; mov G9 0
 CALCVAR GLOBAL 沙捐总值 = 0
 SAVEVAR GLOBAL 沙捐总值
 
 [@判断开区时间差]
+
 #if
 #act
 mov S$开启 0

@@ -6,20 +6,20 @@
 <Layout|x=597|y=3|width=80|height=80|link=@exit>
 <Button|x=839|y=125|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 
-<Text|id=rightTips|x=395|y=40|color=215|tips={鉴定说明：/FCOLOR=251}^{1.普通装备、特殊装备有概率出现1个附加属性/FCOLOR=154}^{2.超级特殊装备、专属装备有概率出现0-2个附加属性/FCOLOR=215}^{3.图纸装备有概率鉴定出1-2个附加属性/FCOLOR=70}^{4.神器装备有概率鉴定出1-3个附加属性/FCOLOR=249}^|tipsx=200|tipsy=180|size=16|text=鉴定说明>
+<Text|id=rightTips|x=395|y=40|color=215|tips={鉴定说明：/FCOLOR=251}^{1.普通装备、特殊装备有概率出现1个附加属性/FCOLOR=154}^{2.超级特殊装备、专属装备有概率出现0-2个附加属性/FCOLOR=215}^{3.图纸装备有概率洗练出1-2个附加属性/FCOLOR=70}^{4.神器装备有概率洗练出1-3个附加属性/FCOLOR=249}^|tipsx=200|tipsy=180|size=16|text=洗练说明>
 <Button|id=click_btn|x=112|y=315|nimg=public/sf1/1/00690.png|pimg=public/sf1/1/00692.png|tips={鉴定一次需要：200天下币/FCOLOR=94}|tipsx=10|tipsy=80|size=16|color=249|link=@洗练一次>
-<ITEMBOX|id=item|x=140.0|y=160|width=55|height=55|tips={请放入您要洗练的装备/FCOLOR=255}|boxindex=1|stdmode=*|tipsx=1|tipsy=65|img=public/0.png>
+<ITEMBOX|id=item|x=140.0|y=160|width=55|height=55|tips={请放入您要鉴定的装备/FCOLOR=255}|boxindex=1|stdmode=*|tipsx=1|tipsy=65|img=public/0.png>
 
 <Text|id=yb|x=130|y=240|color=222|tips=|tipsx=10|tipsy=80|size=16|text=[200天下币]>
 ;<Text|id=特效控件1|x=32|y=165|color=251|tips=|tipsx=10|tipsy=80|size=16|text=鉴定属性鼠标移动查看>
-<Text|id=特效控件2|x=375|y=60|color=9|tips={暴击伤害+5%/FCOLOR=146}^{暴击伤害+10%/FCOLOR=146}^{暴击伤害+15%/FCOLOR=146}^{暴击伤害+20%/FCOLOR=146}^{暴击伤害+25%/FCOLOR=146}^{吸血+1%/FCOLOR=19}^{吸血+2%/FCOLOR=19}^{吸血+3%/FCOLOR=19}^{吸血+4%/FCOLOR=19}^{吸血+5%/FCOLOR=19}^{对怪伤害+2%/FCOLOR=253}^{对怪伤害+4%/FCOLOR=253}^{对怪伤害+6%/FCOLOR=253}^{对怪伤害+8%/FCOLOR=253}^{对怪伤害+10%/FCOLOR=253}^{第一刀斩杀怪物2%HP/FCOLOR=58}^{第一刀斩杀怪物4%HP/FCOLOR=58}^{第一刀斩杀怪物6%HP/FCOLOR=58}^{第一刀斩杀怪物8%HP/FCOLOR=58}^{第一刀斩杀怪物10%HP/FCOLOR=58}^|tipsx=50|tipsy=280|size=15|text=武器鉴定介绍>
-<Text|id=特效控件3|x=375|y=100|color=9|tips={永久吸收+1%/FCOLOR=2}^{永久吸收+2%/FCOLOR=2}^{永久吸收+3%/FCOLOR=2}^{永久吸收+4%/FCOLOR=2}^{永久吸收+5%/FCOLOR=2}^{体力魔力+3%/FCOLOR=6}^{体力魔力+6%/FCOLOR=6}^{体力魔力+9%/FCOLOR=6}^{体力魔力+12%/FCOLOR=6}^{体力魔力+15%/FCOLOR=6}^{伤害反弹+3%/FCOLOR=21}^{伤害反弹+6%/FCOLOR=21}^{伤害反弹+9%/FCOLOR=21}^{伤害反弹+12%/FCOLOR=21}^{伤害反弹+15%/FCOLOR=21}^{杀人爆率+2%/FCOLOR=19}^{杀人爆率+4%/FCOLOR=19}^{杀人爆率+6%/FCOLOR=19}^{杀人爆率+8%/FCOLOR=19}^{杀人爆率+10%/FCOLOR=19}^|tipsx=10|tipsy=220|size=15|text=衣服鉴定介绍>
-<Text|id=特效控件4|x=375|y=140|color=9|tips={爆率+5%/FCOLOR=222}^{爆率+10%/FCOLOR=222}^{爆率+15%/FCOLOR=222}^{爆率+20%/FCOLOR=222}^{爆率+25%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=19}^{对怪伤害+2%/FCOLOR=19}^{对怪伤害+3%/FCOLOR=19}^{对怪伤害+4%/FCOLOR=19}^{对怪伤害+5%/FCOLOR=19}^{道术切割+1%/FCOLOR=31}^{道术切割+2%/FCOLOR=31}^{道术切割+3%/FCOLOR=31}^{道术切割+4%/FCOLOR=31}^{道术切割+5%/FCOLOR=31}^{魔法切割+1%/FCOLOR=67}^{魔法切割+2%/FCOLOR=67}^{魔法切割+3%/FCOLOR=67}^{魔法切割+4%/FCOLOR=67}^{魔法切割+5%/FCOLOR=67}^|tipsx=10|tipsy=220|size=15|text=头盔鉴定介绍>
-<Text|id=特效控件5|x=375|y=180|color=9|tips={爆率+5%/FCOLOR=222}^{爆率+10%/FCOLOR=222}^{爆率+15%/FCOLOR=222}^{爆率+20%/FCOLOR=222}^{爆率+25%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=19}^{对怪伤害+2%/FCOLOR=19}^{对怪伤害+3%/FCOLOR=19}^{对怪伤害+4%/FCOLOR=19}^{对怪伤害+5%/FCOLOR=19}^{道术切割+1%/FCOLOR=31}^{道术切割+2%/FCOLOR=31}^{道术切割+3%/FCOLOR=31}^{道术切割+4%/FCOLOR=31}^{道术切割+5%/FCOLOR=31}^{魔法切割+1%/FCOLOR=67}^{魔法切割+2%/FCOLOR=67}^{魔法切割+3%/FCOLOR=67}^{魔法切割+4%/FCOLOR=67}^{魔法切割+5%/FCOLOR=67}^|tipsx=10|tipsy=220|size=15|text=项链鉴定介绍>
-<Text|id=特效控件6|x=375|y=220|color=9|tips={爆率+5%/FCOLOR=222}^{爆率+10%/FCOLOR=222}^{爆率+15%/FCOLOR=222}^{爆率+20%/FCOLOR=222}^{爆率+25%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=19}^{对怪伤害+2%/FCOLOR=19}^{对怪伤害+3%/FCOLOR=19}^{对怪伤害+4%/FCOLOR=19}^{对怪伤害+5%/FCOLOR=19}^{道术切割+1%/FCOLOR=31}^{道术切割+2%/FCOLOR=31}^{道术切割+3%/FCOLOR=31}^{道术切割+4%/FCOLOR=31}^{道术切割+5%/FCOLOR=31}^{魔法切割+1%/FCOLOR=67}^{魔法切割+2%/FCOLOR=67}^{魔法切割+3%/FCOLOR=67}^{魔法切割+4%/FCOLOR=67}^{魔法切割+5%/FCOLOR=67}^|tipsx=10|tipsy=220|size=15|text=手镯鉴定介绍>
-<Text|id=特效控件7|x=375|y=260|color=9|tips={爆率+5%/FCOLOR=222}^{爆率+10%/FCOLOR=222}^{爆率+15%/FCOLOR=222}^{爆率+20%/FCOLOR=222}^{爆率+25%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=19}^{对怪伤害+2%/FCOLOR=19}^{对怪伤害+3%/FCOLOR=19}^{对怪伤害+4%/FCOLOR=19}^{对怪伤害+5%/FCOLOR=19}^{道术切割+1%/FCOLOR=31}^{道术切割+2%/FCOLOR=31}^{道术切割+3%/FCOLOR=31}^{道术切割+4%/FCOLOR=31}^{道术切割+5%/FCOLOR=31}^{魔法切割+1%/FCOLOR=67}^{魔法切割+2%/FCOLOR=67}^{魔法切割+3%/FCOLOR=67}^{魔法切割+4%/FCOLOR=67}^{魔法切割+5%/FCOLOR=67}^|tipsx=10|tipsy=220|size=15|text=戒指鉴定介绍>
-<Text|id=特效控件8|x=375|y=300|color=9|tips={爆率+5%/FCOLOR=222}^{爆率+10%/FCOLOR=222}^{爆率+15%/FCOLOR=222}^{爆率+20%/FCOLOR=222}^{爆率+25%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=19}^{对怪伤害+2%/FCOLOR=19}^{对怪伤害+3%/FCOLOR=19}^{对怪伤害+4%/FCOLOR=19}^{对怪伤害+5%/FCOLOR=19}^{道术切割+1%/FCOLOR=31}^{道术切割+2%/FCOLOR=31}^{道术切割+3%/FCOLOR=31}^{道术切割+4%/FCOLOR=31}^{道术切割+5%/FCOLOR=31}^{魔法切割+1%/FCOLOR=67}^{魔法切割+2%/FCOLOR=67}^{魔法切割+3%/FCOLOR=67}^{魔法切割+4%/FCOLOR=67}^{魔法切割+5%/FCOLOR=67}^|tipsx=10|tipsy=250|size=15|text=靴子鉴定介绍>
-<Text|id=特效控件9|x=375|y=340|color=9|tips={爆率+5%/FCOLOR=222}^{爆率+10%/FCOLOR=222}^{爆率+15%/FCOLOR=222}^{爆率+20%/FCOLOR=222}^{爆率+25%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=19}^{对怪伤害+2%/FCOLOR=19}^{对怪伤害+3%/FCOLOR=19}^{对怪伤害+4%/FCOLOR=19}^{对怪伤害+5%/FCOLOR=19}^{道术切割+1%/FCOLOR=31}^{道术切割+2%/FCOLOR=31}^{道术切割+3%/FCOLOR=31}^{道术切割+4%/FCOLOR=31}^{道术切割+5%/FCOLOR=31}^{魔法切割+1%/FCOLOR=67}^{魔法切割+2%/FCOLOR=67}^{魔法切割+3%/FCOLOR=67}^{魔法切割+4%/FCOLOR=67}^{魔法切割+5%/FCOLOR=67}^|tipsx=10|tipsy=250|size=15|text=腰带鉴定介绍>
+<Text|id=特效控件2|x=375|y=60|color=9|tips={暴击伤害+5%/FCOLOR=146}^{暴击伤害+10%/FCOLOR=146}^{暴击伤害+15%/FCOLOR=146}^{暴击伤害+20%/FCOLOR=146}^{暴击伤害+25%/FCOLOR=146}^{吸血+1%/FCOLOR=19}^{吸血+2%/FCOLOR=19}^{吸血+3%/FCOLOR=19}^{吸血+4%/FCOLOR=19}^{吸血+5%/FCOLOR=19}^{对怪伤害+2%/FCOLOR=253}^{对怪伤害+4%/FCOLOR=253}^{对怪伤害+6%/FCOLOR=253}^{对怪伤害+8%/FCOLOR=253}^{对怪伤害+10%/FCOLOR=253}^{第一刀斩杀怪物2%HP/FCOLOR=58}^{第一刀斩杀怪物4%HP/FCOLOR=58}^{第一刀斩杀怪物6%HP/FCOLOR=58}^{第一刀斩杀怪物8%HP/FCOLOR=58}^{第一刀斩杀怪物10%HP/FCOLOR=58}^|tipsx=50|tipsy=280|size=15|text=武器洗练介绍>
+<Text|id=特效控件3|x=375|y=100|color=9|tips={永久吸收+1%/FCOLOR=2}^{永久吸收+2%/FCOLOR=2}^{永久吸收+3%/FCOLOR=2}^{永久吸收+4%/FCOLOR=2}^{永久吸收+5%/FCOLOR=2}^{体力魔力+3%/FCOLOR=6}^{体力魔力+6%/FCOLOR=6}^{体力魔力+9%/FCOLOR=6}^{体力魔力+12%/FCOLOR=6}^{体力魔力+15%/FCOLOR=6}^{伤害反弹+3%/FCOLOR=21}^{伤害反弹+6%/FCOLOR=21}^{伤害反弹+9%/FCOLOR=21}^{伤害反弹+12%/FCOLOR=21}^{伤害反弹+15%/FCOLOR=21}^{杀人爆率+2%/FCOLOR=19}^{杀人爆率+4%/FCOLOR=19}^{杀人爆率+6%/FCOLOR=19}^{杀人爆率+8%/FCOLOR=19}^{杀人爆率+10%/FCOLOR=19}^|tipsx=10|tipsy=220|size=15|text=衣服洗练介绍>
+<Text|id=特效控件4|x=375|y=140|color=9|tips={爆率+5%/FCOLOR=222}^{爆率+10%/FCOLOR=222}^{爆率+15%/FCOLOR=222}^{爆率+20%/FCOLOR=222}^{爆率+25%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=19}^{对怪伤害+2%/FCOLOR=19}^{对怪伤害+3%/FCOLOR=19}^{对怪伤害+4%/FCOLOR=19}^{对怪伤害+5%/FCOLOR=19}^{道术切割+1%/FCOLOR=31}^{道术切割+2%/FCOLOR=31}^{道术切割+3%/FCOLOR=31}^{道术切割+4%/FCOLOR=31}^{道术切割+5%/FCOLOR=31}^{魔法切割+1%/FCOLOR=67}^{魔法切割+2%/FCOLOR=67}^{魔法切割+3%/FCOLOR=67}^{魔法切割+4%/FCOLOR=67}^{魔法切割+5%/FCOLOR=67}^|tipsx=10|tipsy=220|size=15|text=头盔洗练介绍>
+<Text|id=特效控件5|x=375|y=180|color=9|tips={爆率+5%/FCOLOR=222}^{爆率+10%/FCOLOR=222}^{爆率+15%/FCOLOR=222}^{爆率+20%/FCOLOR=222}^{爆率+25%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=19}^{对怪伤害+2%/FCOLOR=19}^{对怪伤害+3%/FCOLOR=19}^{对怪伤害+4%/FCOLOR=19}^{对怪伤害+5%/FCOLOR=19}^{道术切割+1%/FCOLOR=31}^{道术切割+2%/FCOLOR=31}^{道术切割+3%/FCOLOR=31}^{道术切割+4%/FCOLOR=31}^{道术切割+5%/FCOLOR=31}^{魔法切割+1%/FCOLOR=67}^{魔法切割+2%/FCOLOR=67}^{魔法切割+3%/FCOLOR=67}^{魔法切割+4%/FCOLOR=67}^{魔法切割+5%/FCOLOR=67}^|tipsx=10|tipsy=220|size=15|text=项链洗练介绍>
+<Text|id=特效控件6|x=375|y=220|color=9|tips={爆率+5%/FCOLOR=222}^{爆率+10%/FCOLOR=222}^{爆率+15%/FCOLOR=222}^{爆率+20%/FCOLOR=222}^{爆率+25%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=19}^{对怪伤害+2%/FCOLOR=19}^{对怪伤害+3%/FCOLOR=19}^{对怪伤害+4%/FCOLOR=19}^{对怪伤害+5%/FCOLOR=19}^{道术切割+1%/FCOLOR=31}^{道术切割+2%/FCOLOR=31}^{道术切割+3%/FCOLOR=31}^{道术切割+4%/FCOLOR=31}^{道术切割+5%/FCOLOR=31}^{魔法切割+1%/FCOLOR=67}^{魔法切割+2%/FCOLOR=67}^{魔法切割+3%/FCOLOR=67}^{魔法切割+4%/FCOLOR=67}^{魔法切割+5%/FCOLOR=67}^|tipsx=10|tipsy=220|size=15|text=手镯洗练介绍>
+<Text|id=特效控件7|x=375|y=260|color=9|tips={爆率+5%/FCOLOR=222}^{爆率+10%/FCOLOR=222}^{爆率+15%/FCOLOR=222}^{爆率+20%/FCOLOR=222}^{爆率+25%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=19}^{对怪伤害+2%/FCOLOR=19}^{对怪伤害+3%/FCOLOR=19}^{对怪伤害+4%/FCOLOR=19}^{对怪伤害+5%/FCOLOR=19}^{道术切割+1%/FCOLOR=31}^{道术切割+2%/FCOLOR=31}^{道术切割+3%/FCOLOR=31}^{道术切割+4%/FCOLOR=31}^{道术切割+5%/FCOLOR=31}^{魔法切割+1%/FCOLOR=67}^{魔法切割+2%/FCOLOR=67}^{魔法切割+3%/FCOLOR=67}^{魔法切割+4%/FCOLOR=67}^{魔法切割+5%/FCOLOR=67}^|tipsx=10|tipsy=220|size=15|text=戒指洗练介绍>
+<Text|id=特效控件8|x=375|y=300|color=9|tips={爆率+5%/FCOLOR=222}^{爆率+10%/FCOLOR=222}^{爆率+15%/FCOLOR=222}^{爆率+20%/FCOLOR=222}^{爆率+25%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=19}^{对怪伤害+2%/FCOLOR=19}^{对怪伤害+3%/FCOLOR=19}^{对怪伤害+4%/FCOLOR=19}^{对怪伤害+5%/FCOLOR=19}^{道术切割+1%/FCOLOR=31}^{道术切割+2%/FCOLOR=31}^{道术切割+3%/FCOLOR=31}^{道术切割+4%/FCOLOR=31}^{道术切割+5%/FCOLOR=31}^{魔法切割+1%/FCOLOR=67}^{魔法切割+2%/FCOLOR=67}^{魔法切割+3%/FCOLOR=67}^{魔法切割+4%/FCOLOR=67}^{魔法切割+5%/FCOLOR=67}^|tipsx=10|tipsy=250|size=15|text=靴子洗练介绍>
+<Text|id=特效控件9|x=375|y=340|color=9|tips={爆率+5%/FCOLOR=222}^{爆率+10%/FCOLOR=222}^{爆率+15%/FCOLOR=222}^{爆率+20%/FCOLOR=222}^{爆率+25%/FCOLOR=222}^{对怪伤害+1%/FCOLOR=19}^{对怪伤害+2%/FCOLOR=19}^{对怪伤害+3%/FCOLOR=19}^{对怪伤害+4%/FCOLOR=19}^{对怪伤害+5%/FCOLOR=19}^{道术切割+1%/FCOLOR=31}^{道术切割+2%/FCOLOR=31}^{道术切割+3%/FCOLOR=31}^{道术切割+4%/FCOLOR=31}^{道术切割+5%/FCOLOR=31}^{魔法切割+1%/FCOLOR=67}^{魔法切割+2%/FCOLOR=67}^{魔法切割+3%/FCOLOR=67}^{魔法切割+4%/FCOLOR=67}^{魔法切割+5%/FCOLOR=67}^|tipsx=10|tipsy=250|size=15|text=腰带洗练介绍>
 
 
 [@ItemIntoBox1]
@@ -52,7 +52,7 @@ break
 not CHECKTEXTLIST ..\QuestDiary\拾取鉴定BUFF\装备位置\可鉴定装备.txt <$BOXITEM[1].NAME>
 #ACT
 UNALLOWITEMINTOBOX
-messagebox 该装备不能鉴定！！！
+messagebox 该装备不能洗练！！！
 break
 
 #if
@@ -60,6 +60,7 @@ CheckMoney 天下币 > 199
 #act
 money 天下币 - 200
 SetUpgradeItem 1
+goto @装备洗练支线任务
 
 #if
 CHECKTEXTLIST ..\QuestDiary\拾取鉴定BUFF\装备位置\腰带三.txt <$BOXITEM[1].NAME>
@@ -89,7 +90,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
 break
@@ -123,7 +124,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
 break
@@ -157,7 +158,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
 break
@@ -191,7 +192,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
 break
@@ -225,7 +226,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
 break
@@ -259,7 +260,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
 break
@@ -293,7 +294,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
 break
@@ -325,7 +326,7 @@ INC N0 1
 DRILLHOLE -1 4 0
 DRILLHOLE -1 4 1
 SOCKETABLEITEM -1 4 <$str(N0)>
-goto @装备洗练支线任务
+
 UpDateBoxItem 1
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -335,7 +336,7 @@ break
 
 #if
 not CheckContainsText <$STR(T108)> 装备洗练
-large U108 22
+; large U108 22
 #act
 mov S$支线任务临时变量 <$STR(T108)>
 mov T108 <$STR(S$支线任务临时变量)>_装备洗练
@@ -350,7 +351,7 @@ SendMail 1 系统奖励 你已完成装备洗练任务,10万经验,10万元宝和灵兽精石*10已发放!!
 
 #if
 not CheckContainsText <$STR(T108)> 装备洗练
-large U108 22
+; large U108 22
 #act
 mov S$支线任务临时变量 <$STR(T108)>
 mov T108 <$STR(S$支线任务临时变量)>_装备洗练
@@ -381,7 +382,7 @@ INC N0 1
 
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
 break
@@ -395,7 +396,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
 break
@@ -427,7 +428,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\武器基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
 break
@@ -441,7 +442,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
 break
@@ -471,7 +472,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\武器基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 2 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
 break
@@ -490,7 +491,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\武器基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 3 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -505,7 +506,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 break
@@ -535,7 +536,7 @@ sendmsg 5 N0:<$str(N0)>
 
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -551,7 +552,7 @@ sendmsg 5 N0:<$str(N0)>
 
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 
@@ -584,7 +585,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\衣服基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 3 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -599,7 +600,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -630,7 +631,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\衣服基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 2 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -650,7 +651,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\衣服基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 3 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -665,7 +666,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -694,7 +695,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -708,7 +709,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -740,7 +741,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 3 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -785,7 +786,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 2 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -805,7 +806,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 3 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -820,7 +821,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -850,7 +851,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -864,7 +865,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 break
@@ -896,7 +897,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 3 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -911,7 +912,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -942,7 +943,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 2 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -962,7 +963,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 3 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -978,7 +979,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1007,7 +1008,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 break
@@ -1020,7 +1021,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1052,7 +1053,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 3 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1068,7 +1069,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 break
@@ -1098,7 +1099,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 2 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1118,7 +1119,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 3 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1133,7 +1134,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1161,7 +1162,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1175,7 +1176,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1207,7 +1208,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 3 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1223,7 +1224,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 break
@@ -1253,7 +1254,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 2 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1273,7 +1274,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 3 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1288,7 +1289,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1316,7 +1317,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1330,7 +1331,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1362,7 +1363,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 3 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1377,7 +1378,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1408,7 +1409,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 2 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1428,7 +1429,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 3 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1443,7 +1444,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1473,7 +1474,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1487,7 +1488,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1519,7 +1520,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 3 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1535,7 +1536,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1566,7 +1567,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 2 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
@@ -1586,7 +1587,7 @@ GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 3 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 
 sendmsg 5 恭喜：洗练成功！！！！
 break
@@ -1600,7 +1601,7 @@ DRILLHOLE -1 4 1
 ;然后镶嵌
 SOCKETABLEITEM -1 4 <$str(N0)>
 UpDateBoxItem 1
-goto @装备洗练支线任务
+
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
 break

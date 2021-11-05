@@ -67,6 +67,22 @@ INC N$魔法切割 20
 
 
 #IF
+CHECKITEMW 戰神の籠罩
+#ACT
+INC N$魔法切割 70
+INC N$道术切割 70
+INC N$怪物额外伤害 70
+
+
+#IF
+CHECKITEMW 天下の至尊
+#ACT
+INC N$魔法切割 100
+INC N$道术切割 100
+INC N$怪物额外伤害 100
+
+
+#IF
 CHECKITEMW 至高の荣耀
 #ACT
 INC N$怪物额外伤害 5
@@ -452,26 +468,6 @@ CHECKTITLE 沙巴克捐献
 INC N$怪物额外伤害 15
 
 
-
-; #IF
-; CHECKTITLE 第一名
-; #ACT
-; INC N$怪物额外伤害 15
-
-; #IF
-; CHECKTITLE 第二名
-; #ACT
-; INC N$怪物额外伤害 10
-
-; #IF
-; CHECKTITLE 第三名
-; #ACT
-; INC N$怪物额外伤害 5
-
-
-
-
-
 ; #If
 ; CHECKTITLE 至尊会员
 ; #act
@@ -618,260 +614,10 @@ not small U7 1
 #act
 INC N$道术切割 <$str(U7)>
 
-; #IF
-; equal U7 1
-; #ACT
-; INC N$道术切割 1
-
-; #IF
-; equal U7 2
-; #ACT
-; INC N$道术切割 3
-
-; #IF
-; equal U7 3
-; #ACT
-; INC N$道术切割 6
-
-; #IF
-; equal U7 4
-; #ACT
-; INC N$道术切割 10
-
-; #IF
-; equal U7 5
-; #ACT
-; INC N$道术切割 15
-
-; #IF
-; equal U7 6
-; #ACT
-; INC N$道术切割 21
-
-; #IF
-; equal U7 7
-; #ACT
-; INC N$道术切割 28
-
-; #IF
-; equal U7 8
-; #ACT
-; INC N$道术切割 36
-
-; #IF
-; equal U7 9
-; #ACT
-; INC N$道术切割 44
-
-; #IF
-; equal U7 10
-; #ACT
-; INC N$道术切割 54
-
 #IF
 not small U6 1
 #ACT
 INC N$魔法切割 <$str(U6)>
-
-; #IF
-; equal U6 2
-; #ACT
-; INC N$魔法切割 3
-
-; #IF
-; equal U6 3
-; #ACT
-; INC N$魔法切割 6
-
-; #IF
-; equal U6 4
-; #ACT
-; INC N$魔法切割 10
-
-; #IF
-; equal U6 5
-; #ACT
-; INC N$魔法切割 15
-
-; #IF
-; equal U6 6
-; #ACT
-; INC N$魔法切割 21
-
-; #IF
-; equal U6 7
-; #ACT
-; INC N$魔法切割 28
-
-; #IF
-; equal U6 8
-; #ACT
-; INC N$魔法切割 36
-
-; #IF
-; equal U6 9
-; #ACT
-; INC N$魔法切割 44
-
-; #IF
-; equal U6 10
-; #ACT
-; INC N$魔法切割 54
-
-; #IF
-; CHECKTITLE 开拓·初出江湖
-; #ACT
-; INC N$怪物额外伤害 2
-
-; #IF
-; CHECKTITLE 先锋·江湖少侠
-; #ACT
-; INC N$怪物额外伤害 4
-
-; #IF
-; CHECKTITLE 无畏·武林俊杰
-; #ACT
-; INC N$怪物额外伤害 6
-
-; #IF
-; CHECKTITLE 驭风·罕有敌手
-; #ACT
-; INC N$怪物额外伤害 8
-
-; #IF
-; CHECKTITLE 破焰·绝世高手
-; #ACT
-; INC N$怪物额外伤害 10
-
-; #IF
-; CHECKTITLE 毁灭·傲视群雄
-; #ACT
-; INC N$怪物额外伤害 12
-
-; #IF
-; CHECKTITLE 审判·独孤求败
-; #ACT
-; INC N$怪物额外伤害 14
-
-; #IF
-; CHECKTITLE 屠龙·凶神恶煞
-; #ACT
-; INC N$怪物额外伤害 16
-
-; #IF
-; CHECKTITLE 修罗·屠戮成性
-; #ACT
-; INC N$怪物额外伤害 18
-
-; #IF
-; CHECKTITLE 神谕·武林魔头
-; #ACT
-; INC N$怪物额外伤害 20
-
-; #IF
-; CHECKTITLE 乾坤·风华绝月
-; #ACT
-; INC N$怪物额外伤害 22
-
-; #IF
-; CHECKTITLE 破天·烽火无极
-; #ACT
-; INC N$怪物额外伤害 24
-
-; #IF
-; CHECKTITLE 天下·问鼎争锋
-; #ACT
-; INC N$怪物额外伤害 26
-
-; #IF
-; CHECKTITLE 证道·鬼面罗刹
-; #ACT
-; INC N$怪物额外伤害 28
-
-; #IF
-; CHECKTITLE 玄冥·逆道违天
-; #ACT
-; INC N$怪物额外伤害 30
-
-; #IF
-; CHECKTITLE 狂舞·百步屠魔
-; #ACT
-; INC N$怪物额外伤害 32
-
-; #IF
-; CHECKTITLE 浮沉·青天苍茫
-; #ACT
-; INC N$怪物额外伤害 34
-
-; #IF
-; CHECKTITLE 无敌·死躯灭魂
-; #ACT
-; INC N$怪物额外伤害 36
-
-; #IF
-; CHECKTITLE 轮回·天地难葬
-; #ACT
-; INC N$怪物额外伤害 38
-
-; #IF
-; CHECKTITLE 归一·终极审判
-; #ACT
-; INC N$怪物额外伤害 40
-
-; #IF
-; CHECKTITLE 踏碎天地·众生朝
-; #ACT
-; INC N$怪物额外伤害 42
-
-; #IF
-; CHECKTITLE 血染诸天·涅阴阳
-; #ACT
-; INC N$怪物额外伤害 44
-
-; #IF
-; CHECKTITLE 一念天道·化三千
-; #ACT
-; INC N$怪物额外伤害 46
-
-; #IF
-; CHECKTITLE 混化阴阳·断生念
-; #ACT
-; INC N$怪物额外伤害 48
-
-; #IF
-; CHECKTITLE 一笑沧海·化桑田
-; #ACT
-; INC N$怪物额外伤害 50
-
-; #IF
-; CHECKTITLE 万剑归宗·阴阳间
-; #ACT
-; INC N$怪物额外伤害 52
-
-; #IF
-; CHECKTITLE 修罗战火·焚尽天
-; #ACT
-; INC N$怪物额外伤害 54
-
-; #IF
-; CHECKTITLE 人非圣贤·斩情绝
-; #ACT
-; INC N$怪物额外伤害 56
-
-; #IF
-; CHECKTITLE 浮华无忌·百化仙
-; #ACT
-; INC N$怪物额外伤害 58
-
-; #IF
-; CHECKTITLE 唯我独尊·屠苍生
-; #ACT
-; INC N$怪物额外伤害 60
-
-; #IF
-; CHECKTITLE 世界之巅·诸神灭
-; #ACT
-; INC N$怪物额外伤害 65
 
 #IF
 CHECKITEMW 西游·定海神针

@@ -208,8 +208,55 @@ goto @获取图鉴
 
 [@ceshi1]
 
+
 #if
 #act
+mov S$开启 0
+; 当前时间
+mov S0 <$DATETIME>
+AnsiReplaceText S0 年 -
+AnsiReplaceText S0 月 -
+AnsiReplaceText S0 日
+GetValidstr <$str(S0)> , S$年月日1 S$剩下串1
+mov S0 <$str(S$年月日1)>-00-00-00
+
+; 合区时间
+; mov S1 <$HFTIME>
+mov S1 2021/11/3 12:10:13
+AnsiReplaceText S1  *
+; AnsiReplaceText S1 / -
+; AnsiReplaceText S1 / -
+; GetValidstr <$str(S1)> , S$年月日2 S$剩下串2
+mov S1 <$str(S1)>-00-00-00
+sendmsg 5 <$str(S1)>..s1
+
+Taketime S0 S1
+sendmsg 5 <$str(S0)>::<$str(S1)>..<$Timeresult>
+#if
+equal <$Timeresult> 0
+#act
+mov S$开启 1
+
+#or
+equal <$DAY> 2
+equal <$DAY> 6
+#act
+mov S$开启 1
+
+#if
+equal <$HFCOUNT> 0
+#act
+mov S$开启 0
+
+
+#if
+#act
+sendmsg 5 开启标记<$str(S$开启)>
+
+
+
+; CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
+
 mov S19 2021/11/3 12:10:14
 ; GetValidstr <$str(S1)>   S2 S$剩下串2
 ; sendmsg 5 ____<$str(S2)>_____<$str(S$剩下串2)>
@@ -217,9 +264,9 @@ mov S19 2021/11/3 12:10:14
 ; GetValidstr <$str(S$剩下串2)> / S$b S$剩下串2
 ; GetValidstr <$str(S$剩下串2)> / S$c S$剩下串2
 
-AnsiReplaceText S19 / -
-AnsiReplaceText S19 / -
-sendmsg 5 <$str(S19)>---<$HFTIME>---<$DAY>---<$HFCOUNT>---<$DATETIME>
+; AnsiReplaceText S19 / -
+; AnsiReplaceText S19 / -
+; sendmsg 5 <$str(S19)>---<$HFTIME>---<$DAY>---<$HFCOUNT>---<$DATETIME>
 
 ; money 元宝 - 200
 

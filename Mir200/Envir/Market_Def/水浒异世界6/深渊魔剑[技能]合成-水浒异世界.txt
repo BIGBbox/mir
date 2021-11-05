@@ -8,7 +8,7 @@
 <Layout|x=597|y=3|width=80|height=80|link=@exit>
 <Button|x=789|y=115|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 
-<RText|id=合成描述|x=45|y=48|color=149|size=16|text=<时装全靠打:/FCOLOR=250><集齐这八种武器合成更高级武器（深渊魔剑[技能]）/FCOLOR=149>>
+<RText|id=合成描述|x=45|y=48|color=149|size=16|text=<时装全靠打:/FCOLOR=250><集齐这八种武器合成更高级武器（深渊魔剑【技能】）/FCOLOR=149>>
 <ItemShow|id=gable_item|itemid=11844|itemcount=1|x=217|y=99.0>
 
 <ItemShow|id=need_item1|itemid=11764|itemcount=1|x=10|y=199.0|bgtype=1>
@@ -45,8 +45,8 @@ TAKE 美髯公裁决 1
 TAKE 双鞭 1
 TAKE 大刀 1
 TAKE 鬼脸儿 1
-GIVE 深渊魔剑[技能] 1
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【深渊魔剑[技能]】/FCOLOR=58>
+GIVE 深渊魔剑【技能】 1
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【深渊魔剑【技能】】/FCOLOR=58>
 BREAK
 #elseact
 MESSAGEBOX 打造条件不足??\\1、货币不足
@@ -75,8 +75,8 @@ TAKE 美髯公裁决 1
 TAKE 双鞭 1
 TAKE 大刀 1
 TAKE 鬼脸儿 1
-GIVE 深渊魔剑[技能] 1
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【深渊魔剑[技能]】/FCOLOR=58>
+GIVE 深渊魔剑【技能】 1
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【深渊魔剑【技能】】/FCOLOR=58>
 BREAK
 #elseact
 MESSAGEBOX 打造条件不足??\\1、货币不足

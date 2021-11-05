@@ -7,7 +7,7 @@
 <Layout|x=597|y=3|width=80|height=80|link=@exit>
 <Button|x=789|y=115|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 
-<RText|id=合成描述|x=45|y=48|color=149|size=16|text=<时装全靠打:/FCOLOR=250><集齐这五种时装合成更高级时装（天下杀戮[时装]）/FCOLOR=149>>
+<RText|id=合成描述|x=45|y=48|color=149|size=16|text=<时装全靠打:/FCOLOR=250><集齐这五种时装合成更高级时装（天下杀戮【时装】）/FCOLOR=149>>
 <ItemShow|id=gable_item|itemid=11558|itemcount=1|x=217|y=99.0>
 
 <ItemShow|id=need_item1|itemid=10959|itemcount=1|x=77 |y=199.0|bgtype=1>
@@ -17,7 +17,7 @@
 <ItemShow|id=need_item5|itemid=10991|itemcount=1|x=348|y=199.0|bgtype=1>
 
 <Button|id=click_btn|x=120|y=310|nimg=public/sf1/1/01508.png|pimg=public/sf1/1/01510.png|tips={合成条件：/FCOLOR=249}^{五种时装+8888rmb/FCOLOR=251}^|tipsx=10|tipsy=100|size=16|color=249|link=@晋升1>
-<Button|id=click_btn1|x=250|y=310|nimg=public/sf1/1/01802.png|pimg=public/sf1/1/01804.png|tips={合成条件：/FCOLOR=249}^{天下杀戮[时装]永久回收1888rmb/FCOLOR=251}^|tipsx=10|tipsy=100|size=16|color=249|link=@回收1>
+<Button|id=click_btn1|x=250|y=310|nimg=public/sf1/1/01802.png|pimg=public/sf1/1/01804.png|tips={合成条件：/FCOLOR=249}^{天下杀戮【时装】永久回收1888rmb/FCOLOR=251}^|tipsx=10|tipsy=100|size=16|color=249|link=@回收1>
 
 
 [@晋升1]
@@ -37,11 +37,11 @@ TAKE 制裁【时装】
 TAKE 天使【时装】
 GIVE 天下杀戮【时装】
 MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【天下杀戮[时装]】/FCOLOR=58>
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【天下杀戮【时装】】/FCOLOR=58>
 GOTO @MAIN
 BREAK
 #elseact
-MESSAGEBOX 打造条件不足??\\1、请凑齐开天[时装]，黄金[时装]，嗜血[时装]，制裁[时装]，天使[时装]，这五种时装！
+MESSAGEBOX 打造条件不足??\\1、请凑齐开天【时装】，黄金【时装】，嗜血【时装】，制裁【时装】，天使【时装】，这五种时装！
 BREAK
 
 
@@ -53,7 +53,7 @@ CHECKITEM 天下杀戮【时装】 1
 money RMB点 + 1888
 TAKE 天下杀戮【时装】 1
 MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功回收/FCOLOR=253><【天下杀戮[时装]】/FCOLOR=58>
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功回收/FCOLOR=253><【天下杀戮【时装】】/FCOLOR=58>
 GOTO @MAIN
 BREAK
 #elseact

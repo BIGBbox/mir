@@ -11,7 +11,7 @@ large U6 9
 large U7 9
 #act
 close
-messagebox 您已完成全部初级修炼！请前往更高级修炼！
+messagebox 您已完成全部初级神之天赋修炼！请前往更高级神之天赋修炼！
 break
 
 

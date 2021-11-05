@@ -89,10 +89,10 @@ MOV s$自动成长显示 1
 
 <Img|id=列表2|children={2_1,2_2,2_3,2_4,2_5,2_6,2_1_1,2_1_2,2_1_3,2_1_4,2_1_5,2_1_6}|x=90|y=85.0|height=1|width=1|img=public/1900000665.png>
 
-    <Text|id=2_1|x=0|y=-5|color=103|tips={回收价格：/FCOLOR=251}^{10-5000元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=1-30级剑甲>
-    <Text|id=2_2|x=150|y=-5|color=95|tips={回收价格：/FCOLOR=251}^{1000-10000元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=宝石勋章类>
-    <Text|id=2_3|x=280|y=-5|color=242|tips={回收价格：/FCOLOR=251}^{100-20000元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=坐骑马牌类>
-    <Text|id=2_4|x=0|y=25|color=103|tips={回收价格：/FCOLOR=251}^{5-2500元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=1-30级首饰>
+    <Text|id=2_1|x=0|y=-5|color=103|tips={回收价格：/FCOLOR=251}^{10-550元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=1-30级剑甲>
+    <Text|id=2_2|x=150|y=-5|color=95|tips={回收价格：/FCOLOR=251}^{100-1000元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=宝石勋章类>
+    <Text|id=2_3|x=280|y=-5|color=242|tips={回收价格：/FCOLOR=251}^{100-1000元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=坐骑马牌类>
+    <Text|id=2_4|x=0|y=25|color=103|tips={回收价格：/FCOLOR=251}^{5-275元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=1-30级首饰>
     <Text|id=2_5|x=150|y=25|color=244|tips={回收价格：/FCOLOR=251}^{200-2000元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=奇门生肖类>
     <Text|id=2_6|x=280|y=25|color=254|tips={回收价格：/FCOLOR=251}^{1000-10000元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=人物时装类>
     <CheckBox|id=2_1_1|x=-30|y=-5|nimg=public/sf1/1/00263.png|pimg=public/sf1/1/00266.png|default=<$str(S$回收勾勾显示1)>|checkboxid=3|link=@是否打勾1>
@@ -103,18 +103,18 @@ MOV s$自动成长显示 1
     <CheckBox|id=2_1_6|x=250|y=25|nimg=public/sf1/1/00263.png|pimg=public/sf1/1/00266.png|default=<$str(S$回收勾勾显示6)>|checkboxid=8|link=@是否打勾6>
 
 <Img|id=列表3|children={3_1,3_2,3_3,3_4,3_5,3_6,3_7,3_8,3_9,3_10,3_11,3_12,3_1_1,3_1_2,3_1_3,3_1_4,3_1_5,3_1_6,3_1_7,3_1_8,3_1_9,3_1_10,3_1_11,3_1_12,}|x=90|y=155.0|height=1|width=1|img=public/1900000665.png>
-    <Text|id=3_1|x=0  |y=0|color=93|tips={回收价格：/FCOLOR=251}^{100-500元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=31-35级剑甲>
-    <Text|id=3_2|x=150|y=0|color=227|tips={回收价格：/FCOLOR=251}^{600-1000元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=36-40级剑甲>
-    <Text|id=3_3|x=280|y=0|color=230|tips={回收价格：/FCOLOR=251}^{1500-3500元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=41-45级剑甲>
-    <Text|id=3_4|x=0  |y=35|color=94|tips={回收价格：/FCOLOR=251}^{4000-7000元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=46-50级剑甲>
-    <Text|id=3_5|x=150|y=35|color=229|tips={回收价格：/FCOLOR=251}^{8000-14000元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=51-55级剑甲>
-    <Text|id=3_6|x=280|y=35|color=246|tips={回收价格：/FCOLOR=251}^{16000-30000元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=56-60级剑甲>
-    <Text|id=3_7|x=0  |y=70|color=150|tips={回收价格：/FCOLOR=251}^{50-250元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=31-35级首饰>
-    <Text|id=3_8|x=150|y=70|color=239|tips={回收价格：/FCOLOR=251}^{300-500元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=36-40级首饰>
-    <Text|id=3_9|x=280|y=70|color=19|tips={回收价格：/FCOLOR=251}^{750-1750元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=41-45级首饰>
-    <Text|id=3_10|x=0  |y=105|color=149|tips={回收价格：/FCOLOR=251}^{2000-3500元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=46-50级首饰>
-    <Text|id=3_11|x=150|y=105|color=242|tips={回收价格：/FCOLOR=251}^{4000-7000元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=51-55级首饰>
-    <Text|id=3_12|x=280|y=105|color=22|tips={回收价格：/FCOLOR=251}^{8000-15000元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=56-60级首饰>
+    <Text|id=3_1|x=0  |y=0|color=93|tips={回收价格：/FCOLOR=251}^{600-800元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=31-35级剑甲>
+    <Text|id=3_2|x=150|y=0|color=227|tips={回收价格：/FCOLOR=251}^{800-1100元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=36-40级剑甲>
+    <Text|id=3_3|x=280|y=0|color=230|tips={回收价格：/FCOLOR=251}^{1200-1600元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=41-45级剑甲>
+    <Text|id=3_4|x=0  |y=35|color=94|tips={回收价格：/FCOLOR=251}^{1700-2500元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=46-50级剑甲>
+    <Text|id=3_5|x=150|y=35|color=229|tips={回收价格：/FCOLOR=251}^{3000-5000元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=51-55级剑甲>
+    <Text|id=3_6|x=280|y=35|color=246|tips={回收价格：/FCOLOR=251}^{6000-10000元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=56-60级剑甲>
+    <Text|id=3_7|x=0  |y=70|color=150|tips={回收价格：/FCOLOR=251}^{300-400元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=31-35级首饰>
+    <Text|id=3_8|x=150|y=70|color=239|tips={回收价格：/FCOLOR=251}^{400-550元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=36-40级首饰>
+    <Text|id=3_9|x=280|y=70|color=19|tips={回收价格：/FCOLOR=251}^{600-800元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=41-45级首饰>
+    <Text|id=3_10|x=0  |y=105|color=149|tips={回收价格：/FCOLOR=251}^{850-1250元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=46-50级首饰>
+    <Text|id=3_11|x=150|y=105|color=242|tips={回收价格：/FCOLOR=251}^{1500-2500元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=51-55级首饰>
+    <Text|id=3_12|x=280|y=105|color=22|tips={回收价格：/FCOLOR=251}^{3000-5000元宝/FCOLOR=253}^|tipsx=10|tipsy=80|size=16|text=56-60级首饰>
 
     <CheckBox|id=3_1_1|x=-30|y=0|nimg=public/sf1/1/00263.png|pimg=public/sf1/1/00266.png|default=<$str(S$回收勾勾显示11)>|checkboxid=9|link=@是否打勾11>
     <CheckBox|id=3_1_2|x=120|y=0|nimg=public/sf1/1/00263.png|pimg=public/sf1/1/00266.png|default=<$str(S$回收勾勾显示12)>|checkboxid=10|link=@是否打勾12>

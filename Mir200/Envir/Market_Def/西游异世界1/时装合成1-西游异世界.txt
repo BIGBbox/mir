@@ -7,7 +7,7 @@
 <Layout|x=597|y=3|width=80|height=80|link=@exit>
 <Button|x=789|y=115|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 
-<RText|id=合成描述|x=45|y=48|color=149|size=16|text=<时装全靠打:/FCOLOR=250><集齐这七种时装合成更高级时装（黄金[时装]）/FCOLOR=149>>
+<RText|id=合成描述|x=45|y=48|color=149|size=16|text=<时装全靠打:/FCOLOR=250><集齐这七种时装合成更高级时装（黄金【时装】）/FCOLOR=149>>
 <ItemShow|id=gable_item|itemid=10967|itemcount=1|x=217|y=99.0>
 
 <ItemShow|id=need_item1|itemid=10960|itemcount=1|x=10|y=199.0|bgtype=1>
@@ -18,7 +18,7 @@
 <ItemShow|id=need_item6|itemid=10965|itemcount=1|x=345|y=199.0|bgtype=1>
 <ItemShow|id=need_item7|itemid=10966|itemcount=1|x=412|y=199.0|bgtype=1>
 
-<Button|id=click_btn|x=200|y=310|nimg=public/sf1/1/01508.png|pimg=public/sf1/1/01510.png|tips={合成条件：/FCOLOR=249}^{七种时装+100W元宝/FCOLOR=251}^|tipsx=10|tipsy=100|size=16|color=249|link=@晋升2>
+<Button|id=click_btn|x=200|y=310|nimg=public/sf1/1/01508.png|pimg=public/sf1/1/01510.png|tips={合成条件：/FCOLOR=249}^{七种时装+500W元宝/FCOLOR=251}^|tipsx=10|tipsy=100|size=16|color=249|link=@晋升2>
 
 
 [@晋升2]
@@ -42,11 +42,11 @@ TAKE 黄金残⑥
 TAKE 黄金残⑦
 GIVE 黄金【时装】
 MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【黄金[时装]】/FCOLOR=58>
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【黄金【时装】】/FCOLOR=58>
 GOTO @MAIN
 BREAK
 #elseact
-MESSAGEBOX 打造条件不足??\\1、请凑齐(黄金残①、黄金残②、黄金残③\\黄金残④、黄金残⑤、黄金残⑥、黄金残⑦)这七种时装！\\1、请凑齐100W元宝！
+MESSAGEBOX 打造条件不足??\\1、请凑齐(黄金残①、黄金残②、黄金残③\\黄金残④、黄金残⑤、黄金残⑥、黄金残⑦)这七种时装！\\1、请凑齐500W元宝！
 BREAK
 
 

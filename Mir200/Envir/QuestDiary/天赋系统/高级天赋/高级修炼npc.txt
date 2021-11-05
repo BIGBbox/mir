@@ -9,7 +9,7 @@ small U11 9
 small U12 9
 small U13 9
 #act
-messagebox 先完成中级修炼！
+messagebox 先完成中级神之天赋修炼！
 break
 
 #if
@@ -21,7 +21,7 @@ large U24 8
 large U25 8
 #act
 close
-messagebox 您已完成全部修炼！等待后续更新！
+messagebox 您已完成全部神之天赋修炼！等待后续更新！
 break
 
 

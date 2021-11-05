@@ -9218,6 +9218,8 @@ equal U20 0
 #ACT
 #CALL [\游戏登陆\登陆脚本.txt] @每日首次登陆触发
 
+#IF
+#ACT
 mov U20 0
 mov N$技能点击cd 0
 sendmsg 5 每日首次登录打印!!!

@@ -7,7 +7,7 @@
 <Img|img=public/sf1/1/01511.png|x=330|y=120|children={close_btn,click_btn,click_btn1,合成描述,rightTips,gable_item,need_item1,need_item2,need_item3}|bg=1|reset=1|move=1>
 <Layout|x=597|y=3|width=80|height=80|link=@exit>
 <Button|x=789|y=115|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
-<RText|id=合成描述|x=45|y=48|color=149|size=16|text=<集齐这三种武器合成更高级的武器/FCOLOR=94><（至尊魔剑[封印]）/FCOLOR=222>>
+<RText|id=合成描述|x=45|y=48|color=149|size=16|text=<集齐这三种武器合成更高级的武器/FCOLOR=94><（至尊魔剑【封印】）/FCOLOR=222>>
 
 <ItemShow|id=gable_item|itemid=11841|itemcount=1|x=217|y=99.0>
 <ItemShow|id=need_item1|itemid=11838|itemcount=1|x=150|y=199.0|bgtype=1>
@@ -29,8 +29,8 @@ GAMEGOLD - 30000000
 TAKE 七星北斗剑 1
 TAKE 魔剑 1
 TAKE 镇妖剑 1
-GIVE 至尊魔剑[封印] 1
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【至尊魔剑[封印]】/FCOLOR=58>
+GIVE 至尊魔剑【封印】 1
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【至尊魔剑【封印】】/FCOLOR=58>
 BREAK
 #elseact
 MESSAGEBOX 打造条件不足??\\1、货币不足
@@ -49,8 +49,8 @@ GAMEDIAMOND - 5000
 TAKE 七星北斗剑 1
 TAKE 魔剑 1
 TAKE 镇妖剑 1
-GIVE 至尊魔剑[封印] 1
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【至尊魔剑[封印]】/FCOLOR=58>
+GIVE 至尊魔剑【封印】 1
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【至尊魔剑【封印】】/FCOLOR=58>
 BREAK
 #elseact
 MESSAGEBOX 打造条件不足??\\1、货币不足
