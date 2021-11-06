@@ -30,16 +30,25 @@ BREAK
 MESSAGEBOX Äã²»ÊÇÉ³³Ç³ÉÔ±ÎŞ·¨ÁìÈ¡½±Àø........
 
 [@ÁìÈ¡¹¥É³½±ÀøB]
+
+#if
+large G16 19
+#ACT
+messagebox É³³Ç½±ÀøÖ»ÓĞ20·İ£¬ÒÑÁìÈ¡Íê±Ï£¡
+break
+
 #if
 #act
 GetListString ..\QuestDiary\¼¼ÊõQQ198605888\É³³Ç³ÉÔ±ÁìÈ¡¼ÇÂ¼.txt <$USERNAME> ÁìÈ¡ N$ÁìÈ¡É³³Ç½±ÀøÊıÁ¿
 
 #IF
-;large <$str(N$ÁìÈ¡É³³Ç½±ÀøÊıÁ¿)> 0
+large <$str(N$ÁìÈ¡É³³Ç½±ÀøÊıÁ¿)> 0
 #act
-;messagebox ÄãÒÑ¾­ÁìÈ¡¹ı½±ÀøÁË
-;BREAK
-;#elseact
+messagebox ÄãÒÑ¾­ÁìÈ¡¹ı½±ÀøÁË
+BREAK
+
+#if
+#act
 goto @ÁìÈ¡¹¥É³½±ÀøC
 
 
@@ -50,8 +59,8 @@ small G16 20
 ;mov S$ÁìÈ¡ÁÙÊ±ÈÕÆÚ <$YEAR>-<$MONTH>-<$DAY>
 inc G16 1
 MOV N$×Ü½ğ¶î <$GLOBAL(É³¾è×ÜÖµ)>
-mul N$×Ü½±³Ø½ğ¶î 60
-div N$×Ü½±³Ø½ğ¶î 100
+mul N$×Ü½ğ¶î 60
+div N$×Ü½ğ¶î 100
 div N$×Ü½ğ¶î 20
 money RMBµã + <$STR(N$×Ü½ğ¶î)>
 sendmsg 5 É³³Ç½±ÀøÁìÈ¡³É¹¦!
@@ -60,7 +69,14 @@ AddTextListEx ..\QuestDiary\¼¼ÊõQQ198605888\É³³Ç³ÉÔ±ÁìÈ¡¼ÇÂ¼.txt <$STR(S$Íæ¼ÒÃû×
 large G16 19
 #ACT
 messagebox É³³Ç½±ÀøÁìÈ¡Íê±Ï£¡
-DELNPC ¹¥³Ç½±³ØÁìÈ¡
+
+CLEARNAMELIST ..\QuestDiary\¾èÏ×ÏµÍ³\¾èÏ×Ãûµ¥.txt
+CLEARNAMELIST ..\QuestDiary\¾èÏ×ÏµÍ³\¾èÏ×ÅÅÃû.txt
+CLEARNAMELIST ..\QuestDiary\¾èÏ×ÏµÍ³\¾èÏ×Êı¾İ.txt
+CLEARNAMELIST ..\QuestDiary\¼¼ÊõQQ198605888\É³³Ç³ÉÔ±ÁìÈ¡¼ÇÂ¼.txt
+ClearHumCustVar É³³Ç¾èÏ× 0
+
 CALCVAR GLOBAL É³¾è×ÜÖµ = 0
 SAVEVAR GLOBAL É³¾è×ÜÖµ
+
 ; mov G9 0
