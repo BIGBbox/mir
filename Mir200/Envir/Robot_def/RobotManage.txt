@@ -23,8 +23,8 @@ break
 
 #or
 equal <$str(G300)> 3
-equal <$DAY> 2
-equal <$DAY> 6
+DAYOFWEEK TUE
+DAYOFWEEK SAT
 #ACT
 
 MOV G498 1
@@ -46,8 +46,8 @@ break
 
 #or
 equal <$str(G300)> 3
-equal <$DAY> 2
-equal <$DAY> 6
+DAYOFWEEK TUE
+DAYOFWEEK SAT
 #ACT
 
 
@@ -72,8 +72,8 @@ break
 
 #or
 equal <$str(G300)> 3
-equal <$DAY> 2
-equal <$DAY> 6
+DAYOFWEEK TUE
+DAYOFWEEK SAT
 #ACT
 DELNPC 攻城奖池领取
 CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
