@@ -22,12 +22,12 @@ div N$总奖池金额 100
 
 [@领取攻沙奖励]
 #IF
-ISCASTLEGUILD
+; ISCASTLEGUILD
 #ACT
 goto @领取攻沙奖励B
-BREAK
-#ELSEACT
-MESSAGEBOX 你不是沙城成员无法领取奖励........
+; BREAK
+; #ELSEACT
+; MESSAGEBOX 你不是沙城成员无法领取奖励........
 
 [@领取攻沙奖励B]
 
@@ -64,7 +64,7 @@ div N$总金额 100
 div N$总金额 20
 money RMB点 + <$STR(N$总金额)>
 sendmsg 5 沙城奖励领取成功!
-AddTextListEx ..\QuestDiary\技术QQ198605888\沙城成员领取记录.txt <$STR(S$玩家名字数据)>:<$STR(N$总金额)>
+AddTextListEx ..\QuestDiary\技术QQ198605888\沙城成员领取记录.txt <$USERNAME>:<$STR(N$总金额)>
 #if
 large G16 19
 #ACT
