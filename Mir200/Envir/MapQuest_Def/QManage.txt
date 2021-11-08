@@ -31,16 +31,6 @@ ISNEWHUMAN
 SetOnTimer 234 3
 
 
-;#if
-;CHECKNAMELIST ..\..\..\..\微信人物白名单.txt
-;#act
-;CLEARNAMELIST ..\..\..\..\微信人物白名单.txt
-;Gmexecute ReleaseShutup Self
-;ChangeModeEx 10 3
-;MAP 3
-;SENDMSG 0 您已经解封，请不要再扰乱游戏！禁止给他人扫微信二维码，否则自己的号也会被封！
-;SENDMSG 0 您已经解封，请不要再扰乱游戏！禁止给他人扫微信二维码，否则自己的号也会被封！
-;SENDMSG 0 您已经解封，请不要再扰乱游戏！禁止给他人扫微信二维码，否则自己的号也会被封！
 
 #if
 CHECKTITLE 沙城捐献
@@ -295,7 +285,7 @@ CHECK [700] 1
 
 #or
 IsOnMap N3
-IsOnMap new0150
+IsOnMap 0150
 IsOnMap 天下主城
 #ACT
 KILLSLAVE
