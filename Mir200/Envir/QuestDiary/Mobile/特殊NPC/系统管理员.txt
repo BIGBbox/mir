@@ -210,9 +210,9 @@ goto @获取图鉴
 
 #if
 #act
+; CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
 
-sendmsg 5 U20:<$str(U20)>-U17:<$STR(U17)>-合区时间:<$HFTIME>----<$str(G300)>————管理员---<$USERACCOUNT>
-
+sendmsg 5 U20:<$str(U20)>-U17:<$STR(U17)>-合区时间:<$HFTIME>----<$str(G300)>————管理员---<$DAY>
 ; CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
 
 mov S19 2021/11/3 12:10:14
