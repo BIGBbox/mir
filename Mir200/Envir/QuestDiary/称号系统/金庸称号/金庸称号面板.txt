@@ -124,7 +124,7 @@ GOTO @金庸称号面板
 equal <$STR(S$所需元宝)> 0
 equal <$STR(S$神器碎片数量)> 0
 #act
-sendmsg 5 99999
+;sendmsg 5 99999
 mov S$当前npc称号是否满级 1
 inc S$称号佩戴按钮 <CheckBox|id=佩戴花翎|children={佩戴花翎描述}|x=-45.0|y=155.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=0|checkboxid=1|link=@佩戴花翎>
 inc S$称号佩戴按钮 <Text|id=佩戴花翎描述|x=30|y=5|color=222|size=15|text=点击佩戴>
