@@ -8,7 +8,7 @@ random 5
 #ACT
 ;HUMANHP + 50
 M.MAKEPOSION 0 3
-; SENDMSG 7 赞助[绿毒]Buff触发！！！
+;SENDMSG 7 赞助[绿毒]Buff触发！！！
 
 
 #if
@@ -16,7 +16,7 @@ NOT CHECKCURRTARGETRACE = 0
 CHECKITEMW 建立大清
 #ACT
 HUMANHP + 50
-SENDMSG 7 你的[建立大清]Buff触发每刀回血50点！！！
+;SENDMSG 7 你的[建立大清]Buff触发每刀回血50点！！！
 
 
 
@@ -27,7 +27,7 @@ CHECKITEMW 狮子之翼
 EQUAL <$CURRRUSEMAGICID> 26
 #act
 M.ADDHPPER - 2
-sendmsg 7 你的【狮子之翼】buff触发,烈火秒怪2%血
+;sendmsg 7 你的【狮子之翼】buff触发,烈火秒怪2%血
 
 
 #if
@@ -37,7 +37,7 @@ CHECKITEMW 处女之锤
 EQUAL <$CURRRUSEMAGICID> 66
 #act
 M.ADDHPPER - 2
-sendmsg 7 你的【处女之锤】buff触发,开天秒怪2%血
+;sendmsg 7 你的【处女之锤】buff触发,开天秒怪2%血
 
 
 

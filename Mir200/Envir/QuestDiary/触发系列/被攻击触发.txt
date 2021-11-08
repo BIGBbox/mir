@@ -10,7 +10,7 @@ CHECKITEMW 牛魔披风
 #act
 addhpper + 1
 addmpper + 1
-sendmsg 7 你的【牛魔披风】BUFF触发恢复1%HPMP！
+;sendmsg 7 你的【牛魔披风】BUFF触发恢复1%HPMP！
 
 
 #if
@@ -56,7 +56,7 @@ CHECKCURRTARGETRACE = 0
 CHECKITEMW 绝对防御 1
 #ACT
 ChangeHumAbility 2 = <$MAXAC> 10
-SENDMSG 6 你的[绝对防御]触发,防御增加100% 持续10秒
+;SENDMSG 6 你的【绝对防御】触发,防御增加100% 持续10秒
 
 
 #if
@@ -68,7 +68,7 @@ MOV N$zjl攻击 <$MAXDC>
 MUL N$zjl攻击 20
 DIV N$zjl攻击 100
 ChangeHumAbility 6 = <$str(N$zjl攻击)> 10
-SENDMSG 6 你的[绝对防御]触发,攻击增加20% 持续10秒
+;SENDMSG 6 你的【绝对防御】触发,攻击增加20% 持续10秒
 
 
 

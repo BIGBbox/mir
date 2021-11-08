@@ -28,8 +28,8 @@ CHECKITEMW 斩龙剑
 #ACT
 <$CURRRTARGETNAME>.mov N$十步一杀时间 2
 <$CURRRTARGETNAME>.Gmexecute TestStatus 5 1
-<$CURRRTARGETNAME>.sendmsg 7 对方的【斩龙剑】石化你1秒！
-sendmsg 7 你的【斩龙剑】buff触发。被你石化1秒！
+;<$CURRRTARGETNAME>.sendmsg 7 对方的【斩龙剑】石化你1秒！
+;sendmsg 7 你的【斩龙剑】buff触发。被你石化1秒！
 
 
 #if
@@ -39,8 +39,8 @@ CHECKITEMW 诛仙剑
 #ACT
 <$CURRRTARGETNAME>.mov N$十步一杀时间 2
 <$CURRRTARGETNAME>.Gmexecute TestStatus 5 1
-<$CURRRTARGETNAME>.sendmsg 7 对方的【诛仙剑】石化你1秒！
-sendmsg 7 你的【诛仙剑】buff触发。被你石化1秒！
+;<$CURRRTARGETNAME>.sendmsg 7 对方的【诛仙剑】石化你1秒！
+;sendmsg 7 你的【诛仙剑】buff触发。被你石化1秒！
 
 
 #if
@@ -50,40 +50,40 @@ CHECKITEMW 末日毁灭者
 #ACT
 <$CURRRTARGETNAME>.mov N$十步一杀时间 2
 <$CURRRTARGETNAME>.Gmexecute TestStatus 5 1
-<$CURRRTARGETNAME>.sendmsg 7 对方的【末日毁灭者】石化你1秒！
-sendmsg 7 你的【末日毁灭者】buff触发。被你石化1秒！
+;<$CURRRTARGETNAME>.sendmsg 7 对方的【末日毁灭者】石化你1秒！
+;sendmsg 7 你的【末日毁灭者】buff触发。被你石化1秒！
 
 
 
 #if
 CHECKCURRTARGETRACE = 0
 random 133
-CHECKITEMW 至尊魔剑[封印]
+CHECKITEMW 至尊魔剑【封印】
 #ACT
 <$CURRRTARGETNAME>.mov N$十步一杀时间 2
 <$CURRRTARGETNAME>.Gmexecute TestStatus 5 1
-<$CURRRTARGETNAME>.sendmsg 7 对方的【至尊魔剑[封印]】石化你1秒！
-sendmsg 7 你的【至尊魔剑[封印]】buff触发。被你石化1秒！
+;<$CURRRTARGETNAME>.sendmsg 7 对方的【至尊魔剑【封印】】石化你1秒！
+;sendmsg 7 你的【至尊魔剑【封印】】buff触发。被你石化1秒！
 
 #if
 CHECKCURRTARGETRACE = 0
 random 122
-CHECKITEMW 深渊魔剑[技能]
+CHECKITEMW 深渊魔剑【技能】
 #ACT
 <$CURRRTARGETNAME>.mov N$十步一杀时间 3
 <$CURRRTARGETNAME>.Gmexecute TestStatus 5 1
-<$CURRRTARGETNAME>.sendmsg 7 对方的【深渊魔剑[技能]】石化你2秒！
-sendmsg 7 你的【深渊魔剑[技能]】buff触发。被你石化2秒！
+;<$CURRRTARGETNAME>.sendmsg 7 对方的【深渊魔剑【技能】】石化你2秒！
+;sendmsg 7 你的【深渊魔剑【技能】】buff触发。被你石化2秒！
 
 #if
 CHECKCURRTARGETRACE = 0
 random 111
-CHECKITEMW 轩辕剑[上古神器]
+CHECKITEMW 轩辕剑【上古神器】
 #ACT
 <$CURRRTARGETNAME>.mov N$十步一杀时间 4
 <$CURRRTARGETNAME>.Gmexecute TestStatus 5 1
-<$CURRRTARGETNAME>.sendmsg 7 对方的【轩辕剑[上古神器]】石化你3秒！
-sendmsg 7 你的【轩辕剑[上古神器]】buff触发。被你石化3秒！
+;<$CURRRTARGETNAME>.sendmsg 7 对方的【轩辕剑【上古神器】】石化你3秒！
+;sendmsg 7 你的【轩辕剑【上古神器】】buff触发。被你石化3秒！
 
 
 
@@ -94,8 +94,8 @@ random 111
 #ACT
 ;<$CURRRTARGETNAME>.SCREENEFFECT 400 150 0 38 1 2 1500 0 0
 ;<$CURRRTARGETNAME>.SCREENEFFECT 400 150 0 38 1 2 1500 0 0
-<$CURRRTARGETNAME>.sendmsg 7 对方的【庐山升龙霸】BUFF触发，你被致盲2秒.
-sendmsg 6 你的【庐山升龙霸】BUFF触发，被你致盲2秒.
+;<$CURRRTARGETNAME>.sendmsg 7 对方的【庐山升龙霸】BUFF触发，你被致盲2秒.
+;sendmsg 6 你的【庐山升龙霸】BUFF触发，被你致盲2秒.
 
 #IF
 CHECKCURRTARGETRACE = 0
@@ -104,8 +104,8 @@ random 111
 #ACT
 ;<$CURRRTARGETNAME>.SCREENEFFECT 400 150 0 38 1 2 1500 0 0
 ;<$CURRRTARGETNAME>.SCREENEFFECT 400 150 0 38 1 2 1500 0 0
-<$CURRRTARGETNAME>.sendmsg 7 对方的【魔西斯面纱】BUFF触发，你被致盲2秒.
-sendmsg 6 你的【魔西斯面纱】BUFF触发，被你致盲2秒.
+;<$CURRRTARGETNAME>.sendmsg 7 对方的【魔西斯面纱】BUFF触发，你被致盲2秒.
+;sendmsg 6 你的【魔西斯面纱】BUFF触发，被你致盲2秒.
 
 #IF
 CHECKCURRTARGETRACE = 0
@@ -114,8 +114,8 @@ random 111
 #ACT
 ;<$CURRRTARGETNAME>.SCREENEFFECT 400 150 0 38 1 2 1500 0 0
 ;<$CURRRTARGETNAME>.SCREENEFFECT 400 150 0 38 1 2 1500 0 0
-<$CURRRTARGETNAME>.sendmsg 7 对方的【夜翼面纱】BUFF触发，你被致盲2秒.
-sendmsg 6 你的【夜翼面纱】BUFF触发，被你致盲2秒.
+;<$CURRRTARGETNAME>.sendmsg 7 对方的【夜翼面纱】BUFF触发，你被致盲2秒.
+;sendmsg 6 你的【夜翼面纱】BUFF触发，被你致盲2秒.
 
 #IF
 CHECKCURRTARGETRACE = 0
@@ -124,8 +124,8 @@ random 111
 #ACT
 ;<$CURRRTARGETNAME>.SCREENEFFECT 400 150 0 38 1 2 1500 0 0
 ;<$CURRRTARGETNAME>.SCREENEFFECT 400 150 0 38 1 2 1500 0 0
-<$CURRRTARGETNAME>.sendmsg 7 对方的【玉麒麟面巾】BUFF触发，你被致盲2秒.
-sendmsg 6 你的【玉麒麟面巾】BUFF触发，被你致盲2秒.
+;<$CURRRTARGETNAME>.sendmsg 7 对方的【玉麒麟面巾】BUFF触发，你被致盲2秒.
+;sendmsg 6 你的【玉麒麟面巾】BUFF触发，被你致盲2秒.
 
 #IF
 CHECKCURRTARGETRACE = 0
@@ -134,8 +134,8 @@ random 111
 #ACT
 ;<$CURRRTARGETNAME>.SCREENEFFECT 400 150 0 38 1 2 1500 0 0
 ;<$CURRRTARGETNAME>.SCREENEFFECT 400 150 0 38 1 2 1500 0 0
-<$CURRRTARGETNAME>.sendmsg 7 对方的【日行一骗】BUFF触发，你被致盲2秒.
-sendmsg 6 你的【日行一骗】BUFF触发，被你致盲2秒.
+;<$CURRRTARGETNAME>.sendmsg 7 对方的【日行一骗】BUFF触发，你被致盲2秒.
+;sendmsg 6 你的【日行一骗】BUFF触发，被你致盲2秒.
 
 #IF
 CHECKCURRTARGETRACE = 0
@@ -144,38 +144,38 @@ random 111
 #ACT
 ;<$CURRRTARGETNAME>.SCREENEFFECT 400 150 0 38 1 2 1500 0 0
 ;<$CURRRTARGETNAME>.SCREENEFFECT 400 150 0 38 1 2 1500 0 0
-<$CURRRTARGETNAME>.sendmsg 7 对方的【月光祝福】BUFF触发，你被致盲2秒.
-sendmsg 6 你的【月光祝福】BUFF触发，被你致盲2秒.
+;<$CURRRTARGETNAME>.sendmsg 7 对方的【月光祝福】BUFF触发，你被致盲2秒.
+;sendmsg 6 你的【月光祝福】BUFF触发，被你致盲2秒.
 
 #IF
 CHECKCURRTARGETRACE = 0
-CHECKITEMW 观世音面纱[西游神器] 1
+CHECKITEMW 观世音面纱【西游神器】 1
 random 111
 #ACT
 ;<$CURRRTARGETNAME>.SCREENEFFECT 400 150 0 38 1 2 1500 0 0
 ;<$CURRRTARGETNAME>.SCREENEFFECT 400 150 0 38 1 2 1500 0 0
-<$CURRRTARGETNAME>.sendmsg 7 对方的【观世音面纱[西游神器]】BUFF触发，你被致盲2秒.
-sendmsg 6 你的【观世音面纱[西游神器]】BUFF触发，被你致盲2秒.
+;<$CURRRTARGETNAME>.sendmsg 7 对方的【观世音面纱【西游神器】】BUFF触发，你被致盲2秒.
+;sendmsg 6 你的【观世音面纱【西游神器】】BUFF触发，被你致盲2秒.
 
 #IF
 CHECKCURRTARGETRACE = 0
-CHECKITEMW 摄魂[诛仙神器] 1
+CHECKITEMW 摄魂【诛仙神器】 1
 random 111
 #ACT
 ;<$CURRRTARGETNAME>.SCREENEFFECT 400 150 0 38 1 2 1500 0 0
 ;<$CURRRTARGETNAME>.SCREENEFFECT 400 150 0 38 1 2 1500 0 0
-<$CURRRTARGETNAME>.sendmsg 7 对方的【摄魂[诛仙神器]】BUFF触发，你被致盲2秒.
-sendmsg 6 你的【摄魂[诛仙神器]】BUFF触发，被你致盲2秒.
+;<$CURRRTARGETNAME>.sendmsg 7 对方的【摄魂【诛仙神器】】BUFF触发，你被致盲2秒.
+;sendmsg 6 你的【摄魂【诛仙神器】】BUFF触发，被你致盲2秒.
 
 #IF
 CHECKCURRTARGETRACE = 0
-CHECKITEMW 盘古幡[上古神器] 1
+CHECKITEMW 盘古幡【上古神器】 1
 random 111
 #ACT
 ;<$CURRRTARGETNAME>.SCREENEFFECT 400 150 0 38 1 2 1500 0 0
 ;<$CURRRTARGETNAME>.SCREENEFFECT 400 150 0 38 1 2 1500 0 0
-<$CURRRTARGETNAME>.sendmsg 7 对方的【盘古幡[上古神器]】BUFF触发，你被致盲2秒.
-sendmsg 6 你的【盘古幡[上古神器]】BUFF触发，被你致盲2秒.
+;<$CURRRTARGETNAME>.sendmsg 7 对方的【盘古幡【上古神器】】BUFF触发，你被致盲2秒.
+;sendmsg 6 你的【盘古幡【上古神器】】BUFF触发，被你致盲2秒.
 
 
 
@@ -239,57 +239,57 @@ SendCenterMsg 180 251 《<$username>的【太阳神的葬礼】BUFF触发，把<$CURRRTARGETNA
 
 #if
 CHECKCURRTARGETRACE = 0
-checkitemw 金刚伏魔盾[西游神器] 1
+checkitemw 金刚伏魔盾【西游神器】 1
 Random 1111
 #act
 <$CURRRTARGETNAME>.Gmexecute Backstep 0 3
-<$CURRRTARGETNAME>.sendmsg 7 对方的【金刚伏魔盾[西游神器]】BUFF触发，你被打飞了.
-sendmsg 6 你的【金刚伏魔盾[西游神器]】BUFF触发，直接把目标打飞了.
-SendCenterMsg 180 251 《<$username>的【金刚伏魔盾[西游神器]】BUFF触发，把<$CURRRTARGETNAME>击飞！》 1 3
+<$CURRRTARGETNAME>.sendmsg 7 对方的【金刚伏魔盾【西游神器】】BUFF触发，你被打飞了.
+sendmsg 6 你的【金刚伏魔盾【西游神器】】BUFF触发，直接把目标打飞了.
+SendCenterMsg 180 251 《<$username>的【金刚伏魔盾【西游神器】】BUFF触发，把<$CURRRTARGETNAME>击飞！》 1 3
 
 
 #if
 CHECKCURRTARGETRACE = 0
-checkitemw 大悲金轮[诛仙神器] 1
+checkitemw 大悲金轮【诛仙神器】 1
 Random 1111
 #act
 <$CURRRTARGETNAME>.Gmexecute Backstep 0 3
-<$CURRRTARGETNAME>.sendmsg 7 对方的【大悲金轮[诛仙神器]】BUFF触发，你被打飞了.
-sendmsg 6 你的【大悲金轮[诛仙神器]】BUFF触发，直接把目标打飞了.
-SendCenterMsg 180 251 《<$username>的【大悲金轮[诛仙神器]】BUFF触发，把<$CURRRTARGETNAME>击飞！》 1 3
+<$CURRRTARGETNAME>.sendmsg 7 对方的【大悲金轮【诛仙神器】】BUFF触发，你被打飞了.
+sendmsg 6 你的【大悲金轮【诛仙神器】】BUFF触发，直接把目标打飞了.
+SendCenterMsg 180 251 《<$username>的【大悲金轮【诛仙神器】】BUFF触发，把<$CURRRTARGETNAME>击飞！》 1 3
 
 
 #if
 CHECKCURRTARGETRACE = 0
-checkitemw 东皇钟[上古神器] 1
+checkitemw 东皇钟【上古神器】 1
 Random 1111
 #act
 <$CURRRTARGETNAME>.Gmexecute Backstep 0 3
-<$CURRRTARGETNAME>.sendmsg 7 对方的【东皇钟[上古神器]】BUFF触发，你被打飞了.
-sendmsg 6 你的【东皇钟[上古神器]】BUFF触发，直接把目标打飞了.
-SendCenterMsg 180 251 《<$username>的【东皇钟[上古神器]】BUFF触发，把<$CURRRTARGETNAME>击飞！》 1 3
+<$CURRRTARGETNAME>.sendmsg 7 对方的【东皇钟【上古神器】】BUFF触发，你被打飞了.
+sendmsg 6 你的【东皇钟【上古神器】】BUFF触发，直接把目标打飞了.
+SendCenterMsg 180 251 《<$username>的【东皇钟【上古神器】】BUFF触发，把<$CURRRTARGETNAME>击飞！》 1 3
 
 #IF
 CHECKCURRTARGETRACE = 0
 RANDOM 111
-checkitemw 羽扇纶巾[三国神器] 1
+checkitemw 羽扇纶巾【三国神器】 1
 #ACT
 <$CURRRTARGETNAME>.MOV N$灼烧持续时间 10
 <$CURRRTARGETNAME>.SETBODYCOLOR 18 10
-<$CURRRTARGETNAME>.sendmsg 7 对方的【羽扇纶巾[三国神器]】BUFF触发，你进入灼烧状态,每秒损失3%的血量.持续10秒.
-sendmsg 6 你的【羽扇纶巾[三国神器]】BUFF触发，你把对方灼烧状态,每秒损失3%的血量.持续10秒.
-SendCenterMsg 180 251 《<$username>的【羽扇纶巾[三国神器]】BUFF触发，让<$CURRRTARGETNAME>入灼烧状态,每秒损失3%的血量.持续10秒！》 1 3
+<$CURRRTARGETNAME>.sendmsg 7 对方的【羽扇纶巾【三国神器】】BUFF触发，你进入灼烧状态,每秒损失3%的血量.持续10秒.
+sendmsg 6 你的【羽扇纶巾【三国神器】】BUFF触发，你把对方灼烧状态,每秒损失3%的血量.持续10秒.
+SendCenterMsg 180 251 《<$username>的【羽扇纶巾【三国神器】】BUFF触发，让<$CURRRTARGETNAME>入灼烧状态,每秒损失3%的血量.持续10秒！》 1 3
 
 #IF
 CHECKCURRTARGETRACE = 0
 RANDOM 111
-checkitemw 不死皇冠[暗黑神器] 1
+checkitemw 不死皇冠【暗黑神器】 1
 #ACT
 <$CURRRTARGETNAME>.MOV N$灼烧持续时间 20
 <$CURRRTARGETNAME>.SETBODYCOLOR 18 20
-<$CURRRTARGETNAME>.sendmsg 7 对方的【不死皇冠[暗黑神器]】BUFF触发，你进入灼烧状态,每秒损失3%的血量.持续20秒.
-sendmsg 6 你的【不死皇冠[暗黑神器]】BUFF触发，你把对方灼烧状态,每秒损失3%的血量.持续20秒.
-SendCenterMsg 180 251 《<$username>的【不死皇冠[暗黑神器]】BUFF触发，让<$CURRRTARGETNAME>入灼烧状态,每秒损失3%的血量.持续20秒！》 1 3
+<$CURRRTARGETNAME>.sendmsg 7 对方的【不死皇冠【暗黑神器】】BUFF触发，你进入灼烧状态,每秒损失3%的血量.持续20秒.
+sendmsg 6 你的【不死皇冠【暗黑神器】】BUFF触发，你把对方灼烧状态,每秒损失3%的血量.持续20秒.
+SendCenterMsg 180 251 《<$username>的【不死皇冠【暗黑神器】】BUFF触发，让<$CURRRTARGETNAME>入灼烧状态,每秒损失3%的血量.持续20秒！》 1 3
 
 
 #IF
