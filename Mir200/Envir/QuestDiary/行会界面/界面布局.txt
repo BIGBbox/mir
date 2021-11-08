@@ -2,7 +2,7 @@
 {
 #if
 #act
-sendmsg 5 行会列表界面
+;sendmsg 5 行会列表界面
 
 #IF
 Equal <$CLIENTFLAG> 2
