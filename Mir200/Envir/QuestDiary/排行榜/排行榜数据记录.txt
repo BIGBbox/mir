@@ -30,7 +30,7 @@ WriteConfigFileItem ..\QuestDiary\排行榜\排行榜数据.txt <$USERNAME> 角色等级 <$L
 #if
 #act
 GetRandomText ..\QuestDiary\排行榜\排行榜数据.txt S10 0
-SendMsg 5 取出的字符串是:<$STR(S10)>::0
+;SendMsg 5 取出的字符串是:<$STR(S10)>::0
 
 #if
 not equal <$str(S10)>
