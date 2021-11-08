@@ -406,7 +406,7 @@ GOTO @¹´¹´°´Å¥¸³Öµ
 
 #if
 #act
-sendmsg 5 ***--
+;sendmsg 5 ***--
 
 #if
 check [461] 0
