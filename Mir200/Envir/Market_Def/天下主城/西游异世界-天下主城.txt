@@ -1,11 +1,6 @@
 ()
 %100
 [@main]
-#IF
-CHECKUNDERWAR ษณฐอฟห
-#ACT
-messagebox [ฑงวธ]ฃบนฅษณืดฬฌฒปิสะํฬำลÜฃก
-
 
 #IF
 #ACT
