@@ -38,6 +38,6 @@ mov <$str(S$轮回)> 跨凤乘龙
 
 #IF
 #ACT
-SETRANKLEVELNAME  %s\「天下沉默」\<$str(S$轮回)>\杀人数量：<$str(u48)>
+SETRANKLEVELNAME  %s\「沉默天下」\<$str(S$轮回)>\杀人数量：<$str(u48)>
 
 }
