@@ -120,17 +120,17 @@ GetListString ..\QuestDiary\捐献系统\捐献排名.txt 2 S$玩家名字3 N$捐献数量3
 #if
 equal <$USERNAME> <$str(S$玩家名字1)>
 #act
-INC N$装备倍攻 110
+INC N$装备倍攻 100
 
 #if
 equal <$USERNAME> <$str(S$玩家名字2)>
 #act
-INC N$装备倍攻 105
+INC N$装备倍攻 60
 
 #if
 equal <$USERNAME> <$str(S$玩家名字3)>
 #act
-INC N$装备倍攻 103
+INC N$装备倍攻 30
 
 
 #if
