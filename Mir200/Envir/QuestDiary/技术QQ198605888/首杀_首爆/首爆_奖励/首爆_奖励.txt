@@ -115,7 +115,7 @@ mov S$首爆_数据10
 
 #if
 #act
-sendmsg 5 首保11111111111
+;sendmsg 5 首保11111111111
 mov S$首爆_读取名字
 GetRandomText ..\QuestDiary\技术QQ198605888\首杀_首爆\首爆_奖励\首爆_设置.txt S$首爆_读取名字 <$str(n$首爆_读取行数)>
 INC n$首爆_读取行数 1

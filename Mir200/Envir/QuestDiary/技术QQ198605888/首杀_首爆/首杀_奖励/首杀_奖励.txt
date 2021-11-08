@@ -51,7 +51,7 @@ SetStringBlank S$首杀_排名10 5 0
 #ACT
 MOV N$读取行 0
 INC N$读取行 <$STR(N$页数)>
-sendmsg 5 <$STR(N$读取行)>***---
+;sendmsg 5 <$STR(N$读取行)>***---
 
 GetListString ..\QuestDiary\首杀奖励\boss列表.txt <$STR(N$读取行)> S$首爆名0
 INC N$读取行 1
