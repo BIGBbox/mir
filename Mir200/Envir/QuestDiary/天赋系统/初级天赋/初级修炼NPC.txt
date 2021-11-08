@@ -138,29 +138,29 @@ DELAYGOTO 10 @初级修炼npc
 <Img|img=public/sf1/1/01157.png|x=330|y=120|children={close_btn,click_btn,修炼等级1,修炼等级2,修炼等级3,修炼等级4,修炼等级5,修炼等级6,加成描述1,加成描述2,加成描述3,加成描述4,加成描述5,加成描述6,加成描述7,加成描述8,加成描述9}|bg=1|reset=1|move=1>
 <Layout|x=597|y=3|width=80|height=80|link=@exit>
 <Button|x=809|y=125|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
-
+; 1，3，，，6，2，5
 <Img|id=修炼等级1|children={修炼等级1_btn,修炼等级1_描述,}|x=12|y=70.0|height=1|width=1|img=public/1900000665.png>
-    <Button|id=修炼等级1_btn|x=0|y=0|nimg=public/sf1/1/01142.png|pimg=public/sf1/1/01144.png|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升修炼1)>>
+    <Button|id=修炼等级1_btn|x=0|y=0|nimg=public/sf1/1/01142.png|pimg=public/sf1/1/01144.png|tipsx=10|tipsy=80|size=16|color=249|link=@天赋升级二次确认#参数=1> 
     <RText|id=修炼等级1_描述|x=15|y=75|size=16|text=<修炼等级：/FCOLOR=215><[<$STR(N$攻击基数)>]/FCOLOR=255>>
 
 <Img|id=修炼等级2|children={修炼等级2_btn,修炼等级2_描述,}|x=172|y=70.0|height=1|width=1|img=public/1900000665.png>
-    <Button|id=修炼等级2_btn|x=0|y=0|nimg=public/sf1/1/01148.png|pimg=public/sf1/1/01150.png|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升修炼3)>>
+    <Button|id=修炼等级2_btn|x=0|y=0|nimg=public/sf1/1/01148.png|pimg=public/sf1/1/01150.png|tipsx=10|tipsy=80|size=16|color=249|link=@天赋升级二次确认#参数=3> 
     <RText|id=修炼等级2_描述|x=15|y=75|size=16|text=<修炼等级：/FCOLOR=215><[<$STR(N$道术基数)>]/FCOLOR=255>>
 
 <Img|id=修炼等级3|children={修炼等级3_btn,修炼等级3_描述,}|x=12|y=170.0|height=1|width=1|img=public/1900000665.png>
-    <Button|id=修炼等级3_btn|x=0|y=0|nimg=public/sf1/1/01133.png|pimg=public/sf1/1/01138.png|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升修炼)>>
+    <Button|id=修炼等级3_btn|x=0|y=0|nimg=public/sf1/1/01133.png|pimg=public/sf1/1/01138.png|tipsx=10|tipsy=80|size=16|color=249|link=@天赋升级二次确认#参数=> 
     <RText|id=修炼等级3_描述|x=15|y=75|size=16|text=<修炼等级：/FCOLOR=215><[<$STR(N$HPMP基数)>]/FCOLOR=255>>
 
 <Img|id=修炼等级4|children={修炼等级4_btn,修炼等级4_描述,}|x=172|y=170.0|height=1|width=1|img=public/1900000665.png>
-    <Button|id=修炼等级4_btn|x=0|y=0|nimg=public/sf1/1/01139.png|pimg=public/sf1/1/01141.png|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升修炼6)>>
+    <Button|id=修炼等级4_btn|x=0|y=0|nimg=public/sf1/1/01139.png|pimg=public/sf1/1/01141.png|tipsx=10|tipsy=80|size=16|color=249|link=@天赋升级二次确认#参数=6> 
     <RText|id=修炼等级4_描述|x=15|y=75|size=16|text=<修炼等级：/FCOLOR=215><[<$STR(N$道切基数)>]/FCOLOR=255>>
 
 <Img|id=修炼等级5|children={修炼等级5_btn,修炼等级5_描述,}|x=12|y=270.0|height=1|width=1|img=public/1900000665.png>
-    <Button|id=修炼等级5_btn|x=0|y=0|nimg=public/sf1/1/01151.png|pimg=public/sf1/1/01153.png|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升修炼2)>>
+    <Button|id=修炼等级5_btn|x=0|y=0|nimg=public/sf1/1/01151.png|pimg=public/sf1/1/01153.png|tipsx=10|tipsy=80|size=16|color=249|link=@天赋升级二次确认#参数=2> 
     <RText|id=修炼等级5_描述|x=15|y=75|size=16|text=<修炼等级：/FCOLOR=215><[<$STR(N$魔法基数)>]/FCOLOR=255>>
 
 <Img|id=修炼等级6|children={修炼等级6_btn,修炼等级6_描述,}|x=172|y=270.0|height=1|width=1|img=public/1900000665.png>
-    <Button|id=修炼等级6_btn|x=0|y=0|nimg=public/sf1/1/01145.png|pimg=public/sf1/1/01147.png|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升修炼5)>>
+    <Button|id=修炼等级6_btn|x=0|y=0|nimg=public/sf1/1/01145.png|pimg=public/sf1/1/01147.png|tipsx=10|tipsy=80|size=16|color=249|link=@天赋升级二次确认#参数=5> 
     <RText|id=修炼等级6_描述|x=15|y=75|size=16|text=<修炼等级：/FCOLOR=215><[<$STR(N$法切基数)>]/FCOLOR=255>>
 
 <RText|id=加成描述1|x=310|y=100|size=15|text=<基本攻击加成：/FCOLOR=254><基本攻击 +<$STR(N$攻击数值)>/FCOLOR=253>>
@@ -175,6 +175,17 @@ DELAYGOTO 10 @初级修炼npc
 ;#ACT
 ;Navigation 0 修炼等级1_btn 点击修炼攻击天赋
 ;break
+
+[@天赋升级二次确认]
+#if
+#act
+messagebox 是否确定消耗下列物品用于升级初级天赋\\1.修炼石*<$STR(N$道切材料数量1)>\\2.<$STR(N$道切元宝数量)>元宝\\3.天外陨石*<$STR(N$道切材料数量2)>\ @确定升级初级天赋 @取消
+
+[@确定升级初级天赋]
+#if
+#act
+; sendmsg 5 确认升级参数：<$str(S$参数)>:::::<$str(S$晋升修炼<$str(S$参数)>)>
+goto <$str(S$晋升修炼<$str(S$参数)>)>
 
 ;--------------HPMP修炼---------↓↓↓↓↓↓↓↓↓↓----------------------------------
 

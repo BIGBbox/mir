@@ -468,27 +468,27 @@ MOV S$晋升修炼51 <已修炼最高/FCOLOR=249>
 <Button|x=809|y=125|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 
 <Img|id=修炼等级1|children={修炼等级1_btn,修炼等级1_描述,}|x=12|y=70.0|height=1|width=1|img=public/1900000665.png>
-    <Button|id=修炼等级1_btn|x=0|y=0|nimg=public/sf1/1/01121.png|pimg=public/sf1/1/01123.png|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升修炼11)>>
+    <Button|id=修炼等级1_btn|x=0|y=0|nimg=public/sf1/1/01121.png|pimg=public/sf1/1/01123.png|tipsx=10|tipsy=80|size=16|color=249|link=@高级天赋升级二次确认#参数=11>>
     <RText|id=修炼等级1_描述|x=15|y=65|size=16|text=<修炼等级：/FCOLOR=215>[<$STR(N$超魔力基数)>]>
 
 <Img|id=修炼等级2|children={修炼等级2_btn,修炼等级2_描述,}|x=172|y=70.0|height=1|width=1|img=public/1900000665.png>
-    <Button|id=修炼等级2_btn|x=0|y=0|nimg=public/sf1/1/01124.png|pimg=public/sf1/1/01126.png|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升修炼21)>>
+    <Button|id=修炼等级2_btn|x=0|y=0|nimg=public/sf1/1/01124.png|pimg=public/sf1/1/01126.png|tipsx=10|tipsy=80|size=16|color=249|link=@高级天赋升级二次确认#参数=21>>
     <RText|id=修炼等级2_描述|x=15|y=65|size=16|text=<修炼等级：/FCOLOR=215>[<$STR(N$超道术基数)>]>
 
 <Img|id=修炼等级3|children={修炼等级3_btn,修炼等级3_描述,}|x=12|y=170.0|height=1|width=1|img=public/1900000665.png>
-    <Button|id=修炼等级3_btn|x=0|y=0|nimg=public/sf1/1/01118.png|pimg=public/sf1/1/01120.png|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升修炼31)>>
+    <Button|id=修炼等级3_btn|x=0|y=0|nimg=public/sf1/1/01118.png|pimg=public/sf1/1/01120.png|tipsx=10|tipsy=80|size=16|color=249|link=@高级天赋升级二次确认#参数=31>>
     <RText|id=修炼等级3_描述|x=15|y=65|size=16|text=<修炼等级：/FCOLOR=215>[<$STR(N$超吸血基数)>]>
 
 <Img|id=修炼等级4|children={修炼等级4_btn,修炼等级4_描述,}|x=172|y=170.0|height=1|width=1|img=public/1900000665.png>
-    <Button|id=修炼等级4_btn|x=0|y=0|nimg=public/sf1/1/01127.png|pimg=public/sf1/1/01129.png|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升修炼41)>>
+    <Button|id=修炼等级4_btn|x=0|y=0|nimg=public/sf1/1/01127.png|pimg=public/sf1/1/01129.png|tipsx=10|tipsy=80|size=16|color=249|link=@高级天赋升级二次确认#参数=41>>
     <RText|id=修炼等级4_描述|x=15|y=65|size=16|text=<修炼等级：/FCOLOR=215>[<$STR(N$超吸收基数)>]>
 
 <Img|id=修炼等级5|children={修炼等级5_btn,修炼等级5_描述,}|x=12|y=270.0|height=1|width=1|img=public/1900000665.png>
-    <Button|id=修炼等级5_btn|x=0|y=0|nimg=public/sf1/1/01130.png|pimg=public/sf1/1/01132.png|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升修炼51)>>
+    <Button|id=修炼等级5_btn|x=0|y=0|nimg=public/sf1/1/01130.png|pimg=public/sf1/1/01132.png|tipsx=10|tipsy=80|size=16|color=249|link=@高级天赋升级二次确认#参数=51>>
     <RText|id=修炼等级5_描述|x=15|y=65|size=16|text=<修炼等级：/FCOLOR=215>[<$STR(N$超爆伤基数)>]>
 
 <Img|id=修炼等级6|children={修炼等级6_btn,修炼等级6_描述,}|x=172|y=270.0|height=1|width=1|img=public/1900000665.png>
-    <Button|id=修炼等级6_btn|x=0|y=0|nimg=public/sf1/1/01134.png|pimg=public/sf1/1/01136.png|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升修炼61)>>
+    <Button|id=修炼等级6_btn|x=0|y=0|nimg=public/sf1/1/01134.png|pimg=public/sf1/1/01136.png|tipsx=10|tipsy=80|size=16|color=249|link=@高级天赋升级二次确认#参数=61>>
     <RText|id=修炼等级6_描述|x=15|y=65|size=16|text=<修炼等级：/FCOLOR=215>[<$STR(N$超忽视基数)>]>
 
 <RText|id=加成描述1|x=310|y=100|size=15|text=<超魔力加成：/FCOLOR=254><超魔力 +<$STR(N$超魔力基数)>%/FCOLOR=253>>
@@ -497,6 +497,18 @@ MOV S$晋升修炼51 <已修炼最高/FCOLOR=249>
 <RText|id=加成描述4|x=310|y=225|size=15|text=<超吸收加成：/FCOLOR=254><超吸收 +<$STR(N$超吸收基数)>%/FCOLOR=253>>
 <RText|id=加成描述5|x=310|y=265|size=15|text=<超爆伤加成：/FCOLOR=254><超爆伤  +<$STR(N$超爆伤基数)>%/FCOLOR=253>>
 <RText|id=加成描述6|x=310|y=305|size=15|text=<超忽视加成：/FCOLOR=254><超忽视  +<$STR(N$超忽视基数)>%/FCOLOR=253>>
+
+
+[@高级天赋升级二次确认]
+#if
+#act
+messagebox 是否确定消耗下列物品用于升级高级天赋\\1.<$str(N$超魔力元宝数量)>元宝\\2.天外陨石*<$str(N$超魔力材料数量2)>\\3.神器碎片*<$str(N$超魔力材料数量3)>\\4.修炼石*<$str(N$超魔力材料数量4)> @确定升级高级天赋 @取消
+
+[@确定升级高级天赋]
+#if
+#act
+; sendmsg 5 确认升级参数：<$str(S$参数)>:::::<$str(S$晋升修炼<$str(S$参数)>)>
+goto <$str(S$晋升修炼<$str(S$参数)>)>
 
 ;----------------------超级忽视修炼----------------------------------
 
