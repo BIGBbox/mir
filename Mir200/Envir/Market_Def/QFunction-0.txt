@@ -160,7 +160,7 @@ SENDMSG 7 开启过滤所有信息！！！！！
 
 #IF
 #ACT
-SENDMSG 7 555555555555
+;SENDMSG 7 555555555555
 
 
 ;进入地图触发-------------------------------------------
@@ -2121,6 +2121,7 @@ EQUAL N$分身CD 0
 #ACT
 MOV N$分身CD 15
 #ELSEACT
+KILLCALLMOB 守护者 99 1
 SENDMSG 7 守护者CD时间剩余<$STR(N$分身CD)>秒！
 break
 
@@ -2139,7 +2140,7 @@ break
 
 #if
 #act
-KILLCALLMOB 守护者 99 1
+; KILLCALLMOB 守护者 99 1
 mov N$分身攻击计算 0
 mov N$分身魔法计算 0
 mov N$分身道术计算 0
@@ -2777,17 +2778,6 @@ DELAYGOTO 100 @守护者属性加成
 ; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
 break
 
-#if
-#act
-; mov N$分身攻击计算 1888
-; mov N$分身魔法计算 888
-; mov N$分身道术计算 888
-; mov N$分身防御计算 888
-; mov N$分身魔御计算 888
-; mov N$分身血量计算 888
-; mov N$分身蓝量计算 888
-; DELAYGOTO 100 @守护者属性加成
-
 [@守护者属性加成]
 #if
 #act
@@ -2806,6 +2796,7 @@ MEBabyHP 守护者 = <$str(N$宝宝血量)> 0
 ; sendmsg 5 释放技能召唤骷髅!!守护者等级=0
 ; CHANGEMOBABILITY 守护者 11 + 5000 9999
 ; SENDMSG 7 你的守护者增加了HP+10000
+
 ;---------------分身术------------
 [@MagSelfFunc74]
 
@@ -9249,7 +9240,7 @@ equal U20 0
 #ACT
 mov U20 0
 mov N$技能点击cd 0
-sendmsg 5 每日首次登录打印!!!
+;sendmsg 5 每日首次登录打印!!!
 
 [@开启自动挂机]
 #act
@@ -9315,7 +9306,7 @@ goto @获取当前转生等级
 [@前往主城]
 #if
 #act
-sendmsg 5 QF前往主城
+;sendmsg 5 QF前往主城
 movr N$随机坐标X 114 125
 movr N$随机坐标Y 93 100
 mapmove 天下主城 <$STR(N$随机坐标X)> <$STR(N$随机坐标Y)>
