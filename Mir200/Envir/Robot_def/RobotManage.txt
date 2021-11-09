@@ -6,8 +6,8 @@ break
 
 #or
 ; equal <$str(G300)> 3
-equal <$DAY> 2
-equal <$DAY> 6
+DAYOFWEEK TUE
+DAYOFWEEK SAT
 #ACT
 SendCenterMsg 250 0 ┏-------------------------------------------------------┓ 1 60
 SendCenterMsg 250 0 ┠-----------攻城战30分钟后已开启------------┨ 1 60
