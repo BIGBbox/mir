@@ -169,21 +169,21 @@ break
 
 #if
 DAYOFWEEK SAT
-large <$HOUR> 20
+not small <$HOUR> 20
 #ACT
 mov S$不允许捐献 1
 break
 
 #if
 DAYOFWEEK TUE
-large <$HOUR> 20
+not small <$HOUR> 20
 #ACT
 mov S$不允许捐献 1
 break
 
 #if
 equal <$str(G300)> 3
-large <$HOUR> 20
+not small <$HOUR> 20
 #ACT
 mov S$不允许捐献 1
 break
