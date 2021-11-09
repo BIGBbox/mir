@@ -169,11 +169,47 @@ MOV S$捐献数量3_排版 暂无
 #ACT
 GOTO @捐献_字符串处理
 
+
+[@判断是否允许捐献]
+#if
+#act
+mov S$不允许捐献 0
+
+#if
+not large <$str(G300)> 3
+#act
+break
+
+#if
+DAYOFWEEK SAT
+large <$HOUR> 20
+#ACT
+mov S$不允许捐献 1
+break
+
+#if
+DAYOFWEEK TUE
+large <$HOUR> 20
+#ACT
+mov S$不允许捐献 1
+break
+
+#if
+equal <$str(G300)> 3
+large <$HOUR> 20
+#ACT
+mov S$不允许捐献 1
+break
+
 [@InPutInteger4]
 #if
-LARGE G8 0
+#act
+goto @判断是否允许捐献
+
+#if
+equal <$str(S$不允许捐献)> 1
 #ACT
-messagebox 当前不是正式开区，无法捐献！！
+messagebox 沙巴克当天20-24点，无法捐献！！
 break
 
 ;<$GAMEPOINT>

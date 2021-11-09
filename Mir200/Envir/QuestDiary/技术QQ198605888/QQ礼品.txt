@@ -8,7 +8,7 @@
 <Img|img=public/sf1/1/01440.png|x=200|y=100|children={close_btn,click_btn,二维码,rightTips,gable_item1,gable_item2,gable_item3}|bg=1|reset=1|move=1>
 <Layout|x=597|y=3|width=80|height=80|link=@exit>
 <Button|x=839|y=195|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
-<Text|id=rightTips|x=300|y=280|color=250|size=16|text=QQ群：123123123>
+<Text|id=rightTips|x=300|y=280|color=250|size=16|text=QQ群：615107610>
 <Img|id=gable_item1|children={下方礼包1}|x=295|y=195|width=60|height=60|img=public/sf1/19/itemBg1.png>
 <ItemShow|id=下方礼包1|x=-2|y=-2|itemid=10941|itemcount=10|showtips=1|color=250|scale=1.3>
 <Img|id=gable_item2|children={下方礼包2}|x=370|y=195|width=60|height=60|img=public/sf1/19/itemBg1.png>

@@ -88,6 +88,7 @@ SetOnTimer 7 1
 DELAYGOTO 100 @延迟开启登录限制
 
 VAR Integer HUMAN 今日充值
+VAR Integer HUMAN 沙城捐献
 VAR Integer GLOBAL 沙捐总值
 ; CHECKVAR GLOBAL G9 = <$str(G9)>
 VAR Integer HUMAN 累计充值领取标记1

@@ -721,6 +721,9 @@ inc N$游戏吸收显示 <$STR(S$赞助_伤害吸收)>
 
 SetSuckDamage = N$游戏吸收伤害总 <$STR(N$游戏吸收显示)> 100
 
+#if
+large <$STR(N$游戏吸收伤害总)> 0
+#act
 SENDMSG 6 你当前的吸收伤害为：<$STR(N$游戏吸收显示)>%，成功率为100%！
 goto @属性显示
 

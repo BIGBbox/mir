@@ -41,7 +41,7 @@ SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成
 GOTO @MAIN
 BREAK
 #elseact
-MESSAGEBOX 打造条件不足??\\1、请凑齐开天【时装】，黄金【时装】，嗜血【时装】，制裁【时装】，天使【时装】，这五种时装！
+MESSAGEBOX 打造条件不足??\\1、请凑齐开天【时装】，黄金【时装】，嗜血【时装】，制裁【时装】，天使【时装】，这五种时装+8888RMB点！
 BREAK
 
 

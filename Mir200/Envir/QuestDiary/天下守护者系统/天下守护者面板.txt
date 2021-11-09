@@ -30,10 +30,10 @@ inc S$守护者升级条件 <RText|id=天下币晋升条件1|x=130.0|y=100|color=250|size=16|t
 #if
 not large <$str(U8)> 5
 #act
-inc S$守护者升级按钮 <Button|id=升级按钮1|x=100|y=210|nimg=public/sf1/1/01344.png|pimg=public/sf1/1/01346.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@天下守护者晋升#参数=1>
-inc S$守护者升级按钮 <Button|id=升级按钮2|x=270|y=210|nimg=public/sf1/1/01347.png|pimg=public/sf1/1/01349.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@天下守护者晋升#参数=2>
+inc S$守护者升级按钮 <Button|id=升级按钮1|x=100|y=217|nimg=public/sf1/1/01344.png|pimg=public/sf1/1/01346.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@天下守护者晋升#参数=1>
+inc S$守护者升级按钮 <Button|id=升级按钮2|x=270|y=217|nimg=public/sf1/1/01347.png|pimg=public/sf1/1/01349.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@天下守护者晋升#参数=2>
 #elseact
-inc S$守护者升级按钮 <Button|id=升级按钮2|x=190|y=210|nimg=public/sf1/1/01347.png|pimg=public/sf1/1/01349.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@天下守护者晋升#参数=2>
+inc S$守护者升级按钮 <Button|id=升级按钮2|x=190|y=217|nimg=public/sf1/1/01347.png|pimg=public/sf1/1/01349.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@天下守护者晋升#参数=2>
 
 
 #if
@@ -55,7 +55,7 @@ goto @分身主界面
 <RText|id=守护者召唤数量|x=0.0|y=25|color=250|size=16|text=<守护者召唤数量 ：/FCOLOR=250><<$STR(S$分身数量)>/FCOLOR=58>>
 <RText|id=守护者全属性|x=0.0|y=50|color=250|size=16|text=<守护者全属性     ：/FCOLOR=250><<$STR(S$分身全属性)>/FCOLOR=58>>
 <RText|id=元宝晋升条件|x=0.0|y=75|color=250|size=16|text=<元宝晋升条件     ：/FCOLOR=250>>
-<RText|id=天下币晋升条件|x=0.0|y=100|color=250|size=16|text=<天下币晋升条件 ：/FCOLOR=250>>
+<RText|id=天下币晋升条件|x=0.0|y=100|color=250|size=16|text=<天下币晋升条件 ：/FCOLOR=250>\<领取微信礼包即可免费获得守护者！/FCOLOR=69>>
 
     <$str(S$守护者升级条件)>
     <$str(S$守护者升级按钮)>

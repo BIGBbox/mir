@@ -21,7 +21,7 @@ CHECKITEMW 人强货硬 1
 mov N$反弹伤害 <$PKPOWER>
 <$CURRRTARGETNAME>.HUMANHP - <$STR(N$反弹伤害)>
 <$CURRRTARGETNAME>.mov N$反弹伤害 <$PKPOWER>
-<$CURRRTARGETNAME>.sendmsg 7 对方的【人强货硬】BUFF触发,反弹本次攻击100%的伤害！！
+;<$CURRRTARGETNAME>.sendmsg 7 对方的【人强货硬】BUFF触发,反弹本次攻击100%的伤害！！
 
 
 
@@ -31,8 +31,8 @@ CHECKCURRTARGETRACE = 0
 CHECKITEMW 灵儿铠甲
 #ACT
 <$CURRRTARGETNAME>.GOTO @随机脱装备1
-SendCenterMsg 229 0 【<$CURRRTARGETNAME>】被随机脱下1件装备！！ 0 2
-<$CURRRTARGETNAME>.SendCenterMsg 229 0 被随机脱下1件装备！！ 0 2
+;SendCenterMsg 229 0 【<$CURRRTARGETNAME>】被随机脱下1件装备！！ 0 2
+;<$CURRRTARGETNAME>.SendCenterMsg 229 0 被随机脱下1件装备！！ 0 2
 break
 
 
@@ -42,8 +42,8 @@ CHECKCURRTARGETRACE = 0
 CHECKITEMW 扩散黑暗
 #ACT
 <$CURRRTARGETNAME>.GOTO @随机脱装备1
-SendCenterMsg 229 0 【<$CURRRTARGETNAME>】被随机脱下1件装备！！ 0 2
-<$CURRRTARGETNAME>.SendCenterMsg 229 0 被随机脱下1件装备！！ 0 2
+;SendCenterMsg 229 0 【<$CURRRTARGETNAME>】被随机脱下1件装备！！ 0 2
+;<$CURRRTARGETNAME>.SendCenterMsg 229 0 被随机脱下1件装备！！ 0 2
 break
 
 

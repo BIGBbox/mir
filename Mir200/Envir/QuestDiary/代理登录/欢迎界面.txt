@@ -9,7 +9,7 @@ DELAYGOTO 10 @欢迎界面面板
 
 #IF
 #ACT
-DELAYGOTO 5000 @start
+DELAYGOTO 20000 @start
 
 mov N$moveX <$SCREENWIDTH>
 mov N$moveY <$SCREENHEIGHT>
@@ -42,17 +42,5 @@ mapmove 0 290 618
 OPENNPCSHOWEX 63
 #CALL [\任务系统\任务文本.txt] @接取任务
 CLEARDELAYGOTO
-; SetOnTimer 4 1
-
-; [@OnTimer4]
-; #if
-; NOT CheckOffline
-; checklevelex < 200
-; #act
-; ; sendmsg 5 99999999
-; ; Screffects 999 29 150 200 1 1 0
-; ; Screffects 998 29 120 240 1 1 0
-; CHANGEEXP + 50000
-
 
 }

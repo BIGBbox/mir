@@ -194,10 +194,10 @@ CHECKITEMW 戰神の籠罩
 #ACT
 INC N$暴率加成 300
 
-#IF
-CHECKITEMW 天下の至尊
-#ACT
-INC N$暴率加成 400
+; #IF
+; CHECKITEMW 天下の至尊
+; #ACT
+; INC N$暴率加成 400
 
 #If
 CHECKTITLE 沙城捐献

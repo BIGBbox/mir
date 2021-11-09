@@ -132,10 +132,6 @@ CHECKITEMW 戰神の籠罩
 #ACT
 INC N$怪物额外伤害 70
 
-#IF
-CHECKITEMW 天下の至尊
-#ACT
-INC N$怪物额外伤害 100
 
 #IF
 CHECKITEMW 蛛王戒
@@ -376,10 +372,6 @@ CHECKITEMW 戰神の籠罩
 #ACT
 INC N$魔法切割 70
 
-#IF
-CHECKITEMW 天下の至尊
-#ACT
-INC N$魔法切割 100
 
 #IF
 CHECKITEMW 至高の荣耀
@@ -430,11 +422,6 @@ INC N$道术切割 50
 CHECKITEMW 戰神の籠罩
 #ACT
 INC N$道术切割 70
-
-#IF
-CHECKITEMW 天下の至尊
-#ACT
-INC N$道术切割 100
 
 #IF
 CHECKTITLE 三星

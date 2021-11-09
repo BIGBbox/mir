@@ -94,7 +94,7 @@ GOTO @装备加星引导奖励领取
 
 #if
 not CheckContainsText <$STR(T108)> 装备加星
-large U108 22
+; large U108 22
 
 #act
 mov S$支线任务临时变量 <$STR(T108)>

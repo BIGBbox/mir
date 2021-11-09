@@ -2,7 +2,7 @@
 {
 
 #if
-checklevelex < 15
+checklevelex < 20
 #act
 mov S$任务状态 10W经验,黑铁头盔和绿色项链/FCOLOR=250
 DELAYGOTO 10 @药店老板
@@ -13,7 +13,7 @@ break
 [@药店老板]
 #If
 #act
-DELAYGOTO 5000 @领取奖励
+DELAYGOTO 20000 @领取奖励
 
 #say
 

@@ -31,7 +31,8 @@ mov N$Y激活特效坐标 148
 ReadConfigFileItem ..\QuestDiary\神兵谱\<$str(S$当前界面)>.txt <$str(S$当前界面)>数量 <$str(S$当前界面)>数量 S$装备数量
 ReadConfigFileItem ..\QuestDiary\神兵谱\<$str(S$当前界面)>.txt <$str(S$当前界面)>数量 头部 S$界面头部
 
-goto @载入界面
+; sendmsg 5 <$str(S$当前界面)>:::<$str(S$装备数量)> :::<$str(N$神兵谱序号)> 
+delaygoto 100 @载入界面
 
 
 [@载入界面]
@@ -39,6 +40,7 @@ goto @载入界面
 not large <$str(N$神兵谱序号)> <$str(S$装备数量)> 
 #act
 inc N$神兵谱序号 1
+; sendmsg 5 :<$str(N$神兵谱序号)> 
 
 ReadConfigFileItem ..\QuestDiary\神兵谱\<$str(S$当前界面)>.txt <$str(N$神兵谱序号)> 名字 S$装备名字
 ReadConfigFileItem ..\QuestDiary\神兵谱\<$str(S$当前界面)>.txt <$str(N$神兵谱序号)> 标记 S$装备标记
@@ -57,7 +59,16 @@ CHECK [<$str(S$装备标记)>] 1
 ; inc N$新Y 30
 ; sendmsg 5 <$str(N$Y激活按钮坐标)>____<$str(N$新Y)>
 inc S$控件 <Img|id=激活特效<$str(N$神兵谱序号)>|x=<$str(N$X激活按钮坐标)>|y=<$str(N$Y激活按钮坐标)>|width=67|height=26|img=public/icon/common1055.png>
-#elseact
+
+#IF
+CHECK [<$str(S$装备标记)>] 0
+#act
+inc S$控件 <Button|id=click_btn<$str(N$神兵谱序号)>|x=<$str(N$X激活按钮坐标)>|y=<$str(N$Y激活按钮坐标)>|grey=1|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png>
+
+#IF
+CHECK [<$str(S$装备标记)>] 0
+checkitem <$STR(S$装备名字)> 1
+#act
 inc S$控件 <Button|id=click_btn<$str(N$神兵谱序号)>|x=<$str(N$X激活按钮坐标)>|y=<$str(N$Y激活按钮坐标)>|nimg=public/sf1/1/01435.png|pimg=public/sf1/1/01437.png|link=@激活#装备名字=<$str(S$装备名字)>#装备标记=<$str(S$装备标记)>>
 
 
@@ -87,10 +98,10 @@ inc N$Y激活特效坐标 100
 #if
 not large <$str(N$神兵谱序号)> <$str(S$装备数量)> 
 #act
-
 goto @载入界面
 #elseact
 goto @神兵谱主面板
+; sendmsg 5 :神兵谱主面板
 
 [@激活]
 #if
@@ -145,7 +156,7 @@ goto @载入界面
 #SAY
 
 <Img|img=public/sf1/1/01389.png|x=220|y=10|children={close_btn,click_btn1,click_btn2,click_btn3,click_btn4,click_btn5,click_btn6,click_btn7,click_btn8,click_btn9,click_btn10,click_btn11,click_btn12,click_btn13,click_btn14,click_btn15,click_btn16,click_btn17,click_btn18,click_btn19,click_btn20,click_btn21,click_btn22,click_btn23,click_btn24,click_btn25,click_btn26,click_btn27,click_btn28,click_btn29,click_btn30
-,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,合成描述,rightTips,item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item11,item12,item13,item14,item15,item16,item17,item18,item19,item20,item21,item22,item23,item24,item25,item26,item27,item28,item29,item30,激活特效1,激活特效2,激活特效3,激活特效4,激活特效5,激活特效6,激活特效7,激活特效8,激活特效9,激活特效10,激活特效11,激活特效12,激活特效13,激活特效14,激活特效15,激活特效16,激活特效17,激活特效18,激活特效19,激活特效20,激活特效21,激活特效22,激活特效23,激活特效24,激活特效25,激活特效26,激活特效27,激活特效28,激活特效29,激活特效30}|bg=1|reset=1|move=1>
+,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,合成描述,rightTips,item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item11,item12,item13,item14,item15,item16,item17,item18,item19,item20,item21,item22,item23,item24,item25,item26,item27,item28,item29,item30,激活特效1,激活特效2,激活特效3,激活特效4,激活特效5,激活特效6,激活特效7,激活特效8,激活特效9,激活特效10,激活特效11,激活特效12,激活特效13,激活特效14,激活特效15,激活特效16,激活特效17,激活特效18,激活特效19,激活特效20,激活特效21,激活特效22,激活特效23,激活特效24,激活特效25,激活特效26,激活特效27,激活特效28,激活特效29,激活特效30,提示特效1,提示特效2,提示特效3,提示特效4,提示特效5,提示特效6,提示特效7,提示特效8,提示特效9,提示特效10,提示特效11,提示特效12,提示特效13,提示特效14,提示特效15,提示特效16,提示特效17,提示特效18,提示特效19,提示特效20,提示特效21,提示特效22,提示特效23,提示特效24,提示特效25,提示特效26,提示特效27,提示特效28,提示特效29,提示特效30}|bg=1|reset=1|move=1>
 <Layout|x=597|y=3|width=80|height=80|link=@exit>
 <Button|x=870|y=35|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
     <$str(S$控件)>

@@ -171,7 +171,7 @@ CHECKLEVELEX > 10
 #ACT
 MAPMOVE 师徒之地 22 30
 ;CloseBigDialogBox
-;;Close
+;Close
 SENDMSG 0 {系统ぐ:玩家【<$USERNAME>】进入【<$MapTitle>】祝他收获满满！|251:118:1}
 
 
@@ -1348,7 +1348,7 @@ equal N$第一刀斩杀怪物 10
 m.CheckHpPer > 98
 #act
 m.AddhpPer - 10
-SENDMSG 7 BUFF触发：第一刀斩杀怪物10%血量！！！！！！！！！！！！！
+;SENDMSG 7 BUFF触发：第一刀斩杀怪物10%血量！！！！！！！！！！！！！
 
 
 #if
@@ -1357,7 +1357,7 @@ equal N$第一刀斩杀怪物 8
 m.CheckHpPer > 98
 #act
 m.AddhpPer - 8
-SENDMSG 7 BUFF触发：第一刀斩杀怪物8%血量！！！！！！！！！！！！！
+;SENDMSG 7 BUFF触发：第一刀斩杀怪物8%血量！！！！！！！！！！！！！
 
 
 #if
@@ -1366,7 +1366,7 @@ equal N$第一刀斩杀怪物 6
 m.CheckHpPer > 98
 #act
 m.AddhpPer - 6
-SENDMSG 7 BUFF触发：第一刀斩杀怪物6%血量！！！！！！！！！！！！！
+;SENDMSG 7 BUFF触发：第一刀斩杀怪物6%血量！！！！！！！！！！！！！
 
 
 #if
@@ -1375,7 +1375,7 @@ equal N$第一刀斩杀怪物 4
 m.CheckHpPer > 98
 #act
 m.AddhpPer - 4
-SENDMSG 7 BUFF触发：第一刀斩杀怪物4%血量！！！！！！！！！！！！！
+;SENDMSG 7 BUFF触发：第一刀斩杀怪物4%血量！！！！！！！！！！！！！
 
 
 #if
@@ -1384,7 +1384,7 @@ equal N$第一刀斩杀怪物 2
 m.CheckHpPer > 98
 #act
 m.AddhpPer - 2
-SENDMSG 7 BUFF触发：第一刀斩杀怪物2%血量！！！！！！！！！！！！！
+;SENDMSG 7 BUFF触发：第一刀斩杀怪物2%血量！！！！！！！！！！！！！
 
 
 #if
@@ -1395,7 +1395,7 @@ random 50
 SETHUMVAR <$CURRRTARGETNAME> <$STR(n$攻击威力)> <$PKPOWER>
 <$CURRRTARGETNAME>.DIV n$攻击威力 5
 <$CURRRTARGETNAME>.HUMANHP - <$STR(n$攻击威力)>
-<$CURRRTARGETNAME>.sendmsg 7 对方的【赤胆忠心】BUFF触发1.2倍伤害！
+;<$CURRRTARGETNAME>.sendmsg 7 对方的【赤胆忠心】BUFF触发1.2倍伤害！
 
 
 #if
@@ -1405,8 +1405,8 @@ CHECKITEMW 一统天下
 #ACT
 <$CURRRTARGETNAME>.MAKEPOSION 0 10 1000
 <$CURRRTARGETNAME>.MAKEPOSION 1 10 1000
-SENDMSG 7 你的[一统天下]Buff触发红绿毒，持续10秒
-<$CURRRTARGETNAME>.SENDMSG 7 对方的[一统天下]Buff触发红绿毒，持续10秒
+;SENDMSG 7 你的[一统天下]Buff触发红绿毒，持续10秒
+;<$CURRRTARGETNAME>.SENDMSG 7 对方的[一统天下]Buff触发红绿毒，持续10秒
 
 #if
 random 30
@@ -1433,7 +1433,7 @@ NOT CHECKCURRTARGETRACE = 0
 #ACT
 MUL <$STR(N$刀刀切割)> <$PKPOWER> <$STR(N$怪物额外伤害)>
 DIV <$STR(N$刀刀切割)> 100
-; M.HUMANHP - <$STR(N$刀刀切割)> 100
+;M.HUMANHP - <$STR(N$刀刀切割)> 100
 
 
 #IF
@@ -1450,7 +1450,7 @@ NOT SMALL <$STR(N$魔法切割值)> 1
 not check [5] 1
 #ACT
 M.HUMANHP - <$STR(N$魔法切割值)> 102
-; SendCenterMsg 146 0 魔法切割触发:打掉目标<$STR(N$魔法切割值)>点Hp.　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 0 2
+;SendCenterMsg 146 0 魔法切割触发:打掉目标<$STR(N$魔法切割值)>点Hp.　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 0 2
 
 #IF
 large <$STR(N$道术切割)> 0
@@ -1466,7 +1466,7 @@ NOT SMALL <$STR(N$道术切割值)> 1
 not check [5] 1
 #ACT
 M.HUMANHP - <$STR(N$道术切割值)> 101
-; SendCenterMsg 239 0 道术切割触发:打掉目标<$STR(N$道术切割值)>点Hp.0 2
+;SendCenterMsg 239 0 道术切割触发:打掉目标<$STR(N$道术切割值)>点Hp.0 2
 
 
 
@@ -1511,7 +1511,7 @@ CHECKITEMW 无恶不做
 #ACT
 ADDHPPER + 10
 ADDMPPER + 10
-SENDMSG 7 你的[无恶不做]Buff恢复10%HPMP！
+;SENDMSG 7 你的[无恶不做]Buff恢复10%HPMP！
 
 
 #if
@@ -2130,7 +2130,7 @@ break
 ; IsOnMap N3
 ; IsOnMap new0150
 ; #ACT
-; SENDMSG 7 此地图不允许召唤！！！！
+;SENDMSG 7 此地图不允许召唤！！！！
 ; break
 
 
@@ -2814,7 +2814,7 @@ IsOnMap 天下主城
 IsOnMap N3
 IsOnMap new0150
 #ACT
-SENDMSG 7 此地图不允许召唤！！！！
+SENDMSG 7 此地图不允许召唤！！！
 break
 
 
@@ -7126,7 +7126,7 @@ break
 CHECK [251] 0
 #ACT
 SET [251] 1
-MessageBox 恭喜你激活了[枣红马]！
+MessageBox 恭喜你激活了【枣红马】！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7142,7 +7142,7 @@ break
 CHECK [252] 0
 #ACT
 SET [252] 1
-MessageBox 恭喜你激活了[乌黑马]！
+MessageBox 恭喜你激活了【乌黑马】！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7158,7 +7158,7 @@ break
 CHECK [253] 0
 #ACT
 SET [253] 1
-MessageBox 恭喜你激活了[白马]！
+MessageBox 恭喜你激活了【白马】！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7174,7 +7174,7 @@ break
 CHECK [254] 0
 #ACT
 SET [254] 1
-MessageBox 恭喜你激活了[赤炎马]！
+MessageBox 恭喜你激活了【赤炎马】！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7191,7 +7191,7 @@ break
 CHECK [255] 0
 #ACT
 SET [255] 1
-MessageBox 恭喜你激活了[高头大马]！
+MessageBox 恭喜你激活了【高头大马】！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7207,7 +7207,7 @@ break
 CHECK [256] 0
 #ACT
 SET [256] 1
-MessageBox 恭喜你激活了[迎亲马]！
+MessageBox 恭喜你激活了【迎亲马】！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7223,7 +7223,7 @@ break
 CHECK [257] 0
 #ACT
 SET [257] 1
-MessageBox 恭喜你激活了[金色马]！
+MessageBox 恭喜你激活了【金色马】！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7239,7 +7239,7 @@ break
 CHECK [258] 0
 #ACT
 SET [258] 1
-MessageBox 恭喜你激活了[骐骥]！
+MessageBox 恭喜你激活了【骐骥】！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7255,7 +7255,7 @@ break
 CHECK [259] 0
 #ACT
 SET [259] 1
-MessageBox 恭喜你激活了[幼麒麟]！
+MessageBox 恭喜你激活了【幼麒麟】！
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
 
@@ -7271,7 +7271,7 @@ break
 CHECK [260] 0
 #ACT
 SET [260] 1
-MessageBox 恭喜你激活了[黄金虎]！
+MessageBox 恭喜你激活了【黄金虎】！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7287,7 +7287,7 @@ break
 CHECK [261] 0
 #ACT
 SET [261] 1
-MessageBox 恭喜你激活了[独角战马]！
+MessageBox 恭喜你激活了【独角战马】！
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
 
@@ -7303,7 +7303,7 @@ break
 CHECK [262] 0
 #ACT
 SET [262] 1
-MessageBox 恭喜你激活了[赤兔]！
+MessageBox 恭喜你激活了【赤兔】！
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
 
@@ -7319,7 +7319,7 @@ break
 CHECK [263] 0
 #ACT
 SET [263] 1
-MessageBox 恭喜你激活了[烈焰独角]！
+MessageBox 恭喜你激活了【烈焰独角】！
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
 
@@ -7335,7 +7335,7 @@ break
 CHECK [264] 0
 #ACT
 SET [264] 1
-MessageBox 恭喜你激活了[天子之骏]！
+MessageBox 恭喜你激活了【天子之骏】！
 #CALL [\属性重载\武器吸血.txt] @武器吸血
 break
 
@@ -7351,7 +7351,7 @@ break
 CHECK [265] 0
 #ACT
 SET [265] 1
-MessageBox 恭喜你激活了[百兽之王]！
+MessageBox 恭喜你激活了【百兽之王】！
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
 
@@ -7367,7 +7367,7 @@ break
 CHECK [266] 0
 #ACT
 SET [266] 1
-MessageBox 恭喜你激活了[飒露紫]！
+MessageBox 恭喜你激活了【飒露紫】！
 #CALL [\属性重载\属性加成.txt] @属性设置
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
@@ -7384,7 +7384,7 @@ break
 CHECK [267] 0
 #ACT
 SET [267] 1
-MessageBox 恭喜你激活了[乌骓]！
+MessageBox 恭喜你激活了【乌骓】！
 #CALL [\属性重载\属性加成.txt] @属性设置
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
@@ -7401,7 +7401,7 @@ break
 CHECK [268] 0
 #ACT
 SET [268] 1
-MessageBox 恭喜你激活了[白熊]！
+MessageBox 恭喜你激活了【白熊】！
 #CALL [\属性重载\属性加成.txt] @属性设置
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
@@ -7418,7 +7418,7 @@ break
 CHECK [269] 0
 #ACT
 SET [269] 1
-MessageBox 恭喜你激活了[森林白斑]！
+MessageBox 恭喜你激活了【森林白斑】！
 #CALL [\属性重载\武器吸血.txt] @武器吸血
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
@@ -7435,7 +7435,7 @@ break
 CHECK [270] 0
 #ACT
 SET [270] 1
-MessageBox 恭喜你激活了[烈焰]！
+MessageBox 恭喜你激活了【烈焰】！
 #CALL [\属性重载\属性加成.txt] @属性设置
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
@@ -7452,7 +7452,7 @@ break
 CHECK [271] 0
 #ACT
 SET [271] 1
-MessageBox 恭喜你激活了[至尊白虎]！
+MessageBox 恭喜你激活了【至尊白虎】！
 #CALL [\属性重载\属性加成.txt] @属性设置
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
@@ -7469,7 +7469,7 @@ break
 CHECK [272] 0
 #ACT
 SET [272] 1
-MessageBox 恭喜你激活了[拳毛騧]！
+MessageBox 恭喜你激活了【拳毛騧】！
 #CALL [\属性重载\属性加成.txt] @属性设置
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
@@ -7486,7 +7486,7 @@ break
 CHECK [273] 0
 #ACT
 SET [273] 1
-MessageBox 恭喜你激活了[骕骦]！
+MessageBox 恭喜你激活了【骕骦】！
 #CALL [\触发系列\元素触发.txt] @元素伤害
 break
 
@@ -7502,7 +7502,7 @@ break
 CHECK [274] 0
 #ACT
 SET [274] 1
-MessageBox 恭喜你激活了[黄骠]！
+MessageBox 恭喜你激活了【黄骠】！
 #CALL [\触发系列\元素触发.txt] @元素伤害
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
@@ -7519,7 +7519,7 @@ break
 CHECK [275] 0
 #ACT
 SET [275] 1
-MessageBox 恭喜你激活了[天驷]！
+MessageBox 恭喜你激活了【天驷】！
 #CALL [\属性重载\属性加成.txt] @属性设置
 #CALL [\属性重载\游戏爆率.txt] @暴率
 #CALL [\属性重载\武器吸血.txt] @武器吸血
@@ -7537,7 +7537,7 @@ break
 CHECK [276] 0
 #ACT
 SET [276] 1
-MessageBox 恭喜你激活了[森林狼]！
+MessageBox 恭喜你激活了【森林狼】！
 #CALL [\触发系列\元素触发.txt] @元素伤害
 #CALL [\属性重载\属性加成.txt] @属性设置
 #CALL [\属性重载\游戏爆率.txt] @暴率
@@ -7555,7 +7555,7 @@ break
 CHECK [277] 0
 #ACT
 SET [277] 1
-MessageBox 恭喜你激活了[雪狼]！
+MessageBox 恭喜你激活了【雪狼】！
 #CALL [\属性重载\游戏爆率.txt] @暴率
 #CALL [\触发系列\元素触发.txt] @元素伤害
 #CALL [\属性重载\属性加成.txt] @属性设置
@@ -7573,7 +7573,7 @@ break
 CHECK [278] 0
 #ACT
 SET [278] 1
-MessageBox 恭喜你激活了[照夜玉狼]！
+MessageBox 恭喜你激活了【照夜玉狼】！
 #CALL [\属性重载\武器吸血.txt] @武器吸血
 #CALL [\触发系列\元素触发.txt] @元素伤害
 #CALL [\属性重载\属性加成.txt] @属性设置
@@ -7591,7 +7591,7 @@ break
 CHECK [279] 0
 #ACT
 SET [279] 1
-MessageBox 恭喜你激活了[八骏]！
+MessageBox 恭喜你激活了【八骏】！
 #CALL [\触发系列\元素触发.txt] @元素伤害
 #CALL [\属性重载\属性加成.txt] @属性设置
 break
@@ -7608,7 +7608,7 @@ break
 CHECK [280] 0
 #ACT
 SET [280] 1
-MessageBox 恭喜你激活了[青骓]！
+MessageBox 恭喜你激活了【青骓】！
 #CALL [\触发系列\元素触发.txt] @元素伤害
 #CALL [\属性重载\属性加成.txt] @属性设置
 break

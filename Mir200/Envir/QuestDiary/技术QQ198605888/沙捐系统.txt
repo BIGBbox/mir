@@ -68,11 +68,11 @@ GOTO @读取数据
 ; <RText|id=add1|x=74.0|y=200|color=255|size=16|text=<第一名捐献需大于15000RMB点。第二名需大于10000RMB点，第三名大于7000RMB点/FCOLOR=146>>
 
     <RText|id=18|x=74.0|y=270|color=250|size=16|text=<沙巴克获胜行会将获得抢榜捐献值的60%奖励/FCOLOR=251>\<累计抢榜金额:/FCOLOR=250> <$GLOBAL(沙捐总值)>>
-    ; <RText|id=11|x=74.0|y=270|color=255|size=16|text=<凡是累计捐献达到300RMB点,即可获得以下属性/FCOLOR=250>>
-    <RText|id=14|x=74.0|y=310|color=146|size=16|text=<参与捐献将获得攻魔道+50，生命+3000，魔切道切+20%>>
-    <RText|id=15|children=15_1|x=74.0|y=330|color=255|size=16|text=<注：沙巴克结束时捐献数据会清零,请玩家们理性捐献！/FCOLOR=251>>
+    <RText|id=11|x=74.0|y=240|color=255|size=16|text=<注:/FCOLOR=249><首次捐献只需/FCOLOR=251><300RMB点/FCOLOR=250><,多捐将会造成损失！/FCOLOR=251>>
+    <RText|id=14|x=74.0|y=310|color=146|size=16|text=<永久捐献将获得攻魔道+50，生命+3000，魔切道切+20%>>
+    <RText|id=15|children=15_1|x=74.0|y=330|color=255|size=16|text=<注：沙巴克结束时抢榜数据会清零,请玩家们理性抢榜！/FCOLOR=251>>
     <RText|id=17|x=80.0|y=370|color=255|size=16|text=<你的当前排名：/FCOLOR=146><<$STR(S$你的当前排名)>/FCOLOR=250>>
-    <Button|id=16|x=330.0|y=370|nimg=public/sf1/1/01096.png|pimg=public/sf1/1/01098.png|link=@@inputinteger4(首次捐献最少300,二次抢榜RMB数量不小于1)>
+    <Button|id=16|x=330.0|y=370|nimg=public/sf1/1/01096.png|pimg=public/sf1/1/01098.png|link=@@inputinteger4(永久捐献需300RMB点，请不要多捐，造成损失玩家自行负责！)>
     <Button|id=btn1|x=510.0|y=435|children=btn1_text|nimg=public/sf1/1/01092.png|pimg=public/sf1/1/01094.png|link=@一键抢榜>
     ; <RText|id=btn1_text|x=-10.0|y=40|color=255|size=16|text=<捐献第一名可进入/FCOLOR=250>>
 
