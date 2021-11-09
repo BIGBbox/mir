@@ -213,8 +213,17 @@ goto @获取图鉴
 #if
 #act
 ; CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
-CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
+DELNPC 攻城奖池领取
+CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
+CLEARNAMELIST ..\QuestDiary\捐献系统\捐献排名.txt
+CLEARNAMELIST ..\QuestDiary\捐献系统\捐献数据.txt
+CLEARNAMELIST ..\QuestDiary\技术QQ198605888\沙城成员领取记录.txt
+ClearHumCustVar 沙城捐献 0
 mov G16 0
+
+; mov G9 0
+CALCVAR GLOBAL 沙捐总值 = 0
+SAVEVAR GLOBAL 沙捐总值
 sendmsg 5 U20:<$str(U20)>-U17:<$STR(U17)>-合区时间:<$HFTIME>--·<$str(G16)>·--<$str(G300)>————管理员---<$DAY>--开启---<$HOUR>
 ; CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
 

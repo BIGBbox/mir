@@ -8,7 +8,7 @@
 ; #AutoRun NPC RUNONWEEK 6:20:00 @开启攻城
 ; #AutoRun NPC RUNONWEEK 6:21:00 @攻城结束
 
-#AutoRun NPC RUNONDAY 00:59:00 @每日重置
+#AutoRun NPC RUNONDAY 23:59:00 @每日重置
 
 ; 合区当天开启攻城
 #AutoRun NPC RUNONDAY 19:29:00 @攻城提示
