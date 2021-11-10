@@ -11,7 +11,7 @@ VAR Integer GLOBAL 沙捐总值
 #if
 not equal G0 <$HFCOUNT> 
 #act
-inc G0 1
+mov G0 <$HFCOUNT> 
 ; CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
 ; CLEARNAMELIST ..\QuestDiary\捐献系统\捐献排名.txt
 SortHumVar 沙城捐献 S$玩家名字 N$捐献数额 0 1 3
