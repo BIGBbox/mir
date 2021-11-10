@@ -210,16 +210,21 @@ goto @获取图鉴
 
 [@ceshi1]
 
-#if
-equal U20 0
-#act
-GMEXECUTE StartQuest @QM零点重置
 
 #if
 #act
-; CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
-inc G300 1
-sendmsg 5 U20:<$str(U20)>-U17:<$STR(U17)>-合区时间:<$HFTIME>--·<$str(G16)>·--<$str(G300)>————管理员---<$DAY>--开启---<$HOUR>
+CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
+CLEARNAMELIST ..\QuestDiary\捐献系统\捐献排名.txt
+CLEARNAMELIST ..\QuestDiary\捐献系统\捐献数据.txt
+CLEARNAMELIST ..\QuestDiary\技术QQ198605888\沙城成员领取记录.txt
+ClearHumCustVar 沙城捐献 0
+mov G16 0
+
+; mov G9 0
+CALCVAR GLOBAL 沙捐总值 = 0
+SAVEVAR GLOBAL 沙捐总值
+
+sendmsg 5 U20:<$str(U20)>-U17:<$STR(U17)>-合区时间:<$HFTIME>--领取人数:·<$str(G16)>·-开区天数-<$str(G300)>——
 ; CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
 
 mov S19 2021/11/3 12:10:14

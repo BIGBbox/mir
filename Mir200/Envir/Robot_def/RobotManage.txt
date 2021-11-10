@@ -1,6 +1,6 @@
 [@攻城提示]
 #if
-not large <$str(G300)> 3
+small <$str(G300)> 3
 #act
 break
 
@@ -26,7 +26,7 @@ AddAttackSabukAll 0
 
 [@开启攻城]
 #if
-not large <$str(G300)> 3
+small <$str(G300)> 3
 #act
 break
 
@@ -52,7 +52,7 @@ SendCenterMsg 250 0 ┗-------------------------------------------┛ 1 60
 
 [@攻城结束]
 #if
-not large <$str(G300)> 3
+small <$str(G300)> 3
 #act
 break
 
@@ -89,7 +89,7 @@ GMEXECUTE StartQuest @QM零点重置
 ; goto @判断开区时间差
 
 #if
-not large <$str(G300)> 3
+small <$str(G300)> 3
 #act
 break
 

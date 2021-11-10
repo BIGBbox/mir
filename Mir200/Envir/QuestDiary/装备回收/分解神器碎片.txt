@@ -3529,10 +3529,10 @@ INC N$分解装备数量 1
 INC N$分解碎片数量 19
 
 #IF
-CHECKITEM 饮虎痴㊣ 1
+CHECKITEM 饮血戒㊣ 1
 #ACT
 GIVE 神器碎片 20
-TAKE 饮虎痴㊣ 1
+TAKE 饮血戒㊣ 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 20
 
@@ -5121,10 +5121,10 @@ INC N$分解装备数量 1
 INC N$分解碎片数量 19
 
 #IF
-CHECKITEM 饮虎痴㊣ 1
+CHECKITEM 饮血戒㊣ 1
 #ACT
 GIVE 神器碎片 20
-TAKE 饮虎痴㊣ 1
+TAKE 饮血戒㊣ 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 20
 

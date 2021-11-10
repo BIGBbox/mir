@@ -1,6 +1,13 @@
 ;此脚为登录脚本,人物每次登录时都会执行此脚本,所有人物初始设置都可以放在此脚本中.
 ;修改脚本内容,可用@ReloadManage命令重新加载该脚本,不须重启程序.
 [@Startup]
+
+#if
+#act
+; 初始化全局自定义变量
+VAR Integer GLOBAL 沙捐总值
+
+
 #if
 not equal G0 <$HFCOUNT> 
 #act
@@ -8,6 +15,26 @@ inc G0 1
 ; CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
 ; CLEARNAMELIST ..\QuestDiary\捐献系统\捐献排名.txt
 SortHumVar 沙城捐献 S$玩家名字 N$捐献数额 0 1 3
+mov N$统计沙捐总额
+mov N$统计沙捐总额序号 0
+goto @计算沙捐总额
+
+[@计算沙捐总额]
+#if
+#act
+
+GetListString ..\QuestDiary\捐献系统\捐献数据.txt <$str(N$统计沙捐总额序号)> S$捐献名字 S$捐献数量
+
+inc N$统计沙捐总额 <$str(S$捐献数量)>
+inc N$统计沙捐总额序号 1
+
+#if
+not equal <$str(S$捐献名字)>
+#act
+goto @计算沙捐总额
+; #elseact
+CALCVAR GLOBAL 沙捐总值 = <$STR(N$统计沙捐总额)>
+SAVEVAR GLOBAL 沙捐总值
 
 [@Login]
 
@@ -89,7 +116,7 @@ DELAYGOTO 100 @延迟开启登录限制
 
 VAR Integer HUMAN 今日充值
 VAR Integer HUMAN 沙城捐献
-VAR Integer GLOBAL 沙捐总值
+; VAR Integer GLOBAL 沙捐总值
 ; CHECKVAR GLOBAL G9 = <$str(G9)>
 VAR Integer HUMAN 累计充值领取标记1
 VAR Integer HUMAN 累计充值领取标记2

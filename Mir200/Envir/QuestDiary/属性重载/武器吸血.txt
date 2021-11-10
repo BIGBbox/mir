@@ -156,7 +156,7 @@ inc N$攻击吸血 <$str(S$武器位置五)>
 #IF
 large <$STR(N$攻击吸血)> 0
 #ACT
-SENDMSG 5 〖提示〗人物当前吸血比例：<$STR(N$攻击吸血)>%！
+; SENDMSG 5 〖提示〗人物当前吸血比例：<$STR(N$攻击吸血)>%！
 mul N$攻击吸血 100
 ChangeModeEx 20 65535 100 <$STR(N$攻击吸血)>
 ChangeModeEx 21 65535 100 <$STR(N$攻击吸血)>

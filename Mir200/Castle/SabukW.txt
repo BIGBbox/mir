@@ -3,7 +3,7 @@ CastleName=É³°Í¿Ë
 OwnGuild=0
 ChangeDate=2021/1/24 11:21:18
 WarDate=2021/1/24 11:21:18
-IncomeToday=2021/11/5 11:15:53
+IncomeToday=2021/11/10 15:32:05
 TotalGold=0
 TodayIncome=0
 
