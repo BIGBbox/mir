@@ -1428,14 +1428,14 @@ HUMANMP + <$STR(N$吸血值)>
 
 
 #IF
-; large <$STR(N$打怪伤害)> 0
+large <$STR(N$怪物额外伤害)> 100
 NOT CHECKCURRTARGETRACE = 0
 #ACT
 mov N$打怪伤害 <$MAXDC>
-MUL <$STR(N$打怪伤害)> <$STR(N$怪物额外伤害)>
-DIV <$STR(N$打怪伤害)> 100
+MUL N$打怪伤害 <$STR(N$怪物额外伤害)>
+DIV N$打怪伤害 100
+
 M.HUMANHP - <$STR(N$打怪伤害)> 1
-; SendCenterMsg 怪物额外伤害 0 魔法切割触发:打掉目标<$STR(N$打怪伤害)>点Hp.<$PKPOWER>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 0 2
 
 
 #IF
@@ -1452,7 +1452,6 @@ NOT SMALL <$STR(N$魔法切割值)> 1
 not check [5] 1
 #ACT
 M.HUMANHP - <$STR(N$魔法切割值)> 102
-;SendCenterMsg 146 0 魔法切割触发:打掉目标<$STR(N$魔法切割值)>点Hp.　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 0 2
 
 #IF
 large <$STR(N$道术切割)> 0
