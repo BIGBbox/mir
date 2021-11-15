@@ -13,14 +13,14 @@ close
 messagebox 您已完成全部中级神之天赋修炼！请前往更高级神之天赋修炼！
 break
 
- #if
- small U1 10
- small U2 10
- small U3 10
- small U4 10
- small U6 10
- small U7 10
- #act
+#or
+small U1 10
+small U2 10
+small U3 10
+small U4 10
+small U6 10
+small U7 10
+#act
 messagebox 先完成初级神之天赋修炼！
 break
 
@@ -359,27 +359,27 @@ MOV S$晋升修炼5 <已修炼最高:/FCOLOR=249>
 <Button|x=809|y=125|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 ; 1，11，21，5，31，41
 <Img|id=修炼等级1|children={修炼等级1_btn,修炼等级1_描述,}|x=12|y=70.0|height=1|width=1|img=public/1900000665.png>
-    <Button|id=修炼等级1_btn|x=0|y=0|nimg=public/sf1/1/01154.png|pimg=public/sf1/1/01156.png|tipsx=10|tipsy=80|size=16|color=249|link=@中级天赋升级二次确认#参数=1>
+    <Button|id=修炼等级1_btn|x=0|y=0|nimg=public/sf1/1/01154.png|pimg=public/sf1/1/01156.png|tipsx=10|tipsy=80|size=16|color=249|link=@中级天赋升级二次确认#参数=1#变量=U9>
     <RText|id=修炼等级1_描述|x=15|y=65|size=16|text=<修炼等级：/FCOLOR=215>[<$STR(N$体力基数)>]>
 
 <Img|id=修炼等级2|children={修炼等级2_btn,修炼等级2_描述,}|x=172|y=70.0|height=1|width=1|img=public/1900000665.png>
-    <Button|id=修炼等级2_btn|x=0|y=0|nimg=public/sf1/1/01115.png|pimg=public/sf1/1/01117.png|tipsx=10|tipsy=80|size=16|color=249|link=@中级天赋升级二次确认#参数=11>
+    <Button|id=修炼等级2_btn|x=0|y=0|nimg=public/sf1/1/01115.png|pimg=public/sf1/1/01117.png|tipsx=10|tipsy=80|size=16|color=249|link=@中级天赋升级二次确认#参数=11#变量=U10>
     <RText|id=修炼等级2_描述|x=15|y=65|size=16|text=<修炼等级：/FCOLOR=215>[<$STR(N$魔力基数)>]>
 
 <Img|id=修炼等级3|children={修炼等级3_btn,修炼等级3_描述,}|x=12|y=170.0|height=1|width=1|img=public/1900000665.png>
-    <Button|id=修炼等级3_btn|x=0|y=0|nimg=public/sf1/1/01103.png|pimg=public/sf1/1/01105.png|tipsx=10|tipsy=80|size=16|color=249|link=@中级天赋升级二次确认#参数=21>
+    <Button|id=修炼等级3_btn|x=0|y=0|nimg=public/sf1/1/01103.png|pimg=public/sf1/1/01105.png|tipsx=10|tipsy=80|size=16|color=249|link=@中级天赋升级二次确认#参数=21#变量=U11>
     <RText|id=修炼等级3_描述|x=15|y=65|size=16|text=<修炼等级：/FCOLOR=215>[<$STR(N$攻击基数)>]>
 
 <Img|id=修炼等级4|children={修炼等级4_btn,修炼等级4_描述,}|x=172|y=170.0|height=1|width=1|img=public/1900000665.png>
-    <Button|id=修炼等级4_btn|x=0|y=0|nimg=public/sf1/1/01106.png|pimg=public/sf1/1/01108.png|tipsx=10|tipsy=80|size=16|color=249|link=@中级天赋升级二次确认#参数=5>
+    <Button|id=修炼等级4_btn|x=0|y=0|nimg=public/sf1/1/01106.png|pimg=public/sf1/1/01108.png|tipsx=10|tipsy=80|size=16|color=249|link=@中级天赋升级二次确认#参数=5#变量=U5>
     <RText|id=修炼等级4_描述|x=15|y=65|size=16|text=<修炼等级：/FCOLOR=215>[<$STR(N$爆率基数)>]>
 
 <Img|id=修炼等级5|children={修炼等级5_btn,修炼等级5_描述,}|x=12|y=270.0|height=1|width=1|img=public/1900000665.png>
-    <Button|id=修炼等级5_btn|x=0|y=0|nimg=public/sf1/1/01109.png|pimg=public/sf1/1/01111.png|tipsx=10|tipsy=80|size=16|color=249|link=@中级天赋升级二次确认#参数=31>
+    <Button|id=修炼等级5_btn|x=0|y=0|nimg=public/sf1/1/01109.png|pimg=public/sf1/1/01111.png|tipsx=10|tipsy=80|size=16|color=249|link=@中级天赋升级二次确认#参数=31#变量=U12>
     <RText|id=修炼等级5_描述|x=15|y=65|size=16|text=<修炼等级：/FCOLOR=215>[<$STR(N$魔法力基数)>]>
 
 <Img|id=修炼等级6|children={修炼等级6_btn,修炼等级6_描述,}|x=172|y=270.0|height=1|width=1|img=public/1900000665.png>
-    <Button|id=修炼等级6_btn|x=0|y=0|nimg=public/sf1/1/01112.png|pimg=public/sf1/1/01114.png|tipsx=10|tipsy=80|size=16|color=249|link=@中级天赋升级二次确认#参数=41>
+    <Button|id=修炼等级6_btn|x=0|y=0|nimg=public/sf1/1/01112.png|pimg=public/sf1/1/01114.png|tipsx=10|tipsy=80|size=16|color=249|link=@中级天赋升级二次确认#参数=41#变量=U13>
     <RText|id=修炼等级6_描述|x=15|y=65|size=16|text=<修炼等级：/FCOLOR=215>[<$STR(N$道术力基数)>]>
 
 <RText|id=加成描述1|x=310|y=100|size=15|text=<体力元素加成：/FCOLOR=254><体力元素 +<$STR(N$体力基数)>/FCOLOR=253>>
@@ -482,6 +482,13 @@ mov S$串4 <<$STR(N$材料4)>/FCOLOR=250></<$STR(N$材料4)>/FCOLOR=250>
 
 
 [@中级天赋升级二次确认]
+#if
+large <$str(<$str(S$变量)>)> 8
+#act
+messagebox 该天赋已满级了!!
+break
+
+
 #if
 #act
 goto @检测中级消耗是否足够

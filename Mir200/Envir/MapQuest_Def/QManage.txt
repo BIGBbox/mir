@@ -6,7 +6,11 @@
 #act
 ; 初始化全局自定义变量
 VAR Integer GLOBAL 沙捐总值
-
+mov N$统计沙捐总额
+mov N$统计沙捐总额序号 0
+mov N$统计沙捐总额序号1 1
+mov N$统计沙捐总额序号2 2
+goto @计算沙捐总额
 
 #if
 not equal G0 <$HFCOUNT> 
@@ -15,21 +19,27 @@ mov G0 <$HFCOUNT>
 ; CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
 ; CLEARNAMELIST ..\QuestDiary\捐献系统\捐献排名.txt
 SortHumVar 沙城捐献 S$玩家名字 N$捐献数额 0 1 3
-mov N$统计沙捐总额
-mov N$统计沙捐总额序号 0
-goto @计算沙捐总额
 
 [@计算沙捐总额]
 #if
 #act
 
 GetListString ..\QuestDiary\捐献系统\捐献数据.txt <$str(N$统计沙捐总额序号)> S$捐献名字 S$捐献数量
+GetListString ..\QuestDiary\捐献系统\捐献数据.txt <$str(N$统计沙捐总额序号1)> S$捐献名字1 S$捐献数量1
+GetListString ..\QuestDiary\捐献系统\捐献数据.txt <$str(N$统计沙捐总额序号2)> S$捐献名字2 S$捐献数量2
 
 inc N$统计沙捐总额 <$str(S$捐献数量)>
-inc N$统计沙捐总额序号 1
+inc N$统计沙捐总额 <$str(S$捐献数量1)>
+inc N$统计沙捐总额 <$str(S$捐献数量2)>
 
-#if
+inc N$统计沙捐总额序号 3
+inc N$统计沙捐总额序号1 3
+inc N$统计沙捐总额序号2 3
+
+#or
 not equal <$str(S$捐献名字)>
+not equal <$str(S$捐献名字1)>
+not equal <$str(S$捐献名字2)>
 #act
 goto @计算沙捐总额
 ; #elseact
@@ -161,14 +171,25 @@ VAR Integer HUMAN 角色攻击力
 
 [@延迟开启登录限制]
 #if
-equal <$USERNAME> 胡清风如我
-; equal <$USERACCOUNT> dins333
+; equal <$USERNAME> 胡清风如我
+equal <$USERACCOUNT> 7943268 
 #act
 ; mov G300 4
 CHANGEPERMISSION 10
-sendmsg 5 U20:<$str(U20)>-U17:<$STR(U17)>-合区时间:<$HFTIME>----<$str(G300)>————管理员---<$USERACCOUNT>
-
-
+sendmsg 5 G0-<$HFCOUNT>——合区时间:<$HFTIME>----<$str(G300)>————管理员---<$USERACCOUNT>----<$STR(N$统计沙捐总额)>
+GetListString ..\QuestDiary\捐献系统\捐献数据.txt 0 S$捐献名字0 S$捐献数量0
+GetListString ..\QuestDiary\捐献系统\捐献数据.txt 1 S$捐献名字1 S$捐献数量1
+GetListString ..\QuestDiary\捐献系统\捐献数据.txt 2 S$捐献名字2 S$捐献数量2
+GetListString ..\QuestDiary\捐献系统\捐献数据.txt 3 S$捐献名字3 S$捐献数量3
+GetListString ..\QuestDiary\捐献系统\捐献数据.txt 4 S$捐献名字4 S$捐献数量4
+GetListString ..\QuestDiary\捐献系统\捐献数据.txt 5 S$捐献名字5 S$捐献数量5
+sendmsg 5 =================
+sendmsg 5 <$str(S$捐献名字0)>=<$str(S$捐献数量0)>
+sendmsg 5 <$str(S$捐献名字1)>=<$str(S$捐献数量1)>
+sendmsg 5 <$str(S$捐献名字2)>=<$str(S$捐献数量2)>
+sendmsg 5 <$str(S$捐献名字3)>=<$str(S$捐献数量3)>
+sendmsg 5 <$str(S$捐献名字4)>=<$str(S$捐献数量4)>
+sendmsg 5 <$str(S$捐献名字5)>=<$str(S$捐献数量5)>
 #if
 #act
 EXTBAGOPENITEMCOUNT 126

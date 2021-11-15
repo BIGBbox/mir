@@ -2,7 +2,6 @@
 {
 #IF
 #act
-sendmsg 5 Ãæ°å
 mov N$width <$SCREENWIDTH>
 mov N$height <$SCREENHEIGHT>
 

@@ -206,12 +206,11 @@ MOV N$捐献_输入数量  <$STR(N4)>
 #if
 check [11] 0
 #act
-MOV N$捐献_输入数量  300
+MOV N$捐献_输入数量 300
 
 #if
 #act
 
-MOV N$当前升级_需要RMB点  <$STR(N$捐献_输入数量)>
 MOV S$人物财产 $STM(ITEMCOUNT_RMB点)
 
 #IF
@@ -223,13 +222,13 @@ break
 
 #IF
 check [11] 0
-SMALL N$捐献_输入数量 300
+SMALL <$str(N$捐献_输入数量)> 300
 #ACT
 MESsAGEBOX 首次捐献必须大于300RMB点！
 BREAK
 
 #if
-small <$STR(N4)> 1
+small <$STR(N$捐献_输入数量)> 1
 #ACT
 messagebox 最少需要捐献1RMB点！！
 break

@@ -8,7 +8,7 @@
 <Layout|x=597|y=3|width=80|height=80|link=@exit>
 <Button|x=789|y=115|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
 
-<RText|id=合成描述|x=45|y=48|color=149|size=16|text=<时装全靠打:/FCOLOR=250><集齐这九种衣服合成更高级衣服（魔铠【防】）/FCOLOR=149>>
+<RText|id=合成描述|x=45|y=48|color=149|size=16|text=<时装全靠打:/FCOLOR=250><集齐这七种衣服合成更高级衣服（魔铠【防】）/FCOLOR=149>>
 <ItemShow|id=gable_item|itemid=11845|itemcount=1|x=217|y=99.0>
 
 <ItemShow|id=need_item1|itemid=11773|itemcount=1|x=10|y=199.0|bgtype=1>
@@ -18,11 +18,9 @@
 <ItemShow|id=need_item5|itemid=11777|itemcount=1|x=278|y=199.0|bgtype=1>
 <ItemShow|id=need_item6|itemid=11778|itemcount=1|x=345|y=199.0|bgtype=1>
 <ItemShow|id=need_item7|itemid=11779|itemcount=1|x=412|y=199.0|bgtype=1>
-<ItemShow|id=need_item8|itemid=11780|itemcount=1|x=479|y=199.0|bgtype=1>
-<ItemShow|id=need_item9|itemid=11781|itemcount=1|x=542|y=199.0|bgtype=1>
 
-<Button|id=click_btn|x=120|y=300|nimg=public/sf1/1/01344.png|pimg=public/sf1/1/01346.png|tips={合成条件：/FCOLOR=249}^{扑天雕之铠*1/FCOLOR=251}^{小旋风战甲*1/FCOLOR=251}^{活阎王魔铠*1/FCOLOR=251}^{神行太保魇铠*1/FCOLOR=251}^{翻江蜃披风*1/FCOLOR=251}^{出洞蛟板甲*1/FCOLOR=251}^{混江龙魔甲*1/FCOLOR=251}^{浪子皮肤*1/FCOLOR=251}^{鼓上蚤战甲*1/FCOLOR=251}^{1亿5000W元宝/FCOLOR=251}^|tipsx=10|tipsy=150|size=16|color=249|link=@魔铠防合成>
-<Button|id=click_btn1|x=270|y=300|nimg=public/sf1/1/01347.png|pimg=public/sf1/1/01349.png|tips={合成条件：/FCOLOR=249}^{扑天雕之铠*1/FCOLOR=251}^{小旋风战甲*1/FCOLOR=251}^{活阎王魔铠*1/FCOLOR=251}^{神行太保魇铠*1/FCOLOR=251}^{翻江蜃披风*1/FCOLOR=251}^{出洞蛟板甲*1/FCOLOR=251}^{混江龙魔甲*1/FCOLOR=251}^{浪子皮肤*1/FCOLOR=251}^{鼓上蚤战甲*1/FCOLOR=251}^{2W天下币/FCOLOR=251}|tipsx=10|tipsy=150|size=16|color=249|link=@魔铠防合成1>
+<Button|id=click_btn|x=120|y=300|nimg=public/sf1/1/01344.png|pimg=public/sf1/1/01346.png|tips={合成条件：/FCOLOR=249}^{扑天雕之铠*1/FCOLOR=251}^{小旋风战甲*1/FCOLOR=251}^{活阎王魔铠*1/FCOLOR=251}^{神行太保魇铠*1/FCOLOR=251}^{翻江蜃披风*1/FCOLOR=251}^{出洞蛟板甲*1/FCOLOR=251}^{混江龙魔甲*1/FCOLOR=251}^{1亿5000W元宝/FCOLOR=251}^|tipsx=10|tipsy=150|size=16|color=249|link=@魔铠防合成>
+<Button|id=click_btn1|x=270|y=300|nimg=public/sf1/1/01347.png|pimg=public/sf1/1/01349.png|tips={合成条件：/FCOLOR=249}^{扑天雕之铠*1/FCOLOR=251}^{小旋风战甲*1/FCOLOR=251}^{活阎王魔铠*1/FCOLOR=251}^{神行太保魇铠*1/FCOLOR=251}^{翻江蜃披风*1/FCOLOR=251}^{出洞蛟板甲*1/FCOLOR=251}^{混江龙魔甲*1/FCOLOR=251}^{2W天下币/FCOLOR=251}|tipsx=10|tipsy=150|size=16|color=249|link=@魔铠防合成1>
 
 [@魔铠防合成]
 #if
@@ -34,8 +32,6 @@ CHECKITEM 神行太保魇铠 1
 CHECKITEM 翻江蜃披风 1
 CHECKITEM 出洞蛟板甲 1
 CHECKITEM 混江龙魔甲 1
-CHECKITEM 浪子皮肤 1
-CHECKITEM 鼓上蚤战甲 1
 #ACT
 GAMEGOLD - 150000000
 take 扑天雕之铠 1
@@ -45,8 +41,6 @@ take 神行太保魇铠 1
 take 翻江蜃披风 1
 take 出洞蛟板甲 1
 take 混江龙魔甲 1
-take 浪子皮肤 1
-take 鼓上蚤战甲 1
 GIVE 魔铠【防】 1
 SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【魔铠【防】】/FCOLOR=58>
 BREAK
@@ -64,8 +58,6 @@ CHECKITEM 神行太保魇铠 1
 CHECKITEM 翻江蜃披风 1
 CHECKITEM 出洞蛟板甲 1
 CHECKITEM 混江龙魔甲 1
-CHECKITEM 浪子皮肤 1
-CHECKITEM 鼓上蚤战甲 1
 #ACT
 GAMEDIAMOND - 20000
 take 扑天雕之铠 1
@@ -75,8 +67,6 @@ take 神行太保魇铠 1
 take 翻江蜃披风 1
 take 出洞蛟板甲 1
 take 混江龙魔甲 1
-take 浪子皮肤 1
-take 鼓上蚤战甲 1
 GIVE 魔铠【防】 1
 SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【魔铠【防】】/FCOLOR=58>
 BREAK

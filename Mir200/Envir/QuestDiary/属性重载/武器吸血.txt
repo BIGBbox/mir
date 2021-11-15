@@ -162,9 +162,9 @@ ChangeModeEx 20 65535 100 <$STR(N$¹¥»÷ÎüÑª)>
 ChangeModeEx 21 65535 100 <$STR(N$¹¥»÷ÎüÑª)>
 
 
-#if
-#act
-#CALL [\ÓÎÏ·µÇÂ½\ÓÒÏÂÏÔÊ¾.txt] @ÊôÐÔÏÔÊ¾
+; #if
+; #act
+; #CALL [\ÓÎÏ·µÇÂ½\ÓÒÏÂÏÔÊ¾.txt] @ÊôÐÔÏÔÊ¾
 
 
 }

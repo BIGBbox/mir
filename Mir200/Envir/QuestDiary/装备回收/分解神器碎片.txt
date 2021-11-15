@@ -879,6 +879,30 @@ TAKE 乌鸦基米安 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 15
 
+#IF
+CHECKITEM 七星北斗剑 1
+#ACT
+GIVE 神器碎片 8
+TAKE 七星北斗剑 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 8
+
+#IF
+CHECKITEM 魔剑 1
+#ACT
+GIVE 神器碎片 8
+TAKE 魔剑 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 8
+
+#IF
+CHECKITEM 镇妖剑 1
+#ACT
+GIVE 神器碎片 8
+TAKE 镇妖剑 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 8
+
 
 #IF
 CHECKITEM 蛤蟆功 1
@@ -5448,6 +5472,8 @@ GIVE 神器碎片 20
 TAKE 苍澜灭魔靴㊣ 1
 INC N$分解装备数量 1
 INC N$分解碎片数量 20
+
+
 
 #if
 #act

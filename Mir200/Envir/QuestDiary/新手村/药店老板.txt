@@ -2,13 +2,13 @@
 {
 
 #if
-checklevelex < 20
+checklevelex < 30
 #act
-mov S$任务状态 10W经验,黑铁头盔和绿色项链/FCOLOR=250
+; mov S$任务状态 10W经验,黑铁头盔和绿色项链/FCOLOR=250
 DELAYGOTO 10 @药店老板
-#elseact
-messagebox 尊敬的勇士,你已经做过这个任务了!!
-break
+; #elseact
+; messagebox 尊敬的勇士,你已经做过这个任务了!!
+; break
 
 [@药店老板]
 #If
@@ -28,13 +28,13 @@ Navigation 0 click_btn1 点击完成任务
 [@药店老板任务]
 
 #if
-equal U108 1
+; equal U108 1
 #act
 goto @领取奖励
 
-#elseact
-messagebox 尊敬的勇士,你已经做过这个任务了!!
-break
+; #elseact
+; messagebox 尊敬的勇士,你已经做过这个任务了!!
+; break
 
 
 [@领取奖励]

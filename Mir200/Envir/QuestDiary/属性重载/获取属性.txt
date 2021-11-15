@@ -2,38 +2,38 @@
 {
 #if
 #act
-mov S$武器名字 <$WEAPON>
-mov S$头盔名字 <$HELMET>
-mov S$项链名字 <$NECKLACE>
-mov S$左戒名字 <$RING_L>
-mov S$右戒名字 <$RING_R>
-mov S$左手名字 <$ARMRING_L>
-mov S$右手名字 <$ARMRING_R>
-mov S$腰带名字 <$BELT>
-mov S$靴子名字 <$BOOTS>
-mov S$衣服名字 <$DRESS>
+; mov S$武器名字 <$WEAPON>
+; mov S$头盔名字 <$HELMET>
+; mov S$项链名字 <$NECKLACE>
+; mov S$左戒名字 <$RING_L>
+; mov S$右戒名字 <$RING_R>
+; mov S$左手名字 <$ARMRING_L>
+; mov S$右手名字 <$ARMRING_R>
+; mov S$腰带名字 <$BELT>
+; mov S$靴子名字 <$BOOTS>
+; mov S$衣服名字 <$DRESS>
 
-DEPRIVETITLE 第一名
-DEPRIVETITLE 第二名
-DEPRIVETITLE 第三名
+; DEPRIVETITLE 第一名
+; DEPRIVETITLE 第二名
+; DEPRIVETITLE 第三名
 
-#if
-equal a491 <$username>
-#act
-CONFERTITLE 第一名
-#if
-equal a492 <$username>
-#act
-CONFERTITLE 第二名
-#if
-equal a493 <$username>
-#act
-CONFERTITLE 第三名
+; #if
+; equal a491 <$username>
+; #act
+; CONFERTITLE 第一名
+; #if
+; equal a492 <$username>
+; #act
+; CONFERTITLE 第二名
+; #if
+; equal a493 <$username>
+; #act
+; CONFERTITLE 第三名
 
-#if
-CHECKTEXTLIST ..\QuestDiary\技术QQ198605888\沙城捐献\沙捐名单.txt <$username>
-#elseact
-DEPRIVETITLE 沙城捐献
+; #if
+; CHECKTEXTLIST ..\QuestDiary\技术QQ198605888\沙城捐献\沙捐名单.txt <$username>
+; #elseact
+; DEPRIVETITLE 沙城捐献
 
 #if
 ; 衣服
@@ -146,72 +146,72 @@ CHANGEITEMADDVALUE 11 4 = <$str(N$附加值)>
 CHANGEITEMUPGRADECOUNT 11 = <$str(u35)>
 
 
-#if
-#act
-DEPRIVETITLE 三星
-DEPRIVETITLE 六星
-DEPRIVETITLE 九星
+; #if
+; #act
+; DEPRIVETITLE 三星
+; DEPRIVETITLE 六星
+; DEPRIVETITLE 九星
 
-#if
-large u26 11
-large u27 11
-large u28 11
-large u29 11
-large u30 11
-large u31 11
-large u32 11
-large u33 11
-large u34 11
-large u35 11
-#act
-ADDSKILL 魔法盾 3
-CONFERTITLE 十二星
-break
+; #if
+; large u26 11
+; large u27 11
+; large u28 11
+; large u29 11
+; large u30 11
+; large u31 11
+; large u32 11
+; large u33 11
+; large u34 11
+; large u35 11
+; #act
+; ADDSKILL 魔法盾 3
+; CONFERTITLE 十二星
+; break
 
-#if
-large u26 8
-large u27 8
-large u28 8
-large u29 8
-large u30 8
-large u31 8
-large u32 8
-large u33 8
-large u34 8
-large u35 8
-#act
-CONFERTITLE 九星
-break
+; #if
+; large u26 8
+; large u27 8
+; large u28 8
+; large u29 8
+; large u30 8
+; large u31 8
+; large u32 8
+; large u33 8
+; large u34 8
+; large u35 8
+; #act
+; CONFERTITLE 九星
+; break
 
-#if
-large u26 5
-large u27 5
-large u28 5
-large u29 5
-large u30 5
-large u31 5
-large u32 5
-large u33 5
-large u34 5
-large u35 5
-#act
-CONFERTITLE 六星
-break
+; #if
+; large u26 5
+; large u27 5
+; large u28 5
+; large u29 5
+; large u30 5
+; large u31 5
+; large u32 5
+; large u33 5
+; large u34 5
+; large u35 5
+; #act
+; CONFERTITLE 六星
+; break
 
 
-#if
-large u26 2
-large u27 2
-large u28 2
-large u29 2
-large u30 2
-large u31 2
-large u32 2
-large u33 2
-large u34 2
-large u35 2
-#act
-CONFERTITLE 三星
-break
+; #if
+; large u26 2
+; large u27 2
+; large u28 2
+; large u29 2
+; large u30 2
+; large u31 2
+; large u32 2
+; large u33 2
+; large u34 2
+; large u35 2
+; #act
+; CONFERTITLE 三星
+; break
 
 }

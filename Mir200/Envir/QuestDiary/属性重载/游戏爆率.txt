@@ -11,10 +11,11 @@ MOV N$午夜屠狗 0
 #ACT
 INC N$暴率加成 <$str(u0)>
 
-mov N$称号行数 0
-mov S$我的称号 <$str(T1)>
-goto @获取称号文件夹名
+; mov N$称号行数 0
+; mov S$我的称号 <$str(T1)>
+; goto @获取称号文件夹名
 ; goto @称号爆率加成
+
 ;军火库数量U0
 ; 每日充值礼包增加的爆率
 #if
@@ -28,12 +29,806 @@ INC N$暴率加成 <$str(N$临时爆率提升)>
 
 
 ; 时装图鉴相关
+; #if
+; not equal <$str(T6)>
+; #act
+; mov S$图鉴收集变量 <$str(T6)>
+; mov N$爆率使用序号 1 
+; goto @获取时装图鉴爆率
+
+
+; GetValidstr <$STR(S$我的称号)> & S$爆率this称号 S$我的称号
+; ------------------时装图鉴相关-------------
 #if
-not equal <$str(T6)>
+CheckContainsText <$STR(T6)> 水瓶の翼
 #act
-mov S$图鉴收集变量 <$str(T6)>
-mov N$爆率使用序号 1 
-goto @获取时装图鉴爆率
+INC N$暴率加成 50
+
+#if
+CheckContainsText <$STR(T6)> 双鱼の翼
+#act
+INC N$暴率加成 50
+
+#if
+CheckContainsText <$STR(T6)> 白羊の翼
+#act
+INC N$暴率加成 50
+
+#if
+CheckContainsText <$STR(T6)> 金牛の翼
+#act
+INC N$暴率加成 50
+
+#if
+CheckContainsText <$STR(T6)> 双子の翼
+#act
+INC N$暴率加成 50
+
+#if
+CheckContainsText <$STR(T6)> 巨蟹の翼
+#act
+INC N$暴率加成 50
+
+#if
+CheckContainsText <$STR(T6)> 狮子の翼
+#act
+INC N$暴率加成 50
+
+#if
+CheckContainsText <$STR(T6)> 处女の翼
+#act
+INC N$暴率加成 50
+
+#if
+CheckContainsText <$STR(T6)> 天秤の翼
+#act
+INC N$暴率加成 50
+
+#if
+CheckContainsText <$STR(T6)> 天蝎の翼
+#act
+INC N$暴率加成 50
+
+#if
+CheckContainsText <$STR(T6)> 射手の翼
+#act
+INC N$暴率加成 50
+
+#if
+CheckContainsText <$STR(T6)> 摩羯の翼
+#act
+INC N$暴率加成 50
+
+
+
+;---------------------------
+
+#if
+CheckContainsText <$STR(T1)> 开拓·初出江湖
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 先锋·江湖少侠
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 无畏·武林俊杰
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 驭风·罕有敌手
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 破焰·绝世高手
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 毁灭·傲视群雄
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 审判·独孤求败
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 屠龙·凶神恶煞
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 修罗·屠戮成性
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 神谕·武林魔头
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 乾坤·风华绝月
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 破天·烽火无极
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 天下·问鼎争锋
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 证道·鬼面罗刹
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 玄冥·逆道违天
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 狂舞·百步屠魔
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 浮沉·青天苍茫
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 无敌·死躯灭魂
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 轮回·天地难葬
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 归一·终极审判
+#act
+
+INC N$暴率加成 10
+
+#if
+CheckContainsText <$STR(T1)> 踏碎天地·众生朝
+#act
+
+INC N$暴率加成 20
+
+#if
+CheckContainsText <$STR(T1)> 血染诸天·涅阴阳
+#act
+
+INC N$暴率加成 20
+
+#if
+CheckContainsText <$STR(T1)> 一念天道·化三千
+#act
+
+INC N$暴率加成 20
+
+#if
+CheckContainsText <$STR(T1)> 混化阴阳·断生念
+#act
+
+INC N$暴率加成 20
+
+#if
+CheckContainsText <$STR(T1)> 一笑沧海·化桑田
+#act
+
+INC N$暴率加成 20
+
+#if
+CheckContainsText <$STR(T1)> 万剑归宗·阴阳间
+#act
+
+INC N$暴率加成 20
+
+#if
+CheckContainsText <$STR(T1)> 修罗战火·焚尽天
+#act
+
+INC N$暴率加成 20
+
+#if
+CheckContainsText <$STR(T1)> 人非圣贤·斩情绝
+#act
+
+INC N$暴率加成 20
+
+#if
+CheckContainsText <$STR(T1)> 浮华无忌·百化仙
+#act
+
+INC N$暴率加成 20
+
+#if
+CheckContainsText <$STR(T1)> 唯我独尊·屠苍生
+#act
+
+INC N$暴率加成 20
+
+#if
+CheckContainsText <$STR(T1)> 世界之巅·诸神灭
+#act
+
+INC N$暴率加成 20
+
+#if
+CheckContainsText <$STR(T1)> 西游之力①
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 西游之力②
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 西游之力③
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 西游之力④
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 西游之力⑤
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 西游之力⑥
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 西游之力⑦
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 西游之力⑧
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 西游之力⑨
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 西游之力⑩
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力①
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力②
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力③
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力④
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力⑤
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力⑥
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力⑦
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力⑧
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力⑨
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力⑩
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力①
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力②
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力③
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力④
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力⑤
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力⑥
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力⑦
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力⑧
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力⑨
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力⑩
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力①
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力②
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力③
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力④
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力⑤
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力⑥
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力⑦
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力⑧
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力⑨
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力⑩
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力①
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力②
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力③
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力④
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力⑤
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力⑥
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力⑦
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力⑧
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力⑨
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力⑩
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力①
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力②
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力③
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力④
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力⑤
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力⑥
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力⑦
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力⑧
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力⑨
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力⑩
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力①
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力②
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力③
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力④
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力⑤
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力⑥
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力⑦
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力⑧
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力⑨
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力⑩
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力①
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力②
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力③
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力④
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力⑤
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力⑥
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力⑦
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力⑧
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力⑨
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力⑩
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力①
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力②
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力③
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力④
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力⑤
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力⑥
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力⑦
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力⑧
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力⑨
+#act
+
+INC N$暴率加成 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力⑩
+#act
+
+INC N$暴率加成 1
+
 
 ;---------沙捐----------------
 ; 前三倍攻加成
@@ -1109,87 +1904,87 @@ inc N$暴率显示 <$str(S$会员_爆率)>
 KILLMONBURSTRATE <$STR(N$暴率显示)> 60000
 ; SENDMSG 7 杀怪爆率<$STR(N$暴率显示)>%，时长：60000秒!
 
-#if
-#act
-#CALL [\游戏登陆\右下显示.txt] @属性显示
-#CALL [\游戏登陆\顶部属性.txt] @顶部属性显示
+; #if
+; #act
+; #CALL [\游戏登陆\右下显示.txt] @属性显示
+; #CALL [\游戏登陆\顶部属性.txt] @顶部属性显示
 
 
-[@称号爆率加成]
+; [@称号爆率加成]
 
-#if
-#act
-GetValidstr <$STR(S$我的称号)> & S$爆率this称号 S$我的称号
+; #if
+; #act
+; GetValidstr <$STR(S$我的称号)> & S$爆率this称号 S$我的称号
 
-ReadConfigFileItem ..\QuestDiary\称号系统\<$str(S$称号)>\<$str(S$称号)>数据.txt <$str(S$爆率this称号)> 爆率加成 N$爆率加成称号
-#if
-CHECKTITLE <$str(S$爆率this称号)>
-not equal <$str(N$爆率加成称号)> 0
-#act
-INC N$暴率加成 <$str(N$爆率加成称号)>
-; sendmsg 5 称号#<$str(S$称号)>::<$str(S$爆率this称号)>::<$str(N$爆率加成)>::
-; mov S$爆率this称号
-break
+; ReadConfigFileItem ..\QuestDiary\称号系统\<$str(S$称号)>\<$str(S$称号)>数据.txt <$str(S$爆率this称号)> 爆率加成 N$爆率加成称号
+; #if
+; CHECKTITLE <$str(S$爆率this称号)>
+; not equal <$str(N$爆率加成称号)> 0
+; #act
+; INC N$暴率加成 <$str(N$爆率加成称号)>
+; ; sendmsg 5 称号#<$str(S$称号)>::<$str(S$爆率this称号)>::<$str(N$爆率加成)>::
+; ; mov S$爆率this称号
+; break
 
-#if
-not equal <$STR(S$我的称号)>
-#act
-goto @称号爆率加成
-
-
-[@获取称号文件夹名]
-#if
-#act
-mov S$我的称号 <$str(T1)>
-GetListString ..\QuestDiary\称号系统\称号.txt <$str(N$称号行数)> S$称号
-
-goto @称号爆率加成
-; sendmsg 5 称号*<$str(S$称号)>:::<$str(N$称号行数)>
-
-inc N$称号行数 1
-#if
-not equal <$str(S$称号)>
-#act
-goto @获取称号文件夹名
+; #if
+; not equal <$STR(S$我的称号)>
+; #act
+; goto @称号爆率加成
 
 
-[@获取时装图鉴爆率]
-#if
-#act
+; [@获取称号文件夹名]
+; #if
+; #act
+; mov S$我的称号 <$str(T1)>
+; GetListString ..\QuestDiary\称号系统\称号.txt <$str(N$称号行数)> S$称号
 
-ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$爆率使用序号)> 名字 S$爆率使用名字1
-ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$爆率使用序号)> 名字 S$爆率使用名字2
-; sendmsg 5 c:<$str(S$爆率使用名字1)>_2__<$str(T6)>___<$str(N$爆率使用序号)>
-; sendmsg 5 c:<$str(S$爆率使用名字2)>_2__<$str(T6)>___<$str(N$爆率使用序号)>
+; goto @称号爆率加成
+; ; sendmsg 5 称号*<$str(S$称号)>:::<$str(N$称号行数)>
 
-; 第一页
-#if
-CheckContainsText <$STR(T6)> <$str(S$爆率使用名字1)>
-#act
-GetValidstr <$STR(S$图鉴收集变量)> & S$获得道具名 S$图鉴收集变量
-
-; sendmsg 5 1:<$str(S$爆率使用名字1)>_1
-ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$爆率使用序号)> 爆率提升 S$爆率提升1
-INC N$暴率加成 <$str(S$爆率提升1)>
-
-; 第二页
-#if
-CheckContainsText <$STR(T6)> <$str(S$爆率使用名字2)>
-#act
-GetValidstr <$STR(S$图鉴收集变量)> & S$获得道具名 S$图鉴收集变量
-; sendmsg 5 2:<$str(S$爆率使用名字1)>_2
-ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$爆率使用序号)> 爆率提升 S$爆率提升2
-INC N$暴率加成 <$str(S$爆率提升2)>
+; inc N$称号行数 1
+; #if
+; not equal <$str(S$称号)>
+; #act
+; goto @获取称号文件夹名
 
 
-#if
-not equal <$str(S$图鉴收集变量)>
-not equal <$str(S$爆率使用名字1)>
-not equal <$str(S$爆率使用名字2)>
-#act
-inc N$爆率使用序号 1
-; sendmsg 5 时间a:<$UTCNOW8>
-goto @获取时装图鉴爆率
+; [@获取时装图鉴爆率]
+; #if
+; #act
+
+; ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$爆率使用序号)> 名字 S$爆率使用名字1
+; ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$爆率使用序号)> 名字 S$爆率使用名字2
+; ; sendmsg 5 c:<$str(S$爆率使用名字1)>_2__<$str(T6)>___<$str(N$爆率使用序号)>
+; ; sendmsg 5 c:<$str(S$爆率使用名字2)>_2__<$str(T6)>___<$str(N$爆率使用序号)>
+
+; ; 第一页
+; #if
+; CheckContainsText <$STR(T6)> <$str(S$爆率使用名字1)>
+; #act
+; GetValidstr <$STR(S$图鉴收集变量)> & S$获得道具名 S$图鉴收集变量
+
+; ; sendmsg 5 1:<$str(S$爆率使用名字1)>_1
+; ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$爆率使用序号)> 爆率提升 S$爆率提升1
+; INC N$暴率加成 <$str(S$爆率提升1)>
+
+; ; 第二页
+; #if
+; CheckContainsText <$STR(T6)> <$str(S$爆率使用名字2)>
+; #act
+; GetValidstr <$STR(S$图鉴收集变量)> & S$获得道具名 S$图鉴收集变量
+; ; sendmsg 5 2:<$str(S$爆率使用名字1)>_2
+; ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$爆率使用序号)> 爆率提升 S$爆率提升2
+; INC N$暴率加成 <$str(S$爆率提升2)>
+
+
+; #if
+; not equal <$str(S$图鉴收集变量)>
+; not equal <$str(S$爆率使用名字1)>
+; not equal <$str(S$爆率使用名字2)>
+; #act
+; inc N$爆率使用序号 1
+; ; sendmsg 5 时间a:<$UTCNOW8>
+; goto @获取时装图鉴爆率
 
 
 }

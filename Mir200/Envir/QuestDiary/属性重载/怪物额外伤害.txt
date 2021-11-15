@@ -18,7 +18,830 @@ inc N$怪物额外伤害 <$STR(S$赞助_对怪伤害)>
 
 mov N$怪物称号行数 0
 mov S$怪物称号 <$str(T1)>
-goto @获取怪物伤害称号文件夹名
+
+
+#if
+CheckContainsText <$STR(T6)> 水瓶の翼
+#act
+
+INC N$怪物额外伤害 10
+INC N$魔法切割 10
+INC N$道术切割 10
+
+#if
+CheckContainsText <$STR(T6)> 双鱼の翼
+#act
+
+INC N$怪物额外伤害 10
+INC N$魔法切割 10
+INC N$道术切割 10
+
+#if
+CheckContainsText <$STR(T6)> 白羊の翼
+#act
+
+INC N$怪物额外伤害 10
+INC N$魔法切割 10
+INC N$道术切割 10
+
+#if
+CheckContainsText <$STR(T6)> 金牛の翼
+#act
+
+INC N$怪物额外伤害 10
+INC N$魔法切割 10
+INC N$道术切割 10
+
+#if
+CheckContainsText <$STR(T6)> 双子の翼
+#act
+
+INC N$怪物额外伤害 10
+INC N$魔法切割 10
+INC N$道术切割 10
+
+#if
+CheckContainsText <$STR(T6)> 巨蟹の翼
+#act
+
+INC N$怪物额外伤害 10
+INC N$魔法切割 10
+INC N$道术切割 10
+
+#if
+CheckContainsText <$STR(T6)> 狮子の翼
+#act
+
+INC N$怪物额外伤害 10
+INC N$魔法切割 10
+INC N$道术切割 10
+
+#if
+CheckContainsText <$STR(T6)> 处女の翼
+#act
+
+INC N$怪物额外伤害 10
+INC N$魔法切割 10
+INC N$道术切割 10
+
+#if
+CheckContainsText <$STR(T6)> 天秤の翼
+#act
+
+INC N$怪物额外伤害 10
+INC N$魔法切割 10
+INC N$道术切割 10
+
+#if
+CheckContainsText <$STR(T6)> 天蝎の翼
+#act
+
+INC N$怪物额外伤害 10
+INC N$魔法切割 10
+INC N$道术切割 10
+
+#if
+CheckContainsText <$STR(T6)> 射手の翼
+#act
+
+INC N$怪物额外伤害 10
+INC N$魔法切割 10
+INC N$道术切割 10
+
+#if
+CheckContainsText <$STR(T6)> 摩羯の翼
+#act
+
+INC N$怪物额外伤害 10
+INC N$魔法切割 10
+INC N$道术切割 10
+
+
+
+#if
+CheckContainsText <$STR(T1)> 开拓·初出江湖
+#act
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 先锋·江湖少侠
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 无畏·武林俊杰
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 驭风·罕有敌手
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 破焰·绝世高手
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 毁灭·傲视群雄
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 审判·独孤求败
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 屠龙·凶神恶煞
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 修罗·屠戮成性
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 神谕·武林魔头
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 乾坤·风华绝月
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 破天·烽火无极
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 天下·问鼎争锋
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 证道·鬼面罗刹
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 玄冥·逆道违天
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 狂舞·百步屠魔
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 浮沉·青天苍茫
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 无敌·死躯灭魂
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 轮回·天地难葬
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 归一·终极审判
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 踏碎天地·众生朝
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 血染诸天·涅阴阳
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 一念天道·化三千
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 混化阴阳·断生念
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 一笑沧海·化桑田
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 万剑归宗·阴阳间
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 修罗战火·焚尽天
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 人非圣贤·斩情绝
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 浮华无忌·百化仙
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 唯我独尊·屠苍生
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 世界之巅·诸神灭
+#act
+
+INC N$怪物额外伤害 2
+
+#if
+CheckContainsText <$STR(T1)> 西游之力①
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 西游之力②
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 西游之力③
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 西游之力④
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 西游之力⑤
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 西游之力⑥
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 西游之力⑦
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 西游之力⑧
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 西游之力⑨
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 西游之力⑩
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力①
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力②
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力③
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力④
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力⑤
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力⑥
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力⑦
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力⑧
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力⑨
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 三国之力⑩
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力①
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力②
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力③
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力④
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力⑤
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力⑥
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力⑦
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力⑧
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力⑨
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 帝王之力⑩
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力①
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力②
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力③
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力④
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力⑤
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力⑥
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力⑦
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力⑧
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力⑨
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 金庸之力⑩
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力①
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力②
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力③
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力④
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力⑤
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力⑥
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力⑦
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力⑧
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力⑨
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 圣斗士之力⑩
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力①
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力②
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力③
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力④
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力⑤
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力⑥
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力⑦
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力⑧
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力⑨
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 水浒之力⑩
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力①
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力②
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力③
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力④
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力⑤
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力⑥
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力⑦
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力⑧
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力⑨
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 诛仙之力⑩
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力①
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力②
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力③
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力④
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力⑤
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力⑥
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力⑦
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力⑧
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力⑨
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 暗黑之力⑩
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力①
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力②
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力③
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力④
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力⑤
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力⑥
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力⑦
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力⑧
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力⑨
+#act
+
+INC N$怪物额外伤害 1
+
+#if
+CheckContainsText <$STR(T1)> 神域之力⑩
+#act
+
+INC N$怪物额外伤害 1
 
 
 ; 
@@ -899,459 +1722,6 @@ INC N$怪物额外伤害 30
 CHECKITEMW 昊天塔【上古神器】
 #ACT
 INC N$怪物额外伤害 30
-
-
-
-; #IF
-; CHECKTITLE 西游之力①
-; #act
-; INC N$怪物额外伤害 1
-
-; #IF
-; CHECKTITLE 西游之力②
-; #act
-; INC N$怪物额外伤害 2
-
-; #IF
-; CHECKTITLE 西游之力③
-; #act
-; INC N$怪物额外伤害 3
-
-; #IF
-; CHECKTITLE 西游之力④
-; #act
-; INC N$怪物额外伤害 4
-
-; #IF
-; CHECKTITLE 西游之力⑤
-; #act
-; INC N$怪物额外伤害 5
-
-; #IF
-; CHECKTITLE 西游之力⑥
-; #act
-; INC N$怪物额外伤害 6
-
-; #IF
-; CHECKTITLE 西游之力⑦
-; #act
-; INC N$怪物额外伤害 7
-
-; #IF
-; CHECKTITLE 西游之力⑧
-; #act
-; INC N$怪物额外伤害 8
-
-; #IF
-; CHECKTITLE 西游之力⑨
-; #act
-; INC N$怪物额外伤害 9
-
-; #IF
-; CHECKTITLE 西游之力⑩
-; #act
-; INC N$怪物额外伤害 10
-
-; #IF
-; CHECKTITLE 三国之力①
-; #act
-; INC N$怪物额外伤害 11
-
-; #IF
-; CHECKTITLE 三国之力②
-; #act
-; INC N$怪物额外伤害 12
-
-; #IF
-; CHECKTITLE 三国之力③
-; #act
-; INC N$怪物额外伤害 13
-
-; #IF
-; CHECKTITLE 三国之力④
-; #act
-; INC N$怪物额外伤害 14
-
-; #IF
-; CHECKTITLE 三国之力⑤
-; #act
-; INC N$怪物额外伤害 15
-
-; #IF
-; CHECKTITLE 三国之力⑥
-; #act
-; INC N$怪物额外伤害 16
-
-; #IF
-; CHECKTITLE 三国之力⑦
-; #act
-; INC N$怪物额外伤害 17
-
-; #IF
-; CHECKTITLE 三国之力⑧
-; #act
-; INC N$怪物额外伤害 18
-
-; #IF
-; CHECKTITLE 三国之力⑨
-; #act
-; INC N$怪物额外伤害 19
-
-; #IF
-; CHECKTITLE 三国之力⑩
-; #act
-; INC N$怪物额外伤害 20
-
-; #IF
-; CHECKTITLE 帝王之力①
-; #act
-; INC N$怪物额外伤害 21
-
-; #IF
-; CHECKTITLE 帝王之力②
-; #act
-; INC N$怪物额外伤害 22
-
-; #IF
-; CHECKTITLE 帝王之力③
-; #act
-; INC N$怪物额外伤害 23
-
-; #IF
-; CHECKTITLE 帝王之力④
-; #act
-; INC N$怪物额外伤害 24
-
-; #IF
-; CHECKTITLE 帝王之力⑤
-; #act
-; INC N$怪物额外伤害 25
-
-; #IF
-; CHECKTITLE 帝王之力⑥
-; #act
-; INC N$怪物额外伤害 26
-
-; #IF
-; CHECKTITLE 帝王之力⑦
-; #act
-; INC N$怪物额外伤害 27
-
-; #IF
-; CHECKTITLE 帝王之力⑧
-; #act
-; INC N$怪物额外伤害 28
-
-; #IF
-; CHECKTITLE 帝王之力⑨
-; #act
-; INC N$怪物额外伤害 29
-
-; #IF
-; CHECKTITLE 帝王之力⑩
-; #act
-; INC N$怪物额外伤害 30
-
-; #IF
-; CHECKTITLE 金庸之力①
-; #act
-; INC N$怪物额外伤害 31
-
-; #IF
-; CHECKTITLE 金庸之力②
-; #act
-; INC N$怪物额外伤害 32
-
-; #IF
-; CHECKTITLE 金庸之力③
-; #act
-; INC N$怪物额外伤害 33
-
-; #IF
-; CHECKTITLE 金庸之力④
-; #act
-; INC N$怪物额外伤害 34
-
-; #IF
-; CHECKTITLE 金庸之力⑤
-; #act
-; INC N$怪物额外伤害 35
-
-; #IF
-; CHECKTITLE 金庸之力⑥
-; #act
-; INC N$怪物额外伤害 36
-
-; #IF
-; CHECKTITLE 金庸之力⑦
-; #act
-; INC N$怪物额外伤害 37
-
-; #IF
-; CHECKTITLE 金庸之力⑧
-; #act
-; INC N$怪物额外伤害 38
-
-; #IF
-; CHECKTITLE 金庸之力⑨
-; #act
-; INC N$怪物额外伤害 39
-
-; #IF
-; CHECKTITLE 金庸之力⑩
-; #act
-; INC N$怪物额外伤害 40
-
-; #IF
-; CHECKTITLE 圣斗士之力①
-; #act
-; INC N$怪物额外伤害 41
-
-; #IF
-; CHECKTITLE 圣斗士之力②
-; #act
-; INC N$怪物额外伤害 42
-
-; #IF
-; CHECKTITLE 圣斗士之力③
-; #act
-; INC N$怪物额外伤害 43
-
-; #IF
-; CHECKTITLE 圣斗士之力④
-; #act
-; INC N$怪物额外伤害 44
-
-; #IF
-; CHECKTITLE 圣斗士之力⑤
-; #act
-; INC N$怪物额外伤害 45
-
-; #IF
-; CHECKTITLE 圣斗士之力⑥
-; #act
-; INC N$怪物额外伤害 46
-
-; #IF
-; CHECKTITLE 圣斗士之力⑦
-; #act
-; INC N$怪物额外伤害 47
-
-; #IF
-; CHECKTITLE 圣斗士之力⑧
-; #act
-; INC N$怪物额外伤害 48
-
-; #IF
-; CHECKTITLE 圣斗士之力⑨
-; #act
-; INC N$怪物额外伤害 49
-
-; #IF
-; CHECKTITLE 圣斗士之力⑩
-; #act
-; INC N$怪物额外伤害 50
-
-; #IF
-; CHECKTITLE 水浒之力①
-; #act
-; INC N$怪物额外伤害 51
-
-; #IF
-; CHECKTITLE 水浒之力②
-; #act
-; INC N$怪物额外伤害 52
-
-; #IF
-; CHECKTITLE 水浒之力③
-; #act
-; INC N$怪物额外伤害 53
-
-; #IF
-; CHECKTITLE 水浒之力④
-; #act
-; INC N$怪物额外伤害 54
-
-; #IF
-; CHECKTITLE 水浒之力⑤
-; #act
-; INC N$怪物额外伤害 55
-
-; #IF
-; CHECKTITLE 水浒之力⑥
-; #act
-; INC N$怪物额外伤害 56
-
-; #IF
-; CHECKTITLE 水浒之力⑦
-; #act
-; INC N$怪物额外伤害 57
-
-; #IF
-; CHECKTITLE 水浒之力⑧
-; #act
-; INC N$怪物额外伤害 58
-
-; #IF
-; CHECKTITLE 水浒之力⑨
-; #act
-; INC N$怪物额外伤害 59
-
-; #IF
-; CHECKTITLE 水浒之力⑩
-; #act
-; INC N$怪物额外伤害 60
-
-; #IF
-; CHECKTITLE 诛仙之力①
-; #act
-; INC N$怪物额外伤害 61
-
-; #IF
-; CHECKTITLE 诛仙之力②
-; #act
-; INC N$怪物额外伤害 62
-
-; #IF
-; CHECKTITLE 诛仙之力③
-; #act
-; INC N$怪物额外伤害 63
-
-; #IF
-; CHECKTITLE 诛仙之力④
-; #act
-; INC N$怪物额外伤害 64
-
-; #IF
-; CHECKTITLE 诛仙之力⑤
-; #act
-; INC N$怪物额外伤害 65
-
-; #IF
-; CHECKTITLE 诛仙之力⑥
-; #act
-; INC N$怪物额外伤害 66
-
-; #IF
-; CHECKTITLE 诛仙之力⑦
-; #act
-; INC N$怪物额外伤害 67
-
-; #IF
-; CHECKTITLE 诛仙之力⑧
-; #act
-; INC N$怪物额外伤害 68
-
-; #IF
-; CHECKTITLE 诛仙之力⑨
-; #act
-; INC N$怪物额外伤害 69
-
-; #IF
-; CHECKTITLE 诛仙之力⑩
-; #act
-; INC N$怪物额外伤害 70
-
-; #IF
-; CHECKTITLE 暗黑之力①
-; #act
-; INC N$怪物额外伤害 72
-
-; #IF
-; CHECKTITLE 暗黑之力②
-; #act
-; INC N$怪物额外伤害 74
-
-; #IF
-; CHECKTITLE 暗黑之力③
-; #act
-; INC N$怪物额外伤害 76
-
-; #IF
-; CHECKTITLE 暗黑之力④
-; #act
-; INC N$怪物额外伤害 78
-
-; #IF
-; CHECKTITLE 暗黑之力⑤
-; #act
-; INC N$怪物额外伤害 80
-
-; #IF
-; CHECKTITLE 暗黑之力⑥
-; #act
-; INC N$怪物额外伤害 82
-
-; #IF
-; CHECKTITLE 暗黑之力⑦
-; #act
-; INC N$怪物额外伤害 84
-
-; #IF
-; CHECKTITLE 暗黑之力⑧
-; #act
-; INC N$怪物额外伤害 86
-
-; #IF
-; CHECKTITLE 暗黑之力⑨
-; #act
-; INC N$怪物额外伤害 88
-
-; #IF
-; CHECKTITLE 暗黑之力⑩
-; #act
-; INC N$怪物额外伤害 90
-
-; #IF
-; CHECKTITLE 神域之力①
-; #act
-; INC N$怪物额外伤害 92
-
-; #IF
-; CHECKTITLE 神域之力②
-; #act
-; INC N$怪物额外伤害 94
-
-; #IF
-; CHECKTITLE 神域之力③
-; #act
-; INC N$怪物额外伤害 96
-
-; #IF
-; CHECKTITLE 神域之力④
-; #act
-; INC N$怪物额外伤害 98
-
-; #IF
-; CHECKTITLE 神域之力⑤
-; #act
-; INC N$怪物额外伤害 100
-
-; #IF
-; CHECKTITLE 神域之力⑥
-; #act
-; INC N$怪物额外伤害 105
-
-; #IF
-; CHECKTITLE 神域之力⑦
-; #act
-; INC N$怪物额外伤害 110
-
-; #IF
-; CHECKTITLE 神域之力⑧
-; #act
-; INC N$怪物额外伤害 115
-
-; #IF
-; CHECKTITLE 神域之力⑨
-; #act
-; INC N$怪物额外伤害 120
-
-; #IF
-; CHECKTITLE 神域之力⑩
-; #act
-; INC N$怪物额外伤害 130
-
 
 ;--------------------------武器--------------------------------
 #IF
@@ -2500,86 +2870,92 @@ inc N$魔法切割 <$str(S$腰带位置五)>
 #CALL [\游戏登陆\右下显示.txt] @属性显示
 
 
-[@称号对怪伤害加成]
+; [@获取怪物伤害称号文件夹名1]
+; #if
+; #act
+; CheckContainsText <$STR(T1)> 暗黑之力①
+; inc
 
-#if
-#act
-GetValidstr <$STR(S$我的怪物称号)> & S$this称号 S$我的怪物称号
-ReadConfigFileItem ..\QuestDiary\称号系统\<$str(S$称号123)>\<$str(S$称号123)>数据.txt <$str(S$this称号)> 对怪伤害加成 N$对怪伤害加成
+; [@称号对怪伤害加成]
 
-#if
-CHECKTITLE <$str(S$this称号)>
-not equal <$str(N$对怪伤害加成)> 0
-#act
-INC N$怪物额外伤害 <$str(N$对怪伤害加成)>
-; sendmsg 5 怪物称号#<$str(S$称号123)>::<$str(S$this称号)>::<$str(N$对怪伤害加成)>::
+; #if
+; #act
+; GetValidstr <$STR(S$我的怪物称号)> & S$this称号 S$我的怪物称号
+; ReadConfigFileItem ..\QuestDiary\称号系统\<$str(S$称号123)>\<$str(S$称号123)>数据.txt <$str(S$this称号)> 对怪伤害加成 N$对怪伤害加成
 
-; mov S$this称号
-break
+; #if
+; CHECKTITLE <$str(S$this称号)>
+; not equal <$str(N$对怪伤害加成)> 0
+; #act
+; INC N$怪物额外伤害 <$str(N$对怪伤害加成)>
+; ; sendmsg 5 怪物称号#<$str(S$称号123)>::<$str(S$this称号)>::<$str(N$对怪伤害加成)>::
 
-#if
-not equal <$STR(S$我的怪物称号)>
-#act
-goto @称号对怪伤害加成
+; ; mov S$this称号
+; break
 
-
-[@获取怪物伤害称号文件夹名]
-#if
-#act
-mov S$我的怪物称号 <$str(T1)>
-GetListString ..\QuestDiary\称号系统\称号.txt <$str(N$怪物称号行数)> S$称号123
-
-goto @称号对怪伤害加成
-; sendmsg 5 称号*<$str(S$称号123)>:::<$str(N$怪物称号行数)>
-
-inc N$怪物称号行数 1
-#if
-not equal <$str(S$称号123)>
-#act
-goto @获取怪物伤害称号文件夹名
+; #if
+; not equal <$STR(S$我的怪物称号)>
+; #act
+; goto @称号对怪伤害加成
 
 
-[@获取时装图鉴额外伤害]
-#if
-#act
+; [@获取怪物伤害称号文件夹名]
+; #if
+; #act
+; mov S$我的怪物称号 <$str(T1)>
+; GetListString ..\QuestDiary\称号系统\称号.txt <$str(N$怪物称号行数)> S$称号123
 
-ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$额伤使用序号)> 名字 S$额伤使用名字1
-ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$额伤使用序号)> 名字 S$额伤使用名字2
-; sendmsg 5 c:<$str(S$额伤使用名字)>_2__<$str(T6)>___<$str(N$额伤使用序号)>
+; goto @称号对怪伤害加成
+; ; sendmsg 5 称号*<$str(S$称号123)>:::<$str(N$怪物称号行数)>
 
-; 第一页
-#if
-CheckContainsText <$STR(T6)> <$str(S$额伤使用名字1)>
-#act
-GetValidstr <$STR(S$图鉴收集变量)> & S$获得道具名 S$图鉴收集变量
-
-ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$额伤使用序号)> 对怪伤害 S$额伤提升1
-ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$额伤使用序号)> 道术切割 S$道术切割1
-ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$额伤使用序号)> 魔法切割 S$魔法提升1
-INC N$怪物额外伤害 <$str(S$额伤提升1)>
-INC N$魔法切割 <$str(S$道术切割1)>
-INC N$道术切割 <$str(S$魔法提升1)>
-
-; 第二页
-#if
-CheckContainsText <$STR(T6)> <$str(S$额伤使用名字2)>
-#act
-GetValidstr <$STR(S$图鉴收集变量)> & S$获得道具名 S$图鉴收集变量
-ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$额伤使用序号)> 对怪伤害 S$额伤提升2
-ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$额伤使用序号)> 道术切割 S$道术切割2
-ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$额伤使用序号)> 魔法切割 S$魔法提升2
-INC N$怪物额外伤害 <$str(S$额伤提升2)>
-INC N$魔法切割 <$str(S$道术切割2)>
-INC N$道术切割 <$str(S$魔法提升2)>
+; inc N$怪物称号行数 1
+; #if
+; not equal <$str(S$称号123)>
+; #act
+; goto @获取怪物伤害称号文件夹名
 
 
-#if
-not equal <$str(S$图鉴收集变量)>
-not equal <$str(S$额伤使用名字1)>
-not equal <$str(S$额伤使用名字2)>
-#act
-inc N$额伤使用序号 1
-; sendmsg 5 时间a:<$UTCNOW8>
-goto @获取时装图鉴额外伤害
+; [@获取时装图鉴额外伤害]
+; #if
+; #act
+
+; ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$额伤使用序号)> 名字 S$额伤使用名字1
+; ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$额伤使用序号)> 名字 S$额伤使用名字2
+; ; sendmsg 5 c:<$str(S$额伤使用名字)>_2__<$str(T6)>___<$str(N$额伤使用序号)>
+
+; ; 第一页
+; #if
+; CheckContainsText <$STR(T6)> <$str(S$额伤使用名字1)>
+; #act
+; GetValidstr <$STR(S$图鉴收集变量)> & S$获得道具名 S$图鉴收集变量
+
+; ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$额伤使用序号)> 对怪伤害 S$额伤提升1
+; ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$额伤使用序号)> 道术切割 S$道术切割1
+; ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第1页.txt <$str(N$额伤使用序号)> 魔法切割 S$魔法提升1
+; INC N$怪物额外伤害 <$str(S$额伤提升1)>
+; INC N$魔法切割 <$str(S$道术切割1)>
+; INC N$道术切割 <$str(S$魔法提升1)>
+
+; ; 第二页
+; #if
+; CheckContainsText <$STR(T6)> <$str(S$额伤使用名字2)>
+; #act
+; GetValidstr <$STR(S$图鉴收集变量)> & S$获得道具名 S$图鉴收集变量
+; ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$额伤使用序号)> 对怪伤害 S$额伤提升2
+; ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$额伤使用序号)> 道术切割 S$道术切割2
+; ReadConfigFileItem ..\QuestDiary\天下杀戮时装玩法\图鉴\第2页.txt <$str(N$额伤使用序号)> 魔法切割 S$魔法提升2
+; INC N$怪物额外伤害 <$str(S$额伤提升2)>
+; INC N$魔法切割 <$str(S$道术切割2)>
+; INC N$道术切割 <$str(S$魔法提升2)>
+
+
+; #if
+; not equal <$str(S$图鉴收集变量)>
+; not equal <$str(S$额伤使用名字1)>
+; not equal <$str(S$额伤使用名字2)>
+; #act
+; inc N$额伤使用序号 1
+; ; sendmsg 5 时间a:<$UTCNOW8>
+; goto @获取时装图鉴额外伤害
 
 }

@@ -604,6 +604,65 @@ INC N$人物道术百分比 45
 
 
 
+;------------------------衣服----------------------------------
+
+#IF
+CHECKSOCKETABLEITEM 0 0 N$衣服位置一IDX S$衣服位置一
+#act
+
+#IF
+CHECKSOCKETABLEITEM 0 1 N$衣服位置二IDX S$衣服位置二
+#act
+
+#IF
+CHECKSOCKETABLEITEM 0 2 N$衣服位置三IDX S$衣服位置三
+#act
+
+#IF
+CHECKSOCKETABLEITEM 0 3 N$衣服位置四IDX S$衣服位置四
+#act
+
+#IF
+CHECKSOCKETABLEITEM 0 4 N$衣服位置五IDX S$衣服位置五
+#act
+
+#if
+CheckContainsText <$str(S$衣服位置一)> 体力魔力+
+#act
+DEC S$衣服位置一 体力魔力+
+DEC S$衣服位置一 %
+inc N$人物血量百分比 <$str(S$衣服位置一)>
+inc N$人物蓝量百分比 <$str(S$衣服位置一)>
+
+#if
+CheckContainsText <$str(S$衣服位置二)> 体力魔力+
+#act
+DEC S$衣服位置二 体力魔力+
+DEC S$衣服位置二 %
+inc N$人物血量百分比 <$str(S$衣服位置二)>
+inc N$人物蓝量百分比 <$str(S$衣服位置二)>
+
+#if
+CheckContainsText <$str(S$衣服位置三)> 体力魔力+
+#act
+DEC S$衣服位置三 体力魔力+
+DEC S$衣服位置三 %
+inc N$人物血量百分比 <$str(S$衣服位置三)>
+inc N$人物蓝量百分比 <$str(S$衣服位置三)>
+
+#if
+CheckContainsText <$str(S$衣服位置四)> 体力魔力+
+#act
+DEC S$衣服位置四 体力魔力+
+DEC S$衣服位置四 %
+inc N$人物血量百分比 <$str(S$衣服位置四)>
+
+#if
+CheckContainsText <$str(S$衣服位置五)> 体力魔力+
+#act
+DEC S$衣服位置五 体力魔力+
+DEC S$衣服位置五 %
+inc N$人物血量百分比 <$str(S$衣服位置五)>
 
 
 #IF
