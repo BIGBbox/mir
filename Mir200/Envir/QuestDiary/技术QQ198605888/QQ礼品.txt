@@ -12,7 +12,7 @@
 <Img|id=gable_item1|children={下方礼包1}|x=295|y=195|width=60|height=60|img=public/sf1/19/itemBg1.png>
 <ItemShow|id=下方礼包1|x=-2|y=-2|itemid=10941|itemcount=10|showtips=1|color=250|scale=1.3>
 <Img|id=gable_item2|children={下方礼包2}|x=370|y=195|width=60|height=60|img=public/sf1/19/itemBg1.png>
-<ItemShow|id=下方礼包2|x=-2|y=-2|itemid=10924|itemcount=10|showtips=1|color=250|scale=1.3>
+<ItemShow|id=下方礼包2|x=-2|y=-2|itemid=10924|itemcount=5|showtips=1|color=250|scale=1.3>
 <Img|id=gable_item3|children={下方礼包3}|x=445|y=195|width=60|height=60|img=public/sf1/19/itemBg1.png>
 <ItemShow|id=下方礼包3|x=-2|y=-2|itemid=10936|itemcount=5|showtips=1|color=250|scale=1.3>
 

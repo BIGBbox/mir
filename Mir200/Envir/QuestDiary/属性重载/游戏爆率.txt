@@ -11,13 +11,12 @@ MOV N$午夜屠狗 0
 #ACT
 INC N$暴率加成 <$str(u0)>
 
-; mov N$称号行数 0
-; mov S$我的称号 <$str(T1)>
-; goto @获取称号文件夹名
-; goto @称号爆率加成
+#if
+not large <$str(G300)> 3
+#act
+INC N$暴率加成 100
 
-;军火库数量U0
-; 每日充值礼包增加的爆率
+
 #if
 not small U113 1
 #act

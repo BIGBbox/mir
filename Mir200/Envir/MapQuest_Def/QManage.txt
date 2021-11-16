@@ -215,7 +215,33 @@ delaygoto 1500 @刷新顶部属性栏
 
 #if
 #act
+goto @tiren
+; DelTextList ..\QuestDiary\离线挂机\离线挂机账号.txt <$USERACCOUNT>
+; DelTextList ..\QuestDiary\离线挂机\离线挂机名单.txt <$USERNAME>
+
 ; delaygoto 1500 @刷新顶部属性栏
+
+[@tiren]
+#if
+#act
+GetListString ..\QuestDiary\离线挂机\离线挂机名单.txt 1 S$提取的名单
+GetListString ..\QuestDiary\离线挂机\离线挂机名单.txt 99 S$最后的名单
+GetValidstr <$STR(S$提取的名单)> = S$踢角色 S$提取的名单
+
+#if
+equal <$str(S$最后的名单)>
+#act
+break
+
+#if
+not equal <$str(S$提取的名单)>
+not <$str(S$提取的名单)>.Checkonline
+#act
+<$str(S$提取的名单)>.OFFLINEPLAY 0
+DelText ..\QuestDiary\离线挂机\离线挂机名单.txt 0
+DelText ..\QuestDiary\离线挂机\离线挂机名单.txt 0
+goto @tiren
+
 
 [@刷新顶部属性栏]
 #act

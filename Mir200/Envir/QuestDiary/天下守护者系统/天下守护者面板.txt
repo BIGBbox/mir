@@ -104,7 +104,7 @@ money 天下币  - <$str(S$所需天下币)>
 #if
 #act
 inc U8 1
-MOVR <$STR(N$纵轴坐标)> 100 500
+MOVR N$纵轴坐标 100 500
 GOTO @MAIN
 SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功修炼/FCOLOR=253><【天下守护者Lv<$str(U8)>】/FCOLOR=58>
 

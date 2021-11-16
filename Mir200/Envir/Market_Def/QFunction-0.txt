@@ -1245,30 +1245,26 @@ not CheckContainsText <$STR(T108)> 80级任务
 [@PlayOffLine]
 
 #if
-IsOnMap 新手地图
+IsOnMap 0
 #act
 break
 
 #IF
-NOT CHECKVAR HUMAN 二级密码 =
-CHECKLEVELEX > 49
+not CHECKLEVELEX < 30
 #ACT
-OFFLINEPLAY 50000
-movr N$随机坐标X 107 131
-movr N$随机坐标Y 85 109
+WriteConfigFileItem ..\QuestDiary\离线挂机\离线挂机名单.txt <$USERACCOUNT> 角色 <$USERNAME>
+OFFLINEPLAY 65535
+movr N$随机坐标X 109 129
+movr N$随机坐标Y 87 105
 mapmove 天下主城 <$STR(N$随机坐标X)> <$STR(N$随机坐标Y)>
 Break
 
 
 #IF
 #ACT
-movr N$随机坐标X 107 131
-movr N$随机坐标Y 85 109
-mapmove 天下主城 <$STR(N$随机坐标X)> <$STR(N$随机坐标Y)>
+OFFLINEPLAY 0
+; GuildNoticeMsg 255 56 玩家:『<$USERNAME>』下线了,时间,<$HOUR>:时<$MINUTE>:分<$SECOND>:秒
 Break
-
-
-
 
 ;小退游戏触发-------------------
 
@@ -1428,13 +1424,13 @@ HUMANMP + <$STR(N$吸血值)>
 
 
 #IF
-large <$STR(N$怪物额外伤害)> 100
+large <$STR(N$怪物额外伤害)> 0
+large <$MAXDC> 100
 NOT CHECKCURRTARGETRACE = 0
 #ACT
 mov N$打怪伤害 <$MAXDC>
 MUL N$打怪伤害 <$STR(N$怪物额外伤害)>
 DIV N$打怪伤害 100
-
 M.HUMANHP - <$STR(N$打怪伤害)> 1
 
 
@@ -2790,7 +2786,7 @@ CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
 CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
 CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
 mov N$宝宝血量 <$STR(N$分身血量计算)>
-inc N$宝宝血量 10000
+inc N$宝宝血量 110000
 ; sendmsg 5 血量__<$str(N$宝宝血量)>
 MEBabyHP 守护者 = <$str(N$宝宝血量)> 0
 ; MEBabyHP 守护者 = <$STR(N$分身血量计算)> 0
@@ -8679,6 +8675,7 @@ CHECKCURRTARGETRACE = 0
 not equal <$CURRRUSEMAGICID> 26
 not equal <$CURRRUSEMAGICID> 56
 not equal <$CURRRUSEMAGICID> 66
+not checklevelex < 180
 #act
 CalcPer <$DAMAGEVALUE> 25 N$掉血量
 ChangeDamageValue 0 = <$STR(N$掉血量)>
@@ -8686,6 +8683,7 @@ ChangeDamageValue 0 = <$STR(N$掉血量)>
 #if
 CHECKCURRTARGETRACE = 0 
 equal <$CURRRUSEMAGICID> 26
+not checklevelex < 180
 #act
 CalcPer <$DAMAGEVALUE> 18 N$掉血量
 ChangeDamageValue 0 = <$STR(N$掉血量)>
@@ -8694,6 +8692,7 @@ ChangeDamageValue 0 = <$STR(N$掉血量)>
 #if
 CHECKCURRTARGETRACE = 0 
 equal <$CURRRUSEMAGICID> 56
+not checklevelex < 180
 #act
 CalcPer <$DAMAGEVALUE> 18 N$掉血量
 ChangeDamageValue 0 = <$STR(N$掉血量)>
@@ -8701,6 +8700,7 @@ ChangeDamageValue 0 = <$STR(N$掉血量)>
 #if
 CHECKCURRTARGETRACE = 0 
 equal <$CURRRUSEMAGICID> 66
+not checklevelex < 180
 #act
 CalcPer <$DAMAGEVALUE> 18 N$掉血量
 ChangeDamageValue 0 = <$STR(N$掉血量)>
@@ -8879,7 +8879,7 @@ INC U125 1
 
 #if
 CheckTextList ..\QuestDiary\新会员系统\怪物击杀统计\西游异世界.txt <$MAPTITLE>
-not large U125 100
+not large U125 30
 #act
 sendmsg 5 西游异世界怪物击杀数量:<$str(U125)>
 break

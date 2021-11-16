@@ -210,12 +210,39 @@ goto @获取图鉴
 
 [@ceshi1]
 
+; #IF
+; #ACT
+; mov S$名字 米线
+; <$str(S$名字)>.OFFLINEPLAY 1
+; movr N$随机坐标X 109 129
+; movr N$随机坐标Y 87 105
+; mapmove 天下主城 <$STR(N$随机坐标X)> <$STR(N$随机坐标Y)>
+; GuildNoticeMsg 255 56 玩家:『<$USERNAME>』下线了,时间,<$HOUR>:时<$MINUTE>:分<$SECOND>:秒
+; Break
+
+
+#if
+#say
+\ \ 
+此地图过于危险，最少需要160级才能进入此地图！！
+\ \
+<我要进入/@我要进入>
+; break
 
 #if
 #act
-SENDMSG 6 人物脱装备，位置[<$CURRTAKETEMPOS>]，物品<$CURRTEMNAME>，ID<$CURRTEMMAKEINDEX> 
+break
+; mov S$名字 米线
+; ; <$str(S$名字)>.<$USERACCOUNT>
+; mov S$账号 <$str(S$名字)>.<$USERACCOUNT>
+; sendmsg 5 <$str(S$账号)>======
+; <$str(S$名字)>.OFFLINEPLAY 0
+; DelTextList ..\QuestDiary\离线挂机名单.txt <$USERNAME>
 
-sendmsg 5 U20:<$str(U20)>-U17:<$STR(U17)>-合区时间:<$HFTIME>--领取人数:·<$str(G16)>·-开区天数-<$str(G300)>——
+; <$USERNAME>.OFFLINEPLAY 1
+; SENDMSG 6 人物脱装备，位置[<$CURRTAKETEMPOS>]，物品<$CURRTEMNAME>，ID<$CURRTEMMAKEINDEX> 
+; sendmsg 1 已完成任务!
+; sendmsg 5 U20:<$str(U20)>-U17:<$STR(U17)>-合区时间:<$HFTIME>--领取人数:·<$str(G16)>·-开区天数-<$str(G300)>——
 ; CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
 
 mov S19 2021/11/3 12:10:14
