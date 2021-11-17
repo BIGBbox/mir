@@ -20,6 +20,13 @@ mov N$怪物称号行数 0
 mov S$怪物称号 <$str(T1)>
 
 
+; 开区前三天
+#if
+not large <$str(G300)> 3
+#act
+INC N$怪物额外伤害 100
+
+
 #if
 CheckContainsText <$STR(T6)> 水瓶の翼
 #act

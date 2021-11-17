@@ -64,7 +64,7 @@ mov S$支线任务临时变量 <$STR(T108)>
 mov T108 <$STR(S$支线任务临时变量)>_开通狂暴
 NEWCOMPLETETASK 25
 NEWDELETETASK 25
-sendmsg 1 已完成任务!
+sendmsg 5 已完成任务!
 
 CHANGEEXP + 100000
 MailGIVE 绑定元宝 100000

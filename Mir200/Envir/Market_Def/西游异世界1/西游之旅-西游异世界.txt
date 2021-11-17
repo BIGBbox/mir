@@ -10,19 +10,19 @@
 <Text|a=0|x=30.0|y=20.0|tipsx=10|tipsy=80|color=219|size=18|text=怪物刷新：>
 <Text|a=0|x=116.0|y=20.0|tipsx=10|tipsy=80|color=0|size=18|text=太上老君、菩提祖师、观世音菩萨、钱鼠王>
 <Text|a=0|x=30.0|y=50.0|tipsx=10|tipsy=80|color=219|size=18|text=进入等级：>
-<Text|a=0|x=116.0|y=50.0|tipsx=10|tipsy=80|color=27|size=18|text=达到98级以上方可进入>
+<Text|a=0|x=116.0|y=50.0|tipsx=10|tipsy=80|color=27|size=18|text=达到96级以上方可进入>
 <Text|a=0|x=435.0|y=50.0|tipsx=10|tipsy=80|color=134|size=18|text=我要进入|link=@进入>
 <Text|a=0|x=435.0|y=120.0|tipsx=10|tipsy=80|color=134|size=18|text=我要进入|link=@进入1>
 <Text|a=0|x=435.0|y=190.0|height=24|tipsx=10|tipsy=80|size=18|color=134|text=我要进入|link=@进入2>
 <Text|x=30.0|y=90.0|color=219|size=18|text=怪物刷新：>
 <Text|x=116.0|y=90.0|size=18|color=0|text=太上老君、菩提祖师、钱鼠王、牛魔王>
 <Text|x=30.0|y=120.0|color=219|size=18|text=进入等级：>
-<Text|x=116.0|y=120.0|size=18|color=27|text=达到99级以上方可进入>
+<Text|x=116.0|y=120.0|size=18|color=27|text=达到97级以上方可进入>
 <Text|x=303.0|y=120.0|size=18|color=168|text=火  云  洞>
 <Text|x=30.0|y=160.0|color=219|size=18|text=怪物刷新：>
 <Text|x=116.0|y=160.0|size=18|color=0|text=观世音菩萨、钱鼠王、银角王、金角王>
 <Text|x=30.0|y=190.0|color=219|size=18|text=进入等级：>
-<Text|x=116.0|y=190.0|size=18|color=27|text=达到100级以上方可进入>
+<Text|x=116.0|y=190.0|size=18|color=27|text=达到98级以上方可进入>
 <Text|x=303.0|y=190.0|size=18|color=168|text=无  底  洞>
 
 
@@ -33,7 +33,7 @@
 
 [@进入]
 #IF
-CHECKLEVELEX > 97
+CHECKLEVELEX > 95
 #act
 MAP 盘丝洞
 GuildNoticeMsg 251 66 系统提示：玩家[%s]进入了【盘丝洞】！！！
@@ -43,7 +43,7 @@ BREAK
 
 [@进入1]
 #IF
-CHECKLEVELEX > 98
+CHECKLEVELEX > 96
 #act
 MAP 火云洞
 GuildNoticeMsg 251 66 系统提示：玩家[%s]进入了【火云洞】！！！
@@ -53,7 +53,7 @@ BREAK
 
 [@进入2]
 #IF
-CHECKLEVELEX > 99
+CHECKLEVELEX > 97
 #act
 MAP 无底洞
 GuildNoticeMsg 251 66 系统提示：玩家[%s]进入了【无底洞】！！！

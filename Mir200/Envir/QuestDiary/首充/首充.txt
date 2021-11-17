@@ -21,9 +21,9 @@ mov S$背景图片 1000011
 <Img|id=道具1|x=310|y=210|children={道具11}|width=60|height=60|img=public/sf1/1/1000012.png>
     <ItemShow|id=道具11|x=0|y=0|width=75|height=70|itemid=10131|itemcount=1|showtips=1|bgtype=0|color=250|scale=1.2>
 <Img|id=道具2|x=375|y=210|children={道具22}|width=60|height=60|img=public/sf1/1/1000012.png>
-    <ItemShow|id=道具22|x=-2|y=-2|width=75|height=70|itemid=10224|itemcount=1|showtips=1|bgtype=0|color=250|scale=0.8>
+    <ItemShow|id=道具22|x=-2|y=-2|width=75|height=70|itemid=12111|itemcount=10|showtips=1|bgtype=0|color=250|scale=0.8>
 <Img|id=道具3|x=440|y=210|children={道具33}|width=60|height=60|img=public/sf1/1/1000012.png>
-    <ItemShow|id=道具33|x=-2|y=-2|width=75|height=70|itemid=4|itemcount=1000000|showtips=1|bgtype=0|color=250|scale=1.2>
+    <ItemShow|id=道具33|x=-2|y=-2|width=75|height=70|itemid=10940|itemcount=200|showtips=1|bgtype=0|color=250|scale=1.2>
 <Img|id=道具4|x=505|y=210|children={道具44}|width=60|height=60|img=public/sf1/1/1000012.png>
     <ItemShow|id=道具44|x=-3|y=-3|width=75|height=70|itemid=10959|itemcount=1|showtips=1|bgtype=0|color=250|scale=1.2>
 
@@ -43,9 +43,9 @@ break
 #act
 set [22] 1
 MailGIVE 嗜血杀戮斧 1 1#4#5#6#8
-MailGIVE 封龙 1 1#4#5#6#8
+MailGIVE 时装神器碎片 10 1#4#5#6#8
 MailGIVE 开天【时装】 1 1#4#5#6#8
-MailGIVE 绑定元宝 1000000
+MailGIVE 神器碎片 200
 SendMail 1 系统奖励 首充10元礼包,请及时提取!
 messagebox 首充礼包已发放到你的邮箱,请及时提取附件!!
 close

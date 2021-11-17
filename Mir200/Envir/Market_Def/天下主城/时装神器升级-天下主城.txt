@@ -71,7 +71,7 @@ GOTO @分身主界面1
     <RText|id=6|x=32|y=230|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑥：/FCOLOR=250><打怪伤害+5%/FCOLOR=151>>
     <RText|id=7|x=32|y=260|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑦：/FCOLOR=250><体力值+200/FCOLOR=151>>
     <RText|id=8|x=32|y=290|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑧：/FCOLOR=250><*/FCOLOR=151>>
-    <RText|id=9|x=54|y=320|color=70|tips=|tipsx=10|tipsy=80|size=16|text=<天下币晋升   ：  /FCOLOR=250><2000天下币/FCOLOR=249>>
+    <RText|id=9|x=44|y=320|color=70|tips=|tipsx=10|tipsy=80|size=16|text=<晋升消耗材料 ：  /FCOLOR=250><时装神器碎片*10/FCOLOR=249>>
 <Button|id=click_btn|x=132|y=365|nimg=public/sf1/1/01807.png|pimg=public/sf1/1/01809.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@晋升1>
 
 [@分身主界面2]
@@ -93,7 +93,7 @@ GOTO @分身主界面1
     <RText|id=6|x=32|y=230|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑥：/FCOLOR=250><打怪伤害+10%/FCOLOR=151>>
     <RText|id=7|x=32|y=260|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑦：/FCOLOR=250><体力值+400/FCOLOR=151>>
     <RText|id=8|x=32|y=290|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑧：/FCOLOR=250><*/FCOLOR=151>>
-    <RText|id=9|x=54|y=320|color=70|tips=|tipsx=10|tipsy=80|size=16|text=<天下币晋升   ：  /FCOLOR=250><6000天下币/FCOLOR=249>>
+    <RText|id=9|x=44|y=320|color=70|tips=|tipsx=10|tipsy=80|size=16|text=<晋升消耗材料 ：  /FCOLOR=250><时装神器碎片*30/FCOLOR=249>>
 <Button|id=click_btn|x=132|y=365|nimg=public/sf1/1/01807.png|pimg=public/sf1/1/01809.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@晋升2>
 
 
@@ -116,7 +116,7 @@ GOTO @分身主界面1
     <RText|id=6|x=32|y=230|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑥：/FCOLOR=250><打怪伤害+15%/FCOLOR=151>>
     <RText|id=7|x=32|y=260|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑦：/FCOLOR=250><体力值+600/FCOLOR=151>>
     <RText|id=8|x=32|y=290|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑧：/FCOLOR=250><*/FCOLOR=151>>
-    <RText|id=9|x=54|y=320|color=70|tips=|tipsx=10|tipsy=80|size=16|text=<天下币晋升   ：  /FCOLOR=250><10000天下币/FCOLOR=249>>
+    <RText|id=9|x=44|y=320|color=70|tips=|tipsx=10|tipsy=80|size=16|text=<晋升消耗材料 ：  /FCOLOR=250><时装神器碎片*60/FCOLOR=249>>
 <Button|id=click_btn|x=132|y=365|nimg=public/sf1/1/01807.png|pimg=public/sf1/1/01809.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@晋升3>
 
 [@分身主界面4]
@@ -137,7 +137,7 @@ GOTO @分身主界面1
     <RText|id=6|x=32|y=230|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑥：/FCOLOR=250><打怪伤害+20%/FCOLOR=151>>
     <RText|id=7|x=32|y=260|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑦：/FCOLOR=250><体力值+800/FCOLOR=151>>
     <RText|id=8|x=32|y=290|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑧：/FCOLOR=250><*/FCOLOR=151>>
-    <RText|id=9|x=54|y=320|color=70|tips=|tipsx=10|tipsy=80|size=16|text=<天下币晋升   ：  /FCOLOR=250><14000天下币/FCOLOR=249>>
+    <RText|id=9|x=44|y=320|color=70|tips=|tipsx=10|tipsy=80|size=16|text=<晋升消耗材料 ：  /FCOLOR=250><时装神器碎片*100/FCOLOR=249>>
 <Button|id=click_btn|x=132|y=365|nimg=public/sf1/1/01807.png|pimg=public/sf1/1/01809.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@晋升4>
 
 
@@ -159,7 +159,7 @@ GOTO @分身主界面1
     <RText|id=6|x=32|y=230|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑥：/FCOLOR=250><打怪伤害+25%/FCOLOR=151>>
     <RText|id=7|x=32|y=260|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑦：/FCOLOR=250><体力值+1000/FCOLOR=151>>
     <RText|id=8|x=32|y=290|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑧：/FCOLOR=250><*/FCOLOR=151>>
-    <RText|id=9|x=54|y=320|color=70|tips=|tipsx=10|tipsy=80|size=16|text=<天下币晋升   ：  /FCOLOR=250><18000天下币/FCOLOR=249>>
+    <RText|id=9|x=44|y=320|color=70|tips=|tipsx=10|tipsy=80|size=16|text=<晋升消耗材料 ：  /FCOLOR=250><时装神器碎片*150/FCOLOR=249>>
 <Button|id=click_btn|x=132|y=365|nimg=public/sf1/1/01807.png|pimg=public/sf1/1/01809.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@晋升5>
 
 [@分身主界面6]
@@ -180,7 +180,7 @@ GOTO @分身主界面1
     <RText|id=6|x=32|y=230|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑥：/FCOLOR=250><打怪伤害+30%/FCOLOR=151>>
     <RText|id=7|x=32|y=260|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑦：/FCOLOR=250><体力值+1500/FCOLOR=151>>
     <RText|id=8|x=32|y=290|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑧：/FCOLOR=250><*/FCOLOR=151>>
-    <RText|id=9|x=54|y=320|color=70|tips=|tipsx=10|tipsy=80|size=16|text=<天下币晋升   ：  /FCOLOR=250><24000天下币/FCOLOR=249>>
+    <RText|id=9|x=44|y=320|color=70|tips=|tipsx=10|tipsy=80|size=16|text=<晋升消耗材料 ：  /FCOLOR=250><时装神器碎片*210/FCOLOR=249>>
 <Button|id=click_btn|x=132|y=365|nimg=public/sf1/1/01807.png|pimg=public/sf1/1/01809.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@晋升6>
 
 [@分身主界面7]
@@ -201,7 +201,7 @@ GOTO @分身主界面1
     <RText|id=6|x=32|y=230|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑥：/FCOLOR=250><打怪伤害+35%/FCOLOR=151>>
     <RText|id=7|x=32|y=260|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑦：/FCOLOR=250><体力值+2000/FCOLOR=151>>
     <RText|id=8|x=32|y=290|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑧：/FCOLOR=250><*/FCOLOR=151>>
-    <RText|id=9|x=54|y=320|color=70|tips=|tipsx=10|tipsy=80|size=16|text=<天下币晋升   ：  /FCOLOR=250><30000天下币/FCOLOR=249>>
+    <RText|id=9|x=44|y=320|color=70|tips=|tipsx=10|tipsy=80|size=16|text=<晋升消耗材料 ：  /FCOLOR=250><时装神器碎片*280/FCOLOR=249>>
 <Button|id=click_btn|x=132|y=365|nimg=public/sf1/1/01807.png|pimg=public/sf1/1/01809.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@晋升7>
 
 
@@ -210,9 +210,9 @@ GOTO @分身主界面1
 [@晋升1]
 #if
 checkitEmW 破界の无边 1
-CHECKGAMEDIAMOND > 1999
+checkitem 时装神器碎片 10
 #ACT
-GAMEDIAMOND - 2000
+take 时装神器碎片 10
 TAKEW 破界の无边 1
 GIVE 至高の荣耀 1
 AutoTakeOnItem 至高の荣耀 18
@@ -230,9 +230,9 @@ BREAK
 [@晋升2]
 #if
 checkitEmW 至高の荣耀 1
-CHECKGAMEDIAMOND > 5999
+checkitem 时装神器碎片 30
 #ACT
-GAMEDIAMOND - 6000
+take 时装神器碎片 30
 TAKEW 至高の荣耀 1
 GIVE 永生の不灭 1
 AutoTakeOnItem 永生の不灭 18
@@ -249,9 +249,9 @@ BREAK
 [@晋升3]
 #if
 checkitEmW 永生の不灭 1
-CHECKGAMEDIAMOND > 9999
+checkitem 时装神器碎片 60
 #ACT
-GAMEDIAMOND - 10000
+take 时装神器碎片 60
 TAKEW 永生の不灭 1
 GIVE 神之の庇护 1
 AutoTakeOnItem 神之の庇护 18
@@ -268,9 +268,9 @@ BREAK
 [@晋升4]
 #if
 checkitEmW 神之の庇护 1
-CHECKGAMEDIAMOND > 13999
+checkitem 时装神器碎片 100
 #ACT
-GAMEDIAMOND - 14000
+take 时装神器碎片 100
 TAKEW 神之の庇护 1
 GIVE 冰霜の之心 1
 AutoTakeOnItem 冰霜の之心 18
@@ -287,9 +287,9 @@ BREAK
 [@晋升5]
 #if
 checkitEmW 冰霜の之心 1
-CHECKGAMEDIAMOND > 17999
+checkitem 时装神器碎片 150
 #ACT
-GAMEDIAMOND - 18000
+take 时装神器碎片 150
 TAKEW 冰霜の之心 1
 GIVE 禁忌の之王 1
 AutoTakeOnItem 禁忌の之王 18
@@ -306,9 +306,9 @@ BREAK
 [@晋升6]
 #if
 checkitEmW 禁忌の之王 1
-CHECKGAMEDIAMOND > 23999
+checkitem 时装神器碎片 210
 #ACT
-GAMEDIAMOND - 24000
+take 时装神器碎片 210
 TAKEW 禁忌の之王 1
 GIVE 復仇の之魂 1
 AutoTakeOnItem 復仇の之魂 18
@@ -325,9 +325,9 @@ BREAK
 [@晋升7]
 #if
 checkitEmW 復仇の之魂 1
-CHECKGAMEDIAMOND > 29999
+checkitem 时装神器碎片 280
 #ACT
-GAMEDIAMOND - 30000
+take 时装神器碎片 280
 TAKEW 復仇の之魂 1
 GIVE 身份の象征 1
 AutoTakeOnItem 身份の象征 18

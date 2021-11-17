@@ -4,6 +4,7 @@
 #ACT
 MOV N$暴率加成 100
 MOV N$午夜屠狗 0
+mov N$地图临时增加 0
 #CALL [\赞助\赞助属性加成.txt] @赞助属性设置
 #CALL [\新会员系统\会员属性加成.txt] @会员属性设置
 
@@ -11,11 +12,23 @@ MOV N$午夜屠狗 0
 #ACT
 INC N$暴率加成 <$str(u0)>
 
+; 开区前三天
 #if
 not large <$str(G300)> 3
 #act
-INC N$暴率加成 100
+INC N$暴率加成 200
 
+#or
+equal <$MAPTITLE> 西游狂暴之地
+equal <$MAPTITLE> 三国狂暴之地
+equal <$MAPTITLE> 帝王狂暴之地
+equal <$MAPTITLE> 金庸狂暴之地
+#act
+mov N$地图临时增加 200
+
+#if
+#act
+INC N$暴率加成 <$str(N$地图临时增加)>
 
 #if
 not small U113 1

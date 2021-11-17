@@ -151,7 +151,7 @@ INC S$图标2 <Button|id=110|children=110_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|n
 
 [@赞助按钮]
 #if
-not large U99 888
+not large U99 388
 #act
 dec N$坐标X 65
 INC S$图标2 <Button|id=116|children=116_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00022.png|link=@赞助>

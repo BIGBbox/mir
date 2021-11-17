@@ -18,7 +18,7 @@ MOV S$分身数量5 全属性提升+25%
 MOV S$分身数量6 打怪伤害+40%
 MOV S$分身数量7 体力值+2500
 MOV S$分身数量8 *
-MOV S$需要条件2 40000天下币
+MOV S$需要条件2 时装神器碎片*360
 MOV S$晋升分身2 @晋升8
 GOTO @分身主界面
 BREAK
@@ -42,7 +42,7 @@ BREAK
     <RText|id=6|x=32|y=230|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑥：/FCOLOR=250><<$STR(S$分身数量6)>/FCOLOR=151>>
     <RText|id=7|x=32|y=260|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑦：/FCOLOR=250><<$STR(S$分身数量7)>/FCOLOR=151>>
     <RText|id=8|x=32|y=290|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑧：/FCOLOR=250><<$STR(S$分身数量8)>/FCOLOR=151>>
-    <RText|id=9|x=54|y=320|color=70|tips=|tipsx=10|tipsy=80|size=16|text=<天下币晋升   ：  /FCOLOR=250><<$STR(S$需要条件2)>/FCOLOR=249>>
+    <RText|id=9|x=44|y=320|color=70|tips=|tipsx=10|tipsy=80|size=16|text=<晋升消耗材料 ：  /FCOLOR=250><<$STR(S$需要条件2)>/FCOLOR=249>>
 
 <Button|id=click_btn|x=132|y=365|nimg=public/sf1/1/01347.png|pimg=public/sf1/1/01349.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=<$STR(S$晋升分身2)>>
 
@@ -52,9 +52,9 @@ BREAK
 [@晋升8]
 #if
 checkitEmW 身份の象征 1
-CHECKGAMEDIAMOND > 39999
+checkitem 时装神器碎片 360
 #ACT
-GAMEDIAMOND - 40000
+take 时装神器碎片 360
 TAKEW 身份の象征 1
 GIVE 不死の之身 1
 AutoTakeOnItem 不死の之身 18

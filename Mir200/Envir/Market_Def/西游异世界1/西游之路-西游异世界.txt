@@ -10,7 +10,7 @@
 <Text|a=0|x=30.0|y=20.0|tipsx=10|tipsy=80|color=219|size=18|text=怪物刷新：>
 <Text|a=0|x=116.0|y=20.0|tipsx=10|tipsy=80|color=0|size=18|text=太上老君、哪吒三太子、玉皇大帝、大唐圣僧>
 <Text|a=0|x=30.0|y=50.0|tipsx=10|tipsy=80|color=219|size=18|text=进入等级：>
-<Text|a=0|x=116.0|y=50.0|tipsx=10|tipsy=80|color=27|size=18|text=达到90级以上方可进入>
+<Text|a=0|x=116.0|y=50.0|tipsx=10|tipsy=80|color=27|size=18|text=达到88级以上方可进入>
 <Text|a=0|x=435.0|y=50.0|tipsx=10|tipsy=80|color=134|size=18|text=我要进入|link=@进入>
 <Text|a=0|x=435.0|y=120.0|tipsx=10|tipsy=80|color=134|size=18|text=我要进入|link=@进入1>
 <Text|a=0|x=435.0|y=190.0|height=24|tipsx=10|tipsy=80|size=18|color=134|text=我要进入|link=@进入2>
@@ -19,19 +19,19 @@
 <Text|x=30.0|y=90.0|color=219|size=18|text=怪物刷新：>
 <Text|x=116.0|y=90.0|color=0|size=18|text=太上老君、哪吒三太子、玉皇大帝、白龙马>
 <Text|x=30.0|y=120.0|color=219|size=18|text=进入等级：>
-<Text|x=116.0|y=120.0|color=27|size=18|text=达到91级以上方可进入>
+<Text|x=116.0|y=120.0|color=27|size=18|text=达到89级以上方可进入>
 <Text|x=303.0|y=120.0|color=168|size=18|text=焰  空  山>
 <Text|x=30.0|y=160.0|color=219|size=18|text=怪物刷新：>
 <Text|x=116.0|y=160.0|color=0|size=18|text=太上老君、大唐圣僧、玉皇大帝、白龙马>
 <Text|x=30.0|y=190.0|color=219|size=18|text=进入等级：>
-<Text|x=116.0|y=190.0|color=27|size=18|text=达到92级以上方可进入>
+<Text|x=116.0|y=190.0|color=27|size=18|text=达到90级以上方可进入>
 <Text|x=303.0|y=190.0|color=168|size=18|text=火  焰  山>
 <Text|x=30.0|y=230.0|color=219|size=18|text=怪物刷新：>
 <Text|x=116.0|y=230.0|color=0|size=18|text=太上老君、白龙马、玉皇大帝、金角王>
 <Text|x=30.0|y=260.0|color=219|size=18|text=进入等级：>
 <Text|x=30.0|y=330.0|color=219|size=18|text=进入等级：>
-<Text|x=116.0|y=260.0|color=27|size=18|text=达到93级以上方可进入>
-<Text|x=116.0|y=330.0|color=27|size=18|text=达到94级以上方可进入>
+<Text|x=116.0|y=260.0|color=27|size=18|text=达到91级以上方可进入>
+<Text|x=116.0|y=330.0|color=27|size=18|text=达到92级以上方可进入>
 <Text|x=303.0|y=260.0|color=168|size=18|text=盘  丝  岭>
 <Text|x=30.0|y=300.0|color=219|size=18|text=怪物刷新：>
 <Text|x=116.0|y=300.0|color=0|size=18|text=太上老君、白龙马、哪吒三太子、金角王>
@@ -45,7 +45,7 @@
 
 [@进入]
 #IF
-CHECKLEVELEX > 89
+CHECKLEVELEX > 87
 #act
 MAP 平顶山
 GuildNoticeMsg 251 66 系统提示：玩家[%s]进入了【平顶山】！！！
@@ -55,7 +55,7 @@ BREAK
 
 [@进入1]
 #IF
-CHECKLEVELEX > 90
+CHECKLEVELEX > 88
 #act
 MAP 焰空山
 GuildNoticeMsg 251 66 系统提示：玩家[%s]进入了【焰空山】！！！
@@ -65,7 +65,7 @@ BREAK
 
 [@进入2]
 #IF
-CHECKLEVELEX > 91
+CHECKLEVELEX > 89
 #act
 MAP 火焰山
 GuildNoticeMsg 251 66 系统提示：玩家[%s]进入了【火焰山】！！！
@@ -75,7 +75,7 @@ BREAK
 
 [@进入3]
 #IF
-CHECKLEVELEX > 92
+CHECKLEVELEX > 90
 #act
 MAP 盘丝岭
 GuildNoticeMsg 251 66 系统提示：玩家[%s]进入了【盘丝岭】！！！
@@ -85,7 +85,7 @@ BREAK
 
 [@进入4]
 #IF
-CHECKLEVELEX > 93
+CHECKLEVELEX > 91
 #act
 MAP 狮驼岭
 GuildNoticeMsg 251 66 系统提示：玩家[%s]进入了【狮驼岭】！！！

@@ -1250,7 +1250,7 @@ IsOnMap 0
 break
 
 #IF
-not CHECKLEVELEX < 30
+not CHECKLEVELEX < 50
 #ACT
 WriteConfigFileItem ..\QuestDiary\离线挂机\离线挂机名单.txt <$USERACCOUNT> 角色 <$USERNAME>
 OFFLINEPLAY 65535
@@ -8618,6 +8618,8 @@ BREAK
 #act
 goto @开启自动挂机
 ; sendmsg 5 进入地图:<$str(U99)>
+#CALL [\属性重载\游戏爆率.txt] @暴率
+
 #if
 equal <$MAPTITLE> 新手训练营
 equal U108 5
@@ -8632,6 +8634,10 @@ not CheckTextList ..\QuestDiary\捡物精灵\禁用捡物地图.txt <$MAPTITLE>
 goto @召唤捡物精灵
 #elseact
 goto @收回捡物精灵
+
+#if
+#act
+#CALL [\游戏登陆\顶部属性.txt] @顶部属性显示
 
 
 [@召唤捡物精灵]
@@ -8986,7 +8992,7 @@ sendmsg 5 恭喜玩家<$USERNAME>达成充值要求,升级到了铂金会员!!
 
 
 #if
-large <$STR(U99)> 29999
+large <$STR(U99)> 9999
 ;not small <$STR(U17)> 3
 small <$STR(U17)> 11
 #act
@@ -8997,7 +9003,7 @@ sendmsg 5 恭喜玩家<$USERNAME>达成充值要求,升级到了至尊会员!!
 
 
 #if
-large <$STR(U99)> 9999
+large <$STR(U99)> 6999
 ;not small <$STR(U17)> 3
 small <$STR(U17)> 10
 #act

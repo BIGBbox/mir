@@ -32,7 +32,7 @@ ReadConfigFileItem ..\QuestDiary\赞助\赞助数据.txt 窗口数量 窗口数量 S$窗口数量
 
 
 #if
-not small <$str(U99)>  888
+not small <$str(U99)>  388
 #act
 INC S$批量拾取开关按钮 <CheckBox|id=批量拾取开关|children={复选框描述}|x=100.0|y=480.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(N$开关状态)>|checkboxid=1|link=@开启批量拾取>
 INC S$批量拾取开关按钮 <RText|id=复选框描述|x=33.0|y=3.0|text=<开启批量拾取/FCOLOR=149>>
@@ -66,9 +66,9 @@ goto @绘制滑动窗口
 
 [@开启批量拾取]
 #if
-not large <$str(U99)>  888
+not large <$str(U99)>  388
 #act
-messagebox 充值金额不足888,无法开启自动批量拾取功能!
+messagebox 充值金额不足388,无法开启自动批量拾取功能!
 break
 
 

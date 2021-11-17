@@ -132,7 +132,7 @@ mov S$支线任务临时变量 <$STR(T108)>
 mov T108 <$STR(S$支线任务临时变量)>_转生
 NEWCOMPLETETASK 30
 NEWDELETETASK 30
-sendmsg 1 已完成任务!
+sendmsg 5 已完成任务!
 
 CHANGEEXP + 100000
 MailGIVE 绑定元宝 100000

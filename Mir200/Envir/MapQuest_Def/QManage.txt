@@ -235,7 +235,7 @@ break
 
 #if
 not equal <$str(S$提取的名单)>
-not <$str(S$提取的名单)>.Checkonline
+; not <$str(S$提取的名单)>.Checkonline
 #act
 <$str(S$提取的名单)>.OFFLINEPLAY 0
 DelText ..\QuestDiary\离线挂机\离线挂机名单.txt 0

@@ -541,7 +541,6 @@ ReadConfigFileItem ..\QuestDiary\ĞÂ»áÔ±ÏµÍ³\»áÔ±½±Àø.txt <$STR(S$²ÎÊı)> Àñ°ü S$Ï
 #if
 not small <$STR(U17)> <$STR(S$²ÎÊı)>
 #act
-
 GOTO @·¢·ÅÃ¿ÈÕÀñ°ü
 break
 
@@ -559,8 +558,6 @@ messagebox ÄãÃ»ÓĞ´ïµ½ÁìÈ¡Ìõ¼ş,ÓÂÊ¿Çë¼ÌĞø¼ÓÓÍ°É!!
 break
 
 
-GOTO @·¢·ÅÃ¿ÈÕÀñ°ü
-
 [@·¢·ÅÃ¿ÈÕÀñ°ü]
 #if
 not equal S$ÏÂ·½Àñ°ü´®
@@ -570,8 +567,8 @@ GetValidstr <$STR(S$µÀ¾ßÃû×ÖºÍÊıÁ¿)> * S$µÀ¾ßÃû×Ö S$µÀ¾ßÊıÁ¿
 ; GIVE <$STR(S$µÀ¾ßÃû×Ö)> <$STR(S$µÀ¾ßÊıÁ¿)>
 ; sendmsg 5 :::<$str(S$µÀ¾ßÃû×Ö)>___<$str(S$µÀ¾ßÊıÁ¿)>
 MailGIVE <$STR(S$µÀ¾ßÃû×Ö)> <$STR(S$µÀ¾ßÊıÁ¿)> 1#4#5#6#8
-GOTO @·¢·ÅÃ¿ÈÕÀñ°ü
 set [<$STR(S$ÁìÈ¡±ê¼Ç)>] 1
+GOTO @·¢·ÅÃ¿ÈÕÀñ°ü
 #elseact
 ReadConfigFileItem ..\QuestDiary\ĞÂ»áÔ±ÏµÍ³\»áÔ±½±Àø.txt <$STR(S$²ÎÊı)> °´Å¥ÎÄ×Ö S$ÓÊ¼ş±êÌâ
 SendMail 1 ÏµÍ³½±Àø <$STR(S$ÓÊ¼ş±êÌâ)>Àñ°üÒÑ·¢·Å,Çë¾¡¿ìÌáÈ¡¸½¼ş!
