@@ -2201,6 +2201,78 @@ INC N$分解装备数量 1
 INC N$分解碎片数量 70
 
 #IF
+CHECKITEM 西游马牌 1
+#ACT
+GIVE 神器碎片 2
+TAKE 西游马牌 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 2
+
+#IF
+CHECKITEM 三国马牌 1
+#ACT
+GIVE 神器碎片 4
+TAKE 三国马牌 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 4
+
+#IF
+CHECKITEM 帝王马牌 1
+#ACT
+GIVE 神器碎片 6
+TAKE 帝王马牌 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 6
+
+#IF
+CHECKITEM 金庸马牌 1
+#ACT
+GIVE 神器碎片 8
+TAKE 金庸马牌 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 8
+
+#IF
+CHECKITEM 圣斗士马牌 1
+#ACT
+GIVE 神器碎片 15
+TAKE 圣斗士马牌 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 15
+
+#IF
+CHECKITEM 水浒马牌 1
+#ACT
+GIVE 神器碎片 20
+TAKE 水浒马牌 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 20
+
+#IF
+CHECKITEM 诛仙马牌 1
+#ACT
+GIVE 神器碎片 30
+TAKE 诛仙马牌 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 30
+
+#IF
+CHECKITEM 暗黑马牌 1
+#ACT
+GIVE 神器碎片 50
+TAKE 暗黑马牌 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 50
+
+#IF
+CHECKITEM 神域马牌 1
+#ACT
+GIVE 神器碎片 70
+TAKE 神域马牌 1
+INC N$分解装备数量 1
+INC N$分解碎片数量 70
+
+#IF
 CHECKITEM 幽影之枪【灵阶】 1
 #ACT
 GIVE 神器碎片 2

@@ -210,27 +210,12 @@ goto @获取图鉴
 
 [@ceshi1]
 
-; #IF
-; #ACT
-; mov S$名字 米线
-; <$str(S$名字)>.OFFLINEPLAY 1
-; movr N$随机坐标X 109 129
-; movr N$随机坐标Y 87 105
-; mapmove 天下主城 <$STR(N$随机坐标X)> <$STR(N$随机坐标Y)>
-; GuildNoticeMsg 255 56 玩家:『<$USERNAME>』下线了,时间,<$HOUR>:时<$MINUTE>:分<$SECOND>:秒
-; Break
 
-
-#if
-#say
-\ \ 
-此地图过于危险，最少需要160级才能进入此地图！！
-\ \
-<我要进入/@我要进入>
-; break
 
 #if
 #act
+set [50] 0
+set [51] 0
 break
 ; mov S$名字 米线
 ; ; <$str(S$名字)>.<$USERACCOUNT>

@@ -51,7 +51,7 @@ SAVEVAR GLOBAL 沙捐总值
 #If
 #Act
 ;give 诛仙剑 1
-;MAPMOVE bqc 329 264 3
+; MOVE bqc 329 264 3
 #CALL [\基础按钮\主界面基础按钮QM.txt] @基础按钮QM
 #CALL [\自动挂机\自动挂机QM.txt] @自动挂机QM脚本
 ;#Call [\Mobile\特殊NPC\TOP图标.txt] @导航

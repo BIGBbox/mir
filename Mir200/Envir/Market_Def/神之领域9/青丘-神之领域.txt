@@ -8,7 +8,7 @@
 <Button|x=541.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
 <Text|a=0|x=228.0|y=15.0|tipsx=10|tipsy=80|color=168|size=18|text=青	    丘>
 <Text|a=0|x=32.0|y=50.0|tipsx=10|tipsy=80|color=219|size=18|text=怪物刷新：>
-<Text|a=0|x=123.0|y=50.0|tipsx=10|tipsy=80|color=0|size=18|text=山海经·帝喾、世祖·尧、三十三世·舜、巨人刑天>
+<Text|a=0|x=123.0|y=50.0|tipsx=10|tipsy=80|color=0|size=18|text=龙手·马弗、血鸟、邪恶之手·伊斯梅尔>
 <Text|a=0|x=32.0|y=75.0|tipsx=10|tipsy=80|color=219|size=18|text=适合人群：>
 <Text|a=0|x=123.0|y=75.0|tipsx=10|tipsy=80|color=119|size=18|text=适合行走江湖之人进入历练>
 <Text|a=0|x=32.0|y=100.0|tipsx=10|tipsy=80|color=219|size=18|text=进入等级：>

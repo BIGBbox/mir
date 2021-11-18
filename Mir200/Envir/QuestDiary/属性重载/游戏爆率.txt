@@ -26,6 +26,20 @@ equal <$MAPTITLE> 金庸狂暴之地
 #act
 mov N$地图临时增加 200
 
+#or
+equal <$MAPTITLE> 西游沙捐之地
+equal <$MAPTITLE> 三国沙捐之地
+equal <$MAPTITLE> 帝王沙捐之地
+equal <$MAPTITLE> 金庸沙捐之地
+equal <$MAPTITLE> 圣斗士沙捐之地
+equal <$MAPTITLE> 水浒沙捐之地
+equal <$MAPTITLE> 诛仙沙捐之地
+equal <$MAPTITLE> 暗黑沙捐之地
+equal <$MAPTITLE> 神域沙捐之地
+
+#act
+mov N$地图临时增加 400
+
 #if
 #act
 INC N$暴率加成 <$str(N$地图临时增加)>

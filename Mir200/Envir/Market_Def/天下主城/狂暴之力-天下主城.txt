@@ -25,7 +25,7 @@ mov <$STR(S$狂暴显示2)> <PlayImg:1:2880:10:100:0:-20:0:0>
     <RText|id=1_2|x=57|y=85|size=16|color=255|text=<1、/FCOLOR=251><开启狂暴模式需要:/FCOLOR=146><200RMB点/FCOLOR=58>>
     <RText|id=1_5|x=57|y=110|size=16|color=255|text=<2、/FCOLOR=251><开启狂暴获得:/FCOLOR=146><1.1/FCOLOR=151><倍属性提升且升华/FCOLOR=146><全属性:/FCOLOR=19><+50！/FCOLOR=253>>
     <RText|id=2_2|x=57|y=135|size=16|color=255|text=<3、/FCOLOR=251><开启狂暴获得:/FCOLOR=146><回收加成+50%/FCOLOR=58><吸血+5%/FCOLOR=19>>
-    <RText|id=2_6|x=57|y=160|size=16|color=255|text=<4、/FCOLOR=251><被人物击杀后状态消失:/FCOLOR=146><（击杀者可获得50RMB点奖励）/FCOLOR=58>>
+    <RText|id=2_6|x=57|y=160|size=16|color=255|text=<4、/FCOLOR=251><被人物击杀后状态消失:/FCOLOR=146><（击杀者可获得100RMB点奖励）/FCOLOR=58>>
     <RText|id=2_9|x=57|y=185|size=16|color=255|text=<5、/FCOLOR=251><被怪物击杀或小退大退状态依然保存。/FCOLOR=146>>
 
     <Button|id=button_click|x=220|y=210|nimg=public/sf1/1/00085.png|pimg=public/sf1/1/00084.png|size=16|color=249|link=@开启狂暴模式>

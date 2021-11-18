@@ -23,19 +23,19 @@ div N$height 2
 <Img|width=620|height=300|children={close_btn,特效控件1,特效控件2,特效控件3,特效控件4,title}|img=public/sf1/1/00385.png|x=<$STR(N$width)>|y=<$STR(N$height)>|bg=1|reset=1|move=1>
 <Layout|x=597|y=3|width=80|height=80|link=@exit>
 <Button|id=close_btn|x=609|y=2.0|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
-<Text|a=0|id=title|x=54|y=50|color=249|tips=|tipsx=10|tipsy=80|size=18|text=【神兵谱回收】>
+<Text|a=0|id=title|x=50|y=50|color=249|tips=|tipsx=10|tipsy=80|size=18|text=回收加成越高获得的奖励越多！>
 
 <Img|id=特效控件1|children={1,2,3,4}|x=42|y=55|height=1|width=1|img=public/0.png>
-    <Text|id=1|x=0|y=55 |color=103|tips={回收价格：/FCOLOR=251}^{2-1000天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱武器>
-    <Text|id=2|x=0|y=90 |color=103|tips={回收价格：/FCOLOR=251}^{1-200天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱项链>
-    <Text|id=3|x=0|y=125|color=93|tips={回收价格：/FCOLOR=251}^{1-200天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱手镯>
-    <Text|id=4|x=0|y=160|color=94|tips={回收价格：/FCOLOR=251}^{1-200天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱腰带>
+    <Text|id=1|x=0|y=55 |color=103|tips={回收价格：/FCOLOR=251}^{10-3000天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱武器>
+    <Text|id=2|x=0|y=90 |color=103|tips={回收价格：/FCOLOR=251}^{5-600天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱项链>
+    <Text|id=3|x=0|y=125|color=93|tips={回收价格：/FCOLOR=251}^{5-600天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱手镯>
+    <Text|id=4|x=0|y=160|color=94|tips={回收价格：/FCOLOR=251}^{5-600天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱腰带>
 
 <Img|id=特效控件2|children={5,6,7,8}|x=344|y=55|height=1|width=1|img=public/0.png>
-    <Text|id=5|x=0|y=55|color=95|tips={回收价格：/FCOLOR=251}^{2-500天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱衣服>
-    <Text|id=6|x=0|y=90 |color=244|tips={回收价格：/FCOLOR=251}^{1-200天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱头盔>
-    <Text|id=7|x=0|y=125|color=227|tips={回收价格：/FCOLOR=251}^{1-200天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱戒指>
-    <Text|id=8|x=0|y=160|color=229|tips={回收价格：/FCOLOR=251}^{1-200天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱靴子>
+    <Text|id=5|x=0|y=55|color=95|tips={回收价格：/FCOLOR=251}^{10-1500天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱衣服>
+    <Text|id=6|x=0|y=90 |color=244|tips={回收价格：/FCOLOR=251}^{5-600天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱头盔>
+    <Text|id=7|x=0|y=125|color=227|tips={回收价格：/FCOLOR=251}^{5-600天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱戒指>
+    <Text|id=8|x=0|y=160|color=229|tips={回收价格：/FCOLOR=251}^{5-600天下币/FCOLOR=253}^|tipsx=10|tipsy=80|size=18|text=神兵谱靴子>
 
 <Img|id=特效控件3|children={9,10,11,12}|x=153|y=55|height=1|width=1|img=public/0.png>
     <Text|id=9|x=0|y=55|color=251|tips=|tipsx=10|tipsy=80|size=18|text=一键回收武器|link=@回收#类型=神兵武器>

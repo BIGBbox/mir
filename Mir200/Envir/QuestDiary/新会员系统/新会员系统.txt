@@ -242,10 +242,10 @@ ReadConfigFileItem ..\QuestDiary\ĞÂ»áÔ±ÏµÍ³\»áÔ±½±Àø.txt <$STR(S$²ÎÊı)> y S$y×ø±
 ReadConfigFileItem ..\QuestDiary\ĞÂ»áÔ±ÏµÍ³\»áÔ±½±Àø.txt <$STR(S$²ÎÊı)> ´ó±êÌâimg S$´ó±êÌâimg
 ReadConfigFileItem ..\QuestDiary\ĞÂ»áÔ±ÏµÍ³\»áÔ±½±Àø.txt <$STR(S$²ÎÊı)> Ğ¡±êÌâimg S$Ğ¡±êÌâimg
 ;-------×óÉÏ½ÇÌØÈ¨±êÌâ-------
-INC S$½±Àø±êÌâ1 <Img|id=±êÌâ|children={¹ö¶¯´°¿Ú,imggg,ÓÒ±ß±êÌâBG,ÓÒ±ßÃèÊö,ÓÒ±ßÃèÊö1,ÕÚ¸Ç,ÃëÉı»áÔ±btn}|x=170.0|y=70.0|size=20|img=public/sf1/19/title.png>
+INC S$½±Àø±êÌâ1 <Img|id=±êÌâ|children={¹ö¶¯´°¿Ú,imggg,ÓÒ±ß±êÌâBG,ÓÒ±ßÃèÊö,ÓÒ±ßÃèÊö1,ÓÒ±ßÃèÊö2,ÓÒ±ßÃèÊö3,ÓÒ±ßÃèÊö4,ÕÚ¸Ç,ÃëÉı»áÔ±btn}|x=170.0|y=70.0|size=20|img=public/sf1/19/title.png>
 INC S$½±Àø±êÌâ1 <Img|id=imggg|x=90.0|y=30.0|img=public/sf1/19/artFont/<$STR(S$´ó±êÌâimg)>.png>
 INC S$½±Àø±êÌâ1 <ListView|id=¹ö¶¯´°¿Ú|children={×óÉÏ½ÇÃèÊö1,×óÉÏ½ÇÃèÊö2,×óÉÏ½ÇÃèÊö3,×óÉÏ½ÇÃèÊö4,×óÉÏ½ÇÃèÊö5,×óÉÏ½ÇÃèÊö6,×óÉÏ½ÇÃèÊö7,×óÉÏ½ÇÃèÊö8,×óÉÏ½ÇÃèÊö9,}|direction=1|bounce=1|x=0|y=80.0|margin=20|height=200|width=240|img=public/0.png>
-INC S$½±Àø±êÌâ1 <Img|id=ÓÒ±ß±êÌâBG|children={ÓÒ±ß±êÌâ}|x=330.0|y=2.0|img=public/sf1/19/image4.png>
+INC S$½±Àø±êÌâ1 <Img|id=ÓÒ±ß±êÌâBG|children={ÓÒ±ß±êÌâ,¹ºÂòÃèÊö,¹ºÂò¼Û¸ñ}|x=330.0|y=2.0|img=public/sf1/19/image4.png>
 INC S$½±Àø±êÌâ1 <RText|id=ÓÒ±ß±êÌâ|x=50.0|y=10.0|size=20|text=<Éı¼¶µ½<$STR(S$½±Àø±êÌâÎÄ×Ö)>Ä¿±ê/FCOLOR=149>>
 
 #if
@@ -278,26 +278,46 @@ small <$STR(N$ÏÂÒ»¼¶)> <$STR(S$²ÎÊı)>
 #act
 INC S$½±Àø±êÌâ1 <Img|id=ÕÚ¸Ç|x=295|y=42.0|img=public/sf1/19/coverTxt.png|link=@p>
 
-; #if
-; not small <$STR(S$²ÎÊı)> 4
-; not small <$STR(U17)> <$STR(S$²ÎÊı)>
-; #act
-; INC S$½±Àø±êÌâ1 <Button|id=ÃëÉı»áÔ±btn|x=520.0|y=370.0|size=18|nimg=public/1900000611.png|height=50|width=100|text=¹ºÂòÀñ°ü|link=@¹ºÂòÀñ°ü>
-; INC S$½±Àø±êÌâ1 <RText|id=ÓÒ±ß±êÌâ|x=40.0|y=380.0|size=20|text=<ÏŞ¹º1´Î/FCOLOR=149>>
+#if
+not small <$STR(S$²ÎÊı)> 4
+not small <$STR(U17)> <$STR(S$²ÎÊı)>
+#act
+GetValidstr <$STR(S$Ã¿ÈÕÏŞ¹º¼Û¸ñ´®)> * S$Ã¿ÈÕ»õ±ÒÀàĞÍ S$Ã¿ÈÕ»õ±ÒÊıÁ¿
 
-; GetValidstr <$STR(S$Ã¿ÈÕÏŞ¹º´®)> & S$Ã¿ÈÕÃû×ÖºÍÊıÁ¿ S$Ã¿ÈÕÏŞ¹º´®
-; GetValidstr <$STR(S$Ã¿ÈÕÃû×ÖºÍÊıÁ¿)> * S$Ã¿ÈÕµÀ¾ßÃû×Ö S$Ã¿ÈÕµÀ¾ßÊıÁ¿
-; GetDBItemFieldValue <$STR(S$Ã¿ÈÕµÀ¾ßÃû×Ö)> idx S$Ã¿ÈÕµÀ¾ßID
-; INC S$½±Àø±êÌâ1 <ItemShow|id=ÓÒ±ßÃèÊö1|x=260|y=360|itemid=<$STR(S$Ã¿ÈÕµÀ¾ßID)>|itemcount=<$STR(S$Ã¿ÈÕµÀ¾ßÊıÁ¿)>|showtips=1|bgtype=1|scale=0.8>
+INC S$½±Àø±êÌâ1 <Button|id=ÃëÉı»áÔ±btn|x=520.0|y=395.0|size=18|nimg=public/sf1/19/button1.png|height=40|width=100|text=¹ºÂòÀñ°ü|link=@¹ºÂòÀñ°ü>
+INC S$½±Àø±êÌâ1 <RText|id=¹ºÂòÃèÊö|x=40.0|y=430.0|size=20|text=<ÏŞ¹º1´Î/FCOLOR=149>>
+; INC S$½±Àø±êÌâ1 <RText|id=¹ºÂòÃèÊö|x=520.0|y=365.0|size=20|text=<<$str(S$Ã¿ÈÕ»õ±ÒÀàĞÍ)>*<$str(S$Ã¿ÈÕ»õ±ÒÊıÁ¿)>/FCOLOR=149>>
+INC S$½±Àø±êÌâ1 <RText|id=¹ºÂò¼Û¸ñ|x=190.0|y=360.0|size=16|text=<<$str(S$Ã¿ÈÕ»õ±ÒÀàĞÍ)>*<$str(S$Ã¿ÈÕ»õ±ÒÊıÁ¿)>/FCOLOR=149>>
+
+GetValidstr <$STR(S$Ã¿ÈÕÏŞ¹º´®)> & S$Ã¿ÈÕÃû×ÖºÍÊıÁ¿1 S$Ã¿ÈÕÏŞ¹º´®2
+GetValidstr <$STR(S$Ã¿ÈÕÃû×ÖºÍÊıÁ¿1)> * S$Ã¿ÈÕµÀ¾ßÃû×Ö1 S$Ã¿ÈÕµÀ¾ßÊıÁ¿1
+GetDBItemFieldValue <$STR(S$Ã¿ÈÕµÀ¾ßÃû×Ö1)> idx S$Ã¿ÈÕµÀ¾ßID1
+
+GetValidstr <$STR(S$Ã¿ÈÕÏŞ¹º´®2)> & S$Ã¿ÈÕÃû×ÖºÍÊıÁ¿2 S$Ã¿ÈÕÏŞ¹º´®3
+GetValidstr <$STR(S$Ã¿ÈÕÃû×ÖºÍÊıÁ¿2)> * S$Ã¿ÈÕµÀ¾ßÃû×Ö2 S$Ã¿ÈÕµÀ¾ßÊıÁ¿2
+GetDBItemFieldValue <$STR(S$Ã¿ÈÕµÀ¾ßÃû×Ö2)> idx S$Ã¿ÈÕµÀ¾ßID2
+
+GetValidstr <$STR(S$Ã¿ÈÕÏŞ¹º´®3)> & S$Ã¿ÈÕÃû×ÖºÍÊıÁ¿3 S$Ã¿ÈÕÏŞ¹º´®4
+GetValidstr <$STR(S$Ã¿ÈÕÃû×ÖºÍÊıÁ¿3)> * S$Ã¿ÈÕµÀ¾ßÃû×Ö3 S$Ã¿ÈÕµÀ¾ßÊıÁ¿3
+GetDBItemFieldValue <$STR(S$Ã¿ÈÕµÀ¾ßÃû×Ö3)> idx S$Ã¿ÈÕµÀ¾ßID3
+
+GetValidstr <$STR(S$Ã¿ÈÕÏŞ¹º´®4)> & S$Ã¿ÈÕÃû×ÖºÍÊıÁ¿4 S$Ã¿ÈÕÏŞ¹º´®5
+GetValidstr <$STR(S$Ã¿ÈÕÃû×ÖºÍÊıÁ¿4)> * S$Ã¿ÈÕµÀ¾ßÃû×Ö4 S$Ã¿ÈÕµÀ¾ßÊıÁ¿4
+GetDBItemFieldValue <$STR(S$Ã¿ÈÕµÀ¾ßÃû×Ö4)> idx S$Ã¿ÈÕµÀ¾ßID4
+
+INC S$½±Àø±êÌâ1 <ItemShow|id=ÓÒ±ßÃèÊö1|x=260|y=370|itemid=<$STR(S$Ã¿ÈÕµÀ¾ßID1)>|itemcount=<$STR(S$Ã¿ÈÕµÀ¾ßÊıÁ¿1)>|showtips=1|bgtype=1|scale=0.8>
+INC S$½±Àø±êÌâ1 <ItemShow|id=ÓÒ±ßÃèÊö2|x=320|y=370|itemid=<$STR(S$Ã¿ÈÕµÀ¾ßID2)>|itemcount=<$STR(S$Ã¿ÈÕµÀ¾ßÊıÁ¿2)>|showtips=1|bgtype=1|scale=0.8>
+INC S$½±Àø±êÌâ1 <ItemShow|id=ÓÒ±ßÃèÊö3|x=380|y=370|itemid=<$STR(S$Ã¿ÈÕµÀ¾ßID3)>|itemcount=<$STR(S$Ã¿ÈÕµÀ¾ßÊıÁ¿3)>|showtips=1|bgtype=1|scale=0.8>
+INC S$½±Àø±êÌâ1 <ItemShow|id=ÓÒ±ßÃèÊö4|x=440|y=370|itemid=<$STR(S$Ã¿ÈÕµÀ¾ßID4)>|itemcount=<$STR(S$Ã¿ÈÕµÀ¾ßÊıÁ¿4)>|showtips=1|bgtype=1|scale=0.8>
 
 
-; #if
-; check [<$STR(S$ÏŞ¹º±ê¼Ç)>] 1
-; not small <$STR(S$²ÎÊı)> 4
-; not small <$STR(U17)> <$STR(S$²ÎÊı)>
-; #act
-; INC S$½±Àø±êÌâ1 <Button|id=ÃëÉı»áÔ±btn|x=520.0|y=370.0|size=18|nimg=public/1900000611.png|grey=1|height=50|width=100|text=¹ºÂòÀñ°ü>
-; INC S$½±Àø±êÌâ1 <RText|id=ÓÒ±ß±êÌâ|x=40.0|y=380.0|size=20|text=<ÏŞ¹º1´Î/FCOLOR=149>>
+#if
+check [<$STR(S$ÏŞ¹º±ê¼Ç)>] 1
+not small <$STR(S$²ÎÊı)> 4
+not small <$STR(U17)> <$STR(S$²ÎÊı)>
+#act
+INC S$½±Àø±êÌâ1 <Button|id=ÃëÉı»áÔ±btn|x=520.0|y=395.0|size=18|nimg=public/sf1/19/button1.png|grey=1|height=40|width=100|text=¹ºÂòÀñ°ü>
+INC S$½±Àø±êÌâ1 <RText|id=¹ºÂòÃèÊö|x=40.0|y=430.0|size=20|text=<ÏŞ¹º1´Î/FCOLOR=149>>
 
 
 #if
@@ -327,18 +347,43 @@ break
 GetValidstr <$STR(S$Ã¿ÈÕÏŞ¹º¼Û¸ñ´®)> * S$Ã¿ÈÕ»õ±ÒÀàĞÍ S$Ã¿ÈÕ»õ±ÒÊıÁ¿
 
 #if
-not CHECKMONEY <$STR(S$Ã¿ÈÕ»õ±ÒÀàĞÍ)> > <$STR(S$Ã¿ÈÕ»õ±ÒÊıÁ¿)>
+equal <$STR(S$Ã¿ÈÕ»õ±ÒÀàĞÍ)> Ôª±¦
+CheckBindMoney < <$STR(S$Ã¿ÈÕ»õ±ÒÊıÁ¿)>
+#act
+messagebox <$STR(S$Ã¿ÈÕ»õ±ÒÀàĞÍ)>²»×ã!!
+break
+
+#if
+CHECKMONEY <$STR(S$Ã¿ÈÕ»õ±ÒÀàĞÍ)> < <$STR(S$Ã¿ÈÕ»õ±ÒÊıÁ¿)>
 #act
 messagebox <$STR(S$Ã¿ÈÕ»õ±ÒÀàĞÍ)>²»×ã!!
 break
 
 #if
 #act
+messagebox ¹ºÂò¸ÃÀñ°üĞèÒªÏûºÄ<$STR(S$Ã¿ÈÕ»õ±ÒÀàĞÍ)>*<$STR(S$Ã¿ÈÕ»õ±ÒÊıÁ¿)>\\ÊÇ·ñÈ·¶¨¹ºÂò @¹ºÂòÀñ°üFC @È¡Ïû¹ºÂò»áÔ±Àñ°ü
+
+[@¹ºÂòÀñ°üFC]
+#if
+equal <$STR(S$Ã¿ÈÕ»õ±ÒÀàĞÍ)> Ôª±¦
+#act
+money °ó¶¨Ôª±¦ - <$STR(S$Ã¿ÈÕ»õ±ÒÊıÁ¿)>
+
+#if
+not equal <$STR(S$Ã¿ÈÕ»õ±ÒÀàĞÍ)> Ôª±¦
+#act
 money <$STR(S$Ã¿ÈÕ»õ±ÒÀàĞÍ)> - <$STR(S$Ã¿ÈÕ»õ±ÒÊıÁ¿)>
+
+#if
+#act
+; money <$STR(S$Ã¿ÈÕ»õ±ÒÀàĞÍ)> - <$STR(S$Ã¿ÈÕ»õ±ÒÊıÁ¿)>
 ;GiveStateItem <$STR(S$Ã¿ÈÕµÀ¾ßÃû×Ö)> <$STR(S$Ã¿ÈÕµÀ¾ßÊıÁ¿)> 0 1 0 0 1 1 1 1
-MailGIVE <$STR(S$Ã¿ÈÕµÀ¾ßÃû×Ö)> <$STR(S$Ã¿ÈÕµÀ¾ßÊıÁ¿)> 1#4#5#6#8
-SendMail 1 ÏµÍ³½±Àø »áÔ±Ã¿ÈÕÀñ°ü,ÇëµãÌáÈ¡¸½¼ş!
-messagebox <$STR(S$Ã¿ÈÕµÀ¾ßÃû×Ö)>ÒÑ·¢·ÅÄãµÄÓÊ¼ş,Çë¼°Ê±ÌáÈ¡¸½¼ş!!
+MailGIVE <$STR(S$Ã¿ÈÕµÀ¾ßÃû×Ö1)> <$STR(S$Ã¿ÈÕµÀ¾ßÊıÁ¿1)> 1#4#5#6#8
+MailGIVE <$STR(S$Ã¿ÈÕµÀ¾ßÃû×Ö2)> <$STR(S$Ã¿ÈÕµÀ¾ßÊıÁ¿2)> 1#4#5#6#8
+MailGIVE <$STR(S$Ã¿ÈÕµÀ¾ßÃû×Ö3)> <$STR(S$Ã¿ÈÕµÀ¾ßÊıÁ¿3)> 1#4#5#6#8
+MailGIVE <$STR(S$Ã¿ÈÕµÀ¾ßÃû×Ö4)> <$STR(S$Ã¿ÈÕµÀ¾ßÊıÁ¿4)> 1#4#5#6#8
+SendMail 1 ÏµÍ³½±Àø »áÔ±ÏŞ¹ºÀñ°ü,ÇëµãÌáÈ¡¸½¼ş!
+messagebox »áÔ±ÏŞ¹ºÒÑ·¢·ÅÄãµÄÓÊ¼ş,Çë¼°Ê±ÌáÈ¡¸½¼ş!!
 set [<$STR(S$ÏŞ¹º±ê¼Ç)>] 1
 GOTO @ĞÂ»áÔ±ÏµÍ³Ö÷Ãæ°å
 

@@ -28,6 +28,91 @@
 SetUpgradeItem 0
 SENDMSG 7 <$BOXITEM[1].NAME>
 
+; #if
+; CHECKDRILLHOLE -1 0
+; equal <$USERNAME> 心柔
+; #act
+; sendmsg 5 0孔已开
+
+; #if
+; CHECKDRILLHOLE -1 1
+; equal <$USERNAME> 心柔
+; #act
+; sendmsg 5 1孔已开
+
+; #if
+; CHECKDRILLHOLE -1 2
+; equal <$USERNAME> 心柔
+; #act
+; sendmsg 5 2孔已开
+
+; #if
+; equal <$USERNAME> 心柔
+; CHECKDRILLHOLE -1 3
+; #act
+; sendmsg 5 3孔已开
+
+; #if
+; equal <$USERNAME> 心柔
+; CHECKDRILLHOLE -1 4
+; #act
+; sendmsg 5 4孔已开
+
+; #if
+; equal <$USERNAME> 心柔
+; CHECKDRILLHOLE -1 5
+; #act
+; sendmsg 5 6孔已开
+
+; #if
+; equal <$USERNAME> 心柔
+; CHECKDRILLHOLE -1 7
+; #act
+; sendmsg 5 7孔已开
+
+; #if
+; equal <$USERNAME> 心柔
+; CHECKDRILLHOLE -1 8
+; #act
+; sendmsg 5 8孔已开
+
+; #if
+; equal <$USERNAME> 心柔
+; CHECKDRILLHOLE -1 9
+; #act
+; sendmsg 5 9孔已开
+
+
+
+; #if
+; #act
+; CHECKSOCKETABLEITEM -1 0 N1 S2
+; CHECKSOCKETABLEITEM -1 1 N11 S12
+; CHECKSOCKETABLEITEM -1 2 N21 S22
+; CHECKSOCKETABLEITEM -1 3 N31 S32
+; CHECKSOCKETABLEITEM -1 4 N41 S42
+; CHECKSOCKETABLEITEM -1 5 N51 S52
+; CHECKSOCKETABLEITEM -1 6 N61 S62
+; CHECKSOCKETABLEITEM -1 7 N71 S72
+; CHECKSOCKETABLEITEM -1 8 N81 S82
+; CHECKSOCKETABLEITEM -1 9 N91 S92
+
+; #if
+; equal <$USERNAME> 心柔
+; #act
+; sendmsg 5 1孔未开!!
+; money 天下币 + 20000
+; sendmsg 5 0:<$str(N1)>__<$str(S1)>
+; sendmsg 5 1:<$str(N11)>__<$str(S12)>
+; sendmsg 5 2:<$str(N21)>__<$str(S22)>
+; sendmsg 5 3:<$str(N31)>__<$str(S32)>
+; sendmsg 5 4:<$str(N41)>__<$str(S42)>
+; sendmsg 5 5:<$str(N51)>__<$str(S52)>
+; sendmsg 5 6:<$str(N61)>__<$str(S62)>
+; sendmsg 5 7:<$str(N71)>__<$str(S72)>
+; sendmsg 5 8:<$str(N81)>__<$str(S82)>
+; sendmsg 5 9:<$str(N91)>__<$str(S92)>
+
 #if
 not CHECKTEXTLIST ..\QuestDiary\拾取鉴定BUFF\装备位置\可鉴定装备.txt <$BOXITEM[1].NAME>
 #ACT
@@ -1049,12 +1134,13 @@ DRILLHOLE -1 4 1
 GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
 SOCKETABLEITEM -1 4 <$str(N0)>
+; sendmsg 5 宝石id:<$str(N0)>
+
 GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
+; sendmsg 5 宝石id:<$str(N0)>
 SOCKETABLEITEM -1 3 <$str(N0)>
 UpDateBoxItem 1
-
-
 sendmsg 5 恭喜：洗练成功！！！！
 goto @main
 break
@@ -1064,10 +1150,11 @@ break
 CHANGEITEMADDVALUE -1 12 = 1
 GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
 INC N0 1
-DRILLHOLE -1 4 0
-DRILLHOLE -1 4 1
+; DRILLHOLE -1 4 0
+
+; sendmsg 5 宝石id:<$str(N0)>
 ;然后镶嵌
-SOCKETABLEITEM -1 4 <$str(N0)>
+SOCKETABLEITEM -1 0 <$str(N0)>
 UpDateBoxItem 1
 
 

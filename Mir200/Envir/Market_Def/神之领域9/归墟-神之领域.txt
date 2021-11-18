@@ -8,19 +8,19 @@
 <Button|x=536.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
 <Text|a=0|x=310.0|y=50.0|tipsx=10|tipsy=80|color=168|size=18|text=归墟一层>
 <Text|a=0|x=30.0|y=20.0|tipsx=10|tipsy=80|color=219|size=18|text=怪物刷新：>
-<Text|a=0|x=116.0|y=20.0|tipsx=10|tipsy=80|color=0|size=18|text=帝俊臣属·羿、鲧古神·大禹之父、道德天尊>
+<Text|a=0|x=116.0|y=20.0|tipsx=10|tipsy=80|color=0|size=18|text=骨灰、女伯爵、毕须博须>
 <Text|a=0|x=30.0|y=50.0|tipsx=10|tipsy=80|color=219|size=18|text=进入等级：>
 <Text|a=0|x=116.0|y=50.0|tipsx=10|tipsy=80|color=27|size=18|text=达到179级以上方可进入>
 <Text|a=0|x=435.0|y=50.0|tipsx=10|tipsy=80|color=134|size=18|text=我要进入|link=@进入>
 <Text|a=0|x=435.0|y=120.0|tipsx=10|tipsy=80|color=134|size=18|text=我要进入|link=@进入1>
 <Text|a=0|x=435.0|y=190.0|height=24|tipsx=10|tipsy=80|size=18|color=134|text=我要进入|link=@进入2>
 <Text|x=30.0|y=90.0|color=219|size=18|text=怪物刷新：>
-<Text|x=116.0|y=90.0|size=18|color=0|text=山海经·帝喾、弑神蚩尤、鲧古神·大禹之父>
+<Text|x=116.0|y=90.0|size=18|color=0|text=尸体发火、燃烧者·韦布、矫正者·怪异>
 <Text|x=30.0|y=120.0|color=219|size=18|text=进入等级：>
 <Text|x=116.0|y=120.0|size=18|color=27|text=达到180级以上方可进入>
 <Text|x=310.0|y=120.0|size=18|color=168|text=归墟二层>
 <Text|x=30.0|y=160.0|color=219|size=18|text=怪物刷新：>
-<Text|x=116.0|y=160.0|size=18|color=0|text= 太阳神羲和、帝俊臣属·羿、开天辟地·盘古>
+<Text|x=116.0|y=160.0|size=18|color=0|text= 狂暴者·眼魔、空虚之指·维恩、火花之拳·布瑞姆>
 <Text|x=30.0|y=190.0|color=219|size=18|text=进入等级：>
 <Text|x=116.0|y=190.0|size=18|color=27|text=达到181级以上方可进入>
 <Text|x=310.0|y=190.0|size=18|color=168|text=归墟三层>

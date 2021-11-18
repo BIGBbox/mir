@@ -3,8 +3,8 @@
 
 #if
 NOT CHECKCURRTARGETRACE = 0
-not small U99 388
-random 5
+not small U99 188
+; random 5
 #ACT
 ;HUMANHP + 50
 M.MAKEPOSION 0 3

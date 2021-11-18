@@ -3757,14 +3757,14 @@ SENDMSG 7 {〖提示〗|56:56:0}{成功清除红名|56:56:0}
 ;------图纸装备-------------------------------
 [@StdModeFunc8]
 #IF
-CHECKITEM 修炼石 10
-CHECKITEM 天外陨石 10
-CHECKITEM 神器碎片 100
+CHECKITEM 修炼石 2
+CHECKITEM 天外陨石 2
+CHECKITEM 神器碎片 20
 CheckBindMoney 元宝 > 99999
 #ACT
-TAKE 修炼石 10
-TAKE 天外陨石 10
-TAKE 神器碎片 100
+TAKE 修炼石 2
+TAKE 天外陨石 2
+TAKE 神器碎片 20
 money 绑定元宝 - 100000
 GIVE 光之剑 1
 mov S$锻造专属 光之剑
@@ -3777,14 +3777,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 [@StdModeFunc9]
 #IF
-CHECKITEM 修炼石 20
-CHECKITEM 天外陨石 20
-CHECKITEM 神器碎片 200
+CHECKITEM 修炼石 4
+CHECKITEM 天外陨石 4
+CHECKITEM 神器碎片 40
 CheckBindMoney 元宝 > 199999
 #ACT
-TAKE 修炼石 20
-TAKE 天外陨石 20
-TAKE 神器碎片 200
+TAKE 修炼石 4
+TAKE 天外陨石 4
+TAKE 神器碎片 40
 money 绑定元宝 - 200000
 GIVE 蓝灵法杖 1
 mov S$锻造专属 蓝灵法杖
@@ -3798,14 +3798,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 [@StdModeFunc10]
 #IF
-CHECKITEM 修炼石 30
-CHECKITEM 天外陨石 30
-CHECKITEM 神器碎片 300
+CHECKITEM 修炼石 6
+CHECKITEM 天外陨石 6
+CHECKITEM 神器碎片 60
 CheckBindMoney 元宝 > 299999
 #ACT
-TAKE 修炼石 30
-TAKE 天外陨石 30
-TAKE 神器碎片 300
+TAKE 修炼石 6
+TAKE 天外陨石 6
+TAKE 神器碎片 60
 money 绑定元宝 - 300000
 GIVE 邪恶之剑 1
 mov S$锻造专属 邪恶之剑
@@ -3819,14 +3819,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 [@StdModeFunc11]
 #IF
-CHECKITEM 修炼石 40
-CHECKITEM 天外陨石 40
-CHECKITEM 神器碎片 400
+CHECKITEM 修炼石 8
+CHECKITEM 天外陨石 8
+CHECKITEM 神器碎片 80
 CheckBindMoney 元宝 > 399999
 #ACT
-TAKE 修炼石 40
-TAKE 天外陨石 40
-TAKE 神器碎片 400
+TAKE 修炼石 8
+TAKE 天外陨石 8
+TAKE 神器碎片 80
 money 绑定元宝 - 400000
 GIVE 末日之斧 1
 mov S$锻造专属 末日之斧
@@ -3841,14 +3841,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 [@StdModeFunc12]
 #IF
-CHECKITEM 修炼石 50
-CHECKITEM 天外陨石 50
-CHECKITEM 神器碎片 500
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CHECKITEM 神器碎片 100
 CheckBindMoney 元宝 > 499999
 #ACT
-TAKE 修炼石 50
-TAKE 天外陨石 50
-TAKE 神器碎片 500
+TAKE 修炼石 10
+TAKE 天外陨石 10
+TAKE 神器碎片 100
 money 绑定元宝 - 500000
 GIVE 绿玉屠龙 1
 mov S$锻造专属 绿玉屠龙
@@ -3864,14 +3864,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 [@StdModeFunc13]
 #IF
-CHECKITEM 修炼石 60
-CHECKITEM 天外陨石 60
-CHECKITEM 神器碎片 600
+CHECKITEM 修炼石 12
+CHECKITEM 天外陨石 12
+CHECKITEM 神器碎片 120
 CheckBindMoney 元宝 > 599999
 #ACT
-TAKE 修炼石 60
-TAKE 天外陨石 60
-TAKE 神器碎片 600
+TAKE 修炼石 12
+TAKE 天外陨石 12
+TAKE 神器碎片 120
 money 绑定元宝 - 600000
 GIVE 绿玉裁决 1
 mov S$锻造专属 绿玉裁决
@@ -3887,14 +3887,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 [@StdModeFunc14]
 #IF
-CHECKITEM 修炼石 70
-CHECKITEM 天外陨石 70
-CHECKITEM 神器碎片 700
+CHECKITEM 修炼石 14
+CHECKITEM 天外陨石 14
+CHECKITEM 神器碎片 140
 CheckBindMoney 元宝 > 699999
 #ACT
-TAKE 修炼石 70
-TAKE 天外陨石 70
-TAKE 神器碎片 700
+TAKE 修炼石 14
+TAKE 天外陨石 14
+TAKE 神器碎片 140
 money 绑定元宝 - 700000
 GIVE 退魔权杖 1
 mov S$锻造专属 退魔权杖
@@ -3910,14 +3910,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 [@StdModeFunc15]
 #IF
-CHECKITEM 修炼石 80
-CHECKITEM 天外陨石 80
-CHECKITEM 神器碎片 800
+CHECKITEM 修炼石 16
+CHECKITEM 天外陨石 16
+CHECKITEM 神器碎片 160
 CheckBindMoney 元宝 > 799999
 #ACT
-TAKE 修炼石 80
-TAKE 天外陨石 80
-TAKE 神器碎片 800
+TAKE 修炼石 16
+TAKE 天外陨石 16
+TAKE 神器碎片 160
 money 绑定元宝 - 800000
 GIVE 寒冰剑 1
 mov S$锻造专属 寒冰剑
@@ -3931,14 +3931,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 [@StdModeFunc16]
 #IF
-CHECKITEM 修炼石 90
-CHECKITEM 天外陨石 90
-CHECKITEM 神器碎片 900
+CHECKITEM 修炼石 18
+CHECKITEM 天外陨石 18
+CHECKITEM 神器碎片 180
 CheckBindMoney 元宝 > 899999
 #ACT
-TAKE 修炼石 90
-TAKE 天外陨石 90
-TAKE 神器碎片 900
+TAKE 修炼石 18
+TAKE 天外陨石 18
+TAKE 神器碎片 180
 money 绑定元宝 - 900000
 GIVE 幽灵の魔 1
 mov S$锻造专属 幽灵の魔
@@ -3953,14 +3953,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 [@StdModeFunc17]
 #IF
-CHECKITEM 修炼石 100
-CHECKITEM 天外陨石 100
-CHECKITEM 神器碎片 1000
+CHECKITEM 修炼石 20
+CHECKITEM 天外陨石 20
+CHECKITEM 神器碎片 200
 CheckBindMoney 元宝 > 999999
 #ACT
-TAKE 修炼石 100
-TAKE 天外陨石 100
-TAKE 神器碎片 1000
+TAKE 修炼石 20
+TAKE 天外陨石 20
+TAKE 神器碎片 200
 money 绑定元宝 - 1000000
 GIVE 毒龙之身 1
 mov S$锻造专属 毒龙之身
@@ -3975,14 +3975,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 [@StdModeFunc18]
 #IF
-CHECKITEM 修炼石 110
-CHECKITEM 天外陨石 110
-CHECKITEM 神器碎片 1100
+CHECKITEM 修炼石 22
+CHECKITEM 天外陨石 22
+CHECKITEM 神器碎片 220
 CheckBindMoney 元宝 > 1099999
 #ACT
-TAKE 修炼石 110
-TAKE 天外陨石 110
-TAKE 神器碎片 1100
+TAKE 修炼石 22
+TAKE 天外陨石 22
+TAKE 神器碎片 220
 money 绑定元宝 - 1100000
 GIVE 幽冥の鬼爪 1
 mov S$锻造专属 幽冥の鬼爪
@@ -3997,14 +3997,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 [@StdModeFunc19]
 #IF
-CHECKITEM 修炼石 120
-CHECKITEM 天外陨石 120
-CHECKITEM 神器碎片 1200
+CHECKITEM 修炼石 24
+CHECKITEM 天外陨石 24
+CHECKITEM 神器碎片 240
 CheckBindMoney 元宝 > 1199999
 #ACT
-TAKE 修炼石 120
-TAKE 天外陨石 120
-TAKE 神器碎片 1200
+TAKE 修炼石 24
+TAKE 天外陨石 24
+TAKE 神器碎片 240
 money 绑定元宝 - 1200000
 GIVE 倚天剑 1
 mov S$锻造专属 倚天剑
@@ -4018,14 +4018,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 [@StdModeFunc20]
 #IF
-CHECKITEM 修炼石 130
-CHECKITEM 天外陨石 130
-CHECKITEM 神器碎片 1300
+CHECKITEM 修炼石 26
+CHECKITEM 天外陨石 26
+CHECKITEM 神器碎片 260
 CheckBindMoney 元宝 > 1299999
 #ACT
-TAKE 修炼石 130
-TAKE 天外陨石 130
-TAKE 神器碎片 1300
+TAKE 修炼石 26
+TAKE 天外陨石 26
+TAKE 神器碎片 260
 money 绑定元宝 - 1300000
 GIVE 假·破馆珍剑 1
 mov S$锻造专属 假·破馆珍剑
@@ -4040,14 +4040,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 [@StdModeFunc21]
 #IF
-CHECKITEM 修炼石 140
-CHECKITEM 天外陨石 140
-CHECKITEM 神器碎片 1400
+CHECKITEM 修炼石 28
+CHECKITEM 天外陨石 28
+CHECKITEM 神器碎片 280
 CheckBindMoney 元宝 > 1399999
 #ACT
-TAKE 修炼石 140
-TAKE 天外陨石 140
-TAKE 神器碎片 1400
+TAKE 修炼石 28
+TAKE 天外陨石 28
+TAKE 神器碎片 280
 money 绑定元宝 - 1400000
 GIVE 破碎·破馆珍剑 1
 mov S$锻造专属 破碎·破馆珍剑
@@ -4062,14 +4062,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 [@StdModeFunc22]
 #IF
-CHECKITEM 修炼石 150
-CHECKITEM 天外陨石 150
-CHECKITEM 神器碎片 1500
+CHECKITEM 修炼石 30
+CHECKITEM 天外陨石 30
+CHECKITEM 神器碎片 300
 CheckBindMoney 元宝 > 1499999
 #ACT
-TAKE 修炼石 150
-TAKE 天外陨石 150
-TAKE 神器碎片 1500
+TAKE 修炼石 30
+TAKE 天外陨石 30
+TAKE 神器碎片 300
 money 绑定元宝 - 1500000
 GIVE 破馆珍剑 1
 mov S$锻造专属 破馆珍剑
@@ -4100,14 +4100,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 [@StdModeFunc24]
 #IF
-CHECKITEM 修炼石 170
-CHECKITEM 天外陨石 170
-CHECKITEM 神器碎片 1700
+CHECKITEM 修炼石 34
+CHECKITEM 天外陨石 34
+CHECKITEM 神器碎片 340
 CheckBindMoney 元宝 > 1699999
 #ACT
-TAKE 修炼石 170
-TAKE 天外陨石 170
-TAKE 神器碎片 1700
+TAKE 修炼石 34
+TAKE 天外陨石 34
+TAKE 神器碎片 340
 money 绑定元宝 - 1700000
 GIVE 赤血魔剑 1
 mov S$锻造专属 赤血魔剑
@@ -4137,14 +4137,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 [@StdModeFunc26]
 #IF
-CHECKITEM 修炼石 180
-CHECKITEM 天外陨石 180
-CHECKITEM 神器碎片 1800
+CHECKITEM 修炼石 36
+CHECKITEM 天外陨石 36
+CHECKITEM 神器碎片 360
 CheckBindMoney 元宝 > 1799999
 #ACT
-TAKE 修炼石 180
-TAKE 天外陨石 180
-TAKE 神器碎片 1800
+TAKE 修炼石 36
+TAKE 天外陨石 36
+TAKE 神器碎片 360
 money 绑定元宝 - 1800000
 GIVE 魅影之刃 1
 mov S$锻造专属 魅影之刃
@@ -4263,14 +4263,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc31]
 #IF
 CheckBindMoney 元宝 > 99999
-CHECKITEM 修炼石 10
-CHECKITEM 天外陨石 10
-CHECKITEM 神器碎片 100
+CHECKITEM 修炼石 2
+CHECKITEM 天外陨石 2
+CHECKITEM 神器碎片 20
 #ACT
 money 绑定元宝 - 100000
-TAKE 修炼石 10
-TAKE 天外陨石 10
-TAKE 神器碎片 100
+TAKE 修炼石 2
+TAKE 天外陨石 2
+TAKE 神器碎片 20
 GIVE 骑士战袍 1
 mov S$锻造专属 骑士战袍
 mov S$锻造位置 衣服
@@ -4284,14 +4284,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc32]
 #IF
 CheckBindMoney 元宝 > 199999
-CHECKITEM 修炼石 20
-CHECKITEM 天外陨石 20
-CHECKITEM 神器碎片 200
+CHECKITEM 修炼石 4
+CHECKITEM 天外陨石 4
+CHECKITEM 神器碎片 40
 #ACT
 money 绑定元宝 - 200000
-TAKE 修炼石 20
-TAKE 天外陨石 20
-TAKE 神器碎片 200
+TAKE 修炼石 4
+TAKE 天外陨石 4
+TAKE 神器碎片 40
 GIVE 猩猩战甲 1
 mov S$锻造专属 猩猩战甲
 mov S$锻造位置 衣服
@@ -4305,14 +4305,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc33]
 #IF
 CheckBindMoney 元宝 > 299999
-CHECKITEM 修炼石 30
-CHECKITEM 天外陨石 30
-CHECKITEM 神器碎片 300
+CHECKITEM 修炼石 6
+CHECKITEM 天外陨石 6
+CHECKITEM 神器碎片 60
 #ACT
 money 绑定元宝 - 300000
-TAKE 修炼石 30
-TAKE 天外陨石 30
-TAKE 神器碎片 300
+TAKE 修炼石 6
+TAKE 天外陨石 6
+TAKE 神器碎片 60
 GIVE 幽冥の龍 1
 mov S$锻造专属 幽冥の龍
 mov S$锻造位置 衣服
@@ -4326,14 +4326,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc34]
 #IF
 CheckBindMoney 元宝 > 399999
-CHECKITEM 修炼石 40
-CHECKITEM 天外陨石 40
-CHECKITEM 神器碎片 400
+CHECKITEM 修炼石 8
+CHECKITEM 天外陨石 8
+CHECKITEM 神器碎片 80
 #ACT
 money 绑定元宝 - 400000
-TAKE 修炼石 40
-TAKE 天外陨石 40
-TAKE 神器碎片 400
+TAKE 修炼石 8
+TAKE 天外陨石 8
+TAKE 神器碎片 80
 GIVE 钢铁之铠 1
 mov S$锻造专属 钢铁之铠
 mov S$锻造位置 衣服
@@ -4347,14 +4347,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc35]
 #IF
 CheckBindMoney 元宝 > 499999
-CHECKITEM 修炼石 50
-CHECKITEM 天外陨石 50
-CHECKITEM 神器碎片 500
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CHECKITEM 神器碎片 100
 #ACT
 money 绑定元宝 - 500000
-TAKE 修炼石 50
-TAKE 天外陨石 50
-TAKE 神器碎片 500
+TAKE 修炼石 10
+TAKE 天外陨石 10
+TAKE 神器碎片 100
 GIVE 天地の防 1
 mov S$锻造专属 天地の防
 mov S$锻造位置 衣服
@@ -4368,14 +4368,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc36]
 #IF
 CheckBindMoney 元宝 > 599999
-CHECKITEM 修炼石 60
-CHECKITEM 天外陨石 60
-CHECKITEM 神器碎片 600
+CHECKITEM 修炼石 12
+CHECKITEM 天外陨石 12
+CHECKITEM 神器碎片 120
 #ACT
 money 绑定元宝 - 600000
-TAKE 修炼石 60
-TAKE 天外陨石 60
-TAKE 神器碎片 600
+TAKE 修炼石 12
+TAKE 天外陨石 12
+TAKE 神器碎片 120
 GIVE 天使龙翼 1
 mov S$锻造专属 天使龙翼
 mov S$锻造位置 衣服
@@ -4389,14 +4389,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc37]
 #IF
 CheckBindMoney 元宝 > 699999
-CHECKITEM 修炼石 70
-CHECKITEM 天外陨石 70
-CHECKITEM 神器碎片 700
+CHECKITEM 修炼石 14
+CHECKITEM 天外陨石 14
+CHECKITEM 神器碎片 140
 #ACT
 money 绑定元宝 - 700000
-TAKE 修炼石 70
-TAKE 天外陨石 70
-TAKE 神器碎片 700
+TAKE 修炼石 14
+TAKE 天外陨石 14
+TAKE 神器碎片 140
 GIVE 仙の摩罗神甲 1
 mov S$锻造专属 仙の摩罗神甲
 mov S$锻造位置 衣服
@@ -4410,14 +4410,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc38]
 #IF
 CheckBindMoney 元宝 > 799999
-CHECKITEM 修炼石 80
-CHECKITEM 天外陨石 80
-CHECKITEM 神器碎片 800
+CHECKITEM 修炼石 16
+CHECKITEM 天外陨石 16
+CHECKITEM 神器碎片 160
 #ACT
 money 绑定元宝 - 800000
-TAKE 修炼石 80
-TAKE 天外陨石 80
-TAKE 神器碎片 800
+TAKE 修炼石 16
+TAKE 天外陨石 16
+TAKE 神器碎片 160
 GIVE 仙の寒冰守护 1
 mov S$锻造专属 仙の寒冰守护
 mov S$锻造位置 衣服
@@ -4431,14 +4431,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc39]
 #IF
 CheckBindMoney 元宝 > 899999
-CHECKITEM 修炼石 90
-CHECKITEM 天外陨石 90
-CHECKITEM 神器碎片 900
+CHECKITEM 修炼石 18
+CHECKITEM 天外陨石 18
+CHECKITEM 神器碎片 180
 #ACT
 money 绑定元宝 - 900000
-TAKE 修炼石 90
-TAKE 天外陨石 90
-TAKE 神器碎片 900
+TAKE 修炼石 18
+TAKE 天外陨石 18
+TAKE 神器碎片 180
 GIVE 傳説神甲 1
 mov S$锻造专属 傳説神甲
 mov S$锻造位置 衣服
@@ -4452,14 +4452,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc40]
 #IF
 CheckBindMoney 元宝 > 999999
-CHECKITEM 修炼石 100
-CHECKITEM 天外陨石 100
-CHECKITEM 神器碎片 1000
+CHECKITEM 修炼石 20
+CHECKITEM 天外陨石 20
+CHECKITEM 神器碎片 200
 #ACT
 money 绑定元宝 - 1000000
-TAKE 修炼石 100
-TAKE 天外陨石 100
-TAKE 神器碎片 1000
+TAKE 修炼石 20
+TAKE 天外陨石 20
+TAKE 神器碎片 200
 GIVE 绝对防御 1
 mov S$锻造专属 绝对防御
 mov S$锻造位置 衣服
@@ -4474,14 +4474,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc41]
 #IF
 CheckBindMoney 元宝 > 1099999
-CHECKITEM 修炼石 110
-CHECKITEM 天外陨石 110
-CHECKITEM 神器碎片 1100
+CHECKITEM 修炼石 22
+CHECKITEM 天外陨石 22
+CHECKITEM 神器碎片 220
 #ACT
 money 绑定元宝 - 1100000
-TAKE 修炼石 110
-TAKE 天外陨石 110
-TAKE 神器碎片 1100
+TAKE 修炼石 22
+TAKE 天外陨石 22
+TAKE 神器碎片 220
 GIVE 堕落·诅咒之翼 1
 mov S$锻造专属 堕落·诅咒之翼
 mov S$锻造位置 衣服
@@ -4495,14 +4495,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc42]
 #IF
 CheckBindMoney 元宝 > 1199999
-CHECKITEM 修炼石 120
-CHECKITEM 天外陨石 120
-CHECKITEM 神器碎片 1200
+CHECKITEM 修炼石 24
+CHECKITEM 天外陨石 24
+CHECKITEM 神器碎片 240
 #ACT
 money 绑定元宝 - 1200000
-TAKE 修炼石 120
-TAKE 天外陨石 120
-TAKE 神器碎片 1200
+TAKE 修炼石 24
+TAKE 天外陨石 24
+TAKE 神器碎片 240
 GIVE 龍甲 1
 mov S$锻造专属 龍甲
 mov S$锻造位置 衣服
@@ -4516,14 +4516,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc43]
 #IF
 CheckBindMoney 元宝 > 1299999
-CHECKITEM 修炼石 130
-CHECKITEM 天外陨石 130
-CHECKITEM 神器碎片 1300
+CHECKITEM 修炼石 26
+CHECKITEM 天外陨石 26
+CHECKITEM 神器碎片 260
 #ACT
 money 绑定元宝 - 1300000
-TAKE 修炼石 130
-TAKE 天外陨石 130
-TAKE 神器碎片 1300
+TAKE 修炼石 26
+TAKE 天外陨石 26
+TAKE 神器碎片 260
 GIVE 血腥の战甲 1
 mov S$锻造专属 血腥の战甲
 mov S$锻造位置 衣服
@@ -4537,14 +4537,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc44]
 #IF
 CheckBindMoney 元宝 > 1399999
-CHECKITEM 修炼石 140
-CHECKITEM 天外陨石 140
-CHECKITEM 神器碎片 1400
+CHECKITEM 修炼石 28
+CHECKITEM 天外陨石 28
+CHECKITEM 神器碎片 280
 #ACT
 money 绑定元宝 - 1400000
-TAKE 修炼石 140
-TAKE 天外陨石 140
-TAKE 神器碎片 1400
+TAKE 修炼石 28
+TAKE 天外陨石 28
+TAKE 神器碎片 280
 GIVE 魅影神甲 1
 mov S$锻造专属 魅影神甲
 mov S$锻造位置 衣服
@@ -4558,15 +4558,15 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc45]
 #IF
 CheckBindMoney 元宝 > 1499999
-CHECKITEM 修炼石 150
-CHECKITEM 天外陨石 150
-CHECKITEM 神器碎片 1500
+CHECKITEM 修炼石 30
+CHECKITEM 天外陨石 30
+CHECKITEM 神器碎片 300
 CHECKITEM 魅影神甲 1
 #ACT
 money 绑定元宝 - 1500000
-TAKE 修炼石 150
-TAKE 天外陨石 150
-TAKE 神器碎片 1500
+TAKE 修炼石 30
+TAKE 天外陨石 30
+TAKE 神器碎片 300
 TAKE 魅影神甲 1
 GIVE 真·魅影神甲 1
 mov S$锻造专属 真·魅影神甲
@@ -4581,14 +4581,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc46]
 #IF
 CheckBindMoney 元宝 > 1599999
-CHECKITEM 修炼石 160
-CHECKITEM 天外陨石 160
-CHECKITEM 神器碎片 1600
+CHECKITEM 修炼石 32
+CHECKITEM 天外陨石 32
+CHECKITEM 神器碎片 320
 #ACT
 money 绑定元宝 - 1600000
-TAKE 修炼石 160
-TAKE 天外陨石 160
-TAKE 神器碎片 1600
+TAKE 修炼石 32
+TAKE 天外陨石 32
+TAKE 神器碎片 320
 GIVE 倚天战甲 1
 mov S$锻造专属 倚天战甲
 mov S$锻造位置 衣服
@@ -4602,15 +4602,15 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc47]
 #IF
 CheckBindMoney 元宝 > 1699999
-CHECKITEM 修炼石 170
-CHECKITEM 天外陨石 170
-CHECKITEM 神器碎片 1700
+CHECKITEM 修炼石 34
+CHECKITEM 天外陨石 34
+CHECKITEM 神器碎片 340
 CHECKITEM 倚天战甲 1
 #ACT
 money 绑定元宝 - 1700000
-TAKE 修炼石 170
-TAKE 天外陨石 170
-TAKE 神器碎片 1700
+TAKE 修炼石 34
+TAKE 天外陨石 34
+TAKE 神器碎片 340
 TAKE 倚天战甲 1
 GIVE 真·倚天战甲 1
 mov S$锻造专属 真·倚天战甲
@@ -4672,14 +4672,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc49]
 #IF
 CheckBindMoney 元宝 > 49999
-CHECKITEM 修炼石 5
-CHECKITEM 天外陨石 5
-CHECKITEM 神器碎片 50
+CHECKITEM 修炼石 1
+CHECKITEM 天外陨石 1
+CHECKITEM 神器碎片 10
 #ACT
 money 绑定元宝 - 50000
-TAKE 修炼石 5
-TAKE 天外陨石 5
-TAKE 神器碎片 50
+TAKE 修炼石 1
+TAKE 天外陨石 1
+TAKE 神器碎片 10
 GIVE 精灵の翔 1
 mov S$锻造专属 精灵の翔
 mov S$锻造位置 项链
@@ -4693,14 +4693,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc50]
 #IF
 CheckBindMoney 元宝 > 99999
-CHECKITEM 修炼石 10
-CHECKITEM 天外陨石 10
-CHECKITEM 神器碎片 100
+CHECKITEM 修炼石 2
+CHECKITEM 天外陨石 2
+CHECKITEM 神器碎片 20
 #ACT
 money 绑定元宝 - 100000
-TAKE 修炼石 10
-TAKE 天外陨石 10
-TAKE 神器碎片 100
+TAKE 修炼石 2
+TAKE 天外陨石 2
+TAKE 神器碎片 20
 GIVE 神之项链 1
 mov S$锻造专属 神之项链
 mov S$锻造位置 项链
@@ -4714,14 +4714,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc51]
 #IF
 CheckBindMoney 元宝 > 149999
-CHECKITEM 修炼石 15
-CHECKITEM 天外陨石 15
-CHECKITEM 神器碎片 150
+CHECKITEM 修炼石 3
+CHECKITEM 天外陨石 3
+CHECKITEM 神器碎片 30
 #ACT
 money 绑定元宝 - 150000
-TAKE 修炼石 15
-TAKE 天外陨石 15
-TAKE 神器碎片 150
+TAKE 修炼石 3
+TAKE 天外陨石 3
+TAKE 神器碎片 30
 GIVE 苍龙霸泣 1
 mov S$锻造专属 苍龙霸泣
 mov S$锻造位置 项链
@@ -4735,14 +4735,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc52]
 #IF
 CheckBindMoney 元宝 > 199999
-CHECKITEM 修炼石 20
-CHECKITEM 天外陨石 20
-CHECKITEM 神器碎片 200
+CHECKITEM 修炼石 4
+CHECKITEM 天外陨石 4
+CHECKITEM 神器碎片 40
 #ACT
 money 绑定元宝 - 200000
-TAKE 修炼石 20
-TAKE 天外陨石 20
-TAKE 神器碎片 200
+TAKE 修炼石 4
+TAKE 天外陨石 4
+TAKE 神器碎片 40
 GIVE 开天の链 1
 mov S$锻造专属 开天の链
 mov S$锻造位置 项链
@@ -4756,14 +4756,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc53]
 #IF
 CheckBindMoney 元宝 > 249999
-CHECKITEM 修炼石 25
-CHECKITEM 天外陨石 25
-CHECKITEM 神器碎片 250
+CHECKITEM 修炼石 5
+CHECKITEM 天外陨石 5
+CHECKITEM 神器碎片 50
 #ACT
 money 绑定元宝 - 250000
-TAKE 修炼石 25
-TAKE 天外陨石 25
-TAKE 神器碎片 250
+TAKE 修炼石 5
+TAKE 天外陨石 5
+TAKE 神器碎片 50
 GIVE 强者之魂 1
 mov S$锻造专属 强者之魂
 mov S$锻造位置 项链
@@ -4777,14 +4777,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc54]
 #IF
 CheckBindMoney 元宝 > 299999
-CHECKITEM 修炼石 30
-CHECKITEM 天外陨石 30
-CHECKITEM 神器碎片 300
+CHECKITEM 修炼石 6
+CHECKITEM 天外陨石 6
+CHECKITEM 神器碎片 60
 #ACT
 money 绑定元宝 - 300000
-TAKE 修炼石 30
-TAKE 天外陨石 30
-TAKE 神器碎片 300
+TAKE 修炼石 6
+TAKE 天外陨石 6
+TAKE 神器碎片 60
 GIVE 通天·王链 1
 mov S$锻造专属 通天·王链
 mov S$锻造位置 项链
@@ -4798,14 +4798,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc55]
 #IF
 CheckBindMoney 元宝 > 349999
-CHECKITEM 修炼石 35
-CHECKITEM 天外陨石 35
-CHECKITEM 神器碎片 350
+CHECKITEM 修炼石 7
+CHECKITEM 天外陨石 7
+CHECKITEM 神器碎片 70
 #ACT
 money 绑定元宝 - 350000
-TAKE 修炼石 35
-TAKE 天外陨石 35
-TAKE 神器碎片 350
+TAKE 修炼石 7
+TAKE 天外陨石 7
+TAKE 神器碎片 70
 GIVE 天地造化链 1
 mov S$锻造专属 天地造化链
 mov S$锻造位置 项链
@@ -4819,14 +4819,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc56]
 #IF
 CheckBindMoney 元宝 > 399999
-CHECKITEM 修炼石 40
-CHECKITEM 天外陨石 40
-CHECKITEM 神器碎片 400
+CHECKITEM 修炼石 8
+CHECKITEM 天外陨石 8
+CHECKITEM 神器碎片 80
 #ACT
 money 绑定元宝 - 400000
-TAKE 修炼石 40
-TAKE 天外陨石 40
-TAKE 神器碎片 400
+TAKE 修炼石 8
+TAKE 天外陨石 8
+TAKE 神器碎片 80
 GIVE 幸运之链 1
 mov S$锻造专属 幸运之链
 mov S$锻造位置 项链
@@ -4840,14 +4840,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc57]
 #IF
 CheckBindMoney 元宝 > 449999
-CHECKITEM 修炼石 45
-CHECKITEM 天外陨石 45
-CHECKITEM 神器碎片 450
+CHECKITEM 修炼石 9
+CHECKITEM 天外陨石 9
+CHECKITEM 神器碎片 90
 #ACT
 money 绑定元宝 - 450000
-TAKE 修炼石 45
-TAKE 天外陨石 45
-TAKE 神器碎片 450
+TAKE 修炼石 9
+TAKE 天外陨石 9
+TAKE 神器碎片 90
 GIVE 神力之链 1
 mov S$锻造专属 神力之链
 mov S$锻造位置 项链
@@ -4861,14 +4861,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc58]
 #IF
 CheckBindMoney 元宝 > 499999
-CHECKITEM 修炼石 50
-CHECKITEM 天外陨石 50
-CHECKITEM 神器碎片 500
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CHECKITEM 神器碎片 100
 #ACT
 money 绑定元宝 - 500000
-TAKE 修炼石 50
-TAKE 天外陨石 50
-TAKE 神器碎片 500
+TAKE 修炼石 10
+TAKE 天外陨石 10
+TAKE 神器碎片 100
 GIVE 致命之链 1
 mov S$锻造专属 致命之链
 mov S$锻造位置 项链
@@ -4882,14 +4882,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc59]
 #IF
 CheckBindMoney 元宝 > 549999
-CHECKITEM 修炼石 55
-CHECKITEM 天外陨石 55
-CHECKITEM 神器碎片 550
+CHECKITEM 修炼石 11
+CHECKITEM 天外陨石 11
+CHECKITEM 神器碎片 110
 #ACT
 money 绑定元宝 - 550000
-TAKE 修炼石 55
-TAKE 天外陨石 55
-TAKE 神器碎片 550
+TAKE 修炼石 11
+TAKE 天外陨石 11
+TAKE 神器碎片 110
 GIVE 炼狱裁断 1
 mov S$锻造专属 炼狱裁断
 mov S$锻造位置 项链
@@ -4903,14 +4903,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc60]
 #IF
 CheckBindMoney 元宝 > 599999
-CHECKITEM 修炼石 60
-CHECKITEM 天外陨石 60
-CHECKITEM 神器碎片 600
+CHECKITEM 修炼石 12
+CHECKITEM 天外陨石 12
+CHECKITEM 神器碎片 120
 #ACT
 money 绑定元宝 - 600000
-TAKE 修炼石 60
-TAKE 天外陨石 60
-TAKE 神器碎片 600
+TAKE 修炼石 12
+TAKE 天外陨石 12
+TAKE 神器碎片 120
 GIVE 血之链 1
 mov S$锻造专属 血之链
 mov S$锻造位置 项链
@@ -4924,14 +4924,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc61]
 #IF
 CheckBindMoney 元宝 > 649999
-CHECKITEM 修炼石 65
-CHECKITEM 天外陨石 65
-CHECKITEM 神器碎片 650
+CHECKITEM 修炼石 13
+CHECKITEM 天外陨石 13
+CHECKITEM 神器碎片 130
 #ACT
 money 绑定元宝 - 650000
-TAKE 修炼石 65
-TAKE 天外陨石 65
-TAKE 神器碎片 650
+TAKE 修炼石 13
+TAKE 天外陨石 13
+TAKE 神器碎片 130
 GIVE 死亡审判 1
 mov S$锻造专属 死亡审判
 mov S$锻造位置 项链
@@ -4945,14 +4945,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc62]
 #IF
 CheckBindMoney 元宝 > 699999
-CHECKITEM 修炼石 70
-CHECKITEM 天外陨石 70
-CHECKITEM 神器碎片 700
+CHECKITEM 修炼石 14
+CHECKITEM 天外陨石 14
+CHECKITEM 神器碎片 140
 #ACT
 money 绑定元宝 - 700000
-TAKE 修炼石 70
-TAKE 天外陨石 70
-TAKE 神器碎片 700
+TAKE 修炼石 14
+TAKE 天外陨石 14
+TAKE 神器碎片 140
 GIVE 八卦连环 1
 mov S$锻造专属 八卦连环
 mov S$锻造位置 项链
@@ -4966,14 +4966,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc63]
 #IF
 CheckBindMoney 元宝 > 749999
-CHECKITEM 修炼石 75
-CHECKITEM 天外陨石 75
-CHECKITEM 神器碎片 750
+CHECKITEM 修炼石 15
+CHECKITEM 天外陨石 15
+CHECKITEM 神器碎片 150
 #ACT
 money 绑定元宝 - 750000
-TAKE 修炼石 75
-TAKE 天外陨石 75
-TAKE 神器碎片 750
+TAKE 修炼石 15
+TAKE 天外陨石 15
+TAKE 神器碎片 150
 GIVE 灭世之魔眼 1
 mov S$锻造专属 灭世之魔眼
 mov S$锻造位置 项链
@@ -5030,14 +5030,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc65]
 #IF
 CheckBindMoney 元宝 > 49999
-CHECKITEM 修炼石 5
-CHECKITEM 天外陨石 5
-CHECKITEM 神器碎片 50
+CHECKITEM 修炼石 1
+CHECKITEM 天外陨石 1
+CHECKITEM 神器碎片 10
 #ACT
 money 绑定元宝 - 49999
-TAKE 修炼石 5
-TAKE 天外陨石 5
-TAKE 神器碎片 50
+TAKE 修炼石 1
+TAKE 天外陨石 1
+TAKE 神器碎片 10
 GIVE 战神の帝 1
 mov S$锻造专属 战神の帝
 mov S$锻造位置 头盔
@@ -5052,14 +5052,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc66]
 #IF
 CheckBindMoney 元宝 > 99999
-CHECKITEM 修炼石 10
-CHECKITEM 天外陨石 10
-CHECKITEM 神器碎片 100
+CHECKITEM 修炼石 2
+CHECKITEM 天外陨石 2
+CHECKITEM 神器碎片 20
 #ACT
 money 绑定元宝 - 100000
-TAKE 修炼石 10
-TAKE 天外陨石 10
-TAKE 神器碎片 100
+TAKE 修炼石 2
+TAKE 天外陨石 2
+TAKE 神器碎片 20
 GIVE 远古恶梦 1
 mov S$锻造专属 远古恶梦
 mov S$锻造位置 头盔
@@ -5074,14 +5074,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc67]
 #IF
 CheckBindMoney 元宝 > 149999
-CHECKITEM 修炼石 15
-CHECKITEM 天外陨石 15
-CHECKITEM 神器碎片 150
+CHECKITEM 修炼石 3
+CHECKITEM 天外陨石 3
+CHECKITEM 神器碎片 30
 #ACT
 money 绑定元宝 - 150000
-TAKE 修炼石 15
-TAKE 天外陨石 15
-TAKE 神器碎片 150
+TAKE 修炼石 3
+TAKE 天外陨石 3
+TAKE 神器碎片 30
 GIVE 神龙之威 1
 mov S$锻造专属 神龙之威
 mov S$锻造位置 头盔
@@ -5096,14 +5096,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc68]
 #IF
 CheckBindMoney 元宝 > 199999
-CHECKITEM 修炼石 20
-CHECKITEM 天外陨石 20
-CHECKITEM 神器碎片 200
+CHECKITEM 修炼石 4
+CHECKITEM 天外陨石 4
+CHECKITEM 神器碎片 40
 #ACT
 money 绑定元宝 - 200000
-TAKE 修炼石 20
-TAKE 天外陨石 20
-TAKE 神器碎片 200
+TAKE 修炼石 4
+TAKE 天外陨石 4
+TAKE 神器碎片 40
 GIVE 魔之天灾 1
 mov S$锻造专属 魔之天灾
 mov S$锻造位置 头盔
@@ -5118,14 +5118,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc69]
 #IF
 CheckBindMoney 元宝 > 249999
-CHECKITEM 修炼石 25
-CHECKITEM 天外陨石 25
-CHECKITEM 神器碎片 250
+CHECKITEM 修炼石 5
+CHECKITEM 天外陨石 5
+CHECKITEM 神器碎片 50
 #ACT
 money 绑定元宝 - 250000
-TAKE 修炼石 25
-TAKE 天外陨石 25
-TAKE 神器碎片 250
+TAKE 修炼石 5
+TAKE 天外陨石 5
+TAKE 神器碎片 50
 GIVE 逆·鳞 1
 mov S$锻造专属 逆·鳞
 mov S$锻造位置 头盔
@@ -5140,14 +5140,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc70]
 #IF
 CheckBindMoney 元宝 > 299999
-CHECKITEM 修炼石 30
-CHECKITEM 天外陨石 30
-CHECKITEM 神器碎片 300
+CHECKITEM 修炼石 6
+CHECKITEM 天外陨石 6
+CHECKITEM 神器碎片 60
 #ACT
 money 绑定元宝 - 300000
-TAKE 修炼石 30
-TAKE 天外陨石 30
-TAKE 神器碎片 300
+TAKE 修炼石 6
+TAKE 天外陨石 6
+TAKE 神器碎片 60
 GIVE 九州·苍天 1
 mov S$锻造专属 九州·苍天
 mov S$锻造位置 头盔
@@ -5162,14 +5162,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc71]
 #IF
 CheckBindMoney 元宝 > 349999
-CHECKITEM 修炼石 35
-CHECKITEM 天外陨石 35
-CHECKITEM 神器碎片 350
+CHECKITEM 修炼石 7
+CHECKITEM 天外陨石 7
+CHECKITEM 神器碎片 70
 #ACT
 money 绑定元宝 - 350000
-TAKE 修炼石 35
-TAKE 天外陨石 35
-TAKE 神器碎片 350
+TAKE 修炼石 7
+TAKE 天外陨石 7
+TAKE 神器碎片 70
 GIVE 盘龙魂 1
 mov S$锻造专属 盘龙魂
 mov S$锻造位置 头盔
@@ -5184,14 +5184,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc72]
 #IF
 CheckBindMoney 元宝 > 399999
-CHECKITEM 修炼石 40
-CHECKITEM 天外陨石 40
-CHECKITEM 神器碎片 400
+CHECKITEM 修炼石 8
+CHECKITEM 天外陨石 8
+CHECKITEM 神器碎片 80
 #ACT
 money 绑定元宝 - 400000
-TAKE 修炼石 40
-TAKE 天外陨石 40
-TAKE 神器碎片 400
+TAKE 修炼石 8
+TAKE 天外陨石 8
+TAKE 神器碎片 80
 GIVE 星盔 1
 mov S$锻造专属 星盔
 mov S$锻造位置 头盔
@@ -5206,14 +5206,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc73]
 #IF
 CheckBindMoney 元宝 > 449999
-CHECKITEM 修炼石 45
-CHECKITEM 天外陨石 45
-CHECKITEM 神器碎片 450
+CHECKITEM 修炼石 9
+CHECKITEM 天外陨石 9
+CHECKITEM 神器碎片 90
 #ACT
 money 绑定元宝 - 450000
-TAKE 修炼石 45
-TAKE 天外陨石 45
-TAKE 神器碎片 450
+TAKE 修炼石 9
+TAKE 天外陨石 9
+TAKE 神器碎片 90
 GIVE 乾坤 1
 mov S$锻造专属 乾坤
 mov S$锻造位置 头盔
@@ -5228,14 +5228,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc74]
 #IF
 CheckBindMoney 元宝 > 499999
-CHECKITEM 修炼石 50
-CHECKITEM 天外陨石 50
-CHECKITEM 神器碎片 500
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CHECKITEM 神器碎片 100
 #ACT
 money 绑定元宝 - 500000
-TAKE 修炼石 50
-TAKE 天外陨石 50
-TAKE 神器碎片 500
+TAKE 修炼石 10
+TAKE 天外陨石 10
+TAKE 神器碎片 100
 GIVE 冰魄之盔 1
 mov S$锻造专属 冰魄之盔
 mov S$锻造位置 头盔
@@ -5250,14 +5250,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc75]
 #IF
 CheckBindMoney 元宝 > 549999
-CHECKITEM 修炼石 55
-CHECKITEM 天外陨石 55
-CHECKITEM 神器碎片 550
+CHECKITEM 修炼石 11
+CHECKITEM 天外陨石 11
+CHECKITEM 神器碎片 110
 #ACT
 money 绑定元宝 - 550000
-TAKE 修炼石 55
-TAKE 天外陨石 55
-TAKE 神器碎片 550
+TAKE 修炼石 11
+TAKE 天外陨石 11
+TAKE 神器碎片 110
 GIVE 冥龙·血盔 1
 mov S$锻造专属 冥龙·血盔
 mov S$锻造位置 头盔
@@ -5271,14 +5271,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc76]
 #IF
 CheckBindMoney 元宝 > 599999
-CHECKITEM 修炼石 60
-CHECKITEM 天外陨石 60
-CHECKITEM 神器碎片 600
+CHECKITEM 修炼石 12
+CHECKITEM 天外陨石 12
+CHECKITEM 神器碎片 120
 #ACT
 money 绑定元宝 - 600000
-TAKE 修炼石 60
-TAKE 天外陨石 60
-TAKE 神器碎片 600
+TAKE 修炼石 12
+TAKE 天外陨石 12
+TAKE 神器碎片 120
 GIVE 月神之裁 1
 mov S$锻造专属 月神之裁
 mov S$锻造位置 头盔
@@ -5292,14 +5292,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc77]
 #IF
 CheckBindMoney 元宝 > 649999
-CHECKITEM 修炼石 65
-CHECKITEM 天外陨石 65
-CHECKITEM 神器碎片 650
+CHECKITEM 修炼石 13
+CHECKITEM 天外陨石 13
+CHECKITEM 神器碎片 130
 #ACT
 money 绑定元宝 - 650000
-TAKE 修炼石 65
-TAKE 天外陨石 65
-TAKE 神器碎片 650
+TAKE 修炼石 13
+TAKE 天外陨石 13
+TAKE 神器碎片 130
 GIVE 虚无·雷动 1
 mov S$锻造专属 虚无·雷动
 mov S$锻造位置 头盔
@@ -5313,14 +5313,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc78]
 #IF
 CheckBindMoney 元宝 > 699999
-CHECKITEM 修炼石 70
-CHECKITEM 天外陨石 70
-CHECKITEM 神器碎片 700
+CHECKITEM 修炼石 14
+CHECKITEM 天外陨石 14
+CHECKITEM 神器碎片 140
 #ACT
 money 绑定元宝 - 700000
-TAKE 修炼石 70
-TAKE 天外陨石 70
-TAKE 神器碎片 700
+TAKE 修炼石 14
+TAKE 天外陨石 14
+TAKE 神器碎片 140
 GIVE 红莲之炎 1
 mov S$锻造专属 红莲之炎
 mov S$锻造位置 头盔
@@ -5334,14 +5334,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc79]
 #IF
 CheckBindMoney 元宝 > 749999
-CHECKITEM 修炼石 75
-CHECKITEM 天外陨石 75
-CHECKITEM 神器碎片 750
+CHECKITEM 修炼石 15
+CHECKITEM 天外陨石 15
+CHECKITEM 神器碎片 150
 #ACT
 money 绑定元宝 - 750000
-TAKE 修炼石 75
-TAKE 天外陨石 75
-TAKE 神器碎片 750
+TAKE 修炼石 15
+TAKE 天外陨石 15
+TAKE 神器碎片 150
 GIVE 提伯斯之怒 1
 mov S$锻造专属 提伯斯之怒
 mov S$锻造位置 头盔
@@ -5398,14 +5398,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc81]
 #IF
 CheckBindMoney 元宝 > 49999
-CHECKITEM 修炼石 5
-CHECKITEM 天外陨石 5
-CHECKITEM 神器碎片 50
+CHECKITEM 修炼石 1
+CHECKITEM 天外陨石 1
+CHECKITEM 神器碎片 10
 #ACT
 money 绑定元宝 - 50000
-TAKE 修炼石 5
-TAKE 天外陨石 5
-TAKE 神器碎片 50
+TAKE 修炼石 1
+TAKE 天外陨石 1
+TAKE 神器碎片 10
 GIVE 守护の神 1
 mov S$锻造专属 守护の神
 mov S$锻造位置 手镯
@@ -5419,14 +5419,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc82]
 #IF
 CheckBindMoney 元宝 > 99999
-CHECKITEM 修炼石 10
-CHECKITEM 天外陨石 10
-CHECKITEM 神器碎片 100
+CHECKITEM 修炼石 2
+CHECKITEM 天外陨石 2
+CHECKITEM 神器碎片 20
 #ACT
 money 绑定元宝 - 100000
-TAKE 修炼石 10
-TAKE 天外陨石 10
-TAKE 神器碎片 100
+TAKE 修炼石 2
+TAKE 天外陨石 2
+TAKE 神器碎片 20
 GIVE 蝴蝶臂环 1
 mov S$锻造专属 蝴蝶臂环
 mov S$锻造位置 手镯
@@ -5440,14 +5440,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc83]
 #IF
 CheckBindMoney 元宝 > 149999
-CHECKITEM 修炼石 15
-CHECKITEM 天外陨石 15
-CHECKITEM 神器碎片 150
+CHECKITEM 修炼石 3
+CHECKITEM 天外陨石 3
+CHECKITEM 神器碎片 30
 #ACT
 money 绑定元宝 - 150000
-TAKE 修炼石 15
-TAKE 天外陨石 15
-TAKE 神器碎片 150
+TAKE 修炼石 3
+TAKE 天外陨石 3
+TAKE 神器碎片 30
 GIVE 狩猎之镯 1
 mov S$锻造专属 狩猎之镯
 mov S$锻造位置 手镯
@@ -5461,15 +5461,15 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc84]
 #IF
 CheckBindMoney 元宝 > 199999
-CHECKITEM 修炼石 20
-CHECKITEM 天外陨石 20
-CHECKITEM 神器碎片 200
+CHECKITEM 修炼石 4
+CHECKITEM 天外陨石 4
+CHECKITEM 神器碎片 40
 
 #ACT
 money 绑定元宝 - 200000
-TAKE 修炼石 20
-TAKE 天外陨石 20
-TAKE 神器碎片 200
+TAKE 修炼石 4
+TAKE 天外陨石 4
+TAKE 神器碎片 40
 GIVE 麒麟臂【1.2】 1
 mov S$锻造专属 麒麟臂【1.2】
 mov S$锻造位置 手镯
@@ -5477,20 +5477,20 @@ MOVR <$STR(N$纵轴坐标)> 100 500
 SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【麒麟臂【1.2】】手镯/FCOLOR=58>
 BREAK
 #ELSEACT
-GIVE 麒麟臂[1.2]图纸 1
+GIVE 麒麟臂【1.2】图纸 1
 MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 [@StdModeFunc85]
 #IF
 CheckBindMoney 元宝 > 249999
-CHECKITEM 修炼石 25
-CHECKITEM 天外陨石 25
-CHECKITEM 神器碎片 250
+CHECKITEM 修炼石 5
+CHECKITEM 天外陨石 5
+CHECKITEM 神器碎片 50
 #ACT
 money 绑定元宝 - 250000
-TAKE 修炼石 25
-TAKE 天外陨石 25
-TAKE 神器碎片 250
+TAKE 修炼石 5
+TAKE 天外陨石 5
+TAKE 神器碎片 50
 GIVE 古·镯 1
 mov S$锻造专属 古·镯
 mov S$锻造位置 手镯
@@ -5504,14 +5504,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc86]
 #IF
 CheckBindMoney 元宝 > 299999
-CHECKITEM 修炼石 30
-CHECKITEM 天外陨石 30
-CHECKITEM 神器碎片 300
+CHECKITEM 修炼石 6
+CHECKITEM 天外陨石 6
+CHECKITEM 神器碎片 60
 #ACT
 money 绑定元宝 - 300000
-TAKE 修炼石 30
-TAKE 天外陨石 30
-TAKE 神器碎片 300
+TAKE 修炼石 6
+TAKE 天外陨石 6
+TAKE 神器碎片 60
 GIVE 致命之镯 1
 mov S$锻造专属 致命之镯
 mov S$锻造位置 手镯
@@ -5525,14 +5525,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc87]
 #IF
 CheckBindMoney 元宝 > 349999
-CHECKITEM 修炼石 35
-CHECKITEM 天外陨石 35
-CHECKITEM 神器碎片 350
+CHECKITEM 修炼石 7
+CHECKITEM 天外陨石 7
+CHECKITEM 神器碎片 70
 #ACT
 money 绑定元宝 - 350000
-TAKE 修炼石 35
-TAKE 天外陨石 35
-TAKE 神器碎片 350
+TAKE 修炼石 7
+TAKE 天外陨石 7
+TAKE 神器碎片 70
 GIVE 怨灵·血怒 1
 mov S$锻造专属 怨灵·血怒
 mov S$锻造位置 手镯
@@ -5546,14 +5546,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc88]
 #IF
 CheckBindMoney 元宝 > 399999
-CHECKITEM 修炼石 40
-CHECKITEM 天外陨石 40
-CHECKITEM 神器碎片 400
+CHECKITEM 修炼石 8
+CHECKITEM 天外陨石 8
+CHECKITEM 神器碎片 80
 #ACT
 money 绑定元宝 - 400000
-TAKE 修炼石 40
-TAKE 天外陨石 40
-TAKE 神器碎片 400
+TAKE 修炼石 8
+TAKE 天外陨石 8
+TAKE 神器碎片 80
 GIVE 神镯·SSSSS 1
 mov S$锻造专属 神镯·SSSSS
 mov S$锻造位置 手镯
@@ -5567,14 +5567,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc89]
 #IF
 CheckBindMoney 元宝 > 449999
-CHECKITEM 修炼石 45
-CHECKITEM 天外陨石 45
-CHECKITEM 神器碎片 450
+CHECKITEM 修炼石 9
+CHECKITEM 天外陨石 9
+CHECKITEM 神器碎片 90
 #ACT
 money 绑定元宝 - 450000
-TAKE 修炼石 45
-TAKE 天外陨石 45
-TAKE 神器碎片 450
+TAKE 修炼石 9
+TAKE 天外陨石 9
+TAKE 神器碎片 90
 GIVE 原始·吸灵之镯 1
 mov S$锻造专属 原始·吸灵之镯
 mov S$锻造位置 手镯
@@ -5588,14 +5588,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc90]
 #IF
 CheckBindMoney 元宝 > 499999
-CHECKITEM 修炼石 50
-CHECKITEM 天外陨石 50
-CHECKITEM 神器碎片 500
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CHECKITEM 神器碎片 100
 #ACT
 money 绑定元宝 - 500000
-TAKE 修炼石 50
-TAKE 天外陨石 50
-TAKE 神器碎片 500
+TAKE 修炼石 10
+TAKE 天外陨石 10
+TAKE 神器碎片 100
 GIVE 天残の噬魂手 1
 mov S$锻造专属 天残の噬魂手
 mov S$锻造位置 手镯
@@ -5609,14 +5609,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc91]
 #IF
 CheckBindMoney 元宝 > 549999
-CHECKITEM 修炼石 55
-CHECKITEM 天外陨石 55
-CHECKITEM 神器碎片 550
+CHECKITEM 修炼石 11
+CHECKITEM 天外陨石 11
+CHECKITEM 神器碎片 110
 #ACT
 money 绑定元宝 - 550000
-TAKE 修炼石 55
-TAKE 天外陨石 55
-TAKE 神器碎片 550
+TAKE 修炼石 11
+TAKE 天外陨石 11
+TAKE 神器碎片 110
 GIVE 寂寞如天 1
 mov S$锻造专属 寂寞如天
 mov S$锻造位置 手镯
@@ -5630,14 +5630,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc92]
 #IF
 CheckBindMoney 元宝 > 599999
-CHECKITEM 修炼石 60
-CHECKITEM 天外陨石 60
-CHECKITEM 神器碎片 600
+CHECKITEM 修炼石 12
+CHECKITEM 天外陨石 12
+CHECKITEM 神器碎片 120
 #ACT
 money 绑定元宝 - 600000
-TAKE 修炼石 60
-TAKE 天外陨石 60
-TAKE 神器碎片 600
+TAKE 修炼石 12
+TAKE 天外陨石 12
+TAKE 神器碎片 120
 GIVE 魔音离魂·狂暴 1
 mov S$锻造专属 魔音离魂·狂暴
 mov S$锻造位置 手镯
@@ -5651,14 +5651,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc93]
 #IF
 CheckBindMoney 元宝 > 649999
-CHECKITEM 修炼石 65
-CHECKITEM 天外陨石 65
-CHECKITEM 神器碎片 650
+CHECKITEM 修炼石 13
+CHECKITEM 天外陨石 13
+CHECKITEM 神器碎片 130
 #ACT
 money 绑定元宝 - 650000
-TAKE 修炼石 65
-TAKE 天外陨石 65
-TAKE 神器碎片 650
+TAKE 修炼石 13
+TAKE 天外陨石 13
+TAKE 神器碎片 130
 GIVE 地狱·永生手 1
 mov S$锻造专属 地狱·永生手
 mov S$锻造位置 手镯
@@ -5672,14 +5672,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc94]
 #IF
 CheckBindMoney 元宝 > 699999
-CHECKITEM 修炼石 70
-CHECKITEM 天外陨石 70
-CHECKITEM 神器碎片 700
+CHECKITEM 修炼石 14
+CHECKITEM 天外陨石 14
+CHECKITEM 神器碎片 140
 #ACT
 money 绑定元宝 - 700000
-TAKE 修炼石 70
-TAKE 天外陨石 70
-TAKE 神器碎片 700
+TAKE 修炼石 14
+TAKE 天外陨石 14
+TAKE 神器碎片 140
 GIVE 玛法救赎 1
 mov S$锻造专属 玛法救赎
 mov S$锻造位置 手镯
@@ -5693,14 +5693,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc95]
 #IF
 CheckBindMoney 元宝 > 749999
-CHECKITEM 修炼石 75
-CHECKITEM 天外陨石 75
-CHECKITEM 神器碎片 750
+CHECKITEM 修炼石 15
+CHECKITEM 天外陨石 15
+CHECKITEM 神器碎片 150
 #ACT
 money 绑定元宝 - 750000
-TAKE 修炼石 75
-TAKE 天外陨石 75
-TAKE 神器碎片 750
+TAKE 修炼石 15
+TAKE 天外陨石 15
+TAKE 神器碎片 150
 GIVE 承天极破 1
 mov S$锻造专属 承天极破
 mov S$锻造位置 手镯
@@ -5758,14 +5758,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc97]
 #IF
 CheckBindMoney 元宝 > 49999
-CHECKITEM 修炼石 5
-CHECKITEM 天外陨石 5
-CHECKITEM 神器碎片 50
+CHECKITEM 修炼石 1
+CHECKITEM 天外陨石 1
+CHECKITEM 神器碎片 10
 #ACT
 money 绑定元宝 - 50000
-TAKE 修炼石 5
-TAKE 天外陨石 5
-TAKE 神器碎片 50
+TAKE 修炼石 1
+TAKE 天外陨石 1
+TAKE 神器碎片 10
 GIVE 凤凰の飞 1
 mov S$锻造专属 凤凰の飞
 mov S$锻造位置 戒指
@@ -5779,14 +5779,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc98]
 #IF
 CheckBindMoney 元宝 > 99999
-CHECKITEM 修炼石 10
-CHECKITEM 天外陨石 10
-CHECKITEM 神器碎片 100
+CHECKITEM 修炼石 2
+CHECKITEM 天外陨石 2
+CHECKITEM 神器碎片 20
 #ACT
 money 绑定元宝 - 100000
-TAKE 修炼石 10
-TAKE 天外陨石 10
-TAKE 神器碎片 100
+TAKE 修炼石 2
+TAKE 天外陨石 2
+TAKE 神器碎片 20
 GIVE 诅咒の亡 1
 mov S$锻造专属 诅咒の亡
 mov S$锻造位置 戒指
@@ -5800,14 +5800,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc99]
 #IF
 CheckBindMoney 元宝 > 149999
-CHECKITEM 修炼石 15
-CHECKITEM 天外陨石 15
-CHECKITEM 神器碎片 150
+CHECKITEM 修炼石 3
+CHECKITEM 天外陨石 3
+CHECKITEM 神器碎片 30
 #ACT
 money 绑定元宝 - 150000
-TAKE 修炼石 15
-TAKE 天外陨石 15
-TAKE 神器碎片 150
+TAKE 修炼石 3
+TAKE 天外陨石 3
+TAKE 神器碎片 30
 GIVE 天地玄黄 1
 mov S$锻造专属 天地玄黄
 mov S$锻造位置 戒指
@@ -5821,14 +5821,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc100]
 #IF
 CheckBindMoney 元宝 > 199999
-CHECKITEM 修炼石 20
-CHECKITEM 天外陨石 20
-CHECKITEM 神器碎片 200
+CHECKITEM 修炼石 4
+CHECKITEM 天外陨石 4
+CHECKITEM 神器碎片 40
 #ACT
 money 绑定元宝 - 200000
-TAKE 修炼石 20
-TAKE 天外陨石 20
-TAKE 神器碎片 200
+TAKE 修炼石 4
+TAKE 天外陨石 4
+TAKE 神器碎片 40
 GIVE 暴力指环 1
 mov S$锻造专属 暴力指环
 mov S$锻造位置 戒指
@@ -5842,14 +5842,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc101]
 #IF
 CheckBindMoney 元宝 > 249999
-CHECKITEM 修炼石 25
-CHECKITEM 天外陨石 25
-CHECKITEM 神器碎片 250
+CHECKITEM 修炼石 5
+CHECKITEM 天外陨石 5
+CHECKITEM 神器碎片 50
 #ACT
 money 绑定元宝 - 250000
-TAKE 修炼石 25
-TAKE 天外陨石 25
-TAKE 神器碎片 250
+TAKE 修炼石 5
+TAKE 天外陨石 5
+TAKE 神器碎片 50
 GIVE 天兽 1
 mov S$锻造专属 天兽
 mov S$锻造位置 戒指
@@ -5863,14 +5863,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc102]
 #IF
 CheckBindMoney 元宝 > 299999
-CHECKITEM 修炼石 30
-CHECKITEM 天外陨石 30
-CHECKITEM 神器碎片 300
+CHECKITEM 修炼石 6
+CHECKITEM 天外陨石 6
+CHECKITEM 神器碎片 60
 #ACT
 money 绑定元宝 - 300000
-TAKE 修炼石 30
-TAKE 天外陨石 30
-TAKE 神器碎片 300
+TAKE 修炼石 6
+TAKE 天外陨石 6
+TAKE 神器碎片 60
 GIVE 鬼泣 1
 mov S$锻造专属 鬼泣
 mov S$锻造位置 戒指
@@ -5884,14 +5884,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc103]
 #IF
 CheckBindMoney 元宝 > 349999
-CHECKITEM 修炼石 35
-CHECKITEM 天外陨石 35
-CHECKITEM 神器碎片 350
+CHECKITEM 修炼石 7
+CHECKITEM 天外陨石 7
+CHECKITEM 神器碎片 70
 #ACT
 money 绑定元宝 - 350000
-TAKE 修炼石 35
-TAKE 天外陨石 35
-TAKE 神器碎片 350
+TAKE 修炼石 7
+TAKE 天外陨石 7
+TAKE 神器碎片 70
 GIVE 冉·遗珠 1
 mov S$锻造专属 冉·遗珠
 mov S$锻造位置 戒指
@@ -5905,14 +5905,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc104]
 #IF
 CheckBindMoney 元宝 > 399999
-CHECKITEM 修炼石 40
-CHECKITEM 天外陨石 40
-CHECKITEM 神器碎片 400
+CHECKITEM 修炼石 8
+CHECKITEM 天外陨石 8
+CHECKITEM 神器碎片 80
 #ACT
 money 绑定元宝 - 400000
-TAKE 修炼石 40
-TAKE 天外陨石 40
-TAKE 神器碎片 400
+TAKE 修炼石 8
+TAKE 天外陨石 8
+TAKE 神器碎片 80
 GIVE 火神·指环 1
 mov S$锻造专属 火神·指环
 mov S$锻造位置 戒指
@@ -5926,14 +5926,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc105]
 #IF
 CheckBindMoney 元宝 > 449999
-CHECKITEM 修炼石 45
-CHECKITEM 天外陨石 45
-CHECKITEM 神器碎片 450
+CHECKITEM 修炼石 9
+CHECKITEM 天外陨石 9
+CHECKITEM 神器碎片 90
 #ACT
 money 绑定元宝 - 450000
-TAKE 修炼石 45
-TAKE 天外陨石 45
-TAKE 神器碎片 450
+TAKE 修炼石 9
+TAKE 天外陨石 9
+TAKE 神器碎片 90
 GIVE 魔·戒·SSSS 1
 mov S$锻造专属 魔·戒·SSSS
 mov S$锻造位置 戒指
@@ -5947,14 +5947,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc106]
 #IF
 CheckBindMoney 元宝 > 499999
-CHECKITEM 修炼石 50
-CHECKITEM 天外陨石 50
-CHECKITEM 神器碎片 500
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CHECKITEM 神器碎片 100
 #ACT
 money 绑定元宝 - 500000
-TAKE 修炼石 50
-TAKE 天外陨石 50
-TAKE 神器碎片 500
+TAKE 修炼石 10
+TAKE 天外陨石 10
+TAKE 神器碎片 100
 GIVE 幻月 1
 mov S$锻造专属 幻月
 mov S$锻造位置 戒指
@@ -5968,14 +5968,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc107]
 #IF
 CheckBindMoney 元宝 > 549999
-CHECKITEM 修炼石 55
-CHECKITEM 天外陨石 55
-CHECKITEM 神器碎片 550
+CHECKITEM 修炼石 11
+CHECKITEM 天外陨石 11
+CHECKITEM 神器碎片 110
 #ACT
 money 绑定元宝 - 550000
-TAKE 修炼石 55
-TAKE 天外陨石 55
-TAKE 神器碎片 550
+TAKE 修炼石 11
+TAKE 天外陨石 11
+TAKE 神器碎片 110
 GIVE 伏魔·九游戒 1
 mov S$锻造专属 伏魔·九游戒
 mov S$锻造位置 戒指
@@ -5989,14 +5989,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc108]
 #IF
 CheckBindMoney 元宝 > 599999
-CHECKITEM 修炼石 60
-CHECKITEM 天外陨石 60
-CHECKITEM 神器碎片 600
+CHECKITEM 修炼石 12
+CHECKITEM 天外陨石 12
+CHECKITEM 神器碎片 120
 #ACT
 money 绑定元宝 - 600000
-TAKE 修炼石 60
-TAKE 天外陨石 60
-TAKE 神器碎片 600
+TAKE 修炼石 12
+TAKE 天外陨石 12
+TAKE 神器碎片 120
 GIVE 血瞳 1
 mov S$锻造专属 血瞳
 mov S$锻造位置 戒指
@@ -6010,14 +6010,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc109]
 #IF
 CheckBindMoney 元宝 > 649999
-CHECKITEM 修炼石 65
-CHECKITEM 天外陨石 65
-CHECKITEM 神器碎片 650
+CHECKITEM 修炼石 13
+CHECKITEM 天外陨石 13
+CHECKITEM 神器碎片 130
 #ACT
 money 绑定元宝 - 650000
-TAKE 修炼石 65
-TAKE 天外陨石 65
-TAKE 神器碎片 650
+TAKE 修炼石 13
+TAKE 天外陨石 13
+TAKE 神器碎片 130
 GIVE 万灵之戒 1
 mov S$锻造专属 万灵之戒
 mov S$锻造位置 戒指
@@ -6031,14 +6031,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc110]
 #IF
 CheckBindMoney 元宝 > 699999
-CHECKITEM 修炼石 70
-CHECKITEM 天外陨石 70
-CHECKITEM 神器碎片 700
+CHECKITEM 修炼石 14
+CHECKITEM 天外陨石 14
+CHECKITEM 神器碎片 140
 #ACT
 money 绑定元宝 - 700000
-TAKE 修炼石 70
-TAKE 天外陨石 70
-TAKE 神器碎片 700
+TAKE 修炼石 14
+TAKE 天外陨石 14
+TAKE 神器碎片 140
 GIVE 轩墨魔戒 1
 mov S$锻造专属 轩墨魔戒
 mov S$锻造位置 戒指
@@ -6052,14 +6052,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc111]
 #IF
 CheckBindMoney 元宝 > 749999
-CHECKITEM 修炼石 75
-CHECKITEM 天外陨石 75
-CHECKITEM 神器碎片 750
+CHECKITEM 修炼石 15
+CHECKITEM 天外陨石 15
+CHECKITEM 神器碎片 150
 #ACT
 money 绑定元宝 - 750000
-TAKE 修炼石 75
-TAKE 天外陨石 75
-TAKE 神器碎片 750
+TAKE 修炼石 15
+TAKE 天外陨石 15
+TAKE 神器碎片 150
 GIVE 至尊魔戒 1
 mov S$锻造专属 至尊魔戒
 mov S$锻造位置 戒指
@@ -6116,14 +6116,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc113]
 #IF
 CheckBindMoney 元宝 > 49999
-CHECKITEM 修炼石 5
-CHECKITEM 天外陨石 5
-CHECKITEM 神器碎片 50
+CHECKITEM 修炼石 1
+CHECKITEM 天外陨石 1
+CHECKITEM 神器碎片 10
 #ACT
 money 绑定元宝 - 50000
-TAKE 修炼石 5
-TAKE 天外陨石 5
-TAKE 神器碎片 50
+TAKE 修炼石 1
+TAKE 天外陨石 1
+TAKE 神器碎片 10
 GIVE 云飞の扬 1
 mov S$锻造专属 云飞の扬
 mov S$锻造位置 腰带
@@ -6137,14 +6137,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc114]
 #IF
 CheckBindMoney 元宝 > 99999
-CHECKITEM 修炼石 10
-CHECKITEM 天外陨石 10
-CHECKITEM 神器碎片 100
+CHECKITEM 修炼石 2
+CHECKITEM 天外陨石 2
+CHECKITEM 神器碎片 20
 #ACT
 money 绑定元宝 - 100000
-TAKE 修炼石 10
-TAKE 天外陨石 10
-TAKE 神器碎片 100
+TAKE 修炼石 2
+TAKE 天外陨石 2
+TAKE 神器碎片 20
 GIVE 韩灵阴阳 1
 mov S$锻造专属 韩灵阴阳
 mov S$锻造位置 腰带
@@ -6158,14 +6158,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc115]
 #IF
 CheckBindMoney 元宝 > 149999
-CHECKITEM 修炼石 15
-CHECKITEM 天外陨石 15
-CHECKITEM 神器碎片 150
+CHECKITEM 修炼石 3
+CHECKITEM 天外陨石 3
+CHECKITEM 神器碎片 30
 #ACT
 money 绑定元宝 - 150000
-TAKE 修炼石 15
-TAKE 天外陨石 15
-TAKE 神器碎片 150
+TAKE 修炼石 3
+TAKE 天外陨石 3
+TAKE 神器碎片 30
 GIVE 完美守护 1
 mov S$锻造专属 完美守护
 mov S$锻造位置 腰带
@@ -6179,14 +6179,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc116]
 #IF
 CheckBindMoney 元宝 > 199999
-CHECKITEM 修炼石 20
-CHECKITEM 天外陨石 20
-CHECKITEM 神器碎片 200
+CHECKITEM 修炼石 4
+CHECKITEM 天外陨石 4
+CHECKITEM 神器碎片 40
 #ACT
 money 绑定元宝 - 200000
-TAKE 修炼石 20
-TAKE 天外陨石 20
-TAKE 神器碎片 200
+TAKE 修炼石 4
+TAKE 天外陨石 4
+TAKE 神器碎片 40
 GIVE 玉虚葫 1
 mov S$锻造专属 玉虚葫
 mov S$锻造位置 腰带
@@ -6200,14 +6200,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc117]
 #IF
 CheckBindMoney 元宝 > 249999
-CHECKITEM 修炼石 25
-CHECKITEM 天外陨石 25
-CHECKITEM 神器碎片 250
+CHECKITEM 修炼石 5
+CHECKITEM 天外陨石 5
+CHECKITEM 神器碎片 50
 #ACT
 money 绑定元宝 - 250000
-TAKE 修炼石 25
-TAKE 天外陨石 25
-TAKE 神器碎片 250
+TAKE 修炼石 5
+TAKE 天外陨石 5
+TAKE 神器碎片 50
 GIVE 血染 1
 mov S$锻造专属 血染
 mov S$锻造位置 腰带
@@ -6221,14 +6221,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc118]
 #IF
 CheckBindMoney 元宝 > 299999
-CHECKITEM 修炼石 30
-CHECKITEM 天外陨石 30
-CHECKITEM 神器碎片 300
+CHECKITEM 修炼石 6
+CHECKITEM 天外陨石 6
+CHECKITEM 神器碎片 60
 #ACT
 money 绑定元宝 - 300000
-TAKE 修炼石 30
-TAKE 天外陨石 30
-TAKE 神器碎片 300
+TAKE 修炼石 6
+TAKE 天外陨石 6
+TAKE 神器碎片 60
 GIVE 黄龙在天 1
 mov S$锻造专属 黄龙在天
 mov S$锻造位置 腰带
@@ -6242,14 +6242,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc119]
 #IF
 CheckBindMoney 元宝 > 349999
-CHECKITEM 修炼石 35
-CHECKITEM 天外陨石 35
-CHECKITEM 神器碎片 350
+CHECKITEM 修炼石 7
+CHECKITEM 天外陨石 7
+CHECKITEM 神器碎片 70
 #ACT
 money 绑定元宝 - 350000
-TAKE 修炼石 35
-TAKE 天外陨石 35
-TAKE 神器碎片 350
+TAKE 修炼石 7
+TAKE 天外陨石 7
+TAKE 神器碎片 70
 GIVE 断·天 1
 mov S$锻造专属 断·天
 mov S$锻造位置 腰带
@@ -6263,14 +6263,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc120]
 #IF
 CheckBindMoney 元宝 > 399999
-CHECKITEM 修炼石 40
-CHECKITEM 天外陨石 40
-CHECKITEM 神器碎片 400
+CHECKITEM 修炼石 8
+CHECKITEM 天外陨石 8
+CHECKITEM 神器碎片 80
 #ACT
 money 绑定元宝 - 400000
-TAKE 修炼石 40
-TAKE 天外陨石 40
-TAKE 神器碎片 400
+TAKE 修炼石 8
+TAKE 天外陨石 8
+TAKE 神器碎片 80
 GIVE 寂灭【攻】 1
 mov S$锻造专属 寂灭【攻】
 mov S$锻造位置 腰带
@@ -6278,20 +6278,20 @@ MOVR <$STR(N$纵轴坐标)> 100 500
 SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【寂灭【攻】】腰带/FCOLOR=58>
 BREAK
 #ELSEACT
-GIVE 寂灭[攻]图纸 1
+GIVE 寂灭【攻】图纸 1
 MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 [@StdModeFunc121]
 #IF
 CheckBindMoney 元宝 > 449999
-CHECKITEM 修炼石 45
-CHECKITEM 天外陨石 45
-CHECKITEM 神器碎片 450
+CHECKITEM 修炼石 9
+CHECKITEM 天外陨石 9
+CHECKITEM 神器碎片 90
 #ACT
 money 绑定元宝 - 450000
-TAKE 修炼石 45
-TAKE 天外陨石 45
-TAKE 神器碎片 450
+TAKE 修炼石 9
+TAKE 天外陨石 9
+TAKE 神器碎片 90
 GIVE 焚毒之火 1
 mov S$锻造专属 焚毒之火
 mov S$锻造位置 腰带
@@ -6305,14 +6305,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc122]
 #IF
 CheckBindMoney 元宝 > 499999
-CHECKITEM 修炼石 50
-CHECKITEM 天外陨石 50
-CHECKITEM 神器碎片 500
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CHECKITEM 神器碎片 100
 #ACT
 money 绑定元宝 - 500000
-TAKE 修炼石 50
-TAKE 天外陨石 50
-TAKE 神器碎片 500
+TAKE 修炼石 10
+TAKE 天外陨石 10
+TAKE 神器碎片 100
 GIVE 冰晶之魂 1
 mov S$锻造专属 冰晶之魂
 mov S$锻造位置 腰带
@@ -6326,14 +6326,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc123]
 #IF
 CheckBindMoney 元宝 > 549999
-CHECKITEM 修炼石 55
-CHECKITEM 天外陨石 55
-CHECKITEM 神器碎片 550
+CHECKITEM 修炼石 11
+CHECKITEM 天外陨石 11
+CHECKITEM 神器碎片 110
 #ACT
 money 绑定元宝 - 550000
-TAKE 修炼石 55
-TAKE 天外陨石 55
-TAKE 神器碎片 550
+TAKE 修炼石 11
+TAKE 天外陨石 11
+TAKE 神器碎片 110
 GIVE 混天绫 1
 mov S$锻造专属 混天绫
 mov S$锻造位置 腰带
@@ -6347,14 +6347,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc124]
 #IF
 CheckBindMoney 元宝 > 599999
-CHECKITEM 修炼石 60
-CHECKITEM 天外陨石 60
-CHECKITEM 神器碎片 600
+CHECKITEM 修炼石 12
+CHECKITEM 天外陨石 12
+CHECKITEM 神器碎片 120
 #ACT
 money 绑定元宝 - 600000
-TAKE 修炼石 60
-TAKE 天外陨石 60
-TAKE 神器碎片 600
+TAKE 修炼石 12
+TAKE 天外陨石 12
+TAKE 神器碎片 120
 GIVE 噬血灵魂 1
 mov S$锻造专属 噬血灵魂
 mov S$锻造位置 腰带
@@ -6368,14 +6368,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc125]
 #IF
 CheckBindMoney 元宝 > 649999
-CHECKITEM 修炼石 65
-CHECKITEM 天外陨石 65
-CHECKITEM 神器碎片 650
+CHECKITEM 修炼石 13
+CHECKITEM 天外陨石 13
+CHECKITEM 神器碎片 130
 #ACT
 money 绑定元宝 - 650000
-TAKE 修炼石 65
-TAKE 天外陨石 65
-TAKE 神器碎片 650
+TAKE 修炼石 13
+TAKE 天外陨石 13
+TAKE 神器碎片 130
 GIVE 悲伤之末 1
 mov S$锻造专属 悲伤之末
 mov S$锻造位置 腰带
@@ -6389,14 +6389,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc126]
 #IF
 CheckBindMoney 元宝 > 699999
-CHECKITEM 修炼石 70
-CHECKITEM 天外陨石 70
-CHECKITEM 神器碎片 700
+CHECKITEM 修炼石 14
+CHECKITEM 天外陨石 14
+CHECKITEM 神器碎片 140
 #ACT
 money 绑定元宝 - 700000
-TAKE 修炼石 70
-TAKE 天外陨石 70
-TAKE 神器碎片 700
+TAKE 修炼石 14
+TAKE 天外陨石 14
+TAKE 神器碎片 140
 GIVE 救世守望带 1
 mov S$锻造专属 救世守望带
 mov S$锻造位置 腰带
@@ -6410,14 +6410,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc127]
 #IF
 CheckBindMoney 元宝 > 749999
-CHECKITEM 修炼石 75
-CHECKITEM 天外陨石 75
-CHECKITEM 神器碎片 750
+CHECKITEM 修炼石 15
+CHECKITEM 天外陨石 15
+CHECKITEM 神器碎片 150
 #ACT
 money 绑定元宝 - 750000
-TAKE 修炼石 75
-TAKE 天外陨石 75
-TAKE 神器碎片 750
+TAKE 修炼石 15
+TAKE 天外陨石 15
+TAKE 神器碎片 150
 GIVE 祭祖神魔 1
 mov S$锻造专属 祭祖神魔
 mov S$锻造位置 腰带
@@ -6474,14 +6474,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc129]
 #IF
 CheckBindMoney 元宝 > 49999
-CHECKITEM 修炼石 5
-CHECKITEM 天外陨石 5
-CHECKITEM 神器碎片 50
+CHECKITEM 修炼石 1
+CHECKITEM 天外陨石 1
+CHECKITEM 神器碎片 10
 #ACT
 money 绑定元宝 - 50000
-TAKE 修炼石 5
-TAKE 天外陨石 5
-TAKE 神器碎片 50
+TAKE 修炼石 1
+TAKE 天外陨石 1
+TAKE 神器碎片 10
 GIVE 天下の幻 1
 mov S$锻造专属 天下の幻
 mov S$锻造位置 靴子
@@ -6495,14 +6495,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc130]
 #IF
 CheckBindMoney 元宝 > 99999
-CHECKITEM 修炼石 10
-CHECKITEM 天外陨石 10
-CHECKITEM 神器碎片 100
+CHECKITEM 修炼石 2
+CHECKITEM 天外陨石 2
+CHECKITEM 神器碎片 20
 #ACT
 money 绑定元宝 - 100000
-TAKE 修炼石 10
-TAKE 天外陨石 10
-TAKE 神器碎片 100
+TAKE 修炼石 2
+TAKE 天外陨石 2
+TAKE 神器碎片 20
 GIVE 天妖 1
 mov S$锻造专属 天妖
 mov S$锻造位置 靴子
@@ -6516,14 +6516,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc131]
 #IF
 CheckBindMoney 元宝 > 149999
-CHECKITEM 修炼石 15
-CHECKITEM 天外陨石 15
-CHECKITEM 神器碎片 150
+CHECKITEM 修炼石 3
+CHECKITEM 天外陨石 3
+CHECKITEM 神器碎片 30
 #ACT
 money 绑定元宝 - 150000
-TAKE 修炼石 15
-TAKE 天外陨石 15
-TAKE 神器碎片 150
+TAKE 修炼石 3
+TAKE 天外陨石 3
+TAKE 神器碎片 30
 GIVE 天殇英雄履 1
 mov S$锻造专属 天殇英雄履
 mov S$锻造位置 靴子
@@ -6537,14 +6537,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc132]
 #IF
 CheckBindMoney 元宝 > 199999
-CHECKITEM 修炼石 20
-CHECKITEM 天外陨石 20
-CHECKITEM 神器碎片 200
+CHECKITEM 修炼石 4
+CHECKITEM 天外陨石 4
+CHECKITEM 神器碎片 40
 #ACT
 money 绑定元宝 - 200000
-TAKE 修炼石 20
-TAKE 天外陨石 20
-TAKE 神器碎片 200
+TAKE 修炼石 4
+TAKE 天外陨石 4
+TAKE 神器碎片 40
 GIVE 冰河葬心靴 1
 mov S$锻造专属 冰河葬心靴
 mov S$锻造位置 靴子
@@ -6558,14 +6558,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc133]
 #IF
 CheckBindMoney 元宝 > 249999
-CHECKITEM 修炼石 25
-CHECKITEM 天外陨石 25
-CHECKITEM 神器碎片 250
+CHECKITEM 修炼石 5
+CHECKITEM 天外陨石 5
+CHECKITEM 神器碎片 50
 #ACT
 money 绑定元宝 - 250000
-TAKE 修炼石 25
-TAKE 天外陨石 25
-TAKE 神器碎片 250
+TAKE 修炼石 5
+TAKE 天外陨石 5
+TAKE 神器碎片 50
 GIVE 碎空破晓 1
 mov S$锻造专属 碎空破晓
 mov S$锻造位置 靴子
@@ -6579,14 +6579,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc134]
 #IF
 CheckBindMoney 元宝 > 299999
-CHECKITEM 修炼石 30
-CHECKITEM 天外陨石 30
-CHECKITEM 神器碎片 300
+CHECKITEM 修炼石 6
+CHECKITEM 天外陨石 6
+CHECKITEM 神器碎片 60
 #ACT
 money 绑定元宝 - 300000
-TAKE 修炼石 30
-TAKE 天外陨石 30
-TAKE 神器碎片 300
+TAKE 修炼石 6
+TAKE 天外陨石 6
+TAKE 神器碎片 60
 GIVE 骑士的荣耀 1
 mov S$锻造专属 骑士的荣耀
 mov S$锻造位置 靴子
@@ -6600,14 +6600,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc135]
 #IF
 CheckBindMoney 元宝 > 349999
-CHECKITEM 修炼石 35
-CHECKITEM 天外陨石 35
-CHECKITEM 神器碎片 350
+CHECKITEM 修炼石 7
+CHECKITEM 天外陨石 7
+CHECKITEM 神器碎片 70
 #ACT
 money 绑定元宝 - 350000
-TAKE 修炼石 35
-TAKE 天外陨石 35
-TAKE 神器碎片 350
+TAKE 修炼石 7
+TAKE 天外陨石 7
+TAKE 神器碎片 70
 GIVE 国王的祝福 1
 mov S$锻造专属 国王的祝福
 mov S$锻造位置 靴子
@@ -6621,14 +6621,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc136]
 #IF
 CheckBindMoney 元宝 > 399999
-CHECKITEM 修炼石 40
-CHECKITEM 天外陨石 40
-CHECKITEM 神器碎片 400
+CHECKITEM 修炼石 8
+CHECKITEM 天外陨石 8
+CHECKITEM 神器碎片 80
 #ACT
 money 绑定元宝 - 400000
-TAKE 修炼石 40
-TAKE 天外陨石 40
-TAKE 神器碎片 400
+TAKE 修炼石 8
+TAKE 天外陨石 8
+TAKE 神器碎片 80
 GIVE 血兽王靴 1
 mov S$锻造专属 血兽王靴
 mov S$锻造位置 靴子
@@ -6642,14 +6642,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc137]
 #IF
 CheckBindMoney 元宝 > 449999
-CHECKITEM 修炼石 45
-CHECKITEM 天外陨石 45
-CHECKITEM 神器碎片 450
+CHECKITEM 修炼石 9
+CHECKITEM 天外陨石 9
+CHECKITEM 神器碎片 90
 #ACT
 money 绑定元宝 - 450000
-TAKE 修炼石 45
-TAKE 天外陨石 45
-TAKE 神器碎片 450
+TAKE 修炼石 9
+TAKE 天外陨石 9
+TAKE 神器碎片 90
 GIVE 烛天·封神靴 1
 mov S$锻造专属 烛天·封神靴
 mov S$锻造位置 靴子
@@ -6663,14 +6663,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc138]
 #IF
 CheckBindMoney 元宝 > 499999
-CHECKITEM 修炼石 50
-CHECKITEM 天外陨石 50
-CHECKITEM 神器碎片 500
+CHECKITEM 修炼石 10
+CHECKITEM 天外陨石 10
+CHECKITEM 神器碎片 100
 #ACT
 money 绑定元宝 - 500000
-TAKE 修炼石 50
-TAKE 天外陨石 50
-TAKE 神器碎片 500
+TAKE 修炼石 10
+TAKE 天外陨石 10
+TAKE 神器碎片 100
 GIVE 咒天乾坤天罡履 1
 mov S$锻造专属 咒天乾坤天罡履
 mov S$锻造位置 靴子
@@ -6683,14 +6683,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc139]
 #IF
 CheckBindMoney 元宝 > 549999
-CHECKITEM 修炼石 55
-CHECKITEM 天外陨石 55
-CHECKITEM 神器碎片 550
+CHECKITEM 修炼石 11
+CHECKITEM 天外陨石 11
+CHECKITEM 神器碎片 110
 #ACT
 money 绑定元宝 - 550000
-TAKE 修炼石 55
-TAKE 天外陨石 55
-TAKE 神器碎片 550
+TAKE 修炼石 11
+TAKE 天外陨石 11
+TAKE 神器碎片 110
 GIVE 帝江·九耀靴 1
 mov S$锻造专属 帝江·九耀靴
 mov S$锻造位置 靴子
@@ -6704,14 +6704,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc140]
 #IF
 CheckBindMoney 元宝 > 599999
-CHECKITEM 修炼石 60
-CHECKITEM 天外陨石 60
-CHECKITEM 神器碎片 600
+CHECKITEM 修炼石 12
+CHECKITEM 天外陨石 12
+CHECKITEM 神器碎片 120
 #ACT
 money 绑定元宝 - 600000
-TAKE 修炼石 60
-TAKE 天外陨石 60
-TAKE 神器碎片 600
+TAKE 修炼石 12
+TAKE 天外陨石 12
+TAKE 神器碎片 120
 GIVE 永恒的冰封 1
 mov S$锻造专属 永恒的冰封
 mov S$锻造位置 靴子
@@ -6725,14 +6725,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc141]
 #IF
 CheckBindMoney 元宝 > 649999
-CHECKITEM 修炼石 65
-CHECKITEM 天外陨石 65
-CHECKITEM 神器碎片 650
+CHECKITEM 修炼石 13
+CHECKITEM 天外陨石 13
+CHECKITEM 神器碎片 130
 #ACT
 money 绑定元宝 - 650000
-TAKE 修炼石 65
-TAKE 天外陨石 65
-TAKE 神器碎片 650
+TAKE 修炼石 13
+TAKE 天外陨石 13
+TAKE 神器碎片 130
 GIVE 蚩尤魔靴 1
 mov S$锻造专属 蚩尤魔靴
 mov S$锻造位置 靴子
@@ -6746,14 +6746,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc142]
 #IF
 CheckBindMoney 元宝 > 699999
-CHECKITEM 修炼石 70
-CHECKITEM 天外陨石 70
-CHECKITEM 神器碎片 700
+CHECKITEM 修炼石 14
+CHECKITEM 天外陨石 14
+CHECKITEM 神器碎片 140
 #ACT
 money 绑定元宝 - 700000
-TAKE 修炼石 70
-TAKE 天外陨石 70
-TAKE 神器碎片 700
+TAKE 修炼石 14
+TAKE 天外陨石 14
+TAKE 神器碎片 140
 GIVE 孔雀翎 1
 mov S$锻造专属 孔雀翎
 mov S$锻造位置 靴子
@@ -6767,14 +6767,14 @@ MESSAGEBOX 打造条件不足??\\1、材料不足！
 [@StdModeFunc143]
 #IF
 CheckBindMoney 元宝 > 749999
-CHECKITEM 修炼石 75
-CHECKITEM 天外陨石 75
-CHECKITEM 神器碎片 750
+CHECKITEM 修炼石 15
+CHECKITEM 天外陨石 15
+CHECKITEM 神器碎片 150
 #ACT
 money 绑定元宝 - 750000
-TAKE 修炼石 75
-TAKE 天外陨石 75
-TAKE 神器碎片 750
+TAKE 修炼石 15
+TAKE 天外陨石 15
+TAKE 神器碎片 150
 GIVE 阎王のSSSSS 1
 mov S$锻造专属 阎王のSSSSS
 mov S$锻造位置 靴子
