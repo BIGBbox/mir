@@ -1,11 +1,11 @@
 [@攻城提示]
 #if
-small <$str(G300)> 3
+small <$str(G300)> 2
 #act
 break
 
 #or
-; equal <$str(G300)> 3
+; equal <$str(G300)> 2
 DAYOFWEEK TUE
 DAYOFWEEK SAT
 #ACT
@@ -16,7 +16,7 @@ AddAttackSabukAll 0
 break
 
 #if
-equal <$str(G300)> 3
+equal <$str(G300)> 2
 #ACT
 SendCenterMsg 250 0 ┏-------------------------------------------------------┓ 1 60
 SendCenterMsg 250 0 ┠-----------攻城战30分钟后已开启------------┨ 1 60
@@ -26,7 +26,7 @@ AddAttackSabukAll 0
 
 [@开启攻城]
 #if
-small <$str(G300)> 3
+small <$str(G300)> 2
 #act
 break
 
@@ -41,7 +41,7 @@ SendCenterMsg 250 0 ┗-------------------------------------------┛ 1 60
 break
 
 #if
-equal <$str(G300)> 3
+equal <$str(G300)> 2
 #ACT
 MOV G498 1
 SendCenterMsg 250 0 ┏-------------------------------------------┓ 1 60
@@ -52,7 +52,7 @@ SendCenterMsg 250 0 ┗-------------------------------------------┛ 1 60
 
 [@攻城结束]
 #if
-small <$str(G300)> 3
+small <$str(G300)> 2
 #act
 break
 
@@ -70,7 +70,7 @@ SendCenterMsg 249 0 ┗----------------------------------------------------------
 break
 
 #if
-equal <$str(G300)> 3
+equal <$str(G300)> 2
 #ACT
 
 
@@ -89,7 +89,7 @@ GMEXECUTE StartQuest @QM零点重置
 ; goto @判断开区时间差
 
 #if
-small <$str(G300)> 3
+small <$str(G300)> 2
 #act
 break
 
@@ -111,7 +111,7 @@ SAVEVAR GLOBAL 沙捐总值
 break
 
 #if
-equal <$str(G300)> 3
+equal <$str(G300)> 2
 #ACT
 DELNPC 攻城奖池领取
 CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt

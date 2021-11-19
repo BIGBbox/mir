@@ -1,20 +1,20 @@
 [@飞升面板]
 {
 
-; #or
-; CHECKRENEWLEVEL < 20
-; CHECKLEVELEX < 200
-; #ACT
-; close
-; MessageBox 1.角色等级需要达到200级！！！\\2.需要转生等级需要达到20转!!!
-; BREAK
+#or
+CHECKRENEWLEVEL < 20
+CHECKLEVELEX < 200
+#ACT
+close
+MessageBox 1.角色等级需要达到200级！！！\\2.需要转生等级需要达到20转!!!
+BREAK
 
-; #IF
-; CHECKTITLE 仙人板板
-; #ACT
-; close
-; MessageBox 当前大陆你已经满级！！！
-; BREAK
+#IF
+not CHECKRENEWLEVEL < 20
+#ACT
+close
+MessageBox 你飞升等级已达最大值！！！
+BREAK
 
 #if
 #act
@@ -104,7 +104,6 @@ break
 
 
 #IF
-
 #ACT
 
 INC U49 <$STR(S$飞升倍攻)>

@@ -6829,6 +6829,72 @@ GIVE 天下神靴图纸 1
 MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 
+[@StdModeFunc354]
+#IF
+CHECKITEM 贪【首充神器】 1
+#ACT
+TAKE 贪【首充神器】 1
+GIVE 嗔【首充神器】 1
+mov S$锻造专属 嗔【首充神器】
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【嗔【首充神器】】戒指/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 嗔【首充神器】图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+
+[@StdModeFunc355]
+#IF
+CHECKITEM 嗔【首充神器】 1
+#ACT
+TAKE 嗔【首充神器】 1
+GIVE 痴【首充神器】 1
+mov S$锻造专属 痴【首充神器】
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【痴【首充神器】】戒指/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 痴【首充神器】图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+
+[@StdModeFunc356]
+#IF
+CHECKITEM 仁【特权神器】 1
+#ACT
+TAKE 仁【特权神器】 1
+GIVE 义【特权神器】 1
+mov S$锻造专属 义【特权神器】
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【义【特权神器】】戒指/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 义【特权神器】图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+
+[@StdModeFunc357]
+#IF
+CHECKITEM 义【特权神器】 1
+#ACT
+TAKE 义【特权神器】 1
+GIVE 礼【特权神器】 1
+mov S$锻造专属 礼【特权神器】
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【礼【特权神器】】戒指/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 礼【特权神器】图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+
+
+
 
 
 

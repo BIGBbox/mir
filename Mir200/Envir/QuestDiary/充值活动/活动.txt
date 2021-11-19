@@ -71,9 +71,9 @@ inc S$累充奖励显示子项 <$STR(S$累充奖励显示子项1)>
 <Img|id=titleBg|x=270.0|y=125.0|img=public/sf1/19/artFont1.png>
 
 ;<Layout|id=3|x=<$STR(N$按钮0)>|y=0.0|width=80|height=80|link=@exit>
-   <Button|id=4|x=750|y=25.0|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
+<Button|id=4|x=750|y=25.0|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
 
-   <Img|id=title|x=355.0|y=23.0|img=public/sf1/19/title1.png>
+<Img|id=title|x=355.0|y=23.0|img=public/sf1/19/title1.png>
 
 ;<Text|id=title|x=55.0|y=15.0|color=95|size=20|outlinecolor=0|outline=1|text=连续充值>
 
@@ -313,23 +313,23 @@ goto @超值礼包显示FOR
 #IF
 #ACT
 #say
-   <Img|layerid=101|children=bg1,bg2,line11,titleBg,title,time,_网格,容器1,2,4,3,5,6,7,8,9,10,11,12,13,14,15,容器2,容器3|x=<$STR(N$moveX)>|y=<$STR(N$moveY)>|show=0|reset=0|move=1|img=public/sf1/19/bg5.png|bg=1>
-   <Img|id=bg1|x=35.0|y=50.0|img=public/haha/f_0005a1.png>
-   <Img|id=bg2|x=7.0|y=55.0|width=785|height=470|img=public/sf1/19/bg2.png>
-   <Img|id=line11|width=787|height=2|x=7.0|y=105.0|img=public/sf1/19/line.png>
-   <Img|id=titleBg|x=40.0|y=95.0|img=public/sf1/19/zzTitle.png>
-   <Img|id=title|x=355.0|y=23.0|img=public/sf1/19/title1.png>
-   <Button|id=4|x=750|y=25.0|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
+<Img|layerid=101|children=bg1,bg2,line11,titleBg,title,time,_网格,容器1,2,4,3,5,6,7,8,9,10,11,12,13,14,15,容器2,容器3|x=<$STR(N$moveX)>|y=<$STR(N$moveY)>|show=0|reset=0|move=1|img=public/sf1/19/bg5.png|bg=1>
+<Img|id=bg1|x=35.0|y=50.0|img=public/haha/f_0005a1.png>
+<Img|id=bg2|x=7.0|y=55.0|width=785|height=470|img=public/sf1/19/bg2.png>
+<Img|id=line11|width=787|height=2|x=7.0|y=105.0|img=public/sf1/19/line.png>
+<Img|id=titleBg|x=40.0|y=95.0|img=public/sf1/19/zzTitle.png>
+<Img|id=title|x=355.0|y=23.0|img=public/sf1/19/title1.png>
+<Button|id=4|x=750|y=25.0|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
 
-   ;<Img|id=5|x=156.0|y=53.0|height=437|esc=0|img=public/bg_yyxsz_02.png>
-   ;<Img|id=6|x=156.0|y=156.0|width=515|height=2|esc=0|img=public/bg_yyxsz_01.png>
-   <ListView|id=容器1|children={页签1,页签2,页签3}|x=35.0|y=60.0|width=440|height=70|margin=5|direction=2|bounce=0>
-       <$STR(S$活动按钮A1)>
-       <$STR(S$活动按钮02)>
-       <$STR(S$活动按钮A3)>
-   <Img|id=7|children=7_1|x=60.0|y=55.0|width=510|height=100|img=public/haha/cz_bg1.jpg>
-   <ListView|id=容器2|bounce=0|children={buy_gift1,buy_gift2,buy_gift3,buy_gift4,buy_gift5,buy_gift6}|x=23.0|y=185.0|width=760|height=330|margin=0|direction=2|bounce=0>
-   <$STR(S$超值礼包显示)>
+;<Img|id=5|x=156.0|y=53.0|height=437|esc=0|img=public/bg_yyxsz_02.png>
+;<Img|id=6|x=156.0|y=156.0|width=515|height=2|esc=0|img=public/bg_yyxsz_01.png>
+<ListView|id=容器1|children={页签1,页签2,页签3}|x=35.0|y=60.0|width=440|height=70|margin=5|direction=2|bounce=0>
+    <$STR(S$活动按钮A1)>
+    <$STR(S$活动按钮02)>
+    <$STR(S$活动按钮A3)>
+<Img|id=7|children=7_1|x=60.0|y=55.0|width=510|height=100|img=public/haha/cz_bg1.jpg>
+<ListView|id=容器2|bounce=0|children={buy_gift1,buy_gift2,buy_gift3,buy_gift4,buy_gift5,buy_gift6}|x=23.0|y=185.0|width=760|height=330|margin=0|direction=2|bounce=0>
+<$STR(S$超值礼包显示)>
 
 [@超值礼包购买记录]
 #IF

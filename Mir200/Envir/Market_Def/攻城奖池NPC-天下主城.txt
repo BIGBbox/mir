@@ -22,12 +22,12 @@ div N$总奖池金额 100
 
 [@领取攻沙奖励]
 #IF
-; ISCASTLEGUILD
+ISCASTLEGUILD
 #ACT
 goto @领取攻沙奖励B
-; BREAK
-; #ELSEACT
-; MESSAGEBOX 你不是沙城成员无法领取奖励........
+BREAK
+#ELSEACT
+MESSAGEBOX 你不是沙城成员无法领取奖励........
 
 [@领取攻沙奖励B]
 

@@ -1120,46 +1120,61 @@ break
 [@手镯图纸]
 #if
 #act
-movr p0 1 7
-DRILLHOLE -1 3 0
-DRILLHOLE -1 4 0
 
-#OR
-equal P0 1
-equal P0 4
-#act
-CHANGEITEMADDVALUE -1 12 = 1
-DRILLHOLE -1 3 1
 DRILLHOLE -1 4 1
-GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
-INC N0 1
-SOCKETABLEITEM -1 4 <$str(N0)>
-; sendmsg 5 宝石id:<$str(N0)>
-
-GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
-INC N0 1
-; sendmsg 5 宝石id:<$str(N0)>
-SOCKETABLEITEM -1 3 <$str(N0)>
+SOCKETABLEITEM -1 4 11530
+; SOCKETABLEITEM -1 4 11529
+; SOCKETABLEITEM -1 4 11531
 UpDateBoxItem 1
-sendmsg 5 恭喜：洗练成功！！！！
-goto @main
-break
+sendmsg 7 镶嵌测试!
 
-#if
-#act
-CHANGEITEMADDVALUE -1 12 = 1
-GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
-INC N0 1
+; #if
+; #act
+; movr p0 1 7
+; DRILLHOLE -1 3 0
 ; DRILLHOLE -1 4 0
 
-; sendmsg 5 宝石id:<$str(N0)>
-;然后镶嵌
-SOCKETABLEITEM -1 0 <$str(N0)>
-UpDateBoxItem 1
+; #OR
+; equal P0 1
+; equal P0 4
+; #act
+; CHANGEITEMADDVALUE -1 12 = 1
+; DRILLHOLE -1 3 1
+; DRILLHOLE -1 4 1
+; GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
+; INC N0 1
+; SOCKETABLEITEM -1 4 <$str(N0)>
+; ; sendmsg 5 宝石id:<$str(N0)>
+
+; GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
+; INC N0 1
+; ; sendmsg 5 宝石id:<$str(N0)>
+; SOCKETABLEITEM -1 3 <$str(N0)>
+; UpDateBoxItem 1
+; sendmsg 5 恭喜：洗练成功！！！！
+; goto @main
+; break
+
+; #if
+; #act
+; CHANGEITEMADDVALUE -1 12 = 1
+; GetRandomText ..\QuestDiary\拾取鉴定BUFF\BUFF文件\首饰基础buff.txt N0
+; INC N0 1
+; ; DRILLHOLE -1 4 0
+
+; ; sendmsg 5 宝石id:<$str(N0)>
+; ;然后镶嵌
+; ; SOCKETABLEITEM -1 0 <$str(N0)>
+
+; ; SOCKETABLEITEM -1 0 11529
+
+; SOCKETABLEITEM -1 0 11531
+
+; UpDateBoxItem 1
 
 
-sendmsg 5 恭喜：洗练成功！！！！
-break
+; sendmsg 5 恭喜：洗练成功！！！！
+; break
 
 [@手镯剧情]
 #if

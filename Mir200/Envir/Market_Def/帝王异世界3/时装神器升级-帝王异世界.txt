@@ -21,7 +21,7 @@ BREAK
 
 #if
 #act
-messagebox 请先升级到天下の至尊!!
+messagebox 请先升级到無敵の之力!!
 break
 
 ; #IF

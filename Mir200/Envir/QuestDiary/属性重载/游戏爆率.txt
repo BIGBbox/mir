@@ -14,7 +14,7 @@ INC N$暴率加成 <$str(u0)>
 
 ; 开区前三天
 #if
-not large <$str(G300)> 3
+small <$str(G300)> 3
 #act
 INC N$暴率加成 200
 
@@ -1403,7 +1403,37 @@ CHECKITEMW 玲珑塔【上古神器】
 INC N$暴率加成 80
 
 #IF
+CHECKITEMW 贪【首充神器】
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 嗔【首充神器】
+#ACT
+INC N$暴率加成 40
+
+#IF
+CHECKITEMW 痴【首充神器】
+#ACT
+INC N$暴率加成 80
+
+#IF
 CHECKITEMW 昊天塔【上古神器】
+#ACT
+INC N$暴率加成 80
+
+#IF
+CHECKITEMW 仁【特权神器】
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 义【特权神器】
+#ACT
+INC N$暴率加成 40
+
+#IF
+CHECKITEMW 礼【特权神器】
 #ACT
 INC N$暴率加成 80
 

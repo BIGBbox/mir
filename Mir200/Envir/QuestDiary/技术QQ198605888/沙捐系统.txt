@@ -163,7 +163,7 @@ MOV S$捐献数量3_排版 暂无
 mov S$不允许捐献 0
 
 #if
-small <$str(G300)> 3
+small <$str(G300)> 2
 #act
 break
 
@@ -182,7 +182,7 @@ mov S$不允许捐献 1
 break
 
 #if
-equal <$str(G300)> 3
+equal <$str(G300)> 2
 not small <$HOUR> 20
 #ACT
 mov S$不允许捐献 1
