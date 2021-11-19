@@ -1340,7 +1340,7 @@ CHECKCURRTARGETRACE = 0
 
 #if
 not CHECKCURRTARGETRACE = 0
-equal N$第一刀斩杀怪物 10
+equal <$str(N$第一刀斩杀怪物)> 10
 m.CheckHpPer > 98
 #act
 m.AddhpPer - 10
@@ -1349,7 +1349,7 @@ m.AddhpPer - 10
 
 #if
 not CHECKCURRTARGETRACE = 0
-equal N$第一刀斩杀怪物 8
+equal <$str(N$第一刀斩杀怪物)> 8
 m.CheckHpPer > 98
 #act
 m.AddhpPer - 8
@@ -1358,7 +1358,7 @@ m.AddhpPer - 8
 
 #if
 not CHECKCURRTARGETRACE = 0
-equal N$第一刀斩杀怪物 6
+equal <$str(N$第一刀斩杀怪物)> 6
 m.CheckHpPer > 98
 #act
 m.AddhpPer - 6
@@ -1367,7 +1367,7 @@ m.AddhpPer - 6
 
 #if
 not CHECKCURRTARGETRACE = 0
-equal N$第一刀斩杀怪物 4
+equal <$str(N$第一刀斩杀怪物)> 4
 m.CheckHpPer > 98
 #act
 m.AddhpPer - 4
@@ -1376,7 +1376,7 @@ m.AddhpPer - 4
 
 #if
 not CHECKCURRTARGETRACE = 0
-equal N$第一刀斩杀怪物 2
+equal <$str(N$第一刀斩杀怪物)> 2
 m.CheckHpPer > 98
 #act
 m.AddhpPer - 2
