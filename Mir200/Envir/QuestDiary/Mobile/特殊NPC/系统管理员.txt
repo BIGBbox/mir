@@ -214,9 +214,9 @@ goto @获取图鉴
 
 #if
 #act
-set [50] 0
-set [51] 0
-break
+; set [50] 0
+; set [51] 0
+; break
 ; mov S$名字 米线
 ; ; <$str(S$名字)>.<$USERACCOUNT>
 ; mov S$账号 <$str(S$名字)>.<$USERACCOUNT>
@@ -227,8 +227,8 @@ break
 ; <$USERNAME>.OFFLINEPLAY 1
 ; SENDMSG 6 人物脱装备，位置[<$CURRTAKETEMPOS>]，物品<$CURRTEMNAME>，ID<$CURRTEMMAKEINDEX> 
 ; sendmsg 1 已完成任务!
-; sendmsg 5 U20:<$str(U20)>-U17:<$STR(U17)>-合区时间:<$HFTIME>--领取人数:·<$str(G16)>·-开区天数-<$str(G300)>——
-; CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
+sendmsg 5 U20:<$str(U20)>-U17:<$STR(U17)>-合区时间:<$HFTIME>--领取人数:·<$str(G16)>·-开区天数-<$str(G300)>——
+CreateNPC 攻城奖池领取 天下主城 141 85 1192 攻城奖池NPC
 
 mov S19 2021/11/3 12:10:14
 ; GetValidstr <$str(S1)>   S2 S$剩下串2

@@ -39,12 +39,17 @@ break
 
 #if
 #act
-GetListString ..\QuestDiary\技术QQ198605888\沙城成员领取记录.txt <$USERNAME> 领取 N$领取沙城奖励数量
+MOV N$总金额 <$GLOBAL(沙捐总值)>
+mul N$总金额 60
+div N$总金额 100
+div N$总金额 20
+; GetListString ..\QuestDiary\技术QQ198605888\沙城成员领取记录.txt <$USERNAME> 领取 N$领取沙城奖励数量
 
 #IF
-large <$str(N$领取沙城奖励数量)> 0
+; large <$str(N$领取沙城奖励数量)> 0
+CHECKTEXTLIST ..\QuestDiary\技术QQ198605888\沙城成员领取记录.txt <$USERNAME>:<$STR(N$总金额)>
 #act
-messagebox 你已经领取过奖励了
+messagebox 你已经领取过奖励了！
 BREAK
 
 #if
