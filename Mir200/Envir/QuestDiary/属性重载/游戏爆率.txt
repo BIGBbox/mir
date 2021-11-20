@@ -1081,6 +1081,207 @@ CHECKITEMW 陆雪琪的清冷
 #ACT
 INC N$暴率加成 30
 
+#IF
+CHECKITEMW 三味真火
+CHECKITEMW 百变妖姬
+#ACT
+INC N$暴率加成 5
+
+#IF
+CHECKITEMW 心机深沉
+CHECKITEMW 痛不欲生
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 心机深沉
+CHECKITEMW 伤心欲绝
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 心机深沉
+CHECKITEMW 神秘莫测
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 痛不欲生
+CHECKITEMW 伤心欲绝
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 痛不欲生
+CHECKITEMW 神秘莫测
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 伤心欲绝
+CHECKITEMW 神秘莫测
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 心机深沉
+CHECKITEMW 痛不欲生
+CHECKITEMW 伤心欲绝
+#ACT
+INC N$暴率加成 40
+
+#IF
+CHECKITEMW 心机深沉
+CHECKITEMW 痛不欲生
+CHECKITEMW 神秘莫测
+#ACT
+INC N$暴率加成 40
+
+#IF
+CHECKITEMW 伤心欲绝
+CHECKITEMW 痛不欲生
+CHECKITEMW 神秘莫测
+#ACT
+INC N$暴率加成 40
+
+#IF
+CHECKITEMW 伤心欲绝
+CHECKITEMW 痛不欲生
+CHECKITEMW 神秘莫测
+CHECKITEMW 心机深沉
+#ACT
+INC N$暴率加成 60
+
+#IF
+CHECKITEMW 盘古的虚饰
+CHECKITEMW 女娲的易怒
+CHECKITEMW 道德的忧郁
+CHECKITEMW 鸿钧的傲慢
+#ACT
+INC N$暴率加成 60
+
+#IF
+CHECKITEMW 元始的贪婪
+CHECKITEMW 大禹的暴食
+CHECKITEMW 后羿的色欲
+CHECKITEMW 灵宝的怠惰
+#ACT
+INC N$暴率加成 60
+
+#IF
+CHECKITEMW 元始的贪婪
+CHECKITEMW 大禹的暴食
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 元始的贪婪
+CHECKITEMW 后羿的色欲
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 元始的贪婪
+CHECKITEMW 灵宝的怠惰
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 元始的贪婪
+CHECKITEMW 大禹的暴食
+CHECKITEMW 后羿的色欲
+#ACT
+INC N$暴率加成 40
+
+#IF
+CHECKITEMW 元始的贪婪
+CHECKITEMW 后羿的色欲
+CHECKITEMW 灵宝的怠惰
+#ACT
+INC N$暴率加成 40
+
+#IF
+CHECKITEMW 大禹的暴食
+CHECKITEMW 后羿的色欲
+CHECKITEMW 灵宝的怠惰
+#ACT
+INC N$暴率加成 40
+
+#IF
+CHECKITEMW 大禹的暴食
+CHECKITEMW 后羿的色欲
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 大禹的暴食
+CHECKITEMW 灵宝的怠惰
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 后羿的色欲
+CHECKITEMW 灵宝的怠惰
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 盘古的虚饰
+CHECKITEMW 女娲的易怒
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 盘古的虚饰
+CHECKITEMW 道德的忧郁
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 盘古的虚饰
+CHECKITEMW 鸿钧的傲慢
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 女娲的易怒
+CHECKITEMW 道德的忧郁
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 女娲的易怒
+CHECKITEMW 鸿钧的傲慢
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 道德的忧郁
+CHECKITEMW 鸿钧的傲慢
+#ACT
+INC N$暴率加成 20
+
+#IF
+CHECKITEMW 盘古的虚饰
+CHECKITEMW 女娲的易怒
+CHECKITEMW 道德的忧郁
+#ACT
+INC N$暴率加成 40
+
+#IF
+CHECKITEMW 盘古的虚饰
+CHECKITEMW 道德的忧郁
+CHECKITEMW 鸿钧的傲慢
+#ACT
+INC N$暴率加成 40
+
+#IF
+CHECKITEMW 女娲的易怒
+CHECKITEMW 道德的忧郁
+CHECKITEMW 鸿钧的傲慢
+#ACT
+INC N$暴率加成 40
+
 
 #IF
 CHECK [300] 1

@@ -84,10 +84,12 @@ SendCenterMsg 249 0 ┗----------------------------------------------------------
 [@每日重置]
 #if
 #act
+goto @清除沙捐榜
 inc G300 1
 GMEXECUTE StartQuest @QM零点重置
 ; goto @判断开区时间差
 
+[@清除沙捐榜]
 #if
 small <$str(G300)> 2
 #act

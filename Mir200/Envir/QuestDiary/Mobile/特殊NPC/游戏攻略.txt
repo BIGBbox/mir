@@ -58,7 +58,7 @@ inc S$攻略说明 <Img|id=7_1|x=-30|y=0|img=public/btn_6.png>
 inc S$攻略说明 <RText|id=7_2|x=-30|y=30|size=18|text=<开服第一时间进入游戏，完成主线任务获取新手装备，完/FCOLOR=135>>
 inc S$攻略说明 <RText|id=7_3|x=-30|y=60|size=18|text=<成主线任务后可领取微信礼包和QQ礼包，领取礼包自动/FCOLOR=131>>
 inc S$攻略说明 <RText|id=7_4|x=-30|y=90|size=18|text=<学习召唤守卫，可召唤一只强力宝宝配合打怪。此时建议/FCOLOR=135>>
-inc S$攻略说明 <RText|id=7_5|x=-30|y=120|size=18|text=<完成首充，领取50级武器衣服和完整时装，快人一步！/FCOLOR=131>>
+inc S$攻略说明 <RText|id=7_5|x=-30|y=120|size=18|text=<首充，领取50级武器和首充神器（可升阶），快人一步!/FCOLOR=131>>
 inc S$攻略说明 <RText|id=8|children=8_1,8_2,8_3,8_4,8_5,8_6|x=210.0|y=240.0|size=20|text=<少走弯路>>
 inc S$攻略说明 <Img|id=8_1|x=-30|y=0|img=public/btn_6.png>
 inc S$攻略说明 <RText|id=8_2|x=-30|y=30|size=18|text=<本服九大异世界，击杀各大陆挑战BOSS开启下一大陆。/FCOLOR=135>>
@@ -112,7 +112,7 @@ inc S$攻略说明 <RText|id=7_4|x=-30|y=90|size=18|text=<③如果你大米充足，可在拍卖
 inc S$攻略说明 <RText|id=8|children=8_1,8_2,8_3,8_4,8_5,8_6|x=210.0|y=240.0|size=20|text=<我要天下币>>
 inc S$攻略说明 <Img|id=8_1|x=-30|y=0|img=public/btn_6.png>
 inc S$攻略说明 <RText|id=8_2|x=-30|y=30|size=18|text=<①充值RMB点赠送天下币。/FCOLOR=135>>
-inc S$攻略说明 <RText|id=8_3|x=-30|y=60|size=18|text=<②天下币可在主城货币互换处由RMB点换取。/FCOLOR=131>>
+inc S$攻略说明 <RText|id=8_3|x=-30|y=60|size=18|text=<②天下币可在主城146:96货币互换处由RMB点换取。/FCOLOR=131>>
 inc S$攻略说明 <RText|id=8_4|x=-30|y=90|size=18|text=<③天下币可由挑战BOSS，神魔BOSS，触发BOSS掉落。/FCOLOR=135>>
 inc S$攻略说明 <RText|id=15|x=220.0|y=465.0|size=16|text=<沉默天下正版授权：承诺一切装备材料都可以打怪爆出！/FCOLOR=250>>
 GOTO @main_gl

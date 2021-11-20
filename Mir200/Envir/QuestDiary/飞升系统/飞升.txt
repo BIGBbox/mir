@@ -10,7 +10,7 @@ MessageBox 1.角色等级需要达到200级！！！\\2.需要转生等级需要达到20转!!!
 BREAK
 
 #IF
-not CHECKRENEWLEVEL < 20
+not CHECKLEVELEX < 220
 #ACT
 close
 MessageBox 你飞升等级已达最大值！！！

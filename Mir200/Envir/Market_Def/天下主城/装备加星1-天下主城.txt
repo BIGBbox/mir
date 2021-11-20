@@ -183,8 +183,8 @@ equal S$装备部位A 1
 mov S$位置变量 26
 mov S$强化等级 <$str(u26)>
 mov S$强化材料 神器碎片
-mov S$材料数量 100
-mov S$元宝数量 7500000
+mov S$材料数量 50
+mov S$元宝数量 200000
 
 #if
 equal <$str(u27)> 0
@@ -193,8 +193,8 @@ equal S$装备部位A 0
 mov S$位置变量 27
 mov S$强化等级 <$str(u27)>
 mov S$强化材料 神器碎片
-mov S$材料数量 100
-mov S$元宝数量 7500000
+mov S$材料数量 50
+mov S$元宝数量 200000
 
 #if
 equal <$str(u28)> 0
@@ -203,8 +203,8 @@ equal S$装备部位A 4
 mov S$位置变量 28
 mov S$强化等级 <$str(u28)>
 mov S$强化材料 神器碎片
-mov S$材料数量 100
-mov S$元宝数量 7500000
+mov S$材料数量 50
+mov S$元宝数量 200000
 
 #if
 equal <$str(u29)> 0
@@ -213,8 +213,8 @@ equal S$装备部位A 3
 mov S$位置变量 29
 mov S$强化等级 <$str(u29)>
 mov S$强化材料 神器碎片
-mov S$材料数量 100
-mov S$元宝数量 7500000
+mov S$材料数量 50
+mov S$元宝数量 200000
 
 #if
 equal <$str(u30)> 0
@@ -223,8 +223,8 @@ equal S$装备部位A 5
 mov S$位置变量 30
 mov S$强化等级 <$str(u30)>
 mov S$强化材料 神器碎片
-mov S$材料数量 100
-mov S$元宝数量 7500000
+mov S$材料数量 50
+mov S$元宝数量 200000
 #if
 equal <$str(u31)> 0
 equal S$装备部位A 6
@@ -232,8 +232,8 @@ equal S$装备部位A 6
 mov S$位置变量 31
 mov S$强化等级 <$str(u31)>
 mov S$强化材料 神器碎片
-mov S$材料数量 100
-mov S$元宝数量 7500000
+mov S$材料数量 50
+mov S$元宝数量 200000
 
 #if
 equal <$str(u32)> 0
@@ -242,8 +242,8 @@ equal S$装备部位A 7
 mov S$位置变量 32
 mov S$强化等级 <$str(u32)>
 mov S$强化材料 神器碎片
-mov S$材料数量 100
-mov S$元宝数量 7500000
+mov S$材料数量 50
+mov S$元宝数量 200000
 
 #if
 equal <$str(u33)> 0
@@ -252,8 +252,8 @@ equal S$装备部位A 8
 mov S$位置变量 33
 mov S$强化等级 <$str(u33)>
 mov S$强化材料 神器碎片
-mov S$材料数量 100
-mov S$元宝数量 7500000
+mov S$材料数量 50
+mov S$元宝数量 200000
 
 #if
 equal <$str(u34)> 0
@@ -262,8 +262,8 @@ equal S$装备部位A 10
 mov S$位置变量 34
 mov S$强化等级 <$str(u34)>
 mov S$强化材料 神器碎片
-mov S$材料数量 100
-mov S$元宝数量 7500000
+mov S$材料数量 50
+mov S$元宝数量 200000
 
 #if
 equal <$str(u35)> 0
@@ -272,8 +272,8 @@ equal S$装备部位A 11
 mov S$位置变量 35
 mov S$强化等级 <$str(u35)>
 mov S$强化材料 神器碎片
-mov S$材料数量 100
-mov S$元宝数量 7500000
+mov S$材料数量 50
+mov S$元宝数量 200000
 
 ;==============================================
 
@@ -284,8 +284,8 @@ equal S$装备部位A 1
 mov S$位置变量 26
 mov S$强化等级 <$str(u26)>
 mov S$强化材料 神器碎片
-mov S$材料数量 200
-mov S$元宝数量 15000000
+mov S$材料数量 100
+mov S$元宝数量 400000
 
 #if
 equal <$str(u27)> 1
@@ -294,8 +294,8 @@ equal S$装备部位A 0
 mov S$位置变量 27
 mov S$强化等级 <$str(u27)>
 mov S$强化材料 神器碎片
-mov S$材料数量 200
-mov S$元宝数量 15000000
+mov S$材料数量 100
+mov S$元宝数量 400000
 
 #if
 equal <$str(u28)> 1
@@ -304,8 +304,8 @@ equal S$装备部位A 4
 mov S$位置变量 28
 mov S$强化等级 <$str(u28)>
 mov S$强化材料 神器碎片
-mov S$材料数量 200
-mov S$元宝数量 15000000
+mov S$材料数量 100
+mov S$元宝数量 400000
 
 #if
 equal <$str(u29)> 1
@@ -314,8 +314,8 @@ equal S$装备部位A 3
 mov S$位置变量 29
 mov S$强化等级 <$str(u29)>
 mov S$强化材料 神器碎片
-mov S$材料数量 200
-mov S$元宝数量 15000000
+mov S$材料数量 100
+mov S$元宝数量 400000
 
 #if
 equal <$str(u30)> 1
@@ -324,8 +324,8 @@ equal S$装备部位A 5
 mov S$位置变量 30
 mov S$强化等级 <$str(u30)>
 mov S$强化材料 神器碎片
-mov S$材料数量 200
-mov S$元宝数量 15000000
+mov S$材料数量 100
+mov S$元宝数量 400000
 
 #if
 equal <$str(u31)> 1
@@ -334,8 +334,8 @@ equal S$装备部位A 6
 mov S$位置变量 31
 mov S$强化等级 <$str(u31)>
 mov S$强化材料 神器碎片
-mov S$材料数量 200
-mov S$元宝数量 15000000
+mov S$材料数量 100
+mov S$元宝数量 400000
 
 #if
 equal <$str(u32)> 1
@@ -344,8 +344,8 @@ equal S$装备部位A 7
 mov S$位置变量 32
 mov S$强化等级 <$str(u32)>
 mov S$强化材料 神器碎片
-mov S$材料数量 200
-mov S$元宝数量 15000000
+mov S$材料数量 100
+mov S$元宝数量 400000
 
 #if
 equal <$str(u33)> 1
@@ -354,8 +354,8 @@ equal S$装备部位A 8
 mov S$位置变量 33
 mov S$强化等级 <$str(u33)>
 mov S$强化材料 神器碎片
-mov S$材料数量 200
-mov S$元宝数量 15000000
+mov S$材料数量 100
+mov S$元宝数量 400000
 
 #if
 equal <$str(u34)> 1
@@ -364,8 +364,8 @@ equal S$装备部位A 10
 mov S$位置变量 34
 mov S$强化等级 <$str(u34)>
 mov S$强化材料 神器碎片
-mov S$材料数量 200
-mov S$元宝数量 15000000
+mov S$材料数量 100
+mov S$元宝数量 400000
 
 #if
 equal <$str(u35)> 1
@@ -374,8 +374,8 @@ equal S$装备部位A 11
 mov S$位置变量 35
 mov S$强化等级 <$str(u35)>
 mov S$强化材料 神器碎片
-mov S$材料数量 200
-mov S$元宝数量 15000000
+mov S$材料数量 100
+mov S$元宝数量 400000
 
 
 ;==============================================
@@ -387,8 +387,8 @@ equal S$装备部位A 1
 mov S$位置变量 26
 mov S$强化等级 <$str(u26)>
 mov S$强化材料 神器碎片
-mov S$材料数量 300
-mov S$元宝数量 22500000
+mov S$材料数量 150
+mov S$元宝数量 600000
 
 #if
 equal <$str(u27)> 2
@@ -397,8 +397,8 @@ equal S$装备部位A 0
 mov S$位置变量 27
 mov S$强化等级 <$str(u27)>
 mov S$强化材料 神器碎片
-mov S$材料数量 300
-mov S$元宝数量 22500000
+mov S$材料数量 150
+mov S$元宝数量 600000
 
 #if
 equal <$str(u28)> 2
@@ -407,8 +407,8 @@ equal S$装备部位A 4
 mov S$位置变量 28
 mov S$强化等级 <$str(u28)>
 mov S$强化材料 神器碎片
-mov S$材料数量 300
-mov S$元宝数量 22500000
+mov S$材料数量 150
+mov S$元宝数量 600000
 
 
 #if
@@ -418,8 +418,8 @@ equal S$装备部位A 3
 mov S$位置变量 29
 mov S$强化等级 <$str(u29)>
 mov S$强化材料 神器碎片
-mov S$材料数量 300
-mov S$元宝数量 22500000
+mov S$材料数量 150
+mov S$元宝数量 600000
 
 
 #if
@@ -429,8 +429,8 @@ equal S$装备部位A 5
 mov S$位置变量 30
 mov S$强化等级 <$str(u30)>
 mov S$强化材料 神器碎片
-mov S$材料数量 300
-mov S$元宝数量 22500000
+mov S$材料数量 150
+mov S$元宝数量 600000
 
 
 #if
@@ -440,8 +440,8 @@ equal S$装备部位A 6
 mov S$位置变量 31
 mov S$强化等级 <$str(u31)>
 mov S$强化材料 神器碎片
-mov S$材料数量 300
-mov S$元宝数量 22500000
+mov S$材料数量 150
+mov S$元宝数量 600000
 
 
 #if
@@ -451,8 +451,8 @@ equal S$装备部位A 7
 mov S$位置变量 32
 mov S$强化等级 <$str(u32)>
 mov S$强化材料 神器碎片
-mov S$材料数量 300
-mov S$元宝数量 22500000
+mov S$材料数量 150
+mov S$元宝数量 600000
 
 
 #if
@@ -462,8 +462,8 @@ equal S$装备部位A 8
 mov S$位置变量 33
 mov S$强化等级 <$str(u33)>
 mov S$强化材料 神器碎片
-mov S$材料数量 300
-mov S$元宝数量 22500000
+mov S$材料数量 150
+mov S$元宝数量 600000
 
 
 #if
@@ -473,8 +473,8 @@ equal S$装备部位A 10
 mov S$位置变量 34
 mov S$强化等级 <$str(u34)>
 mov S$强化材料 神器碎片
-mov S$材料数量 300
-mov S$元宝数量 22500000
+mov S$材料数量 150
+mov S$元宝数量 600000
 
 
 #if
@@ -484,8 +484,8 @@ equal S$装备部位A 11
 mov S$位置变量 35
 mov S$强化等级 <$str(u35)>
 mov S$强化材料 神器碎片
-mov S$材料数量 300
-mov S$元宝数量 22500000
+mov S$材料数量 150
+mov S$元宝数量 600000
 
 
 
@@ -498,8 +498,8 @@ equal S$装备部位A 1
 mov S$位置变量 26
 mov S$强化等级 <$str(u26)>
 mov S$强化材料 神器碎片
-mov S$材料数量 400
-mov S$元宝数量 30000000
+mov S$材料数量 200
+mov S$元宝数量 800000
 
 
 #if
@@ -509,8 +509,8 @@ equal S$装备部位A 0
 mov S$位置变量 27
 mov S$强化等级 <$str(u27)>
 mov S$强化材料 神器碎片
-mov S$材料数量 400
-mov S$元宝数量 30000000
+mov S$材料数量 200
+mov S$元宝数量 800000
 
 
 #if
@@ -520,8 +520,8 @@ equal S$装备部位A 4
 mov S$位置变量 28
 mov S$强化等级 <$str(u28)>
 mov S$强化材料 神器碎片
-mov S$材料数量 400
-mov S$元宝数量 30000000
+mov S$材料数量 200
+mov S$元宝数量 800000
 
 
 #if
@@ -531,8 +531,8 @@ equal S$装备部位A 3
 mov S$位置变量 29
 mov S$强化等级 <$str(u29)>
 mov S$强化材料 神器碎片
-mov S$材料数量 400
-mov S$元宝数量 30000000
+mov S$材料数量 200
+mov S$元宝数量 800000
 
 
 #if
@@ -542,8 +542,8 @@ equal S$装备部位A 5
 mov S$位置变量 30
 mov S$强化等级 <$str(u30)>
 mov S$强化材料 神器碎片
-mov S$材料数量 400
-mov S$元宝数量 30000000
+mov S$材料数量 200
+mov S$元宝数量 800000
 
 #if
 equal <$str(u31)> 3
@@ -552,8 +552,8 @@ equal S$装备部位A 6
 mov S$位置变量 31
 mov S$强化等级 <$str(u31)>
 mov S$强化材料 神器碎片
-mov S$材料数量 400
-mov S$元宝数量 30000000
+mov S$材料数量 200
+mov S$元宝数量 800000
 
 #if
 equal <$str(u32)> 3
@@ -562,8 +562,8 @@ equal S$装备部位A 7
 mov S$位置变量 32
 mov S$强化等级 <$str(u32)>
 mov S$强化材料 神器碎片
-mov S$材料数量 400
-mov S$元宝数量 30000000
+mov S$材料数量 200
+mov S$元宝数量 800000
 
 #if
 equal <$str(u33)> 3
@@ -572,8 +572,8 @@ equal S$装备部位A 8
 mov S$位置变量 33
 mov S$强化等级 <$str(u33)>
 mov S$强化材料 神器碎片
-mov S$材料数量 400
-mov S$元宝数量 30000000
+mov S$材料数量 200
+mov S$元宝数量 800000
 
 #if
 equal <$str(u34)> 3
@@ -582,8 +582,8 @@ equal S$装备部位A 10
 mov S$位置变量 34
 mov S$强化等级 <$str(u34)>
 mov S$强化材料 神器碎片
-mov S$材料数量 400
-mov S$元宝数量 30000000
+mov S$材料数量 200
+mov S$元宝数量 800000
 
 #if
 equal <$str(u35)> 3
@@ -592,8 +592,8 @@ equal S$装备部位A 11
 mov S$位置变量 35
 mov S$强化等级 <$str(u35)>
 mov S$强化材料 神器碎片
-mov S$材料数量 400
-mov S$元宝数量 30000000
+mov S$材料数量 200
+mov S$元宝数量 800000
 
 
 ;==============================================
@@ -605,8 +605,8 @@ equal S$装备部位A 1
 mov S$位置变量 26
 mov S$强化等级 <$str(u26)>
 mov S$强化材料 神器碎片
-mov S$材料数量 500
-mov S$元宝数量 37500000
+mov S$材料数量 250
+mov S$元宝数量 1000000
 
 #if
 equal <$str(u27)> 4
@@ -615,8 +615,8 @@ equal S$装备部位A 0
 mov S$位置变量 27
 mov S$强化等级 <$str(u27)>
 mov S$强化材料 神器碎片
-mov S$材料数量 500
-mov S$元宝数量 37500000
+mov S$材料数量 250
+mov S$元宝数量 1000000
 
 #if
 equal <$str(u28)> 4
@@ -625,8 +625,8 @@ equal S$装备部位A 4
 mov S$位置变量 28
 mov S$强化等级 <$str(u28)>
 mov S$强化材料 神器碎片
-mov S$材料数量 500
-mov S$元宝数量 37500000
+mov S$材料数量 250
+mov S$元宝数量 1000000
 
 #if
 equal <$str(u29)> 4
@@ -635,8 +635,8 @@ equal S$装备部位A 3
 mov S$位置变量 29
 mov S$强化等级 <$str(u29)>
 mov S$强化材料 神器碎片
-mov S$材料数量 500
-mov S$元宝数量 37500000
+mov S$材料数量 250
+mov S$元宝数量 1000000
 
 #if
 equal <$str(u30)> 4
@@ -645,8 +645,8 @@ equal S$装备部位A 5
 mov S$位置变量 30
 mov S$强化等级 <$str(u30)>
 mov S$强化材料 神器碎片
-mov S$材料数量 500
-mov S$元宝数量 37500000
+mov S$材料数量 250
+mov S$元宝数量 1000000
 
 #if
 equal <$str(u31)> 4
@@ -655,8 +655,8 @@ equal S$装备部位A 6
 mov S$位置变量 31
 mov S$强化等级 <$str(u31)>
 mov S$强化材料 神器碎片
-mov S$材料数量 500
-mov S$元宝数量 37500000
+mov S$材料数量 250
+mov S$元宝数量 1000000
 
 #if
 equal <$str(u32)> 4
@@ -665,8 +665,8 @@ equal S$装备部位A 7
 mov S$位置变量 32
 mov S$强化等级 <$str(u32)>
 mov S$强化材料 神器碎片
-mov S$材料数量 500
-mov S$元宝数量 37500000
+mov S$材料数量 250
+mov S$元宝数量 1000000
 
 #if
 equal <$str(u33)> 4
@@ -675,8 +675,8 @@ equal S$装备部位A 8
 mov S$位置变量 33
 mov S$强化等级 <$str(u33)>
 mov S$强化材料 神器碎片
-mov S$材料数量 500
-mov S$元宝数量 37500000
+mov S$材料数量 250
+mov S$元宝数量 1000000
 
 #if
 equal <$str(u34)> 4
@@ -685,8 +685,8 @@ equal S$装备部位A 10
 mov S$位置变量 34
 mov S$强化等级 <$str(u34)>
 mov S$强化材料 神器碎片
-mov S$材料数量 500
-mov S$元宝数量 37500000
+mov S$材料数量 250
+mov S$元宝数量 1000000
 
 #if
 equal <$str(u35)> 4
@@ -695,8 +695,8 @@ equal S$装备部位A 11
 mov S$位置变量 35
 mov S$强化等级 <$str(u35)>
 mov S$强化材料 神器碎片
-mov S$材料数量 500
-mov S$元宝数量 37500000
+mov S$材料数量 250
+mov S$元宝数量 1000000
 
 
 ;==============================================
@@ -708,8 +708,8 @@ equal S$装备部位A 1
 mov S$位置变量 26
 mov S$强化等级 <$str(u26)>
 mov S$强化材料 神器碎片
-mov S$材料数量 700
-mov S$元宝数量 52500000
+mov S$材料数量 350
+mov S$元宝数量 1300000
 
 #if
 equal <$str(u27)> 5
@@ -718,8 +718,8 @@ equal S$装备部位A 0
 mov S$位置变量 27
 mov S$强化等级 <$str(u27)>
 mov S$强化材料 神器碎片
-mov S$材料数量 700
-mov S$元宝数量 52500000
+mov S$材料数量 350
+mov S$元宝数量 1300000
 
 #if
 equal <$str(u28)> 5
@@ -728,8 +728,8 @@ equal S$装备部位A 4
 mov S$位置变量 28
 mov S$强化等级 <$str(u28)>
 mov S$强化材料 神器碎片
-mov S$材料数量 700
-mov S$元宝数量 52500000
+mov S$材料数量 350
+mov S$元宝数量 1300000
 
 #if
 equal <$str(u29)> 5
@@ -738,8 +738,8 @@ equal S$装备部位A 3
 mov S$位置变量 29
 mov S$强化等级 <$str(u29)>
 mov S$强化材料 神器碎片
-mov S$材料数量 700
-mov S$元宝数量 52500000
+mov S$材料数量 350
+mov S$元宝数量 1300000
 #if
 equal <$str(u30)> 5
 equal S$装备部位A 5
@@ -747,8 +747,8 @@ equal S$装备部位A 5
 mov S$位置变量 30
 mov S$强化等级 <$str(u30)>
 mov S$强化材料 神器碎片
-mov S$材料数量 700
-mov S$元宝数量 52500000
+mov S$材料数量 350
+mov S$元宝数量 1300000
 
 #if
 equal <$str(u31)> 5
@@ -757,8 +757,8 @@ equal S$装备部位A 6
 mov S$位置变量 31
 mov S$强化等级 <$str(u31)>
 mov S$强化材料 神器碎片
-mov S$材料数量 700
-mov S$元宝数量 52500000
+mov S$材料数量 350
+mov S$元宝数量 1300000
 
 #if
 equal <$str(u32)> 5
@@ -767,8 +767,8 @@ equal S$装备部位A 7
 mov S$位置变量 32
 mov S$强化等级 <$str(u32)>
 mov S$强化材料 神器碎片
-mov S$材料数量 700
-mov S$元宝数量 52500000
+mov S$材料数量 350
+mov S$元宝数量 1300000
 
 #if
 equal <$str(u33)> 5
@@ -777,8 +777,8 @@ equal S$装备部位A 8
 mov S$位置变量 33
 mov S$强化等级 <$str(u33)>
 mov S$强化材料 神器碎片
-mov S$材料数量 700
-mov S$元宝数量 52500000
+mov S$材料数量 350
+mov S$元宝数量 1300000
 
 #if
 equal <$str(u34)> 5
@@ -787,8 +787,8 @@ equal S$装备部位A 10
 mov S$位置变量 34
 mov S$强化等级 <$str(u34)>
 mov S$强化材料 神器碎片
-mov S$材料数量 700
-mov S$元宝数量 52500000
+mov S$材料数量 350
+mov S$元宝数量 1300000
 
 #if
 equal <$str(u35)> 5
@@ -797,8 +797,8 @@ equal S$装备部位A 11
 mov S$位置变量 35
 mov S$强化等级 <$str(u35)>
 mov S$强化材料 神器碎片
-mov S$材料数量 700
-mov S$元宝数量 52500000
+mov S$材料数量 350
+mov S$元宝数量 1300000
 
 
 ;==============================================
@@ -810,8 +810,8 @@ equal S$装备部位A 1
 mov S$位置变量 26
 mov S$强化等级 <$str(u26)>
 mov S$强化材料 神器碎片
-mov S$材料数量 900
-mov S$元宝数量 67500000
+mov S$材料数量 450
+mov S$元宝数量 1800000
 
 #if
 equal <$str(u27)> 6
@@ -820,8 +820,8 @@ equal S$装备部位A 0
 mov S$位置变量 27
 mov S$强化等级 <$str(u27)>
 mov S$强化材料 神器碎片
-mov S$材料数量 900
-mov S$元宝数量 67500000
+mov S$材料数量 450
+mov S$元宝数量 1800000
 
 #if
 equal <$str(u28)> 6
@@ -830,8 +830,8 @@ equal S$装备部位A 4
 mov S$位置变量 28
 mov S$强化等级 <$str(u28)>
 mov S$强化材料 神器碎片
-mov S$材料数量 900
-mov S$元宝数量 67500000
+mov S$材料数量 450
+mov S$元宝数量 1800000
 
 #if
 equal <$str(u29)> 6
@@ -840,8 +840,8 @@ equal S$装备部位A 3
 mov S$位置变量 29
 mov S$强化等级 <$str(u29)>
 mov S$强化材料 神器碎片
-mov S$材料数量 900
-mov S$元宝数量 67500000
+mov S$材料数量 450
+mov S$元宝数量 1800000
 
 #if
 equal <$str(u30)> 6
@@ -850,8 +850,8 @@ equal S$装备部位A 5
 mov S$位置变量 30
 mov S$强化等级 <$str(u30)>
 mov S$强化材料 神器碎片
-mov S$材料数量 900
-mov S$元宝数量 67500000
+mov S$材料数量 450
+mov S$元宝数量 1800000
 
 #if
 equal <$str(u31)> 6
@@ -860,8 +860,8 @@ equal S$装备部位A 6
 mov S$位置变量 31
 mov S$强化等级 <$str(u31)>
 mov S$强化材料 神器碎片
-mov S$材料数量 900
-mov S$元宝数量 67500000
+mov S$材料数量 450
+mov S$元宝数量 1800000
 
 #if
 equal <$str(u32)> 6
@@ -870,8 +870,8 @@ equal S$装备部位A 7
 mov S$位置变量 32
 mov S$强化等级 <$str(u32)>
 mov S$强化材料 神器碎片
-mov S$材料数量 900
-mov S$元宝数量 67500000
+mov S$材料数量 450
+mov S$元宝数量 1800000
 
 #if
 equal <$str(u33)> 6
@@ -880,8 +880,8 @@ equal S$装备部位A 8
 mov S$位置变量 33
 mov S$强化等级 <$str(u33)>
 mov S$强化材料 神器碎片
-mov S$材料数量 900
-mov S$元宝数量 67500000
+mov S$材料数量 450
+mov S$元宝数量 1800000
 
 #if
 equal <$str(u34)> 6
@@ -890,8 +890,8 @@ equal S$装备部位A 10
 mov S$位置变量 34
 mov S$强化等级 <$str(u34)>
 mov S$强化材料 神器碎片
-mov S$材料数量 900
-mov S$元宝数量 67500000
+mov S$材料数量 450
+mov S$元宝数量 1800000
 
 #if
 equal <$str(u35)> 6
@@ -900,8 +900,8 @@ equal S$装备部位A 11
 mov S$位置变量 35
 mov S$强化等级 <$str(u35)>
 mov S$强化材料 神器碎片
-mov S$材料数量 900
-mov S$元宝数量 67500000
+mov S$材料数量 450
+mov S$元宝数量 1800000
 
 
 ;==============================================
@@ -913,8 +913,8 @@ equal S$装备部位A 1
 mov S$位置变量 26
 mov S$强化等级 <$str(u26)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1200
-mov S$元宝数量 90000000
+mov S$材料数量 600
+mov S$元宝数量 2500000
 
 #if
 equal <$str(u27)> 7
@@ -923,8 +923,8 @@ equal S$装备部位A 0
 mov S$位置变量 27
 mov S$强化等级 <$str(u27)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1200
-mov S$元宝数量 90000000
+mov S$材料数量 600
+mov S$元宝数量 2500000
 
 #if
 equal <$str(u28)> 7
@@ -933,8 +933,8 @@ equal S$装备部位A 4
 mov S$位置变量 28
 mov S$强化等级 <$str(u28)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1200
-mov S$元宝数量 90000000
+mov S$材料数量 600
+mov S$元宝数量 2500000
 
 #if
 equal <$str(u29)> 7
@@ -943,8 +943,8 @@ equal S$装备部位A 3
 mov S$位置变量 29
 mov S$强化等级 <$str(u29)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1200
-mov S$元宝数量 90000000
+mov S$材料数量 600
+mov S$元宝数量 2500000
 
 #if
 equal <$str(u30)> 7
@@ -953,8 +953,8 @@ equal S$装备部位A 5
 mov S$位置变量 30
 mov S$强化等级 <$str(u30)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1200
-mov S$元宝数量 90000000
+mov S$材料数量 600
+mov S$元宝数量 2500000
 
 #if
 equal <$str(u31)> 7
@@ -963,8 +963,8 @@ equal S$装备部位A 6
 mov S$位置变量 31
 mov S$强化等级 <$str(u31)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1200
-mov S$元宝数量 90000000
+mov S$材料数量 600
+mov S$元宝数量 2500000
 
 #if
 equal <$str(u32)> 7
@@ -973,8 +973,8 @@ equal S$装备部位A 7
 mov S$位置变量 32
 mov S$强化等级 <$str(u32)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1200
-mov S$元宝数量 90000000
+mov S$材料数量 600
+mov S$元宝数量 2500000
 
 #if
 equal <$str(u33)> 7
@@ -983,8 +983,8 @@ equal S$装备部位A 8
 mov S$位置变量 33
 mov S$强化等级 <$str(u33)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1200
-mov S$元宝数量 90000000
+mov S$材料数量 600
+mov S$元宝数量 2500000
 
 #if
 equal <$str(u34)> 7
@@ -993,8 +993,8 @@ equal S$装备部位A 10
 mov S$位置变量 34
 mov S$强化等级 <$str(u34)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1200
-mov S$元宝数量 90000000
+mov S$材料数量 600
+mov S$元宝数量 2500000
 
 #if
 equal <$str(u35)> 7
@@ -1003,8 +1003,8 @@ equal S$装备部位A 11
 mov S$位置变量 35
 mov S$强化等级 <$str(u35)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1200
-mov S$元宝数量 90000000
+mov S$材料数量 600
+mov S$元宝数量 2500000
 
 
 ;==============================================
@@ -1016,8 +1016,8 @@ equal S$装备部位A 1
 mov S$位置变量 26
 mov S$强化等级 <$str(u26)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1500
-mov S$元宝数量 112500000
+mov S$材料数量 750
+mov S$元宝数量 3000000
 
 #if
 equal <$str(u27)> 8
@@ -1026,8 +1026,8 @@ equal S$装备部位A 0
 mov S$位置变量 27
 mov S$强化等级 <$str(u27)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1500
-mov S$元宝数量 112500000
+mov S$材料数量 750
+mov S$元宝数量 3000000
 
 #if
 equal <$str(u28)> 8
@@ -1036,8 +1036,8 @@ equal S$装备部位A 4
 mov S$位置变量 28
 mov S$强化等级 <$str(u28)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1500
-mov S$元宝数量 112500000
+mov S$材料数量 750
+mov S$元宝数量 3000000
 
 #if
 equal <$str(u29)> 8
@@ -1046,8 +1046,8 @@ equal S$装备部位A 3
 mov S$位置变量 29
 mov S$强化等级 <$str(u29)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1500
-mov S$元宝数量 112500000
+mov S$材料数量 750
+mov S$元宝数量 3000000
 
 #if
 equal <$str(u30)> 8
@@ -1056,8 +1056,8 @@ equal S$装备部位A 5
 mov S$位置变量 30
 mov S$强化等级 <$str(u30)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1500
-mov S$元宝数量 112500000
+mov S$材料数量 750
+mov S$元宝数量 3000000
 
 #if
 equal <$str(u31)> 8
@@ -1066,8 +1066,8 @@ equal S$装备部位A 6
 mov S$位置变量 31
 mov S$强化等级 <$str(u31)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1500
-mov S$元宝数量 112500000
+mov S$材料数量 750
+mov S$元宝数量 3000000
 
 #if
 equal <$str(u32)> 8
@@ -1076,8 +1076,8 @@ equal S$装备部位A 7
 mov S$位置变量 32
 mov S$强化等级 <$str(u32)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1500
-mov S$元宝数量 112500000
+mov S$材料数量 750
+mov S$元宝数量 3000000
 
 #if
 equal <$str(u33)> 8
@@ -1086,8 +1086,8 @@ equal S$装备部位A 8
 mov S$位置变量 33
 mov S$强化等级 <$str(u33)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1500
-mov S$元宝数量 112500000
+mov S$材料数量 750
+mov S$元宝数量 3000000
 
 #if
 equal <$str(u34)> 8
@@ -1096,8 +1096,8 @@ equal S$装备部位A 10
 mov S$位置变量 34
 mov S$强化等级 <$str(u34)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1500
-mov S$元宝数量 112500000
+mov S$材料数量 750
+mov S$元宝数量 3000000
 
 #if
 equal <$str(u35)> 8
@@ -1106,8 +1106,8 @@ equal S$装备部位A 11
 mov S$位置变量 35
 mov S$强化等级 <$str(u35)>
 mov S$强化材料 神器碎片
-mov S$材料数量 1500
-mov S$元宝数量 112500000
+mov S$材料数量 750
+mov S$元宝数量 3000000
 
 
 ;==============================================
@@ -1119,8 +1119,8 @@ equal S$装备部位A 1
 mov S$位置变量 26
 mov S$强化等级 <$str(u26)>
 mov S$强化材料 神器碎片
-mov S$材料数量 2000
-mov S$元宝数量 150000000
+mov S$材料数量 1000
+mov S$元宝数量 4000000
 
 #if
 equal <$str(u27)> 9
@@ -1129,8 +1129,8 @@ equal S$装备部位A 0
 mov S$位置变量 27
 mov S$强化等级 <$str(u27)>
 mov S$强化材料 神器碎片
-mov S$材料数量 2000
-mov S$元宝数量 150000000
+mov S$材料数量 1000
+mov S$元宝数量 4000000
 
 #if
 equal <$str(u28)> 9
@@ -1139,8 +1139,8 @@ equal S$装备部位A 4
 mov S$位置变量 28
 mov S$强化等级 <$str(u28)>
 mov S$强化材料 神器碎片
-mov S$材料数量 2000
-mov S$元宝数量 150000000
+mov S$材料数量 1000
+mov S$元宝数量 4000000
 
 #if
 equal <$str(u29)> 9
@@ -1149,8 +1149,8 @@ equal S$装备部位A 3
 mov S$位置变量 29
 mov S$强化等级 <$str(u29)>
 mov S$强化材料 神器碎片
-mov S$材料数量 2000
-mov S$元宝数量 150000000
+mov S$材料数量 1000
+mov S$元宝数量 4000000
 
 #if
 equal <$str(u30)> 9
@@ -1159,8 +1159,8 @@ equal S$装备部位A 5
 mov S$位置变量 30
 mov S$强化等级 <$str(u30)>
 mov S$强化材料 神器碎片
-mov S$材料数量 2000
-mov S$元宝数量 150000000
+mov S$材料数量 1000
+mov S$元宝数量 4000000
 
 #if
 equal <$str(u31)> 9
@@ -1169,8 +1169,8 @@ equal S$装备部位A 6
 mov S$位置变量 31
 mov S$强化等级 <$str(u31)>
 mov S$强化材料 神器碎片
-mov S$材料数量 2000
-mov S$元宝数量 150000000
+mov S$材料数量 1000
+mov S$元宝数量 4000000
 
 #if
 equal <$str(u32)> 9
@@ -1179,8 +1179,8 @@ equal S$装备部位A 7
 mov S$位置变量 32
 mov S$强化等级 <$str(u32)>
 mov S$强化材料 神器碎片
-mov S$材料数量 2000
-mov S$元宝数量 150000000
+mov S$材料数量 1000
+mov S$元宝数量 4000000
 
 #if
 equal <$str(u33)> 9
@@ -1189,8 +1189,8 @@ equal S$装备部位A 8
 mov S$位置变量 33
 mov S$强化等级 <$str(u33)>
 mov S$强化材料 神器碎片
-mov S$材料数量 2000
-mov S$元宝数量 150000000
+mov S$材料数量 1000
+mov S$元宝数量 4000000
 
 #if
 equal <$str(u34)> 9
@@ -1199,8 +1199,8 @@ equal S$装备部位A 10
 mov S$位置变量 34
 mov S$强化等级 <$str(u34)>
 mov S$强化材料 神器碎片
-mov S$材料数量 2000
-mov S$元宝数量 150000000
+mov S$材料数量 1000
+mov S$元宝数量 4000000
 
 #if
 equal <$str(u35)> 9
@@ -1209,8 +1209,8 @@ equal S$装备部位A 11
 mov S$位置变量 35
 mov S$强化等级 <$str(u35)>
 mov S$强化材料 神器碎片
-mov S$材料数量 2000
-mov S$元宝数量 150000000
+mov S$材料数量 1000
+mov S$元宝数量 4000000
 
 
 ;==============================================
@@ -1222,8 +1222,8 @@ equal S$装备部位A 1
 mov S$位置变量 26
 mov S$强化等级 <$str(u26)>
 mov S$强化材料 神器碎片
-mov S$材料数量 3000
-mov S$元宝数量 225000000
+mov S$材料数量1500
+mov S$元宝数量 6000000
 
 #if
 equal <$str(u27)> 10
@@ -1232,8 +1232,8 @@ equal S$装备部位A 0
 mov S$位置变量 27
 mov S$强化等级 <$str(u27)>
 mov S$强化材料 神器碎片
-mov S$材料数量 3000
-mov S$元宝数量 225000000
+mov S$材料数量 1500
+mov S$元宝数量 6000000
 
 
 #if
@@ -1243,8 +1243,8 @@ equal S$装备部位A 4
 mov S$位置变量 28
 mov S$强化等级 <$str(u28)>
 mov S$强化材料 神器碎片
-mov S$材料数量 3000
-mov S$元宝数量 225000000
+mov S$材料数量 1500
+mov S$元宝数量 6000000
 
 
 #if
@@ -1254,8 +1254,8 @@ equal S$装备部位A 3
 mov S$位置变量 29
 mov S$强化等级 <$str(u29)>
 mov S$强化材料 神器碎片
-mov S$材料数量 3000
-mov S$元宝数量 225000000
+mov S$材料数量 1500
+mov S$元宝数量 6000000
 
 
 #if
@@ -1265,8 +1265,8 @@ equal S$装备部位A 5
 mov S$位置变量 30
 mov S$强化等级 <$str(u30)>
 mov S$强化材料 神器碎片
-mov S$材料数量 3000
-mov S$元宝数量 225000000
+mov S$材料数量 1500
+mov S$元宝数量 6000000
 
 
 #if
@@ -1276,8 +1276,8 @@ equal S$装备部位A 6
 mov S$位置变量 31
 mov S$强化等级 <$str(u31)>
 mov S$强化材料 神器碎片
-mov S$材料数量 3000
-mov S$元宝数量 225000000
+mov S$材料数量 1500
+mov S$元宝数量 6000000
 
 
 #if
@@ -1287,8 +1287,8 @@ equal S$装备部位A 7
 mov S$位置变量 32
 mov S$强化等级 <$str(u32)>
 mov S$强化材料 神器碎片
-mov S$材料数量 3000
-mov S$元宝数量 225000000
+mov S$材料数量 1500
+mov S$元宝数量 6000000
 
 
 #if
@@ -1298,8 +1298,8 @@ equal S$装备部位A 8
 mov S$位置变量 33
 mov S$强化等级 <$str(u33)>
 mov S$强化材料 神器碎片
-mov S$材料数量 3000
-mov S$元宝数量 225000000
+mov S$材料数量 1500
+mov S$元宝数量 6000000
 
 
 #if
@@ -1309,8 +1309,8 @@ equal S$装备部位A 10
 mov S$位置变量 34
 mov S$强化等级 <$str(u34)>
 mov S$强化材料 神器碎片
-mov S$材料数量 3000
-mov S$元宝数量 225000000
+mov S$材料数量 1500
+mov S$元宝数量 6000000
 
 
 #if
@@ -1320,8 +1320,8 @@ equal S$装备部位A 11
 mov S$位置变量 35
 mov S$强化等级 <$str(u35)>
 mov S$强化材料 神器碎片
-mov S$材料数量 3000
-mov S$元宝数量 225000000
+mov S$材料数量 1500
+mov S$元宝数量 6000000
 
 
 
@@ -1334,8 +1334,8 @@ equal S$装备部位A 1
 mov S$位置变量 26
 mov S$强化等级 <$str(u26)>
 mov S$强化材料 神器碎片
-mov S$材料数量 5000
-mov S$元宝数量 375000000
+mov S$材料数量 2500
+mov S$元宝数量 10000000
 
 
 #if
@@ -1345,8 +1345,8 @@ equal S$装备部位A 0
 mov S$位置变量 27
 mov S$强化等级 <$str(u27)>
 mov S$强化材料 神器碎片
-mov S$材料数量 5000
-mov S$元宝数量 375000000
+mov S$材料数量 2500
+mov S$元宝数量 10000000
 
 
 #if
@@ -1356,8 +1356,8 @@ equal S$装备部位A 4
 mov S$位置变量 28
 mov S$强化等级 <$str(u28)>
 mov S$强化材料 神器碎片
-mov S$材料数量 5000
-mov S$元宝数量 375000000
+mov S$材料数量 2500
+mov S$元宝数量 10000000
 
 
 #if
@@ -1367,8 +1367,8 @@ equal S$装备部位A 3
 mov S$位置变量 29
 mov S$强化等级 <$str(u29)>
 mov S$强化材料 神器碎片
-mov S$材料数量 5000
-mov S$元宝数量 375000000
+mov S$材料数量 2500
+mov S$元宝数量 10000000
 
 
 #if
@@ -1378,8 +1378,8 @@ equal S$装备部位A 5
 mov S$位置变量 30
 mov S$强化等级 <$str(u30)>
 mov S$强化材料 神器碎片
-mov S$材料数量 5000
-mov S$元宝数量 375000000
+mov S$材料数量 2500
+mov S$元宝数量 10000000
 
 
 #if
@@ -1389,8 +1389,8 @@ equal S$装备部位A 6
 mov S$位置变量 31
 mov S$强化等级 <$str(u31)>
 mov S$强化材料 神器碎片
-mov S$材料数量 5000
-mov S$元宝数量 375000000
+mov S$材料数量 2500
+mov S$元宝数量 10000000
 
 
 #if
@@ -1400,8 +1400,8 @@ equal S$装备部位A 7
 mov S$位置变量 32
 mov S$强化等级 <$str(u32)>
 mov S$强化材料 神器碎片
-mov S$材料数量 5000
-mov S$元宝数量 375000000
+mov S$材料数量 2500
+mov S$元宝数量 10000000
 
 
 #if
@@ -1411,8 +1411,8 @@ equal S$装备部位A 8
 mov S$位置变量 33
 mov S$强化等级 <$str(u33)>
 mov S$强化材料 神器碎片
-mov S$材料数量 5000
-mov S$元宝数量 375000000
+mov S$材料数量 2500
+mov S$元宝数量 10000000
 
 
 #if
@@ -1422,8 +1422,8 @@ equal S$装备部位A 10
 mov S$位置变量 34
 mov S$强化等级 <$str(u34)>
 mov S$强化材料 神器碎片
-mov S$材料数量 5000
-mov S$元宝数量 375000000
+mov S$材料数量 2500
+mov S$元宝数量 10000000
 
 
 #if
@@ -1433,8 +1433,8 @@ equal S$装备部位A 11
 mov S$位置变量 35
 mov S$强化等级 <$str(u35)>
 mov S$强化材料 神器碎片
-mov S$材料数量 5000
-mov S$元宝数量 375000000
+mov S$材料数量 2500
+mov S$元宝数量 10000000
 
 
 

@@ -146,72 +146,72 @@ CHANGEITEMADDVALUE 11 4 = <$str(N$¸½¼ÓÖµ)>
 CHANGEITEMUPGRADECOUNT 11 = <$str(u35)>
 
 
-; #if
-; #act
-; DEPRIVETITLE ÈýÐÇ
-; DEPRIVETITLE ÁùÐÇ
-; DEPRIVETITLE ¾ÅÐÇ
+#if
+#act
+DEPRIVETITLE ÈýÐÇ
+DEPRIVETITLE ÁùÐÇ
+DEPRIVETITLE ¾ÅÐÇ
 
-; #if
-; large u26 11
-; large u27 11
-; large u28 11
-; large u29 11
-; large u30 11
-; large u31 11
-; large u32 11
-; large u33 11
-; large u34 11
-; large u35 11
-; #act
-; ADDSKILL Ä§·¨¶Ü 3
-; CONFERTITLE Ê®¶þÐÇ
-; break
+#if
+large u26 11
+large u27 11
+large u28 11
+large u29 11
+large u30 11
+large u31 11
+large u32 11
+large u33 11
+large u34 11
+large u35 11
+#act
+ADDSKILL Ä§·¨¶Ü 3
+CONFERTITLE Ê®¶þÐÇ
+break
 
-; #if
-; large u26 8
-; large u27 8
-; large u28 8
-; large u29 8
-; large u30 8
-; large u31 8
-; large u32 8
-; large u33 8
-; large u34 8
-; large u35 8
-; #act
-; CONFERTITLE ¾ÅÐÇ
-; break
+#if
+large u26 8
+large u27 8
+large u28 8
+large u29 8
+large u30 8
+large u31 8
+large u32 8
+large u33 8
+large u34 8
+large u35 8
+#act
+CONFERTITLE ¾ÅÐÇ
+break
 
-; #if
-; large u26 5
-; large u27 5
-; large u28 5
-; large u29 5
-; large u30 5
-; large u31 5
-; large u32 5
-; large u33 5
-; large u34 5
-; large u35 5
-; #act
-; CONFERTITLE ÁùÐÇ
-; break
+#if
+large u26 5
+large u27 5
+large u28 5
+large u29 5
+large u30 5
+large u31 5
+large u32 5
+large u33 5
+large u34 5
+large u35 5
+#act
+CONFERTITLE ÁùÐÇ
+break
 
 
-; #if
-; large u26 2
-; large u27 2
-; large u28 2
-; large u29 2
-; large u30 2
-; large u31 2
-; large u32 2
-; large u33 2
-; large u34 2
-; large u35 2
-; #act
-; CONFERTITLE ÈýÐÇ
-; break
+#if
+large u26 2
+large u27 2
+large u28 2
+large u29 2
+large u30 2
+large u31 2
+large u32 2
+large u33 2
+large u34 2
+large u35 2
+#act
+CONFERTITLE ÈýÐÇ
+break
 
 }
