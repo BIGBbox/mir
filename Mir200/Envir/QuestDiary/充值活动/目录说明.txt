@@ -1,3 +1,0 @@
-每日充值奖品数据.txt   Envir\QuestDiary\充值活动
-每日充值.txt   Envir\QuestDiary\图标触发
-QFunction-0.txt    Envir\Market_Def

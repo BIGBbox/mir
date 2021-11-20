@@ -1,3 +1,0 @@
-IPLocal.dll
-;x-gompj.dll
-ESPDJ.dll
