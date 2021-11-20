@@ -1,0 +1,273 @@
+[@情天1回收]
+{
+#if
+checkitem 情天道扇 1
+#ACT
+take 情天道扇 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天道甲 1
+#ACT
+take 情天道甲 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天道衣 1
+#ACT
+take 情天道衣 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天道镯 1
+#ACT
+take 情天道镯 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天道链 1
+#ACT
+take 情天道链 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天道盔 1
+#ACT
+take 情天道盔 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天道勋 1
+#ACT
+take 情天道勋 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天道靴 1
+#ACT
+take 情天道靴 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天道带 1
+#ACT
+take 情天道带 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天道指 1
+#ACT
+take 情天道指 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天魔杖 1
+#ACT
+take 情天魔杖 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天魔甲 1
+#ACT
+take 情天魔甲 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天魔衣 1
+#ACT
+take 情天魔衣 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天魔镯 1
+#ACT
+take 情天魔镯 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天魔链 1
+#ACT
+take 情天魔链 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天魔盔 1
+#ACT
+take 情天魔盔 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天魔勋 1
+#ACT
+take 情天魔勋 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天魔靴 1
+#ACT
+take 情天魔靴 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天魔带 1
+#ACT
+take 情天魔带 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天魔指 1
+#ACT
+take 情天魔指 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天战刃 1
+#ACT
+take 情天战刃 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天战甲 1
+#ACT
+take 情天战甲 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天战衣 1
+#ACT
+take 情天战衣 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天战镯 1
+#ACT
+take 情天战镯 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天战链 1
+#ACT
+take 情天战链 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天战盔 1
+#ACT
+take 情天战盔 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天战勋 1
+#ACT
+take 情天战勋 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天战靴 1
+#ACT
+take 情天战靴 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天战带 1
+#ACT
+take 情天战带 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+#if
+checkitem 情天战指 1
+#ACT
+take 情天战指 1
+GAMEGOLD + 72
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了情天装备，获得了大量元宝经验！
+GOTO @情天1回收
+break
+}

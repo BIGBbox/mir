@@ -1,0 +1,111 @@
+[@main]
+{<$SERVERNAME>/FCOLOR=241}    <转 生 系 统/AUTOCOLOR=251>\
+<----------------------------------------------------------/AUTOCOLOR=250,253,254,241>\
+<本服特别为高级玩家开启到八转.转生证明各大地图可以爆出./AUTOCOLOR=254>\
+<我要进行五转/@开始五转> <降10级 上线1.12倍攻击加成/FCOLOR=250> 需要材料:<鼠标移至此处查看:|132#转生五重 ^168#────────^151#天精岩五转*3^254#地狱火五转*3^250#6W元宝105级^168#────────><Img:164:30:-1:-2> \
+<我要进行六转/@开始六转> <降20级 上线1.15倍攻击加成/FCOLOR=250> 需要材料:<鼠标移至此处查看:|132#转生六重 ^168#────────^151#天精岩六转*4^254#地狱火六转*4^250#10W元宝115级^168#────────><Img:164:30:-1:-2> \
+<我要进行七转/@开始七转> <降30级 上线1.20倍攻击加成/FCOLOR=250> 需要材料:<鼠标移至此处查看:|132#转生七重 ^168#────────^151#天精岩七转*3^254#地狱火七转*3^250#15W元宝130级^168#────────><Img:164:30:-1:-2> \
+<我要进行八转/@开始八转> <降35级 上线1.25倍攻击加成/FCOLOR=250> 需要材料:<鼠标移至此处查看:|132#转生八重 ^168#────────^151#[八转]归一之精*4^254#[八转]归一之神*4^250#30W元宝120级^168#────────><Img:164:30:-1:-2> \
+;<返璞归真九转/@开始九转> <降40级 上线1.30攻加成/FCOLOR=250> 需要材料:<鼠标移至此处查看:|132#转生九重 ^168#────────^151#[九转]归真之精*5^254#[九转]归真之神*5^250#50W元宝130级^168#────────><Img:164:30:-1:-2> \
+<----------------------------------------------------------/AUTOCOLOR=250,253,254,241>\
+
+
+[@开始九转]
+#IF
+CHECKRENEWLEVEL = 8
+CHECKLEVELEX > 129
+CHECKGAMEGOLD > 499999
+CHECKITEM [九转]归真之精 5
+CHECKITEM [九转]归真之神 5
+#act
+GAMEGOLD - 500000
+TAKE [九转]归真之精 5
+TAKE [九转]归真之神 5
+RENEWLEVEL 1 0 100
+CHANGELEVEL - 40
+POWERRATE 130 65535
+MESSAGEBOX 恭喜你转生成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功进行了第九次转生！
+#ELSEACT
+MESSAGEBOX 转生条件不足或你已经九转了！
+BREAK
+
+[@开始八转]
+#IF
+CHECKRENEWLEVEL = 7
+CHECKLEVELEX > 119
+CHECKGAMEGOLD > 299999
+CHECKITEM [八转]归一之精 4
+CHECKITEM [八转]归一之神 4
+#act
+GAMEGOLD - 300000
+TAKE [八转]归一之精 4
+TAKE [八转]归一之神 4
+RENEWLEVEL 1 0 50
+CHANGELEVEL - 35
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+MESSAGEBOX 恭喜你转生成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功进行了第八次转生！
+#ELSEACT
+MESSAGEBOX 转生条件不足或你已经八转了！
+BREAK
+
+[@开始七转]
+#IF
+CHECKRENEWLEVEL = 6
+CHECKLEVELEX > 129
+CHECKGAMEGOLD > 149999
+CHECKITEM 天精岩七转 3
+CHECKITEM 地狱火七转 3
+#act
+GAMEGOLD - 150000
+TAKE 天精岩七转 3
+TAKE 地狱火七转 3
+RENEWLEVEL 1 0 50
+CHANGELEVEL - 30
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+MESSAGEBOX 恭喜你转生成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功进行了第七次转生！
+#ELSEACT
+MESSAGEBOX 转生条件不足或你已经七转了！
+BREAK
+
+[@开始六转]
+#IF
+CHECKRENEWLEVEL = 5
+CHECKLEVELEX > 114
+CHECKGAMEGOLD > 99999
+CHECKITEM 天精岩六转 4
+CHECKITEM 地狱火六转 4
+#act
+GAMEGOLD - 100000
+TAKE 天精岩六转 4
+TAKE 地狱火六转 4
+RENEWLEVEL 1 0 50
+CHANGELEVEL - 20
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+MESSAGEBOX 恭喜你转生成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功进行了第六次转生！
+#ELSEACT
+MESSAGEBOX 转生条件不足或你已经六转了！
+BREAK
+
+[@开始五转]
+#IF
+CHECKRENEWLEVEL = 4
+CHECKLEVELEX > 104
+CHECKGAMEGOLD > 59999
+CHECKITEM 天精岩五转 3
+CHECKITEM 地狱火五转 3
+#act
+GAMEGOLD - 60000
+TAKE 天精岩五转 3
+TAKE 地狱火五转 3
+RENEWLEVEL 1 0 50
+CHANGELEVEL - 10
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+MESSAGEBOX 恭喜你转生成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功进行了第五次转生！
+#ELSEACT
+MESSAGEBOX 转生条件不足或你已经五转了！
+BREAK

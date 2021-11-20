@@ -1,0 +1,273 @@
+[@玄冥回收]
+{
+#if
+checkitem 玄冥道扇 1
+#ACT
+take 玄冥道扇 1
+GAMEGOLD + 120
+CHANGEEXP + 160000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥道甲 1
+#ACT
+take 玄冥道甲 1
+GAMEGOLD + 120
+CHANGEEXP + 160000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥道衣 1
+#ACT
+take 玄冥道衣 1
+GAMEGOLD + 120
+CHANGEEXP + 160000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥道镯 1
+#ACT
+take 玄冥道镯 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥道链 1
+#ACT
+take 玄冥道链 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥道盔 1
+#ACT
+take 玄冥道盔 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥道勋 1
+#ACT
+take 玄冥道勋 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥道靴 1
+#ACT
+take 玄冥道靴 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥道带 1
+#ACT
+take 玄冥道带 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥道指 1
+#ACT
+take 玄冥道指 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥魔杖 1
+#ACT
+take 玄冥魔杖 1
+GAMEGOLD + 120
+CHANGEEXP + 160000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥魔甲 1
+#ACT
+take 玄冥魔甲 1
+GAMEGOLD + 120
+CHANGEEXP + 160000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥魔衣 1
+#ACT
+take 玄冥魔衣 1
+GAMEGOLD + 120
+CHANGEEXP + 160000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥魔镯 1
+#ACT
+take 玄冥魔镯 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥魔链 1
+#ACT
+take 玄冥魔链 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥魔盔 1
+#ACT
+take 玄冥魔盔 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥魔勋 1
+#ACT
+take 玄冥魔勋 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥魔靴 1
+#ACT
+take 玄冥魔靴 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥魔带 1
+#ACT
+take 玄冥魔带 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥魔指 1
+#ACT
+take 玄冥魔指 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥战刃 1
+#ACT
+take 玄冥战刃 1
+GAMEGOLD + 120
+CHANGEEXP + 160000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥战甲 1
+#ACT
+take 玄冥战甲 1
+GAMEGOLD + 120
+CHANGEEXP + 160000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥战衣 1
+#ACT
+take 玄冥战衣 1
+GAMEGOLD + 120
+CHANGEEXP + 160000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥战镯 1
+#ACT
+take 玄冥战镯 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥战链 1
+#ACT
+take 玄冥战链 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥战盔 1
+#ACT
+take 玄冥战盔 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥战勋 1
+#ACT
+take 玄冥战勋 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥战靴 1
+#ACT
+take 玄冥战靴 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥战带 1
+#ACT
+take 玄冥战带 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+#if
+checkitem 玄冥战指 1
+#ACT
+take 玄冥战指 1
+GAMEGOLD + 60
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了玄冥装备，获得了大量元宝经验！
+GOTO @玄冥回收
+break
+}

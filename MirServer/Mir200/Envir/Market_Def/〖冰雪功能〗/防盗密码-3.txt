@@ -1,0 +1,120 @@
+(@@InPutString )
+[@main]
+#if
+checkvar human LoginPassWord = 0
+equal <$CLIENTFLAG> 1
+#say
+<Img|width=500|height=200|rotate=0|move=0|scale9r=10|scale9t=10|img=public/bg_npc_01.png|scale9l=10|scale9b=10|reset=1|bg=1>
+<Layout|x=478.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=500.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=13|text=防止盗号，请设置防盗密码！\ \>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=255|size=13|text=防盗措施>
+<Text|a=0|x=131|y=65|tipsx=10|tipsy=80|color=253|size=13|text=状态>
+<Text|a=0|x=175|y=65|tipsx=10|tipsy=80|color=255|size=13|text=〖>
+<Text|a=0|x=191.0|y=65.0|tipsx=10|tipsy=80|color=250|size=13|text=未开启>
+<Text|a=0|x=234.0|y=65.0|tipsx=10|tipsy=80|color=255|size=13|text=〗\ \>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=251|size=13|text=开启安全防盗|link=@设置密码>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=250|size=13|text=拒绝盗号,安全保障>
+<Text|a=0|ax=0|x=156.0|y=144.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(T1)>>
+
+#if
+checkvar human LoginPassWord = 0
+equal <$CLIENTFLAG> 2
+#say
+<Img|width=500|height=200|rotate=0|scale9l=10|scale9t=10|reset=1|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9r=10>
+<Layout|x=478.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=500.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=18|text=防止盗号，请设置防盗密码！\ \>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=255|size=18|text=防盗措施>
+<Text|a=0|x=131|y=65|tipsx=10|tipsy=80|color=253|size=18|text=状态>
+<Text|a=0|x=178.0|y=65.0|tipsx=10|tipsy=80|color=255|size=18|text=〖>
+<Text|a=0|x=208|y=65|tipsx=10|tipsy=80|color=250|size=18|text=未开启>
+<Text|a=0|x=273.0|y=65.0|tipsx=10|tipsy=80|color=255|size=18|text=〗\ \>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=251|size=18|text=开启安全防盗|link=@设置密码>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=250|size=18|text=拒绝盗号,安全保障>
+<Text|a=0|x=215.0|y=145.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(T1)>>
+
+#if
+not checkvar human LoginPassWord = 0
+equal <$CLIENTFLAG> 1
+#say
+<Img|width=500|height=200|rotate=0|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10|reset=1>
+<Layout|x=474.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=499.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=13|text=防止盗号，请设置防盗密码！\ \>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=255|size=13|text=防盗措施>
+<Text|a=0|x=131|y=65|tipsx=10|tipsy=80|color=253|size=13|text=状态>
+<Text|a=0|x=171.0|y=65.0|tipsx=10|tipsy=80|color=255|size=13|text=〖>
+<Text|a=0|x=188.0|y=65.0|tipsx=10|tipsy=80|color=250|size=13|text=已开启>
+<Text|a=0|x=232.0|y=65.0|tipsx=10|tipsy=80|color=255|size=13|text=〗\ \>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=251|size=13|text=清空防盗密码|link=@清空密码>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=250|size=13|text=只有您自己可看到...防盗密码为:>
+<Text|a=0|x=221.0|y=145.0|tipsx=10|tipsy=80|color=255|size=13|text=〖<$HUMAN(LOGINPASSWORD)>〗\>
+
+#if
+not checkvar human LoginPassWord = 0
+equal <$CLIENTFLAG> 2
+#say
+<Img|x=0.0|y=0.0|width=550|height=200|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_01.png|reset=1>
+<Layout|x=527.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=549.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=18|text=防止盗号，请设置防盗密码！\ \>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=255|size=18|text=防盗措施>
+<Text|a=0|x=131|y=65|tipsx=10|tipsy=80|color=253|size=18|text=状态>
+<Text|a=0|x=175|y=65|tipsx=10|tipsy=80|color=255|size=18|text=〖>
+<Text|a=0|x=208|y=65|tipsx=10|tipsy=80|color=250|size=18|text=已开启>
+<Text|a=0|x=274|y=65|tipsx=10|tipsy=80|color=255|size=18|text=〗\ \>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=251|size=18|text=清空防盗密码|link=@清空密码>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=250|size=18|text=只有您自己可看到...防盗密码为:>
+<Text|a=0|x=291.0|y=145.0|tipsx=10|tipsy=80|color=255|size=18|text=〖<$HUMAN(LOGINPASSWORD)>〗\>
+
+
+[@清空密码]
+#if
+#act
+mov T1 空
+CALCVAR HUMAN LoginPassWord = 0
+SAVEVAR HUMAN LOGINPASSWORD
+MESSAGEBOX 防盗措施关闭\您的防盗密码已经清空！
+close
+
+[@设置密码]
+设置后只有本机可正常游戏!\ \
+
+如更换电脑,验证防盗密码即可\ \
+
+<请输入密码/@@InPutString50>\
+
+[@InPutString50]
+#if
+checkvar HUMAN LoginPassWord = 0
+#act
+CALCVAR HUMAN LoginPassWord = <$STR(S50)>
+SAVEVAR HUMAN LOGINPASSWORD
+CALCVAR HUMAN LoginPassWordStatus = 0
+SAVEVAR HUMAN LOGINPASSWORDSTATUS
+CALCVAR HUMAN LoginPassWordNum = 0
+SAVEVAR HUMAN LOGINPASSWORDNUM
+#say
+请再次确认密码！\ \
+
+<请输入密码/@@InPutString51>\
+
+[@InPutString51]
+#if
+EQUAL S51 <$STR(S50)>
+#act
+CALCVAR HUMAN LoginPassWord = <$STR(S51)>
+SAVEVAR HUMAN LOGINPASSWORD
+CALCVAR HUMAN LoginPassWordStatus = 0
+SAVEVAR HUMAN LOGINPASSWORDSTATUS
+CALCVAR HUMAN LoginPassWordNum = 0
+SAVEVAR HUMAN LOGINPASSWORDNUM
+mov T1 <$IPADDR>
+MESSAGEBOX 设置成功！\您的防盗密码为〖<$STR(S51)>〗请牢记\当前只能本机登录此号\更换电脑要验证防盗密码方可正常游戏！
+close
+#elseact
+CALCVAR HUMAN LoginPassWord = 0
+SAVEVAR HUMAN LOGINPASSWORD
+MESSAGEBOX 两次密码不一致,请重新设置！
+close

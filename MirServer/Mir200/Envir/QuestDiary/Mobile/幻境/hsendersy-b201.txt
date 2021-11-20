@@ -1,0 +1,17 @@
+[@Settings]
+{
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>\ \
+
+<Text|text=没想到你真能来到这里，作为对你非凡勇气的奖励，|x=30|y=60|size=16>
+<Text|text=我可以送你去圣域，不必付出金钱和声望！|x=30|y=80|size=16>
+<Text|text=而且你想在那里停留多久都可以！现在想去吗？|x=30|y=100|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@a1>
+<Text|text=想去|x=60|y=133|size=16|color=1001|link=@a1>
+
+<Img|img=public/btn_npcfh_03.png|x=175|y=138>
+<Layout|x=175|y=120|width=80|height=50|link=@exit>
+<Text|text=不想去|x=200|y=133|size=16|color=1001|link=@exit>
+
+}

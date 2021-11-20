@@ -1,0 +1,497 @@
+[@回收]
+{
+
+#if
+equal <$STR(S$页签)>
+#act
+mov S$页签 1
+
+#IF
+#ACT
+mov P11 99
+MOV S12
+; MOV S18
+MOV N$详情行数 1
+MOV S$回收收益详情
+MOV N$回收结算1 0
+MOV N$回收结算2 0
+LoopBagItems @勾选背包物品 S$勾选背包ID S$勾选背包KEY
+; MOV S$删除串 <$STR(S0)>
+;SENDMSG 6 删除串2233:<$STR(S$删除串)>
+MOV N$是否自动回收 0
+mov N$页签 1
+sendmsg 5 <$STR(S$页签)>----
+; SelectBagItems <$str(S12)>
+
+GOTO @显示<$STR(S$页签)>
+
+[@显示1]
+#IF
+CHECK [799] 1
+#ACT
+MOV N$是否自动回收 1
+#ELSEACT
+MOV N$是否自动回收 0
+
+#IF
+#SAY
+; <Img|x=-504.0|y=-167.0|width=2000|height=2000|esc=1|layerid=1000|img=public/1900000651_1.png|bg=1>
+<Img|x=220.0|y=2.0|height=455|layerid=1000|children={closeBtn,info,reBtn,page1,page2,page3,page4,line,autoBtn,autoTxt,ckB1,ckB2,ckB3,ckB4,ckB5,ckB6,ckB7,ckB8,ckB9,ckB10,ckB11,ckB12,ckB13,ckT1,ckT2,ckT3,ckT4,ckT5,ckT6,ckT7,ckT8,ckT9,ckT10,ckT11,ckT12,ckT13,}|img=public/bg_npc_02.png|bg=1|move=1>
+<Button|id=closeBtn|x=333.0|y=0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Img|x=50.0|y=50.0|width=580|height=440|scale9r=20|scale9l=20|scale9t=20|bg=1|img=public/bg_npc_08.jpg|scale9b=20|esc=0>
+
+<Img|id=line|x=12.0|y=55.0|width=310|height=2|scale9r=5|scale9l=5|scale9t=5||img=public/bg_yyxsz_01.png>
+<Button|id=page1|x=10.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=254|text=装备回收|size=18|link=@回收#页数=1#页签=1>
+<Button|id=page2|x=88.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=特殊回收|size=18|link=@回收#页数=2#页签=2>
+<Button|id=page3|x=166.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=其他回收|size=18|link=@回收#页数=3#页签=3>
+<Button|id=page4|x=247.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=特权回收|size=18|link=@回收#页数=4#页签=4>
+
+
+<CheckBox|id=ckB1|x=22.0|y=60.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U200)>|checkboxid=1|link=@改变#改变KEY=200#系列=战神套>
+<CheckBox|id=ckB2|x=162.0|y=60.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U201)>|checkboxid=1|link=@改变#改变KEY=201#系列=清风套>
+<CheckBox|id=ckB3|x=22.0|y=100.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U202)>|checkboxid=1|link=@改变#改变KEY=202#系列=热血套>
+<CheckBox|id=ckB4|x=162.0|y=100.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U203)>|checkboxid=1|link=@改变#改变KEY=203#系列=苍茫套>
+<CheckBox|id=ckB5|x=22.0|y=140.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U204)>|checkboxid=1|link=@改变#改变KEY=204#系列=迷失套>
+<CheckBox|id=ckB6|x=162.0|y=140.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U205)>|checkboxid=1|link=@改变#改变KEY=205#系列=情天套>
+<CheckBox|id=ckB7|x=22.0|y=180.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U206)>|checkboxid=1|link=@改变#改变KEY=206#系列=逐日套>
+<CheckBox|id=ckB8|x=162.0|y=180.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U207)>|checkboxid=1|link=@改变#改变KEY=207#系列=遗忘套>
+<CheckBox|id=ckB9|x=22.0|y=220.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U208)>|checkboxid=1|link=@改变#改变KEY=208#系列=红魔套>
+<CheckBox|id=ckB10|x=22.0|y=260.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U209)>|checkboxid=1|link=@自动使用物品1#改变KEY=209>
+<CheckBox|id=ckB11|x=22.0|y=300.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U210)>|checkboxid=1|link=@自动使用物品2#改变KEY=210>
+
+<RText|id=ckT1|x=55|y=63.0|color=255|size=17|text=<战神套/FCOLOR=69><[45级]/FCOLOR=149>>
+<RText|id=ckT2|x=195|y=63.0|color=250|size=17|text=<清风套/FCOLOR=69><[50级]/FCOLOR=149>>
+<RText|id=ckT3|x=55|y=103.0|color=252|size=17|text=<热血套/FCOLOR=149><[45级]/FCOLOR=149>>
+<RText|id=ckT4|x=195|y=103.0|color=253|size=17|text=<苍茫套/FCOLOR=172><[45级]/FCOLOR=149>>
+<RText|id=ckT5|x=55|y=143.0|color=253|size=17|text=<迷失套/FCOLOR=2><[45级]/FCOLOR=149>>
+<RText|id=ckT6|x=195|y=143.0|color=249|size=17|text=<情天套/FCOLOR=180><[45级]/FCOLOR=149>>
+<RText|id=ckT7|x=55|y=183.0|color=243|size=17|text=<逐日套/FCOLOR=244><[45级]/FCOLOR=149>>
+<RText|id=ckT8|x=195|y=183.0|color=243|size=17|text=<遗忘套/FCOLOR=5><[45级]/FCOLOR=149>>
+<RText|id=ckT9|x=55|y=223.0|color=243|size=17|text=<红魔套/FCOLOR=244><[45级]/FCOLOR=149>>
+<RText|id=ckT10|x=55|y=263.0|color=243|size=17|text=<经验券,元宝入包使用/FCOLOR=249>>
+<RText|id=ckT11|x=55|y=303.0|color=243|size=17|text=<祝福油入包使用/FCOLOR=249>>
+
+<CheckBox|id=autoBtn|x=95.0|y=387.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(N$是否自动回收)>|checkboxid=1|link=@自动回收开启>
+<Text|id=autoTxt|x=128.0|y=390.0|color=243|size=18|text=开启自动回收>
+
+; <BAGITEMS|id=3|x=60.0|y=60.0|select=<$STR(S0)>|condition=*|row=5|positions=0|count=40|link=@选择物品>
+<Button|id=reBtn|x=118.0|y=340.0|nimg=public/1900000660.png|size=18|color=150|text=确认回收|link=@确认回收>
+<Text|id=info|size=16|x=255.0|y=400.0|color=250|text=查看详情|link=@回收说明#页数=1>
+
+
+[@显示2]
+
+#IF
+#SAY
+<Img|x=220.0|y=2.0|height=455|layerid=1000|children={closeBtn,info,reBtn,page1,page2,page3,page4,line,autoBtn,autoTxt,ckB1,ckB2,ckB3,ckB4,ckB5,ckB6,ckB7,ckB8,ckB9,ckB10,ckB11,ckB12,ckB13,ckT1,ckT2,ckT3,ckT4,ckT5,ckT6,ckT7,ckT8,ckT9,ckT10,ckT11,ckT12,ckT13,}|img=public/bg_npc_02.png|bg=1|move=1>
+<Button|id=closeBtn|x=333.0|y=0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+
+<Img|id=line|x=12.0|y=55.0|width=310|height=2|scale9r=5|scale9l=5|scale9t=5||img=public/bg_yyxsz_01.png>
+<Button|id=page1|x=10.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=装备回收|size=18|link=@回收#页数=1#页签=1>
+<Button|id=page2|x=88.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=254|text=特殊回收|size=18|link=@回收#页数=2#页签=2>
+<Button|id=page3|x=166.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=其他回收|size=18|link=@回收#页数=3#页签=3>
+<Button|id=page4|x=247.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=特权回收|size=18|link=@回收#页数=4#页签=4>
+
+
+<CheckBox|id=ckB1|x=22.0|y=60.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U211)>|checkboxid=1|link=@改变#改变KEY=211#系列=天怒系列>
+<CheckBox|id=ckB2|x=162.0|y=60.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U212)>|checkboxid=1|link=@改变#改变KEY=212#系列=苍龙系列>
+<CheckBox|id=ckB3|x=22.0|y=100.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U213)>|checkboxid=1|link=@改变#改变KEY=213#系列=浩劫系列>
+<CheckBox|id=ckB4|x=162.0|y=100.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U214)>|checkboxid=1|link=@改变#改变KEY=214#系列=幽皇系列>
+<CheckBox|id=ckB5|x=22.0|y=140.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U215)>|checkboxid=1|link=@改变#改变KEY=215#系列=帝恨系列>
+<CheckBox|id=ckB6|x=162.0|y=140.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U216)>|checkboxid=1|link=@改变#改变KEY=216#系列=血祭红魔首饰>
+<CheckBox|id=ckB7|x=22.0|y=180.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U217)>|checkboxid=1|link=@改变#改变KEY=217#系列=血祭天怒剑甲>
+<CheckBox|id=ckB8|x=162.0|y=180.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U218)>|checkboxid=1|link=@改变#改变KEY=218#系列=血祭苍龙系列>
+<CheckBox|id=ckB9|x=22.0|y=220.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U219)>|checkboxid=1|link=@改变#改变KEY=219#系列=血祭浩劫系列>
+<CheckBox|id=ckB10|x=162.0|y=220.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U220)>|checkboxid=1|link=@改变#改变KEY=220#系列=判阴阳回收>
+<CheckBox|id=ckB11|x=22.0|y=260.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U221)>|checkboxid=1|link=@改变#改变KEY=221#系列=天罪回收>
+<CheckBox|id=ckB12|x=162.0|y=260.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U222)>|checkboxid=1|link=@改变#改变KEY=222#系列=仙界魔魂回收>
+<CheckBox|id=ckB13|x=22.0|y=300.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U223)>|checkboxid=1|link=@改变#改变KEY=223#系列=二级魔器>
+
+<RText|id=ckT1|x=55|y=63.0|color=255|size=17|text=<天怒系列/FCOLOR=149>>
+<RText|id=ckT2|x=195|y=63.0|color=250|size=17|text=<苍龙系列/FCOLOR=149>>
+<RText|id=ckT3|x=55|y=103.0|color=252|size=17|text=<浩劫系列/FCOLOR=149>>
+<RText|id=ckT4|x=195|y=103.0|color=253|size=17|text=<幽皇系列/FCOLOR=149>>
+<RText|id=ckT5|x=55|y=143.0|color=253|size=17|text=<帝恨系列/FCOLOR=149>>
+<RText|id=ckT6|x=195|y=143.0|color=249|size=17|text=<血祭红魔首饰/FCOLOR=149>>
+<RText|id=ckT7|x=55|y=183.0|color=243|size=17|text=<血祭天怒剑甲/FCOLOR=149>>
+<RText|id=ckT8|x=195|y=183.0|color=243|size=17|text=<血祭苍龙系列/FCOLOR=149>>
+<RText|id=ckT9|x=55|y=223.0|color=243|size=17|text=<血祭浩劫系列/FCOLOR=149>>
+<RText|id=ckT10|x=195|y=223.0|color=243|size=17|text=<判阴阳回收/FCOLOR=149>>
+<RText|id=ckT11|x=55|y=263.0|color=243|size=17|text=<天罪回收/FCOLOR=149>>
+<RText|id=ckT12|x=195|y=263.0|color=243|size=17|text=<仙界魔魂回收/FCOLOR=149>>
+<RText|id=ckT13|x=55|y=303.0|color=243|size=17|text=<二级魔器/FCOLOR=149>>
+
+<Text|id=info|size=16|x=255.0|y=400.0|color=250|text=查看详情|link=@回收说明#页数=2>
+
+
+[@显示3]
+
+#IF
+#SAY
+<Img|x=220.0|y=2.0|height=455|layerid=1000|children={closeBtn,info,reBtn,page1,page2,page3,page4,line,autoBtn,autoTxt,ckB1,ckB2,ckB3,ckB4,ckB5,ckB6,ckB7,ckB8,ckB9,ckB10,ckB11,ckB12,ckB13,ckB14,ckB15,ckB16,ckB17,ckB18,ckB19,ckB20,ckT1,ckT2,ckT3,ckT4,ckT5,ckT6,ckT7,ckT8,ckT9,ckT10,ckT11,ckT12,ckT13,ckT14,ckT15,ckT16,ckT17,ckT18,ckT19,ckT20,}|img=public/bg_npc_02.png|bg=1|move=1>
+<Button|id=closeBtn|x=333.0|y=0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+
+<Img|id=line|x=12.0|y=55.0|width=310|height=2|scale9r=5|scale9l=5|scale9t=5||img=public/bg_yyxsz_01.png>
+<Button|id=page1|x=10.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=装备回收|size=18|link=@回收#页数=1#页签=1>
+<Button|id=page2|x=88.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=特殊回收|size=18|link=@回收#页数=2#页签=2>
+<Button|id=page3|x=166.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=254|text=其他回收|size=18|link=@回收#页数=3#页签=3>
+<Button|id=page4|x=247.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=特权回收|size=18|link=@回收#页数=4#页签=4>
+
+
+<CheckBox|id=ckB1|x=22.0|y=60.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U224)>|checkboxid=1|link=@改变#改变KEY=224#系列=治疗宝珠①>
+<CheckBox|id=ckB2|x=162.0|y=60.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(225)>|checkboxid=1|link=@改变#改变KEY=225#系列=治疗宝珠②>
+<CheckBox|id=ckB3|x=22.0|y=100.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U226)>|checkboxid=1|link=@改变#改变KEY=226#系列=治疗宝珠③>
+<CheckBox|id=ckB4|x=162.0|y=100.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U227)>|checkboxid=1|link=@改变#改变KEY=227#系列=治疗宝珠④>
+<CheckBox|id=ckB5|x=22.0|y=140.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U228)>|checkboxid=1|link=@改变#改变KEY=228#系列=治疗宝珠⑤>
+<CheckBox|id=ckB6|x=162.0|y=140.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U229)>|checkboxid=1|link=@改变#改变KEY=229#系列=1级主辅印>
+<CheckBox|id=ckB7|x=22.0|y=180.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U230)>|checkboxid=1|link=@改变#改变KEY=230#系列=2级主辅印>
+<CheckBox|id=ckB8|x=162.0|y=180.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U231)>|checkboxid=1|link=@改变#改变KEY=231#系列=3级主辅印>
+<CheckBox|id=ckB9|x=22.0|y=220.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U232)>|checkboxid=1|link=@改变#改变KEY=232#系列=4级主辅印>
+<CheckBox|id=ckB10|x=162.0|y=220.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U233)>|checkboxid=1|link=@改变#改变KEY=233#系列=1转材料>
+<CheckBox|id=ckB11|x=22.0|y=260.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U234)>|checkboxid=1|link=@改变#改变KEY=234#系列=2转材料>
+<CheckBox|id=ckB12|x=162.0|y=260.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U235)>|checkboxid=1|link=@改变#改变KEY=235#系列=3转材料>
+<CheckBox|id=ckB13|x=22.0|y=300.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U236)>|checkboxid=1|link=@改变#改变KEY=236#系列=特戒[+1]阶>
+<CheckBox|id=ckB14|x=162.0|y=300.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U237)>|checkboxid=1|link=@改变#改变KEY=237#系列=特戒[+2]阶>
+<CheckBox|id=ckB15|x=22.0|y=340.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U238)>|checkboxid=1|link=@改变#改变KEY=238#系列=特戒[+3]阶>
+<CheckBox|id=ckB16|x=162.0|y=340.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U239)>|checkboxid=1|link=@改变#改变KEY=239#系列=特戒[+4]阶>
+<CheckBox|id=ckB17|x=22.0|y=380.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U240)>|checkboxid=1|link=@改变#改变KEY=240#系列=特戒[+5]阶>
+<CheckBox|id=ckB18|x=162.0|y=380.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U241)>|checkboxid=1|link=@改变#改变KEY=241#系列=特戒[+6]阶>
+<CheckBox|id=ckB19|x=22.0|y=420.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U242)>|checkboxid=1|link=@改变#改变KEY=242#系列=特戒[+7]阶>
+<CheckBox|id=ckB20|x=162.0|y=420.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U243)>|checkboxid=1|link=@改变#改变KEY=243#系列=特戒[+8]阶>
+
+<RText|id=ckT1|x=55|y=63.0|color=255|size=17|text=<治疗宝珠①/FCOLOR=244>>
+<RText|id=ckT2|x=195|y=63.0|color=250|size=17|text=<治疗宝珠②/FCOLOR=244>>
+<RText|id=ckT3|x=55|y=103.0|color=252|size=17|text=<治疗宝珠③/FCOLOR=244>>
+<RText|id=ckT4|x=195|y=103.0|color=253|size=17|text=<治疗宝珠④/FCOLOR=244>>
+<RText|id=ckT5|x=55|y=143.0|color=253|size=17|text=<治疗宝珠⑤/FCOLOR=244>>
+<RText|id=ckT6|x=195|y=143.0|color=249|size=17|text=<1级主辅印/FCOLOR=70>>
+<RText|id=ckT7|x=55|y=183.0|color=243|size=17|text=<2级主辅印/FCOLOR=70>>
+<RText|id=ckT8|x=195|y=183.0|color=243|size=17|text=<3级主辅印/FCOLOR=70>>
+<RText|id=ckT9|x=55|y=223.0|color=243|size=17|text=<4级主辅印/FCOLOR=70>>
+<RText|id=ckT10|x=195|y=223.0|color=243|size=17|text=<1转材料/FCOLOR=167>>
+<RText|id=ckT11|x=55|y=263.0|color=243|size=17|text=<2转材料/FCOLOR=167>>
+<RText|id=ckT12|x=195|y=263.0|color=243|size=17|text=<3转材料/FCOLOR=167>>
+<RText|id=ckT13|x=55|y=303.0|color=243|size=17|text=<特戒[+1]阶/FCOLOR=249>>
+<RText|id=ckT14|x=195|y=303.0|color=243|size=17|text=<特戒[+2]阶/FCOLOR=249>>
+<RText|id=ckT15|x=55|y=343.0|color=243|size=17|text=<特戒[+3]阶/FCOLOR=249>>
+<RText|id=ckT16|x=195|y=343.0|color=243|size=17|text=<特戒[+4]阶/FCOLOR=249>>
+<RText|id=ckT17|x=55|y=383.0|color=243|size=17|text=<特戒[+5]阶/FCOLOR=249>>
+<RText|id=ckT18|x=195|y=383.0|color=243|size=17|text=<特戒[+6]阶/FCOLOR=249>>
+<RText|id=ckT19|x=55|y=423.0|color=243|size=17|text=<特戒[+7]阶/FCOLOR=249>>
+<RText|id=ckT20|x=195|y=423.0|color=243|size=17|text=<特戒[+8]阶/FCOLOR=249>>
+
+<Text|id=info|size=16|x=255.0|y=400.0|color=250|text=查看详情|link=@回收说明#页数=3>
+
+
+[@显示4]
+
+#IF
+#SAY
+<Img|x=220.0|y=2.0|height=455|layerid=1000|children={closeBtn,info,reBtn,page1,page2,page3,page4,line,autoBtn,autoTxt,ckB1,ckB2,ckB3,ckB4,ckB5,ckB6,ckB7,ckB8,ckB9,ckB10,ckB11,ckB12,ckB13,ckT1,ckT2,ckT3,ckT4,ckT5,ckT6,ckT7,ckT8,ckT9,ckT10,ckT11,ckT12,ckT13,}|img=public/bg_npc_02.png|bg=1|move=1>
+<Button|id=closeBtn|x=333.0|y=0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+
+<Img|id=line|x=12.0|y=55.0|width=310|height=2|scale9r=5|scale9l=5|scale9t=5||img=public/bg_yyxsz_01.png>
+<Button|id=page1|x=10.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=装备回收|size=18|link=@回收#页数=1#页签=1>
+<Button|id=page2|x=88.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=特殊回收|size=18|link=@回收#页数=2#页签=2>
+<Button|id=page3|x=166.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=其他回收|size=18|link=@回收#页数=3#页签=3>
+<Button|id=page4|x=247.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=254|text=特权回收|size=18|link=@回收#页数=4#页签=4>
+
+
+<CheckBox|id=ckB1|x=22.0|y=60.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U245)>|checkboxid=1|link=@改变#改变KEY=245#系列=4转材料>
+<CheckBox|id=ckB2|x=22.0|y=100.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U246)>|checkboxid=1|link=@改变#改变KEY=246#系列=5转材料>
+<CheckBox|id=ckB3|x=22.0|y=140.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U247)>|checkboxid=1|link=@改变#改变KEY=247#系列=6转材料>
+<CheckBox|id=ckB4|x=22.0|y=180.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U248)>|checkboxid=1|link=@改变#改变KEY=248#系列=7转材料>
+<CheckBox|id=ckB5|x=22.0|y=220.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U249)>|checkboxid=1|link=@改变#改变KEY=249#系列=8转材料>
+<CheckBox|id=ckB6|x=22.0|y=260.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U250)>|checkboxid=1|link=@改变#改变KEY=250#系列=9转材料>
+<CheckBox|id=ckB7|x=22.0|y=300.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U251)>|checkboxid=1|link=@改变#改变KEY=251#系列=10转材料>
+
+<RText|id=ckT1|x=55|y=63.0|color=255|size=17|text=<天精岩和地狱火/FCOLOR=103><[四转]/FCOLOR=251>>
+<RText|id=ckT2|x=55|y=103.0|color=250|size=17|text=<天精岩和地狱火/FCOLOR=103><[五转]/FCOLOR=251>>
+<RText|id=ckT3|x=55|y=143.0|color=252|size=17|text=<天精岩和地狱火/FCOLOR=103><[六转]/FCOLOR=251>>
+<RText|id=ckT4|x=55|y=183.0|color=253|size=17|text=<天精岩和地狱火/FCOLOR=103><[七转]/FCOLOR=251>>
+<RText|id=ckT5|x=55|y=223.0|color=253|size=17|text=<天精岩和地狱火/FCOLOR=103><[八转]/FCOLOR=251>>
+<RText|id=ckT6|x=55|y=263.0|color=249|size=17|text=<天精岩和地狱火/FCOLOR=103><[九转]/FCOLOR=251>>
+<RText|id=ckT7|x=55|y=303.0|color=243|size=17|text=<天精岩和地狱火/FCOLOR=103><[十转]/FCOLOR=251>>
+
+<Text|id=info|size=16|x=255.0|y=400.0|color=250|text=查看详情|link=@回收说明#页数=4>
+
+
+[@回收说明]
+#if
+#act
+
+ReadConfigFileItem ..\QuestDiary\新装备回收\回收详情.txt <$STR(S$页数)> <$str(N$详情行数)> S$详情内容<$str(N$详情行数)>
+inc S$回收收益详情 <RText|id=收益详情<$str(N$详情行数)>|x=0|y=0|color=255|size=17|text=<$str(S$详情内容<$str(N$详情行数)>)>>
+
+#if
+not equal <$str(S$详情内容<$str(N$详情行数)>)>
+#act
+inc N$详情行数 1
+goto @回收说明
+#elseact
+goto @显示详情
+
+
+
+[@显示详情]
+#if
+#act
+mov N$color1 247
+mov N$color2 247
+mov N$color3 247
+mov N$color4 247
+mov N$color<$STR(S$页数)> 254
+
+; 
+#SAY
+; <Img|x=-504.0|y=-167.0|width=2000|height=2000|esc=1|layerid=1000|img=public/1900000651_1.png|bg=1>
+<Img|x=220.0|y=2.0|height=455|layerid=1000|children={closeBtn,info,reBtn,page1,page2,page3,page4,line,exitInfo,autoBtn,autoTxt,ckB1,ckB2,ckB3,ckB4,ckB5,ckB6,ckB7,ckB8,ckB9,ckB10,ckB11,ckB12,ckB13,ckT1,ckT2,ckT3,ckT4,ckT5,ckT6,ckT7,ckT8,ckT9,ckT10,ckT11,ckT12,ckT13,exitInfo}|img=public/bg_npc_02.png|bg=1|move=1>
+<Button|id=closeBtn|x=333.0|y=0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Img|x=50.0|y=50.0|width=580|height=440|scale9r=20|scale9l=20|scale9t=20|bg=1|img=public/bg_npc_08.jpg|scale9b=20|esc=0>
+<Img|id=line|x=12.0|y=55.0|width=310|height=2|children={滑动窗口,}|img=public/bg_yyxsz_01.png>
+<Button|id=page1|x=10.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=<$str(N$color1)>|text=装备回收|size=18|link=@回收#页数=1#页签=1>
+<Button|id=page2|x=88.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=<$str(N$color2)>|text=特殊回收|size=18|link=@回收#页数=2#页签=2>
+<Button|id=page3|x=166.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=<$str(N$color3)>|text=其他回收|size=18|link=@回收#页数=3#页签=3>
+<Button|id=page4|x=247.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=<$str(N$color4)>|text=特权回收|size=18|link=@回收#页数=4#页签=4>
+; <RText|id=exitInfo|x=247.0|y=10.0|color=247|text=退出详情|size=250|link=@显示<$STR(S$页数)>>
+<ListView|id=滑动窗口|x=10.0|y=5.0|children={收益详情1,收益详情2,收益详情3,收益详情4,收益详情5,收益详情6,收益详情7,收益详情8,收益详情9,收益详情10,收益详情11,收益详情12,收益详情13,收益详情14,收益详情15,收益详情16,收益详情17,收益详情18,收益详情19,收益详情20,收益详情21,收益详情22,收益详情23,收益详情24}|direction=1|bounce=0|margin=10|height=380|width=270|img=public/1900000678_3.png>
+
+<Text|id=exitInfo|size=16|x=255.0|y=410.0|color=250|text=退出详情|link=@显示<$STR(S$页数)>>
+
+<$str(S$回收收益详情)>
+
+[@改变]
+#IF
+EQUAL U<$STR(S$改变KEY)> 0
+#ACT
+MOV U<$STR(S$改变KEY)> 1
+mov T20 <$str(T20)>&<$str(S$系列)>
+#ELSEACT
+AnsiReplaceText T20 &<$str(S$系列)>  
+MOV U<$STR(S$改变KEY)> 0
+
+
+#IF
+#ACT
+mov S$回收系列 <$str(T20)>
+
+MOV S10
+
+; MOV N$回收结算1 0
+; MOV N$回收结算2 0
+
+LoopBagItems @勾选回调 S$勾选ID S$勾选KEY
+; GOTO @回收加成
+GOTO @显示<$STR(S$页签)>
+
+[@勾选回调]
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\新装备回收\回收分类\<$str(S$系列)>\<$str(S$系列)>列表.txt <$STR(S$勾选KEY)>
+EQUAL <$str(U<$str(S$改变KEY)>)> 1
+not CheckContainsText S12 <$STR(S$勾选ID)> 
+#ACT
+ReadConfigFileItem ..\QuestDiary\新装备回收\回收分类\<$str(S$系列)>\<$str(S$系列)>价格.txt <$STR(S$勾选KEY)> 元宝 N$元宝参数
+ReadConfigFileItem ..\QuestDiary\新装备回收\回收分类\<$str(S$系列)>\<$str(S$系列)>价格.txt <$STR(S$勾选KEY)> RMB点 N$RMB点参数
+ReadConfigFileItem ..\QuestDiary\新装备回收\回收分类\<$str(S$系列)>\<$str(S$系列)>价格.txt <$STR(S$勾选KEY)> 经验值 N$经验值参数
+; INC S12 <$STR(S$勾选ID)>,
+
+
+#if
+CHECKTEXTLIST ..\QuestDiary\新装备回收\回收分类\<$str(S$系列)>\<$str(S$系列)>列表.txt <$STR(S$勾选KEY)>
+EQUAL <$str(U<$str(S$改变KEY)>)> 0
+#act
+AnsiReplaceText S12 <$STR(S$勾选ID)>,    
+
+#if
+#act
+; S$勾选背包ID S$勾选背包KEY
+mov S$勾选背包ID <$STR(S$勾选ID)>
+mov S$勾选背包KEY <$STR(S$勾选KEY)>
+; sendmsg 5 ###<$str(S12)>**<$str(S$勾选背包ID)>**<$str(S$勾选背包KEY)>
+goto @勾选背包物品
+; SelectBagItems <$str(S12)>
+
+
+[@勾选背包物品]
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\新装备回收\回收分类\回收价格.txt 1 <$STR(S$勾选背包KEY)> S$回收收益B
+GetValidstr <$STR(S$回收收益B)> & S$回收收益B S$装备标记
+; sendmsg 5 <$str(S12)>---
+; #if
+; not equal <$str(S$装备标记)>  
+; #act
+; sendmsg 5 <$STR(S$勾选背包KEY)>---<$STR(S$勾选背包ID)>---U<$str(S$装备标记)>
+
+#if
+not equal <$str(S$装备标记)>  
+equal <$str(U<$str(S$装备标记)>)> 1
+not CheckContainsText S12 <$STR(S$勾选背包ID)> 
+; not CheckContainsText S12 <$STR(S$勾选背包ID)> 
+
+#act
+INC S12 <$STR(S$勾选背包ID)>,
+
+#if
+EQUAL <$str(U<$str(S$改变KEY)>)> 0
+#act
+AnsiReplaceText S12 <$STR(S$勾选ID)>,    
+
+#if
+#act
+SelectBagItems <$str(S12)>
+; sendmsg 5 S18***<$str(S18)>
+; S$勾选背包ID S$勾选背包KEY
+
+[@确认回收]
+#IF
+#ACT
+MOV N$回收结算1 0
+MOV N$回收结算2 0
+MOV N$回收结算3 0
+MOV N$回收结算4 0
+MOV N$回收结算5 0
+MOV N$回收结算6 0
+; sendmsg 5 确认回收了！！！！<$str(S12)>
+; DelItemByMakeIndex 258
+; break
+
+#if
+#act
+LoopBagItems @回收回调 S$回收ID S$回收KEY
+
+; money 元宝 + <$str(N$回收结算1)>
+; money RMB点 + <$str(N$回收结算2)>
+; CHANGEEXP + <$str(N$回收结算3)>
+
+#IF
+EQUAL <$str(N$回收结算1)> 0
+EQUAL <$str(N$回收结算2)> 0
+EQUAL <$str(N$回收结算3)> 0
+#ACT
+messagebox 您没有可以需要回收的物品。
+BREAK
+
+#if
+#act
+money 元宝 + <$str(N$回收结算1)>
+money RMB点 + <$str(N$回收结算2)>
+CHANGEEXP + <$str(N$回收结算3)>
+GuildNoticeMsg 255 56 玩家:『<$USERNAME>』回收获得大量货币！！
+; sendmsg 5 回收成功!!+<$str(N$回收结算1)>+<$str(N$回收结算2)>+<$str(N$回收结算3)>
+
+[@回收回调]
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\新装备回收\回收分类\回收价格.txt 1 <$STR(S$回收KEY)> S$回收收益A
+GetValidstr <$STR(S$回收收益A)> & S$剩余收益A S$装备标记
+GetValidstr <$STR(S$剩余收益A)> * S$元宝收益 S$剩余收益
+GetValidstr <$STR(S$剩余收益)> * S$RMB点收益 S$经验值收益
+; sendmsg 5 <$str(S$装备标记)>*--
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\新装备回收\回收分类\回收名单.txt <$STR(S$回收KEY)>
+equal U<$str(S$装备标记)> 1
+; CheckContainsText <$STR(S12)> <$STR(S$回收ID)>
+#ACT
+
+DelItemByMakeIndex <$STR(S$回收ID)>
+
+AnsiReplaceText S12 <$STR(S$回收ID)>,    
+
+INC N$回收结算1 <$STR(S$元宝收益)>
+INC N$回收结算2 <$STR(S$RMB点收益)>
+INC N$回收结算3 <$STR(S$经验值收益)>
+
+mov N$回收结算4 <$STR(S$元宝收益)>
+mov N$回收结算5 <$STR(S$RMB点收益)>
+mov N$回收结算6 <$STR(S$经验值收益)>
+
+
+
+[@自动使用物品1]
+#IF
+EQUAL U<$STR(S$改变KEY)> 0
+#ACT
+MOV U<$STR(S$改变KEY)> 1
+SENDMSG 6 自动使用经验券已开启!!
+
+#ELSEACT
+MOV U<$STR(S$改变KEY)> 0
+SENDMSG 6 自动使用经验券已关闭!!
+
+#if
+#act
+
+[@自动使用物品2]
+#IF
+EQUAL U<$STR(S$改变KEY)> 0
+#ACT
+MOV U<$STR(S$改变KEY)> 1
+SENDMSG 6 自动使用祝福油已开启!!
+
+#ELSEACT
+MOV U<$STR(S$改变KEY)> 0
+SENDMSG 6 自动使用祝福油已关闭!!
+
+[@自动回收开启]
+#IF
+check [799] 0
+#ACT
+set [799] 1
+SENDMSG 6 自动回收已开启!!
+
+#ELSEACT
+set [799] 0
+SENDMSG 6 自动回收已关闭!!
+
+; [@开启799]
+; #IF
+; ;充值大于100
+; large U97 0
+; #ACT
+; SET [799] 1
+; ;GOTO @显示<$STR(N$页签)>
+; SENDMSG 6 开启自动回收。
+; #elseact
+; messagebox  只有开通青铜赞助才能开启！
+
+; [@回收加成]
+; #IF
+; large U96 0
+; #ACT
+; CalcPer <$STR(N$回收结算1)> <$STR(U96)> N$回收结算1加成
+; ;CalcPer <$STR(N$回收结算2)> <$STR(U96)> N$回收结算2加成
+; inc N$回收结算1 <$STR(N$回收结算1加成)>
+; ;inc N$回收结算2 <$STR(N$回收结算2加成)>
+
+
+; [@选择物品]
+; #IF
+; #ACT
+; MOV S$删除串 <$STR(S0)>
+; MOV N$回收结算1 0
+; MOV N$回收结算2 0
+; ;SendMsg 0 --【】--<$STR(S0)>
+; LoopBagItems @回收回调 S$回收ID S$回收KEY
+; GOTO @回收加成
+; GOTO @显示<$STR(N$页签)>
+
+[@OpenLayer1000]
+#IF
+#ACT
+mov S$回收窗口打开 1 
+SENDMSG 7 面板打开
+
+[@CloseLayer1000]
+#IF
+#ACT
+mov S$回收窗口打开 0
+SENDMSG 7 面板关闭
+mov S12
+SelectBagItems <$str(S12)>
+
+
+}

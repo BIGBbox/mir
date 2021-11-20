@@ -1,0 +1,345 @@
+[@main]
+#if
+equal <$CLIENTFLAG> 1
+#say
+\ \
+<  加群   /AUTOCOLOR=253> <获得白银会员称号/AUTOCOLOR=251> <拥有属性：1.1倍爆率/AUTOCOLOR=250> <领取白银/@白银>\
+< 50 -灵符/AUTOCOLOR=253> <获得黄金会员称号/AUTOCOLOR=251> <拥有属性：1.2倍爆率/AUTOCOLOR=250> <领取黄金/@黄金>\
+< 200-灵符/AUTOCOLOR=253> <获得钻石会员称号/AUTOCOLOR=251> <拥有属性：1.3倍爆率/AUTOCOLOR=250> <领取钻石/@钻石>\
+<1000-灵符/AUTOCOLOR=253> <获得至尊会员称号/AUTOCOLOR=251> <拥有属性：1.5倍爆率/AUTOCOLOR=250> <领取至尊/@至尊>\
+<------------------------------------------------/AUTOCOLOR=9>\
+\          <1.请清理好包袱，至尊直接领取钻石，黄金白银的物品。/AUTOCOLOR=154>\
+\<温馨提示/AUTOCOLOR=254>：<2.每日可领相应的工资，会员等级越高回收获得的越多。/AUTOCOLOR=56>\
+\          <3.会员命令--@会员。/AUTOCOLOR=70>              <会员晋升/@会员晋升>\
+#elsesay
+<Img|width=620|height=250|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=253|size=18|text=加群>
+<Text|a=0|x=130.0|y=45.0|tipsx=10|tipsy=80|color=251|size=18|text=获得白银会员称号>
+<Text|a=0|x=303.0|y=45.0|tipsx=10|tipsy=80|color=250|size=18|text=拥有属性：1.1倍爆率>
+<Text|a=0|x=497.0|y=45.0|tipsx=10|tipsy=80|color=251|size=18|text=领取白银|link=@白银>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=253|size=18|text=50 -灵符>
+<Text|a=0|x=130.0|y=65.0|tipsx=10|tipsy=80|color=251|size=18|text=获得黄金会员称号>
+<Text|a=0|x=303.0|y=65.0|tipsx=10|tipsy=80|color=250|size=18|text=拥有属性：1.2倍爆率>
+<Text|a=0|x=497.0|y=65.0|tipsx=10|tipsy=80|color=251|size=18|text=领取黄金|link=@黄金>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=253|size=18|text=200-灵符>
+<Text|a=0|x=130.0|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=获得钻石会员称号>
+<Text|a=0|x=303.0|y=85.0|tipsx=10|tipsy=80|color=250|size=18|text=拥有属性：1.3倍爆率>
+<Text|a=0|x=497.0|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=领取钻石|link=@钻石>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=253|size=18|text=1000-灵符>
+<Text|a=0|x=130.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=获得至尊会员称号>
+<Text|a=0|x=303.0|y=105.0|tipsx=10|tipsy=80|color=250|size=18|text=拥有属性：1.5倍爆率>
+<Text|a=0|x=497.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=领取至尊|link=@至尊>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=9|size=18|text=------------------------------------------------>
+<Text|a=0|x=153|y=145|tipsx=10|tipsy=80|color=154|size=18|text=1.请清理好包袱，至尊直接领取钻石，黄金白银的物品。>
+<Text|a=0|x=43|y=165|tipsx=10|tipsy=80|color=254|size=18|text=温馨提示>
+<Text|a=0|x=131|y=165|tipsx=10|tipsy=80|color=255|size=18|text=：>
+<Text|a=0|x=153|y=165|tipsx=10|tipsy=80|color=56|size=18|text=2.每日可领相应的工资，会员等级越高回收获得的越多。>
+<Text|a=0|x=153|y=185|tipsx=10|tipsy=80|color=70|size=18|text=3.会员命令--@会员。>
+<Text|a=0|x=362|y=185|tipsx=10|tipsy=80|color=251|size=18|text=会员晋升|link=@会员晋升>
+
+
+[@会员晋升]
+#if
+equal <$CLIENTFLAG> 1
+#say
+\ \
+<白银晋升黄金/@晋升黄金>：<需要条件=白银会员+50个灵符/AUTOCOLOR=70>\
+<黄金晋升钻石/@晋升钻石>：<需要条件=黄金会员+150个灵符/AUTOCOLOR=154>\
+<钻石晋升至尊/@晋升至尊>：<需要条件=钻银会员+800个灵符/AUTOCOLOR=56>\
+<------------------------------------------------/AUTOCOLOR=9>\
+\          <1.请清理好包袱，至尊直接领取钻石，黄金白银的物品。/AUTOCOLOR=154>\
+\<温馨提示/AUTOCOLOR=254>：<2.每日可领相应的工资，会员等级越高回收获得的越多。/AUTOCOLOR=56>\
+\          <3.会员命令--@会员。/AUTOCOLOR=70>              \
+#elsesay
+<Img|width=620|height=230|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=251|size=18|text=白银晋升黄金|link=@晋升黄金>
+<Text|a=0|x=143.0|y=45.0|tipsx=10|tipsy=80|color=255|size=18|text=：>
+<Text|a=0|x=169.0|y=45.0|tipsx=10|tipsy=80|color=70|size=18|text=需要条件=白银会员+50个灵符>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=251|size=18|text=黄金晋升钻石|link=@晋升钻石>
+<Text|a=0|x=143.0|y=65.0|tipsx=10|tipsy=80|color=255|size=18|text=：>
+<Text|a=0|x=169.0|y=65.0|tipsx=10|tipsy=80|color=154|size=18|text=需要条件=黄金会员+150个灵符>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=251|size=18|text=钻石晋升至尊|link=@晋升至尊>
+<Text|a=0|x=143.0|y=85.0|tipsx=10|tipsy=80|color=255|size=18|text=：>
+<Text|a=0|x=169.0|y=85.0|tipsx=10|tipsy=80|color=56|size=18|text=需要条件=钻银会员+800个灵符>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=9|size=18|text=------------------------------------------------>
+<Text|a=0|x=153|y=125|tipsx=10|tipsy=80|color=154|size=18|text=1.请清理好包袱，至尊直接领取钻石，黄金白银的物品。>
+<Text|a=0|x=43|y=145|tipsx=10|tipsy=80|color=254|size=18|text=温馨提示>
+<Text|a=0|x=111.0|y=145.0|tipsx=10|tipsy=80|color=255|size=18|text=：>
+<Text|a=0|x=153|y=145|tipsx=10|tipsy=80|color=56|size=18|text=2.每日可领相应的工资，会员等级越高回收获得的越多。>
+<Text|a=0|x=153|y=165|tipsx=10|tipsy=80|color=70|size=18|text=3.会员命令--@会员。>
+
+
+[@晋升至尊]
+#IF
+equal U22 3
+CHECKGAMEGIRD > 799
+#act
+GAMEGIRD - 800
+mov U22 4
+GIVE 50000元宝 1
+SETICON 0 0 000002 0 -22 0 0
+; SetIcon 0 1 2 0 -22 1 0 200 0
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服荣誉的【至尊会员】！！！
+MESSAGEBOX 恭喜你成为本服荣誉的【至尊会员】系统将赠送你：1.5倍爆率属性！
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+#ELSEACT
+MESSAGEBOX 错误\\①你灵符金额不足600\\②你不是钻石会员！
+BREAK
+
+[@晋升钻石]
+#IF
+equal U22 2
+CHECKGAMEGIRD > 149
+#act
+GAMEGIRD - 150
+mov U22 3
+GIVE 50000元宝 1
+SETICON 0 0 000050 0 -22 0 0
+; SetIcon 0 1 50 0 -22 1 0 200 0
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服荣誉的【钻石会员】！！！
+MESSAGEBOX 恭喜你成为本服荣誉的【钻石会员】系统将赠送你：1.3倍爆率属性！
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+#ELSEACT
+MESSAGEBOX 错误\\①你灵符金额不足200\\②你不是黄金会员！
+BREAK
+
+
+
+[@晋升黄金]
+#IF
+equal U22 1
+CHECKGAMEGIRD > 49
+#act
+GAMEGIRD - 50
+mov U22 2
+GIVE 20000元宝 1
+GIVE 10000元宝 1
+SETICON 0 0 000051 0 -22 0 0
+; SetIcon 0 1 51 0 -22 1 0 200 0
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服荣誉的【黄金会员】！！！
+MESSAGEBOX 恭喜你成为本服荣誉的【黄金会员】系统将赠送你：1.2倍爆率属性！
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+#ELSEACT
+MESSAGEBOX 错误\\①你灵符金额不足100\\②你不是白银会员！
+BREAK
+
+
+
+
+
+
+
+[@至尊]
+#if
+equal u22 4
+#act
+MESSAGEBOX \\晋级失败:原因如下\\　　　　1.您已经是"至尊会员"无再次晋升！
+break
+
+#IF
+CHECKGAMEGIRD > 999
+#act
+GAMEGIRD - 1000
+mov U22 4
+GIVE 天精岩五转 2
+GIVE 地狱火五转 2
+GIVE 洗髓丹 20
+GIVE 血龙魄珠 20
+GIVE 麻痹戒指+4 1
+GIVE 复活戒指+4 1
+GIVE 护身戒指+4 1
+GIVE 1亿经验卷 2
+GIVE 超凡斗笠 1
+GIVE 超凡·盾 1
+GIVE 天精岩四转 4
+GIVE 地狱火四转 4
+GIVE 洗髓丹 10
+GIVE 血龙魄珠 10
+GIVE 2000W经验卷 2
+GIVE 钻石斗笠 1
+GIVE 钻石·盾 1
+GIVE 天精岩三转 3
+GIVE 地狱火三转 3
+GIVE 天精岩二转 2
+GIVE 地狱火二转 2
+GIVE 洗髓丹 5
+GIVE 血龙魄珠 5
+GIVE 1000W经验卷 2
+GIVE 黄金斗笠 1
+GIVE 黄金·盾 1
+GIVE 天精岩一转 2
+GIVE 地狱火一转 2
+GIVE 洗髓丹 3
+GIVE 血龙魄珠 3
+GIVE 1000W经验卷 1
+GIVE 白银斗笠 1
+GIVE 白银·盾 1
+GIVE 100000元宝 1
+SETICON 0 0 000002 0 -22 0 0
+; SetIcon 0 1 2 0 -22 1 0 200 0
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服荣誉的【至尊会员】！！！
+MESSAGEBOX 恭喜你成为本服荣誉的【至尊会员】系统将赠送你：1.5倍爆率属性！
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+#ELSEACT
+MESSAGEBOX 错误\\①你灵符金额不足\\②你已经领取过此会员！
+BREAK
+
+[@钻石]
+#if
+equal u22 4
+#act
+MESSAGEBOX \\晋级失败:原因如下\\　　　　1.您已经是"至尊会员"无再次晋升！
+break
+#if
+equal u22 3
+#act
+MESSAGEBOX \\晋级失败:原因如下\\　　　　1.您已经是"钻石会员"无再次晋升！
+break
+
+#IF
+CHECKGAMEGIRD >199
+#act
+GAMEGIRD - 200
+mov U22 3
+GIVE 天精岩四转 4
+GIVE 地狱火四转 4
+GIVE 洗髓丹 10
+GIVE 血龙魄珠 10
+GIVE 麻痹戒指+3 1
+GIVE 复活戒指+3 1
+GIVE 护身戒指+3 1
+GIVE 2000W经验卷 2
+GIVE 钻石斗笠 1
+GIVE 钻石·盾 1
+GIVE 天精岩三转 3
+GIVE 地狱火三转 3
+GIVE 天精岩二转 2
+GIVE 地狱火二转 2
+GIVE 洗髓丹 5
+GIVE 血龙魄珠
+GIVE 1000W经验卷 2
+GIVE 黄金斗笠 1
+GIVE 黄金·盾 1
+GIVE 天精岩一转 2
+GIVE 地狱火一转 2
+GIVE 洗髓丹 3
+GIVE 血龙魄珠 3
+GIVE 1000W经验卷 1
+GIVE 白银斗笠 1
+GIVE 白银·盾 1
+GIVE 50000元宝 1
+GIVE 10000元宝 1
+GIVE 20000元宝 1
+SETICON 0 0 000050 0 -22 0 0
+; SetIcon 0 1 50 0 -22 1 0 200 0
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服荣誉的【钻石会员】！！！
+MESSAGEBOX 恭喜你成为本服荣誉的【钻石会员】系统将赠送你：1.3倍爆率属性！
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+#ELSEACT
+MESSAGEBOX 错误\\①你灵符金额不足\\②你已经领取过此会员！
+BREAK
+
+[@黄金]
+#if
+equal u22 4
+#act
+MESSAGEBOX \\晋级失败:原因如下\\　　　　1.您已经是"至尊会员"无再次晋升！
+break
+#if
+equal u22 3
+#act
+MESSAGEBOX \\晋级失败:原因如下\\　　　　1.您已经是"钻石会员"无再次晋升！
+break
+#if
+equal u22 2
+#act
+MESSAGEBOX \\晋级失败:原因如下\\　　　　1.您已经是"黄金会员"无再次晋升！
+break
+
+
+#IF
+CHECKGAMEGIRD > 49
+#act
+GAMEGIRD - 50
+GIVE 天精岩三转 3
+GIVE 地狱火三转 3
+GIVE 天精岩二转 2
+GIVE 地狱火二转 2
+GIVE 洗髓丹 5
+GIVE 血龙魄珠 5
+GIVE 麻痹戒指+2 1
+GIVE 复活戒指+2 1
+GIVE 护身戒指+2 1
+GIVE 1000W经验卷 2
+GIVE 黄金斗笠 1
+GIVE 黄金·盾 1
+GIVE 天精岩一转 2
+GIVE 地狱火一转 2
+GIVE 洗髓丹 3
+GIVE 血龙魄珠 3
+GIVE 1000W经验卷 1
+GIVE 白银斗笠 1
+GIVE 白银·盾 1
+GIVE 50000元宝 1
+mov U22 2
+SETICON 0 0 000051 0 -22 0 0
+; SetIcon 0 1 51 0 -22 1 0 200 0
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服荣誉的【黄金会员】！！！
+MESSAGEBOX 恭喜你成为本服荣誉的【黄金会员】系统将赠送你：1.2倍爆率属性！
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+#ELSEACT
+MESSAGEBOX 错误\\①你灵符金额不足\\②你已经领取过此会员！
+BREAK
+
+[@白银]
+#if
+equal u22 4
+#act
+MESSAGEBOX \\晋级失败:原因如下\\　　　　1.您已经是"至尊会员"无再次晋升！
+break
+#if
+equal u22 3
+#act
+MESSAGEBOX \\晋级失败:原因如下\\　　　　1.您已经是"钻石会员"无再次晋升！
+break
+#if
+equal u22 2
+#act
+MESSAGEBOX \\晋级失败:原因如下\\　　　　1.您已经是"黄金会员"无再次晋升！
+break
+#if
+equal u22 1
+#act
+MESSAGEBOX \\晋级失败:原因如下\\　　　　1.您已经是"白银会员"无再次晋升！
+break
+
+
+#IF
+equal U22 0
+CHECKGAMEGIRD > 99
+#act
+GAMEGIRD - 100
+GIVE 天精岩一转 2
+GIVE 地狱火一转 2
+GIVE 洗髓丹 3
+GIVE 血龙魄珠 3
+GIVE 麻痹戒指+1 1
+GIVE 复活戒指+1 1
+GIVE 护身戒指+1 1
+GIVE 1000W经验卷 1
+GIVE 白银斗笠 1
+GIVE 白银·盾 1
+GIVE 20000元宝 1
+mov U22 1
+SETICON 0 0 000052 0 -22 0 0
+; SetIcon 0 1 52 0 -22 1 0 200 0
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服荣誉的【白银会员】！！！
+MESSAGEBOX 恭喜你成为本服荣誉的【白银会员】系统将赠送你：1.1倍爆率属性！
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+#ELSEACT
+MESSAGEBOX 错误\\①你灵符金额不足\\②你已经领取过此会员！
+BREAK

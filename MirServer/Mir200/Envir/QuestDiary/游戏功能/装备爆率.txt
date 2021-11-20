@@ -1,0 +1,52 @@
+[@装备爆率]
+{
+
+#IF
+#ACT
+MOV N2 100
+goto @装备爆率1
+BREAK
+
+
+[@装备爆率1]
+#IF
+equal u22 5
+#ACT
+INC N2 150
+
+#IF
+equal u22 4
+#ACT
+INC N2 150
+
+#IF
+equal u22 3
+#ACT
+INC N2 130
+
+#IF
+equal u22 2
+#ACT
+INC N2 120
+
+#IF
+equal u22 1
+#ACT
+INC N2 110
+
+#IF
+CHECKITEMW 1.5倍爆率勋章 1
+#ACT
+INC N2 150
+
+
+#IF
+#ACT
+SendCenterMsg 180 251 您当前杀怪<$STR(N2)>%爆率！！ 0 5
+;KILLMONBURSTRATE 20140220 20140221 <$STR(N2)> 20140223 20140224 20140225 20140226 65535 20140227 20140228
+KILLMONBURSTRATE <$STR(N2)> 65535
+BREAK
+
+
+
+}

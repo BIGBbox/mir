@@ -1,0 +1,104 @@
+(@@InPutString)
+[@登录检测]
+{
+#if
+checkvar human LoginPassWord =
+#act
+CALCVAR HUMAN LoginPassWordStatus = 0
+SAVEVAR HUMAN LOGINPASSWORDSTATUS
+CALCVAR HUMAN LoginPassWord = 0
+SAVEVAR HUMAN LOGINPASSWORD
+CALCVAR HUMAN LoginPassWordNum = 0
+SAVEVAR HUMAN LOGINPASSWORDNUM
+sendmsg 5 您还没有设置防盗密码保护,请尽设置防盗密码.
+MAPMOVE ERJI1 14 10
+break
+
+#if
+CHECKLEVELEX < 50
+checkvar human LoginPassWord = 0
+#act
+sendmsg 5 您还没有设置防盗密码保护,请尽设置防盗密码.
+MAPMOVE ERJI1 14 10
+break
+
+#if
+equal T1 空
+checkvar HUMAN LoginPassWord = <$HUMAN(LoginPassWord)>
+#act
+sendmsg 5 您还没有设置防盗密码保护,请尽设置防盗密码.
+#ELSEACT
+GOTO @未验证1
+BREAK
+
+[@未验证1]
+#if
+equal T1 <$IPADDR>
+#act
+sendmsg 6 本次登陆的IP地址与您上次登陆的IP符合,您可以正常游戏.
+#elseact
+MAPMOVE ERJI1 14 10
+ChangeModeEx 1 500
+ChangeModeEx 2 500
+ChangeModeEx 10 500
+DelayCall 30000 @密保验证下线
+DelayCall 31000 @下线
+DELAYGOTO 5 @验证密保
+sendmsg 6 本次登陆的IP地址与您上次登陆的IP不符合,请输入密保验证.
+BREAK
+
+[@验证密保]
+#if
+equal <$CLIENTFLAG> 1
+#say
+防止盗号，请设置防盗密码！\ \
+
+<防盗措施> <状态/FCOLOR=253> 〖<未验证/FCOLOR=250>〗\ \
+
+<验证防盗密码/@@InPutString52> \ \
+
+<拒绝盗号,安全保障/FCOLOR=250>
+<如果您在30秒未输入验证密码/FCOLOR=87><系统将会T您下线！>\
+#elsesay
+<Img|width=620|height=240|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=18|text=防止盗号，请设置防盗密码！\ \>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=255|size=18|text=防盗措施>
+<Text|a=0|x=131|y=65|tipsx=10|tipsy=80|color=253|size=18|text=状态>
+<Text|a=0|x=175|y=65|tipsx=10|tipsy=80|color=255|size=18|text=〖>
+<Text|a=0|x=208|y=65|tipsx=10|tipsy=80|color=250|size=18|text=未验证>
+<Text|a=0|x=274|y=65|tipsx=10|tipsy=80|color=255|size=18|text=〗\ \>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=251|size=18|text=验证防盗密码|link=@@INPUTSTRING52>
+<Text|a=0|x=32.0|y=139.0|tipsx=10|tipsy=80|color=250|size=18|text=拒绝盗号,安全保障>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=87|size=18|text=如果您在30秒未输入验证密码>
+<Text|a=0|x=318|y=165|tipsx=10|tipsy=80|color=255|size=18|text=系统将会T您下线！>
+
+
+[@InPutString52]
+#if
+EQUAL S52 <$HUMAN(LoginPassWord)>
+#act
+CLEARDELAYGOTO
+ChangeModeEx 1 1
+ChangeModeEx 2 1
+ChangeModeEx 10 1
+MAPMOVE 3 330 330
+mov T1 <$IPADDR>
+MESSAGEBOX 【验证正确】\??\【您可以正常游戏了】
+CLOSE
+#elseact
+MESSAGEBOX 防盗密码输入错误！\??\请重新输入正确的防盗密码后确认！\??\防盗密码验证正确后才可以正常登陆游戏！
+break
+
+[@密保验证下线]
+#IF
+#ACT
+GuildNoticeMsg 254 200 30秒时间到，你没有输入防盗密码，踢你下线 SELF
+GuildNoticeMsg 254 200 30秒时间到，你没有输入防盗密码，踢你下线 SELF
+GuildNoticeMsg 254 200 30秒时间到，你没有输入防盗密码，踢你下线 SELF
+[@下线]
+#IF
+#act
+Kick
+}

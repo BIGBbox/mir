@@ -1,0 +1,51 @@
+[@main]
+#IF
+equal <$CLIENTFLAG> 1
+#say
+<此地图为本服终极地图,本地图爆本服一切,绝对不保留！/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
+<刷新时间/FCOLOR=56>:60分钟,BOSS:6小时   <冰雪森林/FCOLOR=56>:30分钟,BOSS:3小时\
+<              移动速度      攻击速度      攻击力      注意/FCOLOR=254>\
+<[冰雪]精灵/FCOLOR=251>      <正常/FCOLOR=250>          <很快/FCOLOR=253>         <正常/FCOLOR=250>       <血多/FCOLOR=154>\
+<[冰雪]野人/FCOLOR=251>       <慢/FCOLOR=70>            <慢/FCOLOR=70>          <变态/FCOLOR=56>      <当心被秒/FCOLOR=154>\
+<[冰雪]幽灵/FCOLOR=251>      <变态/FCOLOR=56>          <正常/FCOLOR=250>         <正常/FCOLOR=250>     <你跑不过它/FCOLOR=154>\
+<[冰雪]白野猪/FCOLOR=251>    <正常/FCOLOR=250>          <正常/FCOLOR=250>         <正常/FCOLOR=250>       <正常/FCOLOR=154>\
+<[冰雪]侍卫/FCOLOR=251>      <正常/FCOLOR=250>          <正常/FCOLOR=250>         <破防/FCOLOR=56>       <正常/FCOLOR=154>\
+
+#elsesay
+<Img|ay=1|x=0.0|y=1.0|width=620|height=240|scale9r=10|scale9l=10|bg=1|move=0|scale9t=10|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=18|text=此地图为本服终极地图,本地图爆本服一切,绝对不保留！>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=56|size=18|text=刷新时间>
+<Text|a=0|x=120|y=45|tipsx=10|tipsy=80|color=255|size=18|text=:60分钟,BOSS:6小时>
+<Text|a=0|x=351|y=45|tipsx=10|tipsy=80|color=56|size=18|text=冰雪森林>
+<Text|a=0|x=439|y=45|tipsx=10|tipsy=80|color=255|size=18|text=:30分钟,BOSS:3小时\>
+<Text|a=0|ay=1|x=148.0|y=64.0|tipsx=10|tipsy=80|color=254|size=18|text=移动速度>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=251|size=18|text=[冰雪]精灵>
+<Text|a=0|x=167.0|y=85.0|tipsx=10|tipsy=80|color=250|size=18|text=正常>
+<Text|a=0|x=286.0|y=85.0|tipsx=10|tipsy=80|color=253|size=18|text=很快>
+<Text|a=0|x=400.0|y=85.0|tipsx=10|tipsy=80|color=250|size=18|text=正常>
+<Text|a=0|x=505.0|y=85.0|tipsx=10|tipsy=80|color=154|size=18|text=血多>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=251|size=18|text=[冰雪]野人>
+<Text|a=0|x=178.0|y=105.0|tipsx=10|tipsy=80|color=70|size=18|text=慢>
+<Text|a=0|x=297.0|y=105.0|tipsx=10|tipsy=80|color=70|size=18|text=慢>
+<Text|a=0|x=400.0|y=105.0|tipsx=10|tipsy=80|color=56|size=18|text=变态>
+<Text|a=0|x=494.0|y=105.0|tipsx=10|tipsy=80|color=154|size=18|text=当心被秒>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=251|size=18|text=[冰雪]幽灵>
+<Text|a=0|x=167.0|y=125.0|tipsx=10|tipsy=80|color=56|size=18|text=变态>
+<Text|a=0|x=286.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=正常>
+<Text|a=0|x=400.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=正常>
+<Text|a=0|x=483.0|y=125.0|tipsx=10|tipsy=80|color=154|size=18|text=你跑不过它>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=251|size=18|text=[冰雪]白野猪>
+<Text|a=0|x=167.0|y=145.0|tipsx=10|tipsy=80|color=250|size=18|text=正常>
+<Text|a=0|x=286.0|y=145.0|tipsx=10|tipsy=80|color=250|size=18|text=正常>
+<Text|a=0|x=400.0|y=145.0|tipsx=10|tipsy=80|color=250|size=18|text=正常>
+<Text|a=0|x=505.0|y=145.0|tipsx=10|tipsy=80|color=154|size=18|text=正常>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=251|size=18|text=[冰雪]侍卫>
+<Text|a=0|x=167.0|y=165.0|tipsx=10|tipsy=80|color=250|size=18|text=正常>
+<Text|a=0|x=286.0|y=165.0|tipsx=10|tipsy=80|color=250|size=18|text=正常>
+<Text|a=0|x=400.0|y=165.0|tipsx=10|tipsy=80|color=56|size=18|text=破防>
+<Text|a=0|x=505.0|y=165.0|tipsx=10|tipsy=80|color=154|size=18|text=正常>
+<Text|ay=1|x=270.0|y=64.0|size=18|color=254|text=攻击速度>
+<Text|ay=1|x=391.0|y=63.0|size=18|color=254|text=攻击力>
+<Text|ay=1|x=504.0|y=64.0|size=18|color=254|text=注意>

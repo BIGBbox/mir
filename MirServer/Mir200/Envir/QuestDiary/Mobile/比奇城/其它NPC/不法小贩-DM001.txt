@@ -1,0 +1,1787 @@
+[@Settings]
+{
+#IF
+#ACT
+GOTO @NPC_0
+GOTO @NPC_1
+GOTO @NPC_2
+
+[@物品列表]
+#IF
+#ACT
+;当前页数
+Mov N$当前页数 1
+;最大页数,每页10件物品
+
+Mov S$ItemList1 蜡烛
+Mov S$ItemList2 修复油
+Mov S$ItemList3 骰子
+Mov S$ItemList4 
+Mov S$ItemList5 
+Mov S$ItemList6 
+Mov S$ItemList7 
+Mov S$ItemList8 
+Mov S$ItemList9 
+Mov S$ItemList10 
+
+Mov S$ItemList11 
+
+Mov S$ItemList12 
+Mov S$ItemList13 
+Mov S$ItemList14 
+Mov S$ItemList15
+Mov S$ItemList16 
+Mov S$ItemList17 
+Mov S$ItemList18 
+
+Mov S$ItemList19 
+Mov S$ItemList20 
+Mov S$ItemList21 
+Mov S$ItemList22 
+Mov S$ItemList23 
+Mov S$ItemList24
+
+Mov S$ItemList25
+Mov S$ItemList26
+Mov S$ItemList27
+Mov S$ItemList28
+Mov S$ItemList29
+Mov S$ItemList30
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@NPC_1]
+#IF
+#ACT
+
+Mov S$名字  <Text|id=5|text=<$NPCNAME>|x=30|y=20|size=18|color=1005>
+Mov S$内容1 <Text|id=6|text=一路上还好吧？要买什么?|x=30|y=60|size=16>
+;Mov S$内容2 <Text|id=7|text=但是别想讲价钱。|x=30|y=80|size=16>
+;Mov S$内容3 <Text|id=8|text=不知道今天能不能回到家。|x=30|y=100|size=16>
+
+Mov S$标识1 <Img|id=9|img=public/btn_npcfh_03.png|x=35|y=138>
+Mov S$范围1 <Layout|id=10|x=35|y=120|width=80|height=50|link=@buy_c>
+Mov S$按钮1 <Text|id=11|text=购买|x=60|y=133|size=16|color=1001|link=@buy_c>
+
+Mov S$标识2 <Img|id=12|img=public/btn_npcfh_03.png|x=125|y=138>
+Mov S$范围2 <Layout|id=13|x=125|y=120|width=80|height=50|link=@sell>
+Mov S$按钮2 <Text|id=14|text=出售|x=150|y=133|size=16|color=1001|link=@sell>
+
+;buy sell repair
+
+Mov S$购买1 <Text|id=21|text=虽然有点贵，但是趁现在有快买吧。|x=30|y=60|size=16>
+;Mov S$购买2 <Text|id=22|text=内容|x=30|y=80|size=16>
+;Mov S$购买3 <Text|id=23|text=内容|x=30|y=100|size=16>
+
+Mov S$出售1 <Text|id=24|text=要卖什么东西？|x=30|y=60|size=16>
+;Mov S$出售2 <Text|id=25|text=内容|x=30|y=80|size=16>
+;Mov S$出售3 <Text|id=26|text=内容|x=30|y=100|size=16>
+
+Mov S$返回1 <Img|id=33|img=public/btn_npcfh_03.png|x=35|y=138>
+Mov S$返回2 <Layout|id=34|x=35|y=120|width=80|height=50|link=@main>
+Mov S$返回3 <Text|id=35|text=返回|x=60|y=133|size=16|color=1004|link=@main>
+
+
+
+
+[@NPC_2]
+
+<$STR(S$名字)>
+<$STR(S$内容1)>
+<$STR(S$内容2)>
+<$STR(S$内容3)>
+
+<$STR(S$范围1)>
+<$STR(S$标识1)>
+<$STR(S$按钮1)>
+
+<$STR(S$范围2)>
+<$STR(S$标识2)>
+<$STR(S$按钮2)>
+
+<$STR(S$范围3)>
+<$STR(S$标识3)>
+<$STR(S$按钮3)>
+
+<$STR(S$范围4)>
+<$STR(S$标识4)>
+<$STR(S$按钮4)>
+
+[@buy_c]
+#IF
+#ACT
+
+;tips显示开关
+MOV S$Itemtips 1
+
+MOV S$货币类型 金币
+
+
+goto @变量清零
+goto @物品列表
+goto @读取物品
+goto @读取物品价格
+
+
+[@说话]
+#IF
+#ACT
+Mov N$当前页数 1
+
+#SAY
+
+<Button|x=334|y=179|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Layout|x=337|y=180|width=80|height=80|link=@main>
+
+<$STR(S$名字)>\
+<$STR(S$购买1)>
+<$STR(S$购买2)>
+<$STR(S$购买3)>
+
+<$STR(S$返回1)>
+<$STR(S$返回2)>
+<$STR(S$返回3)>
+
+
+<Img|id=50|img=public/bg_npc_02.png|y=179>
+
+<Img|id=51|img=public/bg_npcsm_01.png|x=9|y=188>
+<Img|id=52|img=public/bg_npcsm_01.png|x=9|y=251>
+<Img|id=53|img=public/bg_npcsm_01.png|x=9|y=314>
+<Img|id=54|img=public/bg_npcsm_01.png|x=9|y=377>
+<Img|id=55|img=public/bg_npcsm_01.png|x=9|y=440>
+<Img|id=56|img=public/bg_npcsm_01.png|x=9|y=503>
+
+<Layout|id=57|y=565|width=130|height=50|link=@上一页>
+<Layout|id=58|x=200|y=565|width=130|height=50|link=@下一页>
+
+<Button|id=59|x=73|y=570|nimg=public/btn_fanye_01.png|pimg=public/btn_fanye_01_1.png|link=@上一页>
+<Img|id=60|img=public/1900000676.png|x=125|y=570>
+<Text|id=61|text=<$STR(N$当前页数)>／<$STR(N$最大页数)>|x=143|y=573|size=18>
+<Button|id=62|x=206|y=570|nimg=public/btn_fanye_02.png|pimg=public/btn_fanye_02_1.png|link=@下一页>
+
+
+#IF
+Not Equal N$ItemListId1 0
+#SAY
+<ItemShow|id=63|x=12|y=190|itemid=<$STR(N$ItemListId1)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=64|text=<$STR(S$ItemList1)>|x=80|y=195|size=18|color=1005>
+<Text|id=65|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice1)>|x=80|y=224|size=18>
+
+<Layout|id=66|x=245|y=200|width=80|height=50|link=@购买1>
+<Button|id=67|x=243|y=221|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买1>
+
+#IF
+Not Equal N$ItemListId2 0
+#SAY
+<ItemShow|id=68|x=12|y=252|itemid=<$STR(N$ItemListId2)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=69|text=<$STR(S$ItemList2)>|x=80|y=255|size=18|color=1005>
+<Text|id=70|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice2)>|x=80|y=287|size=18>
+
+<Layout|id=71|x=245|y=264|width=80|height=50|link=@购买2>
+<Button|id=72|x=243|y=284|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买2>
+
+#IF
+Not Equal N$ItemListId3 0
+#SAY
+<ItemShow|id=73|x=12|y=314|itemid=<$STR(N$ItemListId3)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=74|text=<$STR(S$ItemList3)>|x=80|y=319|size=18|color=1005>
+<Text|id=75|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice3)>|x=80|y=350|size=18>
+
+<Layout|id=76|x=245|y=327|width=80|height=50|link=@购买3>
+<Button|id=77|x=243|y=347|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买3>
+
+#IF
+Not Equal N$ItemListId4 0
+#SAY
+<ItemShow|id=78|x=12|y=376|itemid=<$STR(N$ItemListId4)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=79|text=<$STR(S$ItemList4)>|x=80|y=383|size=18|color=1005>
+<Text|id=80|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice4)>|x=80|y=413|size=18>
+
+<Layout|id=81|x=245|y=389|width=80|height=50|link=@购买4>
+<Button|id=82|x=243|y=410|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买4>
+
+#IF
+Not Equal N$ItemListId5 0
+#SAY
+<ItemShow|id=83|x=12|y=440|itemid=<$STR(N$ItemListId5)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=84|text=<$STR(S$ItemList5)>|x=80|y=444|size=18|color=1005>
+<Text|id=85|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice4)>|x=80|y=476|size=18>
+
+<Layout|id=86|x=245|y=453|width=80|height=50|link=@购买5>
+<Button|id=87|x=243|y=473|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买5>
+
+#IF
+Not Equal N$ItemListId6 0
+#SAY
+<ItemShow|id=88|x=12|y=503|itemid=<$STR(N$ItemListId6)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=89|text=<$STR(S$ItemList6)>|x=80|y=506|size=18|color=1005>
+<Text|id=90|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice4)>|x=80|y=539|size=18>
+
+<Layout|id=91|x=245|y=515|width=80|height=50|link=@购买6>
+<Button|id=92|x=243|y=536|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买6>
+
+
+#IF
+Not Equal <$Str(N$ItemListPrice1)> 0
+#ACT
+Mov  N$最大页数 1
+
+#IF
+Not Equal <$Str(N$ItemListPrice7)> 0
+#ACT
+Inc N$最大页数 1 
+
+#IF
+Not Equal <$Str(N$ItemListPrice13)> 0
+#ACT
+Inc N$最大页数 1 
+
+#IF
+Not Equal <$Str(N$ItemListPrice19)> 0
+#ACT
+Inc N$最大页数 1 
+
+;#If
+;Not Equal <$Str(N$ItemListPrice25)> 0
+;#Act
+;Inc N$最大页数 1 
+
+
+
+[@页数_2]
+#IF
+#ACT
+Mov N$当前页数 2
+#SAY
+
+<Button|x=334|y=179|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Layout|x=337|y=180|width=80|height=80|link=@main>
+
+<$STR(S$名字)>\
+<$STR(S$购买1)>
+<$STR(S$购买2)>
+<$STR(S$购买3)>
+
+<$STR(S$返回1)>
+<$STR(S$返回2)>
+<$STR(S$返回3)>
+
+
+<Img|id=50|img=public/bg_npc_02.png|y=179>
+
+<Img|id=51|img=public/bg_npcsm_01.png|x=9|y=188>
+<Img|id=52|img=public/bg_npcsm_01.png|x=9|y=251>
+<Img|id=53|img=public/bg_npcsm_01.png|x=9|y=314>
+<Img|id=54|img=public/bg_npcsm_01.png|x=9|y=377>
+<Img|id=55|img=public/bg_npcsm_01.png|x=9|y=440>
+<Img|id=56|img=public/bg_npcsm_01.png|x=9|y=503>
+
+<Layout|id=57|y=565|width=130|height=50|link=@上一页>
+<Layout|id=58|x=200|y=565|width=130|height=50|link=@下一页>
+
+<Button|id=59|x=73|y=570|nimg=public/btn_fanye_01.png|pimg=public/btn_fanye_01_1.png|link=@上一页>
+<Img|id=60|img=public/1900000676.png|x=125|y=570>
+<Text|id=61|text=<$STR(N$当前页数)>／<$STR(N$最大页数)>|x=143|y=573|size=18>
+<Button|id=62|x=206|y=570|nimg=public/btn_fanye_02.png|pimg=public/btn_fanye_02_1.png|link=@下一页>
+
+#IF
+Not Equal N$ItemListId7 0
+#SAY
+<ItemShow|id=63|x=12|y=190|itemid=<$STR(N$ItemListId7)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=64|text=<$STR(S$ItemList7)>|x=80|y=195|size=18|color=1005>
+<Text|id=65|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice7)>|x=80|y=224|size=18>
+
+<Layout|id=66|x=245|y=200|width=80|height=50|link=@购买7>
+<Button|id=67|x=243|y=221|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买7>
+
+
+#IF
+Not Equal N$ItemListId8 0
+#SAY
+<ItemShow|id=68|x=12|y=252|itemid=<$STR(N$ItemListId8)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=69|text=<$STR(S$ItemList8)>|x=80|y=255|size=18|color=1005>
+<Text|id=70|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice8)>|x=80|y=287|size=18>
+
+<Layout|id=71|x=245|y=264|width=80|height=50|link=@购买8>
+<Button|id=72|x=243|y=284|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买8>
+
+
+#IF
+Not Equal N$ItemListId9 0
+#SAY
+<ItemShow|id=73|x=12|y=314|itemid=<$STR(N$ItemListId9)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=74|text=<$STR(S$ItemList9)>|x=80|y=319|size=18|color=1005>
+<Text|id=75|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice9)>|x=80|y=350|size=18>
+
+<Layout|id=76|x=245|y=327|width=80|height=50|link=@购买9>
+<Button|id=77|x=243|y=347|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买9>
+
+#IF
+Not Equal N$ItemListId10 0
+#SAY
+<ItemShow|id=78|x=12|y=376|itemid=<$STR(N$ItemListId10)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=79|text=<$STR(S$ItemList10)>|x=80|y=383|size=18|color=1005>
+<Text|id=80|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice10)>|x=80|y=413|size=18>
+
+<Layout|id=81|x=245|y=389|width=80|height=50|link=@购买10>
+<Button|id=82|x=243|y=410|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买10>
+
+
+#IF
+Not Equal N$ItemListId11 0
+#SAY
+<ItemShow|id=83|x=12|y=440|itemid=<$STR(N$ItemListId11)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=84|text=<$STR(S$ItemList11)>|x=80|y=444|size=18|color=1005>
+<Text|id=85|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice11)>|x=80|y=476|size=18>
+
+<Layout|id=86|x=245|y=453|width=80|height=50|link=@购买11>
+<Button|id=87|x=243|y=473|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买11>
+
+#IF
+Not Equal N$ItemListId12 0
+#SAY
+<ItemShow|id=88|x=12|y=503|itemid=<$STR(N$ItemListId12)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=89|text=<$STR(S$ItemList12)>|x=80|y=506|size=18|color=1005>
+<Text|id=90|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice12)>|x=80|y=539|size=18>
+
+<Layout|id=91|x=245|y=515|width=80|height=50|link=@购买12>
+<Button|id=92|x=243|y=536|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买12>
+
+
+
+[@页数_3]
+#IF
+#ACT
+Mov N$当前页数 3
+#SAY
+
+<Button|x=334|y=179|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Layout|x=337|y=180|width=80|height=80|link=@main>
+
+<$STR(S$名字)>\
+<$STR(S$购买1)>
+<$STR(S$购买2)>
+<$STR(S$购买3)>
+
+<$STR(S$返回1)>
+<$STR(S$返回2)>
+<$STR(S$返回3)>
+
+
+<Img|id=50|img=public/bg_npc_02.png|y=179>
+
+<Img|id=51|img=public/bg_npcsm_01.png|x=9|y=188>
+<Img|id=52|img=public/bg_npcsm_01.png|x=9|y=251>
+<Img|id=53|img=public/bg_npcsm_01.png|x=9|y=314>
+<Img|id=54|img=public/bg_npcsm_01.png|x=9|y=377>
+<Img|id=55|img=public/bg_npcsm_01.png|x=9|y=440>
+<Img|id=56|img=public/bg_npcsm_01.png|x=9|y=503>
+
+<Layout|id=57|y=565|width=130|height=50|link=@上一页>
+<Layout|id=58|x=200|y=565|width=130|height=50|link=@下一页>
+
+<Button|id=59|x=73|y=570|nimg=public/btn_fanye_01.png|pimg=public/btn_fanye_01_1.png|link=@上一页>
+<Img|id=60|img=public/1900000676.png|x=125|y=570>
+<Text|id=61|text=<$STR(N$当前页数)>／<$STR(N$最大页数)>|x=143|y=573|size=18>
+<Button|id=62|x=206|y=570|nimg=public/btn_fanye_02.png|pimg=public/btn_fanye_02_1.png|link=@下一页>
+
+#IF
+Not Equal N$ItemListId13 0
+#SAY
+<ItemShow|id=63|x=12|y=190|itemid=<$STR(N$ItemListId13)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=64|text=<$STR(S$ItemList13)>|x=80|y=195|size=18|color=1005>
+<Text|id=65|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice13)>|x=80|y=224|size=18>
+
+<Layout|id=66|x=245|y=200|width=80|height=50|link=@购买13>
+<Button|id=67|x=243|y=221|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买13>
+
+
+#IF
+Not Equal N$ItemListId14 0
+#SAY
+<ItemShow|id=68|x=12|y=252|itemid=<$STR(N$ItemListId14)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=69|text=<$STR(S$ItemList14)>|x=80|y=255|size=18|color=1005>
+<Text|id=70|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice14)>|x=80|y=287|size=18>
+
+<Layout|id=71|x=245|y=264|width=80|height=50|link=@购买14>
+<Button|id=72|x=243|y=284|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买14>
+
+
+#IF
+Not Equal N$ItemListId15 0
+#SAY
+<ItemShow|id=73|x=12|y=314|itemid=<$STR(N$ItemListId15)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=74|text=<$STR(S$ItemList15)>|x=80|y=319|size=18|color=1005>
+<Text|id=75|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice15)>|x=80|y=350|size=18>
+
+<Layout|id=76|x=245|y=327|width=80|height=50|link=@购买15>
+<Button|id=77|x=243|y=347|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买15>
+
+#IF
+Not Equal N$ItemListId16 0
+#SAY
+<ItemShow|id=78|x=12|y=376|itemid=<$STR(N$ItemListId16)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=79|text=<$STR(S$ItemList16)>|x=80|y=383|size=18|color=1005>
+<Text|id=80|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice16)>|x=80|y=413|size=18>
+
+<Layout|id=81|x=245|y=389|width=80|height=50|link=@购买16>
+<Button|id=82|x=243|y=410|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买16>
+
+
+#IF
+Not Equal N$ItemListId17 0
+#SAY
+<ItemShow|id=83|x=12|y=440|itemid=<$STR(N$ItemListId17)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=84|text=<$STR(S$ItemList17)>|x=80|y=444|size=18|color=1005>
+<Text|id=85|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice17)>|x=80|y=476|size=18>
+
+<Layout|id=86|x=245|y=453|width=80|height=50|link=@购买17>
+<Button|id=87|x=243|y=473|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买17>
+
+#IF
+Not Equal N$ItemListId18 0
+#SAY
+<ItemShow|id=88|x=12|y=503|itemid=<$STR(N$ItemListId18)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=89|text=<$STR(S$ItemList18)>|x=80|y=506|size=18|color=1005>
+<Text|id=90|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice18)>|x=80|y=539|size=18>
+
+<Layout|id=91|x=245|y=515|width=80|height=50|link=@购买18>
+<Button|id=92|x=243|y=536|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买18>
+
+
+
+
+
+[@页数_4]
+#IF
+#ACT
+Mov N$当前页数 4
+#SAY
+
+<Button|x=334|y=179|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Layout|x=337|y=180|width=80|height=80|link=@main>
+
+<$STR(S$名字)>\
+<$STR(S$购买1)>
+<$STR(S$购买2)>
+<$STR(S$购买3)>
+
+<$STR(S$返回1)>
+<$STR(S$返回2)>
+<$STR(S$返回3)>
+
+
+<Img|id=50|img=public/bg_npc_02.png|y=179>
+
+<Img|id=51|img=public/bg_npcsm_01.png|x=9|y=188>
+<Img|id=52|img=public/bg_npcsm_01.png|x=9|y=251>
+<Img|id=53|img=public/bg_npcsm_01.png|x=9|y=314>
+<Img|id=54|img=public/bg_npcsm_01.png|x=9|y=377>
+<Img|id=55|img=public/bg_npcsm_01.png|x=9|y=440>
+<Img|id=56|img=public/bg_npcsm_01.png|x=9|y=503>
+
+<Layout|id=57|y=565|width=130|height=50|link=@上一页>
+<Layout|id=58|x=200|y=565|width=130|height=50|link=@下一页>
+
+<Button|id=59|x=73|y=570|nimg=public/btn_fanye_01.png|pimg=public/btn_fanye_01_1.png|link=@上一页>
+<Img|id=60|img=public/1900000676.png|x=125|y=570>
+<Text|id=61|text=<$STR(N$当前页数)>／<$STR(N$最大页数)>|x=143|y=573|size=18>
+<Button|id=62|x=206|y=570|nimg=public/btn_fanye_02.png|pimg=public/btn_fanye_02_1.png|link=@下一页>
+
+#IF
+Not Equal N$ItemListId19 0
+#SAY
+<ItemShow|id=63|x=12|y=190|itemid=<$STR(N$ItemListId19)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=64|text=<$STR(S$ItemList19)>|x=80|y=195|size=18|color=1005>
+<Text|id=65|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice19)>|x=80|y=224|size=18>
+
+<Layout|id=66|x=245|y=200|width=80|height=50|link=@购买19>
+<Button|id=67|x=243|y=221|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买19>
+
+
+#IF
+Not Equal N$ItemListId20 0
+#SAY
+<ItemShow|id=68|x=12|y=252|itemid=<$STR(N$ItemListId20)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=69|text=<$STR(S$ItemList20)>|x=80|y=255|size=18|color=1005>
+<Text|id=70|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice20)>|x=80|y=287|size=18>
+
+<Layout|id=71|x=245|y=264|width=80|height=50|link=@购买20>
+<Button|id=72|x=243|y=284|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买20>
+
+
+#IF
+Not Equal N$ItemListId21 0
+#SAY
+<ItemShow|id=73|x=12|y=314|itemid=<$STR(N$ItemListId21)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=74|text=<$STR(S$ItemList21)>|x=80|y=319|size=18|color=1005>
+<Text|id=75|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice21)>|x=80|y=350|size=18>
+
+<Layout|id=76|x=245|y=327|width=80|height=50|link=@购买21>
+<Button|id=77|x=243|y=347|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买21>
+
+#IF
+Not Equal N$ItemListId22 0
+#SAY
+<ItemShow|id=78|x=12|y=376|itemid=<$STR(N$ItemListId22)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=79|text=<$STR(S$ItemList22)>|x=80|y=383|size=18|color=1005>
+<Text|id=80|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice22)>|x=80|y=413|size=18>
+
+<Layout|id=81|x=245|y=389|width=80|height=50|link=@购买22>
+<Button|id=82|x=243|y=410|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买22>
+
+
+#IF
+Not Equal N$ItemListId23 0
+#SAY
+<ItemShow|id=83|x=12|y=440|itemid=<$STR(N$ItemListId23)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=84|text=<$STR(S$ItemList23)>|x=80|y=444|size=18|color=1005>
+<Text|id=85|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice23)>|x=80|y=476|size=18>
+
+<Layout|id=86|x=245|y=453|width=80|height=50|link=@购买23>
+<Button|id=87|x=243|y=473|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买23>
+
+#IF
+Not Equal N$ItemListId24 0
+#SAY
+<ItemShow|id=88|x=12|y=503|itemid=<$STR(N$ItemListId24)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=89|text=<$STR(S$ItemList24)>|x=80|y=506|size=18|color=1005>
+<Text|id=90|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice24)>|x=80|y=539|size=18>
+
+<Layout|id=91|x=245|y=515|width=80|height=50|link=@购买24>
+<Button|id=92|x=243|y=536|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买24>
+
+
+
+
+[@页数_5]
+#IF
+#ACT
+Mov N$当前页数 5
+#SAY
+
+<Button|x=334|y=179|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Layout|x=337|y=180|width=80|height=80|link=@main>
+
+<$STR(S$名字)>\
+<$STR(S$购买1)>
+<$STR(S$购买2)>
+<$STR(S$购买3)>
+
+<$STR(S$返回1)>
+<$STR(S$返回2)>
+<$STR(S$返回3)>
+
+
+<Img|id=50|img=public/bg_npc_02.png|y=179>
+
+<Img|id=51|img=public/bg_npcsm_01.png|x=9|y=188>
+<Img|id=52|img=public/bg_npcsm_01.png|x=9|y=251>
+<Img|id=53|img=public/bg_npcsm_01.png|x=9|y=314>
+<Img|id=54|img=public/bg_npcsm_01.png|x=9|y=377>
+<Img|id=55|img=public/bg_npcsm_01.png|x=9|y=440>
+<Img|id=56|img=public/bg_npcsm_01.png|x=9|y=503>
+
+<Layout|id=57|y=565|width=130|height=50|link=@上一页>
+<Layout|id=58|x=200|y=565|width=130|height=50|link=@下一页>
+
+<Button|id=59|x=73|y=570|nimg=public/btn_fanye_01.png|pimg=public/btn_fanye_01_1.png|link=@上一页>
+<Img|id=60|img=public/1900000676.png|x=125|y=570>
+<Text|id=61|text=<$STR(N$当前页数)>／<$STR(N$最大页数)>|x=143|y=573|size=18>
+<Button|id=62|x=206|y=570|nimg=public/btn_fanye_02.png|pimg=public/btn_fanye_02_1.png|link=@下一页>
+
+#IF
+Not Equal N$ItemListId25 0
+#SAY
+<ItemShow|id=63|x=12|y=190|itemid=<$STR(N$ItemListId25)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=64|text=<$STR(S$ItemList25)>|x=80|y=195|size=18|color=1005>
+<Text|id=65|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice25)>|x=80|y=224|size=18>
+
+<Layout|id=66|x=245|y=200|width=80|height=50|link=@购买25>
+<Button|id=67|x=243|y=221|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买25>
+
+
+#IF
+Not Equal N$ItemListId26 0
+#SAY
+<ItemShow|id=68|x=12|y=252|itemid=<$STR(N$ItemListId26)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=69|text=<$STR(S$ItemList26)>|x=80|y=255|size=18|color=1005>
+<Text|id=70|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice26)>|x=80|y=287|size=18>
+
+<Layout|id=71|x=245|y=264|width=80|height=50|link=@购买26>
+<Button|id=72|x=243|y=284|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买26>
+
+
+#IF
+Not Equal N$ItemListId27 0
+#SAY
+<ItemShow|id=73|x=12|y=314|itemid=<$STR(N$ItemListId27)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=74|text=<$STR(S$ItemList27)>|x=80|y=319|size=18|color=1005>
+<Text|id=75|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice27)>|x=80|y=350|size=18>
+
+<Layout|id=76|x=245|y=327|width=80|height=50|link=@购买27>
+<Button|id=77|x=243|y=347|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买27>
+
+#IF
+Not Equal N$ItemListId28 0
+#SAY
+<ItemShow|id=78|x=12|y=376|itemid=<$STR(N$ItemListId28)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=79|text=<$STR(S$ItemList28)>|x=80|y=383|size=18|color=1005>
+<Text|id=80|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice28)>|x=80|y=413|size=18>
+
+<Layout|id=81|x=245|y=389|width=80|height=50|link=@购买28>
+<Button|id=82|x=243|y=410|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买28>
+
+
+#IF
+Not Equal N$ItemListId29 0
+#SAY
+<ItemShow|id=83|x=12|y=440|itemid=<$STR(N$ItemListId29)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=84|text=<$STR(S$ItemList29)>|x=80|y=444|size=18|color=1005>
+<Text|id=85|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice29)>|x=80|y=476|size=18>
+
+<Layout|id=86|x=245|y=453|width=80|height=50|link=@购买29>
+<Button|id=87|x=243|y=473|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买29>
+
+#IF
+Not Equal N$ItemListId30 0
+#SAY
+<ItemShow|id=88|x=12|y=503|itemid=<$STR(N$ItemListId30)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=89|text=<$STR(S$ItemList30)>|x=80|y=506|size=18|color=1005>
+<Text|id=90|text=<$STR(S$货币类型)>：<$STR(N$ItemListPrice30)>|x=80|y=539|size=18>
+
+<Layout|id=91|x=245|y=515|width=80|height=50|link=@购买30>
+<Button|id=92|x=243|y=536|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买30>
+
+
+[@购买1]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice1
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice1
+give S$ItemList1 1
+SENDMSG 4 购买<$STR(S$ItemList1)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice1
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice1
+give S$ItemList1 1
+SENDMSG 4 购买<$STR(S$ItemList1)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice1)>. 1009 -1
+
+[@购买2]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice2
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice2
+give S$ItemList2 1
+SENDMSG 4 购买<$STR(S$ItemList2)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice2
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice2
+give S$ItemList2 1
+SENDMSG 4 购买<$STR(S$ItemList2)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice2)>. 1009 -1
+
+[@购买3]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice3
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice3
+give S$ItemList3 1
+SENDMSG 4 购买<$STR(S$ItemList3)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice3
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice3
+give S$ItemList3 1
+SENDMSG 4 购买<$STR(S$ItemList3)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice3)>. 1009 -1
+
+[@购买4]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice4
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice4
+give S$ItemList4 1
+SENDMSG 4 购买<$STR(S$ItemList4)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice4
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice4
+give S$ItemList4 1
+SENDMSG 4 购买<$STR(S$ItemList4)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice4)>. 1009 -1
+
+[@购买5]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice5
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice5
+give S$ItemList5 1
+SENDMSG 4 购买<$STR(S$ItemList5)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice5
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice5
+give S$ItemList5 1
+SENDMSG 4 购买<$STR(S$ItemList5)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice5)>. 1009 -1
+
+[@购买6]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice6
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice6
+give S$ItemList6 1
+SENDMSG 4 购买<$STR(S$ItemList6)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice6
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice6
+give S$ItemList6 1
+SENDMSG 4 购买<$STR(S$ItemList6)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice6)>. 1009 -1
+
+[@购买7]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice7
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice7
+give S$ItemList7 1
+SENDMSG 4 购买<$STR(S$ItemList7)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice7
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice7
+give S$ItemList7 1
+SENDMSG 4 购买<$STR(S$ItemList7)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice7)>. 1009 -1
+
+[@购买8]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice8
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice8
+give S$ItemList8 1
+SENDMSG 4 购买<$STR(S$ItemList8)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice8
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice8
+give S$ItemList8 1
+SENDMSG 4 购买<$STR(S$ItemList8)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice8)>. 1009 -1
+
+[@购买9]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice9
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice9
+give S$ItemList9 1
+SENDMSG 4 购买<$STR(S$ItemList9)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice9
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice9
+give S$ItemList9 1
+SENDMSG 4 购买<$STR(S$ItemList9)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice9)>. 1009 -1
+
+[@购买10]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice10
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice10
+give S$ItemList10 1
+SENDMSG 4 购买<$STR(S$ItemList10)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice10
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice10
+give S$ItemList10 1
+SENDMSG 4 购买<$STR(S$ItemList10)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice10)>. 1009 -1
+
+[@购买11]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice11
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice11
+give S$ItemList11 1
+SENDMSG 4 购买<$STR(S$ItemList11)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice11
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice11
+give S$ItemList11 1
+SENDMSG 4 购买<$STR(S$ItemList11)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice11)>. 1009 -1
+
+[@购买12]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice12
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice12
+give S$ItemList12 1
+SENDMSG 4 购买<$STR(S$ItemList12)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice12
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice12
+give S$ItemList12 1
+SENDMSG 4 购买<$STR(S$ItemList12)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice12)>. 1009 -1
+
+[@购买13]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice13
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice13
+give S$ItemList13 1
+SENDMSG 4 购买<$STR(S$ItemList13)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice13
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice13
+give S$ItemList13 1
+SENDMSG 4 购买<$STR(S$ItemList13)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice13)>. 1009 -1
+
+[@购买14]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice14
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice14
+give S$ItemList14 1
+SENDMSG 4 购买<$STR(S$ItemList14)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice14
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice14
+give S$ItemList14 1
+SENDMSG 4 购买<$STR(S$ItemList14)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice14)>. 1009 -1
+
+[@购买15]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice15
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice15
+give S$ItemList15 1
+SENDMSG 4 购买<$STR(S$ItemList15)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice15
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice15
+give S$ItemList15 1
+SENDMSG 4 购买<$STR(S$ItemList15)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice15)>. 1009 -1
+
+[@购买16]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice16
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice16
+give S$ItemList16 1
+SENDMSG 4 购买<$STR(S$ItemList16)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice16
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice16
+give S$ItemList16 1
+SENDMSG 4 购买<$STR(S$ItemList16)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice16)>. 1009 -1
+
+[@购买17]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice17
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice17
+give S$ItemList17 1
+SENDMSG 4 购买<$STR(S$ItemList17)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice17
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice17
+give S$ItemList17 1
+SENDMSG 4 购买<$STR(S$ItemList17)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice17)>. 1009 -1
+
+[@购买18]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice18
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice18
+give S$ItemList18 1
+SENDMSG 4 购买<$STR(S$ItemList18)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice18
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice18
+give S$ItemList18 1
+SENDMSG 4 购买<$STR(S$ItemList18)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice18)>. 1009 -1
+
+[@购买19]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice19
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice19
+give S$ItemList19 1
+SENDMSG 4 购买<$STR(S$ItemList19)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice19
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice19
+give S$ItemList19 1
+SENDMSG 4 购买<$STR(S$ItemList19)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice19)>. 1009 -1
+
+[@购买20]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice20
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice20
+give S$ItemList20 1
+SENDMSG 4 购买<$STR(S$ItemList20)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice20
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice20
+give S$ItemList20 1
+SENDMSG 4 购买<$STR(S$ItemList20)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice20)>. 1009 -1
+
+[@购买21]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice21
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice21
+give S$ItemList21 1
+SENDMSG 4 购买<$STR(S$ItemList21)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice21
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice21
+give S$ItemList21 1
+SENDMSG 4 购买<$STR(S$ItemList21)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice21)>. 1009 -1
+
+[@购买22]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice22
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice22
+give S$ItemList22 1
+SENDMSG 4 购买<$STR(S$ItemList22)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice22
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice22
+give S$ItemList22 1
+SENDMSG 4 购买<$STR(S$ItemList22)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice22)>. 1009 -1
+
+[@购买23]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice23
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice23
+give S$ItemList23 1
+SENDMSG 4 购买<$STR(S$ItemList23)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice23
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice23
+give S$ItemList23 1
+SENDMSG 4 购买<$STR(S$ItemList23)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice23)>. 1009 -1
+
+[@购买24]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice24
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice24
+give S$ItemList24 1
+SENDMSG 4 购买<$STR(S$ItemList24)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice24
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice24
+give S$ItemList24 1
+SENDMSG 4 购买<$STR(S$ItemList24)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice24)>. 1009 -1
+
+[@购买25]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice25
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice25
+give S$ItemList25 1
+SENDMSG 4 购买<$STR(S$ItemList25)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice25
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice25
+give S$ItemList25 1
+SENDMSG 4 购买<$STR(S$ItemList25)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice25)>. 1009 -1
+
+[@购买26]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice26
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice26
+give S$ItemList26 1
+SENDMSG 4 购买<$STR(S$ItemList26)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice26
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice26
+give S$ItemList26 1
+SENDMSG 4 购买<$STR(S$ItemList26)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice26)>. 1009 -1
+
+[@购买27]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice27
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice27
+give S$ItemList27 1
+SENDMSG 4 购买<$STR(S$ItemList27)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice27
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice27
+give S$ItemList27 1
+SENDMSG 4 购买<$STR(S$ItemList27)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice27)>. 1009 -1
+
+[@购买28]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice28
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice28
+give S$ItemList28 1
+SENDMSG 4 购买<$STR(S$ItemList28)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice28
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice28
+give S$ItemList28 1
+SENDMSG 4 购买<$STR(S$ItemList28)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice28)>. 1009 -1
+
+[@购买29]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice29
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice29
+give S$ItemList29 1
+SENDMSG 4 购买<$STR(S$ItemList29)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice29
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice29
+give S$ItemList29 1
+SENDMSG 4 购买<$STR(S$ItemList29)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice29)>. 1009 -1
+
+[@购买30]
+#IF
+CHECKMONEY <$STR(S$货币类型)> = N$ItemListPrice30
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice30
+give S$ItemList30 1
+SENDMSG 4 购买<$STR(S$ItemList30)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(S$货币类型)> > N$ItemListPrice30
+#ACT
+MONEY <$STR(S$货币类型)> - N$ItemListPrice30
+give S$ItemList30 1
+SENDMSG 4 购买<$STR(S$ItemList30)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 5 对不起，您的<$STR(S$货币类型)>不足<$STR(N$ItemListPrice30)>. 1009 -1
+
+[@读取物品]
+;读取物品Id
+#IF
+not Equal S$ItemList1 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList1)> idx N$ItemListId1
+
+#IF
+not Equal S$ItemList2 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList2)> idx N$ItemListId2
+
+#IF
+not Equal S$ItemList3 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList3)> idx N$ItemListId3
+
+#IF
+not Equal S$ItemList4 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList4)> idx N$ItemListId4
+
+#IF
+not Equal S$ItemList5 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList5)> idx N$ItemListId5
+
+#IF
+not Equal S$ItemList6 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList6)> idx N$ItemListId6
+
+#IF
+not Equal S$ItemList7 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList7)> idx N$ItemListId7
+
+#IF
+not Equal S$ItemList8 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList8)> idx N$ItemListId8
+
+#IF
+not Equal S$ItemList9 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList9)> idx N$ItemListId9
+
+#IF
+not Equal S$ItemList10
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList10)> idx N$ItemListId10
+
+#IF
+not Equal S$ItemList11
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList11)> idx N$ItemListId11
+
+#IF
+not Equal S$ItemList12 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList12)> idx N$ItemListId12
+
+#IF
+not Equal S$ItemList13 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList13)> idx N$ItemListId13
+
+#IF
+not Equal S$ItemList14 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList14)> idx N$ItemListId14
+
+#IF
+not Equal S$ItemList15 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList15)> idx N$ItemListId15
+
+#IF
+not Equal S$ItemList16 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList16)> idx N$ItemListId16
+
+#IF
+not Equal S$ItemList17 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList17)> idx N$ItemListId17
+
+#IF
+not Equal S$ItemList18 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList18)> idx N$ItemListId18
+
+#IF
+not Equal S$ItemList19 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList19)> idx N$ItemListId19
+
+#IF
+not Equal S$ItemList20 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList20)> idx N$ItemListId20
+
+#IF
+not Equal S$ItemList21 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList21)> idx N$ItemListId21
+
+#IF
+not Equal S$ItemList22 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList22)> idx N$ItemListId22
+
+#IF
+not Equal S$ItemList23 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList23)> idx N$ItemListId23
+
+#IF
+not Equal S$ItemList24 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList24)> idx N$ItemListId24
+
+#IF
+not Equal S$ItemList25 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList25)> idx N$ItemListId25
+
+#IF
+not Equal S$ItemList26 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList26)> idx N$ItemListId26
+
+#IF
+not Equal S$ItemList27 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList27)> idx N$ItemListId27
+
+#IF
+not Equal S$ItemList28 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList28)> idx N$ItemListId28
+
+#IF
+not Equal S$ItemList29 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList29)> idx N$ItemListId29
+
+#IF
+not Equal S$ItemList30 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList30)> idx N$ItemListId30
+
+
+
+
+[@读取物品价格]
+#IF
+not Equal S$ItemList1 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList1)> Price N$ItemListPrice1
+
+#IF
+not Equal S$ItemList2 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList2)> Price N$ItemListPrice2
+
+#IF
+not Equal S$ItemList3 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList3)> Price N$ItemListPrice3
+
+#IF
+not Equal S$ItemList4 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList4)> Price N$ItemListPrice4
+
+#IF
+not Equal S$ItemList5 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList5)> Price N$ItemListPrice5
+
+#IF
+not Equal S$ItemList6 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList6)> Price N$ItemListPrice6
+
+#IF
+not Equal S$ItemList7 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList7)> Price N$ItemListPrice7
+
+#IF
+not Equal S$ItemList8 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList8)> Price N$ItemListPrice8
+
+#IF
+not Equal S$ItemList9 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList9)> Price N$ItemListPrice9
+
+#IF
+not Equal S$ItemList10 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList10)> Price N$ItemListPrice10
+
+#IF
+not Equal S$ItemList11 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList11)> Price N$ItemListPrice11
+
+#IF
+not Equal S$ItemList12 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList12)> Price N$ItemListPrice12
+
+#IF
+not Equal S$ItemList13 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList13)> Price N$ItemListPrice13
+
+#IF
+not Equal S$ItemList14 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList14)> Price N$ItemListPrice14
+
+#IF
+not Equal S$ItemList15 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList15)> Price N$ItemListPrice15
+
+#IF
+not Equal S$ItemList16 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList16)> Price N$ItemListPrice16
+
+#IF
+not Equal S$ItemList17 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList17)> Price N$ItemListPrice17
+
+#IF
+not Equal S$ItemList18 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList18)> Price N$ItemListPrice18
+
+#IF
+not Equal S$ItemList19 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList19)> Price N$ItemListPrice19
+
+#IF
+not Equal S$ItemList20 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList20)> Price N$ItemListPrice20
+
+#IF
+not Equal S$ItemList21 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList21)> Price N$ItemListPrice21
+
+#IF
+not Equal S$ItemList22 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList22)> Price N$ItemListPrice22
+
+#IF
+not Equal S$ItemList23 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList23)> Price N$ItemListPrice23
+
+#IF
+not Equal S$ItemList24 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList24)> Price N$ItemListPrice24
+
+#IF
+not Equal S$ItemList25 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList25)> Price N$ItemListPrice25
+
+#IF
+not Equal S$ItemList26 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList26)> Price N$ItemListPrice26
+
+#IF
+not Equal S$ItemList27 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList27)> Price N$ItemListPrice27
+
+#IF
+not Equal S$ItemList28 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList28)> Price N$ItemListPrice28
+
+#IF
+not Equal S$ItemList29 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList29)> Price N$ItemListPrice29
+
+#IF
+not Equal S$ItemList30 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList30)> Price N$ItemListPrice30
+
+
+#IF
+#ACT
+goto @说话
+
+
+
+[@上一页]
+#If
+Equal N$当前页数 1
+#Act
+Sendmsg 10 当前位置已经是首页了 249 255
+
+#If
+Equal N$当前页数 2
+#Act
+Goto @说话
+
+#If
+Equal N$当前页数 3
+#Act
+Goto @页数_2
+
+#If
+Equal N$当前页数 4
+#Act
+Goto @页数_3
+
+#If
+Equal N$当前页数 5
+#Act
+Goto @页数_4
+
+[@下一页]
+#If
+Equal N$当前页数 <$Str(N$最大页数)>
+#Act
+Sendmsg 10 当前位置已经是尾页了  249 255
+Break
+
+;#IF
+;CHECKLEVELEX > 0
+;#ACT
+;sendmsg 6 <$Str(N$最大页数)>.<$Str(N$当前页数)>
+
+#IF
+Large N$最大页数 1
+Equal N$当前页数 1
+#ACT
+Goto @页数_2
+Break
+
+#IF
+Large N$最大页数 2
+Equal N$当前页数 2
+#ACT
+Goto @页数_3
+Break
+
+#If
+Large N$最大页数 3
+Equal N$当前页数 3
+#ACT
+Goto @页数_4
+Break
+
+#If
+Large N$最大页数 4
+Equal N$当前页数 4
+#ACT
+Goto @页数_5
+Break
+
+[@变量清零]
+#If
+#Act
+Mov N$ItemListPrice1 0
+Mov N$ItemListPrice2 0
+Mov N$ItemListPrice3 0
+Mov N$ItemListPrice4 0
+Mov N$ItemListPrice5 0
+Mov N$ItemListPrice6 0
+Mov N$ItemListPrice7 0
+Mov N$ItemListPrice8 0
+Mov N$ItemListPrice9 0
+Mov N$ItemListPrice10 0
+Mov N$ItemListPrice11 0
+Mov N$ItemListPrice12 0
+Mov N$ItemListPrice13 0
+Mov N$ItemListPrice14 0
+Mov N$ItemListPrice15 0
+Mov N$ItemListPrice16 0
+Mov N$ItemListPrice17 0
+Mov N$ItemListPrice18 0
+Mov N$ItemListPrice19 0
+Mov N$ItemListPrice20 0
+Mov N$ItemListPrice21 0
+Mov N$ItemListPrice22 0
+Mov N$ItemListPrice23 0
+Mov N$ItemListPrice24 0
+Mov N$ItemListPrice25 0
+Mov N$ItemListPrice26 0
+Mov N$ItemListPrice27 0
+Mov N$ItemListPrice28 0
+Mov N$ItemListPrice29 0
+Mov N$ItemListPrice30 0
+
+Mov N$ItemListId1 0
+Mov N$ItemListId2 0
+Mov N$ItemListId3 0
+Mov N$ItemListId4 0
+Mov N$ItemListId5 0
+Mov N$ItemListId6 0
+Mov N$ItemListId7 0
+Mov N$ItemListId8 0
+Mov N$ItemListId9 0
+Mov N$ItemListId10 0
+Mov N$ItemListId11 0
+Mov N$ItemListId12 0
+Mov N$ItemListId13 0
+Mov N$ItemListId14 0
+Mov N$ItemListId15 0
+Mov N$ItemListId16 0
+Mov N$ItemListId17 0
+Mov N$ItemListId18 0
+Mov N$ItemListId19 0
+Mov N$ItemListId20 0
+Mov N$ItemListId21 0
+Mov N$ItemListId22 0
+Mov N$ItemListId23 0
+Mov N$ItemListId24 0
+Mov N$ItemListId25 0
+Mov N$ItemListId26 0
+Mov N$ItemListId27 0
+Mov N$ItemListId28 0
+Mov N$ItemListId29 0
+Mov N$ItemListId30 0
+
+[@NPC_0]
+#IF
+#ACT
+Mov S$内容1 
+Mov S$内容2 
+Mov S$内容3 
+Mov S$购买1 
+Mov S$购买2 
+Mov S$购买3 
+Mov S$出售1 
+Mov S$出售2 
+Mov S$出售3 
+Mov S$修理1 
+Mov S$修理2 
+Mov S$修理3 
+Mov S$修理4 
+Mov S$修理5 
+Mov S$修理6 
+Mov S$标识1 
+Mov S$范围1 
+Mov S$按钮1 
+Mov S$标识2 
+Mov S$范围2 
+Mov S$按钮2 
+Mov S$标识3 
+Mov S$范围3 
+Mov S$按钮3 
+Mov S$标识4 
+Mov S$范围4 
+Mov S$按钮4 
+
+}
+
+
+[@Mobile_repair]
+{
+
+<Img|children={1,2,3}|img=public/bg_npc_01.png>
+<Button|id=1|x=546|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Layout|id=2|x=545|width=80|height=80|link=@exit>
+<Layout|id=3|x=337|y=180|width=80|height=80|link=@main>
+
+<$STR(S$名字)>\
+<$STR(S$修理1)>
+<$STR(S$修理2)>
+<$STR(S$修理3)>
+
+<Img|id=33|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|id=34|x=35|y=120|width=80|height=50|link=@main_n>
+<Text|id=35|text=返回|x=60|y=133|size=16|color=1004|link=@main_n>
+
+[@main_n]
+#IF
+#ACT
+close
+GOTO @main
+
+}
+
+
+
+[@Mobile_sell]
+{
+<Img|children={1,2,3}|img=public/bg_npc_01.png>
+<Button|id=1|x=546|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Layout|id=2|x=545|width=80|height=80|link=@exit>
+<Layout|id=3|x=337|y=180|width=80|height=80|link=@main>
+
+<$STR(S$名字)>
+<$STR(S$出售1)>
+<$STR(S$出售2)>
+<$STR(S$出售3)>
+
+<Img|id=33|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|id=34|x=35|y=120|width=80|height=50|link=@main_n>
+<Text|id=35|text=返回|x=60|y=133|size=16|color=1004|link=@main_n>
+
+[@main_n]
+#IF
+#ACT
+close
+GOTO @main
+
+}

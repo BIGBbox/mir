@@ -1,0 +1,40 @@
+[@Settings]
+{
+<TOUCHSIZE:80:80:0:510:0:0/@exit>
+{<$NPCNAME>/FCOLOR=210:0:0:20}\ \
+
+嘿，不管我多么喜欢钱，这么危险的事情我也不想干了。\
+你知道，我贩运的成本是非常高的。 \
+你应该付给我双倍的价格。如果你信任我，\
+没有任何异议的话，修补衣服我可是非常灵巧的啊.\
+
+<TOUCHSIZE:120:50:0:0:130:0/@repair>
+<Img:official/npc/1900012911.png:0:0:135>
+<修补衣物{FCOLOR=149}:30:130:18/@repair>
+
+<TOUCHSIZE:120:50:0:150:130:0/@exit>
+<Img:official/npc/1900012911.png:0:150:135>
+<离 开{FCOLOR=149}:180:130:18/@exit>
+
+}
+
+
+[@Mobile_repair]
+{
+<TOUCHSIZE:80:80:0:510:0:0/@exit>
+{<$NPCNAME>/FCOLOR=210:0:0:20}\ \
+
+我只处理衣物。\
+真正的工匠是不会什么都做的\
+什么都会做的,那肯定是骗子...\ \
+
+<TOUCHSIZE:120:50:0:0:130:0/@main_n>
+<Img:official/npc/1900012911.png:0:0:135>
+<返回{FCOLOR=149}:30:130:18/@main_n>
+
+[@main_n]
+#IF
+#ACT
+close
+GOTO @main
+}

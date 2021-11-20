@@ -1,0 +1,11 @@
+[@Settings]
+{
+<Text|text=<$NPCNAME>|x=30|y=20|size=18|color=1005>
+<Text|text=贫道就是这个道馆的馆长破关号，见到像你这样年少气盛的勇士|x=30|y=60|size=16>
+<Text|text=想起了很久以前我年轻时候的事情. 其中，一想到 季正,我就热血沸腾|x=30|y=80|size=16>
+<Text|text=哦,你可能太年轻不了解此事. 你想听季正的故事吗?|x=30|y=100|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=55|y=120|width=100|height=60|link=@exit>
+<Text|text=知道了！|x=60|y=133|size=16|color=1001|link=@exit>
+}

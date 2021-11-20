@@ -1,0 +1,84 @@
+[@main]
+#IF
+equal <$CLIENTFLAG> 1
+#say
+\ \
+\  <欢迎来到/FCOLOR=19>{[<$SERVERNAME>]/FCOLOR=249}<，用心制作，长久开放经典耐玩！/FCOLOR=19>\
+<╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┬┄┄┄┄┄┑/FCOLOR=254>\
+\  <血 龙 殿/FCOLOR=253>:<[BOSS]60分钟刷新，领主6小时刷新一次./FCOLOR=70><←/FCOLOR=254><三转进入/@xlzx1><←/FCOLOR=254>\
+<┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄├┄┄┄┄┄┤/FCOLOR=254>\
+\  <地图爆率/FCOLOR=250>:<装备、特戒、锻造材料、转生材料....../FCOLOR=154><←/FCOLOR=254><赞助进入/@xlzx3><←/FCOLOR=254>\\
+<┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄├┄┄┄┄┄┤/FCOLOR=254>\
+\  <进入条件/FCOLOR=250>:<三转、赞助免费进入.也可花500元宝进../FCOLOR=239><←/FCOLOR=254><元宝进入/@xlzx2><←/FCOLOR=254>\\
+<╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┴┄┄┄┄┄┚/FCOLOR=254>\
+\ \
+#elsesay
+<Img|width=620|height=240|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=65|y=45|tipsx=10|tipsy=80|color=19|size=18|text=欢迎来到>
+<Text|a=0|x=153|y=45|tipsx=10|tipsy=80|color=249|size=18|text=[<$SERVERNAME>]>
+<Text|a=0|x=318|y=45|tipsx=10|tipsy=80|color=19|size=18|text=用心制作，长久开放经典耐玩！>
+<Text|a=0|x=32.0|y=65.0|tipsx=10|tipsy=80|color=254|size=18|text=╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┬┄┄┄┄┄┄┄┑>
+<Text|a=0|x=51.0|y=85.0|tipsx=10|tipsy=80|color=253|size=18|text=血 龙 殿>
+<Text|a=0|x=130.0|y=84.0|tipsx=10|tipsy=80|color=255|size=18|text=:>
+<Text|a=0|ax=0|x=143.0|y=85.0|tipsx=10|tipsy=80|color=70|size=18|text=[BOSS]60分钟刷新，领主6小时刷新一次.>
+<Text|a=0|x=32.0|y=104.0|tipsx=10|tipsy=80|color=254|size=18|text=┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┤>
+<Text|a=0|ax=0|x=468.0|y=86.0|tipsx=10|tipsy=80|size=18|color=251|text=三转进入|link=@xlzx1>
+<Text|a=0|ax=0|x=548.0|y=86.0|tipsx=10|tipsy=80|color=254|size=18|text=←>
+<Text|a=0|x=51.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=地图爆率>
+<Text|a=0|x=130.0|y=125.0|tipsx=10|tipsy=80|color=255|size=18|text=:>
+<Text|a=0|ax=0|x=143.0|y=125.0|tipsx=10|tipsy=80|color=154|size=18|text=装备、特戒、锻造材料、转生材料....>
+<Text|a=0|x=32.0|y=145.0|tipsx=10|tipsy=80|color=254|size=18|text=┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┤>
+<Text|a=0|x=467.0|y=163.0|tipsx=10|tipsy=80|color=251|size=18|text=元宝进入|link=@xlzx2>
+<Text|a=0|ax=0|x=548|y=162.0|tipsx=10|tipsy=80|size=18|color=254|text=←>
+<Text|a=0|x=51.0|y=165.0|tipsx=10|tipsy=80|color=250|size=18|text=进入条件>
+<Text|a=0|x=130.0|y=165.0|tipsx=10|tipsy=80|color=255|size=18|text=:>
+<Text|a=0|ax=0|x=143.0|y=165.0|tipsx=10|tipsy=80|color=239|size=18|text=三转、赞助免费进入.也可花500元宝进..>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=254|size=18|text=╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┴┄┄┄┄┄┄┄┚>
+<Text|ax=0|x=459.0|y=125.0|size=18|color=251|text=赞助进入|link=@xlzx3>
+<Text|ax=0|x=539.0|y=124.0|size=18|color=254|text=←>
+
+
+[@xlzx3]
+#OR
+equal U22 4
+equal U22 3
+equal U22 2
+equal U22 1
+#act
+give 回城卷 1
+MapMove xls1
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖血龙殿〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖血龙殿〗,寻找高级装备！
+break
+#elseact
+MESSAGEBOX 你还不是本服的会员！无法进入！
+break
+
+[@xlzx1]
+#if
+CHECKRENEWLEVEL > 2
+#act
+give 回城卷 1
+MapMove xls1
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖血龙殿〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖血龙殿〗,寻找高级装备！
+break
+#elseact
+MESSAGEBOX 转生等级不够！无法进入！
+break
+
+[@xlzx2]
+#if
+CHECKGAMEGOLD > 499
+#act
+GAMEGOLD - 500
+give 回城卷 1
+MapMove xls1
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖血龙殿〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖血龙殿〗,寻找高级装备！
+break
+#elseact
+MESSAGEBOX 你的元宝不足！无法进入！
+break

@@ -1,0 +1,65 @@
+[@main]
+\
+¤╭⌒╮╭⌒╮                   \
+< ╱◥██◣/FCOLOR=249>╭⌒╮           <欢迎光临/FCOLOR=254>{<$SERVERNAME>/FCOLOR=249}\
+<︱田︱田田|╰-------------/FCOLOR=150>    　   　< 散人世界/FCOLOR=253>\
+<╔┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╗/FCOLOR=241>\
+<┊/FCOLOR=241><用心打造散人世界，让您找回曾经的传奇PK寻宝乐趣！。/FCOLOR=250>　<┊/FCOLOR=241>\
+<┊/FCOLOR=241><本地图为限时寻宝地图！。/FCOLOR=250><┊/FCOLOR=241>\
+<┊/FCOLOR=241><谢谢你的支持和赞助！！/FCOLOR=243>　　　　　　　　　　　　　　　<┊/FCOLOR=241>\
+<┊/FCOLOR=241>　　 <【60灵符】/@进入1>            <【120灵符】/@进入2>　　　 <┊/FCOLOR=241>\
+<╚┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╝/FCOLOR=241>\
+
+[@进入2]
+#IF
+;ISCASTLEGUILD
+#ACT
+GOTO @进入2A
+BREAK
+#ELSEACT
+MESSAGEBOX 你不是沙巴克成员，不能进入！！
+BREAK
+
+[@进入1]
+#IF
+;ISCASTLEGUILD
+#ACT
+GOTO @进入1A
+BREAK
+#ELSEACT
+MESSAGEBOX 你不是沙巴克成员，不能进入！！
+BREAK
+
+[@进入1A]
+#if
+CHECKGAMEGIRD > 59
+#ACT
+GAMEGIRD - 60
+TimeRecall 60
+MapMove srsj
+SendCenterMsg 180 251 你还剩余[%d秒]离开散人世界. 0 3600 @离开
+;SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖散人世界〗,寻找高级装备！ 1 3
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖散人世界〗,寻找高级装备！ 1 3
+;GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖散人世界〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖散人世界〗,寻找高级装备！
+break
+#elseact
+SendMsg 7 你的灵符不足！无法进入！
+break
+
+[@进入2A]
+#if
+CHECKGAMEGIRD > 119
+#ACT
+GAMEGIRD - 120
+TimeRecall 120
+MapMove srsj
+SendCenterMsg 180 251 你还剩余[%d秒]离开散人世界. 0 7200 @离开
+;SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖散人世界〗,寻找高级装备！ 1 3
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖散人世界〗,寻找高级装备！ 1 3
+;GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖散人世界〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖散人世界〗,寻找高级装备！
+break
+#elseact
+SendMsg 7 你的灵符不足！无法进入！
+break

@@ -1,0 +1,6 @@
+[@main]
+#IF
+CHECKLEVELEX > 0
+#ACT
+GAMEGOLD + 888
+SENDMSG 0 玩家<$USERNAME>消灭了真的疯狂半兽人，获得奖励888元宝!

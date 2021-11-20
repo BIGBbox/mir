@@ -1,0 +1,251 @@
+[@main]
+这里是回收系统你可以把你不需要的东西在我这里回收\
+<【残】鬼甲/@鬼甲>　           回收价格：20灵符\
+<【残】鬼衣/@鬼衣>　           回收价格：20灵符\
+<【残】流云·男/@【残】流云·男>　       回收价格：10灵符\
+<【残】流云·女/@【残】流云·女> 　      回收价格：10灵符\
+<【残】诛仙/@【残】诛仙>    　       回收价格：40灵符\
+<【残】流光/@【残】流光>    　       回收价格：10灵符\
+<【残】耀光/@【残】耀光>    　       回收价格：20灵符\
+<【残】鬼王/@【残】鬼王>    　       回收价格：60灵符\
+<【下一页】/@下一页>\
+
+[@下一页]
+<上古·手/@上古·手>      　       回收价格：50灵符\
+<上古·镯/@上古·镯>      　       回收价格：50灵符\
+<上古·带/@上古·带>      　       回收价格：50灵符\
+<上古·靴/@上古·靴>      　       回收价格：50灵符\
+<点点噬血链/@点点噬血链>    　       回收价格：50灵符\
+<点点死亡坠/@点点死亡坠>    　       回收价格：60灵符\
+<点点毁灭坠/@点点毁灭坠>    　       回收价格：60灵符\
+<黑色切割者/@黑色切割者>    　       回收价格：60灵符\
+<【下一页】/@下一页1>    <【上一页】/@main>
+
+[@下一页1]
+<狂徒血盾/@狂徒血盾>      　       回收价格：80灵符\
+<终极麻痹戒指/@终极麻痹戒指>  　       回收价格：60灵符\
+<终极复活戒指/@终极复活戒指>  　       回收价格：80灵符\
+<群体雷电术/@群体雷电术>    　       回收价格：120灵符\
+<开天斩/@开天斩>        　       回收价格：100灵符\
+<逐日剑法/@逐日剑法>      　       回收价格：80灵符\
+<护体神盾/@护体神盾>      　       回收价格：60灵符\
+<强化烈火剑法/@强化烈火剑法>  　       回收价格：40灵符\
+<【上一页】/@下一页>\
+
+
+[@鬼甲]
+#if
+checkitem 【残】鬼甲 1
+#ACT
+take 【残】鬼甲 1
+GAMEGIRD + 20
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了【残】鬼甲，获得了灵符
+
+
+
+[@鬼衣]
+#if
+checkitem 【残】鬼衣 1
+#ACT
+take 【残】鬼衣 1
+GAMEGIRD + 20
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了【残】鬼衣，获得了灵符
+
+
+[@【残】流云·男]
+#if
+checkitem 【残】流云·男 1
+#ACT
+take 【残】流云·男 1
+GAMEGIRD + 10
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了【残】流云·男，获得了灵符
+
+
+
+[@【残】流云·女]
+#if
+checkitem 【残】流云·女 1
+#ACT
+take 【残】流云·女 1
+GAMEGIRD + 10
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了【残】流云·女，获得了灵符
+
+
+
+[@【残】诛仙]
+#if
+checkitem 【残】诛仙 1
+#ACT
+take 【残】诛仙 1
+GAMEGIRD + 40
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了【残】诛仙，获得了灵符
+
+
+
+
+[@【残】流光]
+#if
+checkitem 【残】流光 1
+#ACT
+take 【残】流光 1
+GAMEGIRD + 10
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了【残】流光，获得了灵符
+
+
+
+[@【残】耀光]
+#if
+checkitem 【残】耀光 1
+#ACT
+take 【残】耀光 1
+GAMEGIRD + 20
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了【残】耀光，获得了灵符
+
+
+
+[@【残】鬼王]
+#if
+checkitem 【残】鬼王 1
+#ACT
+take 【残】鬼王 1
+GAMEGIRD + 60
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了【残】鬼王，获得了灵符
+
+
+
+
+[@上古·手]
+#if
+checkitem 上古·手 1
+#ACT
+take 上古·手 1
+GAMEGIRD + 50
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了上古·手，获得了灵符
+
+
+
+[@上古·镯]
+#if
+checkitem 上古·镯 1
+#ACT
+take 上古·镯 1
+GAMEGIRD + 50
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了上古·镯，获得了灵符
+
+
+
+[@上古·带]
+#if
+checkitem 上古·带 1
+#ACT
+take 上古·带 1
+GAMEGIRD + 50
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了上古·带，获得了灵符
+
+
+[@上古·靴]
+#if
+checkitem 上古·靴 1
+#ACT
+take 上古·靴 1
+GAMEGIRD + 50
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了上古·靴，获得了灵符
+
+
+[@点点噬血链]
+#if
+checkitem 点点噬血链 1
+#ACT
+take 点点噬血链 1
+GAMEGIRD + 50
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了点点噬血链，获得了灵符
+
+
+
+[@点点毁灭坠]
+#if
+checkitem 点点毁灭坠 1
+#ACT
+take 点点毁灭坠 1
+GAMEGIRD + 60
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了点点毁灭坠，获得了灵符
+
+
+
+[@黑色切割者]
+#if
+checkitem 黑色切割者 1
+#ACT
+take 黑色切割者 1
+GAMEGIRD + 60
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黑色切割者，获得了灵符
+
+
+[@狂徒血盾]
+#if
+checkitem 狂徒血盾 1
+#ACT
+take 狂徒血盾 1
+GAMEGIRD + 80
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了狂徒血盾，获得了灵符
+
+
+[@终极麻痹戒指]
+#if
+checkitem 终极麻痹戒指 1
+#ACT
+take 终极麻痹戒指 1
+GAMEGIRD + 60
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了终极麻痹戒指，获得了灵符
+
+
+[@终极复活戒指]
+#if
+checkitem 终极复活戒指 1
+#ACT
+take 终极复活戒指 1
+GAMEGIRD + 80
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了终极复活戒指，获得了灵符
+
+
+[@群体雷电术]
+#if
+checkitem 群体雷电术 1
+#ACT
+take 群体雷电术 1
+GAMEGIRD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了群体雷电术，获得了灵符
+
+[@开天斩]
+#if
+checkitem 开天斩 1
+#ACT
+take 开天斩 1
+GAMEGIRD + 100
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了开天斩，获得了灵符
+
+
+[@逐日剑法]
+#if
+checkitem 逐日剑法 1
+#ACT
+take 逐日剑法 1
+GAMEGIRD + 80
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日剑法，获得了灵符
+
+[@护体神盾]
+#if
+checkitem 护体神盾 1
+#ACT
+take 护体神盾 1
+GAMEGIRD + 60
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了护体神盾，获得了灵符
+
+
+[@强化烈火剑法]
+#if
+checkitem 强化烈火剑法 1
+#ACT
+take 强化烈火剑法 1
+GAMEGIRD + 40
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了强化烈火剑法，获得了灵符

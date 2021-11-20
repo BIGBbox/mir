@@ -1,0 +1,9 @@
+[@Settings]
+{
+<Text|text=<$NPCNAME>|x=30|y=20|size=18|color=1005>
+<Text|text=听说我的很多兄弟都在被人类差遣,真是可怜阿!|x=30|y=60|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@exit>
+<Text|text=离开|x=60|y=133|size=16|color=1001|link=@exit>
+}

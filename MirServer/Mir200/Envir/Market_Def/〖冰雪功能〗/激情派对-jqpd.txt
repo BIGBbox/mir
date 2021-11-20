@@ -1,0 +1,9 @@
+[@main]
+#IF
+EQUAL I66 1
+#ACT
+SENDMSG 4 活动正在火爆开启中..围绕我走动即可获得大量元宝经验值..
+break
+#elseACT
+SENDMSG 4 活动还没开始，请关注游戏提示..
+break

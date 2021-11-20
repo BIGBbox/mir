@@ -1,0 +1,78 @@
+[@Settings]
+{
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>
+
+<RText|text=
+
+\ \ \
+
+看你的衣服，很像打了很多猎的勇士。\
+以我的能力，能为你做的事情就是 \
+帮你修复衣服和头盔，\
+你需要修复衣服和头盔吗？
+
+>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@repair>
+<Text|text=修复衣服|x=60|y=133|size=16|color=1001|link=@repair>
+
+<Img|img=public/btn_npcfh_03.png|x=150|y=138>
+<Layout|x=150|y=120|width=80|height=50|link=@s_repair>
+<Text|text=特殊修理|x=180|y=133|size=16|color=1001|link=@s_repair>
+
+<Img|img=public/btn_npcfh_03.png|x=300|y=138>
+<Layout|x=300|y=120|width=80|height=50|link=@exit>
+<Text|text=关 闭|x=330|y=133|size=16|color=1001|link=@exit>
+
+}
+
+
+[@Mobile_repair]
+{
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>
+
+<RText|text=
+
+\ \ \
+
+请放上去要修复的物品。
+
+>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@main_n>
+<Text|text=返回|x=60|y=133|size=16|color=1001|link=@main_n>
+
+
+[@main_n]
+#IF
+#ACT
+close
+GOTO @main
+
+
+
+[@Mobile_s_repair]
+{
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>
+
+<RText|text=
+
+\ \ \
+
+你小子运气好，既然能来到这里，不过价格可是\
+普通的三倍哟，我就靠这个赚钱了。
+
+>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@main_n>
+<Text|text=返回|x=60|y=133|size=16|color=1001|link=@main_n>
+
+[@main_n]
+#IF
+#ACT
+close
+GOTO @main
+}

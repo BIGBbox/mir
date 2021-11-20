@@ -1,0 +1,154 @@
+[@main]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<Img|x=2.0|y=0.0|width=620|height=220|scale9r=10|scale9l=10|bg=1|scale9b=10|reset=1|move=0|img=public/bg_npc_01.png|scale9t=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=620.0|y=1.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=241|size=13|text=<$SERVERNAME>>
+<Text|a=0|x=219|y=25|tipsx=10|tipsy=80|color=251|size=13|text=转 生 系 统>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=250,253,254,241|size=13|text=---------------------------------------------------------->
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=254|size=13|text=本服特别为高级玩家开启到八转.转生证明各大地图可以爆出.>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=251|size=13|text=我要进行五转|link=@开始五转>
+<Text|a=0|x=132.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=降10级 上线1.12倍攻击加成>
+<Text|a=0|ax=0|x=315.0|y=85.0|tipsx=10|tipsy=80|color=255|size=13|text=需要材料:>
+<Text|a=0|x=393.0|y=85.0|tips={转生五重 /FCOLOR=132}^{────────/FCOLOR=168}^{天精岩五转*3/FCOLOR=151}^{地狱火五转*3/FCOLOR=254}^{6W元宝105级/FCOLOR=250}^{────────/FCOLOR=168}^|tipsx=10|tipsy=80|color=249|size=13|text=鼠标移至此处查看>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=251|size=13|text=我要进行六转|link=@开始六转>
+<Text|a=0|x=132.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=降20级 上线1.15倍攻击加成>
+<Text|a=0|ax=0|x=315.0|y=105.0|tipsx=10|tipsy=80|color=255|size=13|text=需要材料:>
+<Text|a=0|x=393.0|y=105.0|tips={转生六重 /FCOLOR=132}^{────────/FCOLOR=168}^{天精岩六转*4/FCOLOR=151}^{地狱火六转*4/FCOLOR=254}^{10W元宝115级/FCOLOR=250}^{────────/FCOLOR=168}^|tipsx=10|tipsy=80|color=249|size=13|text=鼠标移至此处查看>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=251|size=13|text=我要进行七转|link=@开始七转>
+<Text|a=0|x=132.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=降30级 上线1.20倍攻击加成>
+<Text|a=0|ax=0|x=315.0|y=125.0|tipsx=10|tipsy=80|color=255|size=13|text=需要材料:>
+<Text|a=0|x=393.0|y=125.0|tips={转生七重 /FCOLOR=132}^{────────/FCOLOR=168}^{天精岩七转*3/FCOLOR=151}^{地狱火七转*3/FCOLOR=254}^{15W元宝130级/FCOLOR=250}^{────────/FCOLOR=168}^|tipsx=10|tipsy=80|color=249|size=13|text=鼠标移至此处查看>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=251|size=13|text=我要进行八转|link=@开始八转>
+<Text|a=0|x=132.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=降35级 上线1.25倍攻击加成>
+<Text|a=0|ax=0|x=315.0|y=145.0|tipsx=10|tipsy=80|color=255|size=13|text=需要材料:>
+<Text|a=0|x=393.0|y=145.0|tips={转生八重 /FCOLOR=132}^{────────/FCOLOR=168}^{[八转]归一之精*4/FCOLOR=151}^{[八转]归一之神*4/FCOLOR=254}^{30W元宝120级/FCOLOR=250}^{────────/FCOLOR=168}^|tipsx=10|tipsy=80|color=249|size=13|text=鼠标移至此处查看>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=250,253,254,241|size=13|text=---------------------------------------------------------->
+#elsesay
+<Img|width=620|height=300|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32.0|y=22.0|tipsx=10|tipsy=80|color=241|size=18|text=<$SERVERNAME>>
+<Text|a=0|x=219.0|y=21.0|tipsx=10|tipsy=80|color=251|size=18|text=转 生 系 统>
+<Text|a=0|x=32.0|y=42.0|tipsx=10|tipsy=80|color=250,253,254,241|size=18|text=---------------------------------------------------------->
+<Text|a=0|x=32.0|y=62.0|tipsx=10|tipsy=80|color=254|size=18|text=本服特别为高级玩家开启到八转.转生证明各大地图可以爆出.>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=251|size=18|text=我要进行五转|link=@开始五转>
+<Text|a=0|x=149.0|y=85.0|tipsx=10|tipsy=80|color=250|size=18|text=降10级 上线1.12倍攻击加成>
+<Text|a=0|x=377.0|y=85.0|tipsx=10|tipsy=80|color=255|size=18|text=需要材料:>
+<Text|a=0|x=461.0|y=85.0|tips={转生五重 /FCOLOR=132}^{────────/FCOLOR=168}^{天精岩五转*3/FCOLOR=151}^{地狱火五转*3/FCOLOR=254}^{6W元宝105级/FCOLOR=250}^{────────/FCOLOR=168}^|tipsx=10|tipsy=80|color=249|size=18|text=鼠标移至此处查看>
+<Text|a=0|x=32.0|y=135.0|tipsx=10|tipsy=80|color=251|size=18|text=我要进行六转|link=@开始六转>
+<Text|a=0|x=149.0|y=135.0|tipsx=10|tipsy=80|color=250|size=18|text=降20级 上线1.15倍攻击加成>
+<Text|a=0|x=377.0|y=135.0|tipsx=10|tipsy=80|color=255|size=18|text=需要材料:>
+<Text|a=0|x=461.0|y=135.0|tips={转生六重 /FCOLOR=132}^{────────/FCOLOR=168}^{天精岩六转*4/FCOLOR=151}^{地狱火六转*4/FCOLOR=254}^{10W元宝115级/FCOLOR=250}^{────────/FCOLOR=168}^|tipsx=10|tipsy=80|color=249|size=18|text=鼠标移至此处查看>
+<Text|a=0|x=32.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=我要进行七转|link=@开始七转>
+<Text|a=0|x=149.0|y=185.0|tipsx=10|tipsy=80|color=250|size=18|text=降30级 上线1.20倍攻击加成>
+<Text|a=0|x=377.0|y=185.0|tipsx=10|tipsy=80|color=255|size=18|text=需要材料:>
+<Text|a=0|x=461.0|y=185.0|tips={转生七重 /FCOLOR=132}^{────────/FCOLOR=168}^{天精岩七转*3/FCOLOR=151}^{地狱火七转*3/FCOLOR=254}^{15W元宝130级/FCOLOR=250}^{────────/FCOLOR=168}^|tipsx=10|tipsy=80|color=249|size=18|text=鼠标移至此处查看>
+<Text|a=0|x=32.0|y=238.0|tipsx=10|tipsy=80|color=251|size=18|text=我要进行八转|link=@开始八转>
+<Text|a=0|x=149.0|y=238.0|tipsx=10|tipsy=80|color=250|size=18|text=降35级 上线1.25倍攻击加成>
+<Text|a=0|x=377.0|y=238.0|tipsx=10|tipsy=80|color=255|size=18|text=需要材料:>
+<Text|a=0|x=461.0|y=238.0|tips={转生八重 /FCOLOR=132}^{────────/FCOLOR=168}^{[八转]归一之精*4/FCOLOR=151}^{[八转]归一之神*4/FCOLOR=254}^{30W元宝120级/FCOLOR=250}^{────────/FCOLOR=168}^|tipsx=10|tipsy=80|color=249|size=18|text=鼠标移至此处查看>
+<Text|a=0|x=32.0|y=261.0|tipsx=10|tipsy=80|color=250,253,254,241|size=18|text=---------------------------------------------------------->
+
+
+[@开始九转]
+#IF
+CHECKRENEWLEVEL = 8
+CHECKLEVELEX > 129
+CHECKGAMEGOLD > 499999
+CHECKITEM [九转]归真之精 5
+CHECKITEM [九转]归真之神 5
+#act
+GAMEGOLD - 500000
+TAKE [九转]归真之精 5
+TAKE [九转]归真之神 5
+RENEWLEVEL 1 0 100
+CHANGELEVEL - 40
+POWERRATE 130 65535
+MESSAGEBOX 恭喜你转生成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功进行了第九次转生！
+#ELSEACT
+MESSAGEBOX 转生条件不足或你已经九转了！
+BREAK
+
+[@开始八转]
+#IF
+CHECKRENEWLEVEL = 7
+CHECKLEVELEX > 119
+CHECKGAMEGOLD > 299999
+CHECKITEM [八转]归一之精 4
+CHECKITEM [八转]归一之神 4
+#act
+GAMEGOLD - 300000
+TAKE [八转]归一之精 4
+TAKE [八转]归一之神 4
+RENEWLEVEL 1 0 50
+CHANGELEVEL - 35
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+MESSAGEBOX 恭喜你转生成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功进行了第八次转生！
+#ELSEACT
+MESSAGEBOX 转生条件不足或你已经八转了！
+BREAK
+
+[@开始七转]
+#IF
+CHECKRENEWLEVEL = 6
+CHECKLEVELEX > 129
+CHECKGAMEGOLD > 149999
+CHECKITEM 天精岩七转 3
+CHECKITEM 地狱火七转 3
+#act
+GAMEGOLD - 150000
+TAKE 天精岩七转 3
+TAKE 地狱火七转 3
+RENEWLEVEL 1 0 50
+CHANGELEVEL - 30
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+MESSAGEBOX 恭喜你转生成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功进行了第七次转生！
+#ELSEACT
+MESSAGEBOX 转生条件不足或你已经七转了！
+BREAK
+
+[@开始六转]
+#IF
+CHECKRENEWLEVEL = 5
+CHECKLEVELEX > 114
+CHECKGAMEGOLD > 99999
+CHECKITEM 天精岩六转 4
+CHECKITEM 地狱火六转 4
+#act
+GAMEGOLD - 100000
+TAKE 天精岩六转 4
+TAKE 地狱火六转 4
+RENEWLEVEL 1 0 50
+CHANGELEVEL - 20
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+MESSAGEBOX 恭喜你转生成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功进行了第六次转生！
+#ELSEACT
+MESSAGEBOX 转生条件不足或你已经六转了！
+BREAK
+
+[@开始五转]
+#IF
+CHECKRENEWLEVEL = 4
+CHECKLEVELEX > 104
+CHECKGAMEGOLD > 59999
+CHECKITEM 天精岩五转 3
+CHECKITEM 地狱火五转 3
+#act
+GAMEGOLD - 60000
+TAKE 天精岩五转 3
+TAKE 地狱火五转 3
+RENEWLEVEL 1 0 50
+CHANGELEVEL - 10
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+MESSAGEBOX 恭喜你转生成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功进行了第五次转生！
+#ELSEACT
+MESSAGEBOX 转生条件不足或你已经五转了！
+BREAK

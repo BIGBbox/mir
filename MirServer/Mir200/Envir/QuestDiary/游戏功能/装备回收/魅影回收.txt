@@ -1,0 +1,129 @@
+[@魅影回收]
+{
+#if
+checkitem 焚の幽皇 1
+#ACT
+take 焚の幽皇 1
+GAMEGOLD + 2000
+CHANGEEXP + 800000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @魅影回收
+break
+#if
+checkitem 噬魄の龙 1
+#ACT
+take 噬魄の龙 1
+GAMEGOLD + 2000
+CHANGEEXP + 800000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @魅影回收
+break
+#if
+checkitem 噬魄の凤 1
+#ACT
+take 噬魄の凤 1
+GAMEGOLD + 2000
+CHANGEEXP + 800000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @魅影回收
+break
+#if
+checkitem 修罗带 1
+#ACT
+take 修罗带 1
+GAMEGOLD + 1000
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @魅影回收
+break
+#if
+checkitem 伯爵靴 1
+#ACT
+take 伯爵靴 1
+GAMEGOLD + 1000
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @魅影回收
+break
+#if
+checkitem 天王镯 1
+#ACT
+take 天王镯 1
+GAMEGOLD + 1000
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @魅影回收
+break
+#if
+checkitem 圣皇手 1
+#ACT
+take 圣皇手 1
+GAMEGOLD + 1000
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @魅影回收
+break
+#if
+checkitem 诛の帝恨 1
+#ACT
+take 诛の帝恨 1
+GAMEGOLD + 2000
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @魅影回收
+break
+#if
+checkitem 瑶池の龙 1
+#ACT
+take 瑶池の龙 1
+GAMEGOLD + 2000
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @魅影回收
+break
+#if
+checkitem 瑶池の凤 1
+#ACT
+take 瑶池の凤 1
+GAMEGOLD + 2000
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @魅影回收
+break
+#if
+checkitem 神之靴 1
+#ACT
+take 神之靴 1
+GAMEGOLD + 1000
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @魅影回收
+break
+#if
+checkitem 无名镯 1
+#ACT
+take 无名镯 1
+GAMEGOLD + 1000
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @魅影回收
+break
+#if
+checkitem 玄帝手 1
+#ACT
+take 玄帝手 1
+GAMEGOLD + 1000
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @魅影回收
+break
+#if
+checkitem 仙界带 1
+#ACT
+take 仙界带 1
+GAMEGOLD + 1000
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @魅影回收
+break
+}

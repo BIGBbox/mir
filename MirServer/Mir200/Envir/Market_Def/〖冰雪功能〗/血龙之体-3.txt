@@ -1,0 +1,635 @@
+[@main]
+#IF
+equal U1 5
+#act
+close
+MESSAGEBOX 恭喜你炼成血龙之体已达到最高！！
+break
+
+#IF
+equal U1 4
+equal <$CLIENTFLAG> 1
+#SAY
+<Img|x=0.0|y=-1.0|width=520|height=220|rotate=0|scale9l=10|scale9r=10|bg=1|scale9b=10|scale9t=10|move=0|img=public/bg_npc_01.png|reset=1>
+<Layout|x=497.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=519.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=13|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=238.0|y=25.0|tipsx=10|tipsy=80|color=254|size=13|text=你当前血龙之体为【lv<$STR(U1)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=254|size=13|text=功能介绍:可以增加自身当前总血量的百分比>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=85.0|tipsx=10|tipsy=80|color=251|size=13|text=血龙之体lv1|link=@fenglv1>
+<Text|a=0|x=165.0|y=85.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=85.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加10%>
+<Text|a=0|x=381.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=105.0|tipsx=10|tipsy=80|color=251|size=13|text=血龙之体lv2|link=@fenglv2>
+<Text|a=0|x=165.0|y=105.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=105.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加20%>
+<Text|a=0|x=381.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=125.0|tipsx=10|tipsy=80|color=251|size=13|text=血龙之体lv3|link=@fenglv3>
+<Text|a=0|x=165.0|y=125.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=125.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加30%>
+<Text|a=0|x=381.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=145.0|tipsx=10|tipsy=80|color=251|size=13|text=血龙之体lv4|link=@fenglv4>
+<Text|a=0|x=165.0|y=145.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=145.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加40%>
+<Text|a=0|x=381.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=251|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=165.0|tipsx=10|tipsy=80|color=251|size=13|text=血龙之体lv5|link=@fenglv5>
+<Text|a=0|x=165.0|y=165.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=165.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加50%>
+<Text|a=0|x=381.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+#IF
+equal U1 4
+equal <$CLIENTFLAG> 2
+#SAY
+<Img|width=650|height=300|rotate=0|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1|scale9l=10>
+<Layout|x=628.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=650.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=18|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=263.0|y=25.0|tipsx=10|tipsy=80|color=254|size=18|text=你当前血龙之体为【lv<$STR(U1)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32.0|y=63.0|tipsx=10|tipsy=80|color=254|size=18|text=功能介绍:可以增加自身当前总血量的百分比>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=血龙之体lv1|link=@fenglv1>
+<Text|a=0|x=185.0|y=84.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=84.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=85.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加10%>
+<Text|a=0|x=490.0|y=85.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=125.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=血龙之体lv2|link=@fenglv2>
+<Text|a=0|x=185.0|y=124.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=125.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加20%>
+<Text|a=0|x=490.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=166.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=166.0|tipsx=10|tipsy=80|color=251|size=18|text=血龙之体lv3|link=@fenglv3>
+<Text|a=0|x=185.0|y=165.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=166.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加30%>
+<Text|a=0|x=490.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=205.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=205.0|tipsx=10|tipsy=80|color=251|size=18|text=血龙之体lv4|link=@fenglv4>
+<Text|a=0|x=185.0|y=204.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=205.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加40%>
+<Text|a=0|x=490.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=244.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=243.0|tipsx=10|tipsy=80|color=251|size=18|text=血龙之体lv5|link=@fenglv5>
+<Text|a=0|x=185.0|y=243.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=244.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加50%>
+<Text|a=0|x=490.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=266.0|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+
+#IF
+equal U1 3
+equal <$CLIENTFLAG> 1
+#SAY
+<Img|x=0.0|y=-1.0|width=520|height=220|rotate=0|scale9l=10|scale9r=10|bg=1|scale9b=10|scale9t=10|move=0|img=public/bg_npc_01.png|reset=1>
+<Layout|x=497.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=519.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=13|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=238.0|y=25.0|tipsx=10|tipsy=80|color=254|size=13|text=你当前血龙之体为【lv<$STR(U1)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=254|size=13|text=功能介绍:可以增加自身当前总血量的百分比>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=85.0|tipsx=10|tipsy=80|color=251|size=13|text=血龙之体lv1|link=@fenglv1>
+<Text|a=0|x=165.0|y=85.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=85.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加10%>
+<Text|a=0|x=381.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=105.0|tipsx=10|tipsy=80|color=251|size=13|text=血龙之体lv2|link=@fenglv2>
+<Text|a=0|x=165.0|y=105.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=105.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加20%>
+<Text|a=0|x=381.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=125.0|tipsx=10|tipsy=80|color=251|size=13|text=血龙之体lv3|link=@fenglv3>
+<Text|a=0|x=165.0|y=125.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=125.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加30%>
+<Text|a=0|x=381.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=145.0|tipsx=10|tipsy=80|color=251|size=13|text=血龙之体lv4|link=@fenglv4>
+<Text|a=0|x=165.0|y=145.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=145.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加40%>
+<Text|a=0|x=381.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=165.0|tipsx=10|tipsy=80|color=236|size=13|text=血龙之体lv5>
+<Text|a=0|x=165.0|y=165.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=165.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加50%>
+<Text|a=0|x=381.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+#IF
+equal U1 3
+equal <$CLIENTFLAG> 2
+#SAY
+<Img|width=650|height=300|rotate=0|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1|scale9l=10>
+<Layout|x=628.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=650.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=18|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=263.0|y=25.0|tipsx=10|tipsy=80|color=254|size=18|text=你当前血龙之体为【lv<$STR(U1)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32.0|y=63.0|tipsx=10|tipsy=80|color=254|size=18|text=功能介绍:可以增加自身当前总血量的百分比>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=血龙之体lv1|link=@fenglv1>
+<Text|a=0|x=185.0|y=84.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=84.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=85.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加10%>
+<Text|a=0|x=490.0|y=85.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=125.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=血龙之体lv2|link=@fenglv2>
+<Text|a=0|x=185.0|y=124.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=125.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加20%>
+<Text|a=0|x=490.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=166.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=166.0|tipsx=10|tipsy=80|color=251|size=18|text=血龙之体lv3|link=@fenglv3>
+<Text|a=0|x=185.0|y=165.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=166.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加30%>
+<Text|a=0|x=490.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=205.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=205.0|tipsx=10|tipsy=80|color=251|size=18|text=血龙之体lv4|link=@fenglv4>
+<Text|a=0|x=185.0|y=204.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=205.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加40%>
+<Text|a=0|x=490.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=244.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=243.0|tipsx=10|tipsy=80|color=236|size=18|text=血龙之体lv5>
+<Text|a=0|x=185.0|y=243.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=244.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加50%>
+<Text|a=0|x=490.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=266.0|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+
+#IF
+equal U1 2
+equal <$CLIENTFLAG> 1
+#SAY
+<Img|x=0.0|y=-1.0|width=520|height=220|rotate=0|scale9l=10|scale9r=10|bg=1|scale9b=10|scale9t=10|move=0|img=public/bg_npc_01.png|reset=1>
+<Layout|x=497.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=519.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=13|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=238.0|y=25.0|tipsx=10|tipsy=80|color=254|size=13|text=你当前血龙之体为【lv<$STR(U1)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=254|size=13|text=功能介绍:可以增加自身当前总血量的百分比>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=85.0|tipsx=10|tipsy=80|color=251|size=13|text=血龙之体lv1|link=@fenglv1>
+<Text|a=0|x=165.0|y=85.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=85.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加10%>
+<Text|a=0|x=381.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=105.0|tipsx=10|tipsy=80|color=251|size=13|text=血龙之体lv2|link=@fenglv2>
+<Text|a=0|x=165.0|y=105.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=105.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加20%>
+<Text|a=0|x=381.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=125.0|tipsx=10|tipsy=80|color=251|size=13|text=血龙之体lv3|link=@fenglv3>
+<Text|a=0|x=165.0|y=125.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=125.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加30%>
+<Text|a=0|x=381.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=145.0|tipsx=10|tipsy=80|color=236|size=13|text=血龙之体lv4>
+<Text|a=0|x=165.0|y=145.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=145.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加40%>
+<Text|a=0|x=381.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=165.0|tipsx=10|tipsy=80|color=236|size=13|text=血龙之体lv5>
+<Text|a=0|x=165.0|y=165.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=165.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加50%>
+<Text|a=0|x=381.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+#IF
+equal U1 2
+equal <$CLIENTFLAG> 2
+#SAY
+<Img|width=650|height=300|rotate=0|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1|scale9l=10>
+<Layout|x=628.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=650.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=18|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=263.0|y=25.0|tipsx=10|tipsy=80|color=254|size=18|text=你当前血龙之体为【lv<$STR(U1)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32.0|y=63.0|tipsx=10|tipsy=80|color=254|size=18|text=功能介绍:可以增加自身当前总血量的百分比>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=血龙之体lv1|link=@fenglv1>
+<Text|a=0|x=185.0|y=84.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=84.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=85.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加10%>
+<Text|a=0|x=490.0|y=85.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=125.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=血龙之体lv2|link=@fenglv2>
+<Text|a=0|x=185.0|y=124.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=125.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加20%>
+<Text|a=0|x=490.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=166.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=166.0|tipsx=10|tipsy=80|color=251|size=18|text=血龙之体lv3|link=@fenglv3>
+<Text|a=0|x=185.0|y=165.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=166.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加30%>
+<Text|a=0|x=490.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=205.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=205.0|tipsx=10|tipsy=80|color=236|size=18|text=血龙之体lv4>
+<Text|a=0|x=185.0|y=204.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=205.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加40%>
+<Text|a=0|x=490.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=244.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=243.0|tipsx=10|tipsy=80|color=236|size=18|text=血龙之体lv5>
+<Text|a=0|x=185.0|y=243.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=244.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加50%>
+<Text|a=0|x=490.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=266.0|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+#IF
+equal U1 1
+equal <$CLIENTFLAG> 1
+#SAY
+<Img|x=0.0|y=-1.0|width=520|height=220|rotate=0|scale9l=10|scale9r=10|bg=1|scale9b=10|scale9t=10|move=0|img=public/bg_npc_01.png|reset=1>
+<Layout|x=497.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=519.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=13|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=238.0|y=25.0|tipsx=10|tipsy=80|color=254|size=13|text=你当前血龙之体为【lv<$STR(U1)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=254|size=13|text=功能介绍:可以增加自身当前总血量的百分比>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=85.0|tipsx=10|tipsy=80|color=251|size=13|text=血龙之体lv1|link=@fenglv1>
+<Text|a=0|x=165.0|y=85.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=85.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加10%>
+<Text|a=0|x=381.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=105.0|tipsx=10|tipsy=80|color=251|size=13|text=血龙之体lv2|link=@fenglv2>
+<Text|a=0|x=165.0|y=105.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=105.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加20%>
+<Text|a=0|x=381.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=125.0|tipsx=10|tipsy=80|color=236|size=13|text=血龙之体lv3>
+<Text|a=0|x=165.0|y=125.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=125.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加30%>
+<Text|a=0|x=381.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=145.0|tipsx=10|tipsy=80|color=236|size=13|text=血龙之体lv4>
+<Text|a=0|x=165.0|y=145.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=145.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加40%>
+<Text|a=0|x=381.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=165.0|tipsx=10|tipsy=80|color=236|size=13|text=血龙之体lv5>
+<Text|a=0|x=165.0|y=165.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=165.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加50%>
+<Text|a=0|x=381.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+#IF
+equal U1 1
+equal <$CLIENTFLAG> 2
+#SAY
+<Img|width=650|height=300|rotate=0|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1|scale9l=10>
+<Layout|x=628.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=650.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=18|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=263.0|y=25.0|tipsx=10|tipsy=80|color=254|size=18|text=你当前血龙之体为【lv<$STR(U1)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32.0|y=63.0|tipsx=10|tipsy=80|color=254|size=18|text=功能介绍:可以增加自身当前总血量的百分比>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=血龙之体lv1|link=@fenglv1>
+<Text|a=0|x=185.0|y=84.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=84.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=85.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加10%>
+<Text|a=0|x=490.0|y=85.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=125.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=血龙之体lv2|link=@fenglv2>
+<Text|a=0|x=185.0|y=124.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=125.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加20%>
+<Text|a=0|x=490.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=166.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=166.0|tipsx=10|tipsy=80|color=236|size=18|text=血龙之体lv3>
+<Text|a=0|x=185.0|y=165.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=166.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加30%>
+<Text|a=0|x=490.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=205.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=205.0|tipsx=10|tipsy=80|color=236|size=18|text=血龙之体lv4>
+<Text|a=0|x=185.0|y=204.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=205.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加40%>
+<Text|a=0|x=490.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=244.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=243.0|tipsx=10|tipsy=80|color=236|size=18|text=血龙之体lv5>
+<Text|a=0|x=185.0|y=243.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=244.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加50%>
+<Text|a=0|x=490.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=266.0|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+
+#IF
+equal U1 0
+equal <$CLIENTFLAG> 1
+#SAY
+<Img|x=0.0|y=-1.0|width=520|height=220|rotate=0|scale9l=10|scale9r=10|bg=1|scale9b=10|scale9t=10|move=0|img=public/bg_npc_01.png|reset=1>
+<Layout|x=497.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=519.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=13|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=238.0|y=25.0|tipsx=10|tipsy=80|color=254|size=13|text=你当前血龙之体为【lv<$STR(U1)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=254|size=13|text=功能介绍:可以增加自身当前总血量的百分比>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=85.0|tipsx=10|tipsy=80|color=251|size=13|text=血龙之体lv1|link=@fenglv1>
+<Text|a=0|x=165.0|y=85.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=85.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加10%>
+<Text|a=0|x=381.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=105.0|tipsx=10|tipsy=80|color=236|size=13|text=血龙之体lv2>
+<Text|a=0|x=165.0|y=105.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=105.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加20%>
+<Text|a=0|x=381.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=125.0|tipsx=10|tipsy=80|color=236|size=13|text=血龙之体lv3>
+<Text|a=0|x=165.0|y=125.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=125.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加30%>
+<Text|a=0|x=381.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=145.0|tipsx=10|tipsy=80|color=236|size=13|text=血龙之体lv4>
+<Text|a=0|x=165.0|y=145.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=145.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加40%>
+<Text|a=0|x=381.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=165.0|tipsx=10|tipsy=80|color=236|size=13|text=血龙之体lv5>
+<Text|a=0|x=165.0|y=165.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=165.0|tipsx=10|tipsy=80|color=253|size=13|text=人物HP增加50%>
+<Text|a=0|x=381.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+
+#IF
+equal U1 0
+equal <$CLIENTFLAG> 2
+#SAY
+<Img|width=650|height=300|rotate=0|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1|scale9l=10>
+<Layout|x=628.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=650.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=18|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=263.0|y=25.0|tipsx=10|tipsy=80|color=254|size=18|text=你当前血龙之体为【lv<$STR(U1)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32.0|y=63.0|tipsx=10|tipsy=80|color=254|size=18|text=功能介绍:可以增加自身当前总血量的百分比>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=血龙之体lv1|link=@fenglv1>
+<Text|a=0|x=185.0|y=84.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=84.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=85.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加10%>
+<Text|a=0|x=490.0|y=85.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=125.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=125.0|tipsx=10|tipsy=80|color=236|size=18|text=血龙之体lv2>
+<Text|a=0|x=185.0|y=124.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=125.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加20%>
+<Text|a=0|x=490.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=166.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=166.0|tipsx=10|tipsy=80|color=236|size=18|text=血龙之体lv3>
+<Text|a=0|x=185.0|y=165.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=166.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加30%>
+<Text|a=0|x=490.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=205.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=205.0|tipsx=10|tipsy=80|color=236|size=18|text=血龙之体lv4>
+<Text|a=0|x=185.0|y=204.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=205.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加40%>
+<Text|a=0|x=490.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=244.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=243.0|tipsx=10|tipsy=80|color=236|size=18|text=血龙之体lv5>
+<Text|a=0|x=185.0|y=243.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=244.0|tipsx=10|tipsy=80|color=253|size=18|text=人物HP增加50%>
+<Text|a=0|x=490.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=266.0|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+
+[@fenglv8]
+#IF
+equal U1 7
+CHECKBAGSIZE  2
+CHECKITEM 血龙魄珠 99
+#act
+DEPRIVETITLE 血龙之体lv1
+DEPRIVETITLE 血龙之体lv2
+DEPRIVETITLE 血龙之体lv3
+DEPRIVETITLE 血龙之体lv4
+DEPRIVETITLE 血龙之体lv5
+DEPRIVETITLE 血龙之体lv6
+DEPRIVETITLE 血龙之体lv7
+DEPRIVETITLE 血龙之体lv8
+TAKE 血龙魄珠 99
+CONFERTITLE 血龙之体lv8
+MOV U1 8
+MESSAGEBOX 恭喜你炼成血龙之体lv8成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[血龙之体lv8]
+#ELSEACT
+MESSAGEBOX 错误\\①你没有【血龙魄珠】99个\\②你已经有血龙之体lv8的加成了！
+BREAK
+
+[@fenglv7]
+#IF
+equal U1 6
+CHECKBAGSIZE  2
+CHECKITEM 血龙魄珠 99
+#act
+DEPRIVETITLE 血龙之体lv1
+DEPRIVETITLE 血龙之体lv2
+DEPRIVETITLE 血龙之体lv3
+DEPRIVETITLE 血龙之体lv4
+DEPRIVETITLE 血龙之体lv5
+DEPRIVETITLE 血龙之体lv6
+DEPRIVETITLE 血龙之体lv7
+DEPRIVETITLE 血龙之体lv8
+TAKE 血龙魄珠 99
+CONFERTITLE 血龙之体lv7
+MOV U1 7
+MESSAGEBOX 恭喜你炼成血龙之体lv7成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[血龙之体lv7]
+#ELSEACT
+MESSAGEBOX 错误\\①你没有【血龙魄珠】99个\\②你已经有血龙之体lv7的加成了！
+BREAK
+
+
+[@fenglv6]
+#IF
+equal U1 5
+CHECKBAGSIZE  2
+CHECKITEM 血龙魄珠 99
+#act
+DEPRIVETITLE 血龙之体lv1
+DEPRIVETITLE 血龙之体lv2
+DEPRIVETITLE 血龙之体lv3
+DEPRIVETITLE 血龙之体lv4
+DEPRIVETITLE 血龙之体lv5
+DEPRIVETITLE 血龙之体lv6
+DEPRIVETITLE 血龙之体lv7
+DEPRIVETITLE 血龙之体lv8
+TAKE 血龙魄珠 99
+CONFERTITLE 血龙之体lv6
+MOV U1 6
+MESSAGEBOX 恭喜你炼成血龙之体lv6成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[血龙之体lv6]
+#ELSEACT
+MESSAGEBOX 错误\\①你没有【血龙魄珠】99个\\②你已经有血龙之体lv6的加成了！
+BREAK
+
+
+
+
+[@fenglv5]
+#IF
+equal U1 4
+CHECKBAGSIZE  2
+CHECKITEM 血龙魄珠 99
+#act
+DEPRIVETITLE 血龙之体lv1
+DEPRIVETITLE 血龙之体lv2
+DEPRIVETITLE 血龙之体lv3
+DEPRIVETITLE 血龙之体lv4
+DEPRIVETITLE 血龙之体lv5
+DEPRIVETITLE 血龙之体lv6
+DEPRIVETITLE 血龙之体lv7
+DEPRIVETITLE 血龙之体lv8
+TAKE 血龙魄珠 99
+CONFERTITLE 血龙之体lv5
+MOV U1 5
+MESSAGEBOX 恭喜你炼成血龙之体lv5成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[血龙之体lv5]
+goto @main
+#ELSEACT
+MESSAGEBOX 错误\\①你没有【血龙魄珠】99个\\②你已经有血龙之体lv5的加成了！
+BREAK
+
+[@fenglv4]
+#IF
+equal U1 3
+CHECKBAGSIZE  2
+CHECKITEM 血龙魄珠 40
+#act
+DEPRIVETITLE 血龙之体lv1
+DEPRIVETITLE 血龙之体lv2
+DEPRIVETITLE 血龙之体lv3
+DEPRIVETITLE 血龙之体lv4
+DEPRIVETITLE 血龙之体lv5
+DEPRIVETITLE 血龙之体lv6
+DEPRIVETITLE 血龙之体lv7
+DEPRIVETITLE 血龙之体lv8
+TAKE 血龙魄珠 40
+CONFERTITLE 血龙之体lv4
+MOV U1 4
+MESSAGEBOX 恭喜你炼成血龙之体lv4成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[血龙之体lv4]
+goto @main
+#ELSEACT
+MESSAGEBOX 错误\\①你没有【血龙魄珠】40个\\②你已经有血龙之体lv4的加成了！
+BREAK
+
+[@fenglv3]
+#IF
+equal U1 2
+CHECKBAGSIZE  2
+CHECKITEM 血龙魄珠 20
+#act
+DEPRIVETITLE 血龙之体lv1
+DEPRIVETITLE 血龙之体lv2
+DEPRIVETITLE 血龙之体lv3
+DEPRIVETITLE 血龙之体lv4
+DEPRIVETITLE 血龙之体lv5
+DEPRIVETITLE 血龙之体lv6
+DEPRIVETITLE 血龙之体lv7
+DEPRIVETITLE 血龙之体lv8
+TAKE 血龙魄珠 20
+CONFERTITLE 血龙之体lv3
+MOV U1 3
+MESSAGEBOX 恭喜你炼成血龙之体lv3成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[血龙之体lv3]
+goto @main
+#ELSEACT
+MESSAGEBOX 错误\\①你没有【血龙魄珠】20个\\②你已经有血龙之体lv3的加成了！
+BREAK
+
+[@fenglv2]
+#IF
+equal U1 1
+CHECKBAGSIZE  2
+CHECKITEM 血龙魄珠 10
+#act
+DEPRIVETITLE 血龙之体lv1
+DEPRIVETITLE 血龙之体lv2
+DEPRIVETITLE 血龙之体lv3
+DEPRIVETITLE 血龙之体lv4
+DEPRIVETITLE 血龙之体lv5
+DEPRIVETITLE 血龙之体lv6
+DEPRIVETITLE 血龙之体lv7
+DEPRIVETITLE 血龙之体lv8
+TAKE 血龙魄珠 10
+CONFERTITLE 血龙之体lv2
+MOV U1 2
+MESSAGEBOX 恭喜你炼成血龙之体lv2成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[血龙之体lv2]
+goto @main
+#ELSEACT
+MESSAGEBOX 错误\\①你没有【血龙魄珠】10个\\②你已经有血龙之体lv2的加成了！
+BREAK
+
+[@fenglv1]
+#IF
+equal U1 0
+CHECKBAGSIZE  2
+CHECKITEM 血龙魄珠 3
+#act
+DEPRIVETITLE 血龙之体lv1
+DEPRIVETITLE 血龙之体lv2
+DEPRIVETITLE 血龙之体lv3
+DEPRIVETITLE 血龙之体lv4
+DEPRIVETITLE 血龙之体lv5
+DEPRIVETITLE 血龙之体lv6
+DEPRIVETITLE 血龙之体lv7
+DEPRIVETITLE 血龙之体lv8
+TAKE 血龙魄珠 3
+CONFERTITLE 血龙之体lv1
+MOV U1 1
+MESSAGEBOX 恭喜你炼成血龙之体lv1成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[血龙之体lv1]
+goto @main
+#ELSEACT
+MESSAGEBOX 错误\\①你没有【血龙魄珠】3个\\②你已经有血龙之体lv1的加成了！
+BREAK

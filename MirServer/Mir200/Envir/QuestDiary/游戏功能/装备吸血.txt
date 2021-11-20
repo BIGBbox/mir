@@ -1,0 +1,232 @@
+[@吸血设置]
+{
+#IF
+equal U5 10
+#ACT
+INC N1 5
+#IF
+equal U5 8
+#ACT
+INC N1 4
+#IF
+equal U5 6
+#ACT
+INC N1 3
+#IF
+equal U5 4
+#ACT
+INC N1 2
+#IF
+equal U5 2
+#ACT
+INC N1 1
+
+#IF
+CHECKTITLE 血龙之体lv10
+#ACT
+INC N1 1
+#IF
+CHECKTITLE 血龙之体lv9
+#ACT
+INC N1 1
+#IF
+CHECKTITLE 血龙之体lv8
+#ACT
+INC N1 1
+#IF
+CHECKTITLE 血龙之体lv7
+#ACT
+INC N1 1
+#IF
+CHECKTITLE 血龙之体lv6
+#ACT
+INC N1 1
+#IF
+CHECKTITLE 血龙之体lv5
+#ACT
+INC N1 1
+#IF
+CHECKTITLE 血龙之体lv4
+#ACT
+INC N1 1
+#IF
+CHECKTITLE 血龙之体lv3
+#ACT
+INC N1 1
+#IF
+CHECKTITLE 血龙之体lv2
+#ACT
+INC N1 1
+#IF
+CHECKTITLE 血龙之体lv1
+#ACT
+INC N1 1
+#IF
+CHECKTITLE 先天之体lv8
+#ACT
+INC N1 1
+#IF
+CHECKTITLE 先天之体lv7
+#ACT
+INC N1 1
+#IF
+CHECKTITLE 先天之体lv6
+#ACT
+INC N1 1
+#IF
+CHECKTITLE 先天之体lv5
+#ACT
+INC N1 1
+#IF
+CHECKTITLE 先天之体lv4
+#ACT
+INC N1 1
+#IF
+CHECKTITLE 先天之体lv3
+#ACT
+INC N1 1
+#IF
+CHECKTITLE 先天之体lv2
+#ACT
+INC N1 1
+#IF
+CHECKTITLE 先天之体lv1
+#ACT
+INC N1 1
+
+
+
+#IF
+CHECKITEMW  主印【吸血①】 1
+#ACT
+INC N1 1
+
+#IF
+CHECKITEMW  主印【吸血②】 1
+#ACT
+INC N1 2
+#IF
+CHECKITEMW  主印【吸血③】 1
+#ACT
+INC N1 3
+
+#IF
+CHECKITEMW  主印【吸血④】 1
+#ACT
+INC N1 4
+
+#IF
+CHECKITEMW  主印【吸血⑤】 1
+#ACT
+INC N1 5
+
+#IF
+CHECKITEMW  主印【吸血⑥】 1
+#ACT
+INC N1 6
+
+#IF
+CHECKITEMW  主印【吸血⑦】 1
+#ACT
+INC N1 7
+
+#IF
+CHECKITEMW  主印【吸血⑧】 1
+#ACT
+INC N1 8
+
+#IF
+CHECKITEMW  主印【吸血⑨】 1
+#ACT
+INC N1 9
+
+#IF
+CHECKITEMW  主印【吸血⑩】 1
+#ACT
+INC N1 10
+
+#IF
+CHECKITEMW  辅印【吸血①】 1
+#ACT
+INC N1 1
+
+#IF
+CHECKITEMW  辅印【吸血②】 1
+#ACT
+INC N1 2
+#IF
+CHECKITEMW  辅印【吸血③】 1
+#ACT
+INC N1 3
+
+#IF
+CHECKITEMW  辅印【吸血④】 1
+#ACT
+INC N1 4
+
+#IF
+CHECKITEMW  辅印【吸血⑤】 1
+#ACT
+INC N1 5
+
+#IF
+CHECKITEMW  辅印【吸血⑥】 1
+#ACT
+INC N1 6
+
+#IF
+CHECKITEMW  辅印【吸血⑦】 1
+#ACT
+INC N1 7
+
+#IF
+CHECKITEMW  辅印【吸血⑧】 1
+#ACT
+INC N1 8
+
+#IF
+CHECKITEMW  辅印【吸血⑨】 1
+#ACT
+INC N1 9
+
+#IF
+CHECKITEMW  辅印【吸血⑩】 1
+#ACT
+INC N1 10
+
+#IF
+CHECKITEMW  【残】鬼王 1
+#ACT
+INC N1 10
+
+#IF
+CHECKITEMW  鬼王 1
+#ACT
+INC N1 15
+
+#IF
+CHECKITEMW  上古鬼王【残】 1
+#ACT
+INC N1 20
+
+#IF
+CHECKITEMW  上古鬼王 1
+#ACT
+INC N1 25
+
+#IF
+CHECKITEMW  暴风噬血链 1
+#ACT
+INC N1 10
+#IF
+CHECKITEMW  点点噬血链 1
+#ACT
+INC N1 20
+
+
+#IF
+#ACT
+ChangeModeEx 20 65535 100 <$STR(N1)>
+SendCenterMsg 15 253 您当前攻击吸血属性为<$STR(N1)>%！ 0 5
+BREAK
+}

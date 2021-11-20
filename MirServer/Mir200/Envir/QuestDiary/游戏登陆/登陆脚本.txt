@@ -1,0 +1,235 @@
+[@登陆设置]
+{
+#IF
+ISNEWHUMAN
+#ACT
+GuildNoticeMsg 151 249 欢迎新人玩家〖<$USERNAME>〗进入２０１⒎最新独家<$SERVERNAME>。
+
+
+
+#IF
+ISCASTLEMASTER
+#ACT
+SENDMSG 0 号令天下的沙城主『<$USERNAME>』进入了<$SERVERNAME>!
+
+
+#IF
+equal T13 雄霸天下
+#act
+SETICON 0 0 000025 0 -22 0 0
+; SetIcon 0 1 25 0 -22 1 0 200 0
+
+
+#IF
+equal T13 万夫莫敌
+#act
+SETICON 0 0 000036 0 -22 0 0
+; SetIcon 0 1 36 0 -22 1 0 200 0
+
+
+#IF
+equal T13 一品统帅
+#act
+SETICON 0 0 000049 0 -22 0 0
+; SetIcon 0 1 49 0 -22 1 0 200 0
+
+#IF
+equal T13 二品将军
+#act
+SETICON 0 0 000039 0 -22 0 0
+; SetIcon 0 1 39 0 -22 1 0 200 0
+
+#IF
+equal T13 三品大将
+#act
+SETICON 0 0 000038 0 -22 0 0
+; SetIcon 0 1 38 0 -22 1 0 200 0
+
+
+#IF
+equal T13 四品参将
+#act
+SETICON 0 0 000042 0 -22 0 0
+; SetIcon 0 1 42 0 -22 1 0 200 0
+
+
+#IF
+equal T13 五品左领
+#act
+SETICON 0 0 000045 0 -22 0 0
+; SetIcon 0 1 45 0 -22 1 0 200 0
+
+#IF
+equal T13 六品护卫
+#act
+SETICON 0 0 000044 0 -22 0 0
+; SetIcon 0 1 44 0 -22 1 0 200 0
+
+#IF
+equal T13 七品前锋
+#act
+SETICON 0 0 000046 0 -22 0 0
+; SetIcon 0 1 46 0 -22 1 0 200 0
+
+#IF
+equal T13 八品骑士
+#act
+SETICON 0 0 000047 0 -22 0 0
+; SetIcon 0 1 47 0 -22 1 0 200 0
+
+
+#IF
+equal T13 九品仕郎
+#act
+SETICON 0 0 000043 0 -22 0 0
+; SetIcon 0 1 43 0 -22 1 0 200 0
+
+
+
+
+
+
+
+#IF
+check [059] 1
+#ACT
+SETICON 0 1 12000 0 -50 0 0
+; SetIcon 1 1 109 1 -50 6
+ChangeHumAbility 5 + 88
+ChangeHumAbility 6 + 88
+ChangeHumAbility 7 + 88
+ChangeHumAbility 8 + 88
+ChangeHumAbility 9 + 88
+ChangeHumAbility 10 + 88
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\临时数据\猛男第一.txt
+checkjob warrior
+#ACT
+SETICON 0 0 000058 0 -22 0 0
+; SetIcon 0 1 58 1 -10 -10
+ChangeModeEx 3 999 1500
+ChangeModeEx 4 999 500
+ChangeModeEx 14 9999
+SENDMSG 6 9999秒内可以防麻痹
+
+#IF
+CHECKNAMELIST ..\QuestDiary\临时数据\猛男第一.txt
+checkjob wizard
+#ACT
+SETICON 0 0 000056 0 -22 0 0
+; SetIcon 0 1 56 1 -10 -10
+ChangeModeEx 3 999 1500
+ChangeModeEx 4 999 500
+ChangeModeEx 14 9999
+SENDMSG 6 9999秒内可以防麻痹
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\临时数据\猛男第一.txt
+checkjob taoist
+#ACT
+SETICON 0 0 000057 0 -22 0 0
+; SetIcon 0 1 57 1 -10 -10
+ChangeModeEx 3 999 1500
+ChangeModeEx 4 999 500
+ChangeModeEx 14 9999
+SENDMSG 6 9999秒内可以防麻痹
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\临时数据\美女第一.txt
+checkjob warrior
+#ACT
+SETICON 0 0 000054 0 -22 0 0
+; SetIcon 0 1 54 1 -10 -10
+ChangeModeEx 3 999 1500
+ChangeModeEx 4 999 500
+ChangeModeEx 14 9999
+SENDMSG 6 9999秒内可以防麻痹
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\临时数据\美女第一.txt
+checkjob wizard
+#ACT
+SETICON 0 0 000055 0 -22 0 0
+; SetIcon 0 1 55 1 -10 -10
+ChangeModeEx 3 999 1500
+ChangeModeEx 4 999 500
+ChangeModeEx 14 9999
+SENDMSG 6 9999秒内可以防麻痹
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\临时数据\美女第一.txt
+checkjob taoist
+#ACT
+SetIcon 0 1 53 1 -10 -10
+ChangeModeEx 3 999 1500
+ChangeModeEx 4 999 500
+ChangeModeEx 14 9999
+SENDMSG 6 9999秒内可以防麻痹
+
+#IF
+equal u22 5
+#act
+SETICON 0 -1
+ChangeModeEx 14 999999
+SETICON 0 0 000003 0 -22 0 0
+; SetIcon 0 1 3 0 -22 1 0 200 0
+POWERRATE 160 65536
+ChangeModeEx 14 9999
+SENDMSG 6 9999秒内可以防麻痹
+SendCenterMsg 15 253 您当前杀怪2.0倍爆率！！ 0 5
+SENDMSG 6 你是本服荣誉的【王者赞助】系统将赠送你：2.0倍爆率属性！
+
+
+#IF
+equal u22 4
+#act
+SETICON 0 -1
+ChangeModeEx 14 999999
+SETICON 0 0 000002 0 -22 0 0
+; SetIcon 0 1 2 0 -22 1 0 200 0
+POWERRATE 130 65536
+ChangeModeEx 14 9999
+SENDMSG 6 9999秒内可以防麻痹
+SendCenterMsg 15 253 您当前杀怪1.5倍爆率！！ 0 5
+SENDMSG 6 你是本服荣誉的【至尊赞助】系统将赠送你：1.5倍爆率属性！
+
+
+#IF
+equal u22 3
+#act
+SETICON 0 -1
+POWERRATE 120 65536
+SETICON 0 0 000050 0 -22 0 0
+; SetIcon 0 1 50 0 -22 1 0 200 0
+SendCenterMsg 15 253 您当前杀怪1.3倍爆率！！ 0 5
+SENDMSG 6 你是本服荣誉的【钻石赞助】系统将赠送你：1.3倍爆率属性！
+
+
+
+#IF
+equal u22 2
+#act
+SETICON 0 -1
+POWERRATE 110 65536
+SETICON 0 0 000051 0 -22 0 0
+; SetIcon 0 1 51 0 -22 1 0 200 0
+SendCenterMsg 15 253 您当前杀怪1.2倍爆率！！ 0 5
+SENDMSG 6 你是本服荣誉的【黄金赞助】系统将赠送你：1.2倍爆率属性！
+
+
+#IF
+equal u22 1
+#act
+SETICON 0 -1
+SETICON 0 0 000052 0 -22 0 0
+; SetIcon 0 1 52 0 -22 1 0 200 0
+SendCenterMsg 15 253 您当前杀怪1.1倍爆率！！ 0 5
+SENDMSG 6 你是本服荣誉的【白银赞助】系统将赠送你：1.1倍爆率属性！
+
+}

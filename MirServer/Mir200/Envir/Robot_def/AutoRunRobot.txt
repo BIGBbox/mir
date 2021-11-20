@@ -1,0 +1,110 @@
+
+
+#AutoRun NPC RUNONDAY 7:00 @早上提示
+#AutoRun NPC RUNONDAY 12:00 @中午提示
+#AutoRun NPC RUNONDAY 18:00 @晚上提示
+#AutoRun NPC RUNONDAY 23:59 @凌晨提示
+
+#AutoRun NPC RUNONDAY 23:58 @地图减价
+#AutoRun NPC RUNONDAY  9:59 @地图加价
+
+
+#AutoRun NPC RUNONDAY 9:00 @新世界
+#AutoRun NPC MIN 2 @秒修装备
+
+
+#AutoRun NPC RUNONDAY 23:58 @服务器天数
+#AutoRun NPC RUNONDAY 22:00 @清理拿沙数据
+
+small 变量 数值 ;如果“变量 < 数值”则为1否则为0
+
+large 变量 数值 ;如果“变量 > 数值”则为1否则为0
+
+equal 变量 数值 ;如果“变量 = 数据”则为1否则为0
+
+
+;-----------------------------------------------------
+#AutoRun NPC RUNONDAY 9:00  @派对活动
+#AutoRun NPC RUNONDAY 9:03  @派对结束
+#AutoRun NPC RUNONDAY 10:00  @派对活动
+#AutoRun NPC RUNONDAY 10:03  @派对结束
+#AutoRun NPC RUNONDAY 11:00  @派对活动
+#AutoRun NPC RUNONDAY 11:03  @派对结束
+#AutoRun NPC RUNONDAY 12:00  @派对活动
+#AutoRun NPC RUNONDAY 12:03  @派对结束
+#AutoRun NPC RUNONDAY 13:00  @派对活动
+#AutoRun NPC RUNONDAY 13:03  @派对结束
+#AutoRun NPC RUNONDAY 14:00  @派对活动
+#AutoRun NPC RUNONDAY 14:03  @派对结束
+#AutoRun NPC RUNONDAY 15:00  @派对活动
+#AutoRun NPC RUNONDAY 15:03  @派对结束
+#AutoRun NPC RUNONDAY 16:00  @派对活动
+#AutoRun NPC RUNONDAY 16:03  @派对结束
+#AutoRun NPC RUNONDAY 17:00  @派对活动
+#AutoRun NPC RUNONDAY 17:03  @派对结束
+#AutoRun NPC RUNONDAY 18:00  @派对活动
+#AutoRun NPC RUNONDAY 18:03  @派对结束
+#AutoRun NPC RUNONDAY 19:00  @派对活动
+#AutoRun NPC RUNONDAY 19:03  @派对结束
+#AutoRun NPC RUNONDAY 20:00  @派对活动
+#AutoRun NPC RUNONDAY 20:03  @派对结束
+#AutoRun NPC RUNONDAY 21:00  @派对活动
+#AutoRun NPC RUNONDAY 21:03  @派对结束
+#AutoRun NPC RUNONDAY 22:00  @派对活动
+#AutoRun NPC RUNONDAY 22:03  @派对结束
+#AutoRun NPC RUNONDAY 23:00  @派对活动
+#AutoRun NPC RUNONDAY 23:03  @派对结束
+#AutoRun NPC RUNONDAY 00:00  @派对活动
+#AutoRun NPC RUNONDAY 00:03  @派对结束
+#AutoRun NPC RUNONDAY 1:00  @派对活动
+#AutoRun NPC RUNONDAY 1:03  @派对结束
+#AutoRun NPC RUNONDAY 2:00  @派对活动
+#AutoRun NPC RUNONDAY 2:03  @派对结束
+#AutoRun NPC RUNONDAY 3:00  @派对活动
+#AutoRun NPC RUNONDAY 3:03  @派对结束
+#AutoRun NPC RUNONDAY 4:00  @派对活动
+#AutoRun NPC RUNONDAY 4:03  @派对结束
+#AutoRun NPC RUNONDAY 5:00  @派对活动
+#AutoRun NPC RUNONDAY 5:03  @派对结束
+#AutoRun NPC RUNONDAY 6:00  @派对活动
+#AutoRun NPC RUNONDAY 6:03  @派对结束
+#AutoRun NPC RUNONDAY 7:00  @派对活动
+#AutoRun NPC RUNONDAY 7:03  @派对结束
+#AutoRun NPC RUNONDAY 8:00  @派对活动
+#AutoRun NPC RUNONDAY 8:03  @派对结束
+
+#AutoRun NPC RUNONDAY 9:45  @疯狂半兽人
+#AutoRun NPC RUNONDAY 11:45  @疯狂半兽人
+#AutoRun NPC RUNONDAY 13:45  @疯狂半兽人
+#AutoRun NPC RUNONDAY 15:45  @疯狂半兽人
+#AutoRun NPC RUNONDAY 17:45  @疯狂半兽人
+#AutoRun NPC RUNONDAY 19:45  @疯狂半兽人
+#AutoRun NPC RUNONDAY 21:45  @疯狂半兽人
+#AutoRun NPC RUNONDAY 23:45  @疯狂半兽人
+#AutoRun NPC RUNONDAY 1:45  @疯狂半兽人
+#AutoRun NPC RUNONDAY 3:45  @疯狂半兽人
+#AutoRun NPC RUNONDAY 5:45  @疯狂半兽人
+#AutoRun NPC RUNONDAY 7:45  @疯狂半兽人
+
+;#AutoRun NPC RUNONDAY 9:00  @刺杀稻草人
+;#AutoRun NPC RUNONDAY 12:00  @刺杀稻草人
+;#AutoRun NPC RUNONDAY 15:00  @刺杀稻草人
+;#AutoRun NPC RUNONDAY 18:00  @刺杀稻草人
+;#AutoRun NPC RUNONDAY 21:00  @刺杀稻草人
+;#AutoRun NPC RUNONDAY 00:00  @刺杀稻草人
+;#AutoRun NPC RUNONDAY 3:00  @刺杀稻草人
+;#AutoRun NPC RUNONDAY 6:00  @刺杀稻草人
+;#AutoRun NPC RUNONDAY 22:15 @冰城之战
+
+#AutoRun NPC MIN 5 @3530054
+#AutoRun NPC SEC 1 @光环效果
+
+#AutoRun NPC SEC 10 @装备拣取
+
+
+#AutoRun NPC MIN 180 @800125104制作
+
+
+
+
+

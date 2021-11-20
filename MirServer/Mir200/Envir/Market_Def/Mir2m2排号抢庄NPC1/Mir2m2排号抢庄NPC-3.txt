@@ -1,0 +1,7 @@
+(@@InPutInteger )
+[@main]
+#ACT
+CALCVAR HUMAN 抢Z1个人地图 = <$MAP>
+CALCVAR HUMAN 抢Z1个人坐标X = <$X>
+CALCVAR HUMAN 抢Z1个人坐标Y = <$Y>
+#CALL [\Mir2m2排号抢庄配置1\Mir2m2排号抢庄脚本NPC.txt] @Mir2m2排号抢Z1脚本NPC

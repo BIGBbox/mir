@@ -1,0 +1,13 @@
+[@Settings]
+{
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>\ \
+
+<Text|text=还有人竟然来到这里，你有什么事情吗？|x=30|y=60|size=16>
+<Text|text=把东西保管一次收200金币。|x=30|y=80|size=16>
+<Text|text=不知道今天能不能回到家。|x=30|y=100|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@getback>
+<Text|text=使用仓库|x=60|y=133|size=16|color=1001|link=@getback>
+
+}

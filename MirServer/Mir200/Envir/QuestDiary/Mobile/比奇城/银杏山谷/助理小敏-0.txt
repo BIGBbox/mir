@@ -1,0 +1,25 @@
+[@Settings]
+{
+#IF
+checklevel 28
+#SAY
+
+<Text|id=5|text=<$NPCNAME>|x=30|y=20|size=18|color=1005>
+<Text|id=6|text=<$USERNAME>你目前已经可以独立了|x=30|y=60|size=16>
+<Text|id=7|text=你去做你该做的事情吧.|x=30|y=80|size=16>
+
+<Img|id=9|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|id=10|x=35|y=120|width=80|height=50|link=@exit>
+<Text|id=11|text=退出|x=60|y=133|size=16|color=1001|link=@exit>
+
+#ELSESAY
+
+<Text|id=5|text=<$NPCNAME>|x=30|y=20|size=18|color=1005>
+<Text|id=6|text=你好,你是不是第一次玩这个游戏?|x=30|y=60|size=16>
+<Text|id=7|text=有什么我可以帮你的?|x=30|y=80|size=16>
+
+<Img|id=9|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|id=10|x=35|y=120|width=80|height=50|link=@exit>
+<Text|id=11|text=退出|x=60|y=133|size=16|color=1001|link=@exit>
+
+}

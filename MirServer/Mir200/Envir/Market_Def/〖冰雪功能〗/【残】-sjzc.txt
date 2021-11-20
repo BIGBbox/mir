@@ -1,0 +1,1212 @@
+[@main]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<集齐10个残缺的神器可拼凑出完整的神器/FCOLOR=250>\
+<当然也不是免费的，需要花费些元宝哦！/FCOLOR=250>\
+只要你有10完全一样的残缺武器，我就有办法拼凑出一把完整的武器！\
+例如：【残】鬼王有10把，我就可以把他变成一把【鬼王】\ \
+
+\           <我已集齐10件残缺装备，帮我拼凑一下/@拼凑一下>\ \
+
+
+\           <主印拼凑/@主印>                  <辅印拼凑/@辅印>
+#elsesay
+<Img|width=620|height=250|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=250|size=18|text=集齐10个残缺的神器可拼凑出完整的神器>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=250|size=18|text=当然也不是免费的，需要花费些元宝哦！>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=255|size=18|text=只要你有10完全一样的残缺武器，我就有办法拼凑出一把完整的武器！\>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=255|size=18|text=例如：【残】鬼王有10把，我就可以把他变成一把【鬼王】\ \>
+<Text|a=0|x=146.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=我已集齐10件残缺装备，帮我拼凑一下|link=@拼凑一下>
+<Text|a=0|ay=1|x=135.0|y=187.0|tipsx=10|tipsy=80|size=18|color=251|text=主印拼凑|link=@主印>
+<Text|a=0|ay=1|x=406.0|y=187.0|tipsx=10|tipsy=80|size=18|color=251|text=辅印拼凑|link=@辅印>
+
+
+[@拼凑一下]
+#IF
+CHECKGAMEGOLD > 999999
+#act
+GOTO @拼凑一下1
+#ELSEACT
+MESSAGEBOX 100元宝辛苦费都没有，滚蛋！
+BREAK
+
+
+
+
+[@拼凑一下1]
+#IF
+CHECKITEM  【残】起源·甲 10
+CHECKGAMEGOLD > 999999
+#act
+GAMEGOLD - 1000000
+TAKE  【残】起源·甲 10
+GIVE 起源·甲 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  【残】起源·衣 10
+CHECKGAMEGOLD > 999999
+#act
+GAMEGOLD - 1000000
+TAKE  【残】起源·衣 10
+GIVE 起源·衣 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  【残】起源·刃 10
+CHECKGAMEGOLD > 999999
+#act
+GAMEGOLD - 1000000
+TAKE  【残】起源·刃 10
+GIVE 起源·刃 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM 【残】鬼甲 10
+CHECKGAMEGOLD > 999999
+#act
+GAMEGOLD - 1000000
+TAKE 【残】鬼甲 10
+GIVE 鬼甲 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM 【残】鬼衣 10
+CHECKGAMEGOLD > 999999
+#act
+GAMEGOLD - 1000000
+TAKE 【残】鬼衣 10
+GIVE 鬼衣 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM 【残】鬼甲 10
+CHECKGAMEGOLD > 999999
+#act
+GAMEGOLD - 1000000
+TAKE 【残】鬼甲 10
+GIVE 鬼甲 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM 【残】鬼衣 10
+CHECKGAMEGOLD > 999999
+#act
+GAMEGOLD - 1000000
+TAKE 【残】鬼衣 10
+GIVE 鬼衣 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM 【残】流云·男 10
+CHECKGAMEGOLD > 999999
+#act
+GAMEGOLD - 1000000
+TAKE 【残】流云·男 10
+GIVE 流云·男 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM 【残】流云·女 10
+CHECKGAMEGOLD > 999999
+#act
+GAMEGOLD - 1000000
+TAKE 【残】流云·女 10
+GIVE 流云·女 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+
+#IF
+CHECKITEM 【残】鬼王 10
+CHECKGAMEGOLD > 999999
+#act
+GAMEGOLD - 1000000
+TAKE 【残】鬼王 10
+GIVE 鬼王 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM 【残】耀光 10
+CHECKGAMEGOLD > 999999
+#act
+GAMEGOLD - 1000000
+TAKE 【残】耀光 10
+GIVE 耀光 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM 【残】诛仙 10
+CHECKGAMEGOLD > 999999
+#act
+GAMEGOLD - 1000000
+TAKE 【残】诛仙 10
+GIVE 诛仙 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM 【残】流光 10
+CHECKGAMEGOLD > 999999
+#act
+GAMEGOLD - 1000000
+TAKE 【残】流光 10
+GIVE 流光 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#ELSEACT
+MESSAGEBOX 条件不足，我没这个能力给你拼凑！！
+BREAK
+
+
+
+[@主印]
+#IF
+CHECKGAMEGOLD > 99999
+#act
+GOTO @拼凑主印1
+#ELSEACT
+MESSAGEBOX 10元宝辛苦费都没有，滚蛋！
+BREAK
+
+
+
+
+[@拼凑主印1]
+#IF
+CHECKITEM 主印【精准⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【精准⑥】碎片 10
+GIVE 主印【精准⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【精准⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【精准⑦】碎片 10
+GIVE 主印【精准⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【精准⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【精准⑧】碎片 10
+GIVE 主印【精准⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【精准⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【精准⑨】碎片 10
+GIVE 主印【精准⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【精准⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【精准⑩】碎片 10
+GIVE 主印【精准⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;====================================
+#IF
+CHECKITEM  主印【强化⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【强化⑥】碎片 10
+GIVE 主印【强化⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【强化⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【强化⑦】碎片 10
+GIVE 主印【强化⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【强化⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【强化⑧】碎片 10
+GIVE 主印【强化⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【强化⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【强化⑨】碎片 10
+GIVE 主印【强化⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【强化⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【强化⑩】碎片 10
+GIVE 主印【强化⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  主印【穿杨⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【穿杨⑥】碎片 10
+GIVE 主印【穿杨⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【穿杨⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【穿杨⑦】碎片 10
+GIVE 主印【穿杨⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【穿杨⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【穿杨⑧】碎片 10
+GIVE 主印【穿杨⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【穿杨⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【穿杨⑨】碎片 10
+GIVE 主印【穿杨⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【穿杨⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【穿杨⑩】碎片 10
+GIVE 主印【穿杨⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  主印【国色⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【国色⑥】碎片 10
+GIVE 主印【国色⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【国色⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【国色⑦】碎片 10
+GIVE 主印【国色⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【国色⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【国色⑧】碎片 10
+GIVE 主印【国色⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【国色⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【国色⑨】碎片 10
+GIVE 主印【国色⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【国色⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【国色⑩】碎片 10
+GIVE 主印【国色⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  主印【蝶魂⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【蝶魂⑥】碎片 10
+GIVE 主印【蝶魂⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【蝶魂⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【蝶魂⑦】碎片 10
+GIVE 主印【蝶魂⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【蝶魂⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【蝶魂⑧】碎片 10
+GIVE 主印【蝶魂⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【蝶魂⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【蝶魂⑨】碎片 10
+GIVE 主印【蝶魂⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【蝶魂⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【蝶魂⑩】碎片 10
+GIVE 主印【蝶魂⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  主印【复仇⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【复仇⑥】碎片 10
+GIVE 主印【复仇⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【复仇⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【复仇⑦】碎片 10
+GIVE 主印【复仇⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【复仇⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【复仇⑧】碎片 10
+GIVE 主印【复仇⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【复仇⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【复仇⑨】碎片 10
+GIVE 主印【复仇⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【复仇⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【复仇⑩】碎片 10
+GIVE 主印【复仇⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  主印【强掠⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【强掠⑥】碎片 10
+GIVE 主印【强掠⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【强掠⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【强掠⑦】碎片 10
+GIVE 主印【强掠⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【强掠⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【强掠⑧】碎片 10
+GIVE 主印【强掠⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【强掠⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【强掠⑨】碎片 10
+GIVE 主印【强掠⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【强掠⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【强掠⑩】碎片 10
+GIVE 主印【强掠⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【身强⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【身强⑥】碎片 10
+GIVE 主印【身强⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【身强⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【身强⑦】碎片 10
+GIVE 主印【身强⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【身强⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【身强⑧】碎片 10
+GIVE 主印【身强⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【身强⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【身强⑨】碎片 10
+GIVE 主印【身强⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【身强⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【身强⑩】碎片 10
+GIVE 主印【身强⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【运筹⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【运筹⑥】碎片 10
+GIVE 主印【运筹⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【运筹⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【运筹⑦】碎片 10
+GIVE 主印【运筹⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【运筹⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【运筹⑧】碎片 10
+GIVE 主印【运筹⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【运筹⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【运筹⑨】碎片 10
+GIVE 主印【运筹⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【运筹⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【运筹⑩】碎片 10
+GIVE 主印【运筹⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【吸血⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【吸血⑥】碎片 10
+GIVE 主印【吸血⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【吸血⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【吸血⑦】碎片 10
+GIVE 主印【吸血⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【吸血⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【吸血⑧】碎片 10
+GIVE 主印【吸血⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【吸血⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【吸血⑨】碎片 10
+GIVE 主印【吸血⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【吸血⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  主印【吸血⑩】碎片 10
+GIVE 主印【吸血⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+#ELSEACT
+MESSAGEBOX 条件不足，您没有10个一样的主印碎片！
+BREAK
+;========================================
+[@辅印]
+#IF
+CHECKGAMEGOLD > 99999
+#act
+GOTO @拼凑辅印1
+#ELSEACT
+MESSAGEBOX 10元宝辛苦费都没有，滚蛋！
+BREAK
+
+
+
+
+[@拼凑辅印1]
+#IF
+CHECKITEM  辅印【精准⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【精准⑥】碎片 10
+GIVE 辅印【精准⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【精准⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【精准⑦】碎片 10
+GIVE 辅印【精准⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【精准⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【精准⑧】碎片 10
+GIVE 辅印【精准⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【精准⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【精准⑨】碎片 10
+GIVE 辅印【精准⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【精准⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【精准⑩】碎片 10
+GIVE 辅印【精准⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;====================================
+#IF
+CHECKITEM  辅印【强化⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【强化⑥】碎片 10
+GIVE 辅印【强化⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【强化⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【强化⑦】碎片 10
+GIVE 辅印【强化⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【强化⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【强化⑧】碎片 10
+GIVE 辅印【强化⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【强化⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【强化⑨】碎片 10
+GIVE 辅印【强化⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【强化⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【强化⑩】碎片 10
+GIVE 辅印【强化⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  辅印【穿杨⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【穿杨⑥】碎片 10
+GIVE 辅印【穿杨⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【穿杨⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【穿杨⑦】碎片 10
+GIVE 辅印【穿杨⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【穿杨⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【穿杨⑧】碎片 10
+GIVE 辅印【穿杨⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【穿杨⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【穿杨⑨】碎片 10
+GIVE 辅印【穿杨⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【穿杨⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【穿杨⑩】碎片 10
+GIVE 辅印【穿杨⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  辅印【国色⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【国色⑥】碎片 10
+GIVE 辅印【国色⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【国色⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【国色⑦】碎片 10
+GIVE 辅印【国色⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【国色⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【国色⑧】碎片 10
+GIVE 辅印【国色⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【国色⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【国色⑨】碎片 10
+GIVE 辅印【国色⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【国色⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【国色⑩】碎片 10
+GIVE 辅印【国色⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  辅印【蝶魂⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【蝶魂⑥】碎片 10
+GIVE 辅印【蝶魂⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【蝶魂⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【蝶魂⑦】碎片 10
+GIVE 辅印【蝶魂⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【蝶魂⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【蝶魂⑧】碎片 10
+GIVE 辅印【蝶魂⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【蝶魂⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【蝶魂⑨】碎片 10
+GIVE 辅印【蝶魂⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【蝶魂⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【蝶魂⑩】碎片 10
+GIVE 辅印【蝶魂⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  辅印【复仇⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【复仇⑥】碎片 10
+GIVE 辅印【复仇⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【复仇⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【复仇⑦】碎片 10
+GIVE 辅印【复仇⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【复仇⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【复仇⑧】碎片 10
+GIVE 辅印【复仇⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【复仇⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【复仇⑨】碎片 10
+GIVE 辅印【复仇⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【复仇⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【复仇⑩】碎片 10
+GIVE 辅印【复仇⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  辅印【强掠⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【强掠⑥】碎片 10
+GIVE 辅印【强掠⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【强掠⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【强掠⑦】碎片 10
+GIVE 辅印【强掠⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【强掠⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【强掠⑧】碎片 10
+GIVE 辅印【强掠⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【强掠⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【强掠⑨】碎片 10
+GIVE 辅印【强掠⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【强掠⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【强掠⑩】碎片 10
+GIVE 辅印【强掠⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【身强⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【身强⑥】碎片 10
+GIVE 辅印【身强⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【身强⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【身强⑦】碎片 10
+GIVE 辅印【身强⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【身强⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【身强⑧】碎片 10
+GIVE 辅印【身强⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【身强⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【身强⑨】碎片 10
+GIVE 辅印【身强⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【身强⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【身强⑩】碎片 10
+GIVE 辅印【身强⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【运筹⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【运筹⑥】碎片 10
+GIVE 辅印【运筹⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【运筹⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【运筹⑦】碎片 10
+GIVE 辅印【运筹⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【运筹⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【运筹⑧】碎片 10
+GIVE 辅印【运筹⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【运筹⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【运筹⑨】碎片 10
+GIVE 辅印【运筹⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【运筹⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【运筹⑩】碎片 10
+GIVE 辅印【运筹⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【吸血⑥】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【吸血⑥】碎片 10
+GIVE 辅印【吸血⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【吸血⑦】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【吸血⑦】碎片 10
+GIVE 辅印【吸血⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【吸血⑧】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【吸血⑧】碎片 10
+GIVE 辅印【吸血⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【吸血⑨】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【吸血⑨】碎片 10
+GIVE 辅印【吸血⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【吸血⑩】碎片 10
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+TAKE  辅印【吸血⑩】碎片 10
+GIVE 辅印【吸血⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+#ELSEACT
+MESSAGEBOX 条件不足，您没有10个一样的辅印碎片！
+BREAK
+;========================================
+
+
+;========================================
+

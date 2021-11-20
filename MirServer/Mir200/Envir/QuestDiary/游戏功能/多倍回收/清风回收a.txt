@@ -1,0 +1,273 @@
+[@a清风回收]
+{
+#if
+checkitem 清风道扇 1
+#ACT
+take 清风道扇 1
+GAMEGOLD + 96
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风道甲 1
+#ACT
+take 清风道甲 1
+GAMEGOLD + 96
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风道衣 1
+#ACT
+take 清风道衣 1
+GAMEGOLD + 96
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风道镯 1
+#ACT
+take 清风道镯 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风道链 1
+#ACT
+take 清风道链 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风道盔 1
+#ACT
+take 清风道盔 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风道勋 1
+#ACT
+take 清风道勋 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风道靴 1
+#ACT
+take 清风道靴 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风道带 1
+#ACT
+take 清风道带 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风道指 1
+#ACT
+take 清风道指 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风魔杖 1
+#ACT
+take 清风魔杖 1
+GAMEGOLD + 96
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风魔甲 1
+#ACT
+take 清风魔甲 1
+GAMEGOLD + 96
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风魔衣 1
+#ACT
+take 清风魔衣 1
+GAMEGOLD + 96
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风魔镯 1
+#ACT
+take 清风魔镯 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风魔链 1
+#ACT
+take 清风魔链 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风魔盔 1
+#ACT
+take 清风魔盔 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风魔勋 1
+#ACT
+take 清风魔勋 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风魔靴 1
+#ACT
+take 清风魔靴 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风魔带 1
+#ACT
+take 清风魔带 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风魔指 1
+#ACT
+take 清风魔指 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风战刃 1
+#ACT
+take 清风战刃 1
+GAMEGOLD + 96
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风战甲 1
+#ACT
+take 清风战甲 1
+GAMEGOLD + 96
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风战衣 1
+#ACT
+take 清风战衣 1
+GAMEGOLD + 96
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风战镯 1
+#ACT
+take 清风战镯 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风战链 1
+#ACT
+take 清风战链 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风战盔 1
+#ACT
+take 清风战盔 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风战勋 1
+#ACT
+take 清风战勋 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风战靴 1
+#ACT
+take 清风战靴 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风战带 1
+#ACT
+take 清风战带 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+#if
+checkitem 清风战指 1
+#ACT
+take 清风战指 1
+GAMEGOLD + 48
+CHANGEEXP + 40000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了清风装备，获得了大量元宝经验！
+GOTO @a清风回收
+break
+}

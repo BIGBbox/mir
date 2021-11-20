@@ -1,0 +1,408 @@
+[@main]
+#if
+equal <$CLIENTFLAG> 1
+#say
+你好,年轻人!我就是鼎鼎大名的江湖奸商---金镶玉\
+;<30W元宝购买/@元宝买>    <1000个大力丸/FCOLOR=253> \ \
+
+;<30 灵符购买/@灵符买>    <1000个大力丸/FCOLOR=253> \
+<------------------------------------------------------------/FCOLOR=250>\
+<灵符提取/@灵符提取><HOT~>  <方便玩家交易/FCOLOR=251>  <HOT~>\
+<------------------------------------------------------------/FCOLOR=250>\
+<兑换元宝/@兑换元宝><HOT~>  <方便玩家交易/FCOLOR=251>  <HOT~>\
+<------------------------------------------------------------/FCOLOR=250>\
+<在游戏里您的灵符可进群找管理回收(群号：)/FCOLOR=70>\
+<例如:><200灵符价格为100元RMB/FCOLOR=250>,<扣除30%您 可获得70元现金/FCOLOR=252>\
+;　               <查看:死也不爆信息/@死也不爆>\
+<担保qq群:36742300 担保QQ群:36742300/FCOLOR=251>\
+#elsesay
+<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=18|text=你好,年轻人!我就是鼎鼎大名的江湖奸商---金镶玉\>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=250|size=18|text=------------------------------------------------------------>
+<Text|a=0|x=94.0|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=灵符提取|link=@灵符提取>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=255|size=18|text=HOT~>
+<Text|a=0|x=202.0|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=方便玩家交易>
+<Text|a=0|x=342.0|y=85.0|tipsx=10|tipsy=80|color=255|size=18|text=HOT~>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=250|size=18|text=------------------------------------------------------------>
+<Text|a=0|x=94.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=兑换元宝|link=@兑换元宝>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=255|size=18|text=HOT~>
+<Text|a=0|x=202.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=方便玩家交易>
+<Text|a=0|x=342.0|y=125.0|tipsx=10|tipsy=80|color=255|size=18|text=HOT~>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=250|size=18|text=------------------------------------------------------------>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=70|size=18|text=在游戏里您的灵符可进群找管理回收(群号：)>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=255|size=18|text=例如:>
+<Text|a=0|x=87|y=185|tipsx=10|tipsy=80|color=250|size=18|text=200灵符价格为100元RMB>
+<Text|a=0|x=318|y=185|tipsx=10|tipsy=80|color=255|size=18|text=,>
+<Text|a=0|x=329|y=185|tipsx=10|tipsy=80|color=252|size=18|text=扣除30%您 可获得70元现金>
+<Text|a=0|x=32|y=205|tipsx=10|tipsy=80|color=255|size=18|text=;　>
+<Text|a=0|x=32|y=205|tipsx=10|tipsy=80|color=251|size=18|text=查看:死也不爆信息|link=@死也不爆>
+<Text|a=0|x=32|y=225|tipsx=10|tipsy=80|color=251|size=18|text=担保QQ群:36742300 担保QQ群:36742300>
+
+
+[@兑换元宝]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<在这个骗子横行的网络中,相信管理是最正确的选择!>\ \
+
+<  1金刚石2000元宝/@兑换1>  <2金刚石4000元宝/@兑换2>  <5金刚石1W元宝/@兑换3> \ \
+
+< 10金刚石2W元宝  /@兑换4>  <50金刚石10W元宝/@兑换5> <100金刚石20W元宝/@兑换6>\ \
+
+<200金刚石40W元宝 /@兑换7>  <1000金刚石200W元宝/@兑换8>\ \
+#elsesay
+<Img|width=620|height=250|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=18|text=在这个骗子横行的网络中,相信管理是最正确的选择!>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=251|size=18|text=1金刚石2000元宝|link=@兑换1>
+<Text|a=0|x=216.0|y=65.0|tipsx=10|tipsy=80|color=251|size=18|text=2金刚石4000元宝|link=@兑换2>
+<Text|a=0|x=419.0|y=65.0|tipsx=10|tipsy=80|color=251|size=18|text=5金刚石1W元宝|link=@兑换3>
+<Text|a=0|x=32.0|y=124.0|tipsx=10|tipsy=80|color=251|size=18|text=10金刚石2W元宝|link=@兑换4>
+<Text|a=0|x=216.0|y=124.0|tipsx=10|tipsy=80|color=251|size=18|text=50金刚石10W元宝|link=@兑换5>
+<Text|a=0|x=418.0|y=124.0|tipsx=10|tipsy=80|color=251|size=18|text=100金刚石20W元宝|link=@兑换6>
+<Text|a=0|x=94.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=200金刚石40W元宝|link=@兑换7>
+<Text|a=0|x=325.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=1000金刚石200W元宝|link=@兑换8>
+
+
+[@兑换8]
+#IF
+CHECKGAMEDIAMOND > 999
+#ACT
+GAMEDIAMOND - 1000
+GAMEGOLD + 2000000
+GOTO @兑换元宝
+BREAK
+#ELSEACT
+MESSAGEBOX 错误：你的金刚石不足！！
+BREAK
+
+
+[@兑换7]
+#IF
+CHECKGAMEDIAMOND > 199
+#ACT
+GAMEDIAMOND - 200
+GAMEGOLD + 400000
+GOTO @兑换元宝
+BREAK
+#ELSEACT
+MESSAGEBOX 错误：你的金刚石不足！！
+BREAK
+
+[@兑换6]
+#IF
+CHECKGAMEDIAMOND > 99
+#ACT
+GAMEDIAMOND - 100
+GAMEGOLD + 200000
+GOTO @兑换元宝
+BREAK
+#ELSEACT
+MESSAGEBOX 错误：你的金刚石不足！！
+BREAK
+
+
+[@兑换5]
+#IF
+CHECKGAMEDIAMOND > 49
+#ACT
+GAMEDIAMOND - 50
+GAMEGOLD + 100000
+GOTO @兑换元宝
+BREAK
+#ELSEACT
+MESSAGEBOX 错误：你的金刚石不足！！
+BREAK
+
+
+[@兑换4]
+#IF
+CHECKGAMEDIAMOND > 9
+#ACT
+GAMEDIAMOND - 10
+GAMEGOLD + 20000
+GOTO @兑换元宝
+BREAK
+#ELSEACT
+MESSAGEBOX 错误：你的金刚石不足！！
+BREAK
+
+
+[@兑换3]
+#IF
+CHECKGAMEDIAMOND > 4
+#ACT
+GAMEDIAMOND - 5
+GAMEGOLD + 10000
+GOTO @兑换元宝
+BREAK
+#ELSEACT
+MESSAGEBOX 错误：你的金刚石不足！！
+BREAK
+
+[@兑换2]
+#IF
+CHECKGAMEDIAMOND > 1
+#ACT
+GAMEDIAMOND - 2
+GAMEGOLD + 4000
+GOTO @兑换元宝
+BREAK
+#ELSEACT
+MESSAGEBOX 错误：你的金刚石不足！！
+BREAK
+
+
+[@兑换1]
+#IF
+CHECKGAMEDIAMOND > 0
+#ACT
+GAMEDIAMOND - 1
+GAMEGOLD + 2000
+GOTO @兑换元宝
+BREAK
+#ELSEACT
+MESSAGEBOX 错误：你的金刚石不足！！
+BREAK
+
+
+
+
+
+
+
+[@灵符提取]
+<在这个骗子横行的网络中,相信管理是最正确的选择!>\
+<灵符可自由提取,双击即可吃掉--方便快捷--安全可靠/FCOLOR=250>\ \
+
+<提取50灵符/@提取50灵符>     <提取100灵符/@提取100灵符>\ \
+
+<提取500灵符/@提取500灵符>     <提取1000灵符/@提取1000灵符>\ \
+
+[@死也不爆]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<物品名称:><死也不爆/FCOLOR=251>\
+<物品位置:><护身符位置/FCOLOR=253>  \
+<此物属性:><攻魔道+5% 暴击几率增加+5% 增加攻击伤害+5%/FCOLOR=254>\
+<特殊说明:><佩戴此物死亡不会掉落身上其他装备/FCOLOR=251><(但此物死亡必爆!)>\ \
+
+<购买此宝物/@购买死也不爆><(300灵符)/FCOLOR=250>      \ \
+#elsesay
+<Img|width=620|height=200|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=18|text=物品名称:>
+<Text|a=0|x=131|y=25|tipsx=10|tipsy=80|color=251|size=18|text=死也不爆>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=255|size=18|text=物品位置:>
+<Text|a=0|x=131|y=45|tipsx=10|tipsy=80|color=253|size=18|text=护身符位置>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=255|size=18|text=此物属性:>
+<Text|a=0|x=131|y=65|tipsx=10|tipsy=80|color=254|size=18|text=攻魔道+5% 暴击几率增加+5% 增加攻击伤害+5%>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=255|size=18|text=特殊说明:>
+<Text|a=0|x=131|y=85|tipsx=10|tipsy=80|color=251|size=18|text=佩戴此物死亡不会掉落身上其他装备>
+<Text|a=0|x=426.0|y=85.0|tipsx=10|tipsy=80|color=255|size=18|text=(但此物死亡必爆!)>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=251|size=18|text=购买此宝物|link=@购买死也不爆>
+<Text|a=0|x=131.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=(300灵符)>
+
+
+[@回收死也不爆]
+#IF
+CHECKITEM 死也不爆 1
+#ACT
+GAMEGIRD + 200
+TAKE 死也不爆 1
+GOTO @死也不爆
+MESSAGEBOX 你已成功回收了一个【死也不爆】！
+BREAK
+
+[@购买死也不爆]
+#IF
+CHECKGAMEGIRD > 299
+#ACT
+GAMEGIRD - 300
+GIVE 死也不爆 1
+GOTO @死也不爆
+#ELSEACT
+MESSAGEBOX 错误：你的灵符不足！！
+BREAK
+
+[@兑换1000金刚石]
+#IF
+CHECKGAMEGIRD > 199
+#ACT
+GAMEGIRD - 200
+GAMEGOLD + 2000000
+GOTO @兑换元宝
+#ELSEACT
+MESSAGEBOX 错误：你的灵符不足！！
+BREAK
+
+[@兑换200金刚石]
+#IF
+CHECKGAMEGIRD > 39
+#ACT
+GAMEGIRD - 40
+GAMEGOLD + 400000
+GOTO @兑换元宝
+#ELSEACT
+MESSAGEBOX 错误：你的灵符不足！！
+BREAK
+
+[@兑换100金刚石]
+#IF
+CHECKGAMEGIRD > 19
+#ACT
+GAMEGIRD - 20
+GAMEGOLD + 200000
+GOTO @兑换元宝
+#ELSEACT
+MESSAGEBOX 错误：你的灵符不足！！
+BREAK
+
+[@兑换50金刚石]
+#IF
+CHECKGAMEGIRD > 9
+#ACT
+GAMEGIRD - 10
+GAMEGOLD + 100000
+GOTO @兑换元宝
+#ELSEACT
+MESSAGEBOX 错误：你的灵符不足！！
+BREAK
+
+[@兑换10金刚石]
+#IF
+CHECKGAMEGIRD > 1
+#ACT
+GAMEGIRD - 2
+GAMEGOLD + 200000
+GOTO @兑换元宝
+#ELSEACT
+MESSAGEBOX 错误：你的灵符不足！！
+BREAK
+
+[@兑换5金刚石]
+#IF
+CHECKGAMEGIRD > 0
+#ACT
+GAMEGIRD - 1
+GAMEGOLD + 10000
+GOTO @兑换元宝
+#ELSEACT
+MESSAGEBOX 错误：你的灵符不足！！
+BREAK
+
+[@兑换2灵符]
+#IF
+CHECKGAMEGIRD > 1
+#ACT
+GAMEGIRD - 2
+GAMEGOLD + 20000
+GOTO @兑换元宝
+#ELSEACT
+MESSAGEBOX 错误：你的灵符不足！！
+BREAK
+
+[@兑换1灵符]
+#IF
+CHECKGAMEGIRD > 0
+#ACT
+GAMEGIRD - 1
+GAMEGOLD + 10000
+GOTO @兑换元宝
+#ELSEACT
+MESSAGEBOX 错误：你的灵符不足！！
+BREAK
+
+
+[@提取1000灵符]
+#IF
+CHECKGAMEGIRD > 999
+#ACT
+GAMEGIRD - 1000
+GIVE 1000灵符 1
+GOTO @灵符提取
+#ELSEACT
+MESSAGEBOX 错误：你的灵符不足！！
+BREAK
+
+[@提取500灵符]
+#IF
+CHECKGAMEGIRD > 499
+#ACT
+GAMEGIRD - 500
+GIVE 500灵符 1
+GOTO @灵符提取
+#ELSEACT
+MESSAGEBOX 错误：你的灵符不足！！
+BREAK
+
+[@提取100灵符]
+#IF
+CHECKGAMEGIRD > 99
+#ACT
+GAMEGIRD - 100
+GIVE 100灵符 1
+GOTO @灵符提取
+#ELSEACT
+MESSAGEBOX 错误：你的灵符不足！！
+BREAK
+
+[@提取50灵符]
+#IF
+CHECKGAMEGIRD > 49
+#ACT
+GAMEGIRD - 50
+GIVE 50灵符 1
+GOTO @灵符提取
+#ELSEACT
+MESSAGEBOX 错误：你的灵符不足！！
+BREAK
+
+[@提取10灵符]
+#IF
+CHECKGAMEGIRD > 9
+#ACT
+GAMEGIRD - 10
+GIVE 10灵符 1
+GOTO @灵符提取
+#ELSEACT
+MESSAGEBOX 错误：你的灵符不足！！
+BREAK
+
+[@灵符买]
+#IF
+CHECKGAMEGIRD > 29
+#ACT
+GAMEGIRD - 30
+GIVE 大力丸 1000
+GOTO @main
+#ELSEACT
+MESSAGEBOX 错误：你的灵符不足！！
+BREAK
+
+[@金刚石买]
+#IF
+CHECKGAMEDIAMOND > 299
+#ACT
+GAMEDIAMOND - 300
+GIVE 大力丸 1000
+GOTO @main
+#ELSEACT
+MESSAGEBOX 错误：你的金刚石不足！！
+BREAK
+
+[@元宝买]
+#IF
+CHECKGAMEGOLD > 299999
+#ACT
+GAMEGOLD - 300000
+GIVE 大力丸 1000
+GOTO @main
+#ELSEACT
+MESSAGEBOX 错误：你的元宝不足！！
+BREAK

@@ -1,0 +1,42 @@
+[@main]
+\
+¤╭⌒╮╭⌒╮                   \
+< ╱◥██◣/FCOLOR=249>╭⌒╮           <欢迎光临/FCOLOR=254>{<$SERVERNAME>/FCOLOR=249}\
+<︱田︱田田|╰-------------/FCOLOR=150> \
+<╬╬╬╬╬╬╬╬╬╬╬╬╬/FCOLOR=64>    　 < 冰城神殿/FCOLOR=253>\
+<━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=250>\
+<进入条件:/AUTOCOLOR=100><需要6转或者至尊会员！/AUTOCOLOR=250> \
+<进阶之路/FCOLOR=251><(寻宝之地)/FCOLOR=253>          <冰城神殿>      \
+<【★六转进入★】/@冰城神殿>          <【★至尊进入★】/@冰城神殿1>   \
+
+[@冰城神殿1]
+#IF
+check [029] 1
+check [030] 1
+#ACT
+MapMove bxsd
+;SETONTIMER 2 1
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖冰城神殿〗,寻找高级装备！ 1 3
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖冰城神殿〗,寻找高级装备！ 1 3
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖冰城神殿〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖冰城神殿〗,寻找高级装备！
+break
+#elseact
+SendMsg 7 你不是至尊会员！无法进入！
+break
+
+[@冰城神殿]
+#if
+CHECKRENEWLEVEL > 5
+#ACT
+;give 回城卷 1
+MapMove bxsd
+;SETONTIMER 2 1
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖冰城神殿〗,寻找高级装备！ 1 3
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖冰城神殿〗,寻找高级装备！ 1 3
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖冰城神殿〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖冰城神殿〗,寻找高级装备！
+break
+#elseact
+SendMsg 7 你转生等级不足！无法进入！
+break

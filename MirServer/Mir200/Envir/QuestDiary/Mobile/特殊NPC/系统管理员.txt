@@ -1,0 +1,200 @@
+[@GM]
+{
+#IF
+ISADMIN
+#SAY
+
+<Img|bg=1|move=1|reset=0|width=380|height=500|img=public/icon_paihangbang_05.png>
+<Img|x=20|y=20|img=public/btn_szjm_03.png>
+<Text|text=GM background v1.2|x=80|y=20|size=22|color=246>
+<Layout|x=340|width=80|height=80|link=@exit>
+<Button|x=340|y=20|nimg=public/btn_gban_01.png|link=@exit>
+
+<Button|x=40|y=70|nimg=public/bg_hhzy_01_3.png|text=等级10级|link=@01>
+<Button|x=40|y=140|nimg=public/bg_hhzy_01_3.png|text=转生10级|link=@02>
+<Button|x=40|y=210|nimg=public/bg_hhzy_01_3.png|text=无敌模式|link=@03>
+<Button|x=40|y=280|nimg=public/bg_hhzy_01_3.png|text=修炼技能|link=@04>
+<Button|x=40|y=350|nimg=public/bg_hhzy_01_3.png|text=打开仓库|link=@getback>
+
+
+<Button|x=190|y=70|nimg=public/bg_hhzy_01_3.png|text=增加金币|link=@12>
+<Button|x=190|y=140|nimg=public/bg_hhzy_01_3.png|text=增加元宝|link=@11>
+<Button|x=190|y=210|nimg=public/bg_hhzy_01_3.png|text=增加RMB点|link=@10>
+<Button|x=190|y=280|nimg=public/bg_hhzy_01_3.png|text=清理背包|link=@09>
+<Button|x=190|y=350|nimg=public/bg_hhzy_01_3.png|text=城市传送|link=@08>
+
+<Button|x=50|y=400|nimg=public/1900000660.png|text=测试|link=@99>
+
+
+
+[@08]
+
+<Img|bg=1|move=1|reset=0|width=380|height=500|img=public/icon_paihangbang_05.png>
+<Img|x=20|y=20|img=public/btn_szjm_03.png>
+<Text|text=GM background v1.2|x=80|y=20|size=22|color=246>
+<Layout|x=340|width=80|height=80|link=@exit>
+<Button|x=340|y=20|nimg=public/btn_gban_01.png|link=@exit>
+
+<Button|x=40|y=70|nimg=public/bg_hhzy_01_3.png|text=比奇省|link=@001>
+<Button|x=190|y=70|nimg=public/bg_hhzy_01_3.png|text=盟重省|link=@002>
+<Button|x=40|y=140|nimg=public/bg_hhzy_01_3.png|text=毒蛇山谷|link=@003>
+<Button|x=190|y=140|nimg=public/bg_hhzy_01_3.png|text=苍月岛|link=@004>
+<Button|x=40|y=210|nimg=public/bg_hhzy_01_3.png|text=封魔谷|link=@005>
+<Button|x=190|y=210|nimg=public/bg_hhzy_01_3.png|text=白日门|link=@006>
+
+
+
+[@001]
+#IF
+#ACT
+mapmove 0 331 267
+close
+
+[@002]
+#IF
+#ACT
+mapmove 3 333 333
+close
+
+[@003]
+#IF
+#ACT
+mapmove 2 505 486
+close
+
+[@004]
+#IF
+#ACT
+mapmove 5 140 336
+close
+
+[@005]
+#IF
+#ACT
+mapmove 4 237 201
+close
+
+[@006]
+#IF
+#ACT
+mapmove 11 179 322
+close
+
+
+[@01]
+#IF
+#ACT
+CHANGELEVEL + 10
+
+[@02]
+#IF
+#ACT
+RENEWLEVEL 20 50 100
+
+
+
+[@03]
+#IF
+#ACT
+GMEXECUTE Superman
+
+
+[@04]
+#IF
+CheckJob Warrior
+#ACT
+ADDSKILL 基本剑术
+ADDSKILL 攻杀剑术
+ADDSKILL 刺杀剑术
+ADDSKILL 半月弯刀
+ADDSKILL 野蛮冲撞
+ADDSKILL 烈火剑法
+#IF
+CheckJob Wizard
+#ACT
+ADDSKILL 火球术
+ADDSKILL 大火球
+ADDSKILL 雷电术
+ADDSKILL 地狱火
+ADDSKILL 抗拒火环
+ADDSKILL 火墙
+ADDSKILL 爆裂火焰
+ADDSKILL 瞬息移动
+ADDSKILL 诱惑之光
+ADDSKILL 疾光电影
+ADDSKILL 地狱雷光
+ADDSKILL 魔法盾
+ADDSKILL 圣言术
+ADDSKILL 冰咆哮
+#IF
+CheckJob Taoist
+#ACT
+ADDSKILL 治愈术
+ADDSKILL 灵魂火符
+ADDSKILL 隐身术
+ADDSKILL 施毒术
+ADDSKILL 神圣战甲术
+ADDSKILL 幽灵盾
+ADDSKILL 集体隐身术
+ADDSKILL 召唤骷髅
+ADDSKILL 精神力战法
+ADDSKILL 困魔咒
+ADDSKILL 群体治愈术
+ADDSKILL 心灵启示
+ADDSKILL 召唤神兽
+
+
+
+
+
+[@05]
+#SAY
+<Img:public/btn_npcfh_03.png:0:35:138:0>
+<使用仓库{FCOLOR=1001}:60:133:16/@getback>
+
+
+
+[@07]
+#IF
+#ACT
+give 无敌小木剑 1
+
+[@09]
+#IF
+#ACT
+GMEXECUTE ClearBag <$USERNAME>
+
+
+[@10]
+#IF
+#ACT
+money RMB点 + 100000
+sendmsg 6 增加10WRMB点
+
+
+[@11]
+#IF
+#ACT
+MONEY 元宝 + 1000000
+sendmsg 6 增加100万元宝
+
+[@12]
+#IF
+#ACT
+MONEY 金币 + 1000000
+sendmsg 6 增加100万金币
+
+
+[@13]
+#IF
+#ACT
+Mov U52 3
+
+[@99]
+#if
+#act
+mov S12
+ReadConfigFileItem ..\QuestDiary\新装备回收\回收分类\回收价格.txt 回收价格 战神腰带 S$回收收益
+
+sendmsg 5 <$str(S$回收收益)>---
+}

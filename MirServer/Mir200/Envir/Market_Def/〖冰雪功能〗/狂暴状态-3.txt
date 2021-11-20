@@ -1,0 +1,100 @@
+[@main]
+#if
+Equal <$CLIENTFLAG> 1
+#say
+<Img|x=0.0|y=0.0|width=620|height=210|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=13|text=狂暴之力！血气倒流,玄功扭转!激发潜能,天地唯我,如神,如魔!带来一切毁亡!\>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=255|size=13|text=在>
+<Text|a=0|x=54|y=45|tipsx=10|tipsy=80|color=249|size=13|text=【狂暴之力】>
+<Text|a=0|x=186|y=45|tipsx=10|tipsy=80|color=255|size=13|text=状态下被人物攻击死亡后，>
+<Text|a=0|x=450|y=45|tipsx=10|tipsy=80|color=253|size=13|text=狂暴之力将消失!>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=255|size=13|text=将开启>
+<Text|a=0|x=98|y=65|tipsx=10|tipsy=80|color=249|size=13|text=【狂暴之力】>
+<Text|a=0|x=230|y=65|tipsx=10|tipsy=80|color=255|size=13|text=的玩家杀死后，>
+<Text|a=0|x=384|y=65|tipsx=10|tipsy=80|color=253|size=13|text=杀人者将获得奖励元宝100000个!>
+<Text|a=0|ay=1|x=55.0|y=95|tipsx=10|tipsy=80|size=13|color=251|text=20W元宝开启【狂暴之力】状态|link=@元宝开启状态>
+<Text|a=0|ay=1|x=341.0|y=95.0|tipsx=10|tipsy=80|size=13|color=251|text=20 灵符开启【狂暴之力】状态|link=@灵符开启状态>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=255|size=13|text=提示:1.>
+<Text|a=0|x=109|y=125|tipsx=10|tipsy=80|color=242|size=13|text=【狂暴之力】>
+<Text|a=0|x=241|y=125|tipsx=10|tipsy=80|color=250|size=13|text=状态下,游戏小退,大退,被怪打死的情况下,>
+<Text|a=0|x=659|y=125|tipsx=10|tipsy=80|color=242|size=13|text=都不会消失.>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=255|size=13|text=提示:2.>
+<Text|a=0|x=109|y=145|tipsx=10|tipsy=80|color=242|size=13|text=【狂暴之力】>
+<Text|a=0|x=241|y=145|tipsx=10|tipsy=80|color=255|size=13|text=状态下,人物头顶会有显示图标>
+<Text|a=0|x=538|y=145|tipsx=10|tipsy=80|color=255|size=13|text=!\>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=255|size=13|text=提示:3.>
+<Text|a=0|x=109|y=165|tipsx=10|tipsy=80|color=242|size=13|text=【狂暴之力】>
+<Text|a=0|x=241|y=165|tipsx=10|tipsy=80|color=255|size=13|text=状态下,人物被秒杀或者被道士的圣兽杀害不会取消状态!\ \>
+
+#elsesay
+<Img|x=-1.0|y=0.0|width=640|height=250|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_01.png|reset=1>
+<Layout|x=622.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=637.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=17.0|y=24.0|tipsx=10|tipsy=80|color=255|size=18|text=狂暴之力！血气倒流,玄功扭转!激发潜能,天地唯我,如神,如魔!带来一切毁亡!\>
+<Text|a=0|x=17.0|y=50.0|tipsx=10|tipsy=80|color=255|size=18|text=在>
+<Text|a=0|x=39.0|y=50.0|tipsx=10|tipsy=80|color=249|size=18|text=【狂暴之力】>
+<Text|a=0|x=151.0|y=50.0|tipsx=10|tipsy=80|color=255|size=18|text=状态下被人物攻击死亡后，>
+<Text|a=0|x=371.0|y=50.0|tipsx=10|tipsy=80|color=253|size=18|text=狂暴之力将消失!>
+<Text|a=0|x=17.0|y=76.0|tipsx=10|tipsy=80|color=255|size=18|text=将开启>
+<Text|a=0|x=80.0|y=76.0|tipsx=10|tipsy=80|color=249|size=18|text=【狂暴之力】>
+<Text|a=0|x=197.0|y=76.0|tipsx=10|tipsy=80|color=255|size=18|text=的玩家杀死后，>
+<Text|a=0|x=321.0|y=76.0|tipsx=10|tipsy=80|color=253|size=18|text=杀人者将获得奖励元宝100000个!>
+<Text|a=0|ay=1|x=24.0|y=116.0|tipsx=10|tipsy=80|size=18|color=251|text=20W元宝开启【狂暴之力】状态|link=@元宝开启状态>
+<Text|a=0|ay=1|x=344.0|y=116.0|tipsx=10|tipsy=80|size=18|color=251|text=20 灵符开启【狂暴之力】状态|link=@灵符开启状态>
+<Text|a=0|x=17.0|y=154.0|tipsx=10|tipsy=80|color=255|size=18|text=提示:1.>
+<Text|a=0|x=72.0|y=154.0|tipsx=10|tipsy=80|color=242|size=18|text=【狂暴之力】>
+<Text|a=0|x=180.0|y=154.0|tipsx=10|tipsy=80|color=250|size=18|text=状态下,游戏小退,大退,被怪打死的情况下,>
+<Text|a=0|x=659|y=125|tipsx=10|tipsy=80|color=242|size=18|text=都不会消失.>
+<Text|a=0|x=17.0|y=178.0|tipsx=10|tipsy=80|color=255|size=18|text=提示:2.>
+<Text|a=0|x=72.0|y=178.0|tipsx=10|tipsy=80|color=242|size=18|text=【狂暴之力】>
+<Text|a=0|x=178.0|y=178.0|tipsx=10|tipsy=80|color=255|size=18|text=状态下,人物头顶会有显示图标>
+<Text|a=0|x=466.0|y=178.0|tipsx=10|tipsy=80|color=255|size=18|text=!\>
+<Text|a=0|x=17.0|y=203.0|tipsx=10|tipsy=80|color=255|size=18|text=提示:3.>
+<Text|a=0|x=72.0|y=203.0|tipsx=10|tipsy=80|color=242|size=18|text=【狂暴之力】>
+<Text|a=0|x=180.0|y=203.0|tipsx=10|tipsy=80|color=255|size=18|text=状态下,人物被秒杀或者被道士的圣兽杀害不会取消状态!\ \>
+
+
+[@元宝开启状态]
+#IF
+CHECKGAMEGOLD > 199999
+check [059] 0
+#act
+SET [059] 1
+GAMEGOLD - 200000
+SETICON 0 1 12000 0 -50 0 0
+; SetIcon 1 1 109 1 -50 6
+ChangeHumAbility 5 + 88
+ChangeHumAbility 6 + 88
+ChangeHumAbility 7 + 88
+ChangeHumAbility 8 + 88
+ChangeHumAbility 9 + 88
+ChangeHumAbility 10 + 88
+GuildNoticeMsg 5 255 大家注意啦！玩家[<$USERNAME>]开启了【狂暴之力】...
+GuildNoticeMsg 5 255 大家注意啦！玩家[<$USERNAME>]开启了【狂暴之力】...
+#ELSEACT
+MESSAGEBOX 你的元宝不足或你已经开启了【狂暴之力】
+BREAK
+
+[@灵符开启状态]
+#IF
+CHECKGAMEGIRD > 19
+check [059] 0
+#act
+SET [059] 1
+GAMEGIRD - 20
+ChangeHumAbility 5 + 88
+ChangeHumAbility 6 + 88
+ChangeHumAbility 7 + 88
+ChangeHumAbility 8 + 88
+ChangeHumAbility 9 + 88
+ChangeHumAbility 10 + 88
+SETICON 0 1 12000 0 -50 0 0
+; SetIcon 1 1 109 1 -50 6
+GuildNoticeMsg 5 255 大家注意啦！玩家[<$USERNAME>]开启了【狂暴之力】...
+GuildNoticeMsg 5 255 大家注意啦！玩家[<$USERNAME>]开启了【狂暴之力】...
+GOTO @main
+#ELSEACT
+MESSAGEBOX 你的灵符不足或你已经开启了【狂暴之力】
+BREAK

@@ -1,0 +1,16 @@
+[@Settings]
+{
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>
+
+<RText|text=
+
+\ \ \这是一个极度危险的地方，请你三思！\
+现在后悔还老的及！
+
+>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@exit>
+<Text|text=我不怕...|x=60|y=133|size=16|color=1001|link=@exit>
+
+}

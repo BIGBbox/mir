@@ -1,0 +1,615 @@
+[@main]
+#if
+equal <$CLIENTFLAG> 1
+#say
+\
+修我战剑，杀上九天，洒我热血，一往无前。\
+历千劫万难，纵使魂飞魄散，我灵识依在。\
+战百世轮回，纵使六道无常，我依然永生。\
+天道！天道！天已失道，何需奉天，道既死，魔应生！\ \ \
+<学习大神孤独败天的技能/@学习>
+
+#elsesay
+<Img|width=620|height=200|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=18|text=修我战剑，杀上九天，洒我热血，一往无前。\>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=255|size=18|text=历千劫万难，纵使魂飞魄散，我灵识依在。\>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=255|size=18|text=战百世轮回，纵使六道无常，我依然永生。\>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=255|size=18|text=天道！天道！天已失道，何需奉天，道既死，魔应生！\ \ \>
+<Text|a=0|x=32.0|y=120.0|tipsx=10|tipsy=80|color=251|size=18|text=学习大神孤独败天的技能|link=@学习>
+
+
+[@学习]
+#if
+equal <$CLIENTFLAG> 1
+#say
+\
+<技能最高10级，成功率50% 成功增加一级 失败降低一级！>\ \
+
+<嗜血/@嗜血> <每级吸血0.5%/FCOLOR=254> <当前等级『/FCOLOR=251><$STR(U5)><』/FCOLOR=251> <需要5W元宝！/FCOLOR=250>\
+<穿杨/@穿杨> <忽视防御0.5%/FCOLOR=254> <当前等级『/FCOLOR=251><$STR(U6)><』/FCOLOR=251> <需要5W元宝！/FCOLOR=250>\
+<强化/@强化> <攻击伤害0.5%/FCOLOR=254> <当前等级『/FCOLOR=251><$STR(U7)><』/FCOLOR=251> <需要10W元宝！/FCOLOR=250>\
+<精准/@精准> <致命一击0.5%/FCOLOR=254> <当前等级『/FCOLOR=251><$STR(U8)><』/FCOLOR=251> <需要10W元宝！/FCOLOR=250>\
+#elsesay
+<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=18|text=技能最高10级，成功率50% 成功增加一级 失败降低一级！>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=251|size=18|text=嗜血|link=@嗜血>
+<Text|a=0|x=72.0|y=65.0|tipsx=10|tipsy=80|color=254|size=18|text=每级吸血0.5%>
+<Text|a=0|x=186|y=65|tipsx=10|tipsy=80|color=251|size=18|text=当前等级『>
+<Text|a=0|x=296|y=65|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(U5)>>
+<Text|a=0|x=406|y=65|tipsx=10|tipsy=80|color=251|size=18|text=』>
+<Text|a=0|x=439|y=65|tipsx=10|tipsy=80|color=250|size=18|text=需要5W元宝！>
+<Text|a=0|x=32.0|y=122.0|tipsx=10|tipsy=80|color=251|size=18|text=穿杨|link=@穿杨>
+<Text|a=0|x=72.0|y=122.0|tipsx=10|tipsy=80|color=254|size=18|text=忽视防御0.5%>
+<Text|a=0|x=186.0|y=122.0|tipsx=10|tipsy=80|color=251|size=18|text=当前等级『>
+<Text|a=0|x=296.0|y=122.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(U6)>>
+<Text|a=0|x=406.0|y=122.0|tipsx=10|tipsy=80|color=251|size=18|text=』>
+<Text|a=0|x=439.0|y=122.0|tipsx=10|tipsy=80|color=250|size=18|text=需要5W元宝！>
+<Text|a=0|x=32.0|y=176.0|tipsx=10|tipsy=80|color=251|size=18|text=强化|link=@强化>
+<Text|a=0|x=72.0|y=176.0|tipsx=10|tipsy=80|color=254|size=18|text=攻击伤害0.5%>
+<Text|a=0|x=186.0|y=176.0|tipsx=10|tipsy=80|color=251|size=18|text=当前等级『>
+<Text|a=0|x=296.0|y=176.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(U7)>>
+<Text|a=0|x=406.0|y=176.0|tipsx=10|tipsy=80|color=251|size=18|text=』>
+<Text|a=0|x=439.0|y=176.0|tipsx=10|tipsy=80|color=250|size=18|text=需要10W元宝！>
+<Text|a=0|x=32.0|y=231.0|tipsx=10|tipsy=80|color=251|size=18|text=精准|link=@精准>
+<Text|a=0|x=72.0|y=231.0|tipsx=10|tipsy=80|color=254|size=18|text=致命一击0.5%>
+<Text|a=0|x=186.0|y=231.0|tipsx=10|tipsy=80|color=251|size=18|text=当前等级『>
+<Text|a=0|x=296.0|y=231.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(U8)>>
+<Text|a=0|x=406.0|y=231.0|tipsx=10|tipsy=80|color=251|size=18|text=』>
+<Text|a=0|x=439.0|y=231.0|tipsx=10|tipsy=80|color=250|size=18|text=需要10W元宝！>
+
+
+
+[@精准]
+#IF
+equal U8 10
+#act
+MESSAGEBOX 你的精准已经是最高境界了！
+BREAK
+
+#IF
+CHECKGAMEGOLD > 99999
+#act
+GOTO @炼成精准
+#ELSEACT
+MESSAGEBOX 错误\\①你没有10W元宝！
+BREAK
+
+[@炼成精准]
+#IF
+equal U8 0
+#act
+GAMEGOLD - 100000
+MOV U8 1
+MESSAGEBOX 恭喜你学习精准lv1成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功学习[精准lv1]
+GOTO @学习
+#ELSEACT
+GOTO @炼成精准a
+BREAK
+
+[@炼成精准a]
+#if
+random 2
+#act
+DEC U8 1
+SENDMSG 6 很遗憾,你学习失败,精准降低一级,请下次继续努力！
+GOTO @学习
+BREAK
+
+#if
+random 1
+#act
+GOTO @精准成功
+BREAK
+
+[@精准成功]
+#IF
+equal U8 9
+#act
+GAMEGOLD - 100000
+MOV U8 10
+CONFERTITLE 精准lv10
+MESSAGEBOX 恭喜你炼成精准lv10成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[精准lv10]
+GOTO @学习
+BREAK
+
+#IF
+equal U8 8
+#act
+GAMEGOLD - 100000
+MOV U8 9
+MESSAGEBOX 恭喜你炼成精准lv9成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[精准lv9]
+GOTO @学习
+BREAK
+
+#IF
+equal U8 7
+#act
+GAMEGOLD - 100000
+MOV U8 8
+CONFERTITLE 精准lv8
+MESSAGEBOX 恭喜你炼成精准lv8成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[精准lv8]
+GOTO @学习
+BREAK
+
+#IF
+equal U8 6
+#act
+GAMEGOLD - 100000
+MOV U8 7
+MESSAGEBOX 恭喜你炼成精准lv7成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[精准lv7]
+GOTO @学习
+BREAK
+
+#IF
+equal U8 5
+#act
+GAMEGOLD - 100000
+MOV U8 6
+CONFERTITLE 精准lv6
+MESSAGEBOX 恭喜你炼成精准lv6成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[精准lv6]
+GOTO @学习
+BREAK
+
+#IF
+equal U8 4
+#act
+GAMEGOLD - 100000
+MOV U8 5
+MESSAGEBOX 恭喜你炼成精准lv5成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[精准lv5]
+GOTO @学习
+BREAK
+
+#IF
+equal U8 3
+#act
+GAMEGOLD - 100000
+MOV U8 4
+CONFERTITLE 精准lv4
+MESSAGEBOX 恭喜你炼成精准lv4成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[精准lv4]
+GOTO @学习
+BREAK
+
+#IF
+equal U8 2
+#act
+GAMEGOLD - 100000
+MOV U8 3
+MESSAGEBOX 恭喜你炼成精准lv3成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[精准lv3]
+GOTO @学习
+BREAK
+
+#IF
+equal U8 1
+#act
+GAMEGOLD - 100000
+MOV U8 2
+CONFERTITLE 精准lv2
+MESSAGEBOX 恭喜你炼成精准lv2成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[精准lv2]
+GOTO @学习
+BREAK
+
+[@强化]
+#IF
+equal U7 10
+#act
+MESSAGEBOX 你的强化已经是最高境界了！
+BREAK
+
+#IF
+CHECKGAMEGOLD > 99999
+#act
+GOTO @炼成强化
+#ELSEACT
+MESSAGEBOX 错误\\①你没有10W元宝！
+BREAK
+
+[@炼成强化]
+#IF
+equal U7 0
+#act
+GAMEGOLD - 100000
+MOV U7 1
+MESSAGEBOX 恭喜你学习强化lv1成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功学习[强化lv1]
+GOTO @学习
+#ELSEACT
+GOTO @炼成强化a
+BREAK
+
+[@炼成强化a]
+#if
+random 2
+#act
+DEC U7 1
+SENDMSG 6 很遗憾,你学习失败,强化降低一级,请下次继续努力！
+GOTO @学习
+BREAK
+
+#if
+random 1
+#act
+GOTO @强化成功
+BREAK
+
+[@强化成功]
+#IF
+equal U7 9
+#act
+GAMEGOLD - 100000
+MOV U7 10
+CONFERTITLE 强化lv10
+MESSAGEBOX 恭喜你炼成强化lv10成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[强化lv10]
+GOTO @学习
+BREAK
+
+#IF
+equal U7 8
+#act
+GAMEGOLD - 100000
+MOV U7 9
+MESSAGEBOX 恭喜你炼成强化lv9成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[强化lv9]
+GOTO @学习
+BREAK
+
+#IF
+equal U7 7
+#act
+GAMEGOLD - 100000
+MOV U7 8
+CONFERTITLE 强化lv8
+MESSAGEBOX 恭喜你炼成强化lv8成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[强化lv8]
+GOTO @学习
+BREAK
+
+#IF
+equal U7 6
+#act
+GAMEGOLD - 100000
+MOV U7 7
+MESSAGEBOX 恭喜你炼成强化lv7成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[强化lv7]
+GOTO @学习
+BREAK
+
+#IF
+equal U7 5
+#act
+GAMEGOLD - 100000
+MOV U7 6
+CONFERTITLE 强化lv6
+MESSAGEBOX 恭喜你炼成强化lv6成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[强化lv6]
+GOTO @学习
+BREAK
+
+#IF
+equal U7 4
+#act
+GAMEGOLD - 100000
+MOV U7 5
+MESSAGEBOX 恭喜你炼成强化lv5成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[强化lv5]
+GOTO @学习
+BREAK
+
+#IF
+equal U7 3
+#act
+GAMEGOLD - 100000
+MOV U7 4
+CONFERTITLE 强化lv4
+MESSAGEBOX 恭喜你炼成强化lv4成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[强化lv4]
+GOTO @学习
+BREAK
+
+#IF
+equal U7 2
+#act
+GAMEGOLD - 100000
+MOV U7 3
+MESSAGEBOX 恭喜你炼成强化lv3成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[强化lv3]
+GOTO @学习
+BREAK
+
+#IF
+equal U7 1
+#act
+GAMEGOLD - 100000
+MOV U7 2
+CONFERTITLE 强化lv2
+MESSAGEBOX 恭喜你炼成强化lv2成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[强化lv2]
+GOTO @学习
+BREAK
+
+[@穿杨]
+#IF
+equal U6 10
+#act
+MESSAGEBOX 你的穿杨已经是最高境界了！
+BREAK
+
+#IF
+CHECKGAMEGOLD > 49999
+#act
+GOTO @炼成穿杨
+#ELSEACT
+MESSAGEBOX 错误\\①你没有5W元宝！
+BREAK
+
+[@炼成穿杨]
+#IF
+equal U6 0
+#act
+GAMEGOLD - 50000
+MOV U6 1
+MESSAGEBOX 恭喜你学习穿杨lv1成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功学习[穿杨lv1]
+GOTO @学习
+#ELSEACT
+GOTO @炼成穿杨a
+BREAK
+
+[@炼成穿杨a]
+#if
+random 2
+#act
+DEC U6 1
+SENDMSG 6 很遗憾,你学习失败,穿杨降低一级,请下次继续努力！
+GOTO @学习
+BREAK
+
+#if
+random 1
+#act
+GOTO @穿杨成功
+BREAK
+
+[@穿杨成功]
+#IF
+equal U6 9
+#act
+GAMEGOLD - 50000
+MOV U6 10
+CONFERTITLE 穿杨lv10
+MESSAGEBOX 恭喜你炼成穿杨lv10成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[穿杨lv10]
+GOTO @学习
+BREAK
+
+#IF
+equal U6 8
+#act
+GAMEGOLD - 50000
+MOV U6 9
+MESSAGEBOX 恭喜你炼成穿杨lv9成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[穿杨lv9]
+GOTO @学习
+BREAK
+
+#IF
+equal U6 7
+#act
+GAMEGOLD - 50000
+MOV U6 8
+CONFERTITLE 穿杨lv8
+MESSAGEBOX 恭喜你炼成穿杨lv8成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[穿杨lv8]
+GOTO @学习
+BREAK
+
+#IF
+equal U6 6
+#act
+GAMEGOLD - 50000
+MOV U6 7
+MESSAGEBOX 恭喜你炼成穿杨lv7成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[穿杨lv7]
+GOTO @学习
+BREAK
+
+#IF
+equal U6 5
+#act
+GAMEGOLD - 50000
+MOV U6 6
+CONFERTITLE 穿杨lv6
+MESSAGEBOX 恭喜你炼成穿杨lv6成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[穿杨lv6]
+GOTO @学习
+BREAK
+
+#IF
+equal U6 4
+#act
+GAMEGOLD - 50000
+MOV U6 5
+MESSAGEBOX 恭喜你炼成穿杨lv5成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[穿杨lv5]
+GOTO @学习
+BREAK
+
+#IF
+equal U6 3
+#act
+GAMEGOLD - 50000
+MOV U6 4
+CONFERTITLE 穿杨lv4
+MESSAGEBOX 恭喜你炼成穿杨lv4成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[穿杨lv4]
+GOTO @学习
+BREAK
+
+#IF
+equal U6 2
+#act
+GAMEGOLD - 50000
+MOV U6 3
+MESSAGEBOX 恭喜你炼成穿杨lv3成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[穿杨lv3]
+GOTO @学习
+BREAK
+
+#IF
+equal U6 1
+#act
+GAMEGOLD - 50000
+MOV U6 2
+CONFERTITLE 穿杨lv2
+MESSAGEBOX 恭喜你炼成穿杨lv2成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[穿杨lv2]
+GOTO @学习
+BREAK
+
+[@嗜血]
+#IF
+equal U5 10
+#act
+MESSAGEBOX 你的嗜血已经是最高境界了！
+BREAK
+
+#IF
+CHECKGAMEGOLD > 49999
+#act
+GOTO @炼成嗜血
+#ELSEACT
+MESSAGEBOX 错误\\①你没有5W元宝！
+BREAK
+
+[@炼成嗜血]
+#IF
+equal U5 0
+#act
+GAMEGOLD - 50000
+MOV U5 1
+MESSAGEBOX 恭喜你学习嗜血lv1成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功学习[嗜血lv1]
+GOTO @学习
+#ELSEACT
+GOTO @炼成嗜血a
+BREAK
+
+[@炼成嗜血a]
+#if
+random 2
+#act
+DEC U5 1
+SENDMSG 6 很遗憾,你学习失败,嗜血降低一级,请下次继续努力！
+GOTO @学习
+BREAK
+
+#if
+random 1
+#act
+GOTO @嗜血成功
+BREAK
+
+[@嗜血成功]
+#IF
+equal U5 9
+#act
+GAMEGOLD - 50000
+MOV U5 10
+MESSAGEBOX 恭喜你炼成嗜血lv10成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[嗜血lv10]
+GOTO @学习
+BREAK
+
+#IF
+equal U5 8
+#act
+GAMEGOLD - 50000
+MOV U5 9
+MESSAGEBOX 恭喜你炼成嗜血lv9成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[嗜血lv9]
+GOTO @学习
+BREAK
+
+#IF
+equal U5 7
+#act
+GAMEGOLD - 50000
+MOV U5 8
+MESSAGEBOX 恭喜你炼成嗜血lv8成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[嗜血lv8]
+GOTO @学习
+BREAK
+
+#IF
+equal U5 6
+#act
+GAMEGOLD - 50000
+MOV U5 7
+MESSAGEBOX 恭喜你炼成嗜血lv7成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[嗜血lv7]
+GOTO @学习
+BREAK
+
+#IF
+equal U5 5
+#act
+GAMEGOLD - 50000
+MOV U5 6
+MESSAGEBOX 恭喜你炼成嗜血lv6成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[嗜血lv6]
+GOTO @学习
+BREAK
+
+#IF
+equal U5 4
+#act
+GAMEGOLD - 50000
+MOV U5 5
+MESSAGEBOX 恭喜你炼成嗜血lv5成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[嗜血lv5]
+GOTO @学习
+BREAK
+
+#IF
+equal U5 3
+#act
+GAMEGOLD - 50000
+MOV U5 4
+MESSAGEBOX 恭喜你炼成嗜血lv4成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[嗜血lv4]
+GOTO @学习
+BREAK
+
+#IF
+equal U5 2
+#act
+GAMEGOLD - 50000
+MOV U5 3
+MESSAGEBOX 恭喜你炼成嗜血lv3成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[嗜血lv3]
+GOTO @学习
+BREAK
+
+#IF
+equal U5 1
+#act
+GAMEGOLD - 50000
+MOV U5 2
+MESSAGEBOX 恭喜你炼成嗜血lv2成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[嗜血lv2]
+GOTO @学习
+BREAK

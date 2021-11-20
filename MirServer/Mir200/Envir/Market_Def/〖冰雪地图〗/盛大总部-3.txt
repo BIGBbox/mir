@@ -1,0 +1,91 @@
+[@main]
+#IF
+equal <$CLIENTFLAG> 1
+#say
+\  <欢迎来到/FCOLOR=19>{[<$SERVERNAME>]/FCOLOR=249}<，用心制作，长久开放经典耐玩！/FCOLOR=19>\
+<╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┬┄┄┄┄┄┑/FCOLOR=254>\
+\  <囚魔炼狱/FCOLOR=253>:<囚魔职员、战士、法师、道士.千古魔主./FCOLOR=70><←/FCOLOR=254><护军进入/@chun21盛大1><←/FCOLOR=254>\
+<┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄├┄┄┄┄┄┤/FCOLOR=254>\
+\  <地图爆率/FCOLOR=250>:<怪物爆率高,BOSS爆本服终极装备和材料./FCOLOR=154><←/FCOLOR=254><赞助进入/@chun21盛大3><←/FCOLOR=254>\\
+<┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄├┄┄┄┄┄┤/FCOLOR=254>\
+\  <进入条件/FCOLOR=250>:<三品护军、赞助免费进.花500元宝也可进/FCOLOR=239><←/FCOLOR=254><元宝进入/@chun21盛大2><←/FCOLOR=254>\\
+<╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┴┄┄┄┄┄┚/FCOLOR=254>\
+< 二层领主可真会秒人的啊，装备太差就不要进入寻求刺激了，6小时一刷>\
+#elsesay
+<Img|width=620|height=260|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=65|y=45|tipsx=10|tipsy=80|color=19|size=18|text=欢迎来到>
+<Text|a=0|x=153|y=45|tipsx=10|tipsy=80|color=249|size=18|text=[<$SERVERNAME>]>
+<Text|a=0|x=318|y=45|tipsx=10|tipsy=80|color=19|size=18|text=用心制作，长久开放经典耐玩！>
+<Text|a=0|x=32.0|y=65.0|tipsx=10|tipsy=80|color=254|size=18|text=╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┬┄┄┄┄┄┄┄┄┑>
+<Text|a=0|x=51.0|y=85.0|tipsx=10|tipsy=80|color=253|size=18|text=囚魔炼狱>
+<Text|a=0|x=130.0|y=84.0|tipsx=10|tipsy=80|color=255|size=18|text=:>
+<Text|a=0|ax=0|x=143.0|y=85.0|tipsx=10|tipsy=80|color=70|size=18|text=囚魔职员、战士、法师、道士.千古魔主.>
+<Text|a=0|x=32.0|y=104.0|tipsx=10|tipsy=80|color=254|size=18|text=┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┤>
+<Text|a=0|ax=0|x=482.0|y=86.0|tipsx=10|tipsy=80|size=18|color=251|text=护军进入|link=@chun21盛大1>
+<Text|a=0|ax=0|x=551.0|y=86.0|tipsx=10|tipsy=80|color=254|size=18|text=←>
+<Text|a=0|x=51.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=地图爆率>
+<Text|a=0|x=130.0|y=125.0|tipsx=10|tipsy=80|color=255|size=18|text=:>
+<Text|a=0|ax=0|x=143.0|y=125.0|tipsx=10|tipsy=80|color=154|size=18|text=怪物爆率高,BOSS爆本服终极装备和材料.>
+<Text|a=0|x=32.0|y=145.0|tipsx=10|tipsy=80|color=254|size=18|text=┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┤>
+<Text|a=0|x=481.0|y=163.0|tipsx=10|tipsy=80|color=251|size=18|text=元宝进入|link=@chun21盛大2>
+<Text|a=0|ax=0|x=552.0|y=162.0|tipsx=10|tipsy=80|color=254|size=18|text=←>
+<Text|a=0|x=51.0|y=165.0|tipsx=10|tipsy=80|color=250|size=18|text=进入条件>
+<Text|a=0|x=130.0|y=165.0|tipsx=10|tipsy=80|color=255|size=18|text=:>
+<Text|a=0|ax=0|x=143.0|y=165.0|tipsx=10|tipsy=80|color=239|size=18|text=三品护军、赞助免费进.花500元宝也可进>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=254|size=18|text=╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┴┄┄┄┄┄┄┄┄┚>
+<Text|ax=0|x=473.0|y=125.0|color=251|size=18|text=赞助进入|link=@chun21盛大3>
+<Text|ax=0|x=543.0|y=124.0|color=254|size=18|text=←>
+<Text|x=28.0|y=210.0|color=249|size=18|text=二层领主可真会秒人的啊，装备太差就不要进入寻求刺激了，6小时一刷>
+
+
+
+[@chun21盛大3]
+#OR
+equal U22 4
+equal U22 3
+equal U22 2
+equal U22 1
+#ACT
+;give 回城卷 1
+MapMove hdt1 11 65
+;SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！ 1 3
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！ 1 3
+;GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！
+break
+#elseact
+MESSAGEBOX 你还不是本服的会员！无法进入！
+break
+
+[@chun21盛大2]
+#if
+check [007] 1
+#ACT
+;give 回城卷 1
+MapMove hdt1 11 65
+;SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！ 1 3
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！ 1 3
+;GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！
+break
+#elseact
+MESSAGEBOX 你的官爵不是“三品护军”！无法进入！
+break
+
+[@chun21盛大1]
+#if
+CHECKGAMEGOLD > 499
+#ACT
+;give 回城卷 1
+GAMEGOLD - 500
+MapMove hdt1 11 65
+;SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！ 1 3
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！ 1 3
+;GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！
+break
+#elseact
+MESSAGEBOX 你的元宝不足！无法进入！
+break

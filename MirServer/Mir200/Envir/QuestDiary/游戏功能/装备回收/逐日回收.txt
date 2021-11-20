@@ -1,0 +1,273 @@
+[@逐日回收]
+{
+#if
+checkitem 逐日道扇 1
+#ACT
+take 逐日道扇 1
+GAMEGOLD + 160
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日道甲 1
+#ACT
+take 逐日道甲 1
+GAMEGOLD + 160
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日道衣 1
+#ACT
+take 逐日道衣 1
+GAMEGOLD + 160
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日道镯 1
+#ACT
+take 逐日道镯 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日道链 1
+#ACT
+take 逐日道链 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日道盔 1
+#ACT
+take 逐日道盔 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日道勋 1
+#ACT
+take 逐日道勋 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日道靴 1
+#ACT
+take 逐日道靴 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日道带 1
+#ACT
+take 逐日道带 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日道指 1
+#ACT
+take 逐日道指 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日魔杖 1
+#ACT
+take 逐日魔杖 1
+GAMEGOLD + 160
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日魔甲 1
+#ACT
+take 逐日魔甲 1
+GAMEGOLD + 160
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日魔衣 1
+#ACT
+take 逐日魔衣 1
+GAMEGOLD + 160
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日魔镯 1
+#ACT
+take 逐日魔镯 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日魔链 1
+#ACT
+take 逐日魔链 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日魔盔 1
+#ACT
+take 逐日魔盔 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日魔勋 1
+#ACT
+take 逐日魔勋 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日魔靴 1
+#ACT
+take 逐日魔靴 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日魔带 1
+#ACT
+take 逐日魔带 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日魔指 1
+#ACT
+take 逐日魔指 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日战刃 1
+#ACT
+take 逐日战刃 1
+GAMEGOLD + 160
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日战甲 1
+#ACT
+take 逐日战甲 1
+GAMEGOLD + 160
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日战衣 1
+#ACT
+take 逐日战衣 1
+GAMEGOLD + 160
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日战镯 1
+#ACT
+take 逐日战镯 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日战链 1
+#ACT
+take 逐日战链 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日战盔 1
+#ACT
+take 逐日战盔 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日战勋 1
+#ACT
+take 逐日战勋 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日战靴 1
+#ACT
+take 逐日战靴 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日战带 1
+#ACT
+take 逐日战带 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+#if
+checkitem 逐日战指 1
+#ACT
+take 逐日战指 1
+GAMEGOLD + 80
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了逐日装备，获得了大量元宝经验！
+GOTO @逐日回收
+break
+}

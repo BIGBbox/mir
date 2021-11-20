@@ -1,0 +1,81 @@
+[@奖励]
+{
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第一排名.txt
+#ACT
+ChangeHumAbility 5 + 50
+ChangeHumAbility 6 + 50
+ChangeHumAbility 7 + 50
+ChangeHumAbility 8 + 50
+ChangeHumAbility 9 + 50
+ChangeHumAbility 10 + 50
+SENDMSG 5 您是元宝捐款第一名,享受上线攻魔道各+50
+BREAK
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第二排名.txt
+#ACT
+ChangeHumAbility 5 + 30
+ChangeHumAbility 6 + 30
+ChangeHumAbility 7 + 30
+ChangeHumAbility 8 + 30
+ChangeHumAbility 9 + 30
+ChangeHumAbility 10 + 30
+SENDMSG 5 您是元宝捐款第二名,享受上线攻魔道各+30
+BREAK
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第三排名.txt
+#ACT
+ChangeHumAbility 5 + 20
+ChangeHumAbility 6 + 20
+ChangeHumAbility 7 + 20
+ChangeHumAbility 8 + 20
+ChangeHumAbility 9 + 20
+ChangeHumAbility 10 + 20
+SENDMSG 5 您是元宝捐款第三名,享受上线攻魔道各+20
+BREAK
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第四排名.txt
+#ACT
+ChangeHumAbility 5 + 15
+ChangeHumAbility 6 + 15
+ChangeHumAbility 7 + 15
+ChangeHumAbility 8 + 15
+ChangeHumAbility 9 + 15
+ChangeHumAbility 10 + 15
+SENDMSG 5 您是元宝捐款第四名,享受上线攻魔道各+15
+BREAK
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第五排名.txt
+#ACT
+ChangeHumAbility 5 + 10
+ChangeHumAbility 6 + 10
+ChangeHumAbility 7 + 10
+ChangeHumAbility 8 + 10
+ChangeHumAbility 9 + 10
+ChangeHumAbility 10 + 10
+SENDMSG 5 您是元宝捐款第五名,享受上线攻魔道各+10
+BREAK
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第六排名.txt
+#ACT
+ChangeHumAbility 5 + 5
+ChangeHumAbility 6 + 5
+ChangeHumAbility 7 + 5
+ChangeHumAbility 8 + 5
+ChangeHumAbility 9 + 5
+ChangeHumAbility 10 + 5
+SENDMSG 5 您是元宝捐款第六名,享受上线攻魔道各+5
+BREAK
+#ELSEACT
+BREAK
+}

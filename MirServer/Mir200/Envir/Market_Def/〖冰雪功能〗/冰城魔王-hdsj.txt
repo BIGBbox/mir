@@ -1,0 +1,756 @@
+[@main]
+#if
+equal <$CLIENTFLAG> 1
+#say
+神性？魔性？\
+难得清醒，是恶魔重生，还是真我再生？\
+吾当率性而为，还是自灭身心，封魔于此？\
+如何取舍……神性？魔性？杀身灭魔，封魔于此……\
+神性？魔性？\
+难得清醒。杀身灭灵？亦或，修成大魔？\ \
+
+<神魔之体,成功则增加1级.失败则失去全部修为！/AUTOCOLOR=251>\ \
+
+<吾已做好准备/@准备>
+#elsesay
+<Img|width=620|height=270|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=18|text=神性？魔性？\>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=255|size=18|text=难得清醒，是恶魔重生，还是真我再生？\>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=255|size=18|text=吾当率性而为，还是自灭身心，封魔于此？\>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=255|size=18|text=如何取舍……神性？魔性？杀身灭魔，封魔于此……\>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=255|size=18|text=神性？魔性？\>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=255|size=18|text=难得清醒。杀身灭灵？亦或，修成大魔？\ \>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=251|size=18|text=神魔之体,成功则增加1级.失败则失去全部修为！>
+<Text|a=0|x=32|y=205|tipsx=10|tipsy=80|color=251|size=18|text=吾已做好准备|link=@准备>
+
+
+[@准备]
+#if
+equal <$CLIENTFLAG> 1
+#say
+历千劫万难，纵使魂飞魄散，我灵识依在。\
+战百世轮回，纵使六道无常，我依然永生。\ \
+
+<锻造神魔之体需:洗髓丹*20+血龙魄珠*20+20W元宝/AUTOCOLOR=251>\
+<只有50%的成功率,学习第一级成功率100%/FCOLOR=250>\
+<成功:神魔之体增加1级 失败:神魔之体将为0级/AUTOCOLOR=253>\ \
+
+<当前神魔之体为【/FCOLOR=250><$STR(U4)><】级/FCOLOR=250>   <锻造神魔之体/@锻造神魔之体>\
+<每1级神魔之体可增加所有元素1%>
+#elsesay
+<Img|width=620|height=270|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=18|text=历千劫万难，纵使魂飞魄散，我灵识依在。\>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=255|size=18|text=战百世轮回，纵使六道无常，我依然永生。\ \>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=251|size=18|text=锻造神魔之体需:洗髓丹*20+血龙魄珠*20+20W元宝>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=250|size=18|text=只有50%的成功率,学习第一级成功率100%>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=253|size=18|text=成功:神魔之体增加1级 失败:神魔之体将为0级>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=250|size=18|text=当前神魔之体为【>
+<Text|a=0|x=208|y=165|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(U4)>>
+<Text|a=0|x=318|y=165|tipsx=10|tipsy=80|color=250|size=18|text=】级>
+<Text|a=0|x=362|y=165|tipsx=10|tipsy=80|color=251|size=18|text=锻造神魔之体|link=@锻造神魔之体>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=255|size=18|text=每1级神魔之体可增加所有元素1%>
+
+
+
+[@锻造神魔之体]
+#IF
+CHECKITEM 洗髓丹 20
+CHECKITEM 血龙魄珠 20
+CHECKGAMEGOLD > 199999
+#act
+GOTO @炼成神魔之体
+#ELSEACT
+MESSAGEBOX 错误\\①你没有洗髓丹*20+血龙魄珠*20+20W元宝！
+BREAK
+
+[@炼成神魔之体]
+#IF
+equal U4 0
+#act
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv1
+MOV U4 1
+MESSAGEBOX 恭喜你炼成神魔之体lv1成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv1]
+GOTO @准备
+#ELSEACT
+GOTO @锻造神魔之体a
+BREAK
+
+[@锻造神魔之体a]
+#if
+random 2
+#act
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+MOV U4 0
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+SENDMSG 6 很遗憾,你修炼失败,神魔之体离你而去了,请下次继续努力！
+GOTO @准备
+BREAK
+
+#if
+random 1
+#act
+GOTO @成功
+BREAK
+
+[@成功]
+#IF
+equal U4 19
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv20
+MOV U4 20
+MESSAGEBOX 恭喜你炼成神魔之体lv20成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv20]
+GOTO @准备
+BREAK
+
+#IF
+equal U4 18
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv19
+MOV U4 19
+MESSAGEBOX 恭喜你炼成神魔之体lv19成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv19]
+GOTO @准备
+BREAK
+#IF
+equal U4 17
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv18
+MOV U4 18
+MESSAGEBOX 恭喜你炼成神魔之体lv18成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv18]
+GOTO @准备
+BREAK
+
+#IF
+equal U4 16
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv17
+MOV U4 17
+MESSAGEBOX 恭喜你炼成神魔之体lv17成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv17]
+GOTO @准备
+BREAK
+
+#IF
+equal U4 15
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv16
+MOV U4 16
+MESSAGEBOX 恭喜你炼成神魔之体lv16成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv16]
+GOTO @准备
+BREAK
+
+#IF
+equal U4 14
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv15
+MOV U4 15
+MESSAGEBOX 恭喜你炼成神魔之体lv15成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv15]
+GOTO @准备
+BREAK
+
+
+#IF
+equal U4 13
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv14
+MOV U4 14
+MESSAGEBOX 恭喜你炼成神魔之体lv14成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv14]
+GOTO @准备
+BREAK
+
+#IF
+equal U4 12
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv13
+MOV U4 13
+MESSAGEBOX 恭喜你炼成神魔之体lv13成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv13]
+GOTO @准备
+BREAK
+
+
+#IF
+equal U4 11
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv12
+MOV U4 12
+MESSAGEBOX 恭喜你炼成神魔之体lv12成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv12]
+GOTO @准备
+BREAK
+
+
+#IF
+equal U4 10
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv11
+MOV U4 11
+MESSAGEBOX 恭喜你炼成神魔之体lv11成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv11]
+GOTO @准备
+BREAK
+
+
+#IF
+equal U4 9
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv10
+MOV U4 10
+MESSAGEBOX 恭喜你炼成神魔之体lv10成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv10]
+GOTO @准备
+BREAK
+
+
+#IF
+equal U4 8
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv9
+MOV U4 9
+MESSAGEBOX 恭喜你炼成神魔之体lv9成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv9]
+GOTO @准备
+BREAK
+
+
+#IF
+equal U4 7
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv8
+MOV U4 8
+MESSAGEBOX 恭喜你炼成神魔之体lv8成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv8]
+GOTO @准备
+BREAK
+
+#IF
+equal U4 6
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv7
+MOV U4 7
+MESSAGEBOX 恭喜你炼成神魔之体lv7成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv7]
+GOTO @准备
+BREAK
+
+#IF
+equal U4 5
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv6
+MOV U4 6
+MESSAGEBOX 恭喜你炼成神魔之体lv6成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv6]
+GOTO @准备
+BREAK
+
+#IF
+equal U4 4
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv5
+MOV U4 5
+MESSAGEBOX 恭喜你炼成神魔之体lv5成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv5]
+GOTO @准备
+BREAK
+
+#IF
+equal U4 3
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv4
+MOV U4 4
+MESSAGEBOX 恭喜你炼成神魔之体lv4成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv4]
+GOTO @准备
+BREAK
+
+#IF
+equal U4 2
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv3
+MOV U4 3
+MESSAGEBOX 恭喜你炼成神魔之体lv3成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv3]
+GOTO @准备
+BREAK
+
+
+#IF
+equal U4 1
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+DEPRIVETITLE 神魔之体lv11
+DEPRIVETITLE 神魔之体lv12
+DEPRIVETITLE 神魔之体lv13
+DEPRIVETITLE 神魔之体lv14
+DEPRIVETITLE 神魔之体lv15
+DEPRIVETITLE 神魔之体lv16
+DEPRIVETITLE 神魔之体lv17
+DEPRIVETITLE 神魔之体lv18
+DEPRIVETITLE 神魔之体lv19
+DEPRIVETITLE 神魔之体lv20
+GAMEGOLD - 200000
+TAKE 洗髓丹 20
+TAKE 血龙魄珠 20
+CONFERTITLE 神魔之体lv2
+MOV U4 2
+MESSAGEBOX 恭喜你炼成神魔之体lv2成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[神魔之体lv2]
+GOTO @准备
+BREAK

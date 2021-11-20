@@ -1,0 +1,30 @@
+[@Settings]
+{
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>\ \
+
+<Text|text=成为道士中的高手不但要有一颗救世之心|x=30|y=60|size=16>
+<Text|text=更要有为苍生牺牲自己的觉悟，这就是道士的宿命|x=30|y=80|size=16>
+<Text|text=记住，有付出才有回报，为一己私利而活的人是无法成为真正的道士，|x=30|y=100|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@join_2>
+<Text|text=好!我愿意挑战！|x=60|y=133|size=16|color=1001|link=@join_2>
+
+<Img|img=public/btn_npcfh_03.png|x=205|y=138>
+<Layout|x=205|y=120|width=80|height=50|link=@exit>
+<Text|text=算了,我还是离开吧|x=230|y=133|size=16|color=1001|link=@exit>
+
+
+[@join_2]
+
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>\ \
+
+<Text|text=既然你已经有所觉悟，很好！|x=30|y=60|size=16>
+<Text|text=在沃玛森林里住着一位刘老人，在他居住着的房子旁边|x=30|y=80|size=16>
+<Text|text=有一间屋子，战胜里面的魔物，完成对自己的挑战吧！|x=30|y=100|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@exit>
+<Text|text=离开|x=60|y=133|size=16|color=1001|link=@exit>
+
+}

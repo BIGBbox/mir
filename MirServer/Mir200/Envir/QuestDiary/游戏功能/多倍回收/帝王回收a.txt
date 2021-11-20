@@ -1,0 +1,66 @@
+[@a帝王回收]
+{
+#if
+checkitem 帝王の刃 1
+#ACT
+take 帝王の刃 1
+GAMEGOLD + 1200
+CHANGEEXP + 200000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了帝王装备，获得了大量元宝经验！
+GOTO @a帝王回收
+break
+#if
+checkitem 帝王の甲 1
+#ACT
+take 帝王の甲 1
+GAMEGOLD + 1200
+CHANGEEXP + 200000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了帝王装备，获得了大量元宝经验！
+GOTO @a帝王回收
+break
+#if
+checkitem 帝王の衣 1
+#ACT
+take 帝王の衣 1
+GAMEGOLD + 1200
+CHANGEEXP + 200000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了帝王装备，获得了大量元宝经验！
+GOTO @a帝王回收
+break
+#if
+checkitem 帝王の镯 1
+#ACT
+take 帝王の镯 1
+GAMEGOLD + 600
+CHANGEEXP + 200000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了帝王装备，获得了大量元宝经验！
+GOTO @a帝王回收
+break
+#if
+checkitem 帝王の链 1
+#ACT
+take 帝王の链 1
+GAMEGOLD + 600
+CHANGEEXP + 200000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了帝王装备，获得了大量元宝经验！
+GOTO @a帝王回收
+break
+#if
+checkitem 帝王の盔 1
+#ACT
+take 帝王の盔 1
+GAMEGOLD + 600
+CHANGEEXP + 200000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了帝王装备，获得了大量元宝经验！
+GOTO @a帝王回收
+break
+#if
+checkitem 帝王の勋 1
+#ACT
+take 帝王の勋 1
+GAMEGOLD + 600
+CHANGEEXP + 200000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了帝王装备，获得了大量元宝经验！
+GOTO @a帝王回收
+break
+}

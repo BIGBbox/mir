@@ -1,0 +1,65 @@
+[@main]
+#if
+equal <$CLIENTFLAG> 1
+#say
+发现空格名字一律删除！请尽快修改名字!\
+<查询名称是否被占用/@@InputString1(请输入查询的名称：)>\
+<我要改名/@@InputString2(请输入新的名称：)>\ \
+
+<改名后您的捐献爵位和天下第一将失效！>\
+<杀人数据和被杀数据会清空>\
+<改名每次收费100W元宝/FCOLOR=250>
+#elsesay
+<Img|width=550|height=200|rotate=0|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1|scale9t=10>
+<Layout|x=527.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=549.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=18|text=发现空格名字一律删除！请尽快修改名字!\>
+<Text|a=0|ay=1|x=32.0|y=61.0|tipsx=10|tipsy=80|size=18|color=251|text=查询名称是否被占用|link=@@INPUTSTRING1(请输入查询的名称：)>
+<Text|a=0|ay=1|x=273.0|y=61.0|tipsx=10|tipsy=80|size=18|color=251|text=我要改名|link=@@INPUTSTRING2(请输入新的名称：)>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=255|size=18|text=改名后您的捐献爵位和天下第一将失效！>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=255|size=18|text=杀人数据和被杀数据会清空>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=250|size=18|text=改名每次收费100W元宝>
+
+
+[@InputString1]
+#IF
+Equal S1
+#ACT
+SENDMSG 6 请输入一个正确的名称
+Break
+
+#OR
+CheckStringlength S1 > 20
+CheckStringlength S1 < 4
+#ACT
+SENDMSG 6 输入名称长度不正确
+Break
+
+#IF
+#ACT
+QUERYHUMNAMEEXIST S1
+
+[@InputString2]
+#IF
+Equal S2
+#ACT
+SENDMSG 6 请输入一个正确的名称
+Break
+
+#OR
+CheckStringlength S2 > 20
+CheckStringlength S2 < 4
+#ACT
+SENDMSG 6 输入名称长度不正确
+Break
+
+#OR
+CHECKGAMEGOLD < 1000000
+#ACT
+SENDMSG 6 你的元宝不足！
+Break
+
+#IF
+#ACT
+GAMEGOLD - 1000000
+CHANGEHUMNAME S2

@@ -1,0 +1,507 @@
+[@a魅影回收]
+{
+#if
+checkitem 魅影魔の刃[罕世] 1
+#ACT
+take 魅影魔の刃[罕世] 1
+GAMEGOLD + 3600
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の甲[罕世] 1
+#ACT
+take 魅影魔の甲[罕世] 1
+GAMEGOLD + 3600
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の衣[罕世] 1
+#ACT
+take 魅影魔の衣[罕世] 1
+GAMEGOLD + 3600
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の带[罕世] 1
+#ACT
+take 魅影魔の带[罕世] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の靴[罕世] 1
+#ACT
+take 魅影魔の靴[罕世] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の镯[罕世] 1
+#ACT
+take 魅影魔の镯[罕世] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の手[罕世] 1
+#ACT
+take 魅影魔の手[罕世] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の刃[罕世] 1
+#ACT
+take 魅影神の刃[罕世] 1
+GAMEGOLD + 3600
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の甲[罕世] 1
+#ACT
+take 魅影神の甲[罕世] 1
+GAMEGOLD + 3600
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の衣[罕世] 1
+#ACT
+take 魅影神の衣[罕世] 1
+GAMEGOLD + 3600
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の靴[罕世] 1
+#ACT
+take 魅影神の靴[罕世] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の镯[罕世] 1
+#ACT
+take 魅影神の镯[罕世] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の手[罕世] 1
+#ACT
+take 魅影神の手[罕世] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の带[罕世] 1
+#ACT
+take 魅影神の带[罕世] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の刃[传承] 1
+#ACT
+take 魅影魔の刃[传承] 1
+GAMEGOLD + 3600
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の甲[传承] 1
+#ACT
+take 魅影魔の甲[传承] 1
+GAMEGOLD + 3600
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の衣[传承] 1
+#ACT
+take 魅影魔の衣[传承] 1
+GAMEGOLD + 3600
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の带[传承] 1
+#ACT
+take 魅影魔の带[传承] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の靴[传承] 1
+#ACT
+take 魅影魔の靴[传承] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の镯[传承] 1
+#ACT
+take 魅影魔の镯[传承] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の手[传承] 1
+#ACT
+take 魅影魔の手[传承] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の刃[传承] 1
+#ACT
+take 魅影神の刃[传承] 1
+GAMEGOLD + 3600
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の甲[传承] 1
+#ACT
+take 魅影神の甲[传承] 1
+GAMEGOLD + 3600
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の衣[传承] 1
+#ACT
+take 魅影神の衣[传承] 1
+GAMEGOLD + 3600
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の靴[传承] 1
+#ACT
+take 魅影神の靴[传承] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の镯[传承] 1
+#ACT
+take 魅影神の镯[传承] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の手[传承] 1
+#ACT
+take 魅影神の手[传承] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の带[传承] 1
+#ACT
+take 魅影神の带[传承] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の刃[史诗] 1
+#ACT
+take 魅影魔の刃[史诗] 1
+GAMEGOLD + 3600
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の甲[史诗] 1
+#ACT
+take 魅影魔の甲[史诗] 1
+GAMEGOLD + 3600
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の衣[史诗] 1
+#ACT
+take 魅影魔の衣[史诗] 1
+GAMEGOLD + 3600
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の带[史诗] 1
+#ACT
+take 魅影魔の带[史诗] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の靴[史诗] 1
+#ACT
+take 魅影魔の靴[史诗] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の镯[史诗] 1
+#ACT
+take 魅影魔の镯[史诗] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の手[史诗] 1
+#ACT
+take 魅影魔の手[史诗] 1
+GAMEGOLD + 1800
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の刃[史诗] 1
+#ACT
+take 魅影神の刃[史诗] 1
+GAMEGOLD + 3600
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の甲[史诗] 1
+#ACT
+take 魅影神の甲[史诗] 1
+GAMEGOLD + 3600
+CHANGEEXP + 600000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の衣[史诗] 1
+#ACT
+take 魅影神の衣[史诗] 1
+GAMEGOLD + 3600
+CHANGEEXP + 4000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の靴[史诗] 1
+#ACT
+take 魅影神の靴[史诗] 1
+GAMEGOLD + 1800
+CHANGEEXP + 2000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の镯[史诗] 1
+#ACT
+take 魅影神の镯[史诗] 1
+GAMEGOLD + 1800
+CHANGEEXP + 2000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の手[史诗] 1
+#ACT
+take 魅影神の手[史诗] 1
+GAMEGOLD + 1800
+CHANGEEXP + 2000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の带[史诗] 1
+#ACT
+take 魅影神の带[史诗] 1
+GAMEGOLD + 1800
+CHANGEEXP + 2000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の刃 1
+#ACT
+take 魅影魔の刃 1
+GAMEGOLD + 3600
+CHANGEEXP + 4000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の甲 1
+#ACT
+take 魅影魔の甲 1
+GAMEGOLD + 3600
+CHANGEEXP + 4000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の衣 1
+#ACT
+take 魅影魔の衣 1
+GAMEGOLD + 3600
+CHANGEEXP + 4000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の带 1
+#ACT
+take 魅影魔の带 1
+GAMEGOLD + 1800
+CHANGEEXP + 2000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の靴 1
+#ACT
+take 魅影魔の靴 1
+GAMEGOLD + 1800
+CHANGEEXP + 2000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の镯 1
+#ACT
+take 魅影魔の镯 1
+GAMEGOLD + 1800
+CHANGEEXP + 2000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影魔の手 1
+#ACT
+take 魅影魔の手 1
+GAMEGOLD + 1800
+CHANGEEXP + 2000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の刃 1
+#ACT
+take 魅影神の刃 1
+GAMEGOLD + 3600
+CHANGEEXP + 4000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の甲 1
+#ACT
+take 魅影神の甲 1
+GAMEGOLD + 3600
+CHANGEEXP + 4000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の衣 1
+#ACT
+take 魅影神の衣 1
+GAMEGOLD + 3600
+CHANGEEXP + 4000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の靴 1
+#ACT
+take 魅影神の靴 1
+GAMEGOLD + 1800
+CHANGEEXP + 2000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の镯 1
+#ACT
+take 魅影神の镯 1
+GAMEGOLD + 1800
+CHANGEEXP + 2000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の手 1
+#ACT
+take 魅影神の手 1
+GAMEGOLD + 1800
+CHANGEEXP + 2000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+#if
+checkitem 魅影神の带 1
+#ACT
+take 魅影神の带 1
+GAMEGOLD + 1800
+CHANGEEXP + 2000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了魅影装备，获得了大量元宝经验！
+GOTO @a魅影回收
+break
+}

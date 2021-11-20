@@ -1,0 +1,310 @@
+[@装备拣取]
+#IF
+EQUAL G400 0
+#act
+MOV G400 1
+MOV G451 1
+MOV G452 1
+MOV G453 1
+MOV G454 1
+MOV G455 1
+MOV G406 1
+MOV G407 1
+MOV G408 1
+MOV G409 1
+MOV G410 1
+MOV G411 1
+MOV G412 1
+MOV G413 1
+MOV G414 1
+MOV G415 1
+MOV G416 1
+MOV G417 1
+MOV G418 1
+MOV G419 1
+MOV G420 1
+MOV G421 1
+MOV G422 1
+MOV G423 1
+MOV G424 1
+MOV G425 1
+MOV G426 1
+MOV A61 <我要领取/@领取A61>
+MOV A62 <我要领取/@领取A62>
+MOV A63 <我要领取/@领取A63>
+MOV A64 <我要领取/@领取A64>
+MOV A65 <我要领取/@领取A65>
+MOV A66 <我要领取/@领取A66>
+MOV A67 <我要领取/@领取A67>
+MOV A68 <我要领取/@领取A68>
+MOV A69 <我要领取/@领取A69>
+MOV A70 <我要领取/@领取A70>
+MOV A71 <我要领取/@领取A71>
+MOV A72 <我要领取/@领取A72>
+MOV A73 <我要领取/@领取A73>
+MOV A74 <我要领取/@领取A74>
+MOV A75 <我要领取/@领取A75>
+MOV A76 <我要领取/@领取A76>
+MOV A77 <我要领取/@领取A77>
+MOV A78 <我要领取/@领取A78>
+MOV A79 <我要领取/@领取A79>
+MOV A80 <我要领取/@领取A80>
+MOV A81 <我要领取/@领取A81>
+MOV A82 <我要领取/@领取A82>
+MOV A83 <我要领取/@领取A83>
+MOV A84 <我要领取/@领取A84>
+MOV A85 <我要领取/@领取A85>
+MOV A86 <我要领取/@领取A86>
+
+[@3530054]
+#IF
+#act
+MOVR G130 12 16
+MOVR G131 13 17
+
+[@光环效果]
+#IF
+#ACT
+;MAPEFFECT 验证3530054 <$STR(G130)> <$STR(G131)> 12 1391 10 1 100 1 0
+
+
+[@地图加价]
+#If
+EQUAL G111 1
+#Act
+MOV G111 0
+GMEXECUTE 开始提问 @地图加价1
+
+
+[@地图减价]
+#If
+EQUAL G111 0
+#Act
+MOV G111 1
+GMEXECUTE 开始提问 @地图减价1
+
+
+[@秒修装备]
+#If
+#Act
+GMEXECUTE 开始提问 @秒修装备1
+
+
+[@早上提示]
+#IF
+#act
+SENDMSG 1 亲爱的玩家，现在已经是早上了
+SENDMSG 1 游戏虽然好玩，可别忘了工作和学习的时间
+[@中午提示]
+#IF
+#act
+SENDMSG 1 亲爱的玩家，现在已经是中午了
+SENDMSG 1 游戏虽然好玩，可别忘了多陪陪你的朋友和家人
+[@晚上提示]
+#IF
+#act
+SENDMSG 1 亲爱的玩家，现在已经是晚上了
+SENDMSG 1 游戏虽然好玩，也别忘了陪朋友和家人吃顿晚饭
+[@凌晨提示]
+#IF
+#act
+MOV G30 1
+CLEARNAMELIST ..\QuestDiary\元宝捐款\第一排名.txt
+CLEARNAMELIST ..\QuestDiary\元宝捐款\第二排名.txt
+CLEARNAMELIST ..\QuestDiary\元宝捐款\第三排名.txt
+CLEARNAMELIST ..\QuestDiary\元宝捐款\第四排名.txt
+CLEARNAMELIST ..\QuestDiary\元宝捐款\第五排名.txt
+CLEARNAMELIST ..\QuestDiary\元宝捐款\第一排名元宝数.txt
+CLEARNAMELIST ..\QuestDiary\元宝捐款\第二排名元宝数.txt
+CLEARNAMELIST ..\QuestDiary\元宝捐款\第三排名元宝数.txt
+CLEARNAMELIST ..\QuestDiary\元宝捐款\第四排名元宝数.txt
+CLEARNAMELIST ..\QuestDiary\元宝捐款\第五排名元宝数.txt
+MOV A200
+MOV A201
+MOV A202
+MOV A203
+MOV A204
+MOV G200 0
+MOV G201 0
+MOV G202 0
+MOV G203 0
+MOV G204 0
+CLEARNAMELIST ..\QuestDiary\临时数据\猛男第一.txt
+CLEARNAMELIST ..\QuestDiary\临时数据\美女第一.txt
+CLEARNAMELIST ..\QuestDiary\临时数据\每天拿沙奖励.txt
+CLEARNAMELIST ..\QuestDiary\临时数据\每日福利.txt
+SENDMSG 1 亲爱的玩家，现在已经是凌晨了
+SENDMSG 1 游戏虽然好玩，也别忘了是不是该休息了
+MOV A400
+MOV A401
+MOV G403 0
+MOV G404 0
+MOV G405 0
+MOV G400 0
+MOV G402 0
+MOV A402
+MOV A403
+MOV G408 0
+MOV G409 0
+MOV G410 0
+MOV G411 0
+MOV G406 0
+MOV G407 0
+SENDMSG 1 天下第一数据已清理。玩家可以重新申请.
+SENDMSG 1 天下第一数据已清理。玩家可以重新申请.
+[@新世界]
+#IF
+#act
+MOV G30 0
+;------------------------------------------------------------------------------------------------------------
+[@派对活动]
+#IF
+#ACT
+MOV I66 1
+GMEXECUTE 开始提问 @激情派对
+SendCenterMsg 249 0 提示：奖励大量元宝经验的激情派对活动已经开启！！请玩家速速赶往土药参加！ 1 3
+SendCenterMsg 249 0 提示：奖励大量元宝经验的激情派对活动已经开启！！请玩家速速赶往土药参加！ 1 3
+SendCenterMsg 249 0 提示：奖励大量元宝经验的激情派对活动已经开启！！请玩家速速赶往土药参加！ 1 3
+SENDMSG 0 奖励大量元宝经验的激情派对活动已经全服启动！！请玩家速速赶往土药参加！
+SENDMSG 0 奖励大量元宝经验的激情派对活动已经全服启动！！请玩家速速赶往土药参加！
+SENDMSG 0 奖励大量元宝经验的激情派对活动已经全服启动！！请玩家速速赶往土药参加！
+MAPEFFECT jqpd 22 25 1 60 20 60 300 1 0
+MAPEFFECT jqpd 23 25 1 60 20 60 300 1 0
+MAPEFFECT jqpd 24 25 1 60 20 60 300 1 0
+MAPEFFECT jqpd 24 26 1 60 20 60 300 1 0
+MAPEFFECT jqpd 24 27 1 60 20 60 300 1 0
+MAPEFFECT jqpd 23 27 1 60 20 60 300 1 0
+MAPEFFECT jqpd 22 27 1 60 20 60 300 1 0
+MAPEFFECT jqpd 22 26 1 60 20 60 300 1 0
+MAPEFFECT jqpd 25 28 1 60 20 60 300 1 0
+MAPEFFECT jqpd 24 29 1 60 20 60 300 1 0
+MAPEFFECT jqpd 23 30 1 60 20 60 300 1 0
+MAPEFFECT jqpd 22 29 1 60 20 60 300 1 0
+MAPEFFECT jqpd 21 28 1 60 20 60 300 1 0
+MAPEFFECT jqpd 20 27 1 60 20 60 300 1 0
+MAPEFFECT jqpd 19 26 1 60 20 60 300 1 0
+MAPEFFECT jqpd 20 25 1 60 20 60 300 1 0
+MAPEFFECT jqpd 21 24 1 60 20 60 300 1 0
+MAPEFFECT jqpd 22 23 1 60 20 60 300 1 0
+MAPEFFECT jqpd 23 22 1 60 20 60 300 1 0
+MAPEFFECT jqpd 24 23 1 60 20 60 300 1 0
+MAPEFFECT jqpd 25 24 1 60 20 60 300 1 0
+MAPEFFECT jqpd 26 25 1 60 20 60 300 1 0
+MAPEFFECT jqpd 27 26 1 60 20 60 300 1 0
+MAPEFFECT jqpd 26 27 1 60 20 60 300 1 0
+MAPEFFECT jqpd 26 29 1 60 20 60 300 1 0
+MAPEFFECT jqpd 25 30 1 60 20 60 300 1 0
+MAPEFFECT jqpd 24 31 1 60 20 60 300 1 0
+MAPEFFECT jqpd 23 32 1 60 20 60 300 1 0
+MAPEFFECT jqpd 22 31 1 60 20 60 300 1 0
+MAPEFFECT jqpd 21 30 1 60 20 60 300 1 0
+MAPEFFECT jqpd 20 29 1 60 20 60 300 1 0
+MAPEFFECT jqpd 19 28 1 60 20 60 300 1 0
+MAPEFFECT jqpd 18 27 1 60 20 60 300 1 0
+MAPEFFECT jqpd 17 26 1 60 20 60 300 1 0
+MAPEFFECT jqpd 18 25 1 60 20 60 300 1 0
+MAPEFFECT jqpd 19 24 1 60 20 60 300 1 0
+MAPEFFECT jqpd 20 23 1 60 20 60 300 1 0
+MAPEFFECT jqpd 21 22 1 60 20 60 300 1 0
+MAPEFFECT jqpd 22 21 1 60 20 60 300 1 0
+MAPEFFECT jqpd 23 20 1 60 20 60 300 1 0
+MAPEFFECT jqpd 24 21 1 60 20 60 300 1 0
+MAPEFFECT jqpd 25 22 1 60 20 60 300 1 0
+MAPEFFECT jqpd 26 23 1 60 20 60 300 1 0
+MAPEFFECT jqpd 27 24 1 60 20 60 300 1 0
+MAPEFFECT jqpd 28 25 1 60 20 60 300 1 0
+MAPEFFECT jqpd 29 26 1 60 20 60 300 1 0
+MAPEFFECT jqpd 28 27 1 60 20 60 300 1 0
+MAPEFFECT jqpd 27 28 1 60 20 60 300 1 0
+
+[@派对结束]
+#IF
+#ACT
+MOV I66 0
+SendCenterMsg 249 0 提示：激情派对活动已经关闭，请玩家关注下次活动！ 1 3
+SendCenterMsg 249 0 提示：激情派对活动已经关闭，请玩家关注下次活动！ 1 3
+SendCenterMsg 249 0 提示：激情派对活动已经关闭，请玩家关注下次活动！ 1 3
+SENDMSG 0 激情派对活动已经关闭，请玩家关注下次活动！
+SENDMSG 0 激情派对活动已经关闭，请玩家关注下次活动！
+SENDMSG 0 激情派对活动已经关闭，请玩家关注下次活动！
+
+[@疯狂半兽人]
+#IF
+#ACT
+CLEARMAPMON  HDCD
+MONGENEX  HDCD 42 42 疯狂半兽人1  20 50 0 244
+MONGENEX  HDCD 42 42 疯狂半兽人  20 50 0 244
+GMEXECUTE 开始提问 @真假半兽人
+SendCenterMsg 249 0 提示：疯狂半兽人活动已经开启！！请玩家速速赶往参加！ 1 3
+SendCenterMsg 249 0 提示：疯狂半兽人活动已经开启！！请玩家速速赶往参加！ 1 3
+[@刺杀稻草人]
+#IF
+#ACT
+CLEARMAPMON  HDCD
+MONGENEX  HDCD 42 42 活动稻草人  20 20 0 244
+MONGENEX  HDCD 42 42 [领主]稻草人  20 5 0 244
+GMEXECUTE 开始提问 @刺杀稻草人a
+SendCenterMsg 249 0 提示：刺杀稻草人活动已经开启！！请玩家速速赶往参加！ 1 3
+SendCenterMsg 249 0 提示：刺杀稻草人活动已经开启！！请玩家速速赶往参加！ 1 3
+
+[@冰城之战]
+#IF
+#ACT
+CLEARMAPMON  HDCD
+MONGENEX  HDCD 42 42 [领主]冰城魔王  2 1 0 244
+GMEXECUTE 开始提问 @冰城之战a
+SendCenterMsg 249 0 提示：刺杀稻草人活动已经开启！！请玩家速速赶往参加！ 1 3
+SendCenterMsg 249 0 提示：刺杀稻草人活动已经开启！！请玩家速速赶往参加！ 1 3
+
+
+[@服务器天数]
+#IF
+#ACT
+inc G80 1
+
+
+[@清理拿沙数据]
+#IF
+#ACT
+mov G81 0
+
+
+[@800125104制作]
+#IF
+#act
+SENDMSG 0 ┏≈☆★≈☆★≈☆★☆≈【天降福利】≈☆★☆≈★☆≈★☆≈┓
+SENDMSG 0 ╔┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╗
+SENDMSG 0 ┇[每3小时一次]降元宝、装备、转生材料、锻体材料、锻造材料等.┇
+SENDMSG 0 ┇[每3小时一次]降元宝、装备、转生材料、锻体材料、锻造材料等.┇
+SENDMSG 0 ╚┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╝
+SENDMSG 0 ┗≈☆★≈☆★≈☆★☆≈【天降福利】≈☆★☆≈★☆≈★☆≈┛
+GMEXECUTE 开始提问 @天降福利
+ThrowItem 3 355 339 7 500元宝 5|60
+ThrowItem 3 355 339 7 500元宝 5|60
+ThrowItem 3 355 339 7 1000元宝 3|60
+ThrowItem 3 355 339 7 500W经验卷 5|60
+ThrowItem 3 355 339 7 500W经验卷 5|60
+ThrowItem 3 355 339 7 1000W经验卷 5|60
+ThrowItem 3 355 339 7 天精岩三转 1|60
+ThrowItem 3 355 339 7 地狱火三转 1|60
+ThrowItem 3 355 339 7 天精岩四转 1|60
+ThrowItem 3 355 339 7 地狱火四转 1|60
+ThrowItem 3 355 339 7 天精岩五转 1|60
+ThrowItem 3 355 339 7 地狱火五转 1|60
+ThrowItem 3 355 339 7 六品证明 1|60
+ThrowItem 3 355 339 7 五品证明 1|60
+ThrowItem 3 355 339 7 四品证明 1|60
+ThrowItem 3 355 339 7 三品证明 1|60
+ThrowItem 3 355 339 7 白银斗笠 1|60
+ThrowItem 3 355 339 7 白银·盾 1|60
+ThrowItem 3 355 339 7 麻痹戒指+5 1|60
+ThrowItem 3 355 339 7 复活戒指+5 1|60
+ThrowItem 3 355 339 7 护身戒指+5 1|60
+ThrowItem 3 355 339 7 恶魔令牌 10|60
+ThrowItem 3 355 339 7 洗髓丹 10|60
+ThrowItem 3 355 339 7 血龙魄珠 10|60
+ThrowItem 3 355 339 7 鬼药 10|60
+ThrowItem 3 355 339 7 1角人民币 5|60
+ThrowItem 3 355 339 7 治疗宝珠③ 3|60
+ThrowItem 3 355 339 7 治疗宝珠④ 3|60
+BREAK

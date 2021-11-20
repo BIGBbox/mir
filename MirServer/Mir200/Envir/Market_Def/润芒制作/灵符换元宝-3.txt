@@ -1,0 +1,29 @@
+[@main]
+\ \
+在我这里您可以使用灵符兑换元宝！\
+每20灵符兑换10万元宝\
+<点我兑换10万元宝/@1>
+还在为灵符不够 不能提取吗 我这里可以用闲置的灵符换取大量的经验\
+\
+<2灵符换取1亿经验卷/@22>\
+
+
+[@22]
+#if
+CHECKgameGIRD > 1
+#ACT
+GAMEGIRD - 2
+give 1亿经验卷 1
+SENDMSG 5 提示：恭喜您成功兑换1亿经验卷！！
+#ELSEACT
+SENDMSG 5 提示：您当前灵符不足2无法兑换！！
+
+[@1]
+#if
+CHECKgameGIRD > 19
+#ACT
+GAMEGIRD - 20
+GAMEGOLD + 100000
+SENDMSG 5 提示：恭喜您成功兑换10万元宝！！
+#ELSEACT
+SENDMSG 5 提示：您当前灵符不足20无法兑换！！

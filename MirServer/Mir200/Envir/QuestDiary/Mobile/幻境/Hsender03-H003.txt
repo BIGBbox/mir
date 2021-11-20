@@ -1,0 +1,16 @@
+[@Settings]
+{
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>\ \
+
+<Text|text=能来到这里，说明你有足够的实力进入下一层。|x=30|y=60|size=16>
+<Text|text=你现在就去吗？|x=30|y=80|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@a1>
+<Text|text=去|x=60|y=133|size=16|color=1001|link=@a1>
+
+<Img|img=public/btn_npcfh_03.png|x=175|y=138>
+<Layout|x=175|y=120|width=80|height=50|link=@exit>
+<Text|text=不去|x=200|y=133|size=16|color=1001|link=@exit>
+
+}

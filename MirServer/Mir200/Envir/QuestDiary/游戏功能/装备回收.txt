@@ -1,0 +1,1829 @@
+[@开始回收]
+{
+#OR
+equal U22 4
+equal U22 3
+equal U22 2
+equal U22 1
+#act
+goto @装备回收say2
+#ELSEact
+goto @装备回收say1
+
+[@装备回收say1]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<Img|width=500|height=230|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=479.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=501.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=253|size=13|text=┏━━━━┓>
+<Text|a=0|x=166.0|y=25.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=13|text=一键回收.回收失误.后果自负>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=253|size=13|text=┃>
+<Text|a=0|ax=0|x=44|y=45.0|tipsx=10|tipsy=80|size=13|color=251|text=装备回收|link=@装备回收1>
+<Text|a=0|x=96.0|y=45.0|tipsx=10|tipsy=80|color=253|size=13|text=┃>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=253|size=13|text=┣━━━━┫>
+<Text|a=0|x=164|y=65|tipsx=10|tipsy=80|color=255|size=13|text=←左侧选择您要回收的类型!! \>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=253|size=13|text=┃>
+<Text|a=0|ax=0|x=44|y=85|tipsx=10|tipsy=80|size=13|color=251|text=特戒回收|link=@特戒回收1>
+<Text|a=0|x=96.0|y=85.0|tipsx=10|tipsy=80|color=253|size=13|text=┃>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=253|size=13|text=┣━━━━┫>
+<Text|a=0|x=164|y=105|tipsx=10|tipsy=80|color=255|size=13|text=←左侧选择您要回收的类型!! \>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=253|size=13|text=┃>
+<Text|a=0|ax=0|x=44|y=125|tipsx=10|tipsy=80|size=13|color=251|text=特殊回收|link=@特殊回收1>
+<Text|a=0|x=96.0|y=125.0|tipsx=10|tipsy=80|color=253|size=13|text=┃>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=253|size=13|text=┣━━━━┫>
+<Text|a=0|x=164|y=145|tipsx=10|tipsy=80|color=255|size=13|text=←左侧选择您要回收的类型!! \>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=253|size=13|text=┃>
+<Text|a=0|ax=0|x=44|y=165|tipsx=10|tipsy=80|size=13|color=251|text=其他回收|link=@其他回收1>
+<Text|a=0|x=96.0|y=165.0|tipsx=10|tipsy=80|color=253|size=13|text=┃>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=253|size=13|text=┗━━━━┛>
+
+#elsesay
+<Img|width=550|height=240|rotate=0|scale9l=10|scale9t=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9r=10|reset=1>
+<Layout|x=528.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=550.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=253|size=18|text=┏━━━━━━━┓>
+<Text|a=0|x=170.0|y=25.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=18|text=一键回收.回收失误.后果自负>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=46.0|y=45.0|tipsx=10|tipsy=80|color=251|size=18|text=装备回收|link=@装备回收1>
+<Text|a=0|ax=0|x=120|y=43.0|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|x=164|y=65|tipsx=10|tipsy=80|color=255|size=18|text=←左侧选择您要回收的类型!! \>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=46.0|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=特戒回收|link=@特戒回收1>
+<Text|a=0|ax=0|x=120|y=85.0|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|x=164|y=105|tipsx=10|tipsy=80|color=255|size=18|text=←左侧选择您要回收的类型!! \>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=46.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=特殊回收|link=@特殊回收1>
+<Text|a=0|ax=0|x=120|y=124.0|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=32.0|y=145.0|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|x=164|y=145|tipsx=10|tipsy=80|color=255|size=18|text=←左侧选择您要回收的类型!! \>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=46.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=其他回收|link=@其他回收1>
+<Text|a=0|ax=0|x=120|y=165.0|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=32.0|y=185.0|tipsx=10|tipsy=80|color=253|size=18|text=┗━━━━━━━┛>
+
+
+[@装备回收say2]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<Img|x=0.0|y=0.0|width=500|height=230|rotate=0|scale9l=10|scale9t=10|bg=1|scale9b=10|scale9r=10|move=0|img=public/bg_npc_01.png|reset=1>
+<Layout|x=477.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=499.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=253|size=13|text=┏━━━━┓>
+<Text|a=0|x=208|y=25|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=13|text=一键回收.回收失误.后果自负>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=253|size=13|text=┃>
+<Text|a=0|ax=0|x=45|y=45.0|tipsx=10|tipsy=80|size=13|color=251|text=装备回收|link=@装备回收2>
+<Text|a=0|ax=0|x=97|y=44.0|tipsx=10|tipsy=80|color=253|size=13|text=┃>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=253|size=13|text=┣━━━━┫>
+<Text|a=0|x=164|y=65|tipsx=10|tipsy=80|color=255|size=13|text=←左侧选择您要回收的类型!! \>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=253|size=13|text=┃>
+<Text|a=0|ax=0|x=45|y=85|tipsx=10|tipsy=80|size=13|color=251|text=特戒回收|link=@特戒回收2>
+<Text|a=0|ax=0|x=97|y=85|tipsx=10|tipsy=80|color=253|size=13|text=┃>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=253|size=13|text=┣━━━━┫>
+<Text|a=0|x=164|y=105|tipsx=10|tipsy=80|color=255|size=13|text=←左侧选择您要回收的类型!! \>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=253|size=13|text=┃>
+<Text|a=0|ax=0|x=45|y=125.0|tipsx=10|tipsy=80|size=13|color=251|text=特殊回收|link=@特殊回收2>
+<Text|a=0|ax=0|x=97|y=125|tipsx=10|tipsy=80|color=253|size=13|text=┃>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=253|size=13|text=┣━━━━┫>
+<Text|a=0|x=164|y=145|tipsx=10|tipsy=80|color=251|size=13|text=点击一键回收战神→→红魔套装备|link=@一键回收>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=253|size=13|text=┃>
+<Text|a=0|ax=0|x=45|y=165.0|tipsx=10|tipsy=80|size=13|color=251|text=其他回收|link=@其他回收2>
+<Text|a=0|ax=0|x=97|y=165|tipsx=10|tipsy=80|color=253|size=13|text=┃>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=253|size=13|text=┗━━━━┛>
+<Text|a=0|x=208|y=185|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=13|text=会员拥有的1.2倍回收系统！>
+
+#elsesay
+<Img|width=550|height=240|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=527.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=549.0|y=1.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32.0|y=25.0|tipsx=10|tipsy=80|color=253|size=18|text=┏━━━━━━━┓>
+<Text|a=0|x=208|y=25|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=18|text=一键回收.回收失误.后果自负>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45.0|y=45.0|tipsx=10|tipsy=80|size=18|color=251|text=装备回收|link=@装备回收2>
+<Text|a=0|ax=0|x=120|y=45.0|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|x=164|y=65|tipsx=10|tipsy=80|color=255|size=18|text=←左侧选择您要回收的类型!! \>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45.0|y=85.0|tipsx=10|tipsy=80|size=18|color=251|text=特戒回收|link=@特戒回收2>
+<Text|a=0|ax=0|x=120|y=85|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|x=164|y=105|tipsx=10|tipsy=80|color=255|size=18|text=←左侧选择您要回收的类型!! \>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45.0|y=125.0|tipsx=10|tipsy=80|size=18|color=251|text=特殊回收|link=@特殊回收2>
+<Text|a=0|ax=0|x=120|y=125|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|x=164|y=145|tipsx=10|tipsy=80|color=251|size=18|text=点击一键回收战神→→红魔套装备|link=@一键回收>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45.0|y=165.0|tipsx=10|tipsy=80|size=18|color=251|text=其他回收|link=@其他回收2>
+<Text|a=0|ax=0|x=120|y=165|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=253|size=18|text=┗━━━━━━━┛>
+<Text|a=0|x=208|y=185|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=18|text=会员拥有的1.2倍回收系统！>
+
+
+
+[@装备回收1]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<┏━━━━┓/FCOLOR=253><【/FCOLOR=229><衣服武器双倍价格  一键回收.回收失误.后果自负/AUTOCOLOR=254,251,168,191,250,70,245,249,253><】/FCOLOR=229>\
+<┃/FCOLOR=253><装备回收><┃/FCOLOR=253><【/FCOLOR=229><回收装备：/FCOLOR=250><战神套回收/@战神套回1>   <10元宝+2W经验/FCOLOR=56><】/FCOLOR=229>\
+<┣━━━━┫/FCOLOR=253><【/FCOLOR=229><回收装备/FCOLOR=250>：<清风套回收/@清风套回1>   <15元宝+2.2W经验/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><特戒回收/@特戒回收1><┃/FCOLOR=253><【/FCOLOR=229><回收装备：/FCOLOR=250><热血套回收/@热血套回1>   <20元宝+2.4W经验/FCOLOR=56><】/FCOLOR=229>\
+<┣━━━━┫/FCOLOR=253><【/FCOLOR=229><回收装备：/FCOLOR=250><苍茫套回收/@苍茫套回1>   <25元宝+2.6W经验/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><特殊回收/@逐日首饰1><┃/FCOLOR=253><【/FCOLOR=229><回收装备：/FCOLOR=250><迷失套回收/@迷失套回1>   <30元宝+2.8W经验/FCOLOR=56><】/FCOLOR=229>\
+<┣━━━━┫/FCOLOR=253><【/FCOLOR=229><回收装备：/FCOLOR=250><情天套回收/@情天套回1>   <50元宝+3.0W经验/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><其他回收/@其他回收1><┃/FCOLOR=253><【/FCOLOR=229><回收装备：/FCOLOR=250><逐日套回收/@逐日套回1>   <80元宝+3.2W经验/FCOLOR=56><】/FCOLOR=229>\
+<┗━━━━┛/FCOLOR=253><★/FCOLOR=229><遗忘套/@遗忘套1><120元宝+3.6W经验/FCOLOR=56><★/FCOLOR=229><红魔套/@红魔套1><200元宝+4W经验/FCOLOR=56><★/FCOLOR=229>\
+<返回首页/@main>      \
+#elsesay
+<Img|width=620|height=450|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=253|size=18|text=┏━━━━━━━┓>
+<Text|a=0|x=164.0|y=13.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|x=186.0|y=13.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=18|text=衣服武器双倍价格  一键回收.回收失误.后果自负>
+<Text|a=0|x=569.0|y=13.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=45.0|tipsx=10|tipsy=80|color=255|size=18|text=装备回收>
+<Text|a=0|ax=0|x=120|y=45.0|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=164.0|y=60.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|x=186.0|y=60.0|tipsx=10|tipsy=80|color=250|size=18|text=回收装备：>
+<Text|a=0|x=280.0|y=60.0|tipsx=10|tipsy=80|color=251|size=18|text=战神套回收|link=@战神套回1>
+<Text|a=0|x=377.0|y=60.0|tipsx=10|tipsy=80|color=56|size=18|text=10元宝+2W经验>
+<Text|a=0|x=507.0|y=61.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|x=164.0|y=109.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|x=186.0|y=109.0|tipsx=10|tipsy=80|color=250|size=18|text=回收装备：>
+<Text|a=0|x=280.0|y=109.0|tipsx=10|tipsy=80|color=251|size=18|text=清风套回收|link=@清风套回1>
+<Text|a=0|x=378.0|y=109.0|tipsx=10|tipsy=80|color=56|size=18|text=15元宝+2.2W经验>
+<Text|a=0|x=522.0|y=109.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=85|tipsx=10|tipsy=80|size=18|color=251|text=特戒回收|link=@特戒回收1>
+<Text|a=0|ax=0|x=120|y=85|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=163.0|y=157.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|x=186.0|y=157.0|tipsx=10|tipsy=80|color=250|size=18|text=回收装备：>
+<Text|a=0|x=281.0|y=157.0|tipsx=10|tipsy=80|color=251|size=18|text=热血套回收|link=@热血套回1>
+<Text|a=0|x=378.0|y=157.0|tipsx=10|tipsy=80|color=56|size=18|text=20元宝+2.4W经验>
+<Text|a=0|x=522.0|y=157.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|x=164.0|y=203.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|x=186.0|y=203.0|tipsx=10|tipsy=80|color=250|size=18|text=回收装备：>
+<Text|a=0|x=281.0|y=203.0|tipsx=10|tipsy=80|color=251|size=18|text=苍茫套回收|link=@苍茫套回1>
+<Text|a=0|x=379.0|y=203.0|tipsx=10|tipsy=80|color=56|size=18|text=25元宝+2.6W经验>
+<Text|a=0|x=523.0|y=203.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=125|tipsx=10|tipsy=80|size=18|color=251|text=特殊回收|link=@逐日首饰1>
+<Text|a=0|ax=0|x=120|y=125|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=164.0|y=250.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|x=186.0|y=250.0|tipsx=10|tipsy=80|color=250|size=18|text=回收装备：>
+<Text|a=0|x=281.0|y=250.0|tipsx=10|tipsy=80|color=251|size=18|text=迷失套回收|link=@迷失套回1>
+<Text|a=0|x=380.0|y=250.0|tipsx=10|tipsy=80|color=56|size=18|text=30元宝+2.8W经验>
+<Text|a=0|x=523.0|y=250.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|x=164.0|y=295.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|x=186.0|y=295.0|tipsx=10|tipsy=80|color=250|size=18|text=回收装备：>
+<Text|a=0|x=281.0|y=295.0|tipsx=10|tipsy=80|color=251|size=18|text=情天套回收|link=@情天套回1>
+<Text|a=0|x=380.0|y=295.0|tipsx=10|tipsy=80|color=56|size=18|text=50元宝+3.0W经验>
+<Text|a=0|x=524.0|y=295.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=165|tipsx=10|tipsy=80|size=18|color=251|text=其他回收|link=@其他回收1>
+<Text|a=0|ax=0|x=120|y=165|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=164.0|y=346.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|x=186.0|y=345.0|tipsx=10|tipsy=80|color=250|size=18|text=回收装备：>
+<Text|a=0|x=281.0|y=345.0|tipsx=10|tipsy=80|color=251|size=18|text=逐日套回收|link=@逐日套回1>
+<Text|a=0|x=380.0|y=345.0|tipsx=10|tipsy=80|color=56|size=18|text=80元宝+3.2W经验>
+<Text|a=0|x=524.0|y=345.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=253|size=18|text=┗━━━━━━━┛>
+<Text|a=0|x=70.0|y=401.0|tipsx=10|tipsy=80|color=229|size=18|text=★>
+<Text|a=0|x=93.0|y=401.0|tipsx=10|tipsy=80|color=251|size=18|text=遗忘套|link=@遗忘套1>
+<Text|a=0|x=151.0|y=402.0|tipsx=10|tipsy=80|color=56|size=18|text=120元宝+3.6W经验>
+<Text|a=0|x=306.0|y=401.0|tipsx=10|tipsy=80|color=229|size=18|text=★>
+<Text|a=0|x=327.0|y=401.0|tipsx=10|tipsy=80|color=251|size=18|text=红魔套|link=@红魔套1>
+<Text|a=0|x=387.0|y=401.0|tipsx=10|tipsy=80|color=56|size=18|text=200元宝+4W经验>
+<Text|a=0|x=528.0|y=401.0|tipsx=10|tipsy=80|color=229|size=18|text=★>
+<Text|a=0|x=44.0|y=217.0|tipsx=10|tipsy=80|color=251|size=18|text=返回首页|link=@MAIN>
+
+
+[@特戒回收1]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<┏━━━━┓/FCOLOR=253>   <【/FCOLOR=229><麻痹,复活,护身  一键回收.回收失误.后果自负/AUTOCOLOR=254,251,168,191,250,70,245,249,253><】/FCOLOR=229>\
+<┃/FCOLOR=253><装备回收/@装备回收1><┃/FCOLOR=253>   <【/FCOLOR=229>< 【+1】特戒回收/@麻痹复活1>    <回收价格:   50元宝/FCOLOR=56><】/FCOLOR=229>\
+<┣━━━━┫/FCOLOR=253>   <【/FCOLOR=229>< 【+2】特戒回收/@麻痹复活2>    <回收价格:  100元宝/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><特戒回收><┃/FCOLOR=253>  < 【/FCOLOR=229>< 【+3】特戒回收/@麻痹复活3>    <回收价格:  200元宝/FCOLOR=56><】/FCOLOR=229>\
+<┣━━━━┫/FCOLOR=253>   <【/FCOLOR=229>< 【+4】特戒回收/@麻痹复活4>    <回收价格:  500元宝/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><特殊回收/@特殊回收1><┃/FCOLOR=253>   <【/FCOLOR=229>< 【+5】特戒回收/@麻痹复活5>    <回收价格: 1000元宝/FCOLOR=56><】/FCOLOR=229>\
+<┣━━━━┫/FCOLOR=253>   <【/FCOLOR=229>< 【+6】特戒回收/@麻痹复活6>    <回收价格: 2000元宝/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><其他回收/@其他回收1><┃/FCOLOR=253>   <【/FCOLOR=229>< 【+7】特戒回收/@麻痹复活7>    <回收价格: 3000元宝/FCOLOR=56><】/FCOLOR=229>\
+<┗━━━━┛/FCOLOR=253>   <【/FCOLOR=229>< 【+8】特戒回收/@麻痹复活8>    <回收价格: 4000元宝/FCOLOR=56><】/FCOLOR=229>\
+<返回首页/@main>      \
+#elsesay
+<Img|x=0.0|y=-1.0|width=620|height=450|scale9r=10|scale9l=10|bg=1|scale9b=10|reset=1|move=0|img=public/bg_npc_01.png|scale9t=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=253|size=18|text=┏━━━━━━━┓>
+<Text|a=0|x=172.0|y=16.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|x=194.0|y=16.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=18|text=麻痹,复活,护身  一键回收.回收失误.后果自负>
+<Text|a=0|x=550.0|y=17.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=45|y=45.0|tipsx=10|tipsy=80|color=251|size=18|text=装备回收|link=@装备回收1>
+<Text|a=0|ax=0|x=120|y=45.0|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|ay=1|x=193.0|y=52.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|ay=1|x=222.0|y=52.0|tipsx=10|tipsy=80|color=251|size=18|text=【+1】特戒回收|link=@麻痹复活1>
+<Text|a=0|ax=0|ay=1|x=363.0|y=52.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格:   50元宝>
+<Text|a=0|ax=0|ay=1|x=527.0|y=52.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|x=193.0|y=99.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=222.0|y=99.0|tipsx=10|tipsy=80|size=18|color=251|text=【+2】特戒回收|link=@麻痹复活2>
+<Text|a=0|ax=0|x=363.0|y=99.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格:  100元宝>
+<Text|a=0|ax=0|x=528.0|y=99.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=45|y=85.0|tipsx=10|tipsy=80|color=255|size=18|text=特戒回收>
+<Text|a=0|ax=0|x=120|y=85|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|ay=1|x=193.0|y=145.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|ay=1|x=223.0|y=145.0|tipsx=10|tipsy=80|color=251|size=18|text=【+3】特戒回收|link=@麻痹复活3>
+<Text|a=0|ax=0|ay=1|x=364.0|y=145.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格:  200元宝>
+<Text|a=0|ax=0|ay=1|x=528.0|y=145.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|ay=1|x=193.0|y=192.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|ay=1|x=222.0|y=241.0|tipsx=10|tipsy=80|color=251|size=18|text=【+4】特戒回收|link=@麻痹复活4>
+<Text|a=0|ax=0|ay=1|x=364.0|y=192.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格:  500元宝>
+<Text|a=0|ax=0|ay=1|x=528.0|y=192.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=45|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=特殊回收|link=@特殊回收1>
+<Text|a=0|ax=0|x=120|y=125|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|ay=1|x=193.0|y=241.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|ay=1|x=221.0|y=292.0|tipsx=10|tipsy=80|color=251|size=18|text=【+5】特戒回收|link=@麻痹复活5>
+<Text|a=0|ax=0|ay=1|x=361.0|y=342.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 1000元宝>
+<Text|a=0|ax=0|ay=1|x=528.0|y=241.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|ay=1|x=191.0|y=342.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|ay=1|x=223.0|y=192.0|tipsx=10|tipsy=80|color=251|size=18|text=【+6】特戒回收|link=@麻痹复活6>
+<Text|a=0|ax=0|ay=1|x=362.0|y=292.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 2000元宝>
+<Text|a=0|ax=0|ay=1|x=528|y=342.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|x=45|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=其他回收|link=@其他回收1>
+<Text|a=0|ax=0|x=120|y=165|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|ay=1|x=192.0|y=292.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|ay=1|x=220.0|y=342.0|tipsx=10|tipsy=80|color=251|size=18|text=【+7】特戒回收|link=@麻痹复活7>
+<Text|a=0|ax=0|ay=1|x=363.0|y=241.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 3000元宝>
+<Text|a=0|ax=0|ay=1|x=528|y=292.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=253|size=18|text=┗━━━━━━━┛>
+<Text|a=0|ax=0|ay=1|x=191.0|y=394.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|ay=1|x=220.0|y=394.0|tipsx=10|tipsy=80|color=251|size=18|text=【+8】特戒回收|link=@麻痹复活8>
+<Text|a=0|ax=0|ay=1|x=362.0|y=394.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 4000元宝>
+<Text|a=0|ax=0|ay=1|x=528|y=394.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=45.0|y=219.0|tipsx=10|tipsy=80|color=251|size=18|text=返回首页|link=@MAIN>
+
+
+[@其他回收1]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<┏━━━━┓/FCOLOR=253>               <一键回收.回收失误.后果自负/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
+<┃/FCOLOR=253><装备回收/@装备回收1><┃/FCOLOR=253><治疗宝珠①回收/@治疗宝珠1> <回收价格:10元宝>  <治疗宝珠②回收/@治疗宝珠2> <回收价格: 30元宝>\
+<┣━━━━┫/FCOLOR=253><治疗宝珠③回收/@治疗宝珠3> <回收价格:60元宝>  <治疗宝珠④回收/@治疗宝珠4> <回收价格:150元宝>\
+<┃/FCOLOR=253><特戒回收/@特戒回收1><┃/FCOLOR=253><治疗宝珠⑤回收/@治疗宝珠5> <回收价格:300元宝> <恶魔令牌回收/@恶魔令牌回收> <回收价格:50元宝>\
+<┣━━━━┫/FCOLOR=253><一级主印辅印回收/@一级主印>  <一级转生证明回收/@一级转生证> <回收价格: 100元宝>\
+<┃/FCOLOR=253><特殊回收/@特殊回收1><┃/FCOLOR=253><二级主印辅印回收/@二级主印>  <二级转生证明回收/@二级转生证> <回收价格: 200元宝> \
+<┣━━━━┫/FCOLOR=253><三级主印辅印回收/@三级主印>  <三级转生证明回收/@三级转生证> <回收价格: 400元宝> \
+<┃/FCOLOR=253><其他回收><┃/FCOLOR=253><洗髓丹回收/@洗髓丹回收>        <血龙魄珠回收/@血龙魄珠回收>     <回收价格: 200元宝> \
+<┗━━━━┛/FCOLOR=253>   \
+<返回首页/@main>      \
+#elsesay
+<Img|x=0.0|y=0.0|width=720|height=450|rotate=0|reset=1|scale9t=10|scale9r=10|bg=1|move=0|img=public/bg_npc_01.png|scale9l=10|scale9b=10>
+<Layout|x=697.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=719.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32.0|y=25.0|tipsx=10|tipsy=80|color=253|size=18|text=┏━━━━━━━┓>
+<Text|a=0|x=263.0|y=24.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=18|text=一键回收.回收失误.后果自负>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=45.0|tipsx=10|tipsy=80|size=18|color=251|text=装备回收|link=@装备回收1>
+<Text|a=0|ax=0|x=120|y=45.0|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=140.0|y=75.0|tipsx=10|tipsy=80|size=18|color=251|text=治疗宝珠①回收|link=@治疗宝珠1>
+<Text|a=0|x=269.0|y=75.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格:10元宝>
+<Text|a=0|x=431.0|y=75.0|tipsx=10|tipsy=80|color=251|size=18|text=治疗宝珠②回收|link=@治疗宝珠2>
+<Text|a=0|ax=0|x=561.0|y=75.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格: 30元宝>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|x=141.0|y=120.0|tipsx=10|tipsy=80|size=18|color=251|text=治疗宝珠③回收|link=@治疗宝珠3>
+<Text|a=0|x=270.0|y=121.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格:60元宝>
+<Text|a=0|ax=0|x=432.0|y=121.0|tipsx=10|tipsy=80|size=18|color=251|text=治疗宝珠④回收|link=@治疗宝珠4>
+<Text|a=0|ax=0|x=561.0|y=122.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格:150元宝>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=85|tipsx=10|tipsy=80|size=18|color=251|text=特戒回收|link=@特戒回收1>
+<Text|a=0|ax=0|x=120|y=85|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=141.0|y=170.0|tipsx=10|tipsy=80|size=18|color=251|text=治疗宝珠⑤回收|link=@治疗宝珠5>
+<Text|a=0|x=270.0|y=170.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格:300元宝>
+<Text|a=0|ax=0|x=447.0|y=169.0|tipsx=10|tipsy=80|size=18|color=251|text=恶魔令牌回收|link=@恶魔令牌回收>
+<Text|a=0|ax=0|x=561.0|y=170.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格:50元宝>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|x=143.0|y=229.0|tipsx=10|tipsy=80|size=18|color=251|text=一级主印辅印回收|link=@一级主印>
+<Text|a=0|ax=0|x=336.0|y=229.0|tipsx=10|tipsy=80|size=18|color=251|text=一级转生证明回收|link=@一级转生证>
+<Text|a=0|ax=0|x=525.0|y=229.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格: 100元宝>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=125|tipsx=10|tipsy=80|size=18|color=251|text=特殊回收|link=@特殊回收1>
+<Text|a=0|ax=0|x=120|y=125|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=142.0|y=273.0|tipsx=10|tipsy=80|size=18|color=251|text=二级主印辅印回收|link=@二级主印>
+<Text|a=0|ax=0|x=335.0|y=273.0|tipsx=10|tipsy=80|size=18|color=251|text=二级转生证明回收|link=@二级转生证>
+<Text|a=0|ax=0|x=524.0|y=273.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格: 200元宝>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|x=142.0|y=318.0|tipsx=10|tipsy=80|size=18|color=251|text=三级主印辅印回收|link=@三级主印>
+<Text|a=0|ax=0|x=335.0|y=318.0|tipsx=10|tipsy=80|size=18|color=251|text=三级转生证明回收|link=@三级转生证>
+<Text|a=0|ax=0|x=523.0|y=318.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格: 400元宝>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=165|tipsx=10|tipsy=80|color=255|size=18|text=其他回收>
+<Text|a=0|ax=0|x=120|y=165|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=163.0|y=361.0|tipsx=10|tipsy=80|size=18|color=251|text=洗髓丹回收|link=@洗髓丹回收>
+<Text|a=0|ax=0|x=347.0|y=361.0|tipsx=10|tipsy=80|size=18|color=251|text=血龙魄珠回收|link=@血龙魄珠回收>
+<Text|a=0|ax=0|x=523.0|y=361.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格: 200元宝>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=253|size=18|text=┗━━━━━━━┛>
+<Text|a=0|x=44.0|y=218.0|tipsx=10|tipsy=80|color=251|size=18|text=返回首页|link=@MAIN>
+
+
+[@特殊回收1]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<┏━━━━┓/FCOLOR=253> <【/FCOLOR=229><天怒天哭天劫天残天妒天裂回收/@旮旯1> <回收价格: 300元宝/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><装备回收/@装备回收1><┃/FCOLOR=253> <【/FCOLOR=229><血龙伯爵修罗回收/@旮旯2>             <回收价格: 900元宝/FCOLOR=56><】/FCOLOR=229>\
+<┣━━━━┫/FCOLOR=253> <【/FCOLOR=229><龙光苍龙回收/@旮旯3>                 <回收价格: 400元宝/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><特戒回收/@特戒回收1><┃/FCOLOR=253> <【/FCOLOR=229><判阴阳系列回收/@旮旯4>               <回收价格: 400元宝/FCOLOR=56><】/FCOLOR=229>\
+<┣━━━━┫/FCOLOR=253> <【/FCOLOR=229><天罪系列回收/@旮旯5>                 <回收价格: 500元宝/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><特殊回收><┃/FCOLOR=253> <【/FCOLOR=229><堕世浩劫系列回收/@旮旯6>             <回收价格: 600元宝/FCOLOR=56><】/FCOLOR=229>\
+<┣━━━━┫/FCOLOR=253> <【/FCOLOR=229><诛帝恨瑶池系列回收/@旮旯7>           <回收价格: 2000元宝/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><其他回收/@其他回收1><┃/FCOLOR=253> <【/FCOLOR=229><梵幽皇噬魄系列回收/@旮旯8>           <回收价格: 2000元宝/FCOLOR=56><】/FCOLOR=229>\
+<┗━━━━┛/FCOLOR=253> <【/FCOLOR=229><神之仙界魔魂回收/@旮旯9>             <回收价格: 1200元宝/FCOLOR=56><】/FCOLOR=229>\
+<返回首页/@main>      \
+#elsesay
+<Img|width=620|height=450|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=253|size=18|text=┏━━━━━━━┓>
+<Text|a=0|ax=0|ay=1|x=135|y=46.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|ay=1|x=163|y=46.0|tipsx=10|tipsy=80|color=251|size=18|text=天怒天哭天劫天残天妒天裂回收|link=@旮旯1>
+<Text|a=0|ax=0|ay=1|x=427.0|y=46.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 300元宝>
+<Text|a=0|ax=0|ay=1|x=591.0|y=46.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=45.0|tipsx=10|tipsy=80|size=18|color=251|text=装备回收|link=@装备回收1>
+<Text|a=0|ax=0|x=120|y=45.0|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|ay=1|x=135|y=85.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|ay=1|x=163|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=血龙伯爵修罗回收|link=@旮旯2>
+<Text|a=0|ax=0|ay=1|x=427.0|y=85.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 900元宝>
+<Text|a=0|ax=0|ay=1|x=591.0|y=85.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|ay=1|x=135|y=128.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|ay=1|x=163|y=128.0|tipsx=10|tipsy=80|color=251|size=18|text=龙光苍龙回收|link=@旮旯3>
+<Text|a=0|ax=0|ay=1|x=427.0|y=128.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 400元宝>
+<Text|a=0|ax=0|ay=1|x=591.0|y=128.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=85|tipsx=10|tipsy=80|size=18|color=251|text=特戒回收|link=@特戒回收1>
+<Text|a=0|ax=0|x=120|y=85|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|ay=1|x=135|y=169.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|ay=1|x=163|y=169.0|tipsx=10|tipsy=80|color=251|size=18|text=判阴阳系列回收|link=@旮旯4>
+<Text|a=0|ax=0|ay=1|x=427.0|y=169.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 400元宝>
+<Text|a=0|ax=0|ay=1|x=591.0|y=169.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|ay=1|x=135|y=208.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|ay=1|x=163|y=208.0|tipsx=10|tipsy=80|color=251|size=18|text=天罪系列回收|link=@旮旯5>
+<Text|a=0|ax=0|ay=1|x=427.0|y=208.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 500元宝>
+<Text|a=0|ax=0|ay=1|x=591.0|y=208.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=125|tipsx=10|tipsy=80|size=18|color=255|text=特殊回收>
+<Text|a=0|ax=0|x=120|y=125|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|ay=1|x=135|y=248.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|ay=1|x=163|y=248.0|tipsx=10|tipsy=80|color=251|size=18|text=堕世浩劫系列回收|link=@旮旯6>
+<Text|a=0|ax=0|ay=1|x=427.0|y=248.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 600元宝>
+<Text|a=0|ax=0|ay=1|x=591.0|y=248.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|ay=1|x=135|y=292.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|ay=1|x=163|y=292.0|tipsx=10|tipsy=80|color=251|size=18|text=诛帝恨瑶池系列回收|link=@旮旯7>
+<Text|a=0|ax=0|ay=1|x=427.0|y=292.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 2000元宝>
+<Text|a=0|ax=0|ay=1|x=591.0|y=292.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=165|tipsx=10|tipsy=80|size=18|color=251|text=其他回收|link=@其他回收1>
+<Text|a=0|ax=0|x=120|y=165|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|ay=1|x=135|y=334.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|ay=1|x=163|y=334.0|tipsx=10|tipsy=80|color=251|size=18|text=梵幽皇噬魄系列回收|link=@旮旯8>
+<Text|a=0|ax=0|ay=1|x=427.0|y=334.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 2000元宝>
+<Text|a=0|ax=0|ay=1|x=591.0|y=334.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=253|size=18|text=┗━━━━━━━┛>
+<Text|a=0|ax=0|ay=1|x=135|y=380.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|ay=1|x=163|y=379.0|tipsx=10|tipsy=80|color=251|size=18|text=神之仙界魔魂回收|link=@旮旯9>
+<Text|a=0|ax=0|ay=1|x=427.0|y=380.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 1200元宝>
+<Text|a=0|ax=0|ay=1|x=591.0|y=380.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=45.0|y=222.0|tipsx=10|tipsy=80|color=251|size=18|text=返回首页|link=@main>
+
+
+
+[@旮旯9]
+#ACT
+;TakeBagItem 仙界带|神之靴|魔魂佩 46 1200 0 0 0 N1
+TakeBagItem 仙界带|神之靴|魔魂佩 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个神之仙界魔魂回收，每件价格为1200
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 1200
+goto @给予回收货币
+
+[@旮旯8]
+#ACT
+;TakeBagItem 焚の幽皇|噬魄の龙|噬魄の凤 46 2000 0 0 0 N1
+TakeBagItem 焚の幽皇|噬魄の龙|噬魄の凤 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个梵幽皇噬魄系列，每件价格为2000
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 2000
+goto @给予回收货币
+
+[@旮旯7]
+#ACT
+;TakeBagItem 诛の帝恨|瑶池の龙|瑶池の凤 46 2000 0 0 0 N1
+TakeBagItem 诛の帝恨|瑶池の龙|瑶池の凤 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个诛帝恨瑶池系列，每件价格为2000
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 2000
+goto @给予回收货币
+
+
+[@旮旯6]
+#ACT
+;TakeBagItem   46 500 0 0 0 N1
+TakeBagItem 46 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个堕世浩劫系列，每件价格为600
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 600
+goto @给予回收货币
+
+
+[@旮旯5]
+#ACT
+;TakeBagItem 天罪の杀佛|天罪の灭神 46 500 0 0 0 N1
+TakeBagItem 天罪の杀佛|天罪の灭神 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个天罪系列，每件价格为500
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 500
+goto @给予回收货币
+
+[@旮旯4]
+#ACT
+;TakeBagItem 判阴阳の裂天|判阴阳の烈焰 46 400 0 0 0 N1
+TakeBagItem 判阴阳の裂天|判阴阳の烈焰 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个判阴阳系列，每件价格为400
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 400
+goto @给予回收货币
+
+[@旮旯3]
+#ACT
+;TakeBagItem 苍龙铠|苍龙衣|龙光 46 400 0 0 0 N1
+TakeBagItem 苍龙铠|苍龙衣|龙光 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个龙光苍龙系列，每件价格为400
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 400
+goto @给予回收货币
+
+[@旮旯2]
+#ACT
+;TakeBagItem 血の裂天|血の杀佛|血の灭神|血の烈焰|血の龙光|血の苍龙铠|血の苍龙袍|修罗带|伯爵靴 46 900 0 0 0 N1
+TakeBagItem 血の裂天|血の杀佛|血の灭神|血の烈焰|血の龙光|血の苍龙铠|血の苍龙袍|修罗带|伯爵靴 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个血龙伯爵修罗系列，每件价格为900
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 900
+goto @给予回收货币
+
+[@旮旯1]
+#ACT
+;TakeBagItem 天劫|天怒|天妒|天哭·铠|天哭·袍|天残·铠|天残·袍|天裂·铠|天裂·袍 46 300 0 0 0 N1
+TakeBagItem 天劫|天怒|天妒|天哭·铠|天哭·袍|天残·铠|天残·袍|天裂·铠|天裂·袍 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个天怒天哭天劫天残天妒天裂系列，每件价格为300
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 300
+goto @给予回收货币
+
+[@恶魔令牌回收]
+#ACT
+;TakeBagItem 恶魔令牌 46 50 0 0 0 N1
+TakeBagItem 恶魔令牌 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个恶魔令牌，每件价格为50
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 50
+goto @给予回收货币
+
+
+[@血龙魄珠回收]
+#ACT
+;TakeBagItem 血龙魄珠 46 200 0 0 0 N1
+TakeBagItem 血龙魄珠 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个血龙魄珠，每件价格为200
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 200
+goto @给予回收货币
+
+[@洗髓丹回收]
+#ACT
+;TakeBagItem 洗髓丹 46 200 0 0 0 N1
+TakeBagItem 洗髓丹 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个洗髓丹，每件价格为200
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 200
+goto @给予回收货币
+
+[@三级主印]
+#ACT
+;TakeBagItem 主印【精准③】|主印【强化③】|主印【穿杨③】|主印【国色③】|主印【蝶魂③】|主印【复仇③】|主印【强掠③】|主印【身强③】|主印【运筹③】|主印【吸血③】|辅印【精准③】|辅印【强化③】|辅印【穿杨③】|辅印【国色③】|辅印【蝶魂③】|辅印【复仇③】|辅印【强掠③】|辅印【身强③】|辅印【运筹③】|辅印【吸血③】 46 400 0 0 0 N1
+TakeBagItem 主印【精准③】|主印【强化③】|主印【穿杨③】|主印【国色③】|主印【蝶魂③】|主印【复仇③】|主印【强掠③】|主印【身强③】|主印【运筹③】|主印【吸血③】|辅印【精准③】|辅印【强化③】|辅印【穿杨③】|辅印【国色③】|辅印【蝶魂③】|辅印【复仇③】|辅印【强掠③】|辅印【身强③】|辅印【运筹③】|辅印【吸血③】 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个三级辅印辅印，每件价格为400
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 400
+goto @给予回收货币
+
+[@二级主印]
+#ACT
+;TakeBagItem 主印【精准②】|主印【强化②】|主印【穿杨②】|主印【国色②】|主印【蝶魂②】|主印【复仇②】|主印【强掠②】|主印【身强②】|主印【运筹②】|主印【吸血②】|辅印【精准②】|辅印【强化②】|辅印【穿杨②】|辅印【国色②】|辅印【蝶魂②】|辅印【复仇②】|辅印【强掠②】|辅印【身强②】|辅印【运筹②】|辅印【吸血②】 46 200 0 0 0 N1
+TakeBagItem 主印【精准②】|主印【强化②】|主印【穿杨②】|主印【国色②】|主印【蝶魂②】|主印【复仇②】|主印【强掠②】|主印【身强②】|主印【运筹②】|主印【吸血②】|辅印【精准②】|辅印【强化②】|辅印【穿杨②】|辅印【国色②】|辅印【蝶魂②】|辅印【复仇②】|辅印【强掠②】|辅印【身强②】|辅印【运筹②】|辅印【吸血②】 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个二级辅印辅印，每件价格为200
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 200
+goto @给予回收货币
+
+
+[@一级主印]
+#ACT
+;TakeBagItem 主印【精准①】|主印【强化①】|主印【穿杨①】|主印【国色①】|主印【蝶魂①】|主印【复仇①】|主印【强掠①】|主印【身强①】|主印【运筹①】|主印【吸血①】|辅印【精准①】|辅印【强化①】|辅印【穿杨①】|辅印【国色①】|辅印【蝶魂①】|辅印【复仇①】|辅印【强掠①】|辅印【身强①】|辅印【运筹①】|辅印【吸血①】 46 100 0 0 0 N1
+TakeBagItem 主印【精准①】|主印【强化①】|主印【穿杨①】|主印【国色①】|主印【蝶魂①】|主印【复仇①】|主印【强掠①】|主印【身强①】|主印【运筹①】|主印【吸血①】|辅印【精准①】|辅印【强化①】|辅印【穿杨①】|辅印【国色①】|辅印【蝶魂①】|辅印【复仇①】|辅印【强掠①】|辅印【身强①】|辅印【运筹①】|辅印【吸血①】 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个一级辅印辅印，每件价格为100
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 100
+goto @给予回收货币
+
+[@三级转生证]
+#ACT
+;TakeBagItem 天精岩三转|地狱火三转 46 400 0 0 1 N1
+TakeBagItem 天精岩三转|地狱火三转 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个三级转生证明，每件价格为400
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 400
+goto @给予回收货币
+
+[@二级转生证]
+#ACT
+;TakeBagItem 天精岩二转|地狱火二转 46 200 0 0 1 N1
+TakeBagItem 天精岩二转|地狱火二转 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个二级转生证明，每件价格为200
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 200
+goto @给予回收货币
+
+[@一级转生证]
+#ACT
+;TakeBagItem 天精岩一转|地狱火一转 46 100 0 0 1 N1
+TakeBagItem 天精岩一转|地狱火一转 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个一级转生证明，每件价格为100
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 100
+goto @给予回收货币
+
+
+
+[@治疗宝珠5]
+#ACT
+;TakeBagItem 治疗宝珠⑤ 46 300 0 0 0 N1
+TakeBagItem 治疗宝珠⑤ 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个治疗宝珠⑤，每件价格为300
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 300
+goto @给予回收货币
+
+
+[@治疗宝珠4]
+#ACT
+;TakeBagItem 治疗宝珠④ 46 150 0 0 0 N1
+TakeBagItem 治疗宝珠④ 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个治疗宝珠④，每件价格为150
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 150
+goto @给予回收货币
+
+[@治疗宝珠3]
+#ACT
+;TakeBagItem 治疗宝珠③ 46 60 0 0 0 N1
+TakeBagItem 治疗宝珠③ 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个治疗宝珠③，每件价格为60
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 60
+goto @给予回收货币
+
+[@治疗宝珠2]
+#ACT
+;TakeBagItem 治疗宝珠② 46 30 0 0 0 N1
+TakeBagItem 治疗宝珠② 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个治疗宝珠②，每件价格为30
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 30
+goto @给予回收货币
+
+[@治疗宝珠1]
+#ACT
+;TakeBagItem 治疗宝珠① 46 10 0 0 0 N1
+TakeBagItem 治疗宝珠① 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个治疗宝珠①，每件价格为10
+MOV N1 0
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 10
+goto @给予回收货币
+
+
+
+[@麻痹复活1]
+#ACT
+;TakeBagItem 复活戒指+1|护身戒指+1|麻痹戒指+1 46 50 0 0 0 N1
+TakeBagItem 复活戒指+1|护身戒指+1|麻痹戒指+1 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个一级特戒，每件价格为50
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 50
+goto @给予回收货币
+
+[@麻痹复活2]
+#ACT
+;TakeBagItem 复活戒指+2|护身戒指+2|麻痹戒指+2 46 100 0 0 0 N1
+TakeBagItem 复活戒指+2|护身戒指+2|麻痹戒指+2 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个二级特戒，每件价格为100
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 100
+goto @给予回收货币
+
+[@麻痹复活3]
+#ACT
+;TakeBagItem 复活戒指+3|护身戒指+3|麻痹戒指+3 46 200 0 0 0 N1
+TakeBagItem 复活戒指+3|护身戒指+3|麻痹戒指+3 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个三级特戒，每件价格为200
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 200
+goto @给予回收货币
+
+
+
+[@麻痹复活4]
+#ACT
+;TakeBagItem 复活戒指+4|护身戒指+4|麻痹戒指+4 46 500 0 0 0 N1
+TakeBagItem 复活戒指+4|护身戒指+4|麻痹戒指+4 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个四级特戒，每件价格为500
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 500
+goto @给予回收货币
+
+[@麻痹复活5]
+#ACT
+;TakeBagItem 复活戒指+5|护身戒指+5|麻痹戒指+5 46 1000 0 0 0 N1
+TakeBagItem 复活戒指+5|护身戒指+5|麻痹戒指+5 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个五级特戒，每件价格为1000
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 1000
+goto @给予回收货币
+
+[@麻痹复活6]
+#ACT
+;TakeBagItem 复活戒指+6|护身戒指+6|麻痹戒指+6 46 2000 0 0 0 N1
+TakeBagItem 复活戒指+6|护身戒指+6|麻痹戒指+6 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个六级特戒，每件价格为2000
+MOV N1 0
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 2000
+goto @给予回收货币
+
+[@麻痹复活7]
+#ACT
+;TakeBagItem 复活戒指+7|护身戒指+7|麻痹戒指+7 46 3000 0 0 0 N1
+TakeBagItem 复活戒指+7|护身戒指+7|麻痹戒指+7 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个七级特戒，每件价格为3000
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 3000
+goto @给予回收货币
+
+[@麻痹复活8]
+#ACT
+;TakeBagItem 复活戒指+8|护身戒指+8|麻痹戒指+8 46 4000 0 0 0 N1
+TakeBagItem 复活戒指+8|护身戒指+8|麻痹戒指+8 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个八级特戒，每件价格为4000
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 4000
+goto @给予回收货币
+
+
+[@红魔套1]
+#ACT
+;TakeBagItem 红魔盔·圣|红魔链·圣|红魔镯·圣|红魔戒·圣|红魔勋·圣|红魔带·圣|红魔靴·圣|红魔盔·魔|红魔链·魔|红魔镯·魔|红魔戒·魔|红魔勋·魔|红魔带·魔|红魔靴·魔|红魔盔·尊|红魔链·尊|红魔镯·尊|红魔戒·尊|红魔勋·尊|红魔带·尊|红魔靴·尊 46 200 0 0 40000 N2 0
+TakeBagItem 红魔盔·圣|红魔链·圣|红魔镯·圣|红魔戒·圣|红魔勋·圣|红魔带·圣|红魔靴·圣|红魔盔·魔|红魔链·魔|红魔镯·魔|红魔戒·魔|红魔勋·魔|红魔带·魔|红魔靴·魔|红魔盔·尊|红魔链·尊|红魔镯·尊|红魔戒·尊|红魔勋·尊|红魔带·尊|红魔靴·尊 46 N2
+
+;TakeBagItem 红魔之影·魔|红魔之影·圣|红魔之影·尊|红魔圣袍|红魔圣衣|红魔魔袍|红魔魔衣|红魔尊袍|红魔尊衣 46 400 0 0 40000 N1
+TakeBagItem 红魔之影·魔|红魔之影·圣|红魔之影·尊|红魔圣袍|红魔圣衣|红魔魔袍|红魔魔衣|红魔尊袍|红魔尊衣 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个红魔首饰，每件价格为200
+SENDMSG 6 成功回收<$STR(N1)>个红魔剑甲，每件价格为400
+
+MOV N$回收获得经验 40000
+MOV N$回收获得元宝1 400
+MOV N$回收获得元宝2 200
+goto @给予回收货币
+
+[@遗忘套1]
+#ACT
+;TakeBagItem 遗忘盔·圣|遗忘链·圣|遗忘镯·圣|遗忘戒·圣|遗忘圣勋|遗忘带·圣|遗忘靴·圣|遗忘盔·魔|遗忘链·魔|遗忘镯·魔|遗忘戒·魔|遗忘魔勋|遗忘带·魔|遗忘靴·魔|遗忘盔·尊|遗忘链·尊|遗忘镯·尊|遗忘戒·尊|遗忘尊勋|遗忘带·尊|遗忘靴·尊 46 120 0 0 36000 N2 0
+TakeBagItem 遗忘盔·圣|遗忘链·圣|遗忘镯·圣|遗忘戒·圣|遗忘圣勋|遗忘带·圣|遗忘靴·圣|遗忘盔·魔|遗忘链·魔|遗忘镯·魔|遗忘戒·魔|遗忘魔勋|遗忘带·魔|遗忘靴·魔|遗忘盔·尊|遗忘链·尊|遗忘镯·尊|遗忘戒·尊|遗忘尊勋|遗忘带·尊|遗忘靴·尊 46 N2
+
+;TakeBagItem 遗忘之影·魔|遗忘之影·圣|遗忘之影·尊|遗忘圣袍|遗忘圣衣|遗忘魔袍|遗忘魔衣|遗忘尊袍|遗忘尊衣 46 240 0 0 36000 N1
+TakeBagItem 遗忘之影·魔|遗忘之影·圣|遗忘之影·尊|遗忘圣袍|遗忘圣衣|遗忘魔袍|遗忘魔衣|遗忘尊袍|遗忘尊衣 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个遗忘首饰，每件价格为120
+SENDMSG 6 成功回收<$STR(N1)>个遗忘剑甲，每件价格为240
+
+MOV N$回收获得经验 36000
+MOV N$回收获得元宝1 240
+MOV N$回收获得元宝2 120
+goto @给予回收货币
+
+
+
+
+[@逐日套回1]
+#ACT
+;TakeBagItem 逐日战盔|逐日·坠|逐日·镯|逐日·戒|逐日战勋|逐日·带(战)|逐日·靴(战)|逐日魔盔|逐日·链|逐日·腕|逐日·环|逐日法勋|逐日·带(魔)|逐日·靴(魔)|逐日道盔|逐日·圈|逐日·手|逐日·指|逐日道勋|逐日·带(道)|逐日·靴(道) 46 80 0 0 32000 N2 0
+TakeBagItem 逐日战盔|逐日·坠|逐日·镯|逐日·戒|逐日战勋|逐日·带(战)|逐日·靴(战)|逐日魔盔|逐日·链|逐日·腕|逐日·环|逐日法勋|逐日·带(魔)|逐日·靴(魔)|逐日道盔|逐日·圈|逐日·手|逐日·指|逐日道勋|逐日·带(道)|逐日·靴(道) 46 N2
+
+;TakeBagItem 逐日法杖|逐日圣斩|逐日道扇|逐日圣袍|逐日圣衣|逐日魔袍|逐日魔衣|逐日尊袍|逐日尊衣 46 160 0 0 32000 N1
+TakeBagItem 逐日法杖|逐日圣斩|逐日道扇|逐日圣袍|逐日圣衣|逐日魔袍|逐日魔衣|逐日尊袍|逐日尊衣 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个逐日首饰，每件价格为80
+SENDMSG 6 成功回收<$STR(N1)>个逐日剑甲，每件价格为160
+
+MOV N$回收获得经验 32000
+MOV N$回收获得元宝1 160
+MOV N$回收获得元宝2 80
+goto @给予回收货币
+
+
+[@情天套回1]
+#ACT
+;TakeBagItem 情天战盔|情天·坠|情天·镯|情天·戒|情天战章|情天·带(战)|情天·靴(战)|情天魔盔|情天·链|情天·腕|情天·环|情天法章|情天·带(魔)|情天·靴(魔)|情天道盔|情天·圈|情天·手|情天·指|情天道章|情天·带(道)|情天·靴(道) 46 50 0 0 30000 N2 0
+TakeBagItem 情天战盔|情天·坠|情天·镯|情天·戒|情天战章|情天·带(战)|情天·靴(战)|情天魔盔|情天·链|情天·腕|情天·环|情天法章|情天·带(魔)|情天·靴(魔)|情天道盔|情天·圈|情天·手|情天·指|情天道章|情天·带(道)|情天·靴(道) 46 N2
+
+;TakeBagItem 情天魔剑|情天圣剑|情天尊剑|情天圣甲(男)|情天圣甲(女)|情天法衣(男)|情天法衣(女)|情天道袍(男)|情天道袍(女) 46 100 0 0 30000 N1
+TakeBagItem 情天魔剑|情天圣剑|情天尊剑|情天圣甲(男)|情天圣甲(女)|情天法衣(男)|情天法衣(女)|情天道袍(男)|情天道袍(女) 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个情天首饰，每件价格为50
+SENDMSG 6 成功回收<$STR(N1)>个情天剑甲，每件价格为100
+
+MOV N$回收获得经验 30000
+MOV N$回收获得元宝1 100
+MOV N$回收获得元宝2 50
+goto @给予回收货币
+
+
+[@迷失套回1]
+#ACT
+;TakeBagItem 迷失战盔|迷失项链(战)|迷失护腕(战)|迷失战戒|迷失勋章(战)|迷失腰带(战)|迷失靴子(战)|迷失魔盔|迷失项链(法)|迷失护腕(法)|迷失魔戒|迷失勋章(法)|迷失腰带(法)|迷失靴子(法)|迷失道盔|迷失项链(道)|迷失护腕(道)|迷失道戒|迷失勋章(道)|迷失腰带(道)|迷失靴子(道) 46 30 0 0 28000 N2 0
+TakeBagItem 迷失战盔|迷失项链(战)|迷失护腕(战)|迷失战戒|迷失勋章(战)|迷失腰带(战)|迷失靴子(战)|迷失魔盔|迷失项链(法)|迷失护腕(法)|迷失魔戒|迷失勋章(法)|迷失腰带(法)|迷失靴子(法)|迷失道盔|迷失项链(道)|迷失护腕(道)|迷失道戒|迷失勋章(道)|迷失腰带(道)|迷失靴子(道) 46 N2
+
+;TakeBagItem 迷失魔魂|迷失圣斩|迷失尊扇|迷失战袍(男)|迷失战袍(女)|迷失魔袍(男)|迷失魔袍(女)|迷失道袍(男)|迷失道袍(女) 46 60 0 0 28000 N1
+TakeBagItem 迷失魔魂|迷失圣斩|迷失尊扇|迷失战袍(男)|迷失战袍(女)|迷失魔袍(男)|迷失魔袍(女)|迷失道袍(男)|迷失道袍(女) 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个迷失首饰，每件价格为30
+SENDMSG 6 成功回收<$STR(N1)>个迷失剑甲，每件价格为60
+
+MOV N$回收获得经验 28000
+MOV N$回收获得元宝1 60
+MOV N$回收获得元宝2 30
+goto @给予回收货币
+
+[@苍茫套回1]
+#ACT
+;TakeBagItem 苍茫战盔|苍茫项链(战)|苍茫护腕(战)|苍茫战戒|苍茫令(战)|苍茫腰带(战)|苍茫靴子(战)|苍茫魔盔|苍茫项链(法)|苍茫护腕(法)|苍茫魔戒|苍茫令(法)|苍茫腰带(法)|苍茫靴子(法)|苍茫道盔|苍茫项链(道)|苍茫护腕(道)|苍茫道戒|苍茫令(道)|苍茫腰带(道)|苍茫靴子(道) 46 25 0 0 26000 N2 0
+TakeBagItem 苍茫战盔|苍茫项链(战)|苍茫护腕(战)|苍茫战戒|苍茫令(战)|苍茫腰带(战)|苍茫靴子(战)|苍茫魔盔|苍茫项链(法)|苍茫护腕(法)|苍茫魔戒|苍茫令(法)|苍茫腰带(法)|苍茫靴子(法)|苍茫道盔|苍茫项链(道)|苍茫护腕(道)|苍茫道戒|苍茫令(道)|苍茫腰带(道)|苍茫靴子(道) 46 N2
+
+;TakeBagItem 苍茫魔剑|苍茫圣剑|苍茫尊剑|苍茫圣甲(男)|苍茫圣甲(女)|苍茫魔衣(男)|苍茫魔衣(女)|苍茫道袍(男)|苍茫道袍(女) 46 50 0 0 26000 N1
+TakeBagItem 苍茫魔剑|苍茫圣剑|苍茫尊剑|苍茫圣甲(男)|苍茫圣甲(女)|苍茫魔衣(男)|苍茫魔衣(女)|苍茫道袍(男)|苍茫道袍(女) 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个苍茫首饰，每件价格为25
+SENDMSG 6 成功回收<$STR(N1)>个苍茫剑甲，每件价格为50
+
+MOV N$回收获得经验 26000
+MOV N$回收获得元宝1 50
+MOV N$回收获得元宝2 25
+goto @给予回收货币
+
+[@热血套回1]
+#ACT
+;TakeBagItem 热血战盔|热血项链(战)|热血护腕(战)|热血战戒|热血令(战)|热血腰带(战)|热血靴子(战)|热血魔盔|热血项链(法)|热血护腕(法)|热血魔戒|热血令(法)|热血腰带(法)|热血靴子(法)|热血道盔|热血项链(道)|热血护腕(道)|热血道戒|热血令(道)|热血腰带(道)|热血靴子(道) 46 20 0 0 24000 N2 0
+TakeBagItem 热血战盔|热血项链(战)|热血护腕(战)|热血战戒|热血令(战)|热血腰带(战)|热血靴子(战)|热血魔盔|热血项链(法)|热血护腕(法)|热血魔戒|热血令(法)|热血腰带(法)|热血靴子(法)|热血道盔|热血项链(道)|热血护腕(道)|热血道戒|热血令(道)|热血腰带(道)|热血靴子(道) 46 N2
+
+;TakeBagItem 热血杖|热血斩|热血剑|热血圣衣(男)|热血圣衣(女)|热血魔衣(男)|热血魔衣(女)|热血尊衣(男)|热血尊衣(女) 46 40 0 0 24000 N1
+TakeBagItem 热血杖|热血斩|热血剑|热血圣衣(男)|热血圣衣(女)|热血魔衣(男)|热血魔衣(女)|热血尊衣(男)|热血尊衣(女) 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个热血首饰，每件价格为20
+SENDMSG 6 成功回收<$STR(N1)>个热血剑甲，每件价格为40
+
+MOV N$回收获得经验 24000
+MOV N$回收获得元宝1 40
+MOV N$回收获得元宝2 20
+goto @给予回收货币
+
+[@清风套回1]
+#ACT
+;TakeBagItem 清风战盔|清风项链(战)|清风护腕(战)|清风战戒|清风勋章(战)|清风腰带(战)|清风靴子(战)|清风法盔|清风项链(法)|清风护腕(法)|清风法戒|清风勋章(法)|清风腰带(法)|清风靴子(法)|清风道盔|清风项链(道)|清风护腕(道)|清风道戒|清风勋章(道)|清风腰带(道)|清风靴子(道) 46 15 0 0 22000 N2 0
+TakeBagItem 清风战盔|清风项链(战)|清风护腕(战)|清风战戒|清风勋章(战)|清风腰带(战)|清风靴子(战)|清风法盔|清风项链(法)|清风护腕(法)|清风法戒|清风勋章(法)|清风腰带(法)|清风靴子(法)|清风道盔|清风项链(道)|清风护腕(道)|清风道戒|清风勋章(道)|清风腰带(道)|清风靴子(道) 46 N2
+
+;TakeBagItem 清风刺|清风斧|清风剑|清风战甲(男)|清风战甲(女)|清风法衣(男)|清风法衣(女)|清风道袍(男)|清风道袍(女) 46 30 0 0 22000 N1
+TakeBagItem 清风刺|清风斧|清风剑|清风战甲(男)|清风战甲(女)|清风法衣(男)|清风法衣(女)|清风道袍(男)|清风道袍(女) 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个清风首饰，每件价格为15
+SENDMSG 6 成功回收<$STR(N1)>个清风剑甲，每件价格为30
+
+MOV N$回收获得经验 22000
+MOV N$回收获得元宝1 30
+MOV N$回收获得元宝2 15
+goto @给予回收货币
+
+
+[@战神套回1]
+#ACT
+;TakeBagItem 战神腰带|战神靴子|圣魔腰带|圣魔靴子|真魂腰带|真魂靴子|战神头盔|圣魔头盔|真魂头盔|战神项链|战神手镯|战神戒指|圣魔项链|圣魔手镯|圣魔戒指|真魂项链|真魂手镯|真魂戒指 46 10 0 0 20000 N2 0
+TakeBagItem 战神腰带|战神靴子|圣魔腰带|圣魔靴子|真魂腰带|真魂靴子|战神头盔|圣魔头盔|真魂头盔|战神项链|战神手镯|战神戒指|圣魔项链|圣魔手镯|圣魔戒指|真魂项链|真魂手镯|真魂戒指 46 N2
+;TakeBagItem 镇天|开天|玄天|凤天魔甲|凰天魔衣 46 20 0 0 20000 N1
+TakeBagItem 镇天|开天|玄天|凤天魔甲|凰天魔衣 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个战神首饰，每件价格为10
+SENDMSG 6 成功回收<$STR(N1)>个战神剑甲，每件价格为20
+
+MOV N$回收获得经验 20000
+MOV N$回收获得元宝1 20
+MOV N$回收获得元宝2 10
+goto @给予回收货币
+
+
+
+
+
+[@装备回收2]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<┏━━━━┓/FCOLOR=253><【/FCOLOR=229><衣服武器双倍价格  一键回收.回收失误.后果自负/AUTOCOLOR=254,251,168,191,250,70,245,249,253><】/FCOLOR=229>\
+<┃/FCOLOR=253><装备回收><┃/FCOLOR=253><【/FCOLOR=229><回收装备：/FCOLOR=250><战神套回收/@战神套回2>   <12元宝+2.4W经验/FCOLOR=56><】/FCOLOR=229>\
+<┣━━━━┫/FCOLOR=253><【/FCOLOR=229><回收装备/FCOLOR=250>：<清风套回收/@清风套回2>   <18元宝+2.6W经验/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><特戒回收/@特戒回收2><┃/FCOLOR=253><【/FCOLOR=229><回收装备：/FCOLOR=250><热血套回收/@热血套回2>   <24元宝+2.8W经验/FCOLOR=56><】/FCOLOR=229>\
+<┣━━━━┫/FCOLOR=253><【/FCOLOR=229><回收装备：/FCOLOR=250><苍茫套回收/@苍茫套回2>   <30元宝+3.0W经验/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><特殊回收/@逐日首饰2><┃/FCOLOR=253><【/FCOLOR=229><回收装备：/FCOLOR=250><迷失套回收/@迷失套回2>   <36元宝+3.4W经验/FCOLOR=56><】/FCOLOR=229>\
+<┣━━━━┫/FCOLOR=253><【/FCOLOR=229><回收装备：/FCOLOR=250><情天套回收/@情天套回2>   <60元宝+3.6W经验/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><其他回收/@其他回收2><┃/FCOLOR=253><【/FCOLOR=229><回收装备：/FCOLOR=250><逐日套回收/@逐日套回2>   <96元宝+4.0W经验/FCOLOR=56><】/FCOLOR=229>\
+<┗━━━━┛/FCOLOR=253><★/FCOLOR=229><遗忘套/@遗忘套2><144元宝+4.2W经验/FCOLOR=56><★/FCOLOR=229><红魔套/@红魔套2><240元宝+4.8W经验/FCOLOR=56><★/FCOLOR=229>\
+<返回首页/@main>      \
+#elsesay
+<Img|width=620|height=450|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=253|size=18|text=┏━━━━━━━┓>
+<Text|a=0|x=161.0|y=26.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|x=185.0|y=27.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=18|text=衣服武器双倍价格  一键回收.回收失误.后果自负>
+<Text|a=0|x=569.0|y=25.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=45.0|tipsx=10|tipsy=80|color=255|size=18|text=装备回收>
+<Text|a=0|ax=0|x=120|y=45.0|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=160.0|y=71.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=187.0|y=71.0|tipsx=10|tipsy=80|color=250|size=18|text=回收装备：>
+<Text|a=0|ax=0|x=298.0|y=71.0|tipsx=10|tipsy=80|size=18|color=251|text=战神套回收|link=@战神套回2>
+<Text|a=0|ax=0|x=418.0|y=71.0|tipsx=10|tipsy=80|color=56|size=18|text=12元宝+2.4W经验>
+<Text|a=0|ax=0|x=568.0|y=71.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|ay=1|x=160.0|y=118.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|ay=1|x=186.0|y=118.0|tipsx=10|tipsy=80|color=250|size=18|text=回收装备：>
+<Text|a=0|ax=0|ay=1|x=297.0|y=118.0|tipsx=10|tipsy=80|size=18|color=251|text=清风套回收|link=@清风套回2>
+<Text|a=0|ax=0|ay=1|x=417.0|y=118.0|tipsx=10|tipsy=80|color=56|size=18|text=18元宝+2.6W经验>
+<Text|a=0|ax=0|ay=1|x=568.0|y=118.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=85.0|tipsx=10|tipsy=80|size=18|color=251|text=特戒回收|link=@特戒回收2>
+<Text|a=0|ax=0|x=120|y=85|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=160.0|y=163.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=186.0|y=163.0|tipsx=10|tipsy=80|color=250|size=18|text=回收装备：>
+<Text|a=0|ax=0|x=297.0|y=163.0|tipsx=10|tipsy=80|size=18|color=251|text=热血套回收|link=@热血套回2>
+<Text|a=0|ax=0|x=417.0|y=163.0|tipsx=10|tipsy=80|color=56|size=18|text=24元宝+2.8W经验>
+<Text|a=0|ax=0|x=568.0|y=163.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|x=160.0|y=207.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=185.0|y=207.0|tipsx=10|tipsy=80|color=250|size=18|text=回收装备：>
+<Text|a=0|ax=0|x=296.0|y=207.0|tipsx=10|tipsy=80|size=18|color=251|text=苍茫套回收|link=@苍茫套回2>
+<Text|a=0|ax=0|x=416.0|y=207.0|tipsx=10|tipsy=80|color=56|size=18|text=30元宝+3.0W经验>
+<Text|a=0|ax=0|x=568.0|y=207.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=125.0|tipsx=10|tipsy=80|size=18|color=251|text=特殊回收|link=@逐日首饰2>
+<Text|a=0|ax=0|x=120|y=125|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=160.0|y=251.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=185.0|y=251.0|tipsx=10|tipsy=80|color=250|size=18|text=回收装备：>
+<Text|a=0|ax=0|x=297.0|y=251.0|tipsx=10|tipsy=80|size=18|color=251|text=迷失套回收|link=@迷失套回2>
+<Text|a=0|ax=0|x=417.0|y=251.0|tipsx=10|tipsy=80|color=56|size=18|text=36元宝+3.4W经验>
+<Text|a=0|ax=0|x=568.0|y=251.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|x=160.0|y=293.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=185.0|y=294.0|tipsx=10|tipsy=80|color=250|size=18|text=回收装备：>
+<Text|a=0|ax=0|x=295.0|y=293.0|tipsx=10|tipsy=80|size=18|color=251|text=情天套回收|link=@情天套回2>
+<Text|a=0|ax=0|x=415.0|y=293.0|tipsx=10|tipsy=80|color=56|size=18|text=60元宝+3.6W经验>
+<Text|a=0|ax=0|x=568.0|y=293.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=165.0|tipsx=10|tipsy=80|size=18|color=251|text=其他回收|link=@其他回收2>
+<Text|a=0|ax=0|x=120|y=165|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=160.0|y=339.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=184.0|y=339.0|tipsx=10|tipsy=80|color=250|size=18|text=回收装备：>
+<Text|a=0|ax=0|x=295.0|y=339.0|tipsx=10|tipsy=80|size=18|color=251|text=逐日套回收|link=@逐日套回2>
+<Text|a=0|ax=0|x=415.0|y=339.0|tipsx=10|tipsy=80|color=56|size=18|text=96元宝+4.0W经验>
+<Text|a=0|ax=0|x=568.0|y=340.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=253|size=18|text=┗━━━━━━━┛>
+<Text|a=0|ay=1|x=61.0|y=400.0|tipsx=10|tipsy=80|size=18|color=229|text=★>
+<Text|a=0|ay=1|x=86.0|y=400.0|tipsx=10|tipsy=80|size=18|color=251|text=遗忘套|link=@遗忘套2>
+<Text|a=0|ay=1|x=145.0|y=400.0|tipsx=10|tipsy=80|size=18|color=56|text=144元宝+4.2W经验>
+<Text|a=0|ay=1|x=303.0|y=400.0|tipsx=10|tipsy=80|size=18|color=229|text=★>
+<Text|a=0|ay=1|x=327.0|y=400.0|tipsx=10|tipsy=80|size=18|color=251|text=红魔套|link=@红魔套2>
+<Text|a=0|ay=1|x=387.0|y=400.0|tipsx=10|tipsy=80|size=18|color=56|text=240元宝+4.8W经验>
+<Text|a=0|ay=1|x=544.0|y=400.0|tipsx=10|tipsy=80|size=18|color=229|text=★>
+<Text|a=0|x=44.0|y=224.0|tipsx=10|tipsy=80|color=251|size=18|text=返回首页|link=@MAIN>
+
+
+[@特戒回收2]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<┏━━━━┓/FCOLOR=253>   <【/FCOLOR=229><麻痹,复活,护身  一键回收.回收失误.后果自负/AUTOCOLOR=254,251,168,191,250,70,245,249,253><】/FCOLOR=229>\
+<┃/FCOLOR=253><装备回收/@装备回收2><┃/FCOLOR=253>   <【/FCOLOR=229>< 【+1】特戒回收/@麻痹复活11>    <回收价格:   60元宝/FCOLOR=56><】/FCOLOR=229>\
+<┣━━━━┫/FCOLOR=253>   <【/FCOLOR=229>< 【+2】特戒回收/@麻痹复活22>    <回收价格:  120元宝/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><特戒回收><┃/FCOLOR=253>  < 【/FCOLOR=229>< 【+3】特戒回收/@麻痹复活33>    <回收价格:  240元宝/FCOLOR=56><】/FCOLOR=229>\
+<┣━━━━┫/FCOLOR=253>   <【/FCOLOR=229>< 【+4】特戒回收/@麻痹复活44>    <回收价格:  600元宝/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><特殊回收/@特殊回收2><┃/FCOLOR=253>   <【/FCOLOR=229>< 【+5】特戒回收/@麻痹复活55>    <回收价格: 1200元宝/FCOLOR=56><】/FCOLOR=229>\
+<┣━━━━┫/FCOLOR=253>   <【/FCOLOR=229>< 【+6】特戒回收/@麻痹复活66>    <回收价格: 2400元宝/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><其他回收/@其他回收2><┃/FCOLOR=253>   <【/FCOLOR=229>< 【+7】特戒回收/@麻痹复活77>    <回收价格: 3600元宝/FCOLOR=56><】/FCOLOR=229>\
+<┗━━━━┛/FCOLOR=253>   <【/FCOLOR=229>< 【+8】特戒回收/@麻痹复活88>    <回收价格: 4800元宝/FCOLOR=56><】/FCOLOR=229>\
+<返回首页/@main>      \
+#elsesay
+<Img|width=620|height=450|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=253|size=18|text=┏━━━━━━━┓>
+<Text|a=0|ax=0|x=171.0|y=26.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|x=194.0|y=26.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=18|text=麻痹,复活,护身  一键回收.回收失误.后果自负>
+<Text|a=0|ax=0|x=554.0|y=26.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=45.0|tipsx=10|tipsy=80|size=18|color=251|text=装备回收|link=@装备回收2>
+<Text|a=0|ax=0|x=120|y=45.0|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=171.0|y=74.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=217.0|y=74.0|tipsx=10|tipsy=80|size=18|color=251|text=【+1】特戒回收|link=@麻痹复活11>
+<Text|a=0|ax=0|x=386.0|y=74.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格:   60元宝>
+<Text|a=0|ax=0|x=554.0|y=74.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|x=171.0|y=119.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=217.0|y=119.0|tipsx=10|tipsy=80|size=18|color=251|text=【+2】特戒回收|link=@麻痹复活22>
+<Text|a=0|ax=0|x=386.0|y=120.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格:  120元宝>
+<Text|a=0|ax=0|x=554.0|y=119.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=85|tipsx=10|tipsy=80|color=255|size=18|text=特戒回收>
+<Text|a=0|ax=0|x=120|y=85|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=171.0|y=164.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=217.0|y=165.0|tipsx=10|tipsy=80|size=18|color=251|text=【+3】特戒回收|link=@麻痹复活33>
+<Text|a=0|ax=0|x=386.0|y=165.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格:  240元宝>
+<Text|a=0|ax=0|x=554.0|y=165.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|x=172.0|y=212.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=218.0|y=212.0|tipsx=10|tipsy=80|size=18|color=251|text=【+4】特戒回收|link=@麻痹复活44>
+<Text|a=0|ax=0|x=386.0|y=212.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格:  600元宝>
+<Text|a=0|ax=0|x=554.0|y=212.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=125|tipsx=10|tipsy=80|size=18|color=251|text=特殊回收|link=@特殊回收2>
+<Text|a=0|ax=0|x=120|y=125|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=171.0|y=263.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=217.0|y=263.0|tipsx=10|tipsy=80|size=18|color=251|text=【+5】特戒回收|link=@麻痹复活55>
+<Text|a=0|ax=0|x=386.0|y=263.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 1200元宝>
+<Text|a=0|ax=0|x=554.0|y=263.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32.0|y=145.0|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|x=172.0|y=312.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=218.0|y=313.0|tipsx=10|tipsy=80|size=18|color=251|text=【+6】特戒回收|link=@麻痹复活66>
+<Text|a=0|ax=0|x=387.0|y=313.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 2400元宝>
+<Text|a=0|ax=0|x=554.0|y=313.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=45|y=165|tipsx=10|tipsy=80|size=18|color=251|text=其他回收|link=@其他回收2>
+<Text|a=0|ax=0|x=120|y=165|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=171.0|y=361.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=217.0|y=361.0|tipsx=10|tipsy=80|size=18|color=251|text=【+7】特戒回收|link=@麻痹复活77>
+<Text|a=0|ax=0|x=386.0|y=361.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 3600元宝>
+<Text|a=0|ax=0|x=554.0|y=362.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=253|size=18|text=┗━━━━━━━┛>
+<Text|a=0|ax=0|x=171.0|y=408.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=217.0|y=408.0|tipsx=10|tipsy=80|size=18|color=251|text=【+8】特戒回收|link=@麻痹复活88>
+<Text|a=0|ax=0|x=385.0|y=408.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 4800元宝>
+<Text|a=0|ax=0|x=554.0|y=408.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=42.0|y=224.0|tipsx=10|tipsy=80|color=251|size=18|text=返回首页|link=@MAIN>
+
+
+
+[@其他回收2]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<┏━━━━┓/FCOLOR=253>               <一键回收.回收失误.后果自负/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
+<┃/FCOLOR=253><装备回收/@装备回收2><┃/FCOLOR=253><治疗宝珠①回收/@治疗宝珠11> <回收价格:12元宝>  <治疗宝珠②回收/@治疗宝珠22> <回收价格: 36元宝>\
+<┣━━━━┫/FCOLOR=253><治疗宝珠③回收/@治疗宝珠33> <回收价格:72元宝>  <治疗宝珠④回收/@治疗宝珠44> <回收价格:180元宝>\
+<┃/FCOLOR=253><特戒回收/@特戒回收2><┃/FCOLOR=253><治疗宝珠⑤回收/@治疗宝珠55> <回收价格:360元宝> <恶魔令牌回收/@恶魔令牌回收2> <回收价格:240元宝>\
+<┣━━━━┫/FCOLOR=253><一级主印辅印回收/@一级主印2>  <一级转生证明回收/@一级转生证2> <回收价格: 120元宝>\
+<┃/FCOLOR=253><特殊回收/@特殊回收2><┃/FCOLOR=253><二级主印辅印回收/@二级主印2>  <二级转生证明回收/@二级转生证2> <回收价格: 240元宝> \
+<┣━━━━┫/FCOLOR=253><三级主印辅印回收/@三级主印2>  <三级转生证明回收/@三级转生证2> <回收价格: 480元宝> \
+<┃/FCOLOR=253><其他回收><┃/FCOLOR=253><洗髓丹回收/@洗髓丹回收2>        <血龙魄珠回收/@血龙魄珠回收2>     <回收价格: 240元宝> \
+<┗━━━━┛/FCOLOR=253>   \
+<返回首页/@main>      \
+#elsesay
+<Img|width=720|height=450|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=697.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=719.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=253|size=18|text=┏━━━━━━━┓>
+<Text|a=0|x=262.0|y=20.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=18|text=一键回收.回收失误.后果自负>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=46.0|y=44.0|tipsx=10|tipsy=80|size=18|color=251|text=装备回收|link=@装备回收2>
+<Text|a=0|ax=0|x=120.0|y=45.0|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=145.0|y=60.0|tipsx=10|tipsy=80|size=18|color=251|text=治疗宝珠①回收|link=@治疗宝珠11>
+<Text|a=0|ax=0|x=274.0|y=60.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格:12元宝>
+<Text|a=0|ax=0|x=431.0|y=60.0|tipsx=10|tipsy=80|size=18|color=251|text=治疗宝珠②回收|link=@治疗宝珠22>
+<Text|a=0|ax=0|x=559.0|y=60.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格: 36元宝>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|x=145.0|y=111.0|tipsx=10|tipsy=80|size=18|color=251|text=治疗宝珠③回收|link=@治疗宝珠33>
+<Text|a=0|ax=0|x=274.0|y=111.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格:72元宝>
+<Text|a=0|ax=0|x=431.0|y=111.0|tipsx=10|tipsy=80|size=18|color=251|text=治疗宝珠④回收|link=@治疗宝珠44>
+<Text|a=0|ax=0|x=559.0|y=111.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格:180元宝>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=46.0|y=85.0|tipsx=10|tipsy=80|size=18|color=251|text=特戒回收|link=@特戒回收2>
+<Text|a=0|ax=0|x=120.0|y=85.0|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=145.0|y=166.0|tipsx=10|tipsy=80|size=18|color=251|text=治疗宝珠⑤回收|link=@治疗宝珠55>
+<Text|a=0|ax=0|x=274.0|y=166.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格:360元宝>
+<Text|a=0|ax=0|x=431.0|y=166.0|tipsx=10|tipsy=80|size=18|color=251|text=恶魔令牌回收|link=@恶魔令牌回收2>
+<Text|a=0|ax=0|x=559.0|y=166.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格:240元宝>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|x=158.0|y=222.0|tipsx=10|tipsy=80|size=18|color=251|text=一级主印辅印回收|link=@一级主印2>
+<Text|a=0|ax=0|x=354.0|y=222.0|tipsx=10|tipsy=80|size=18|color=251|text=一级转生证明回收|link=@一级转生证2>
+<Text|a=0|ax=0|x=535.0|y=222.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格: 120元宝>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=46.0|y=125.0|tipsx=10|tipsy=80|size=18|color=251|text=特殊回收|link=@特殊回收2>
+<Text|a=0|ax=0|x=120.0|y=125.0|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=158.0|y=275.0|tipsx=10|tipsy=80|size=18|color=251|text=二级主印辅印回收|link=@二级主印2>
+<Text|a=0|ax=0|x=354.0|y=275.0|tipsx=10|tipsy=80|size=18|color=251|text=二级转生证明回收|link=@二级转生证2>
+<Text|a=0|ax=0|x=535.0|y=275.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格: 240元宝>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|x=158.0|y=327.0|tipsx=10|tipsy=80|size=18|color=251|text=三级主印辅印回收|link=@三级主印2>
+<Text|a=0|ax=0|x=354.0|y=327.0|tipsx=10|tipsy=80|size=18|color=251|text=三级转生证明回收|link=@三级转生证2>
+<Text|a=0|ax=0|x=535.0|y=327.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格: 480元宝>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=46.0|y=165.0|tipsx=10|tipsy=80|color=255|size=18|text=其他回收>
+<Text|a=0|ax=0|x=120.0|y=165.0|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=186.0|y=382.0|tipsx=10|tipsy=80|size=18|color=251|text=洗髓丹回收|link=@洗髓丹回收2>
+<Text|a=0|ax=0|x=371.0|y=382.0|tipsx=10|tipsy=80|size=18|color=251|text=血龙魄珠回收|link=@血龙魄珠回收2>
+<Text|a=0|ax=0|x=535.0|y=382.0|tipsx=10|tipsy=80|color=255|size=18|text=回收价格: 240元宝>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=253|size=18|text=┗━━━━━━━┛>
+<Text|a=0|x=45.0|y=220.0|tipsx=10|tipsy=80|color=251|size=18|text=返回首页|link=@MAIN>
+
+
+
+[@特殊回收2]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<┏━━━━┓/FCOLOR=253> <【/FCOLOR=229><天怒天哭天劫天残天妒天裂回收/@800125104制作1> <回收价格: 360元宝/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><装备回收/@装备回收2><┃/FCOLOR=253> <【/FCOLOR=229><血龙伯爵修罗回收/@800125104制作2>             <回收价格: 1080元宝/FCOLOR=56><】/FCOLOR=229>\
+<┣━━━━┫/FCOLOR=253> <【/FCOLOR=229><龙光苍龙回收/@800125104制作3>                 <回收价格: 480元宝/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><特戒回收/@特戒回收2><┃/FCOLOR=253> <【/FCOLOR=229><判阴阳系列回收/@800125104制作4>               <回收价格: 480元宝/FCOLOR=56><】/FCOLOR=229>\
+<┣━━━━┫/FCOLOR=253> <【/FCOLOR=229><天罪系列回收/@800125104制作5>                 <回收价格: 600元宝/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><特殊回收><┃/FCOLOR=253> <【/FCOLOR=229><堕世浩劫系列回收/@800125104制作6>             <回收价格: 720元宝/FCOLOR=56><】/FCOLOR=229>\
+<┣━━━━┫/FCOLOR=253> <【/FCOLOR=229><诛帝恨瑶池系列回收/@800125104制作7>           <回收价格: 2400元宝/FCOLOR=56><】/FCOLOR=229>\
+<┃/FCOLOR=253><其他回收/@其他回收2><┃/FCOLOR=253> <【/FCOLOR=229><梵幽皇噬魄系列回收/@800125104制作8>           <回收价格: 2400元宝/FCOLOR=56><】/FCOLOR=229>\
+<┗━━━━┛/FCOLOR=253> <【/FCOLOR=229><神之仙界魔魂回收/@800125104制作9>             <回收价格: 1400元宝/FCOLOR=56><】/FCOLOR=229>\
+<返回首页/@main>      \
+#elsesay
+<Img|width=620|height=450|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=253|size=18|text=┏━━━━━━━┓>
+<Text|a=0|ax=0|x=136.0|y=35.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=159.0|y=35.0|tipsx=10|tipsy=80|size=18|color=251|text=天怒天哭天劫天残天妒天裂回收|link=@800125104制作1>
+<Text|a=0|ax=0|x=418.0|y=35.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 360元宝>
+<Text|a=0|ax=0|x=584.0|y=35.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=46|y=45.0|tipsx=10|tipsy=80|color=251|size=18|text=装备回收|link=@装备回收2>
+<Text|a=0|ax=0|x=120|y=44.0|tipsx=10|tipsy=80|size=18|color=253|text=┃>
+<Text|a=0|ax=0|x=136.0|y=81.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=159.0|y=81.0|tipsx=10|tipsy=80|size=18|color=251|text=血龙伯爵修罗回收|link=@800125104制作2>
+<Text|a=0|ax=0|x=418.0|y=81.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 1080元宝>
+<Text|a=0|ax=0|x=584.0|y=81.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|x=136.0|y=130.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=159.0|y=130.0|tipsx=10|tipsy=80|size=18|color=251|text=龙光苍龙回收|link=@800125104制作3>
+<Text|a=0|ax=0|x=418.0|y=130.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 480元宝>
+<Text|a=0|ax=0|x=584.0|y=130.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=46|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=特戒回收|link=@特戒回收2>
+<Text|a=0|ax=0|x=120|y=85|tipsx=10|tipsy=80|size=18|color=253|text=┃>
+<Text|a=0|ax=0|x=136.0|y=177.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=159.0|y=177.0|tipsx=10|tipsy=80|size=18|color=251|text=判阴阳系列回收|link=@800125104制作4>
+<Text|a=0|ax=0|x=418.0|y=177.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 480元宝>
+<Text|a=0|ax=0|x=584.0|y=177.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|x=136.0|y=223.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=159.0|y=223.0|tipsx=10|tipsy=80|size=18|color=251|text=天罪系列回收|link=@800125104制作5>
+<Text|a=0|ax=0|x=418.0|y=223.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 600元宝>
+<Text|a=0|ax=0|x=584.0|y=223.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=46|y=125.0|tipsx=10|tipsy=80|color=255|size=18|text=特殊回收>
+<Text|a=0|ax=0|x=120|y=125|tipsx=10|tipsy=80|size=18|color=253|text=┃>
+<Text|a=0|ax=0|x=136.0|y=268.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=159.0|y=268.0|tipsx=10|tipsy=80|size=18|color=251|text=堕世浩劫系列回收|link=@800125104制作6>
+<Text|a=0|ax=0|x=418.0|y=268.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 720元宝>
+<Text|a=0|ax=0|x=584.0|y=268.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=253|size=18|text=┣━━━━━━━┫>
+<Text|a=0|ax=0|x=136.0|y=312.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=159.0|y=312.0|tipsx=10|tipsy=80|size=18|color=251|text=诛帝恨瑶池系列回收|link=@800125104制作7>
+<Text|a=0|ax=0|x=418.0|y=312.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 2400元宝>
+<Text|a=0|ax=0|x=584.0|y=312.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=253|size=18|text=┃>
+<Text|a=0|ax=0|x=46|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=其他回收|link=@其他回收2>
+<Text|a=0|ax=0|x=120|y=165|tipsx=10|tipsy=80|size=18|color=253|text=┃>
+<Text|a=0|ax=0|x=136.0|y=358.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=159.0|y=358.0|tipsx=10|tipsy=80|size=18|color=251|text=梵幽皇噬魄系列回收|link=@800125104制作8>
+<Text|a=0|ax=0|x=418.0|y=358.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 2400元宝>
+<Text|a=0|ax=0|x=584.0|y=358.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=253|size=18|text=┗━━━━━━━┛>
+<Text|a=0|ax=0|x=136.0|y=403.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|ax=0|x=159.0|y=403.0|tipsx=10|tipsy=80|size=18|color=251|text=神之仙界魔魂回收|link=@800125104制作9>
+<Text|a=0|ax=0|x=418.0|y=403.0|tipsx=10|tipsy=80|color=56|size=18|text=回收价格: 1400元宝>
+<Text|a=0|ax=0|x=584.0|y=403.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|ax=0|x=46|y=221.0|tipsx=10|tipsy=80|size=18|color=251|text=返回首页|link=@MAIN>
+
+
+[@800125104制作9]
+#ACT
+;TakeBagItem 仙界带|神之靴|魔魂佩 46 1400 0 0 0 N1
+TakeBagItem 仙界带|神之靴|魔魂佩 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个神之仙界魔魂回收，每件价格为1400
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 1400
+goto @给予回收
+
+[@800125104制作8]
+#ACT
+;TakeBagItem 焚の幽皇|噬魄の龙|噬魄の凤 46 2400 0 0 0 N1
+TakeBagItem 焚の幽皇|噬魄の龙|噬魄の凤 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个梵幽皇噬魄系列，每件价格为2400
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 2400
+goto @给予回收
+
+[@800125104制作7]
+#ACT
+;TakeBagItem 诛の帝恨|瑶池の龙|瑶池の凤 46 2400 0 0 0 N1
+TakeBagItem 诛の帝恨|瑶池の龙|瑶池の凤 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个诛帝恨瑶池系列，每件价格为2400
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 2400
+goto @给予回收
+
+
+[@800125104制作6]
+#ACT
+;TakeBagItem 堕世|浩劫袍 46 720 0 0 0 N1
+TakeBagItem 堕世|浩劫袍 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个堕世浩劫系列，每件价格为720
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 720
+goto @给予回收货
+
+
+
+[@800125104制作5]
+#ACT
+;TakeBagItem 天罪の杀佛|天罪の灭神 46 600 0 0 0 N1
+TakeBagItem 天罪の杀佛|天罪の灭神 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个天罪系列，每件价格为600
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 600
+goto @给予回收货
+
+[@800125104制作4]
+#ACT
+;TakeBagItem 判阴阳の裂天|判阴阳の烈焰 46 480 0 0 0 N1
+TakeBagItem 判阴阳の裂天|判阴阳の烈焰 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个判阴阳系列，每件价格为480
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 480
+goto @给予回收货
+
+[@800125104制作3]
+#ACT
+;TakeBagItem 苍龙铠|苍龙衣|龙光 46 480 0 0 0 N1
+TakeBagItem 苍龙铠|苍龙衣|龙光 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个龙光苍龙系列，每件价格为480
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 480
+goto @给予回收货
+
+[@800125104制作2]
+#ACT
+;TakeBagItem 血の裂天|血の杀佛|血の灭神|血の烈焰|血の龙光|血の苍龙铠|血の苍龙袍|修罗带|伯爵靴 46 1080 0 0 0 N1
+TakeBagItem 血の裂天|血の杀佛|血の灭神|血の烈焰|血の龙光|血の苍龙铠|血の苍龙袍|修罗带|伯爵靴 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个血龙伯爵修罗系列，每件价格为1080
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 1080
+goto @给予回收货
+
+[@800125104制作1]
+#ACT
+;TakeBagItem 天劫|天怒|天妒|天哭·铠|天哭·袍|天残·铠|天残·袍|天裂·铠|天裂·袍 46 360 0 0 0 N1
+TakeBagItem 天劫|天怒|天妒|天哭·铠|天哭·袍|天残·铠|天残·袍|天裂·铠|天裂·袍 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个天怒天哭天劫天残天妒天裂系列，每件价格为360
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 360
+goto @给予回收货
+
+[@恶魔令牌回收2]
+#ACT
+;TakeBagItem 恶魔令牌 46 240 0 0 0 N1
+TakeBagItem 恶魔令牌 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个恶魔令牌，每件价格为240
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 240
+goto @给予回收货
+
+[@血龙魄珠回收2]
+#ACT
+;TakeBagItem 血龙魄珠 46 240 0 0 0 N1
+TakeBagItem 血龙魄珠 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个血龙魄珠，每件价格为240
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 240
+goto @给予回收货
+
+[@洗髓丹回收2]
+#ACT
+;TakeBagItem 洗髓丹 46 240 0 0 0 N1
+TakeBagItem 洗髓丹 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个洗髓丹，每件价格为240
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 240
+goto @给予回收货
+
+[@三级主印2]
+#ACT
+;TakeBagItem 主印【精准③】|主印【强化③】|主印【穿杨③】|主印【国色③】|主印【蝶魂③】|主印【复仇③】|主印【强掠③】|主印【身强③】|主印【运筹③】|主印【吸血③】|辅印【精准③】|辅印【强化③】|辅印【穿杨③】|辅印【国色③】|辅印【蝶魂③】|辅印【复仇③】|辅印【强掠③】|辅印【身强③】|辅印【运筹③】|辅印【吸血③】 46 480 0 0 0 N1
+TakeBagItem 主印【精准③】|主印【强化③】|主印【穿杨③】|主印【国色③】|主印【蝶魂③】|主印【复仇③】|主印【强掠③】|主印【身强③】|主印【运筹③】|主印【吸血③】|辅印【精准③】|辅印【强化③】|辅印【穿杨③】|辅印【国色③】|辅印【蝶魂③】|辅印【复仇③】|辅印【强掠③】|辅印【身强③】|辅印【运筹③】|辅印【吸血③】 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个三级辅印辅印，每件价格为480
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 480
+goto @给予回收货
+
+[@二级主印2]
+#ACT
+;TakeBagItem 主印【精准②】|主印【强化②】|主印【穿杨②】|主印【国色②】|主印【蝶魂②】|主印【复仇②】|主印【强掠②】|主印【身强②】|主印【运筹②】|主印【吸血②】|辅印【精准②】|辅印【强化②】|辅印【穿杨②】|辅印【国色②】|辅印【蝶魂②】|辅印【复仇②】|辅印【强掠②】|辅印【身强②】|辅印【运筹②】|辅印【吸血②】 46 240 0 0 0 N1
+TakeBagItem 主印【精准②】|主印【强化②】|主印【穿杨②】|主印【国色②】|主印【蝶魂②】|主印【复仇②】|主印【强掠②】|主印【身强②】|主印【运筹②】|主印【吸血②】|辅印【精准②】|辅印【强化②】|辅印【穿杨②】|辅印【国色②】|辅印【蝶魂②】|辅印【复仇②】|辅印【强掠②】|辅印【身强②】|辅印【运筹②】|辅印【吸血②】 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个二级辅印辅印，每件价格为240
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 240
+goto @给予回收货
+
+[@一级主印2]
+#ACT
+;TakeBagItem 主印【精准①】|主印【强化①】|主印【穿杨①】|主印【国色①】|主印【蝶魂①】|主印【复仇①】|主印【强掠①】|主印【身强①】|主印【运筹①】|主印【吸血①】|辅印【精准①】|辅印【强化①】|辅印【穿杨①】|辅印【国色①】|辅印【蝶魂①】|辅印【复仇①】|辅印【强掠①】|辅印【身强①】|辅印【运筹①】|辅印【吸血①】 46 120 0 0 0 N1
+TakeBagItem 主印【精准①】|主印【强化①】|主印【穿杨①】|主印【国色①】|主印【蝶魂①】|主印【复仇①】|主印【强掠①】|主印【身强①】|主印【运筹①】|主印【吸血①】|辅印【精准①】|辅印【强化①】|辅印【穿杨①】|辅印【国色①】|辅印【蝶魂①】|辅印【复仇①】|辅印【强掠①】|辅印【身强①】|辅印【运筹①】|辅印【吸血①】 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个一级辅印辅印，每件价格为120
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 120
+goto @给予回收货
+
+[@三级转生证2]
+#ACT
+;TakeBagItem 天精岩三转|地狱火三转 46 480 0 0 0 N1
+TakeBagItem 天精岩三转|地狱火三转 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个三级转生证明，每件价格为480
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 480
+goto @给予回收货
+
+[@二级转生证2]
+#ACT
+;TakeBagItem 天精岩二转|地狱火二转 46 240 0 0 0 N1
+TakeBagItem 天精岩二转|地狱火二转 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个二级转生证明，每件价格为240
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 240
+goto @给予回收货
+
+[@一级转生证2]
+#ACT
+;TakeBagItem 天精岩一转|地狱火一转 46 120 0 0 0 N1
+TakeBagItem 天精岩一转|地狱火一转 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个一级转生证明，每件价格为120
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 120
+goto @给予回收货
+
+
+
+[@治疗宝珠55]
+#ACT
+;TakeBagItem 治疗宝珠⑤ 46 360 0 0 0 N1
+TakeBagItem 治疗宝珠⑤ 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个治疗宝珠⑤，每件价格为360
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 360
+goto @给予回收货
+
+[@治疗宝珠44]
+#ACT
+;TakeBagItem 治疗宝珠④ 46 180 0 0 0 N1
+TakeBagItem 治疗宝珠④ 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个治疗宝珠④，每件价格为180
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 180
+goto @给予回收货
+
+[@治疗宝珠33]
+#ACT
+;TakeBagItem 治疗宝珠③ 46 72 0 0 0 N1
+TakeBagItem 治疗宝珠③ 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个治疗宝珠③，每件价格为72
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 72
+goto @给予回收货
+
+[@治疗宝珠22]
+#ACT
+;TakeBagItem 治疗宝珠② 46 36 0 0 0 N1
+TakeBagItem 治疗宝珠② 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个治疗宝珠②，每件价格为36
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 36
+goto @给予回收货
+
+[@治疗宝珠11]
+#ACT
+;TakeBagItem 治疗宝珠① 46 12 0 0 0 N1
+TakeBagItem 治疗宝珠① 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个治疗宝珠①，每件价格为12
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 12
+goto @给予回收货
+
+
+
+
+[@麻痹复活11]
+#ACT
+;TakeBagItem 复活戒指+1|护身戒指+1|麻痹戒指+1 46 60 0 0 0 N1
+TakeBagItem 复活戒指+1|护身戒指+1|麻痹戒指+1 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个一级特戒，每件价格为60
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 60
+goto @给予回收货
+
+[@麻痹复活22]
+#ACT
+;TakeBagItem 复活戒指+2|护身戒指+2|麻痹戒指+2 46 120 0 0 0 N1
+TakeBagItem 复活戒指+2|护身戒指+2|麻痹戒指+2 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个二级特戒，每件价格为120
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 120
+goto @给予回收货
+
+[@麻痹复活33]
+#ACT
+;TakeBagItem 复活戒指+3|护身戒指+3|麻痹戒指+3 46 240 0 0 0 N1
+TakeBagItem 复活戒指+3|护身戒指+3|麻痹戒指+3 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个三级特戒，每件价格为240
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 240
+goto @给予回收货
+
+[@麻痹复活44]
+#ACT
+;TakeBagItem 复活戒指+4|护身戒指+4|麻痹戒指+4 46 600 0 0 0 N1
+TakeBagItem 复活戒指+4|护身戒指+4|麻痹戒指+4 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个四级特戒，每件价格为600
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 600
+goto @给予回收货
+
+[@麻痹复活55]
+#ACT
+;TakeBagItem 复活戒指+5|护身戒指+5|麻痹戒指+5 46 1200 0 0 0 N1
+TakeBagItem 复活戒指+5|护身戒指+5|麻痹戒指+5 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个五级特戒，每件价格为1200
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 1200
+goto @给予回收货
+
+[@麻痹复活66]
+#ACT
+;TakeBagItem 复活戒指+6|护身戒指+6|麻痹戒指+6 46 2400 0 0 0 N1
+TakeBagItem 复活戒指+6|护身戒指+6|麻痹戒指+6 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个六级特戒，每件价格为2400
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 2400
+goto @给予回收货
+
+[@麻痹复活77]
+#ACT
+;TakeBagItem 复活戒指+7|护身戒指+7|麻痹戒指+7 46 3600 0 0 0 N1
+TakeBagItem 复活戒指+7|护身戒指+7|麻痹戒指+7 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个七级特戒，每件价格为3600
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 3600
+goto @给予回收货币
+
+[@麻痹复活88]
+#ACT
+;TakeBagItem 复活戒指+8|护身戒指+8|麻痹戒指+8 46 4800 0 0 0 N1
+TakeBagItem 复活戒指+8|护身戒指+8|麻痹戒指+8 46 N1
+SENDMSG 6 成功回收<$STR(N1)>个八级特戒，每件价格为4800
+
+MOV N$回收获得经验 0
+MOV N$回收获得元宝1 4800
+goto @给予回收货币
+
+
+[@红魔套2]
+#ACT
+;TakeBagItem 红魔盔·圣|红魔链·圣|红魔镯·圣|红魔戒·圣|红魔勋·圣|红魔带·圣|红魔靴·圣|红魔盔·魔|红魔链·魔|红魔镯·魔|红魔戒·魔|红魔勋·魔|红魔带·魔|红魔靴·魔|红魔盔·尊|红魔链·尊|红魔镯·尊|红魔戒·尊|红魔勋·尊|红魔带·尊|红魔靴·尊 46 240 0 0 48000 N2 0
+TakeBagItem 红魔盔·圣|红魔链·圣|红魔镯·圣|红魔戒·圣|红魔勋·圣|红魔带·圣|红魔靴·圣|红魔盔·魔|红魔链·魔|红魔镯·魔|红魔戒·魔|红魔勋·魔|红魔带·魔|红魔靴·魔|红魔盔·尊|红魔链·尊|红魔镯·尊|红魔戒·尊|红魔勋·尊|红魔带·尊|红魔靴·尊 46 N2
+
+;TakeBagItem 红魔之影·魔|红魔之影·圣|红魔之影·尊|红魔圣袍|红魔圣衣|红魔魔袍|红魔魔衣|红魔尊袍|红魔尊衣 46 480 0 0 48000 N1
+TakeBagItem 红魔之影·魔|红魔之影·圣|红魔之影·尊|红魔圣袍|红魔圣衣|红魔魔袍|红魔魔衣|红魔尊袍|红魔尊衣 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个红魔首饰，每件价格为240
+SENDMSG 6 成功回收<$STR(N1)>个红魔剑甲，每件价格为480
+
+MOV N$回收获得经验 48000
+MOV N$回收获得元宝1 480
+MOV N$回收获得元宝2 240
+goto @给予回收货币
+
+[@遗忘套2]
+#ACT
+;TakeBagItem 遗忘盔·圣|遗忘链·圣|遗忘镯·圣|遗忘戒·圣|遗忘圣勋|遗忘带·圣|遗忘靴·圣|遗忘盔·魔|遗忘链·魔|遗忘镯·魔|遗忘戒·魔|遗忘魔勋|遗忘带·魔|遗忘靴·魔|遗忘盔·尊|遗忘链·尊|遗忘镯·尊|遗忘戒·尊|遗忘尊勋|遗忘带·尊|遗忘靴·尊 46 144 0 0 42000 N2 0
+TakeBagItem 遗忘盔·圣|遗忘链·圣|遗忘镯·圣|遗忘戒·圣|遗忘圣勋|遗忘带·圣|遗忘靴·圣|遗忘盔·魔|遗忘链·魔|遗忘镯·魔|遗忘戒·魔|遗忘魔勋|遗忘带·魔|遗忘靴·魔|遗忘盔·尊|遗忘链·尊|遗忘镯·尊|遗忘戒·尊|遗忘尊勋|遗忘带·尊|遗忘靴·尊 46 N2
+
+;TakeBagItem 遗忘之影·魔|遗忘之影·圣|遗忘之影·尊|遗忘圣袍|遗忘圣衣|遗忘魔袍|遗忘魔衣|遗忘尊袍|遗忘尊衣 46 288 0 0 42000 N1
+TakeBagItem 遗忘之影·魔|遗忘之影·圣|遗忘之影·尊|遗忘圣袍|遗忘圣衣|遗忘魔袍|遗忘魔衣|遗忘尊袍|遗忘尊衣 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个遗忘首饰，每件价格为144
+SENDMSG 6 成功回收<$STR(N1)>个遗忘剑甲，每件价格为288
+
+MOV N$回收获得经验 42000
+MOV N$回收获得元宝1 288
+MOV N$回收获得元宝2 144
+goto @给予回收货币
+
+
+
+[@逐日套回2]
+#ACT
+;TakeBagItem 逐日战盔|逐日·坠|逐日·镯|逐日·戒|逐日战勋|逐日·带(战)|逐日·靴(战)|逐日魔盔|逐日·链|逐日·腕|逐日·环|逐日法勋|逐日·带(魔)|逐日·靴(魔)|逐日道盔|逐日·圈|逐日·手|逐日·指|逐日道勋|逐日·带(道)|逐日·靴(道) 46 96 0 0 40000 N2 0
+TakeBagItem 逐日战盔|逐日·坠|逐日·镯|逐日·戒|逐日战勋|逐日·带(战)|逐日·靴(战)|逐日魔盔|逐日·链|逐日·腕|逐日·环|逐日法勋|逐日·带(魔)|逐日·靴(魔)|逐日道盔|逐日·圈|逐日·手|逐日·指|逐日道勋|逐日·带(道)|逐日·靴(道) 46 N2
+
+;TakeBagItem 逐日法杖|逐日圣斩|逐日道扇|逐日圣袍|逐日圣衣|逐日魔袍|逐日魔衣|逐日尊袍|逐日尊衣 46 192 0 0 40000 N1
+TakeBagItem 逐日法杖|逐日圣斩|逐日道扇|逐日圣袍|逐日圣衣|逐日魔袍|逐日魔衣|逐日尊袍|逐日尊衣 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个逐日首饰，每件价格为80
+SENDMSG 6 成功回收<$STR(N1)>个逐日剑甲，每件价格为160
+
+MOV N$回收获得经验 40000
+MOV N$回收获得元宝1 160
+MOV N$回收获得元宝2 80
+goto @给予回收货币
+
+
+[@情天套回2]
+#ACT
+;TakeBagItem 情天战盔|情天·坠|情天·镯|情天·戒|情天战章|情天·带(战)|情天·靴(战)|情天魔盔|情天·链|情天·腕|情天·环|情天法章|情天·带(魔)|情天·靴(魔)|情天道盔|情天·圈|情天·手|情天·指|情天道章|情天·带(道)|情天·靴(道) 46 60 0 0 36000 N2 0
+TakeBagItem 情天战盔|情天·坠|情天·镯|情天·戒|情天战章|情天·带(战)|情天·靴(战)|情天魔盔|情天·链|情天·腕|情天·环|情天法章|情天·带(魔)|情天·靴(魔)|情天道盔|情天·圈|情天·手|情天·指|情天道章|情天·带(道)|情天·靴(道) 46 N2
+
+;TakeBagItem 情天魔剑|情天圣剑|情天尊剑|情天圣甲(男)|情天圣甲(女)|情天法衣(男)|情天法衣(女)|情天道袍(男)|情天道袍(女) 46 120 0 0 36000 N1
+TakeBagItem 情天魔剑|情天圣剑|情天尊剑|情天圣甲(男)|情天圣甲(女)|情天法衣(男)|情天法衣(女)|情天道袍(男)|情天道袍(女) 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个情天首饰，每件价格为60
+SENDMSG 6 成功回收<$STR(N1)>个情天剑甲，每件价格为120
+
+MOV N$回收获得经验 36000
+MOV N$回收获得元宝1 120
+MOV N$回收获得元宝2 60
+goto @给予回收货币
+
+
+[@迷失套回2]
+#ACT
+;TakeBagItem 迷失战盔|迷失项链(战)|迷失护腕(战)|迷失战戒|迷失勋章(战)|迷失腰带(战)|迷失靴子(战)|迷失魔盔|迷失项链(法)|迷失护腕(法)|迷失魔戒|迷失勋章(法)|迷失腰带(法)|迷失靴子(法)|迷失道盔|迷失项链(道)|迷失护腕(道)|迷失道戒|迷失勋章(道)|迷失腰带(道)|迷失靴子(道) 46 36 0 0 34000 N2 0
+TakeBagItem 迷失战盔|迷失项链(战)|迷失护腕(战)|迷失战戒|迷失勋章(战)|迷失腰带(战)|迷失靴子(战)|迷失魔盔|迷失项链(法)|迷失护腕(法)|迷失魔戒|迷失勋章(法)|迷失腰带(法)|迷失靴子(法)|迷失道盔|迷失项链(道)|迷失护腕(道)|迷失道戒|迷失勋章(道)|迷失腰带(道)|迷失靴子(道) 46 N2
+
+;TakeBagItem 迷失魔魂|迷失圣斩|迷失尊扇|迷失战袍(男)|迷失战袍(女)|迷失魔袍(男)|迷失魔袍(女)|迷失道袍(男)|迷失道袍(女) 46 72 0 0 34000 N1
+TakeBagItem 迷失魔魂|迷失圣斩|迷失尊扇|迷失战袍(男)|迷失战袍(女)|迷失魔袍(男)|迷失魔袍(女)|迷失道袍(男)|迷失道袍(女) 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个迷失首饰，每件价格为36
+SENDMSG 6 成功回收<$STR(N1)>个迷失剑甲，每件价格为72
+
+MOV N$回收获得经验 34000
+MOV N$回收获得元宝1 72
+MOV N$回收获得元宝2 36
+goto @给予回收货币
+
+
+[@苍茫套回2]
+#ACT
+;TakeBagItem 苍茫战盔|苍茫项链(战)|苍茫护腕(战)|苍茫战戒|苍茫令(战)|苍茫腰带(战)|苍茫靴子(战)|苍茫魔盔|苍茫项链(法)|苍茫护腕(法)|苍茫魔戒|苍茫令(法)|苍茫腰带(法)|苍茫靴子(法)|苍茫道盔|苍茫项链(道)|苍茫护腕(道)|苍茫道戒|苍茫令(道)|苍茫腰带(道)|苍茫靴子(道) 46 30 0 0 30000 N2 0
+TakeBagItem 苍茫战盔|苍茫项链(战)|苍茫护腕(战)|苍茫战戒|苍茫令(战)|苍茫腰带(战)|苍茫靴子(战)|苍茫魔盔|苍茫项链(法)|苍茫护腕(法)|苍茫魔戒|苍茫令(法)|苍茫腰带(法)|苍茫靴子(法)|苍茫道盔|苍茫项链(道)|苍茫护腕(道)|苍茫道戒|苍茫令(道)|苍茫腰带(道)|苍茫靴子(道) 46 N2
+
+;TakeBagItem 苍茫魔剑|苍茫圣剑|苍茫尊剑|苍茫圣甲(男)|苍茫圣甲(女)|苍茫魔衣(男)|苍茫魔衣(女)|苍茫道袍(男)|苍茫道袍(女) 46 60 0 0 30000 N1
+TakeBagItem 苍茫魔剑|苍茫圣剑|苍茫尊剑|苍茫圣甲(男)|苍茫圣甲(女)|苍茫魔衣(男)|苍茫魔衣(女)|苍茫道袍(男)|苍茫道袍(女) 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个苍茫首饰，每件价格为30
+SENDMSG 6 成功回收<$STR(N1)>个苍茫剑甲，每件价格为60
+
+MOV N$回收获得经验 30000
+MOV N$回收获得元宝1 60
+MOV N$回收获得元宝2 30
+goto @给予回收货币
+
+[@热血套回2]
+#ACT
+;TakeBagItem 热血战盔|热血项链(战)|热血护腕(战)|热血战戒|热血令(战)|热血腰带(战)|热血靴子(战)|热血魔盔|热血项链(法)|热血护腕(法)|热血魔戒|热血令(法)|热血腰带(法)|热血靴子(法)|热血道盔|热血项链(道)|热血护腕(道)|热血道戒|热血令(道)|热血腰带(道)|热血靴子(道) 46 24 0 0 28000 N2 0
+TakeBagItem 热血战盔|热血项链(战)|热血护腕(战)|热血战戒|热血令(战)|热血腰带(战)|热血靴子(战)|热血魔盔|热血项链(法)|热血护腕(法)|热血魔戒|热血令(法)|热血腰带(法)|热血靴子(法)|热血道盔|热血项链(道)|热血护腕(道)|热血道戒|热血令(道)|热血腰带(道)|热血靴子(道) 46 N2
+
+;TakeBagItem 热血杖|热血斩|热血剑|热血圣衣(男)|热血圣衣(女)|热血魔衣(男)|热血魔衣(女)|热血尊衣(男)|热血尊衣(女) 46 48 0 0 28000 N1
+TakeBagItem 热血杖|热血斩|热血剑|热血圣衣(男)|热血圣衣(女)|热血魔衣(男)|热血魔衣(女)|热血尊衣(男)|热血尊衣(女) 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个热血首饰，每件价格为24
+SENDMSG 6 成功回收<$STR(N1)>个热血剑甲，每件价格为48
+
+MOV N$回收获得经验 28000
+MOV N$回收获得元宝1 48
+MOV N$回收获得元宝2 24
+goto @给予回收货币
+
+[@清风套回2]
+#ACT
+;TakeBagItem 清风战盔|清风项链(战)|清风护腕(战)|清风战戒|清风勋章(战)|清风腰带(战)|清风靴子(战)|清风法盔|清风项链(法)|清风护腕(法)|清风法戒|清风勋章(法)|清风腰带(法)|清风靴子(法)|清风道盔|清风项链(道)|清风护腕(道)|清风道戒|清风勋章(道)|清风腰带(道)|清风靴子(道) 46 18 0 0 26000 N2 0
+TakeBagItem 清风战盔|清风项链(战)|清风护腕(战)|清风战戒|清风勋章(战)|清风腰带(战)|清风靴子(战)|清风法盔|清风项链(法)|清风护腕(法)|清风法戒|清风勋章(法)|清风腰带(法)|清风靴子(法)|清风道盔|清风项链(道)|清风护腕(道)|清风道戒|清风勋章(道)|清风腰带(道)|清风靴子(道) 46 N2
+
+;TakeBagItem 清风刺|清风斧|清风剑|清风战甲(男)|清风战甲(女)|清风法衣(男)|清风法衣(女)|清风道袍(男)|清风道袍(女) 46 36 0 0 26000 N1
+TakeBagItem 清风刺|清风斧|清风剑|清风战甲(男)|清风战甲(女)|清风法衣(男)|清风法衣(女)|清风道袍(男)|清风道袍(女) 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个清风首饰，每件价格为18
+SENDMSG 6 成功回收<$STR(N1)>个清风剑甲，每件价格为36
+
+MOV N$回收获得经验 26000
+MOV N$回收获得元宝1 36
+MOV N$回收获得元宝2 18
+goto @给予回收货币
+
+[@战神套回2]
+#ACT
+;TakeBagItem 战神腰带|战神靴子|圣魔腰带|圣魔靴子|真魂腰带|真魂靴子|战神头盔|圣魔头盔|真魂头盔|战神项链|战神手镯|战神戒指|圣魔项链|圣魔手镯|圣魔戒指|真魂项链|真魂手镯|真魂戒指 46 12 0 0 24000 N2 0
+TakeBagItem 战神腰带|战神靴子|圣魔腰带|圣魔靴子|真魂腰带|真魂靴子|战神头盔|圣魔头盔|真魂头盔|战神项链|战神手镯|战神戒指|圣魔项链|圣魔手镯|圣魔戒指|真魂项链|真魂手镯|真魂戒指 46 N2
+;TakeBagItem 镇天|开天|玄天|凤天魔甲|凰天魔衣 46 24 0 0 24000 N1
+TakeBagItem 镇天|开天|玄天|凤天魔甲|凰天魔衣 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个战神首饰，每件价格为12
+SENDMSG 6 成功回收<$STR(N1)>个战神剑甲，每件价格为24
+
+MOV N$回收获得经验 24000
+MOV N$回收获得元宝1 24
+MOV N$回收获得元宝2 12
+goto @给予回收货币
+
+
+[@一键回收]
+#if
+CHECKLEVELEX > 1
+#ACT
+;TakeBagItem 红魔盔·圣|红魔链·圣|红魔镯·圣|红魔戒·圣|红魔勋·圣|红魔带·圣|红魔靴·圣|红魔盔·魔|红魔链·魔|红魔镯·魔|红魔戒·魔|红魔勋·魔|红魔带·魔|红魔靴·魔|红魔盔·尊|红魔链·尊|红魔镯·尊|红魔戒·尊|红魔勋·尊|红魔带·尊|红魔靴·尊 46 240 0 0 48000 N2 0
+TakeBagItem 红魔盔·圣|红魔链·圣|红魔镯·圣|红魔戒·圣|红魔勋·圣|红魔带·圣|红魔靴·圣|红魔盔·魔|红魔链·魔|红魔镯·魔|红魔戒·魔|红魔勋·魔|红魔带·魔|红魔靴·魔|红魔盔·尊|红魔链·尊|红魔镯·尊|红魔戒·尊|红魔勋·尊|红魔带·尊|红魔靴·尊 46 N2
+;TakeBagItem 红魔之影·魔|红魔之影·圣|红魔之影·尊|红魔圣袍|红魔圣衣|红魔魔袍|红魔魔衣|红魔尊袍|红魔尊衣 46 480 0 0 48000 N1
+TakeBagItem 红魔之影·魔|红魔之影·圣|红魔之影·尊|红魔圣袍|红魔圣衣|红魔魔袍|红魔魔衣|红魔尊袍|红魔尊衣 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个红魔首饰，每件价格为240
+SENDMSG 6 成功回收<$STR(N1)>个红魔剑甲，每件价格为480
+
+MOV N$回收获得经验 48000
+MOV N$回收获得元宝1 480
+MOV N$回收获得元宝2 240
+goto @给予回收货币
+
+[@一键回收1]
+#if
+CHECKLEVELEX > 1
+#ACT
+;TakeBagItem 遗忘盔·圣|遗忘链·圣|遗忘镯·圣|遗忘戒·圣|遗忘圣勋|遗忘带·圣|遗忘靴·圣|遗忘盔·魔|遗忘链·魔|遗忘镯·魔|遗忘戒·魔|遗忘魔勋|遗忘带·魔|遗忘靴·魔|遗忘盔·尊|遗忘链·尊|遗忘镯·尊|遗忘戒·尊|遗忘尊勋|遗忘带·尊|遗忘靴·尊 46 144 0 0 42000 N2 0
+TakeBagItem 遗忘盔·圣|遗忘链·圣|遗忘镯·圣|遗忘戒·圣|遗忘圣勋|遗忘带·圣|遗忘靴·圣|遗忘盔·魔|遗忘链·魔|遗忘镯·魔|遗忘戒·魔|遗忘魔勋|遗忘带·魔|遗忘靴·魔|遗忘盔·尊|遗忘链·尊|遗忘镯·尊|遗忘戒·尊|遗忘尊勋|遗忘带·尊|遗忘靴·尊 46 N2
+;TakeBagItem 遗忘之影·魔|遗忘之影·圣|遗忘之影·尊|遗忘圣袍|遗忘圣衣|遗忘魔袍|遗忘魔衣|遗忘尊袍|遗忘尊衣 46 288 0 0 42000 N1
+TakeBagItem 遗忘之影·魔|遗忘之影·圣|遗忘之影·尊|遗忘圣袍|遗忘圣衣|遗忘魔袍|遗忘魔衣|遗忘尊袍|遗忘尊衣 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个遗忘首饰，每件价格为144
+SENDMSG 6 成功回收<$STR(N1)>个遗忘剑甲，每件价格为288
+
+MOV N$回收获得经验 42000
+MOV N$回收获得元宝1 288
+MOV N$回收获得元宝2 144
+goto @给予回收货币
+
+
+[@一键回收2]
+#if
+CHECKLEVELEX > 1
+#ACT
+;TakeBagItem 逐日战盔|逐日·坠|逐日·镯|逐日·戒|逐日战勋|逐日·带(战)|逐日·靴(战)|逐日魔盔|逐日·链|逐日·腕|逐日·环|逐日法勋|逐日·带(魔)|逐日·靴(魔)|逐日道盔|逐日·圈|逐日·手|逐日·指|逐日道勋|逐日·带(道)|逐日·靴(道) 46 96 0 0 40000 N2 0
+TakeBagItem 逐日战盔|逐日·坠|逐日·镯|逐日·戒|逐日战勋|逐日·带(战)|逐日·靴(战)|逐日魔盔|逐日·链|逐日·腕|逐日·环|逐日法勋|逐日·带(魔)|逐日·靴(魔)|逐日道盔|逐日·圈|逐日·手|逐日·指|逐日道勋|逐日·带(道)|逐日·靴(道) 46 N2
+;TakeBagItem 逐日法杖|逐日圣斩|逐日道扇|逐日圣袍|逐日圣衣|逐日魔袍|逐日魔衣|逐日尊袍|逐日尊衣 46 192 0 0 40000 N1
+TakeBagItem 逐日法杖|逐日圣斩|逐日道扇|逐日圣袍|逐日圣衣|逐日魔袍|逐日魔衣|逐日尊袍|逐日尊衣 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个逐日首饰，每件价格为80
+SENDMSG 6 成功回收<$STR(N1)>个逐日剑甲，每件价格为160
+
+MOV N$回收获得经验 40000
+MOV N$回收获得元宝1 160
+MOV N$回收获得元宝2 80
+goto @给予回收货币
+
+[@一键回收3]
+#if
+CHECKLEVELEX > 1
+#ACT
+;TakeBagItem 情天战盔|情天·坠|情天·镯|情天·戒|情天战章|情天·带(战)|情天·靴(战)|情天魔盔|情天·链|情天·腕|情天·环|情天法章|情天·带(魔)|情天·靴(魔)|情天道盔|情天·圈|情天·手|情天·指|情天道章|情天·带(道)|情天·靴(道) 46 60 0 0 36000 N2 0
+TakeBagItem 情天战盔|情天·坠|情天·镯|情天·戒|情天战章|情天·带(战)|情天·靴(战)|情天魔盔|情天·链|情天·腕|情天·环|情天法章|情天·带(魔)|情天·靴(魔)|情天道盔|情天·圈|情天·手|情天·指|情天道章|情天·带(道)|情天·靴(道) 46 N2
+;TakeBagItem 情天魔剑|情天圣剑|情天尊剑|情天圣甲(男)|情天圣甲(女)|情天法衣(男)|情天法衣(女)|情天道袍(男)|情天道袍(女) 46 120 0 0 36000 N1
+TakeBagItem 情天魔剑|情天圣剑|情天尊剑|情天圣甲(男)|情天圣甲(女)|情天法衣(男)|情天法衣(女)|情天道袍(男)|情天道袍(女) 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个情天首饰，每件价格为60
+SENDMSG 6 成功回收<$STR(N1)>个情天剑甲，每件价格为120
+
+MOV N$回收获得经验 36000
+MOV N$回收获得元宝1 120
+MOV N$回收获得元宝2 60
+goto @给予回收货币
+
+[@一键回收4]
+#if
+CHECKLEVELEX > 1
+#ACT
+;TakeBagItem 迷失战盔|迷失项链(战)|迷失护腕(战)|迷失战戒|迷失勋章(战)|迷失腰带(战)|迷失靴子(战)|迷失魔盔|迷失项链(法)|迷失护腕(法)|迷失魔戒|迷失勋章(法)|迷失腰带(法)|迷失靴子(法)|迷失道盔|迷失项链(道)|迷失护腕(道)|迷失道戒|迷失勋章(道)|迷失腰带(道)|迷失靴子(道) 46 36 0 0 34000 N2 0
+TakeBagItem 迷失战盔|迷失项链(战)|迷失护腕(战)|迷失战戒|迷失勋章(战)|迷失腰带(战)|迷失靴子(战)|迷失魔盔|迷失项链(法)|迷失护腕(法)|迷失魔戒|迷失勋章(法)|迷失腰带(法)|迷失靴子(法)|迷失道盔|迷失项链(道)|迷失护腕(道)|迷失道戒|迷失勋章(道)|迷失腰带(道)|迷失靴子(道) 46 N2
+;TakeBagItem 迷失魔魂|迷失圣斩|迷失尊扇|迷失战袍(男)|迷失战袍(女)|迷失魔袍(男)|迷失魔袍(女)|迷失道袍(男)|迷失道袍(女) 46 72 0 0 34000 N1
+TakeBagItem 迷失魔魂|迷失圣斩|迷失尊扇|迷失战袍(男)|迷失战袍(女)|迷失魔袍(男)|迷失魔袍(女)|迷失道袍(男)|迷失道袍(女) 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个迷失首饰，每件价格为36
+SENDMSG 6 成功回收<$STR(N1)>个迷失剑甲，每件价格为72
+
+MOV N$回收获得经验 34000
+MOV N$回收获得元宝1 72
+MOV N$回收获得元宝2 36
+goto @给予回收货币
+
+[@一键回收5]
+#if
+CHECKLEVELEX > 1
+#ACT
+;TakeBagItem 苍茫战盔|苍茫项链(战)|苍茫护腕(战)|苍茫战戒|苍茫令(战)|苍茫腰带(战)|苍茫靴子(战)|苍茫魔盔|苍茫项链(法)|苍茫护腕(法)|苍茫魔戒|苍茫令(法)|苍茫腰带(法)|苍茫靴子(法)|苍茫道盔|苍茫项链(道)|苍茫护腕(道)|苍茫道戒|苍茫令(道)|苍茫腰带(道)|苍茫靴子(道) 46 30 0 0 30000 N2 0
+TakeBagItem 苍茫战盔|苍茫项链(战)|苍茫护腕(战)|苍茫战戒|苍茫令(战)|苍茫腰带(战)|苍茫靴子(战)|苍茫魔盔|苍茫项链(法)|苍茫护腕(法)|苍茫魔戒|苍茫令(法)|苍茫腰带(法)|苍茫靴子(法)|苍茫道盔|苍茫项链(道)|苍茫护腕(道)|苍茫道戒|苍茫令(道)|苍茫腰带(道)|苍茫靴子(道) 46 N2
+;TakeBagItem 苍茫魔剑|苍茫圣剑|苍茫尊剑|苍茫圣甲(男)|苍茫圣甲(女)|苍茫魔衣(男)|苍茫魔衣(女)|苍茫道袍(男)|苍茫道袍(女) 46 60 0 0 30000 N1
+TakeBagItem 苍茫魔剑|苍茫圣剑|苍茫尊剑|苍茫圣甲(男)|苍茫圣甲(女)|苍茫魔衣(男)|苍茫魔衣(女)|苍茫道袍(男)|苍茫道袍(女) 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个苍茫首饰，每件价格为30
+SENDMSG 6 成功回收<$STR(N1)>个苍茫剑甲，每件价格为60
+
+MOV N$回收获得经验 30000
+MOV N$回收获得元宝1 60
+MOV N$回收获得元宝2 30
+goto @给予回收货币
+
+
+[@一键回收6]
+#if
+CHECKLEVELEX > 1
+#ACT
+;TakeBagItem 热血战盔|热血项链(战)|热血护腕(战)|热血战戒|热血令(战)|热血腰带(战)|热血靴子(战)|热血魔盔|热血项链(法)|热血护腕(法)|热血魔戒|热血令(法)|热血腰带(法)|热血靴子(法)|热血道盔|热血项链(道)|热血护腕(道)|热血道戒|热血令(道)|热血腰带(道)|热血靴子(道) 46 24 0 0 28000 N2 0
+TakeBagItem 热血战盔|热血项链(战)|热血护腕(战)|热血战戒|热血令(战)|热血腰带(战)|热血靴子(战)|热血魔盔|热血项链(法)|热血护腕(法)|热血魔戒|热血令(法)|热血腰带(法)|热血靴子(法)|热血道盔|热血项链(道)|热血护腕(道)|热血道戒|热血令(道)|热血腰带(道)|热血靴子(道) 46 N2
+;TakeBagItem 热血杖|热血斩|热血剑|热血圣衣(男)|热血圣衣(女)|热血魔衣(男)|热血魔衣(女)|热血尊衣(男)|热血尊衣(女) 46 48 0 0 28000 N1
+TakeBagItem 热血杖|热血斩|热血剑|热血圣衣(男)|热血圣衣(女)|热血魔衣(男)|热血魔衣(女)|热血尊衣(男)|热血尊衣(女) 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个热血首饰，每件价格为24
+SENDMSG 6 成功回收<$STR(N1)>个热血剑甲，每件价格为48
+
+MOV N$回收获得经验 28000
+MOV N$回收获得元宝1 48
+MOV N$回收获得元宝2 24
+goto @给予回收货币
+
+[@一键回收7]
+#if
+CHECKLEVELEX > 1
+#ACT
+;TakeBagItem 清风战盔|清风项链(战)|清风护腕(战)|清风战戒|清风勋章(战)|清风腰带(战)|清风靴子(战)|清风法盔|清风项链(法)|清风护腕(法)|清风法戒|清风勋章(法)|清风腰带(法)|清风靴子(法)|清风道盔|清风项链(道)|清风护腕(道)|清风道戒|清风勋章(道)|清风腰带(道)|清风靴子(道) 46 18 0 0 26000 N2 0
+TakeBagItem 清风战盔|清风项链(战)|清风护腕(战)|清风战戒|清风勋章(战)|清风腰带(战)|清风靴子(战)|清风法盔|清风项链(法)|清风护腕(法)|清风法戒|清风勋章(法)|清风腰带(法)|清风靴子(法)|清风道盔|清风项链(道)|清风护腕(道)|清风道戒|清风勋章(道)|清风腰带(道)|清风靴子(道) 46 N2
+;TakeBagItem 清风刺|清风斧|清风剑|清风战甲(男)|清风战甲(女)|清风法衣(男)|清风法衣(女)|清风道袍(男)|清风道袍(女) 46 36 0 0 26000 N1
+TakeBagItem 清风刺|清风斧|清风剑|清风战甲(男)|清风战甲(女)|清风法衣(男)|清风法衣(女)|清风道袍(男)|清风道袍(女) 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个清风首饰，每件价格为18
+SENDMSG 6 成功回收<$STR(N1)>个清风剑甲，每件价格为36
+
+MOV N$回收获得经验 26000
+MOV N$回收获得元宝1 36
+MOV N$回收获得元宝2 18
+goto @给予回收货币
+
+
+[@一键回收8]
+#if
+CHECKLEVELEX > 1
+#ACT
+;TakeBagItem 战神腰带|战神靴子|圣魔腰带|圣魔靴子|真魂腰带|真魂靴子|战神头盔|圣魔头盔|真魂头盔|战神项链|战神手镯|战神戒指|圣魔项链|圣魔手镯|圣魔戒指|真魂项链|真魂手镯|真魂戒指 46 12 0 0 24000 N2 0
+TakeBagItem 战神腰带|战神靴子|圣魔腰带|圣魔靴子|真魂腰带|真魂靴子|战神头盔|圣魔头盔|真魂头盔|战神项链|战神手镯|战神戒指|圣魔项链|圣魔手镯|圣魔戒指|真魂项链|真魂手镯|真魂戒指 46 N2
+;TakeBagItem 镇天|开天|玄天|凤天魔甲|凰天魔衣 46 24 0 0 24000 N1
+TakeBagItem 镇天|开天|玄天|凤天魔甲|凰天魔衣 46 N1
+SENDMSG 6 成功回收<$STR(N2)>个战神首饰，每件价格为12
+SENDMSG 6 成功回收<$STR(N1)>个战神剑甲，每件价格为24
+
+MOV N$回收获得经验 24000
+MOV N$回收获得元宝1 24
+MOV N$回收获得元宝2 12
+goto @给予回收货币
+
+
+[@给予回收货币]
+#if
+large N1 0
+#act
+mul N$回收获得元宝1 N1
+money 元宝 + <$str(N$回收获得元宝1)>
+
+#if
+large <$str(N$回收获得经验)> 0
+large N1 0
+#act
+mov N$临时_回收获得经验 N$回收获得经验
+mul N$临时_回收获得经验 N1
+changeexp + <$str(N$临时_回收获得经验)>
+
+#if
+large N2 0
+#act
+mul N$回收获得元宝2 N2
+
+changeexp + <$str(N$临时_回收获得经验)>
+money 元宝 + <$str(N$回收获得元宝2)>
+
+#if
+large <$str(N$回收获得经验)> 0
+large N2 0
+#act
+mov N$临时_回收获得经验 N$回收获得经验
+mul N$临时_回收获得经验 N2
+changeexp + <$str(N$临时_回收获得经验)>
+
+#if
+#act
+MOV N1 0
+MOV N2 0
+BREAK
+
+}

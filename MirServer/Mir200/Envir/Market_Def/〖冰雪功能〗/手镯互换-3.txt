@@ -1,0 +1,126 @@
+[@main]
+<我可以帮你互换手和镯!>\  \
+
+<起源·手换起源·镯/@冰城手换镯>  <80W元宝/FCOLOR=250>     <起源·镯换起源·手/@冰城镯换手>  <80W元宝/FCOLOR=250>\  \
+
+<上古·手换上古·镯/@洪荒手换镯>  <50W元宝/FCOLOR=250>     <上古·镯换上古·手/@洪荒镯换手>  <50W元宝/FCOLOR=250>\  \
+
+;<望月·手换望月·镯/@望月手换镯>  <10W元宝/FCOLOR=250>     <望月·镯换望月·手/@望月镯换手>  <10W元宝/FCOLOR=250>\
+;<皓月·手换皓月·镯/@皓月手换镯>  <10W元宝/FCOLOR=250>     <皓月·镯换皓月·手/@皓月镯换手>  <10W元宝/FCOLOR=250>\
+\  \
+
+;　       <购买装备清零宝石/@购买清零宝石> <5W元宝/FCOLOR=253>\
+
+[@购买清零宝石]
+#IF
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+GIVE 清零宝石 1
+#ELSEACT
+MESSAGEBOX 元宝不足！
+BREAK
+
+[@皓月镯换手]
+#IF
+CHECKGAMEGOLD > 99999
+CHECKITEM 皓月·镯 1
+#act
+GAMEGOLD - 100000
+TAKE 皓月·镯 1
+GIVE 皓月·手 1
+MESSAGEBOX 互换成功！
+#ELSEACT
+MESSAGEBOX 互换条件不足！
+BREAK
+
+[@皓月手换镯]
+#IF
+CHECKGAMEGOLD > 99999
+CHECKITEM 皓月·手 1
+#act
+GAMEGOLD - 100000
+TAKE 皓月·手 1
+GIVE 皓月·镯 1
+MESSAGEBOX 互换成功！
+#ELSEACT
+MESSAGEBOX 互换条件不足！
+BREAK
+
+[@望月镯换手]
+#IF
+CHECKGAMEGOLD > 99999
+CHECKITEM 望月·镯 1
+#act
+GAMEGOLD - 100000
+TAKE 望月·镯 1
+GIVE 望月·手 1
+MESSAGEBOX 互换成功！
+#ELSEACT
+MESSAGEBOX 互换条件不足！
+BREAK
+
+[@望月手换镯]
+#IF
+CHECKGAMEGOLD > 99999
+CHECKITEM 望月·手 1
+#act
+GAMEGOLD - 100000
+TAKE 望月·手 1
+GIVE 望月·镯 1
+MESSAGEBOX 互换成功！
+#ELSEACT
+MESSAGEBOX 互换条件不足！
+BREAK
+
+[@洪荒镯换手]
+#IF
+CHECKGAMEGOLD > 499999
+CHECKITEM 上古·镯 1
+#act
+GAMEGOLD - 500000
+TAKE 上古·镯 1
+GIVE 上古·手 1
+MESSAGEBOX 互换成功！
+#ELSEACT
+MESSAGEBOX 互换条件不足！
+BREAK
+
+[@洪荒手换镯]
+#IF
+CHECKGAMEGOLD > 499999
+CHECKITEM 上古·手 1
+#act
+GAMEGOLD - 500000
+TAKE 上古·手 1
+GIVE 上古·镯 1
+MESSAGEBOX 互换成功！
+#ELSEACT
+MESSAGEBOX 互换条件不足！
+BREAK
+
+[@冰城镯换手]
+#IF
+CHECKGAMEGOLD > 799999
+CHECKITEM 起源·镯 1
+#act
+GAMEGOLD - 800000
+TAKE 起源·镯 1
+GIVE 起源·手 1
+MESSAGEBOX 互换成功！
+#ELSEACT
+MESSAGEBOX 互换条件不足！
+BREAK
+
+[@冰城手换镯]
+#IF
+CHECKGAMEGOLD > 799999
+CHECKITEM 起源·手 1
+#act
+GAMEGOLD - 800000
+TAKE 起源·手 1
+GIVE 起源·镯 1
+MESSAGEBOX 互换成功！
+#ELSEACT
+MESSAGEBOX 互换条件不足！
+BREAK

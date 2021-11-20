@@ -1,0 +1,11 @@
+[@Settings]
+{
+<Text|text=<$NPCNAME>|x=30|y=20|size=18|color=1005>
+<Text|text=在森林里神出鬼没的蜘蛛怪物当中，最让人头疼的要数幻影蜘蛛|x=30|y=60|size=16>
+<Text|text=这种蜘蛛自身不动，但是不断吐出子虫 这些子虫见人就自爆|x=30|y=80|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@exit>
+<Text|text=离开|x=60|y=133|size=16|color=1001|link=@exit>
+
+}

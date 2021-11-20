@@ -1,0 +1,29 @@
+[@Settings]
+{
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>\ \
+
+<Text|text=我是飞天武馆的练功师傅黄飛龍|x=30|y=60|size=16>
+<Text|text=如果你没有什么事情的话|x=30|y=80|size=16>
+<Text|text=请不要打搅我,我正在运气凝神,修练绝世神功|x=30|y=100|size=16>
+
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@ask_M>
+<Text|text=打听情报|x=60|y=133|size=16|color=1001|link=@ask_M>
+
+<Img|img=public/btn_npcfh_03.png|x=175|y=138>
+<Layout|x=175|y=120|width=80|height=50|link=@exit>
+<Text|text=离 开|x=200|y=133|size=16|color=1001|link=@exit>
+
+
+[@ask_M]
+
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>\ \
+
+<Text|text=听说祖玛教主和沃玛教主都改造了自己的寺庙|x=30|y=60|size=16>
+<Text|text=现在想见他们一面可不容易啊!|x=30|y=80|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@exit>
+<Text|text=关闭|x=60|y=133|size=16|color=1001|link=@exit>
+}

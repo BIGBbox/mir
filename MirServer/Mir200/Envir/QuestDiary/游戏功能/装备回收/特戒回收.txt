@@ -1,0 +1,240 @@
+[@雪花特戒回收6]
+{
+#if
+checkitem 麻痹戒指+8 1
+#ACT
+take 麻痹戒指+8 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了麻痹戒指+8装备，获得了大量元宝和经验！
+GOTO @雪花特戒回收6
+break
+#if
+checkitem 复活戒指+8 1
+#ACT
+take 复活戒指+8 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了复活戒指+8装备，获得了大量元宝和经验！
+GOTO @雪花特戒回收6
+break
+#if
+checkitem 护身戒指+8 1
+#ACT
+take 护身戒指+8 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了护身戒指+8装备，获得了大量元宝和经验！
+GOTO @雪花特戒回收6
+break
+}
+[@魅影特戒回收6]
+{
+#if
+checkitem 麻痹戒指+7 1
+#ACT
+take 麻痹戒指+7 1
+GAMEGOLD + 3000
+CHANGEEXP + 5000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了麻痹戒指+7装备，获得了大量元宝和经验！
+GOTO @魅影特戒回收6
+break
+#if
+checkitem 复活戒指+7 1
+#ACT
+take 复活戒指+7 1
+GAMEGOLD + 3000
+CHANGEEXP + 5000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了复活戒指+7装备，获得了大量元宝和经验！
+GOTO @魅影特戒回收6
+break
+#if
+checkitem 护身戒指+7 1
+#ACT
+take 护身戒指+7 1
+GAMEGOLD + 3000
+CHANGEEXP + 5000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了护身戒指+7装备，获得了大量元宝和经验！
+GOTO @魅影特戒回收6
+break
+}
+[@修罗特戒回收6]
+{
+#if
+checkitem 麻痹戒指+6 1
+#ACT
+take 麻痹戒指+6 1
+GAMEGOLD + 2000
+CHANGEEXP + 2000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了麻痹戒指+6装备，获得了大量元宝和经验！
+GOTO @修罗特戒回收6
+break
+#if
+checkitem 复活戒指+6 1
+#ACT
+take 复活戒指+6 1
+GAMEGOLD + 2000
+CHANGEEXP + 2000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了复活戒指+6装备，获得了大量元宝和经验！
+GOTO @修罗特戒回收6
+break
+#if
+checkitem 护身戒指+6 1
+#ACT
+take 护身戒指+6 1
+GAMEGOLD + 2000
+CHANGEEXP + 2000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了护身戒指+6装备，获得了大量元宝和经验！
+GOTO @修罗特戒回收6
+break
+}
+[@帝王特戒回收6]
+{
+#if
+checkitem 麻痹戒指+5 1
+#ACT
+take 麻痹戒指+5 1
+GAMEGOLD + 1000
+CHANGEEXP + 1000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了麻痹戒指+5装备，获得了大量元宝和经验！
+GOTO @帝王特戒回收6
+break
+#if
+checkitem 复活戒指+5 1
+#ACT
+take 复活戒指+5 1
+GAMEGOLD + 1000
+CHANGEEXP + 1000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了复活戒指+5装备，获得了大量元宝和经验！
+GOTO @帝王特戒回收6
+break
+#if
+checkitem 护身戒指+5 1
+#ACT
+take 护身戒指+5 1
+GAMEGOLD + 1000
+CHANGEEXP + 1000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了护身戒指+5装备，获得了大量元宝和经验！
+GOTO @帝王特戒回收6
+break
+}
+[@迷失1特戒回收6]
+{
+#if
+checkitem 麻痹戒指+4 1
+#ACT
+take 麻痹戒指+4 1
+GAMEGOLD + 500
+CHANGEEXP + 500000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了麻痹戒指+4装备，获得了大量元宝和经验！
+GOTO @迷失1特戒回收6
+break
+#if
+checkitem 复活戒指+4 1
+#ACT
+take 复活戒指+4 1
+GAMEGOLD + 500
+CHANGEEXP + 500000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了复活戒指+4装备，获得了大量元宝和经验！
+GOTO @迷失1特戒回收6
+break
+#if
+checkitem 护身戒指+4 1
+#ACT
+take 护身戒指+4 1
+GAMEGOLD + 500
+CHANGEEXP + 500000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了护身戒指+4装备，获得了大量元宝和经验！
+GOTO @迷失1特戒回收6
+break
+}
+[@黄昏特戒回收6]
+{
+#if
+checkitem 麻痹戒指+3 1
+#ACT
+take 麻痹戒指+3 1
+GAMEGOLD + 300
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了麻痹戒指+3装备，获得了大量元宝和经验！
+GOTO @黄昏特戒回收6
+break
+#if
+checkitem 复活戒指+3 1
+#ACT
+take 复活戒指+3 1
+GAMEGOLD + 300
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了复活戒指+3装备，获得了大量元宝和经验！
+GOTO @黄昏特戒回收6
+break
+#if
+checkitem 护身戒指+3 1
+#ACT
+take 护身戒指+3 1
+GAMEGOLD + 300
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了护身戒指+3装备，获得了大量元宝和经验！
+GOTO @黄昏特戒回收6
+break
+}
+[@迷失特戒回收6]
+{
+#if
+checkitem 麻痹戒指+2 1
+#ACT
+take 麻痹戒指+2 1
+GAMEGOLD + 200
+CHANGEEXP + 200000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了麻痹戒指+2装备，获得了大量元宝和经验！
+GOTO @迷失特戒回收6
+break
+#if
+checkitem 复活戒指+2 1
+#ACT
+take 复活戒指+2 1
+GAMEGOLD + 200
+CHANGEEXP + 200000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了复活戒指+2装备，获得了大量元宝和经验！
+GOTO @迷失特戒回收6
+break
+#if
+checkitem 护身戒指+2 1
+#ACT
+take 护身戒指+2 1
+GAMEGOLD + 200
+CHANGEEXP + 200000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了护身戒指+2装备，获得了大量元宝和经验！
+GOTO @迷失特戒回收6
+break
+}
+[@清风特戒回收6]
+{
+#if
+checkitem 麻痹戒指+1 1
+#ACT
+take 麻痹戒指+1 1
+GAMEGOLD + 100
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了麻痹戒指+1装备，获得了大量元宝和经验！
+GOTO @清风特戒回收6
+break
+#if
+checkitem 复活戒指+1 1
+#ACT
+take 复活戒指+1 1
+GAMEGOLD + 100
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了复活戒指+1装备，获得了大量元宝和经验！
+GOTO @清风特戒回收6
+break
+#if
+checkitem 护身戒指+1 1
+#ACT
+take 护身戒指+1 1
+GAMEGOLD + 100
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了护身戒指+1装备，获得了大量元宝和经验！
+GOTO @清风特戒回收6
+break
+}

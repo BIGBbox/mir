@@ -1,0 +1,800 @@
+(@storage @getback @@InPutString)
+[@main]
+{    ◆<$SERVERNAME>◆/AUTOCOLOR=209,253,254,252,215,95,252,247}      <您当前等级:/AUTOCOLOR=70><$LEVEL>级 <元宝/AUTOCOLOR=70>:<$GAMEGOLD>\
+<╔════════════════════════════╗/FCOLOR=249> \
+<║/FCOLOR=249>                                                        <║/FCOLOR=249>\
+<║/FCOLOR=249> <打开我的仓库/@仓库服务>     <装备分解/@装备分解>      <装备血祭/@装备血祭>    <幸运系统/@chun22幸运系统>    <║/FCOLOR=249>\
+<║/FCOLOR=249>                                                        <║/COLOR=249>\
+<║/FCOLOR=249> <免费清洗红名/@清洗红名>     <转职变性/@chun21转职变性>      <兑换印记/@chun22神之印记>    <戒指精炼/@chun22戒指精炼>    <║/FCOLOR=249>\
+<║/FCOLOR=249>                                                        <║/FCOLOR=249>\
+<║/FCOLOR=249> <免费装备特修/@装备特修>     <彩票兑换/@chun22彩票兑换>      <全服喇叭/@chun22全服喇叭>    <快速满血/@chun22快速满血>    <║/FCOLOR=249>\
+<║/FCOLOR=249>                                                        <║/FCOLOR=249>\
+<╚════════════════════════════╝/FCOLOR=249> \
+
+
+[@装备分解]
+<装备分解后可以获得大量元宝/FCOLOR=70>\
+<╔═/FCOLOR=253><分解神饰/FCOLOR=250><═════════════════════════════╗/FCOLOR=253>\
+<║/FCOLOR=253><分解---/FCOLOR=249><血·红魔盔[圣]/@红魔盔圣> <血·红魔链[圣]/@红魔链圣> <血·红魔镯[圣]/@红魔镯圣>  <血·红魔戒[圣]/@红魔戒圣>< ║/FCOLOR=253>\
+<║/FCOLOR=253><分解---/FCOLOR=249><血·红魔盔[魔]/@红魔盔魔> <血·红魔链[魔]/@红魔链魔> <血·红魔镯[魔]/@红魔镯魔>  <血·红魔戒[魔]/@红魔戒魔>< ║/FCOLOR=253>\
+<║/FCOLOR=253><分解---/FCOLOR=249><血·红魔盔[尊]/@红魔盔尊> <血·红魔链[尊]/@红魔链尊> <血·红魔镯[尊]/@红魔镯尊>  <血·红魔戒[尊]/@红魔戒尊>< ║/FCOLOR=253>\
+<║/FCOLOR=253><分解---/FCOLOR=249><血·红魔勋[圣]/@红魔勋圣> <血·红魔勋[魔]/@红魔勋魔> <血·红魔勋[尊]/@红魔勋尊>  <血·红魔带[圣]/@红魔带圣>< ║/FCOLOR=253>\
+<║/FCOLOR=253><分解---/FCOLOR=249><血·红魔带[魔]/@红魔带魔> <血·红魔带[尊]/@红魔带尊> <血·红魔靴[圣]/@红魔靴圣>  <血·红魔靴[魔]/@红魔靴魔>< ║/FCOLOR=253>\
+<║/FCOLOR=253><分解---/FCOLOR=249><血·红魔靴[尊]/@红魔靴尊>                                               <║/FCOLOR=253>\
+<╚═/FCOLOR=253><分解神饰/FCOLOR=250><═════════════════════════════╝/FCOLOR=253>\
+\                                 <点击进入下一页/@下一页>
+
+[@下一页]
+<╔═/FCOLOR=241><分解神器/FCOLOR=70><═══════════════════════╗/FCOLOR=241>\
+<║                                                        ║/FCOLOR=241>\
+<║/FCOLOR=241><分解---/FCOLOR=249> <血祭·天怒/@天怒>   <分解---/FCOLOR=249> <血祭·天哭铠/@天哭铠>  <血祭·天哭袍/@天哭袍> <║/FCOLOR=241>\
+<║                                                        ║/FCOLOR=241>\
+<║/FCOLOR=241><分解---/FCOLOR=249> <血祭·天劫/@天劫>   <分解---/FCOLOR=249> <血祭·天残铠/@天残铠>  <血祭·天残袍/@天残袍> <║/FCOLOR=241>\
+<║                                                        ║/FCOLOR=241>\
+<║/FCOLOR=241><分解---/FCOLOR=249> <血祭·天炉/@天炉>   <分解---/FCOLOR=249> <血祭·天裂铠/@天裂铠>  <血祭·天裂袍/@天裂袍> <║/FCOLOR=241>\
+<║                                                        ║/FCOLOR=241>\
+<╚════════════════════════════╝/FCOLOR=241>\
+\             <点击返回上一页/@装备分解>         <点击进入下一页/@下一页1>
+
+[@下一页1]
+<╔═/FCOLOR=249><分解传承/FCOLOR=56><═══════════════════════╗/FCOLOR=249>\
+<║                                                        ║/FCOLOR=249>\
+<║分解---/FCOLOR=249>  <血·裂天[圣]/@裂天>     <血·分海[魔]/@分海>     <血·开山[尊]/@开山> <║/FCOLOR=249>\
+<║分解---/FCOLOR=249>  <血·裂焰[圣]/@裂焰>     <血·燃烧[魔]/@燃烧>     <血·灼炎[尊]/@灼炎> <║/FCOLOR=249>\
+<║分解---/FCOLOR=249>  <血·杀佛[链]/@杀佛>     <血·灭神[镯]/@灭神>     <血·诛天[镯]/@诛天> <║/FCOLOR=249>\
+<║分解---/FCOLOR=249>  <血·龙光[刃]/@龙光>     <血·苍龙[铠]/@龙铠>     <血·苍龙[袍]/@龙袍> <║/FCOLOR=249>\
+<║分解---/FCOLOR=249>  <血·堕世[刃]/@堕世>     <血·浩劫[铠]/@血铠>     <血·浩劫[袍]/@血袍> <║/FCOLOR=249>\
+<╚════════════════════════════╝/FCOLOR=249>\
+\            <点击返回上一页/@下一页>       <点击进入首页/@装备分解>
+
+
+
+[@装备血祭]
+<勇士们,来吧!经过我的祭祀你的装备将会有质的飞跃/FCOLOR=70>\
+<╔═/FCOLOR=253><血祭神饰/FCOLOR=250><═════════════════════════╗/FCOLOR=253>\
+<║/FCOLOR=253><血·红魔盔[圣]/@红魔盔圣1> <血·红魔链[圣]/@红魔链圣1> <血·红魔镯[圣]/@红魔镯圣1> <血·红魔戒[圣]/@红魔戒圣1>< ║/FCOLOR=253>\
+<║/FCOLOR=253><血·红魔盔[魔]/@红魔盔魔1> <血·红魔链[魔]/@红魔链魔1> <血·红魔镯[魔]/@红魔镯魔1> <血·红魔戒[魔]/@红魔戒魔1>< ║/FCOLOR=253>\
+<║/FCOLOR=253><血·红魔盔[尊]/@红魔盔尊1> <血·红魔链[尊]/@红魔链尊1> <血·红魔镯[尊]/@红魔镯尊1> <血·红魔戒[尊]/@红魔戒尊1>< ║/FCOLOR=253>\
+<║/FCOLOR=253><血·红魔勋[圣]/@红魔勋圣1> <血·红魔勋[魔]/@红魔勋魔1> <血·红魔勋[尊]/@红魔勋尊1> <血·红魔带[圣]/@红魔带圣1>< ║/FCOLOR=253>\
+<║/FCOLOR=253><血·红魔带[魔]/@红魔带魔1> <血·红魔带[尊]/@红魔带尊1> <血·红魔靴[圣]/@红魔靴圣1> <血·红魔靴[魔]/@红魔靴魔1>< ║/FCOLOR=253>\
+<║/FCOLOR=253><血·红魔靴[尊]/@红魔靴尊1>         <恶魔令牌和血龙魄珠:各大地图boss都爆/FCOLOR=250>  <║/FCOLOR=253>\
+<╚══════════════════════════════╝/FCOLOR=253>\
+\                                  <点击进入下一页/@下一页5>
+
+[@下一页5]
+<╔═/FCOLOR=241><血祭神器/FCOLOR=70><═══════════════════════╗/FCOLOR=241>\
+<║/FCOLOR=241><天怒---/FCOLOR=249> <血祭·天怒/@天怒1>   <天怒---/FCOLOR=249> <血祭·天哭铠/@天哭铠1>  <血祭·天哭袍/@天哭袍1> <║/FCOLOR=241>\
+<║                                                        ║/FCOLOR=241>\
+<║/FCOLOR=241><天劫---/FCOLOR=249> <血祭·天劫/@天劫1>   <天劫---/FCOLOR=249> <血祭·天残铠/@天残铠1>  <血祭·天残袍/@天残袍1> <║/FCOLOR=241>\
+<║                                                        ║/FCOLOR=241>\
+<║/FCOLOR=241><天炉---/FCOLOR=249> <血祭·天炉/@天炉1>   <天裂---/FCOLOR=249> <血祭·天裂铠/@天裂铠1>  <血祭·天裂袍/@天裂袍1> <║/FCOLOR=241>\
+<║                                                        ║/FCOLOR=241>\
+<║/FCOLOR=241>  <血龙魄珠:各大地图boss都爆/FCOLOR=250>  <恶魔令牌:各大地图boss都爆/FCOLOR=250>  <║/FCOLOR=241>\
+<╚════════════════════════════╝/FCOLOR=241>\
+\             <点击返回上一页/@main>         <点击进入下一页/@下一页6>
+
+[@下一页6]
+<╔═/FCOLOR=249><血祭传承/FCOLOR=56><═══════════════════════╗/FCOLOR=249>\
+<║/FCOLOR=249><血·裂天[圣]/@裂天1>       <血·分海[魔]/@分海1>       <血·开山[尊]/@开山1>      <║/FCOLOR=249>\
+<║/FCOLOR=249><血·裂焰[圣]/@裂焰1>       <血·燃烧[魔]/@燃烧1>       <血·灼炎[尊]/@灼炎1>      <║/FCOLOR=249>\
+<║/FCOLOR=249><血·杀佛[链]/@杀佛1>       <血·灭神[镯]/@灭神1>       <血·诛天[镯]/@诛天1>      <║/FCOLOR=249>\
+<║/FCOLOR=249><血·龙光[刃]/@龙光1>       <血·苍龙[铠]/@龙铠1>       <血·苍龙[袍]/@龙袍1>      <║/FCOLOR=249>\
+<║/FCOLOR=249><血·堕世[刃]/@堕世1>       <血·浩劫[铠]/@血铠1>       <血·浩劫[袍]/@血袍1>      <║/FCOLOR=249>\
+<║/FCOLOR=249>  <血龙魄珠:各大地图boss都爆/FCOLOR=250>  <恶魔令牌:各大地图boss都爆/FCOLOR=250>  <║/FCOLOR=249>\
+<╚════════════════════════════╝/FCOLOR=249>\
+\          <点击返回上一页/@下一页5>       <点击进入首页/@main>
+
+
+[@chun22冰城圣物]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\ \
+
+<【菩提】具有防麻痹功效，攻魔道30-30！！[为主印位置]/FCOLOR=250>\  \
+
+<菩提合成/@菩提合成><10个菩提(碎片)+888W元宝> <舍利合成/@舍利合成><10个舍利(碎片)+888W元宝>\ \
+
+<【舍利】具有1.3倍攻击伤害，防御魔御40-40！！[为辅印位置]/FCOLOR=253> \ \
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\
+
+[@舍利合成]
+#IF
+CHECKITEM 舍利(碎片) 10
+CHECKGAMEGOLD > 8879999
+#ACT
+GAMEGOLD - 8880000
+TAKE 舍利(碎片) 10
+GIVE 舍利 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@菩提合成]
+#IF
+CHECKITEM 菩提(碎片) 10
+CHECKGAMEGOLD > 8879999
+#ACT
+GAMEGOLD - 8880000
+TAKE 菩提(碎片) 10
+GIVE 菩提 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@清洗红名]
+#IF
+#ACT
+CHANGEPKPOINT = 0
+SENDMSG 0 玩家 <$USERNAME> 使用免费服务清洗了红名。
+break
+
+[@装备特修]
+#IF
+#ACT
+ACTREPAIRALL
+#ACT
+MESSAGEBOX 你的装备修好了
+
+[@chun22快速满血]
+\
+<你可以选择瞬间加满血和蓝不过需要500元宝的费用哦./FCOLOR=249> \
+<你目前享受的服务可是>{<$SERVERNAME>/FCOLOR=241}<独家首创的服务哦！/FCOLOR=249> \
+<也可以选择使用买药加.怎么加血随便你.自己选吧/FCOLOR=249> \ \
+
+<为自己瞬间加满/@login1>      <价格500元宝一次/FCOLOR=250>  \  \
+
+<为自己瞬间加满/@login1>      <价格500元宝一次/FCOLOR=250> \
+
+
+[@chun22全服喇叭]
+此信息显示在屏幕正中间，从右向左飘出,全服都能看见！高端大气上档次!\
+为了防止刷屏，每次喊话需要20万元宝!\
+格式<①/FCOLOR=249>：\
+<显示名字/FCOLOR=250>+说话内容        【<确定使用/@@InPutString88>】\ \
+
+格式<②/FCOLOR=249>：\
+<隐藏名字/FCOLOR=250>+说话内容        【<确定使用/@@InPutString89>】\ \
+
+
+【<返回/@main>】【<关闭/@eXIT>】
+
+
+[@chun22彩票兑换]
+#IF
+#ACT
+MESSAGEBOX 暂停使用！
+
+
+[@chun22戒指精炼]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\ \
+
+<元素属性随机增加,成功率为70%,失败材料扣除元宝不返还,每件装备最高为6%/FCOLOR=250>\  \
+
+<为左戒指增加元素/@左戒指>{: <$RING_L>/FCOLOR=253}   <为右戒指增加元素/@右戒指>{: <$RING_R>/FCOLOR=253}\ \
+
+<本服只能增加戒指元素,不能转移,每次消耗2W元宝和灵魂晶石!/FCOLOR=253> \ \
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\
+
+
+[@chun22神之印记]
+{　    ◆<$SERVERNAME>◆/AUTOCOLOR=209,253,254,252,215,95,252,247}\
+<━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\
+<【攻印】和【防印】自上古至强者的意念汇聚而成/FCOLOR=250> \
+<可以随机被赋予各种强大属性，最高为五星/FCOLOR=249> \
+<来吧，无畏的勇士，让我带你装神带你飞！/FCOLOR=250>  \
+<兑换提示：等级越高，兑换的【攻印】和【防印】就越好！/FCOLOR=251> \
+<兑换条件:/FCOLOR=253><血龙魄珠1个，洗髓丹1个，10000元宝！/FCOLOR=250> \
+<━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\
+<【兑换印记】/@兑换印记> \
+[@兑换印记]
+#if
+CHECKLEVELEX > 119
+CHECKITEM 血龙魄珠 1
+CHECKITEM 洗髓丹 1
+CHECKGAMEGOLD > 9999
+#ACT
+GAMEGOLD - 10000
+TAKE 血龙魄珠 1
+TAKE 洗髓丹 1
+GetRandomText ..\QuestDiary\游戏功能\兑换印记A.txt S26
+GIVE <$STR(S26)> 1
+BREAK
+
+#if
+CHECKLEVELEX < 120
+CHECKLEVELEX > 79
+CHECKITEM 血龙魄珠 1
+CHECKITEM 洗髓丹 1
+CHECKGAMEGOLD > 9999
+#ACT
+GAMEGOLD - 10000
+TAKE 血龙魄珠 1
+TAKE 洗髓丹 1
+GetRandomText ..\QuestDiary\游戏功能\兑换印记B.txt S26
+GIVE <$STR(S26)> 1
+BREAK
+
+#if
+CHECKLEVELEX < 80
+CHECKITEM 血龙魄珠 1
+CHECKITEM 洗髓丹 1
+CHECKGAMEGOLD > 9999
+#ACT
+GAMEGOLD - 10000
+TAKE 血龙魄珠 1
+TAKE 洗髓丹 1
+GetRandomText ..\QuestDiary\游戏功能\兑换印记C.txt S26
+GIVE <$STR(S26)> 1
+#ELSEACT
+messagebox [错误提示]：你兑换材料不足！
+break
+
+[@chun21转职变性]
+{　    ◆<$SERVERNAME>◆/AUTOCOLOR=209,253,254,252,215,95,252,247}            <转职变性会员减半/FCOLOR=254>\
+<━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\
+<变成帅哥/@toman1>                        <变成美女/@towoman1>  \
+<非会员2万.会员1万元宝/FCOLOR=168> \ \
+
+<转职战士/@战士1>              <转职法师/@法师1>             <转职道士/@道士1>  \
+<非会员15万.会员10万元宝/FCOLOR=253>\
+<---------------------------------------------------------->\
+
+<返回上一页/@main>             <点我关闭/@exit> \
+[@道士1]
+#if
+check [60] 1
+checkjob taoist
+#Act
+messagebox [错误提示]：你已经是【道士】职业。
+SENDMSG 7 [错误提示]：你已经是 道士 职业。
+break
+#If
+CHECKGAMEGOLD > 99999
+#Act
+GAMEGOLD - 100000
+ChangeJob taoist
+ADDSKILL 治愈术 3
+ADDSKILL 灵魂火符 3
+ADDSKILL 精神力战法 3
+ADDSKILL 隐身术 3
+ADDSKILL 施毒术 3
+ADDSKILL 幽灵盾 3
+ADDSKILL 神圣战甲术 3
+ADDSKILL 群体治愈术 3
+ADDSKILL 心灵启示 3
+ADDSKILL 召唤神兽 3
+DELNOJOBSKILL
+messagebox 恭喜您：你已经转成『道士』。\防止数据出错，你已被系统自动踢下线。
+SENDMSG 7 恭喜您：你已经转成『道士』。
+SENDMSG 0 恭喜：<$USERNAME> 转职成为了本服的一名 道士。
+kick
+#ELSEACT
+messagebox [错误提示]：需要100000元宝。
+SENDMSG 7 [错误提示]：需要100000元宝。
+break
+
+#If
+checkjob taoist
+#Act
+messagebox [错误提示]：你已经是【道士】职业。
+SENDMSG 7 [错误提示]：你已经是 道士 职业。
+break
+#If
+CHECKGAMEGOLD > 149999
+#Act
+GAMEGOLD - 150000
+ChangeJob taoist
+ADDSKILL 治愈术 3
+ADDSKILL 灵魂火符 3
+ADDSKILL 精神力战法 3
+ADDSKILL 隐身术 3
+ADDSKILL 施毒术 3
+ADDSKILL 幽灵盾 3
+ADDSKILL 神圣战甲术 3
+ADDSKILL 群体治愈术 3
+ADDSKILL 心灵启示 3
+ADDSKILL 召唤神兽 3
+DELNOJOBSKILL
+messagebox 恭喜您：你已经转成『道士』。\防止数据出错，你已被系统自动踢下线。
+SENDMSG 7 恭喜您：你已经转成『道士』。
+SENDMSG 0 恭喜：<$USERNAME> 转职成为了本服的一名 道士。
+kick
+#ELSEACT
+messagebox [错误提示]：需要150000元宝。
+SENDMSG 7 [错误提示]：需要150000元宝。
+break
+
+[@法师1]
+#If
+check [60] 1
+checkjob wizard
+#Act
+messagebox [错误提示]：你已经是【魔法师】职业。
+SENDMSG 7 [错误提示]：你已经是 魔法师 职业。
+break
+#If
+CHECKGAMEGOLD > 99999
+#Act
+GAMEGOLD - 100000
+ChangeJob wizard
+ADDSKILL 雷电术 3
+ADDSKILL 火墙 3
+ADDSKILL 魔法盾 3
+ADDSKILL 冰咆哮 3
+ADDSKILL 抗拒火环 3
+ADDSKILL 疾光电影 3
+ADDSKILL 诱惑之光 3
+ADDSKILL 地狱雷光 3
+ADDSKILL 诱惑之光 3
+ADDSKILL 瞬息移动 3
+ADDSKILL 圣言术 3
+DELNOJOBSKILL
+messagebox 恭喜您：你已经转成『魔法师』。\防止数据出错，你已被系统自动踢下线。
+SENDMSG 7 恭喜您：你已经转成『魔法师』。
+SENDMSG 0 恭喜：<$USERNAME> 转职成为了本服的一名 魔法师。
+kick
+#ELSEACT
+messagebox [错误提示]：需要100000元宝。
+SENDMSG 7 [错误提示]：需要100000元宝。
+break
+
+#If
+checkjob wizard
+#Act
+messagebox [错误提示]：你已经是【魔法师】职业。
+SENDMSG 7 [错误提示]：你已经是 魔法师 职业。
+break
+#If
+CHECKGAMEGOLD > 149999
+#Act
+GAMEGOLD - 150000
+ChangeJob wizard
+ADDSKILL 雷电术 3
+ADDSKILL 火墙 3
+ADDSKILL 魔法盾 3
+ADDSKILL 冰咆哮 3
+ADDSKILL 抗拒火环 3
+ADDSKILL 疾光电影 3
+ADDSKILL 诱惑之光 3
+ADDSKILL 地狱雷光 3
+ADDSKILL 诱惑之光 3
+ADDSKILL 瞬息移动 3
+ADDSKILL 圣言术 3
+DELNOJOBSKILL
+messagebox 恭喜您：你已经转成『魔法师』。\防止数据出错，你已被系统自动踢下线。
+SENDMSG 7 恭喜您：你已经转成『魔法师』。
+SENDMSG 0 恭喜：<$USERNAME> 转职成为了本服的一名 魔法师。
+kick
+#ELSEACT
+messagebox [错误提示]：需要150000元宝。
+SENDMSG 7 [错误提示]：需要150000元宝。
+break
+
+[@战士1]
+#If
+check [60] 1
+checkjob warrior
+#Act
+messagebox [错误提示]：你已经是【战士】职业。
+SENDMSG 7 [错误提示]：你已经是 战士 职业。
+break
+#If
+CHECKGAMEGOLD > 99999
+#Act
+GAMEGOLD - 100000
+ChangeJob Warrior
+ADDSKILL 基本剑术 3
+ADDSKILL 攻杀剑术 3
+ADDSKILL 刺杀剑术 3
+ADDSKILL 半月弯刀 3
+ADDSKILL 野蛮冲撞 3
+ADDSKILL 烈火剑法 3
+DELNOJOBSKILL
+messagebox 恭喜您：你已经转成『战士』。\防止数据出错，你已被系统自动踢下线。
+SENDMSG 7 恭喜您：你已经转成『战士』。
+SENDMSG 0 恭喜：<$USERNAME> 转职成为了本服的一名 战士。
+kick
+#ELSEACT
+messagebox [错误提示]：需要100000元宝。
+SENDMSG 7 [错误提示]：需要100000元宝。
+break
+
+#If
+checkjob warrior
+#Act
+messagebox [错误提示]：你已经是【战士】职业。
+SENDMSG 7 [错误提示]：你已经是 战士 职业。
+break
+#If
+CHECKGAMEGOLD > 149999
+#Act
+GAMEGOLD - 150000
+ChangeJob Warrior
+ADDSKILL 基本剑术 3
+ADDSKILL 攻杀剑术 3
+ADDSKILL 刺杀剑术 3
+ADDSKILL 半月弯刀 3
+ADDSKILL 野蛮冲撞 3
+ADDSKILL 烈火剑法 3
+DELNOJOBSKILL
+messagebox 恭喜您：你已经转成『战士』。\防止数据出错，你已被系统自动踢下线。
+SENDMSG 7 恭喜您：你已经转成『战士』。
+SENDMSG 0 恭喜：<$USERNAME> 转职成为了本服的一名 战士。
+kick
+#ELSEACT
+messagebox [错误提示]：需要150000元宝。
+SENDMSG 7 [错误提示]：需要150000元宝。
+break
+
+[@toman1]
+#IF
+check [60] 1
+CHECKUSEITEM 0
+#ACT
+messagebox [错误提示]：请把你的『衣服』脱掉。
+SENDMSG 7 [错误提示]：请把你的『衣服』脱掉。
+break
+#IF
+CHECKGAMEGOLD > 9999
+#ACT
+GAMEGOLD - 10000
+CHANGEGENDER 0
+SENDMSG 7 恭喜您：手术非常的成功，您已经变成一位男人了。
+SENDMSG 0 恭喜：<$USERNAME> 变性成为了一位猛男。
+messagebox 恭喜您：手术非常的成功，您已经变成一位男人了。
+goto @性别转换11
+break
+#ELSEACT
+messagebox [错误提示]：变性需要花费10000元宝。
+SENDMSG 7 [错误提示]：变性需要花费10000元宝。
+break
+
+#IF
+CHECKUSEITEM 0
+#ACT
+messagebox [错误提示]：请把你的『衣服』脱掉。
+SENDMSG 7 [错误提示]：请把你的『衣服』脱掉。
+break
+#IF
+CHECKGAMEGOLD > 19999
+#ACT
+GAMEGOLD - 20000
+CHANGEGENDER 0
+SENDMSG 7 恭喜您：手术非常的成功，您已经变成一位男人了。
+SENDMSG 0 恭喜：<$USERNAME> 变性成为了一位猛男。
+messagebox 恭喜您：手术非常的成功，您已经变成一位男人了。
+goto @性别转换11
+break
+#ELSEACT
+messagebox [错误提示]：变性需要花费20000元宝。
+SENDMSG 7 [错误提示]：变性需要花费20000元宝。
+break
+
+[@towoman1]
+#IF
+check [60] 1
+CHECKUSEITEM 0
+#ACT
+messagebox [错误提示]：请把你的『衣服』脱掉。
+SENDMSG 7 [错误提示]：请把你的『衣服』脱掉。
+break
+#IF
+CHECKGAMEGOLD > 9999
+#ACT
+GAMEGOLD - 10000
+CHANGEGENDER 1
+SENDMSG 7 恭喜您：手术非常的成功，您已经变成一位女人了。
+SENDMSG 0 恭喜：<$USERNAME> 变性成为了一位美女。
+messagebox 恭喜您：手术非常的成功，您已经变成一位女人了。
+goto @性别转换11
+break
+#ELSEACT
+messagebox [错误提示]：变性需要花费10000元宝。
+SENDMSG 7 [错误提示]：变性需要花费10000元宝。
+break
+
+#IF
+CHECKUSEITEM 0
+#ACT
+messagebox [错误提示]：请把你的『衣服』脱掉。
+SENDMSG 7 [错误提示]：请把你的『衣服』脱掉。
+break
+#IF
+CHECKGAMEGOLD > 19999
+#ACT
+GAMEGOLD - 20000
+CHANGEGENDER 1
+SENDMSG 7 恭喜您：手术非常的成功，您已经变成一位女人了。
+SENDMSG 0 恭喜：<$USERNAME> 变性成为了一位美女。
+messagebox 恭喜您：手术非常的成功，您已经变成一位女人了。
+goto @性别转换11
+break
+#ELSEACT
+messagebox [错误提示]：变性需要花费20000元宝。
+SENDMSG 7 [错误提示]：变性需要花费20000元宝。
+break
+
+[@chun22幸运系统]
+¤╭⌒╮╭⌒╮               <欢迎光临/FCOLOR=254>\
+< ╱◥██◣/FCOLOR=249>╭⌒╮            <$SERVERNAME>\
+<︱田︱田田|╰-------------/FCOLOR=150> \
+<╬╬╬╬╬╬╬╬╬╬╬╬╬/FCOLOR=64>    　 < 幸运最多加三>\
+<升级幸运+1/FCOLOR=253>      <需要5000元宝   成功率100%>             　\
+<升级幸运+2/FCOLOR=254>      <需要10000元宝   成功率100%>             　\
+<升级幸运+3/FCOLOR=251><(随机获得1-10的暴击)/FCOLOR=253>    <需要50000元宝   成功率 100%>      \ \
+
+<确定升级/@幸运升级> 　     <清除暴击/@清除暴击><(幸运返回+2，暴击清除)/FCOLOR=254> \
+[@清除暴击]
+#IF
+CHECKITEMADDVALUE 3 1 = 3
+#ACT
+SetNewItemValue 3 0 = 0
+GMEXECUTE Supermake 3 1 2
+SENDMSG 7 属性被清理!
+messagebox 属性被清理!
+break
+
+[@幸运升级]
+#IF
+CHECKITEMADDVALUE 3 1 = 2
+CHECKGAMEGOLD > 49999
+#ACT
+GAMEGOLD - 50000
+UPGRADEITEMEX 3 1 0 1 0
+GetRandomText ..\QuestDiary\游戏功能\项链暴击增加.txt S25
+SetNewItemValue 3 0 = <$STR(S25)>
+SendCenterMsg 253 4 恭喜〖<$USERNAME>〗将项链提升到3点幸运值并免费附加暴击增加<$STR(S25)>%！ 1 4
+SendCenterMsg 253 4 恭喜〖<$USERNAME>〗将项链提升到3点幸运值并免费附加暴击增加<$STR(S25)>%！ 1 4
+GuildNoticeMsg 250 241 恭喜〖<$USERNAME>〗将项链提升到3点幸运值并免费附加暴击增加<$STR(S25)>%！
+GuildNoticeMsg 250 241 恭喜〖<$USERNAME>〗将项链提升到3点幸运值并免费附加暴击增加<$STR(S25)>%！
+messagebox 恭喜：您的项链幸运值已经达到峰值。\恭喜：你的项链获得暴击增加<$STR(S25)>%。
+SENDMSG 7 您的项链幸运属性已经增加!
+SENDMSG 7 您的项链附加暴击增加<$STR(S25)>%!
+BREAK
+
+#IF
+CHECKITEMADDVALUE 3 1 = 1
+CHECKGAMEGOLD > 9999
+#ACT
+GAMEGOLD - 10000
+UPGRADEITEMEX 3 1 0 1 0
+SENDMSG 7 恭喜：您的项链幸运值增加一点。
+BREAK
+
+#IF
+CHECKITEMADDVALUE 3 1 = 0
+CHECKGAMEGOLD > 4999
+#ACT
+GAMEGOLD - 5000
+UPGRADEITEMEX 3 1 0 1 0
+SENDMSG 7 恭喜：您的项链幸运值增加一点。
+#elseact
+messagebox 升级失败，你的元宝不足或已经幸运加3了！
+BREAK
+
+[@仓库服务]
+<移动仓库为您提供以下服务功能:/FCOLOR=254>\ \
+<≮/FCOLOR=155><存放物品/@storage><≯/FCOLOR=155>\
+<≮/FCOLOR=155><取回物品/@getback><≯/FCOLOR=155>\
+<系统仓库说明:> <一仓库系统自动赠送48个格子//FCOLOR=254>\
+<二仓库五万元宝赠送48个格子/FCOLOR=132> \
+<三仓库十万元宝赠送48个格子/FCOLOR=253> \
+
+[@login1]
+#IF
+INSAFEZONE
+CHECKGAMEGOLD > 499
+#act
+GAMEGOLD - 500
+HUMANHP + 65535
+HUMANMP + 65535
+#ELSEACT
+MESSAGEBOX 元宝不足！不是在安全区!!
+BREAK
+
+[@InPutString88]
+#IF
+CHECKGAMEGOLD > 199999
+#act
+GAMEGOLD - 200000
+SENDMOVEMSG 0 253 255 350 1 玩家[<$USERNAME>]说：<$STR(S88)>
+#ELSEACT
+MESSAGEBOX 元宝不足！
+BREAK
+
+[@InPutString89]
+#IF
+CHECKGAMEGOLD > 199999
+#act
+GAMEGOLD - 200000
+SENDMOVEMSG 0 253 255 350 1 玩家说：<$STR(S89)>
+#ELSEACT
+MESSAGEBOX 元宝不足！
+BREAK
+
+
+[@左戒指]
+#IF
+CHECKITEM 灵魂晶石 1
+CHECKGAMEGOLD > 19999
+#ACT
+goto @升级左戒指
+#elseact
+MESSAGEBOX 您没有20000个元宝或灵魂晶石,请准备好了再来!
+
+[@升级左戒指]
+
+#IF
+CheckNewItemValue 8 6 < 6
+RANDOM 7
+#act
+TAKE 灵魂晶石 1
+GAMEGOLD - 20000
+messagebox 你的左戒指精炼失败~!!!!
+goto @chun22戒指精炼
+break
+
+#IF
+CheckNewItemValue 7 6 < 6
+RANDOM 7
+#act
+GAMEGOLD - 20000
+TAKE 灵魂晶石 1
+SetNewItemValue 7 6 + 1
+messagebox 你的左戒指已经成功加了【1%增加目标暴率】
+goto @chun22戒指精炼
+break
+#IF
+CheckNewItemValue 7 8 < 6
+RANDOM 7
+#act
+GAMEGOLD - 20000
+TAKE 灵魂晶石 1
+SetNewItemValue 7 8 + 1
+messagebox 你的左戒指已经成功加了【1%人物魔力增加】
+goto @chun22戒指精炼
+break
+#IF
+CheckNewItemValue 7 5 < 6
+RANDOM 7
+#act
+GAMEGOLD - 20000
+TAKE 灵魂晶石 1
+SetNewItemValue 7 5 + 1
+messagebox 你的左戒指已经成功加了【1%所有伤害反弹】
+goto @chun22戒指精炼
+break
+#IF
+CheckNewItemValue 7 7 < 6
+RANDOM 6
+#act
+GAMEGOLD - 20000
+TAKE 灵魂晶石 1
+SetNewItemValue 7 7 + 1
+messagebox 你的左戒指已经成功加了【1%人物体力增加】
+goto @chun22戒指精炼
+break
+#IF
+CheckNewItemValue 7 3 < 6
+RANDOM 5
+#act
+GAMEGOLD - 20000
+TAKE 灵魂晶石 1
+SetNewItemValue 7 3 + 1
+messagebox 你的左戒指已经成功加了【1%魔法伤害减少】
+goto @chun22戒指精炼
+break
+#IF
+CheckNewItemValue 7 2 < 6
+RANDOM 3
+#act
+GAMEGOLD - 20000
+TAKE 灵魂晶石 1
+SetNewItemValue 7 2 + 1
+messagebox 你的左戒指已经成功加了【1%物理伤害减少】
+goto @chun22戒指精炼
+break
+#IF
+CheckNewItemValue 7 4 < 6
+RANDOM 1
+#act
+GAMEGOLD - 20000
+TAKE 灵魂晶石 1
+SetNewItemValue 7 4 + 1
+messagebox 你的左戒指已经成功加了【1%忽视目标防御】
+goto @chun22戒指精炼
+break
+
+
+[@右戒指]
+#IF
+CHECKITEM 灵魂晶石 1
+CHECKGAMEGOLD > 19999
+#ACT
+goto @升级右戒指
+#elseact
+MESSAGEBOX 您没有20000个元宝或灵魂晶石,请准备好了再来!
+
+[@升级右戒指]
+#IF
+CheckNewItemValue 8 6 < 6
+RANDOM 7
+#act
+TAKE 灵魂晶石 1
+GAMEGOLD - 20000
+messagebox 你的右戒指精炼失败~!!!!
+goto @chun22戒指精炼
+break
+
+#IF
+CheckNewItemValue 8 6 < 6
+RANDOM 7
+#act
+GAMEGOLD - 20000
+TAKE 灵魂晶石 1
+SetNewItemValue 8 6 + 1
+messagebox 你的右戒指已经成功加了【1%增加目标暴率】
+goto @chun22戒指精炼
+break
+#IF
+CheckNewItemValue 8 8 < 6
+RANDOM 7
+#act
+GAMEGOLD - 20000
+TAKE 灵魂晶石 1
+SetNewItemValue 8 8 + 1
+messagebox 你的右戒指已经成功加了【1%人物魔力增加】
+goto @chun22戒指精炼
+break
+#IF
+CheckNewItemValue 8 5 < 6
+RANDOM 7
+#act
+GAMEGOLD - 20000
+TAKE 灵魂晶石 1
+SetNewItemValue 8 5 + 1
+messagebox 你的右戒指已经成功加了【1%所有伤害反弹】
+goto @chun22戒指精炼
+break
+#IF
+CheckNewItemValue 8 7 < 6
+RANDOM 6
+#act
+GAMEGOLD - 20000
+TAKE 灵魂晶石 1
+SetNewItemValue 8 7 + 1
+messagebox 你的右戒指已经成功加了【1%人物体力增加】
+goto @chun22戒指精炼
+break
+#IF
+CheckNewItemValue 8 3 < 6
+RANDOM 5
+#act
+GAMEGOLD - 20000
+TAKE 灵魂晶石 1
+SetNewItemValue 8 3 + 1
+messagebox 你的右戒指已经成功加了【1%魔法伤害减少】
+goto @chun22戒指精炼
+break
+#IF
+CheckNewItemValue 8 2 < 6
+RANDOM 3
+#act
+GAMEGOLD - 20000
+TAKE 灵魂晶石 1
+SetNewItemValue 8 2 + 1
+messagebox 你的右戒指已经成功加了【1%物理伤害减少】
+goto @chun22戒指精炼
+break
+#IF
+CheckNewItemValue 8 4 < 6
+RANDOM 1
+#act
+GAMEGOLD - 20000
+TAKE 灵魂晶石 1
+SetNewItemValue 8 4 + 1
+messagebox 你的右戒指已经成功加了【1%忽视目标防御】
+goto @chun22戒指精炼
+break

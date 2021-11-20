@@ -1,0 +1,47 @@
+[@main]
+
+#IF
+equal <$CLIENTFLAG> 1
+#SAY
+<$USERNAME>你好，欢迎来到<$SERVERNAME>，很高兴为您服务\
+
+-----------------------注意充值事项------------------------\
+
+①本系统支持移动,联通短信,网银和盛大,骏网,征途,神州行充值卡\
+
+②点卡、网银、手机充值卡,请登录本服【官网】充值\
+
+③请在充值5分钟后在本NPC处领取灵符\
+
+④本服灵符比例:1元=1灵符\
+
+<领取元宝/@HF领取> \
+
+<网银、各类点卡、支付宝等其他方式点击进入/@weburl>\\
+
+<关闭/@exit>\
+#elsesay
+<Img|width=620|height=400|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=18|text=<$USERNAME>你好，欢迎来到<$SERVERNAME>，很高兴为您服务\>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=255|size=18|text=-----------------------注意充值事项------------------------\>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=255|size=18|text=①本系统支持移动,联通短信,网银和盛大,骏网,征途,神州行充值卡\>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=255|size=18|text=②点卡、网银、手机充值卡,请登录本服【官网】充值\>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=255|size=18|text=③请在充值5分钟后在本NPC处领取灵符\>
+<Text|a=0|x=32|y=225|tipsx=10|tipsy=80|color=255|size=18|text=④本服灵符比例:1元=1灵符\>
+<Text|a=0|x=32|y=265|tipsx=10|tipsy=80|color=251|size=18|text=领取元宝|link=@HF领取>
+<Text|a=0|x=32|y=305|tipsx=10|tipsy=80|color=251|size=18|text=网银、各类点卡、支付宝等其他方式点击进入|link=@WEBURL>
+<Text|a=0|x=32|y=345|tipsx=10|tipsy=80|color=251|size=18|text=关闭|link=@EXIT>
+
+
+
+[@HF领取]
+
+#CALL [\HF元宝\hf.txt] @领取元宝
+
+
+[@weburl]
+#IF
+#ACT
+break

@@ -1,0 +1,128 @@
+[@main]
+#IF
+equal <$CLIENTFLAG> 1
+#say
+　   ¤╭⌒╮╭⌒╮                   \
+< ╱◥██◣/FCOLOR=249>╭⌒╮           <欢迎光临/FCOLOR=254>{<$SERVERNAME>/FCOLOR=249}\
+<︱田︱田田|╰-------------/FCOLOR=150>    　   \
+<╬╬╬╬╬╬╬╬╬╬╬╬╬/FCOLOR=64>    　 <圣地起源冰城/FCOLOR=253>\
+\  <╔══════════════════════════╗/FCOLOR=253> \
+\　<║/FCOLOR=241><用心打造经典传奇，让您找回曾经的传奇PK寻宝乐趣！。/FCOLOR=250>　<║/FCOLOR=241>\
+\　<║/FCOLOR=241><本地图非沙巴克成员不可进入，此地图为限时寻宝地图！。/FCOLOR=250><║/FCOLOR=241>\
+\　<║/FCOLOR=241><谢谢你的支持和赞助！！/FCOLOR=243>　　　　　　　　　　　　　　　<║/FCOLOR=241>\
+\　<║/FCOLOR=241> <【2W元宝进入】/@进入1A>  <【4W元宝进入】/@进入2A>　<【沙巴克免费进入】/@沙巴克> <║/FCOLOR=241>\
+\  <╚══════════════════════════╝/FCOLOR=241> \
+
+; <Img|width=510|height=260|rotate=0|scale9l=10|scale9t=10|reset=1|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9r=10>
+; <Layout|x=486.0|y=3.0|width=80|height=80|link=@exit>
+; <Button|x=508.0|y=1.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=13|text=¤╭⌒╮╭⌒╮                   \>
+; <Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=249|size=13|text=╱◥██◣>
+; <Text|a=0|x=153|y=45|tipsx=10|tipsy=80|color=255|size=13|text=╭⌒╮>
+; <Text|a=0|x=305.0|y=25.0|tipsx=10|tipsy=80|color=254|size=13|text=欢迎光临>
+; <Text|a=0|x=428|y=45|tipsx=10|tipsy=80|color=249|size=13|text=<$SERVERNAME>>
+; <Text|a=0|x=32|y=65|tips={╰-------------/FCOLOR=255}|tipsx=10|tipsy=80|color=150|size=13|text=︱田︱田田>
+; <Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=64|size=13|text=╬╬╬╬╬╬╬╬╬╬╬╬╬>
+; <Text|a=0|x=207.0|y=84.0|tipsx=10|tipsy=80|color=253|size=13|text=圣地起源冰城>
+; <Text|a=0|x=65|y=105|tipsx=10|tipsy=80|color=253|size=13|text=╔══════════════════════════╗>
+; <Text|a=0|x=65|y=125|tipsx=10|tipsy=80|color=241|size=13|text=║>
+; <Text|a=0|x=87|y=125|tipsx=10|tipsy=80|color=250|size=13|text=用心打造经典传奇，让您找回曾经的传奇PK寻宝乐趣！。>
+; <Text|a=0|x=416.0|y=124.0|tipsx=10|tipsy=80|color=241|size=13|text=║>
+; <Text|a=0|x=65|y=145|tipsx=10|tipsy=80|color=241|size=13|text=║>
+; <Text|a=0|x=87|y=145|tipsx=10|tipsy=80|color=250|size=13|text=本地图非沙巴克成员不可进入，此地图为限时寻宝地图！。>
+; <Text|a=0|x=416.0|y=145.0|tipsx=10|tipsy=80|color=241|size=13|text=║>
+; <Text|a=0|x=65|y=165|tipsx=10|tipsy=80|color=241|size=13|text=║>
+; <Text|a=0|x=87|y=165|tipsx=10|tipsy=80|color=243|size=13|text=谢谢你的支持和赞助！！>
+; <Text|a=0|x=416.0|y=166.0|tipsx=10|tipsy=80|color=241|size=13|text=║>
+; <Text|a=0|x=65|y=185|tipsx=10|tipsy=80|color=241|size=13|text=║>
+; <Text|a=0|x=87|y=185|tipsx=10|tipsy=80|color=251|size=13|text=【2W元宝进入】|link=@进入1A>
+; <Text|a=0|x=195.0|y=185.0|tipsx=10|tipsy=80|color=251|size=13|text=【4W元宝进入】|link=@进入2A>
+; <Text|a=0|x=300.0|y=185.0|tipsx=10|tipsy=80|color=251|size=13|text=【沙巴克免费进入】|link=@沙巴克>
+; <Text|a=0|x=416.0|y=185.0|tipsx=10|tipsy=80|color=241|size=13|text=║>
+; <Text|a=0|x=65|y=205|tipsx=10|tipsy=80|color=241|size=13|text=╚══════════════════════════╝>
+#elsesay
+<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=31.0|y=19.0|tipsx=10|tipsy=80|color=255|size=18|text=¤╭⌒╮╭⌒╮                   \>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=249|size=18|text=╱◥██◣>
+<Text|a=0|x=122.0|y=42.0|tipsx=10|tipsy=80|color=255|size=18|text=╭⌒╮>
+<Text|a=0|x=180.0|y=25.0|tipsx=10|tipsy=80|color=254|size=18|text=欢迎光临>
+<Text|a=0|x=257.0|y=26.0|tipsx=10|tipsy=80|color=249|size=18|text=<$SERVERNAME>>
+<Text|a=0|x=23.0|y=65.0|tips={╰-------------/FCOLOR=255}|tipsx=10|tipsy=80|color=150|size=18|text=︱田︱田田>
+<Text|a=0|x=117.0|y=65.0|tipsx=10|tipsy=80|color=64|size=18|text=╬╬╬╬╬╬╬╬╬╬╬╬╬>
+<Text|a=0|x=268.0|y=64.0|tipsx=10|tipsy=80|color=253|size=18|text=圣地起源冰城>
+<Text|a=0|x=65|y=105|tipsx=10|tipsy=80|color=253|size=18|text=╔════════════════════════════════════════════╗>
+<Text|a=0|x=65|y=125|tipsx=10|tipsy=80|color=241|size=18|text=║>
+<Text|a=0|x=87|y=125|tipsx=10|tipsy=80|color=250|size=18|text=用心打造经典传奇，让您找回曾经的传奇PK寻宝乐趣！。>
+<Text|a=0|x=560.0|y=123.0|tipsx=10|tipsy=80|color=241|size=18|text=║>
+<Text|a=0|x=65|y=145|tipsx=10|tipsy=80|color=241|size=18|text=║>
+<Text|a=0|x=87|y=145|tipsx=10|tipsy=80|color=250|size=18|text=本地图非沙巴克成员不可进入，此地图为限时寻宝地图！。>
+<Text|a=0|x=560.0|y=144.0|tipsx=10|tipsy=80|color=241|size=18|text=║>
+<Text|a=0|x=65|y=165|tipsx=10|tipsy=80|color=241|size=18|text=║>
+<Text|a=0|x=87|y=165|tipsx=10|tipsy=80|color=243|size=18|text=谢谢你的支持和赞助！！>
+<Text|a=0|x=560.0|y=164.0|tipsx=10|tipsy=80|color=241|size=18|text=║>
+<Text|a=0|x=65|y=185|tipsx=10|tipsy=80|color=241|size=18|text=║>
+<Text|a=0|ay=1|x=85.0|y=187.0|tipsx=10|tipsy=80|size=18|color=251|text=【2W元宝进入】|link=@进入1A>
+<Text|a=0|ay=1|x=243.0|y=187.0|tipsx=10|tipsy=80|size=18|color=251|text=【4W元宝进入】|link=@进入2A>
+<Text|a=0|ay=1|x=391.0|y=187.0|tipsx=10|tipsy=80|size=18|color=251|text=【沙巴克免费进入】|link=@沙巴克>
+<Text|a=0|x=560.0|y=183.0|tipsx=10|tipsy=80|color=241|size=18|text=║>
+<Text|a=0|x=65|y=205|tipsx=10|tipsy=80|color=241|size=18|text=╚════════════════════════════════════════════╝>
+
+
+[@沙巴克]
+#IF
+ISCASTLEGUILD
+#ACT
+TimeRecall 60
+MapMove xjsd
+BREAK
+#ELSEACT
+MESSAGEBOX 你不是沙巴克成员，不能进入！！
+BREAK
+
+[@进入1]
+#IF
+ISCASTLEGUILD
+#ACT
+GOTO @进入1A
+BREAK
+#ELSEACT
+MESSAGEBOX 你不是沙巴克成员，不能进入！！
+BREAK
+
+[@进入1A]
+#if
+CHECKGAMEGOLD > 19999
+#ACT
+;give 回城卷 1
+GAMEGOLD - 20000
+TimeRecall 60
+MapMove xjsd
+SendCenterMsg 180 251 你还剩余[%d秒]离开传说冰城. 0 3600 @离开
+;SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源冰城〗,寻找高级装备！ 1 3
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源冰城〗,寻找高级装备！ 1 3
+;GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源冰城〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源冰城〗,寻找高级装备！
+break
+#elseact
+SendMsg 7 你的元宝不足！无法进入！
+break
+
+[@进入2A]
+#if
+CHECKGAMEGOLD > 39999
+#ACT
+;give 回城卷 1
+GAMEGOLD - 40000
+TimeRecall 120
+MapMove xjsd
+SendCenterMsg 180 251 你还剩余[%d秒]离开传说冰城. 0 7200 @离开
+;SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源冰城〗,寻找高级装备！ 1 3
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源冰城〗,寻找高级装备！ 1 3
+;GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源冰城〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源冰城〗,寻找高级装备！
+break
+#elseact
+SendMsg 7 你的元宝不足！无法进入！
+break

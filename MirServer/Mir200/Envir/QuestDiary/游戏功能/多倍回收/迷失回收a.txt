@@ -1,0 +1,273 @@
+[@a迷失回收]
+{
+#if
+checkitem 迷失道刃 1
+#ACT
+take 迷失道刃 1
+GAMEGOLD + 720
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失道甲 1
+#ACT
+take 迷失道甲 1
+GAMEGOLD + 720
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失道衣 1
+#ACT
+take 迷失道衣 1
+GAMEGOLD + 720
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失道镯 1
+#ACT
+take 迷失道镯 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失道链 1
+#ACT
+take 迷失道链 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失道盔 1
+#ACT
+take 迷失道盔 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失道勋 1
+#ACT
+take 迷失道勋 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失道靴 1
+#ACT
+take 迷失道靴 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失道带 1
+#ACT
+take 迷失道带 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失道指 1
+#ACT
+take 迷失道指 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失魔刃 1
+#ACT
+take 迷失魔刃 1
+GAMEGOLD + 720
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失魔甲 1
+#ACT
+take 迷失魔甲 1
+GAMEGOLD + 720
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失魔衣 1
+#ACT
+take 迷失魔衣 1
+GAMEGOLD + 720
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失魔镯 1
+#ACT
+take 迷失魔镯 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失魔链 1
+#ACT
+take 迷失魔链 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失魔盔 1
+#ACT
+take 迷失魔盔 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失魔勋 1
+#ACT
+take 迷失魔勋 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失魔靴 1
+#ACT
+take 迷失魔靴 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失魔带 1
+#ACT
+take 迷失魔带 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失魔指 1
+#ACT
+take 迷失魔指 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失战刃 1
+#ACT
+take 迷失战刃 1
+GAMEGOLD + 720
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失战甲 1
+#ACT
+take 迷失战甲 1
+GAMEGOLD + 720
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失战衣 1
+#ACT
+take 迷失战衣 1
+GAMEGOLD + 720
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失战镯 1
+#ACT
+take 迷失战镯 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失战链 1
+#ACT
+take 迷失战链 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失战盔 1
+#ACT
+take 迷失战盔 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失战勋 1
+#ACT
+take 迷失战勋 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失战靴 1
+#ACT
+take 迷失战靴 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失战带 1
+#ACT
+take 迷失战带 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+#if
+checkitem 迷失战指 1
+#ACT
+take 迷失战指 1
+GAMEGOLD + 360
+CHANGEEXP + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @a迷失回收
+break
+}

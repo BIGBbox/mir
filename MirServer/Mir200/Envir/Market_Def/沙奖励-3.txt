@@ -1,0 +1,101 @@
+
+(@@InPutString @@InPutInteger)
+[@main]
+#IF
+equal <$CLIENTFLAG> 1
+#SAY
+<沙城奖励榜：/FCOLOR=250>\
+<攻城状态：/FCOLOR=253><开区第二天合区晚上拿沙。/FCOLOR=146>\
+<所属行会：/FCOLOR=253><[/FCOLOR=7><$OWNERGUILD><]/FCOLOR=7>\
+<城主姓名：/FCOLOR=253><[/FCOLOR=7><$LORD><]/FCOLOR=7>\
+<--------------------------------------------------------/FCOLOR=13> \
+<攻城奖励：/FCOLOR=205><新区攻城奖励2000000元宝/FCOLOR=242> → <领取奖励/@jiangli>\ \
+<攻城奖励：/FCOLOR=205><老区攻城奖励1000000元宝/FCOLOR=242> → <领取奖励/@jiangli>\
+#elsesay
+<Img|width=620|height=240|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=250|size=18|text=沙城奖励榜：>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=253|size=18|text=攻城状态：>
+<Text|a=0|x=142|y=45|tipsx=10|tipsy=80|color=146|size=18|text=开区第二天合区晚上拿沙。>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=253|size=18|text=所属行会：>
+<Text|a=0|x=142|y=65|tipsx=10|tipsy=80|color=7|size=18|text=[>
+<Text|a=0|x=153|y=65|tipsx=10|tipsy=80|color=255|size=18|text=<$OWNERGUILD>>
+<Text|a=0|x=296|y=65|tipsx=10|tipsy=80|color=7|size=18|text=]>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=253|size=18|text=城主姓名：>
+<Text|a=0|x=142|y=85|tipsx=10|tipsy=80|color=7|size=18|text=[>
+<Text|a=0|x=153|y=85|tipsx=10|tipsy=80|color=255|size=18|text=<$LORD>>
+<Text|a=0|x=230|y=85|tipsx=10|tipsy=80|color=7|size=18|text=]>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=13|size=18|text=-------------------------------------------------------->
+<Text|a=0|x=32.0|y=132.0|tipsx=10|tipsy=80|color=205|size=18|text=攻城奖励：>
+<Text|a=0|x=142.0|y=132.0|tipsx=10|tipsy=80|color=242|size=18|text=新区攻城奖励2000000元宝>
+<Text|a=0|x=395.0|y=132.0|tipsx=10|tipsy=80|color=255|size=18|text=→>
+<Text|a=0|ax=0|x=450.0|y=132.0|tipsx=10|tipsy=80|size=18|color=251|text=领取奖励|link=@JIANGLI>
+<Text|a=0|x=32.0|y=181.0|tipsx=10|tipsy=80|color=205|size=18|text=攻城奖励：>
+<Text|a=0|x=142.0|y=181.0|tipsx=10|tipsy=80|color=242|size=18|text=老区攻城奖励1000000元宝>
+<Text|a=0|x=395.0|y=181.0|tipsx=10|tipsy=80|color=255|size=18|text=→>
+<Text|a=0|ax=0|x=450.0|y=181.0|tipsx=10|tipsy=80|size=18|color=251|text=领取奖励|link=@JIANGLI>
+
+
+[@jiangli]
+#IF
+ISCASTLEMASTER
+#ACT
+goto @jianglia
+BREAK
+#ELSESAY
+你不是沙城城主无法领取奖励........
+
+[@jianglia]
+#if
+HOUR 22 22
+MIN 00 15
+#ACT
+goto @jianglib
+#elseact
+MESSAGEBOX [提示]：请在22:00-22::15分前来领取奖励，过期无效！
+BREAK
+
+[@jianglib]
+#IF
+equal G80 1
+#ACT
+goto @xin
+
+#IF
+large G80 1
+#ACT
+GOTO @lao
+
+[@xin]
+#IF
+equal G81 1
+#ACT
+MESSAGEBOX 对不起！今天的沙老大元宝奖励已经被领取了哦！
+#elseact
+mov G81 1
+GAMEGOLD + 2000000
+ADDGUILDLIST ..\QuestDiary\临时数据\每天拿沙奖励.txt
+SENDMSG 0 沙城老大【%s】自豪的领走了200万元宝的攻城奖励，一份耕耘一份收获!
+SENDMSG 0 沙城老大【%s】自豪的领走了200万元宝的攻城奖励，一份耕耘一份收获!
+SENDMSG 0 沙城老大【%s】自豪的领走了200万元宝的攻城奖励，一份耕耘一份收获!
+SENDMSG 0 沙城老大【%s】自豪的领走了200万元宝的攻城奖励，一份耕耘一份收获!
+SENDMSG 0 沙城老大【%s】自豪的领走了200万元宝的攻城奖励，一份耕耘一份收获!
+BREAK
+
+
+[@lao]
+#IF
+equal G81 1
+#ACT
+MESSAGEBOX 对不起！今天的沙老大元宝奖励已经被领取了哦！
+#elseact
+mov G81 1
+GAMEGOLD + 1000000
+ADDGUILDLIST ..\QuestDiary\临时数据\每天拿沙奖励.txt
+SENDMSG 0 沙城老大【%s】自豪的领走了100万元宝的攻城奖励，一份耕耘一份收获!
+SENDMSG 0 沙城老大【%s】自豪的领走了100万元宝的攻城奖励，一份耕耘一份收获!
+SENDMSG 0 沙城老大【%s】自豪的领走了100万元宝的攻城奖励，一份耕耘一份收获!
+SENDMSG 0 沙城老大【%s】自豪的领走了100万元宝的攻城奖励，一份耕耘一份收获!
+SENDMSG 0 沙城老大【%s】自豪的领走了100万元宝的攻城奖励，一份耕耘一份收获!
+BREAK

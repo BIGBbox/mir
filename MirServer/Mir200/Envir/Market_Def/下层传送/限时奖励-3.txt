@@ -1,0 +1,896 @@
+[@main]
+#if
+equal <$CLIENTFLAG> 1
+#SAY
+<Img|x=0.0|y=0.0|width=620|height=420|scale9r=10|scale9t=10|scale9l=10|img=public/bg_npc_01.png|reset=1|move=0|bg=1|scale9b=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=65|y=45|tipsx=10|tipsy=80|color=253|size=13|text=第1个打到以下装备，就可以领取奖励，每件只限1个名额...>
+<Text|a=0|x=65|y=65|tipsx=10|tipsy=80|color=250|size=13|text=-------------------------------------------------------->
+<Text|a=0|x=65|y=85|tipsx=10|tipsy=80|color=253|size=13|text=编号>
+<Text|a=0|x=120|y=85|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=85|tipsx=10|tipsy=80|color=250|size=13|text=装备名字>
+<Text|a=0|x=307|y=85|tipsx=10|tipsy=80|color=254|size=13|text=奖励>
+<Text|a=0|x=411.0|y=85.0|tipsx=10|tipsy=80|color=255|size=13|text=剩余名额>
+<Text|a=0|x=505|y=85|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=493.0|y=85.0|tipsx=10|tipsy=80|color=252|size=13|text=第一个拾取玩家>
+<Text|a=0|x=65|y=105|tipsx=10|tipsy=80|color=250|size=13|text=NO.1>
+<Text|a=0|x=120|y=105|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=105|tipsx=10|tipsy=80|color=154|size=13|text=点点神力1.2>
+<Text|a=0|ax=0.5|x=322.0|y=105.0|tipsx=10|tipsy=80|color=70|size=13|text=20元充值>
+<Text|a=0|ax=0.5|ay=1|x=438.0|y=105.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G451)>\>
+<Text|a=0|ay=1|x=512.0|y=105.0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A61>
+<Text|a=0|x=65|y=125|tipsx=10|tipsy=80|color=250|size=13|text=NO.2>
+<Text|a=0|x=120|y=125|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=125|tipsx=10|tipsy=80|color=154|size=13|text=点点神力1.3>
+<Text|a=0|ax=0.5|x=322.0|y=125.0|tipsx=10|tipsy=80|color=70|size=13|text=50元充值>
+<Text|a=0|ax=0.5|ay=1|x=438.0|y=125.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G452)>\>
+<Text|a=0|ay=1|x=512.0|y=125.0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A62>
+<Text|a=0|x=65|y=145|tipsx=10|tipsy=80|color=250|size=13|text=NO.3>
+<Text|a=0|x=120|y=145|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=145|tipsx=10|tipsy=80|color=154|size=13|text=上古·镯>
+<Text|a=0|ax=0.5|x=322.0|y=145.0|tipsx=10|tipsy=80|color=70|size=13|text=20元充值>
+<Text|a=0|ax=0.5|ay=1|x=438.0|y=145.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G453)>\>
+<Text|a=0|ay=1|x=512.0|y=145.0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A63>
+<Text|a=0|x=65|y=165|tipsx=10|tipsy=80|color=250|size=13|text=NO.4>
+<Text|a=0|x=120|y=165|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=165|tipsx=10|tipsy=80|color=154|size=13|text=上古·手>
+<Text|a=0|ax=0.5|x=322.0|y=165.0|tipsx=10|tipsy=80|color=70|size=13|text=20元充值>
+<Text|a=0|ax=0.5|ay=1|x=438.0|y=165.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G454)>\>
+<Text|a=0|ay=1|x=512.0|y=165.0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A64>
+<Text|a=0|x=65|y=185|tipsx=10|tipsy=80|color=250|size=13|text=NO.5>
+<Text|a=0|x=120|y=185|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=185|tipsx=10|tipsy=80|color=154|size=13|text=上古·带>
+<Text|a=0|ax=0.5|x=322.0|y=185.0|tipsx=10|tipsy=80|color=70|size=13|text=20元充值>
+<Text|a=0|ax=0.5|ay=1|x=438.0|y=185.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G455)>\>
+<Text|a=0|ay=1|x=512.0|y=185.0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A65>
+<Text|a=0|x=65|y=205|tipsx=10|tipsy=80|color=250|size=13|text=NO.6>
+<Text|a=0|x=120|y=205|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=205|tipsx=10|tipsy=80|color=154|size=13|text=上古·靴>
+<Text|a=0|ax=0.5|x=322.0|y=205.0|tipsx=10|tipsy=80|color=70|size=13|text=20元充值>
+<Text|a=0|ax=0.5|ay=1|x=438.0|y=205.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G406)>\>
+<Text|a=0|ay=1|x=512.0|y=205.0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A66>
+<Text|a=0|x=65|y=225|tipsx=10|tipsy=80|color=250|size=13|text=NO.7>
+<Text|a=0|x=120|y=225|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=225|tipsx=10|tipsy=80|color=154|size=13|text=【残】流光>
+<Text|a=0|ax=0.5|x=322.0|y=225.0|tipsx=10|tipsy=80|color=70|size=13|text=20元充值>
+<Text|a=0|ax=0.5|ay=1|x=438.0|y=225.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G407)>\>
+<Text|a=0|ay=1|x=512.0|y=225.0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A67>
+<Text|a=0|x=65|y=245|tipsx=10|tipsy=80|color=250|size=13|text=NO.8>
+<Text|a=0|x=120|y=245|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=245|tipsx=10|tipsy=80|color=154|size=13|text=【残】鬼甲>
+<Text|a=0|ax=0.5|x=322.0|y=245.0|tipsx=10|tipsy=80|color=70|size=13|text=20元充值>
+<Text|a=0|ax=0.5|ay=1|x=438.0|y=245.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G408)>\>
+<Text|a=0|ay=1|x=512.0|y=245.0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A68>
+<Text|a=0|x=65|y=265|tipsx=10|tipsy=80|color=250|size=13|text=NO.9>
+<Text|a=0|x=120|y=265|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=265|tipsx=10|tipsy=80|color=154|size=13|text=【残】鬼衣>
+<Text|a=0|ax=0.5|x=322.0|y=265.0|tipsx=10|tipsy=80|color=70|size=13|text=20元充值>
+<Text|a=0|ax=0.5|ay=1|x=438.0|y=265.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G409)>\>
+<Text|a=0|ay=1|x=512.0|y=265.0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A69>
+<Text|a=0|x=65|y=285|tipsx=10|tipsy=80|color=250|size=13|text=NO.10>
+<Text|a=0|x=120|y=285|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=285|tipsx=10|tipsy=80|color=154|size=13|text=【残】鬼王>
+<Text|a=0|ax=0.5|x=322.0|y=285.0|rotate=0|tipsx=10|tipsy=80|color=70|size=13|text=20元充值>
+<Text|a=0|ax=0.5|ay=1|x=438.0|y=285.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G410)>\>
+<Text|a=0|ay=1|x=512.0|y=285.0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A70>
+<Text|a=0|x=65|y=305|tipsx=10|tipsy=80|color=250|size=13|text=-------------------------------------------------------->
+<Text|a=0|x=65|y=325|tipsx=10|tipsy=80|color=254|size=13|text=官方提示√. （剩余名额为：0 时 拾取玩家不能获得奖励）>
+<Text|a=0|x=110.0|y=365.0|tipsx=10|tipsy=80|color=251|size=13|text=第 1 页|link=@MAIN>
+<Text|a=0|x=295.0|y=365.0|tipsx=10|tipsy=80|color=251|size=13|text=第 2 页|link=@MAIN1>
+<Text|a=0|x=449.0|y=365.0|tipsx=10|tipsy=80|color=251|size=13|text=第 3 页|link=@MAIN2>
+
+#elsesay
+<Img|x=0.0|y=0.0|width=650|height=420|rotate=0|move=0|scale9r=10|scale9l=10|reset=1|img=public/bg_npc_01.png|scale9t=10|bg=1|scale9b=10>
+<Layout|x=625.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=647.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=65|y=45|tipsx=10|tipsy=80|color=253|size=18|text=第1个打到以下装备，就可以领取奖励，每件只限1个名额...>
+<Text|a=0|x=65|y=65|tipsx=10|tipsy=80|color=250|size=18|text=-------------------------------------------------------->
+<Text|a=0|x=65|y=85|tipsx=10|tipsy=80|color=253|size=18|text=编号>
+<Text|a=0|x=120|y=85|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=85|tipsx=10|tipsy=80|color=250|size=18|text=装备名字>
+<Text|a=0|x=307|y=85|tipsx=10|tipsy=80|color=254|size=18|text=奖励>
+<Text|a=0|x=411.0|y=85.0|tipsx=10|tipsy=80|color=255|size=18|text=剩余名额>
+<Text|a=0|x=505|y=85|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=506.0|y=85.0|tipsx=10|tipsy=80|color=252|size=18|text=第一个拾取玩家>
+<Text|a=0|x=65|y=105|tipsx=10|tipsy=80|color=250|size=18|text=NO.1>
+<Text|a=0|x=120|y=105|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142.0|y=105.0|tipsx=10|tipsy=80|color=154|size=18|text=点点神力1.2>
+<Text|a=0|ax=0.5|x=326.0|y=105.0|tipsx=10|tipsy=80|color=70|size=18|text=20元充值>
+<Text|a=0|ax=0.5|ay=1|x=449.0|y=105.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G451)>\>
+<Text|a=0|ay=1|x=530.0|y=105.0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A61>
+<Text|a=0|x=65|y=125|tipsx=10|tipsy=80|color=250|size=18|text=NO.2>
+<Text|a=0|x=120|y=125|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=125|tipsx=10|tipsy=80|color=154|size=18|text=点点神力1.3>
+<Text|a=0|ax=0.5|x=326.0|y=125.0|rotate=0|tipsx=10|tipsy=80|color=70|size=18|text=50元充值>
+<Text|a=0|ax=0.5|ay=1|x=449.0|y=125.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G452)>\>
+<Text|a=0|ay=1|x=530.0|y=125.0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A62>
+<Text|a=0|x=65|y=145|tipsx=10|tipsy=80|color=250|size=18|text=NO.3>
+<Text|a=0|x=120|y=145|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=145|tipsx=10|tipsy=80|color=154|size=18|text=上古·镯>
+<Text|a=0|ax=0.5|x=326.0|y=145.0|tipsx=10|tipsy=80|color=70|size=18|text=20元充值>
+<Text|a=0|ax=0.5|ay=1|x=449.0|y=145.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G453)>\>
+<Text|a=0|ay=1|x=530.0|y=145.0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A63>
+<Text|a=0|x=65|y=165|tipsx=10|tipsy=80|color=250|size=18|text=NO.4>
+<Text|a=0|x=120|y=165|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=165|tipsx=10|tipsy=80|color=154|size=18|text=上古·手>
+<Text|a=0|ax=0.5|x=326.0|y=165.0|tipsx=10|tipsy=80|color=70|size=18|text=20元充值>
+<Text|a=0|ax=0.5|ay=1|x=449.0|y=165.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G454)>\>
+<Text|a=0|ay=1|x=530.0|y=165.0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A64>
+<Text|a=0|x=65|y=185|tipsx=10|tipsy=80|color=250|size=18|text=NO.5>
+<Text|a=0|x=120|y=185|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=185|tipsx=10|tipsy=80|color=154|size=18|text=上古·带>
+<Text|a=0|ax=0.5|x=326.0|y=185.0|tipsx=10|tipsy=80|color=70|size=18|text=20元充值>
+<Text|a=0|ax=0.5|ay=1|x=449.0|y=185.0|rotate=0|tipsx=10|tipsy=80|size=18|color=255|text=<$STR(G455)>\>
+<Text|a=0|ay=1|x=530.0|y=185.0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A65>
+<Text|a=0|x=65|y=205|tipsx=10|tipsy=80|color=250|size=18|text=NO.6>
+<Text|a=0|x=120|y=205|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=205|tipsx=10|tipsy=80|color=154|size=18|text=上古·靴>
+<Text|a=0|ax=0.5|x=326.0|y=205.0|rotate=0|tipsx=10|tipsy=80|color=70|size=18|text=20元充值>
+<Text|a=0|ax=0.5|ay=1|x=449.0|y=205.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G406)>\>
+<Text|a=0|ay=1|x=530.0|y=205.0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A66>
+<Text|a=0|x=65|y=225|tipsx=10|tipsy=80|color=250|size=18|text=NO.7>
+<Text|a=0|x=120|y=225|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=225|tipsx=10|tipsy=80|color=154|size=18|text=【残】流光>
+<Text|a=0|ax=0.5|x=326.0|y=225.0|tipsx=10|tipsy=80|color=70|size=18|text=20元充值>
+<Text|a=0|ax=0.5|ay=1|x=449.0|y=225.0|rotate=0|tipsx=10|tipsy=80|size=18|color=255|text=<$STR(G407)>\>
+<Text|a=0|ay=1|x=530.0|y=225.0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A67>
+<Text|a=0|x=65|y=245|tipsx=10|tipsy=80|color=250|size=18|text=NO.8>
+<Text|a=0|x=120|y=245|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=245|tipsx=10|tipsy=80|color=154|size=18|text=【残】鬼甲>
+<Text|a=0|ax=0.5|x=326.0|y=245.0|tipsx=10|tipsy=80|color=70|size=18|text=20元充值>
+<Text|a=0|ax=0.5|ay=1|x=449.0|y=245.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G408)>\>
+<Text|a=0|ay=1|x=530.0|y=245.0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A68>
+<Text|a=0|x=65|y=265|tipsx=10|tipsy=80|color=250|size=18|text=NO.9>
+<Text|a=0|x=120|y=265|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=265|tipsx=10|tipsy=80|color=154|size=18|text=【残】鬼衣>
+<Text|a=0|ax=0.5|x=326.0|y=265.0|rotate=0|tipsx=10|tipsy=80|color=70|size=18|text=20元充值>
+<Text|a=0|ax=0.5|ay=1|x=449.0|y=265.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G409)>\>
+<Text|a=0|ay=1|x=530.0|y=265.0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A69>
+<Text|a=0|x=65|y=285|tipsx=10|tipsy=80|color=250|size=18|text=NO.10>
+<Text|a=0|x=120|y=285|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=285|tipsx=10|tipsy=80|color=154|size=18|text=【残】鬼王>
+<Text|a=0|ax=0.5|x=326.0|y=285.0|tipsx=10|tipsy=80|color=70|size=18|text=20元充值>
+<Text|a=0|ax=0.5|ay=1|x=449.0|y=285.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G410)>\>
+<Text|a=0|ay=1|x=530.0|y=285.0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A70>
+<Text|a=0|x=65|y=305|tipsx=10|tipsy=80|color=250|size=18|text=-------------------------------------------------------->
+<Text|a=0|x=65|y=325|tipsx=10|tipsy=80|color=254|size=18|text=官方提示√. （剩余名额为：0 时 拾取玩家不能获得奖励）>
+<Text|a=0|x=110.0|y=365.0|tipsx=10|tipsy=80|color=251|size=18|text=第 1 页|link=@MAIN>
+<Text|a=0|x=295.0|y=365.0|tipsx=10|tipsy=80|color=251|size=18|text=第 2 页|link=@MAIN1>
+<Text|a=0|x=449.0|y=365.0|tipsx=10|tipsy=80|color=251|size=18|text=第 3 页|link=@MAIN2>
+
+
+[@领取A61]
+#IF
+equal G451 1
+CHECKITEM  点点神力1.2倍
+; EQUAL A61 <我要领取/@领取A61>
+#ACT
+MOV A61 <$USERNAME>
+DEC G451 1
+GAMEGIRD + 100
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{点点神力1.2倍}.获得[20元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+
+[@领取A62]
+#IF
+equal G452 1
+CHECKITEM  点点神力1.3倍
+; EQUAL A62 <我要领取/@领取A62>
+#ACT
+MOV A62 <$USERNAME>
+DEC G452 1
+GAMEGIRD +  100
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{点点神力1.3倍}.获得[50元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+[@领取A63]
+#IF
+equal G453 1
+CHECKITEM  上古·镯
+; EQUAL A63 <我要领取/@领取A63>
+#ACT
+MOV A63 <$USERNAME>
+DEC G453 1
+GAMEGIRD +  40
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{上古·镯}.获得[20元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+[@领取A64]
+#IF
+equal G454 1
+CHECKITEM  上古·手
+; EQUAL A64 <我要领取/@领取A64>
+#ACT
+MOV A64 <$USERNAME>
+DEC G454 1
+GAMEGIRD +  40
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{上古·手}.获得[20元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+[@领取A65]
+#IF
+equal G455 1
+CHECKITEM  上古·带
+; EQUAL A65 <我要领取/@领取A65>
+#ACT
+MOV A65 <$USERNAME>
+DEC G455 1
+GAMEGIRD +  40
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{上古·带}.获得[20元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+[@领取A66]
+#IF
+equal G406 1
+CHECKITEM  上古·靴
+; EQUAL A66 <我要领取/@领取A66>
+#ACT
+MOV A66 <$USERNAME>
+DEC G406 1
+GAMEGIRD +  40
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{上古·靴}.获得[20元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+[@领取A67]
+#IF
+equal G407 1
+CHECKITEM  【残】流光
+; EQUAL A67 <我要领取/@领取A67>
+#ACT
+MOV A67 <$USERNAME>
+DEC G407 1
+GAMEGIRD +  40
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{【残】流光}.获得[20元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+[@领取A68]
+#IF
+equal G408 1
+CHECKITEM  【残】鬼甲
+; EQUAL A68 <我要领取/@领取A68>
+#ACT
+MOV A68 <$USERNAME>
+DEC G408 1
+GAMEGIRD +  40
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{【残】鬼甲}.获得[20元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+[@领取A69]
+#IF
+equal G409 1
+CHECKITEM  【残】鬼衣
+; EQUAL A69 <我要领取/@领取A69>
+#ACT
+MOV A69 <$USERNAME>
+DEC G409 1
+GAMEGIRD +  40
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{【残】鬼衣}.获得[20元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+
+[@领取A70]
+#IF
+equal G410 1
+CHECKITEM  【残】鬼王
+; EQUAL A70 <我要领取/@领取A70>
+#ACT
+MOV A70 <$USERNAME>
+DEC G410 1
+GAMEGIRD +  40
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{【残】鬼王}.获得[20元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+
+
+
+[@main1]
+#if
+equal <$CLIENTFLAG> 1
+#SAY
+<Img|width=620|height=420|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=65|y=45|tipsx=10|tipsy=80|color=253|size=13|text=第1个打到以下装备，就可以领取奖励，每件只限1个名额...>
+<Text|a=0|x=65|y=65|tipsx=10|tipsy=80|color=250|size=13|text=-------------------------------------------------------->
+<Text|a=0|x=65|y=85|tipsx=10|tipsy=80|color=253|size=13|text=编号>
+<Text|a=0|x=120|y=85|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=85|tipsx=10|tipsy=80|color=250|size=13|text=装备名字>
+<Text|a=0|x=307|y=85|tipsx=10|tipsy=80|color=254|size=13|text=奖励>
+<Text|a=0|x=411|y=85|tipsx=10|tipsy=80|color=255|size=13|text=剩余名额>
+<Text|a=0|x=505|y=85|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|ax=0|x=493|y=85|tipsx=10|tipsy=80|color=252|size=13|text=第一个拾取玩家>
+<Text|a=0|x=65|y=105|tipsx=10|tipsy=80|color=250|size=13|text=NO.11>
+<Text|a=0|x=120|y=105|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=105|tipsx=10|tipsy=80|color=154|size=13|text=【残】诛仙>
+<Text|a=0|ax=0.5|x=322|y=105.0|rotate=0|tipsx=10|tipsy=80|color=70|size=13|text=20元充值>
+<Text|a=0|ax=0.5|x=438|y=105.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G411)>>
+<Text|a=0|ax=0|ay=1|x=512|y=105.0|rotate=0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A71>
+<Text|a=0|x=65|y=125|tipsx=10|tipsy=80|color=250|size=13|text=NO.12>
+<Text|a=0|x=120|y=125|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=125|tipsx=10|tipsy=80|color=154|size=13|text=【残】流云男>
+<Text|a=0|ax=0.5|x=322|y=125.0|tipsx=10|tipsy=80|color=70|size=13|text=20元充值>
+<Text|a=0|ax=0.5|x=438|y=125.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G412)>>
+<Text|a=0|ax=0|ay=1|x=512|y=125.0|rotate=0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A72>
+<Text|a=0|x=65|y=145|tipsx=10|tipsy=80|color=250|size=13|text=NO.13>
+<Text|a=0|x=120|y=145|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=145|tipsx=10|tipsy=80|color=154|size=13|text=【残】流云女>
+<Text|a=0|ax=0.5|x=322|y=145.0|tipsx=10|tipsy=80|color=70|size=13|text=20元充值>
+<Text|a=0|ax=0.5|x=438|y=145.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G413)>>
+<Text|a=0|ax=0|ay=1|x=512|y=145.0|rotate=0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A73>
+<Text|a=0|x=65|y=165|tipsx=10|tipsy=80|color=250|size=13|text=NO.14>
+<Text|a=0|x=120|y=165|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=165|tipsx=10|tipsy=80|color=154|size=13|text=【残】耀光>
+<Text|a=0|ax=0.5|x=322|y=165.0|tipsx=10|tipsy=80|color=70|size=13|text=20元充值>
+<Text|a=0|ax=0.5|x=438|y=165.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G414)>>
+<Text|a=0|ax=0|ay=1|x=512|y=165.0|rotate=0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A74>
+<Text|a=0|x=65|y=185|tipsx=10|tipsy=80|color=250|size=13|text=NO.15>
+<Text|a=0|x=120|y=185|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=185|tipsx=10|tipsy=80|color=154|size=13|text=起源·镯>
+<Text|a=0|ax=0.5|x=322|y=185.0|tipsx=10|tipsy=80|color=70|size=13|text=30元充值>
+<Text|a=0|ax=0.5|x=438|y=185.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G415)>>
+<Text|a=0|ax=0|ay=1|x=512|y=185.0|rotate=0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A75>
+<Text|a=0|x=65|y=205|tipsx=10|tipsy=80|color=250|size=13|text=NO.16>
+<Text|a=0|x=120|y=205|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=205|tipsx=10|tipsy=80|color=154|size=13|text=起源·手>
+<Text|a=0|ax=0.5|x=322|y=205.0|tipsx=10|tipsy=80|color=70|size=13|text=30元充值>
+<Text|a=0|ax=0.5|x=438|y=205.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G416)>>
+<Text|a=0|ax=0|ay=1|x=512|y=205.0|rotate=0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A76>
+<Text|a=0|x=65|y=225|tipsx=10|tipsy=80|color=250|size=13|text=NO.17>
+<Text|a=0|x=120|y=225|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=225|tipsx=10|tipsy=80|color=154|size=13|text=起源·带>
+<Text|a=0|ax=0.5|x=322|y=225.0|tipsx=10|tipsy=80|color=70|size=13|text=30元充值>
+<Text|a=0|ax=0.5|x=438|y=225.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G417)>>
+<Text|a=0|ax=0|ay=1|x=512|y=225.0|rotate=0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A77>
+<Text|a=0|x=65|y=245|tipsx=10|tipsy=80|color=250|size=13|text=NO.18>
+<Text|a=0|x=120|y=245|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=245|tipsx=10|tipsy=80|color=154|size=13|text=起源·靴>
+<Text|a=0|ax=0.5|x=322|y=245.0|tipsx=10|tipsy=80|color=70|size=13|text=30元充值>
+<Text|a=0|ax=0.5|x=438|y=245.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G418)>>
+<Text|a=0|ax=0|ay=1|x=512|y=245.0|rotate=0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A78>
+<Text|a=0|x=65|y=265|tipsx=10|tipsy=80|color=250|size=13|text=NO.19>
+<Text|a=0|x=120|y=265|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=265|tipsx=10|tipsy=80|color=154|size=13|text=上古鬼甲【残】>
+<Text|a=0|ax=0.5|x=322|y=265.0|tipsx=10|tipsy=80|color=70|size=13|text=50元充值>
+<Text|a=0|ax=0.5|x=438|y=265.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G419)>>
+<Text|a=0|ax=0|ay=1|x=512|y=265.0|rotate=0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A79>
+<Text|a=0|x=65|y=285|tipsx=10|tipsy=80|color=250|size=13|text=NO.20>
+<Text|a=0|x=120|y=285|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=285|tipsx=10|tipsy=80|color=154|size=13|text=上古鬼衣【残】>
+<Text|a=0|ax=0.5|x=322|y=285.0|tipsx=10|tipsy=80|color=70|size=13|text=50元充值>
+<Text|a=0|ax=0.5|x=438|y=285.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G420)>>
+<Text|a=0|ax=0|ay=1|x=512|y=285.0|rotate=0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A80>
+<Text|a=0|x=65|y=305|tipsx=10|tipsy=80|color=250|size=13|text=-------------------------------------------------------->
+<Text|a=0|x=65|y=325|tipsx=10|tipsy=80|color=254|size=13|text=官方提示√. （剩余名额为：0 时 拾取玩家不能获得奖励）>
+<Text|a=0|x=110|y=365|tipsx=10|tipsy=80|color=251|size=13|text=第 1 页|link=@MAIN>
+<Text|a=0|ax=0|x=295|y=365|tipsx=10|tipsy=80|size=13|color=251|text=第 2 页|link=@MAIN1>
+<Text|a=0|x=449|y=365|tipsx=10|tipsy=80|color=251|size=13|text=第 3 页|link=@MAIN2>
+#elsesay
+<Img|width=650|height=420|rotate=0|reset=1|scale9r=10|scale9t=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10>
+<Layout|x=625.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=647.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=65|y=45|tipsx=10|tipsy=80|color=253|size=18|text=第1个打到以下装备，就可以领取奖励，每件只限1个名额...>
+<Text|a=0|x=65|y=65|tipsx=10|tipsy=80|color=250|size=18|text=-------------------------------------------------------->
+<Text|a=0|x=65|y=85|tipsx=10|tipsy=80|color=253|size=18|text=编号>
+<Text|a=0|x=120|y=85|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=85|tipsx=10|tipsy=80|color=250|size=18|text=装备名字>
+<Text|a=0|x=307|y=85|tipsx=10|tipsy=80|color=254|size=18|text=奖励>
+<Text|a=0|x=411|y=85|tipsx=10|tipsy=80|color=255|size=18|text=剩余名额>
+<Text|a=0|x=505|y=85|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|ax=0|x=506|y=85|tipsx=10|tipsy=80|color=252|size=18|text=第一个拾取玩家>
+<Text|a=0|x=65|y=105|tipsx=10|tipsy=80|color=250|size=18|text=NO.11>
+<Text|a=0|x=120|y=105|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=105|tipsx=10|tipsy=80|color=154|size=18|text=【残】诛仙>
+<Text|a=0|ax=0.5|x=326|y=105.0|rotate=0|tipsx=10|tipsy=80|color=70|size=18|text=20元充值>
+<Text|a=0|ax=0.5|x=449.0|y=105.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G411)>>
+<Text|a=0|ax=0|ay=1|x=530.0|y=105.0|rotate=0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A71>
+<Text|a=0|x=65|y=125|tipsx=10|tipsy=80|color=250|size=18|text=NO.12>
+<Text|a=0|x=120|y=125|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=125|tipsx=10|tipsy=80|color=154|size=18|text=【残】流云男>
+<Text|a=0|ax=0.5|x=326|y=125.0|tipsx=10|tipsy=80|color=70|size=18|text=20元充值>
+<Text|a=0|ax=0.5|x=449.0|y=125.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G412)>>
+<Text|a=0|ax=0|ay=1|x=530.0|y=125.0|rotate=0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A72>
+<Text|a=0|x=65|y=145|tipsx=10|tipsy=80|color=250|size=18|text=NO.13>
+<Text|a=0|x=120|y=145|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=145|tipsx=10|tipsy=80|color=154|size=18|text=【残】流云女>
+<Text|a=0|ax=0.5|x=326|y=145.0|tipsx=10|tipsy=80|color=70|size=18|text=20元充值>
+<Text|a=0|ax=0.5|x=449.0|y=145.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G413)>>
+<Text|a=0|ax=0|ay=1|x=530.0|y=145.0|rotate=0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A73>
+<Text|a=0|x=65|y=165|tipsx=10|tipsy=80|color=250|size=18|text=NO.14>
+<Text|a=0|x=120|y=165|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=165|tipsx=10|tipsy=80|color=154|size=18|text=【残】耀光>
+<Text|a=0|ax=0.5|x=326|y=165.0|tipsx=10|tipsy=80|color=70|size=18|text=20元充值>
+<Text|a=0|ax=0.5|x=449.0|y=165.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G414)>>
+<Text|a=0|ax=0|ay=1|x=530.0|y=165.0|rotate=0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A74>
+<Text|a=0|x=65|y=185|tipsx=10|tipsy=80|color=250|size=18|text=NO.15>
+<Text|a=0|x=120|y=185|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=185|tipsx=10|tipsy=80|color=154|size=18|text=起源·镯>
+<Text|a=0|ax=0.5|x=326|y=185.0|tipsx=10|tipsy=80|color=70|size=18|text=30元充值>
+<Text|a=0|ax=0.5|x=449.0|y=185.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G415)>>
+<Text|a=0|ax=0|ay=1|x=530.0|y=185.0|rotate=0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A75>
+<Text|a=0|x=65|y=205|tipsx=10|tipsy=80|color=250|size=18|text=NO.16>
+<Text|a=0|x=120|y=205|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=205|tipsx=10|tipsy=80|color=154|size=18|text=起源·手>
+<Text|a=0|ax=0.5|x=326|y=205.0|tipsx=10|tipsy=80|color=70|size=18|text=30元充值>
+<Text|a=0|ax=0.5|x=449.0|y=205.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G416)>>
+<Text|a=0|ax=0|ay=1|x=530.0|y=205.0|rotate=0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A76>
+<Text|a=0|x=65|y=225|tipsx=10|tipsy=80|color=250|size=18|text=NO.17>
+<Text|a=0|x=120|y=225|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=225|tipsx=10|tipsy=80|color=154|size=18|text=起源·带>
+<Text|a=0|ax=0.5|x=326|y=225.0|tipsx=10|tipsy=80|color=70|size=18|text=30元充值>
+<Text|a=0|ax=0.5|x=449.0|y=225.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G417)>>
+<Text|a=0|ax=0|ay=1|x=530.0|y=225.0|rotate=0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A77>
+<Text|a=0|x=65|y=245|tipsx=10|tipsy=80|color=250|size=18|text=NO.18>
+<Text|a=0|x=120|y=245|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=245|tipsx=10|tipsy=80|color=154|size=18|text=起源·靴>
+<Text|a=0|ax=0.5|x=326|y=245.0|tipsx=10|tipsy=80|color=70|size=18|text=30元充值>
+<Text|a=0|ax=0.5|x=449.0|y=245.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G418)>>
+<Text|a=0|ax=0|ay=1|x=530.0|y=245.0|rotate=0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A78>
+<Text|a=0|x=65|y=265|tipsx=10|tipsy=80|color=250|size=18|text=NO.19>
+<Text|a=0|x=120|y=265|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=265|tipsx=10|tipsy=80|color=154|size=18|text=上古鬼甲【残】>
+<Text|a=0|ax=0.5|x=326|y=265.0|tipsx=10|tipsy=80|color=70|size=18|text=50元充值>
+<Text|a=0|ax=0.5|x=449.0|y=265.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G419)>>
+<Text|a=0|ax=0|ay=1|x=530.0|y=265.0|rotate=0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A79>
+<Text|a=0|x=65|y=285|tipsx=10|tipsy=80|color=250|size=18|text=NO.20>
+<Text|a=0|x=120|y=285|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=285|tipsx=10|tipsy=80|color=154|size=18|text=上古鬼衣【残】>
+<Text|a=0|ax=0.5|x=326|y=285.0|tipsx=10|tipsy=80|color=70|size=18|text=50元充值>
+<Text|a=0|ax=0.5|x=449.0|y=285.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G420)>>
+<Text|a=0|ax=0|ay=1|x=530.0|y=285.0|rotate=0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A80>
+<Text|a=0|x=65|y=305|tipsx=10|tipsy=80|color=250|size=18|text=-------------------------------------------------------->
+<Text|a=0|x=65|y=325|tipsx=10|tipsy=80|color=254|size=18|text=官方提示√. （剩余名额为：0 时 拾取玩家不能获得奖励）>
+<Text|a=0|x=110|y=365|tipsx=10|tipsy=80|color=251|size=18|text=第 1 页|link=@MAIN>
+<Text|a=0|ax=0|x=295|y=365|tipsx=10|tipsy=80|size=18|color=251|text=第 2 页|link=@MAIN1>
+<Text|a=0|x=449|y=365|tipsx=10|tipsy=80|color=251|size=18|text=第 3 页|link=@MAIN2>
+
+
+
+[@领取A71]
+#IF
+equal G411 1
+CHECKITEM  【残】诛仙
+EQUAL A71 <我要领取/@领取A71>
+#ACT
+MOV A71 <$USERNAME>
+DEC G411 1
+GAMEGIRD +  40
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{【残】诛仙}.获得[20元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+[@领取A72]
+#IF
+equal G412 1
+CHECKITEM 【残】流云男
+EQUAL A72 <我要领取/@领取A72>
+#ACT
+MOV A72 <$USERNAME>
+DEC G412 1
+GAMEGIRD +  40
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{【残】流云男}.获得[20元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+
+
+[@领取A73]
+#IF
+equal G413 1
+CHECKITEM 【残】流云女
+EQUAL A73 <我要领取/@领取A73>
+#ACT
+MOV A73 <$USERNAME>
+DEC G413 1
+GAMEGIRD +  40
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{【残】流云女}.获得[20元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+[@领取A74]
+#IF
+equal G414 1
+CHECKITEM 【残】耀光
+EQUAL A74 <我要领取/@领取A74>
+#ACT
+MOV A74 <$USERNAME>
+DEC G414 1
+GAMEGIRD +  40
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{【残】耀光}.获得[20元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+
+[@领取A75]
+#IF
+equal G415 1
+CHECKITEM 起源·镯
+EQUAL A75 <我要领取/@领取A75>
+#ACT
+MOV A75 <$USERNAME>
+DEC G415 1
+GAMEGIRD +  60
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值60灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值60灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{起源·镯}.获得[30元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+
+[@领取A76]
+#IF
+equal G416 1
+CHECKITEM 起源·手
+EQUAL A76 <我要领取/@领取A76>
+#ACT
+MOV A76 <$USERNAME>
+DEC G416 1
+GAMEGIRD +  60
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值60灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值60灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{起源·手}.获得[30元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+[@领取A77]
+#IF
+equal G417 1
+CHECKITEM 起源·带
+EQUAL A77 <我要领取/@领取A77>
+#ACT
+MOV A77 <$USERNAME>
+DEC G417 1
+GAMEGIRD +  60
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值60灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值60灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{起源·带}.获得[30元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+
+[@领取A78]
+#IF
+equal G418 1
+CHECKITEM 起源·靴
+EQUAL A78 <我要领取/@领取A78>
+#ACT
+MOV A78 <$USERNAME>
+DEC G418 1
+GAMEGIRD +  60
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值60灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值60灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{起源·靴}.获得[30元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+[@领取A79]
+#IF
+equal G419 1
+CHECKITEM 上古鬼甲【残】
+EQUAL A79 <我要领取/@领取A79>
+#ACT
+MOV A79 <$USERNAME>
+DEC G419 1
+GAMEGIRD +  100
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{上古鬼甲【残】}.获得[50元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+[@领取A80]
+#IF
+equal G420 1
+CHECKITEM 上古鬼衣【残】
+EQUAL A80 <我要领取/@领取A80>
+#ACT
+MOV A80 <$USERNAME>
+DEC G420 1
+GAMEGIRD +  100
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{上古鬼衣【残】}.获得[50元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+[@main2]
+#if
+equal <$CLIENTFLAG> 1
+#SAY
+<Img|x=1.0|y=-1.0|width=620|height=335|scale9r=10|scale9t=10|scale9l=10|img=public/bg_npc_01.png|reset=1|move=0|bg=1|scale9b=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=65|y=45|tipsx=10|tipsy=80|color=253|size=13|text=第1个打到以下装备，就可以领取奖励，每件只限1个名额...>
+<Text|a=0|x=65|y=65|tipsx=10|tipsy=80|color=250|size=13|text=-------------------------------------------------------->
+<Text|a=0|x=65|y=85|tipsx=10|tipsy=80|color=253|size=13|text=编号>
+<Text|a=0|x=120|y=85|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=85|tipsx=10|tipsy=80|color=250|size=13|text=装备名字>
+<Text|a=0|x=307|y=85|tipsx=10|tipsy=80|color=254|size=13|text=奖励>
+<Text|a=0|ax=0|x=411|y=85|tipsx=10|tipsy=80|color=255|size=13|text=剩余名额>
+<Text|a=0|x=505|y=85|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=493|y=85|tipsx=10|tipsy=80|color=252|size=13|text=第一个拾取玩家>
+<Text|a=0|x=65|y=105|tipsx=10|tipsy=80|color=250|size=13|text=NO.21>
+<Text|a=0|x=120|y=105|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=105|tipsx=10|tipsy=80|color=154|size=13|text=上古诛仙【残】>
+<Text|a=0|ax=0.5|x=326|y=105|rotate=0|tipsx=10|tipsy=80|color=70|size=13|text=50元充值>
+<Text|a=0|ax=0.5|x=438|y=105|rotate=0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G421)>>
+<Text|a=0|ax=0|ay=1|x=512|y=105.0|rotate=0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A81>
+<Text|a=0|x=65|y=125|tipsx=10|tipsy=80|color=250|size=13|text=NO.22>
+<Text|a=0|x=120|y=125|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=125|tipsx=10|tipsy=80|color=154|size=13|text=上古鬼王【残】>
+<Text|a=0|ax=0.5|x=326|y=125|rotate=0|tipsx=10|tipsy=80|color=70|size=13|text=50元充值>
+<Text|a=0|ax=0.5|x=438|y=125|rotate=0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G422)>>
+<Text|a=0|ax=0|ay=1|x=512|y=125.0|rotate=0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A82>
+<Text|a=0|x=65|y=145|tipsx=10|tipsy=80|color=250|size=13|text=NO.23>
+<Text|a=0|x=120|y=145|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=145|tipsx=10|tipsy=80|color=154|size=13|text=上古耀光【残】>
+<Text|a=0|ax=0.5|x=326|y=145|rotate=0|tipsx=10|tipsy=80|color=70|size=13|text=50元充值>
+<Text|a=0|ax=0.5|x=438|y=145|rotate=0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G423)>>
+<Text|a=0|ax=0|ay=1|x=512|y=145.0|rotate=0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A83>
+<Text|a=0|x=65|y=165|tipsx=10|tipsy=80|color=250|size=13|text=NO.24>
+<Text|a=0|x=120|y=165|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=165|tipsx=10|tipsy=80|color=154|size=13|text=上古流光【残】>
+<Text|a=0|ax=0.5|x=326|y=165|rotate=0|tipsx=10|tipsy=80|color=70|size=13|text=50元充值>
+<Text|a=0|ax=0.5|x=438|y=165|rotate=0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G424)>>
+<Text|a=0|ax=0|ay=1|x=512|y=165.0|rotate=0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A84>
+<Text|a=0|x=65|y=185|tipsx=10|tipsy=80|color=250|size=13|text=NO.25>
+<Text|a=0|x=120|y=185|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=185|tipsx=10|tipsy=80|color=154|size=13|text=点点噬血链>
+<Text|a=0|ax=0.5|x=326|y=185|rotate=0|tipsx=10|tipsy=80|color=70|size=13|text=50元充值>
+<Text|a=0|ax=0.5|x=438|y=185|rotate=0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G425)>>
+<Text|a=0|ax=0|ay=1|x=512|y=185.0|rotate=0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A85>
+<Text|a=0|x=65|y=205|tipsx=10|tipsy=80|color=250|size=13|text=NO.25>
+<Text|a=0|x=120|y=205|tipsx=10|tipsy=80|color=255|size=13>
+<Text|a=0|x=142|y=205|tipsx=10|tipsy=80|color=154|size=13|text=黑色切割者>
+<Text|a=0|ax=0.5|x=326|y=205|rotate=0|tipsx=10|tipsy=80|color=70|size=13|text=50元充值>
+<Text|a=0|ax=0.5|x=438|y=205|rotate=0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G426)>>
+<Text|a=0|ax=0|ay=1|x=512|y=205.0|rotate=0|tipsx=10|tipsy=80|size=13|color=251|text=我要领取|link=@领取A86>
+<Text|a=0|x=65|y=225|tipsx=10|tipsy=80|color=250|size=13|text=-------------------------------------------------------->
+<Text|a=0|x=65|y=245|tipsx=10|tipsy=80|color=254|size=13|text=官方提示√. （剩余名额为：0 时 拾取玩家不能获得奖励）>
+<Text|a=0|ax=0|x=110|y=285|tipsx=10|tipsy=80|size=13|color=251|text=第 1 页|link=@MAIN>
+<Text|a=0|ax=0|x=295|y=285|tipsx=10|tipsy=80|size=13|color=251|text=第 2 页|link=@MAIN1>
+<Text|a=0|ax=0|x=449|y=285|tipsx=10|tipsy=80|size=13|color=251|text=第 3 页|link=@MAIN2>
+
+#elsesay
+<Img|x=1.0|y=-1.0|width=650|height=335|scale9r=10|scale9l=10|bg=1|scale9b=10|reset=1|move=0|img=public/bg_npc_01.png|scale9t=10>
+<Layout|x=625|y=3|width=80|height=80|link=@exit>
+<Button|x=647|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=65|y=45|tipsx=10|tipsy=80|color=253|size=18|text=第1个打到以下装备，就可以领取奖励，每件只限1个名额...>
+<Text|a=0|x=65|y=65|tipsx=10|tipsy=80|color=250|size=18|text=-------------------------------------------------------->
+<Text|a=0|x=65|y=85|tipsx=10|tipsy=80|color=253|size=18|text=编号>
+<Text|a=0|x=120|y=85|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=85|tipsx=10|tipsy=80|color=250|size=18|text=装备名字>
+<Text|a=0|x=307|y=85|tipsx=10|tipsy=80|color=254|size=18|text=奖励>
+<Text|a=0|ax=0|x=411|y=85|tipsx=10|tipsy=80|color=255|size=18|text=剩余名额>
+<Text|a=0|x=505|y=85|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=506|y=85|tipsx=10|tipsy=80|color=252|size=18|text=第一个拾取玩家>
+<Text|a=0|x=65|y=105|tipsx=10|tipsy=80|color=250|size=18|text=NO.21>
+<Text|a=0|x=120|y=105|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=105|tipsx=10|tipsy=80|color=154|size=18|text=上古诛仙【残】>
+<Text|a=0|ax=0.5|x=326|y=105|rotate=0|tipsx=10|tipsy=80|color=70|size=18|text=50元充值>
+<Text|a=0|ax=0.5|x=449|y=105|rotate=0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G421)>>
+<Text|a=0|ax=0|ay=1|x=530|y=105.0|rotate=0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A81>
+<Text|a=0|x=65|y=125|tipsx=10|tipsy=80|color=250|size=18|text=NO.22>
+<Text|a=0|x=120|y=125|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=125|tipsx=10|tipsy=80|color=154|size=18|text=上古鬼王【残】>
+<Text|a=0|ax=0.5|x=326|y=125|rotate=0|tipsx=10|tipsy=80|color=70|size=18|text=50元充值>
+<Text|a=0|ax=0.5|x=449|y=125|rotate=0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G422)>>
+<Text|a=0|ax=0|ay=1|x=530|y=125.0|rotate=0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A82>
+<Text|a=0|x=65|y=145|tipsx=10|tipsy=80|color=250|size=18|text=NO.23>
+<Text|a=0|x=120|y=145|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=145|tipsx=10|tipsy=80|color=154|size=18|text=上古耀光【残】>
+<Text|a=0|ax=0.5|x=326|y=145|rotate=0|tipsx=10|tipsy=80|color=70|size=18|text=50元充值>
+<Text|a=0|ax=0.5|x=449|y=145|rotate=0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G423)>>
+<Text|a=0|ax=0|ay=1|x=530|y=145.0|rotate=0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A83>
+<Text|a=0|x=65|y=165|tipsx=10|tipsy=80|color=250|size=18|text=NO.24>
+<Text|a=0|x=120|y=165|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=165|tipsx=10|tipsy=80|color=154|size=18|text=上古流光【残】>
+<Text|a=0|ax=0.5|x=326|y=165|rotate=0|tipsx=10|tipsy=80|color=70|size=18|text=50元充值>
+<Text|a=0|ax=0.5|x=449|y=165|rotate=0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G424)>>
+<Text|a=0|ax=0|ay=1|x=530|y=165.0|rotate=0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A84>
+<Text|a=0|x=65|y=185|tipsx=10|tipsy=80|color=250|size=18|text=NO.25>
+<Text|a=0|x=120|y=185|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=185|tipsx=10|tipsy=80|color=154|size=18|text=点点噬血链>
+<Text|a=0|ax=0.5|x=326|y=185|rotate=0|tipsx=10|tipsy=80|color=70|size=18|text=50元充值>
+<Text|a=0|ax=0.5|x=449|y=185|rotate=0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G425)>>
+<Text|a=0|ax=0|ay=1|x=530|y=185.0|rotate=0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A85>
+<Text|a=0|x=65|y=205|tipsx=10|tipsy=80|color=250|size=18|text=NO.25>
+<Text|a=0|x=120|y=205|tipsx=10|tipsy=80|color=255|size=18>
+<Text|a=0|x=142|y=205|tipsx=10|tipsy=80|color=154|size=18|text=黑色切割者>
+<Text|a=0|ax=0.5|x=326|y=205|rotate=0|tipsx=10|tipsy=80|color=70|size=18|text=50元充值>
+<Text|a=0|ax=0.5|x=449|y=205|rotate=0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G426)>>
+<Text|a=0|ax=0|ay=1|x=530|y=205.0|rotate=0|tipsx=10|tipsy=80|size=18|color=251|text=我要领取|link=@领取A86>
+<Text|a=0|x=65|y=225|tipsx=10|tipsy=80|color=250|size=18|text=-------------------------------------------------------->
+<Text|a=0|x=65|y=245|tipsx=10|tipsy=80|color=254|size=18|text=官方提示√. （剩余名额为：0 时 拾取玩家不能获得奖励）>
+<Text|a=0|ax=0|x=110|y=285|tipsx=10|tipsy=80|size=18|color=251|text=第 1 页|link=@MAIN>
+<Text|a=0|ax=0|x=295|y=285|tipsx=10|tipsy=80|size=18|color=251|text=第 2 页|link=@MAIN1>
+<Text|a=0|ax=0|x=449|y=285|tipsx=10|tipsy=80|size=18|color=251|text=第 3 页|link=@MAIN2>
+
+
+
+[@领取A86]
+#IF
+equal G426 1
+CHECKITEM 黑色切割者
+EQUAL A86 <我要领取/@领取A86>
+#ACT
+MOV A86 <$USERNAME>
+DEC G426 1
+GAMEGIRD +  100
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{黑色切割者}.获得[50元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+[@领取A85]
+#IF
+equal G425 1
+CHECKITEM 点点噬血链
+EQUAL A85 <我要领取/@领取A85>
+#ACT
+MOV A85 <$USERNAME>
+DEC G425 1
+GAMEGIRD +  100
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{点点噬血链}.获得[50元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+
+[@领取A81]
+#IF
+equal G421 1
+CHECKITEM 上古鬼王【残】
+EQUAL A81 <我要领取/@领取A81>
+#ACT
+MOV A81 <$USERNAME>
+DEC G421 1
+GAMEGIRD +  100
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{上古诛仙【残】}.获得[50元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+[@领取A82]
+#IF
+equal G422 1
+CHECKITEM 上古鬼王【残】
+EQUAL A82 <我要领取/@领取A82>
+#ACT
+MOV A82 <$USERNAME>
+DEC G422 1
+GAMEGIRD +  100
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{上古鬼王【残】}.获得[50元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+[@领取A83]
+#IF
+equal G423 1
+CHECKITEM 上古耀光【残】
+EQUAL A83 <我要领取/@领取A83>
+#ACT
+MOV A83 <$USERNAME>
+DEC G423 1
+GAMEGIRD +  100
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{上古耀光【残】}.获得[50元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+
+[@领取A84]
+#IF
+equal G424 1
+CHECKITEM 上古流光【残】
+EQUAL A84 <我要领取/@领取A84>
+#ACT
+MOV A84 <$USERNAME>
+DEC G424 1
+GAMEGIRD +  100
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100灵符，如果您也想获得，请赶快充值吧。
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100灵符，如果您也想获得，请赶快充值吧。
+SENDMOVEMSG 0 245 0 100 1 玩家<$USERNAME>第一个打到{上古流光【残】}.获得[50元充值]奖励！！！
+break
+#elseact
+MESSAGEBOX 你不是第1个打到该装备的，或背包没有改装备！
+break
+
+
+
+

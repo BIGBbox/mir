@@ -1,0 +1,976 @@
+
+[@Startup]
+#IF
+#ACT
+MOVR G130 12 16
+MOVR G131 13 17
+
+[@Login]
+#if
+ISNEWHUMAN
+#act
+
+
+#IF
+ISDUMMY
+#ACT
+VAR Integer HUMAN KP
+VAR Integer HUMAN PD
+VAR Integer HUMAN JK
+;LOADVAR HUMAN JK ..\QuestDiary\临时数据\元宝捐款.txt
+;LOADVAR HUMAN KP ..\QuestDiary\临时数据\KPSave.txt
+;LOADVAR HUMAN PD ..\QuestDiary\临时数据\PDSave.txt
+VAR String HUMAN LoginPassWord
+;LOADVAR HUMAN LoginPassWord ..\QuestDiary\临时数据\LoginPassWord.txt
+VAR Integer HUMAN LoginPassWordStatus
+;LOADVAR HUMAN LoginPassWordStatus ..\QuestDiary\临时数据\LoginPassWord.txt
+VAR Integer HUMAN LoginPassWordNum
+;LOADVAR HUMAN LoginPassWordNum ..\QuestDiary\临时数据\LoginPassWord.txt
+SetOnTimer 0 1
+SetOnTimer 5 1
+BREAK
+
+#If
+CHECKLEVELEX > 0
+#Act
+#Call [\Mobile\特殊NPC\TOP图标.txt] @导航
+; #Call [\代理登录\登录文件.txt] @脚本相关
+#Call [\Mobile\特殊NPC\货币记录.txt] @货币
+#CALL [\基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+VAR Integer HUMAN KP
+VAR Integer HUMAN PD
+VAR Integer HUMAN JK
+;LOADVAR HUMAN JK ..\QuestDiary\临时数据\元宝捐款.txt
+;LOADVAR HUMAN KP ..\QuestDiary\临时数据\KPSave.txt
+;LOADVAR HUMAN PD ..\QuestDiary\临时数据\PDSave.txt
+VAR String HUMAN LoginPassWord
+;LOADVAR HUMAN LoginPassWord ..\QuestDiary\临时数据\LoginPassWord.txt
+VAR Integer HUMAN LoginPassWordStatus
+;LOADVAR HUMAN LoginPassWordStatus ..\QuestDiary\临时数据\LoginPassWord.txt
+VAR Integer HUMAN LoginPassWordNum
+;LOADVAR HUMAN LoginPassWordNum ..\QuestDiary\临时数据\LoginPassWord.txt
+#CALL [\游戏登陆\登陆脚本.txt] @登陆设置
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+#CALL [\二级密码\二级密码.txt] @登录检测
+#CALL [\元宝捐款\元宝捐款数据.txt] @刷新
+#CALL [\元宝捐款\元宝捐款奖励.txt] @奖励
+#CALL [\游戏功能\装备吸血.txt] @吸血设置
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+SetOnTimer 0 1
+SetOnTimer 5 1
+
+
+
+#If
+EQUAL G111 0
+#Act
+SetOnTimer 8 1
+
+
+
+#If
+EQUAL G111 1
+#Act
+SetOnTimer 9 1
+
+
+#IF
+equal U4 2
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+CONFERTITLE 神魔之体lv2
+#IF
+equal U4 3
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+CONFERTITLE 神魔之体lv3
+#IF
+equal U4 4
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+CONFERTITLE 神魔之体lv4
+#IF
+equal U4 5
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+CONFERTITLE 神魔之体lv5
+#IF
+equal U4 6
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+CONFERTITLE 神魔之体lv6
+#IF
+equal U4 7
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+CONFERTITLE 神魔之体lv7
+#IF
+equal U4 8
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+CONFERTITLE 神魔之体lv8
+#IF
+equal U4 9
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+CONFERTITLE 神魔之体lv9
+#IF
+equal U4 10
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+CONFERTITLE 神魔之体lv10
+#IF
+equal U4 11
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+CONFERTITLE 神魔之体lv11
+#IF
+equal U4 12
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+CONFERTITLE 神魔之体lv12
+#IF
+equal U4 13
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+CONFERTITLE 神魔之体lv13
+#IF
+equal U4 14
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv14
+#IF
+equal U4 15
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+CONFERTITLE 神魔之体lv15
+#IF
+equal U4 16
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+CONFERTITLE 神魔之体lv16
+#IF
+equal U4 17
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+CONFERTITLE 神魔之体lv17
+#IF
+equal U4 18
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+CONFERTITLE 神魔之体lv18
+#IF
+equal U4 19
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+CONFERTITLE 神魔之体lv19
+#IF
+equal U4 20
+#act
+DEPRIVETITLE 神魔之体lv1
+DEPRIVETITLE 神魔之体lv2
+DEPRIVETITLE 神魔之体lv3
+DEPRIVETITLE 神魔之体lv4
+DEPRIVETITLE 神魔之体lv5
+DEPRIVETITLE 神魔之体lv6
+DEPRIVETITLE 神魔之体lv7
+DEPRIVETITLE 神魔之体lv8
+DEPRIVETITLE 神魔之体lv9
+DEPRIVETITLE 神魔之体lv10
+CONFERTITLE 神魔之体lv20
+
+
+#IF
+equal U0 1
+#act
+DEPRIVETITLE 先天之体lv1
+DEPRIVETITLE 先天之体lv2
+DEPRIVETITLE 先天之体lv3
+DEPRIVETITLE 先天之体lv4
+DEPRIVETITLE 先天之体lv5
+DEPRIVETITLE 先天之体lv6
+DEPRIVETITLE 先天之体lv7
+DEPRIVETITLE 先天之体lv8
+CONFERTITLE 先天之体lv1
+
+
+#IF
+equal U0 2
+#act
+DEPRIVETITLE 先天之体lv1
+DEPRIVETITLE 先天之体lv2
+DEPRIVETITLE 先天之体lv3
+DEPRIVETITLE 先天之体lv4
+DEPRIVETITLE 先天之体lv5
+DEPRIVETITLE 先天之体lv6
+DEPRIVETITLE 先天之体lv7
+DEPRIVETITLE 先天之体lv8
+CONFERTITLE 先天之体lv2
+#IF
+equal U0 4
+#act
+DEPRIVETITLE 先天之体lv1
+DEPRIVETITLE 先天之体lv2
+DEPRIVETITLE 先天之体lv3
+DEPRIVETITLE 先天之体lv4
+DEPRIVETITLE 先天之体lv5
+DEPRIVETITLE 先天之体lv6
+DEPRIVETITLE 先天之体lv7
+DEPRIVETITLE 先天之体lv8
+CONFERTITLE 先天之体lv4
+
+#IF
+equal U0 5
+#act
+DEPRIVETITLE 先天之体lv1
+DEPRIVETITLE 先天之体lv2
+DEPRIVETITLE 先天之体lv3
+DEPRIVETITLE 先天之体lv4
+DEPRIVETITLE 先天之体lv5
+DEPRIVETITLE 先天之体lv6
+DEPRIVETITLE 先天之体lv7
+DEPRIVETITLE 先天之体lv8
+CONFERTITLE 先天之体lv5
+
+#IF
+equal U0 6
+#act
+DEPRIVETITLE 先天之体lv1
+DEPRIVETITLE 先天之体lv2
+DEPRIVETITLE 先天之体lv3
+DEPRIVETITLE 先天之体lv4
+DEPRIVETITLE 先天之体lv5
+DEPRIVETITLE 先天之体lv6
+DEPRIVETITLE 先天之体lv7
+DEPRIVETITLE 先天之体lv8
+CONFERTITLE 先天之体lv6
+
+#IF
+equal U0 7
+#act
+DEPRIVETITLE 先天之体lv1
+DEPRIVETITLE 先天之体lv2
+DEPRIVETITLE 先天之体lv3
+DEPRIVETITLE 先天之体lv4
+DEPRIVETITLE 先天之体lv5
+DEPRIVETITLE 先天之体lv6
+DEPRIVETITLE 先天之体lv7
+DEPRIVETITLE 先天之体lv8
+CONFERTITLE 先天之体lv7
+
+#IF
+equal U0 8
+#act
+DEPRIVETITLE 先天之体lv1
+DEPRIVETITLE 先天之体lv2
+DEPRIVETITLE 先天之体lv3
+DEPRIVETITLE 先天之体lv4
+DEPRIVETITLE 先天之体lv5
+DEPRIVETITLE 先天之体lv6
+DEPRIVETITLE 先天之体lv7
+DEPRIVETITLE 先天之体lv8
+CONFERTITLE 先天之体lv8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#IF
+equal U1 1
+#act
+DEPRIVETITLE 血龙之体lv1
+DEPRIVETITLE 血龙之体lv2
+DEPRIVETITLE 血龙之体lv3
+DEPRIVETITLE 血龙之体lv4
+DEPRIVETITLE 血龙之体lv5
+DEPRIVETITLE 血龙之体lv6
+DEPRIVETITLE 血龙之体lv7
+DEPRIVETITLE 血龙之体lv8
+CONFERTITLE 血龙之体lv1
+
+
+#IF
+equal U1 2
+#act
+DEPRIVETITLE 血龙之体lv1
+DEPRIVETITLE 血龙之体lv2
+DEPRIVETITLE 血龙之体lv3
+DEPRIVETITLE 血龙之体lv4
+DEPRIVETITLE 血龙之体lv5
+DEPRIVETITLE 血龙之体lv6
+DEPRIVETITLE 血龙之体lv7
+DEPRIVETITLE 血龙之体lv8
+CONFERTITLE 血龙之体lv2
+#IF
+equal U1 4
+#act
+DEPRIVETITLE 血龙之体lv1
+DEPRIVETITLE 血龙之体lv2
+DEPRIVETITLE 血龙之体lv3
+DEPRIVETITLE 血龙之体lv4
+DEPRIVETITLE 血龙之体lv5
+DEPRIVETITLE 血龙之体lv6
+DEPRIVETITLE 血龙之体lv7
+DEPRIVETITLE 血龙之体lv8
+CONFERTITLE 血龙之体lv4
+
+#IF
+equal U1 5
+#act
+DEPRIVETITLE 血龙之体lv1
+DEPRIVETITLE 血龙之体lv2
+DEPRIVETITLE 血龙之体lv3
+DEPRIVETITLE 血龙之体lv4
+DEPRIVETITLE 血龙之体lv5
+DEPRIVETITLE 血龙之体lv6
+DEPRIVETITLE 血龙之体lv7
+DEPRIVETITLE 血龙之体lv8
+CONFERTITLE 血龙之体lv5
+
+#IF
+equal U1 6
+#act
+DEPRIVETITLE 血龙之体lv1
+DEPRIVETITLE 血龙之体lv2
+DEPRIVETITLE 血龙之体lv3
+DEPRIVETITLE 血龙之体lv4
+DEPRIVETITLE 血龙之体lv5
+DEPRIVETITLE 血龙之体lv6
+DEPRIVETITLE 血龙之体lv7
+DEPRIVETITLE 血龙之体lv8
+CONFERTITLE 血龙之体lv6
+
+#IF
+equal U1 7
+#act
+DEPRIVETITLE 血龙之体lv1
+DEPRIVETITLE 血龙之体lv2
+DEPRIVETITLE 血龙之体lv3
+DEPRIVETITLE 血龙之体lv4
+DEPRIVETITLE 血龙之体lv5
+DEPRIVETITLE 血龙之体lv6
+DEPRIVETITLE 血龙之体lv7
+DEPRIVETITLE 血龙之体lv8
+CONFERTITLE 血龙之体lv7
+
+#IF
+equal U1 8
+#act
+DEPRIVETITLE 血龙之体lv1
+DEPRIVETITLE 血龙之体lv2
+DEPRIVETITLE 血龙之体lv3
+DEPRIVETITLE 血龙之体lv4
+DEPRIVETITLE 血龙之体lv5
+DEPRIVETITLE 血龙之体lv6
+DEPRIVETITLE 血龙之体lv7
+DEPRIVETITLE 血龙之体lv8
+CONFERTITLE 血龙之体lv8
+
+[@OnTimer0]
+#if
+CHECKLEVELEX < 50
+ISONMAP XINR1
+#act
+; SETWEATHEREFFECT XINR1 2 600
+CHANGEEXP + 20000
+#ELSEACT
+break
+
+[@OnTimer1]
+#if
+ISONMAP jqpd
+#act
+CHANGEEXP + 30000
+#ELSEACT
+SetOffTimer 1
+break
+
+
+
+;----------------------------------------------------------------------------------------------------------
+[@激情派对]
+#if
+CHECKLEVELEX < 2
+#act
+break
+
+#IF
+equal <$CLIENTFLAG> 1
+#SAY
+\
+<【/FCOLOR=229>激情派对活动<】/FCOLOR=229>\ \
+
+<╔═══════════════════════════╗/FCOLOR=59>\
+<‖/FCOLOR=59>　　　　　   　 　　<大量|经验元宝|/FCOLOR=249>　<我要前往/@派对>　　  　 　　      　<‖/FCOLOR=59>\
+<╚═══════════════════════════╝/FCOLOR=59>\
+<温馨提醒：/FCOLOR=250><围绕激情泡点NPC走动获得经验元宝.活动每3小时开启!!/FCOLOR=253>\
+<我现在就前往/@派对>　　　　　　　　　　　　<关闭/@exit>\
+#elsesay
+<Img|width=620|height=250|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|x=54|y=45|tipsx=10|tipsy=80|color=255|size=18|text=激情派对活动>
+<Text|a=0|x=163.0|y=45.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=59|size=18|text=╔═══════════════════════════════════════════╗>
+<Text|a=0|x=33.0|y=102.0|tipsx=10|tipsy=80|color=59|size=18|text=‖>
+<Text|a=0|x=160.0|y=105.0|tips={经验元宝/FCOLOR=255}|tipsx=10|tipsy=80|color=249|size=18|text=大量：经验元宝>
+<Text|a=0|x=319.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=我要前往|link=@派对>
+<Text|a=0|x=517.0|y=102.0|tipsx=10|tipsy=80|color=59|size=18|text=‖>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=59|size=18|text=╚═══════════════════════════════════════════╝>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=250|size=18|text=温馨提醒：>
+<Text|a=0|x=142|y=145|tipsx=10|tipsy=80|color=253|size=18|text=围绕激情泡点NPC走动获得经验元宝.活动每3小时开启!!>
+<Text|a=0|ay=1|x=44.0|y=183|tipsx=10|tipsy=80|size=18|color=251|text=我现在就前往|link=@派对>
+<Text|a=0|ay=1|x=331.0|y=183|tipsx=10|tipsy=80|size=18|color=251|text=关闭|link=@EXIT>
+
+
+[@派对]
+#IF
+#act
+;give 回城卷 1
+mapmove jqpd
+SendCenterMsg 116 0 [<$USERNAME>]赶往现场参加激情派对，邀请您一起来激情... 1 1
+GuildNoticeMsg 5 255 [<$USERNAME>]赶往现场参加激情派对，邀请您一起来激情...
+GuildNoticeMsg 5 255 [<$USERNAME>]赶往现场参加激情派对，邀请您一起来激情...
+break
+
+[@行会召唤]
+#IF
+EQUAL A92 <$USERNAME>
+#ACT
+BREAK
+
+#or
+not HaveGuild
+not CheckOfGuild <$STR(A91)>
+#act
+break
+
+#IF
+equal <$CLIENTFLAG> 1
+#SAY
+\ \
+<>   <━━━━━》/FCOLOR=250>\
+<>   <━━━━━━━━━》/FCOLOR=151>\
+<>   <━━━━━━━━━━━━━》/FCOLOR=70>\
+<>   <━━━━━━━━━━━━━━━━━》/FCOLOR=249>\
+<>   <行会兄弟〖/FCOLOR=254><$STR(A92)><〗召集所有兄弟前往沙巴克皇宫！/FCOLOR=254>\
+<>   <是否立即传送过去呢?/FCOLOR=254>\
+<>   <立刻前往/@行会支援令_1>　            　<我现在忙../@EXIT>\
+#elsesay
+<Img|x=0.0|y=-1.0|width=620|height=220|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=60.0|y=16.0|tipsx=10|tipsy=80|color=250|size=18|text=━━━━━》>
+<Text|a=0|x=60.0|y=36.0|tipsx=10|tipsy=80|color=151|size=18|text=━━━━━━━━━》>
+<Text|a=0|x=60.0|y=56.0|tipsx=10|tipsy=80|color=70|size=18|text=━━━━━━━━━━━━━》>
+<Text|a=0|x=60.0|y=76.0|tipsx=10|tipsy=80|color=249|size=18|text=━━━━━━━━━━━━━━━━━》>
+<Text|a=0|x=60.0|y=96.0|tipsx=10|tipsy=80|color=254|size=18|text=行会兄弟〖>
+<Text|a=0|x=170.0|y=96.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(A92)>>
+<Text|a=0|x=291.0|y=96.0|tipsx=10|tipsy=80|color=254|size=18|text=〗召集所有兄弟前往沙巴克皇宫！>
+<Text|a=0|x=60.0|y=116.0|tipsx=10|tipsy=80|color=254|size=18|text=是否立即传送过去呢?>
+<Text|a=0|x=129.0|y=157.0|tipsx=10|tipsy=80|color=251|size=18|text=立刻前往|link=@行会支援令_1>
+<Text|a=0|x=370.0|y=157.0|tipsx=10|tipsy=80|color=251|size=18|text=我现在忙..|link=@EXIT>
+
+
+[@行会支援令_1]
+#IF
+HaveGuild
+CheckOfGuild <$STR(A91)>
+#ACT
+goto @cszx
+BREAK
+
+[@cszx]
+#if
+RANDOM 3
+#act
+MAPMOVE 0150 18 11
+BREAK
+#if
+RANDOM 2
+#act
+MAPMOVE 0150 10 19
+BREAK
+#if
+RANDOM 1
+#act
+MAPMOVE 0150 12 13
+BREAK
+;----------------------------------------------------------------------------------------------------------
+[@清理猛男第一]
+#IF
+CHECKNAMELIST ..\QuestDiary\临时数据\猛男第一.txt
+#ACT
+ChangeHumAbility 5 - 50
+ChangeHumAbility 6 - 50
+ChangeHumAbility 7 - 50
+ChangeHumAbility 8 - 50
+ChangeHumAbility 9 - 50
+ChangeHumAbility 10 - 50
+;CloseBigDialogBox
+ChangeModeEx 14 0
+SETICON 0 -1
+#SAY
+你的天下第一已经被取代！！！！
+
+[@清理美女第一]
+#IF
+CHECKNAMELIST ..\QuestDiary\临时数据\美女第一.txt
+#ACT
+ChangeHumAbility 5 - 50
+ChangeHumAbility 6 - 50
+ChangeHumAbility 7 - 50
+ChangeHumAbility 8 - 50
+ChangeHumAbility 9 - 50
+ChangeHumAbility 10 - 50
+ChangeModeEx 14 0
+;CloseBigDialogBox
+SETICON 0 -1
+#SAY
+你的天下第一已经被取代！！！！
+;----------------------------------------------------------------------------------------------------------
+[@真假半兽人] 
+#if
+equal <$CLIENTFLAG> 1
+#say
+《真假半兽人》活动开启\
+进入场地后，杀死真半兽人，可获得5888元宝奖励！\
+地图中共有30只真半兽人，100只假半兽人，真半兽人杀死\
+10只后活动自动结束！\ \
+
+<进入真假半兽人场地/@进入场地>
+#elsesay
+<Img|width=620|height=200|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=18|text=《真假半兽人》活动开启\>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=255|size=18|text=进入场地后，杀死真半兽人，可获得5888元宝奖励！\>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=255|size=18|text=地图中共有30只真半兽人，100只假半兽人，真半兽人杀死\>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=255|size=18|text=10只后活动自动结束！\ \>
+<Text|a=0|x=200.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=进入真假半兽人场地|link=@进入场地>
+
+
+[@进入场地]
+#IF
+#act
+;give 回城卷 1
+mapmove HDCD
+SendCenterMsg 116 0 [<$USERNAME>]赶往现场参加《真假半兽人》活动... 1 1
+GuildNoticeMsg 5 255 [<$USERNAME>]赶往现场参加《真假半兽人》活动...
+GuildNoticeMsg 5 255 [<$USERNAME>]赶往现场参加《真假半兽人》活动...
+break
+
+[@刺杀稻草人a]
+#if
+equal <$CLIENTFLAG> 1
+#say
+\
+<【/FCOLOR=229>全服活动系统<】/FCOLOR=229>\ \
+
+<╔═══════════════════════════╗/FCOLOR=59>\
+<‖/FCOLOR=59>　　　　　   　 　　<刺杀|稻草人|/FCOLOR=249>　<我要前往/@diyu>　　  　　　      　<‖/FCOLOR=59>\
+<╚═══════════════════════════╝/FCOLOR=59>\
+<温馨提醒：/FCOLOR=250><稻草人拥有超高经验.想升级的玩家不可错过哦！/FCOLOR=253>\
+<我现在就前往/@就前往>　　　　　　　　　　　　<关闭/@exit>\
+#elsesay
+<Img|x=0.0|y=0.0|width=620|height=240|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32.0|y=32.0|tipsx=10|tipsy=80|color=229|size=18|text=【>
+<Text|a=0|x=54.0|y=32.0|tipsx=10|tipsy=80|color=255|size=18|text=全服活动系统>
+<Text|a=0|x=168.0|y=32.0|tipsx=10|tipsy=80|color=229|size=18|text=】>
+<Text|a=0|x=32.0|y=72.0|tipsx=10|tipsy=80|color=59|size=18|text=╔═══════════════════════════════════════════════╗>
+<Text|a=0|x=33.0|y=89.0|tipsx=10|tipsy=80|color=59|size=18|text=‖>
+<Text|a=0|x=163.0|y=92.0|tips={稻草人/FCOLOR=255}|tipsx=10|tipsy=80|color=249|size=18|text=刺杀：稻草人>
+<Text|a=0|x=356.0|y=92.0|tipsx=10|tipsy=80|color=251|size=18|text=我要前往|link=@DIYU>
+<Text|a=0|x=561.0|y=90.0|tipsx=10|tipsy=80|color=59|size=18|text=‖>
+<Text|a=0|x=32.0|y=112.0|tipsx=10|tipsy=80|color=59|size=18|text=╚═══════════════════════════════════════════════╝>
+<Text|a=0|x=32.0|y=136.0|tipsx=10|tipsy=80|color=250|size=18|text=温馨提醒：>
+<Text|a=0|x=142.0|y=136.0|tipsx=10|tipsy=80|color=253|size=18|text=稻草人拥有超高经验.想升级的玩家不可错过哦！>
+<Text|a=0|ay=1|x=112.0|y=179.0|tipsx=10|tipsy=80|size=18|color=251|text=我现在就前往|link=@就前往>
+<Text|a=0|ay=1|x=394.0|y=179.0|tipsx=10|tipsy=80|size=18|color=251|text=关闭|link=@EXIT>
+
+
+
+[@就前往]
+#IF
+#act
+;give 回城卷 1
+mapmove HDCD
+SendCenterMsg 116 0 [<$USERNAME>]赶往现场参加《刺杀稻草人》活动... 1 1
+GuildNoticeMsg 5 255 [<$USERNAME>]赶往现场参加《刺杀稻草人》活动...
+GuildNoticeMsg 5 255 [<$USERNAME>]赶往现场参加《刺杀稻草人》活动...
+break
+
+[@冰城之战a]
+#if
+equal <$CLIENTFLAG> 1
+#say
+\
+<冰城之战，每天22:15准时开启，/AUTOCOLOR=250>\　\
+
+<活动地图刷【活动·冰城之战】BOSS怪.将其猎杀爆装备！/AUTOCOLOR=151>\　\
+
+????<★/AUTOCOLOR=253>??<★/AUTOCOLOR=254>??<加入冰城之战/@加入冰城之战>??<★/AUTOCOLOR=253>??<★/AUTOCOLOR=254>??
+#elsesay
+<Img|x=0.0|y=0|width=620|height=200|scale9r=10|scale9l=10|bg=1|scale9b=10|reset=1|move=0|img=public/bg_npc_01.png|scale9t=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=250|size=18|text=冰城之战，每天22:15准时开启，>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=151|size=18|text=活动地图刷【活动·冰城之战】BOSS怪.将其猎杀爆装备！>
+<Text|a=0|x=40.0|y=105.0|tipsx=10|tipsy=80|color=255|size=18|text=????>
+<Text|a=0|x=76|y=105|tipsx=10|tipsy=80|color=253|size=18|text=★>
+<Text|a=0|x=98|y=105|tipsx=10|tipsy=80|color=255|size=18|text=??>
+<Text|a=0|x=120|y=105|tipsx=10|tipsy=80|color=254|size=18|text=★>
+<Text|a=0|x=142|y=105|tipsx=10|tipsy=80|color=255|size=18|text=??>
+<Text|a=0|x=170.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=加入冰城之战|link=@加入冰城之战>
+<Text|a=0|x=287.0|y=105.0|tipsx=10|tipsy=80|color=255|size=18|text=??>
+<Text|a=0|x=308.0|y=105.0|tipsx=10|tipsy=80|color=253|size=18|text=★>
+<Text|a=0|x=330.0|y=105.0|tipsx=10|tipsy=80|color=255|size=18|text=??>
+<Text|a=0|x=352.0|y=105.0|tipsx=10|tipsy=80|color=254|size=18|text=★>
+<Text|a=0|x=374.0|y=105.0|tipsx=10|tipsy=80|color=255|size=18|text=??>
+
+
+[@加入冰城之战]
+#IF
+#act
+;give 回城卷 1
+mapmove HDCD
+SendCenterMsg 116 0 [<$USERNAME>]赶往现场参加《冰城之战》活动... 1 1
+GuildNoticeMsg 5 255 [<$USERNAME>]赶往现场参加《冰城之战》活动...
+GuildNoticeMsg 5 255 [<$USERNAME>]赶往现场参加《冰城之战》活动...
+break
+;----------------------------------------------------------------------------------------------------------
+[@秒修装备1]
+#IF
+#ACT
+ACTREPAIRALL
+
+
+
+;----------------------------------------------------------------------------------------------------------
+
+[@OnTimer5]
+#if
+EQUAL I66 1
+CheckHumInRange jqpd 23 26 1
+#act
+GAMEGOLD + 20
+CHANGEEXP + 300000
+BREAK
+
+#if
+EQUAL I66 1
+CheckHumInRange jqpd 23 26 2
+#act
+GAMEGOLD + 15
+CHANGEEXP + 200000
+BREAK
+
+
+
+#if
+EQUAL I66 1
+CheckHumInRange jqpd 23 26 3
+#act
+GAMEGOLD + 10
+CHANGEEXP + 100000
+BREAK
+
+
+
+
+
+
+
+
+
+
+[@OnTimer8]
+#if
+CHECKMAPNAME mhfy
+#act
+GAMEGOLD - 2
+
+
+#OR
+CHECKMAPNAME D2081
+CHECKMAPNAME D2082
+CHECKMAPNAME D2083
+CHECKMAPNAME D2084
+CHECKMAPNAME D2085
+CHECKMAPNAME D2086
+#act
+GAMEGOLD - 10
+
+
+[@OnTimer9]
+#if
+CHECKMAPNAME mhfy
+#act
+GAMEGOLD - 4
+
+#OR
+CHECKMAPNAME D2081
+CHECKMAPNAME D2082
+CHECKMAPNAME D2083
+CHECKMAPNAME D2084
+CHECKMAPNAME D2085
+CHECKMAPNAME D2086
+#act
+GAMEGOLD - 20
+
+;----------------------------------------------------------------------------------------------------------
+[@地图加价1]
+#if
+#act
+SetOnTimer 8 1
+SetOffTimer 9
+SENDMSG 1 亲爱的玩家，「黑暗之森」地图收费模式已切换完毕！
+SENDMSG 1 亲爱的玩家，「黑暗之森」地图收费模式已切换完毕！
+SENDMSG 1 亲爱的玩家，「火龙魔窑」地图收费模式已切换完毕！
+SENDMSG 1 亲爱的玩家，「火龙魔窑」地图收费模式已切换完毕！
+
+[@地图减价1]
+#if
+#act
+SetOnTimer 9 1
+SetOffTimer 8
+SENDMSG 1 亲爱的玩家，黑暗之森林地图收费模式已切换完毕！
+SENDMSG 1 亲爱的玩家，黑暗之森林地图收费模式已切换完毕！
+;----------------------------------------------------------------------------------------------------------
+
+[@天降福利]
+#IF
+NOT CHECKLEVELEX > 1
+#ACT
+BREAK
+
+#IF
+equal <$CLIENTFLAG> 1
+#SAY
+\
+┏≈☆★≈☆★≈☆★☆≈【土药天降福利】≈☆★☆≈★☆≈★☆≈┓\
+╔┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╗\
+┇[每3小时一次]降元宝、装备、转生材料、锻体材料、锻造材料等.┇\
+┇[每3小时一次]降元宝、装备、转生材料、锻体材料、锻造材料等.┇\
+╚┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╝\
+┗≈☆★≈☆★≈☆★☆≈【土药天降福利】≈☆★☆≈★☆≈★☆≈┛\ \
+
+<我现在就前往/@前往>　　　　　　　　　　　　<关闭/@exit>\
+#ELSESAY
+<Img|width=620|height=240|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=255|size=18|text=┏≈☆★≈☆★≈☆★☆≈【土药天降福利】≈☆★☆≈★☆≈★☆≈┓\>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=255|size=18|text=╔┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╗\>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=255|size=18|text=┇[每3小时一次]降元宝、装备、转生材料、锻体材料、锻造材料等.┇\>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=255|size=18|text=┇[每3小时一次]降元宝、装备、转生材料、锻体材料、锻造材料等.┇\>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=255|size=18|text=╚┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╝\>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=255|size=18|text=┗≈☆★≈☆★≈☆★☆≈【土药天降福利】≈☆★☆≈★☆≈★☆≈┛\ \>
+<Text|a=0|x=103.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=我现在就前往|link=@前往>
+<Text|a=0|x=397.0|y=188.0|tipsx=10|tipsy=80|color=251|size=18|text=关闭|link=@EXIT>
+
+
+[@前往]
+#IF
+#act
+;give 回城卷 1
+mapmove 3 353 329
+SendCenterMsg 116 0 [<$USERNAME>]赶往现场参加土药天降福利，邀请您一起来激情... 1 1
+GuildNoticeMsg 5 255 [<$USERNAME>]赶往现场参加土药天降福利，邀请您一起来激情...
+GuildNoticeMsg 5 255 [<$USERNAME>]赶往现场参加土药天降福利，邀请您一起来激情...
+break

@@ -1,0 +1,66 @@
+[@修罗1回收]
+{
+#if
+checkitem 血の龙光 1
+#ACT
+take 血の龙光 1
+GAMEGOLD + 1400
+CHANGEEXP + 800000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了修罗装备，获得了大量元宝经验！
+GOTO @修罗1回收
+break
+#if
+checkitem 血の苍龙铠 1
+#ACT
+take 血の苍龙铠 1
+GAMEGOLD + 1400
+CHANGEEXP + 800000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了修罗装备，获得了大量元宝经验！
+GOTO @修罗1回收
+break
+#if
+checkitem 血の苍龙袍 1
+#ACT
+take 血の苍龙袍 1
+GAMEGOLD + 1400
+CHANGEEXP + 800000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了修罗装备，获得了大量元宝经验！
+GOTO @修罗1回收
+break
+#if
+checkitem 血の灭神 1
+#ACT
+take 血の灭神 1
+GAMEGOLD + 700
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了修罗装备，获得了大量元宝经验！
+GOTO @修罗1回收
+break
+#if
+checkitem 血の杀佛 1
+#ACT
+take 血の杀佛 1
+GAMEGOLD + 700
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了修罗装备，获得了大量元宝经验！
+GOTO @修罗1回收
+break
+#if
+checkitem 血の裂天 1
+#ACT
+take 血の裂天 1
+GAMEGOLD + 700
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了修罗装备，获得了大量元宝经验！
+GOTO @修罗1回收
+break
+#if
+checkitem 血の烈焰 1
+#ACT
+take 血の烈焰 1
+GAMEGOLD + 700
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了修罗装备，获得了大量元宝经验！
+GOTO @修罗1回收
+break
+}

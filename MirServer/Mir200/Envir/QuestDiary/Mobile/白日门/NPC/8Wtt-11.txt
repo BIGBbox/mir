@@ -1,0 +1,11 @@
+[@Settings]
+{
+<Text|text=<$NPCNAME>|x=30|y=20|size=18|color=1005>
+<Text|text=很久以前, 我们道馆有祖传之宝叫做破关珍剑被恶人盗走了|x=30|y=60|size=16>
+<Text|text=那把宝剑很神奇，传说宝剑一出天地震动，有天龙下凡飘舞|x=30|y=80|size=16>
+<Text|text=可能有些夸张...不过若宝剑存在的话，就可以领略它的威力.|x=30|y=100|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@exit>
+<Text|text=离开|x=60|y=133|size=16|color=1001|link=@exit>
+}

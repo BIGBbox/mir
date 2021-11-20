@@ -1,0 +1,12 @@
+[@Settings]
+{
+<Text|text=<$NPCNAME>|x=30|y=20|size=18|color=1005>
+<Text|text=从白日门往北走，就会出现叫做灌木林的森林，那里树木茂盛|x=30|y=60|size=16>
+<Text|text=白天也不见一丝阳光， 附近的人们经常在那里迷路|x=30|y=80|size=16>
+<Text|text=所以去那儿一定要倍加小心.|x=30|y=100|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@exit>
+<Text|text=离开|x=60|y=133|size=16|color=1001|link=@exit>
+
+}

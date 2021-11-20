@@ -1,0 +1,23 @@
+[@main]
+#IF
+equal G130 <$x>
+equal G131 <$Y>
+#act
+mapmove <$STR(T10)> <$STR(U10)> <$STR(U11)>
+MOV U10 0
+MOV U11 0
+MOV T10 0
+SENDMSG 7 提示：恭喜您验证成功！送您前往原所在地图！！
+SENDMSG 5 提示：恭喜您验证成功！送您前往原所在地图！！
+#ELSEACT
+MOV U10 333
+MOV U11 333
+MOV T10 3
+SENDMSG 7 提示：您当前验证失败，疑似脱机，已将您T下线！！
+SENDMSG 7 提示：您当前验证失败，疑似脱机，已将您T下线！！
+SENDMSG 7 提示：您当前验证失败，疑似脱机，已将您T下线！！
+SENDMSG 5 提示：您当前验证失败，疑似脱机，已将您T下线！！
+SENDMSG 5 提示：您当前验证失败，疑似脱机，已将您T下线！！
+SENDMSG 5 提示：您当前验证失败，疑似脱机，已将您T下线！！
+SENDMSG 5 提示：您当前验证失败，疑似脱机，已将您T下线！！
+Gmexecute Kick <$USERNAME>

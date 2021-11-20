@@ -1,0 +1,11 @@
+[@Settings]
+{
+<Text|text=林小姐|x=30|y=20|size=18|color=1005>
+<Text|text=哦，我也要快一点赚钱，开这样的客栈。|x=30|y=60|size=16>
+<Text|text=这样就得努力做事。|x=30|y=80|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@exit>
+<Text|text=关 闭|x=60|y=133|size=16|color=1001|link=@exit>
+
+}

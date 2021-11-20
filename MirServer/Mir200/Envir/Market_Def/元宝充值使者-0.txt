@@ -1,0 +1,35 @@
+[@main]
+<$USERNAME>您好,欢迎来到<$SERVERNAME>,很高兴为您服务\
+您当前持有:<$GAMEGOLD>元宝\
+①本系统支持网上银行、手机充值卡、各类游戏点卡。\
+②请在充值5分钟后在本NPC处领取\
+③当前充值比例为1:1\
+\
+<领取/@领取>┆<充值/@充值>┆<退出/@exit>\
+[@领取]
+#CALL [\充值\灵符\灵符.txt] @领取灵符
+#CALL [\充值\附加赠送\附加赠送.txt] @领取附加赠送
+
+[@充值]
+#IF
+#SAY
+<充值通道1/@充值通道1>┆<充值通道2/@充值通道2>┆<充值通道3/@充值通道3>
+\
+<退出/@exit>
+
+[@充值通道1]
+#IF
+#ACT
+OpenWebSite http://http://pay.pay866.com/app/acquire/req?id=11852
+
+[@充值通道2]
+#IF
+#ACT
+OpenWebSite http://http://pay.pay866.com/app/acquire/req?id=11852
+
+[@充值通道3]
+#IF
+#ACT
+OpenWebSite http://http://pay.pay866.com/app/acquire/req?id=11852
+
+

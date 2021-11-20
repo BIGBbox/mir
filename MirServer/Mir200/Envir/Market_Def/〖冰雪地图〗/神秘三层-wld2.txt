@@ -1,0 +1,38 @@
+[@main]
+#IF
+equal <$CLIENTFLAG> 1
+#say
+\ \
+<━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\ \
+
+<[物品爆率]/FCOLOR=250>：★★★★★\
+<[地图简介]/FCOLOR=250>：<此地图共七层,小怪20分钟一刷BOSS60分钟,领主6小时刷新一次/FCOLOR=254>\ \
+
+<━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\
+<Hot~/FCOLOR=58>      <我要进入神秘峡谷三层:>   \
+<免费进入/@chun21神秘1>\
+#elsesay
+<Img|x=0.0|y=0.0|width=650|height=300|rotate=0|scale9r=10|scale9t=10|scale9l=10|bg=1|move=0|esc=1|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=627.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=649.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=250|size=18|text=[物品爆率]>
+<Text|a=0|x=118.0|y=85.0|tipsx=10|tipsy=80|color=255|size=18|text=：★★★★★\>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=250|size=18|text=[地图简介]>
+<Text|a=0|x=118.0|y=105.0|tipsx=10|tipsy=80|color=255|size=18|text=：>
+<Text|a=0|x=140.0|y=105.0|tipsx=10|tipsy=80|color=254|size=18|text=此地图共七层,小怪20分钟一刷BOSS60分钟,领主6小时刷新一次>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=58|size=18|text=HOT~>
+<Text|a=0|x=142|y=165|tipsx=10|tipsy=80|color=255|size=18|text=我要进入神秘峡谷三层:>
+<Text|a=0|x=32.0|y=190.0|tipsx=10|tipsy=80|color=251|size=18|text=免费进入|link=@CHUN21神秘1>
+
+[@chun21神秘1]
+#if
+#ACT
+;give 回城卷 1
+MapMove wld3 148 81
+;SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖神秘三层〗,寻找高级装备！ 1 3
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖神秘三层〗,寻找高级装备！ 1 3
+;GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖神秘三层〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖神秘三层〗,寻找高级装备！
+break

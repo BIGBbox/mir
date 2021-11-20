@@ -1,0 +1,149 @@
+[@自动使用道具1]
+{
+
+#IF
+CHECKITEM 100元宝
+#ACT
+take 100元宝 1
+goto @StdModeFunc59
+
+#IF
+CHECKITEM 200元宝
+#ACT
+take 200元宝 1
+goto @StdModeFunc60
+
+#IF
+CHECKITEM 500元宝
+#ACT
+take 500元宝 1
+goto @StdModeFunc61
+
+#IF
+CHECKITEM 1000元宝
+#ACT
+take 1000元宝 1
+goto @StdModeFunc62
+
+#IF
+CHECKITEM 2000元宝
+#ACT
+take 2000元宝 1
+goto @StdModeFunc63
+
+#IF
+CHECKITEM 5000元宝
+#ACT
+take 5000元宝 1
+goto @StdModeFunc64
+
+#IF
+CHECKITEM 10000元宝
+#ACT
+take 10000元宝 1
+goto @StdModeFunc65
+
+#IF
+CHECKITEM 20000元宝
+#ACT
+take 20000元宝 1
+goto @StdModeFunc66
+
+#IF
+CHECKITEM 50000元宝
+#ACT
+take 50000元宝 1
+goto @StdModeFunc67
+
+#IF
+CHECKITEM 100000元宝
+#ACT
+take 100000元宝 1
+goto @StdModeFunc68
+
+#IF
+CHECKITEM 1亿经验卷
+#ACT
+take 1亿经验卷 1
+goto @StdModeFunc69
+
+#IF
+CHECKITEM 1000W经验卷
+#ACT
+take 1000W经验卷 1
+goto @StdModeFunc70
+
+#IF
+CHECKITEM 2000W经验卷
+#ACT
+take 2000W经验卷 1
+goto @StdModeFunc71
+
+#IF
+CHECKITEM 3000W经验卷
+#ACT
+take 3000W经验卷 1
+goto @StdModeFunc72
+
+#IF
+CHECKITEM 5000W经验卷
+#ACT
+take 5000W经验卷 1
+goto @StdModeFunc73
+
+
+#IF
+CHECKITEM 2亿经验卷
+#ACT
+take 2亿经验卷 1
+goto @StdModeFunc75
+
+#IF
+CHECKITEM 5亿经验卷
+#ACT
+take 5亿经验卷 1
+goto @StdModeFunc76
+
+#IF
+CHECKITEM 100W经验卷
+#ACT
+take 100W经验卷 1
+goto @StdModeFunc77
+
+#IF
+CHECKITEM 200W经验卷
+#ACT
+take 200W经验卷 1
+goto @StdModeFunc78
+
+#IF
+CHECKITEM 500W经验卷
+#ACT
+take 500W经验卷 1
+goto @StdModeFunc79
+
+#IF
+CHECKITEM 20元宝
+#ACT
+take 20元宝 1
+goto @StdModeFunc80
+
+#IF
+CHECKITEM 50元宝
+#ACT
+take 50元宝 1
+goto @StdModeFunc81
+
+#IF
+CHECKITEM 20W经验卷
+#ACT
+take 20W经验卷 1
+goto @StdModeFunc188
+
+#IF
+CHECKITEM 50W经验卷
+#ACT
+take 50W经验卷 1
+goto @StdModeFunc189
+
+}

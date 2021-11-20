@@ -1,0 +1,215 @@
+[@main]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<Img|x=-4.0|y=0.0|width=620|height=265|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=13|text=HOT~>
+<Text|a=0|x=98|y=25|tipsx=10|tipsy=80|color=251|size=13|text=天下第一猛男:>
+<Text|a=0|x=241|y=25|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(A400)>>
+<Text|a=0|ax=0|x=357|y=25.0|tipsx=10|tipsy=80|color=253|size=13|text=所属行会:>
+<Text|a=0|ax=0|x=455|y=25.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(A401)>\>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=253|size=13|text=申请时间:>
+<Text|a=0|x=131|y=45|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G403)>时<$STR(G404)>分<$STR(G405)>秒\>
+<Text|a=0|x=32.0|y=64.0|tipsx=10|tipsy=80|color=253|size=13|text=他的等级:>
+<Text|a=0|x=131.0|y=64.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G400)>>
+<Text|a=0|x=274.0|y=63.0|tipsx=10|tipsy=80|color=253|size=13|text=他的攻击:>
+<Text|a=0|x=373.0|y=63.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G401)>-<$STR(G402)>>
+<Text|a=0|x=33.0|y=84.0|tipsx=10|tipsy=80|color=253|size=13|text=获得称号:>
+<Text|a=0|x=128.0|y=84.0|tipsx=10|tipsy=80|color=254|size=13|text=天下第一猛男>
+<Text|a=0|x=275.0|y=84.0|tipsx=10|tipsy=80|color=253|size=13|text=获得属性:>
+<Text|a=0|x=370.0|y=83.0|tipsx=10|tipsy=80|color=255|size=13|text=属性：防麻痹+永久1500生命500魔法>
+<Text|a=0|x=174.0|y=111.0|tipsx=10|tipsy=80|color=180|size=13|text=---------------------天下第一------------------------>
+<Text|a=0|x=32.0|y=140.0|tipsx=10|tipsy=80|color=255|size=13|text=HOT~>
+<Text|a=0|x=98.0|y=140.0|tipsx=10|tipsy=80|color=251|size=13|text=天下第一美女:>
+<Text|a=0|x=241.0|y=140.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(A402)>>
+<Text|a=0|ax=0|x=357|y=140.0|tipsx=10|tipsy=80|color=253|size=13|text=所属行会:>
+<Text|a=0|ax=0|x=455|y=140.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(A403)>\>
+<Text|a=0|x=32.0|y=159.0|tipsx=10|tipsy=80|color=253|size=13|text=申请时间:>
+<Text|a=0|x=131.0|y=159.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G408)>时<$STR(G409)>分<$STR(G410)>秒\>
+<Text|a=0|x=32.0|y=178.0|tipsx=10|tipsy=80|color=253|size=13|text=他的等级:>
+<Text|a=0|x=131.0|y=178.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G411)>>
+<Text|a=0|x=269.0|y=177.0|tipsx=10|tipsy=80|color=253|size=13|text=他的攻击:>
+<Text|a=0|x=368.0|y=177.0|tipsx=10|tipsy=80|color=255|size=13|text=<$STR(G406)>-<$STR(G407)>>
+<Text|a=0|x=32.0|y=197.0|tipsx=10|tipsy=80|color=253|size=13|text=获得称号:>
+<Text|a=0|x=131.0|y=197.0|tipsx=10|tipsy=80|color=254|size=13|text=天下第一美女>
+<Text|a=0|x=270.0|y=198.0|tipsx=10|tipsy=80|color=253|size=13|text=获得属性:>
+<Text|a=0|x=369.0|y=198.0|tipsx=10|tipsy=80|color=255|size=13|text=属性：防麻痹+永久1500生命500魔法>
+<Text|a=0|x=259.0|y=226.0|tipsx=10|tipsy=80|color=251|size=13|text=申请天下第一|link=@申请>
+
+#elsesay
+<Img|width=620|height=300|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=18|text=HOT~>
+<Text|a=0|x=98|y=25|tipsx=10|tipsy=80|color=251|size=18|text=天下第一猛男:>
+<Text|a=0|x=241|y=25|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(A400)>>
+<Text|a=0|x=410.0|y=25.0|tipsx=10|tipsy=80|color=253|size=18|text=所属行会:>
+<Text|a=0|x=509.0|y=25.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(A401)>\>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=253|size=18|text=申请时间:>
+<Text|a=0|x=131|y=45|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G403)>时<$STR(G404)>分<$STR(G405)>秒\>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=253|size=18|text=他的等级:>
+<Text|a=0|x=131|y=65|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G400)>>
+<Text|a=0|x=285|y=65|tipsx=10|tipsy=80|color=253|size=18|text=他的攻击:>
+<Text|a=0|x=384|y=65|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G401)>-<$STR(G402)>>
+<Text|a=0|x=32.0|y=86.0|tipsx=10|tipsy=80|color=253|size=18|text=获得称号:>
+<Text|a=0|x=131.0|y=86.0|tipsx=10|tipsy=80|color=254|size=18|text=天下第一猛男>
+<Text|a=0|x=32.0|y=107.0|tipsx=10|tipsy=80|color=253|size=18|text=获得属性:>
+<Text|a=0|x=131.0|y=107.0|tipsx=10|tipsy=80|color=255|size=18|text=属性：防麻痹+永久1500生命500魔法>
+<Text|a=0|x=31.0|y=129.0|tipsx=10|tipsy=80|color=180|size=18|text=---------------------天下第一------------------------>
+<Text|a=0|x=32.0|y=149.0|tipsx=10|tipsy=80|color=255|size=18|text=HOT~>
+<Text|a=0|x=98.0|y=149.0|tipsx=10|tipsy=80|color=251|size=18|text=天下第一美女:>
+<Text|a=0|x=241.0|y=149.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(A402)>>
+<Text|a=0|x=408.0|y=149.0|tipsx=10|tipsy=80|color=253|size=18|text=所属行会:>
+<Text|a=0|x=507.0|y=149.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(A403)>\>
+<Text|a=0|x=32.0|y=169.0|tipsx=10|tipsy=80|color=253|size=18|text=申请时间:>
+<Text|a=0|x=131.0|y=169.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G408)>时<$STR(G409)>分<$STR(G410)>秒\>
+<Text|a=0|x=32.0|y=189.0|tipsx=10|tipsy=80|color=253|size=18|text=他的等级:>
+<Text|a=0|x=131.0|y=189.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G411)>>
+<Text|a=0|x=285.0|y=189.0|tipsx=10|tipsy=80|color=253|size=18|text=他的攻击:>
+<Text|a=0|x=384.0|y=189.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(G406)>-<$STR(G407)>>
+<Text|a=0|x=32.0|y=211.0|tipsx=10|tipsy=80|color=253|size=18|text=获得称号:>
+<Text|a=0|x=131.0|y=211.0|tipsx=10|tipsy=80|color=254|size=18|text=天下第一美女>
+<Text|a=0|x=32.0|y=233.0|tipsx=10|tipsy=80|color=253|size=18|text=获得属性:>
+<Text|a=0|x=131.0|y=233.0|tipsx=10|tipsy=80|color=255|size=18|text=属性：防麻痹+永久1500生命500魔法>
+<Text|a=0|x=32.0|y=259.0|tipsx=10|tipsy=80|color=251|size=18|text=申请天下第一|link=@申请>
+
+
+[@申请]
+#OR
+check [029] 1
+check [030] 1
+#ACT
+MESSAGEBOX 你是至尊会员，不能申请
+break
+
+#IF
+gender man
+#ACT
+goto @猛男
+#ELSEACT
+goto @美女
+
+
+[@美女]
+#IF
+equal A402 <$USERNAME>
+#act
+MESSAGEBOX 你当前已经是天下第一
+break
+#IF
+equal A400 <$USERNAME>
+#act
+MESSAGEBOX 你当前已经是天下第一
+break
+#IF
+small G411 <$LEVEL>
+#ACT
+MOV G411 <$LEVEL>
+MOV G406 <$DC>
+MOV G407 <$MAXDC>
+MOV G408 <$HOUR>
+MOV G409 <$MINUTE>
+MOV G410 <$SECOND>
+MOV A402 <$USERNAME>
+MOV A403 <$GUILDNAME>
+ChangeModeEx 14 999999
+ChangeModeEx 3 99999 1500
+ChangeModeEx 4 99999 500
+Gmexecute 开始提问 @清理美女第一
+GOTO @美女职业
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【天下第一美女】...
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【天下第一美女】...
+#ELSEACT
+MESSAGEBOX 你目前的等级没有超过当前的天下第一
+BREAK
+
+[@美女职业]
+#IF
+checkjob warrior
+#ACT
+SETICON 0 0 000054 0 -22 0 0
+CLEARNAMELIST ..\QuestDiary\临时数据\美女第一.txt
+ADDNAMELIST ..\QuestDiary\临时数据\美女第一.txt
+GOTO @main
+BREAK
+#IF
+checkjob wizard
+#ACT
+SETICON 0 0 000055 0 -22 0 0
+CLEARNAMELIST ..\QuestDiary\临时数据\美女第一.txt
+ADDNAMELIST ..\QuestDiary\临时数据\美女第一.txt
+GOTO @main
+BREAK
+#IF
+checkjob taoist
+#ACT
+SETICON 0 0 000053 0 -22 0 0
+CLEARNAMELIST ..\QuestDiary\临时数据\美女第一.txt
+ADDNAMELIST ..\QuestDiary\临时数据\美女第一.txt
+GOTO @main
+BREAK
+
+[@猛男]
+#IF
+equal A402 <$USERNAME>
+#act
+MESSAGEBOX 你当前已经是天下第一
+break
+#IF
+equal A400 <$USERNAME>
+#act
+MESSAGEBOX 你当前已经是天下第一
+break
+
+#IF
+small G400 <$LEVEL>
+#ACT
+MOV G400 <$LEVEL>
+MOV G401 <$DC>
+MOV G402 <$MAXDC>
+MOV G403 <$HOUR>
+MOV G404 <$MINUTE>
+MOV G405 <$SECOND>
+MOV A400 <$USERNAME>
+MOV A401 <$GUILDNAME>
+ChangeModeEx 14 9999
+ChangeModeEx 3 999 1500
+ChangeModeEx 4 999 500
+Gmexecute 开始提问 @清理猛男第一
+GOTO @猛男职业
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【天下第一猛男】...
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【天下第一猛男】...
+#ELSEACT
+MESSAGEBOX 你目前的等级没有超过当前的天下第一
+BREAK
+
+[@猛男职业]
+#IF
+checkjob warrior
+#ACT
+SETICON 0 0 000058 0 -22 0 0
+; SetIcon 0 1 58 1 -10 -10
+CLEARNAMELIST ..\QuestDiary\临时数据\猛男第一.txt
+ADDNAMELIST ..\QuestDiary\临时数据\猛男第一.txt
+GOTO @main
+BREAK
+#IF
+checkjob wizard
+#ACT
+SETICON 0 0 000056 0 -22 0 0
+; SetIcon 0 1 56 1 -10 -10
+CLEARNAMELIST ..\QuestDiary\临时数据\猛男第一.txt
+ADDNAMELIST ..\QuestDiary\临时数据\猛男第一.txt
+GOTO @main
+BREAK
+#IF
+checkjob taoist
+#ACT
+SETICON 0 0 000057 0 -22 0 0
+; SetIcon 0 1 57 1 -10 -10
+CLEARNAMELIST ..\QuestDiary\临时数据\猛男第一.txt
+ADDNAMELIST ..\QuestDiary\临时数据\猛男第一.txt
+GOTO @main
+BREAK

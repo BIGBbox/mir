@@ -1,0 +1,12 @@
+[@Settings]
+{
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>\ \
+
+<Text|text=不要说我没提醒你, |x=30|y=60|size=16>
+<Text|text=这座烽火魔城很可能成为你的一场恶梦,|x=30|y=80|size=16>
+<Text|text=你真的还打算进去吗?|x=30|y=100|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@exit>
+<Text|text=关闭|x=60|y=133|size=16|color=1001|link=@exit>
+}

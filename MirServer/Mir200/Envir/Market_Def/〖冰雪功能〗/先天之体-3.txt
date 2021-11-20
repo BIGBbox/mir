@@ -1,0 +1,631 @@
+[@main]
+#IF
+equal U0 5
+#act
+close
+MESSAGEBOX 恭喜你炼成先天之体已达到最高！！
+break
+
+#IF
+equal U0 4
+equal <$CLIENTFLAG> 1
+#SAY
+<Img|x=0.0|y=-1.0|width=520|height=220|rotate=0|scale9l=10|scale9r=10|bg=1|scale9b=10|scale9t=10|move=0|img=public/bg_npc_01.png|reset=1>
+<Layout|x=497.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=519.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=13|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=238.0|y=25.0|tipsx=10|tipsy=80|color=254|size=13|text=你当前先天之体为【LV<$STR(U0)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=254|size=13|text=功能介绍:每级增加暴击，吸血，破防1%>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=85.0|tipsx=10|tipsy=80|color=251|size=13|text=先天之体LV1|link=@XIANLV1>
+<Text|a=0|x=165.0|y=85.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=85.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防1%>
+<Text|a=0|x=434.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=105.0|tipsx=10|tipsy=80|color=251|size=13|text=先天之体LV2|link=@XIANLV2>
+<Text|a=0|x=165.0|y=105.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=105.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防2%>
+<Text|a=0|x=434.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=125.0|tipsx=10|tipsy=80|color=251|size=13|text=先天之体LV3|link=@XIANLV3>
+<Text|a=0|x=165.0|y=125.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=125.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防3%>
+<Text|a=0|x=434.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=145.0|tipsx=10|tipsy=80|color=251|size=13|text=先天之体LV4|link=@XIANLV4>
+<Text|a=0|x=165.0|y=145.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=145.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防4%>
+<Text|a=0|x=434.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=165.0|tipsx=10|tipsy=80|color=251|size=13|text=先天之体LV5|link=@XIANLV5>
+<Text|a=0|x=165.0|y=165.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=165.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防5%>
+<Text|a=0|x=434.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+#IF
+equal U0 4
+equal <$CLIENTFLAG> 2
+#SAY
+<Img|width=650|height=300|rotate=0|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1|scale9l=10>
+<Layout|x=628.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=650.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=18|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=263.0|y=25.0|tipsx=10|tipsy=80|color=254|size=18|text=你当前先天之体为【LV<$STR(U0)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32.0|y=63.0|tipsx=10|tipsy=80|color=254|size=18|text=功能介绍:每级增加暴击，吸血，破防1%>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=先天之体LV1|link=@XIANLV1>
+<Text|a=0|x=185.0|y=84.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=84.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=85.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防1%>
+<Text|a=0|x=564.0|y=85.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=125.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=先天之体LV2|link=@XIANLV2>
+<Text|a=0|x=185.0|y=124.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=125.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防2%>
+<Text|a=0|x=564.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=166.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=166.0|tipsx=10|tipsy=80|color=251|size=18|text=先天之体LV3|link=@XIANLV3>
+<Text|a=0|x=185.0|y=165.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=166.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防3%>
+<Text|a=0|x=564.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=205.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=205.0|tipsx=10|tipsy=80|color=251|size=18|text=先天之体LV4|link=@XIANLV4>
+<Text|a=0|x=185.0|y=204.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=205.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防4%>
+<Text|a=0|x=564.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=244.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=243.0|tipsx=10|tipsy=80|color=251|size=18|text=先天之体LV5|link=@XIANLV5>
+<Text|a=0|x=185.0|y=243.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=244.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防5%>
+<Text|a=0|x=564.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=266.0|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+
+
+#IF
+equal U0 3
+equal <$CLIENTFLAG> 1
+#SAY
+<Img|x=0.0|y=-1.0|width=520|height=220|rotate=0|scale9l=10|scale9r=10|bg=1|scale9b=10|scale9t=10|move=0|img=public/bg_npc_01.png|reset=1>
+<Layout|x=497.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=519.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=13|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=238.0|y=25.0|tipsx=10|tipsy=80|color=254|size=13|text=你当前先天之体为【LV<$STR(U0)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=254|size=13|text=功能介绍:每级增加暴击，吸血，破防1%>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=85.0|tipsx=10|tipsy=80|color=251|size=13|text=先天之体LV1|link=@XIANLV1>
+<Text|a=0|x=165.0|y=85.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=85.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防1%>
+<Text|a=0|x=434.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=105.0|tipsx=10|tipsy=80|color=251|size=13|text=先天之体LV2|link=@XIANLV2>
+<Text|a=0|x=165.0|y=105.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=105.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防2%>
+<Text|a=0|x=434.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=125.0|tipsx=10|tipsy=80|color=251|size=13|text=先天之体LV3|link=@XIANLV3>
+<Text|a=0|x=165.0|y=125.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=125.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防3%>
+<Text|a=0|x=434.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=145.0|tipsx=10|tipsy=80|color=251|size=13|text=先天之体LV4|link=@XIANLV4>
+<Text|a=0|x=165.0|y=145.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=145.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防4%>
+<Text|a=0|x=434.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=165.0|tipsx=10|tipsy=80|color=236|size=13|text=先天之体LV5>
+<Text|a=0|x=165.0|y=165.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=165.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防5%>
+<Text|a=0|x=434.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+#IF
+equal U0 3
+equal <$CLIENTFLAG> 2
+#say
+<Img|width=650|height=300|rotate=0|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1|scale9l=10>
+<Layout|x=628.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=650.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=18|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=263.0|y=25.0|tipsx=10|tipsy=80|color=254|size=18|text=你当前先天之体为【LV<$STR(U0)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32.0|y=63.0|tipsx=10|tipsy=80|color=254|size=18|text=功能介绍:每级增加暴击，吸血，破防1%>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=先天之体LV1|link=@XIANLV1>
+<Text|a=0|x=185.0|y=84.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=84.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=85.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防1%>
+<Text|a=0|x=564.0|y=85.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=125.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=先天之体LV2|link=@XIANLV2>
+<Text|a=0|x=185.0|y=124.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=125.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防2%>
+<Text|a=0|x=564.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=166.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=166.0|tipsx=10|tipsy=80|color=251|size=18|text=先天之体LV3|link=@XIANLV3>
+<Text|a=0|x=185.0|y=165.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=166.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防3%>
+<Text|a=0|x=564.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=205.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=205.0|tipsx=10|tipsy=80|color=251|size=18|text=先天之体LV4|link=@XIANLV4>
+<Text|a=0|x=185.0|y=204.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=205.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防4%>
+<Text|a=0|x=564.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=244.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=243.0|tipsx=10|tipsy=80|color=236|size=18|text=先天之体LV5>
+<Text|a=0|x=185.0|y=243.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=244.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防5%>
+<Text|a=0|x=564.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=266.0|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+
+#IF
+equal U0 2
+equal <$CLIENTFLAG> 1
+#SAY
+<Img|x=0.0|y=-1.0|width=520|height=220|rotate=0|scale9l=10|scale9r=10|bg=1|scale9b=10|scale9t=10|move=0|img=public/bg_npc_01.png|reset=1>
+<Layout|x=497.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=519.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=13|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=238.0|y=25.0|tipsx=10|tipsy=80|color=254|size=13|text=你当前先天之体为【LV<$STR(U0)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=254|size=13|text=功能介绍:每级增加暴击，吸血，破防1%>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=85.0|tipsx=10|tipsy=80|color=251|size=13|text=先天之体LV1|link=@XIANLV1>
+<Text|a=0|x=165.0|y=85.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=85.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防1%>
+<Text|a=0|x=434.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=105.0|tipsx=10|tipsy=80|color=251|size=13|text=先天之体LV2|link=@XIANLV2>
+<Text|a=0|x=165.0|y=105.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=105.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防2%>
+<Text|a=0|x=434.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=125.0|tipsx=10|tipsy=80|color=251|size=13|text=先天之体LV3|link=@XIANLV3>
+<Text|a=0|x=165.0|y=125.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=125.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防3%>
+<Text|a=0|x=434.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=145.0|tipsx=10|tipsy=80|color=236|size=13|text=先天之体LV4|>
+<Text|a=0|x=165.0|y=145.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=145.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防4%>
+<Text|a=0|x=434.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=165.0|tipsx=10|tipsy=80|color=236|size=13|text=先天之体LV5>
+<Text|a=0|x=165.0|y=165.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=165.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防5%>
+<Text|a=0|x=434.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+#if
+equal U0 2
+equal <$CLIENTFLAG> 2
+#say
+<Img|width=650|height=300|rotate=0|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1|scale9l=10>
+<Layout|x=628.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=650.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=18|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=263.0|y=25.0|tipsx=10|tipsy=80|color=254|size=18|text=你当前先天之体为【LV<$STR(U0)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32.0|y=63.0|tipsx=10|tipsy=80|color=254|size=18|text=功能介绍:每级增加暴击，吸血，破防1%>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=先天之体LV1|link=@XIANLV1>
+<Text|a=0|x=185.0|y=84.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=84.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=85.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防1%>
+<Text|a=0|x=564.0|y=85.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=125.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=先天之体LV2|link=@XIANLV2>
+<Text|a=0|x=185.0|y=124.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=125.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防2%>
+<Text|a=0|x=564.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=166.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=166.0|tipsx=10|tipsy=80|color=251|size=18|text=先天之体LV3|link=@XIANLV3>
+<Text|a=0|x=185.0|y=165.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=166.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防3%>
+<Text|a=0|x=564.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=205.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=205.0|tipsx=10|tipsy=80|color=236|size=18|text=先天之体LV4>
+<Text|a=0|x=185.0|y=204.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=205.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防4%>
+<Text|a=0|x=564.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=244.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=243.0|tipsx=10|tipsy=80|color=236|size=18|text=先天之体LV5>
+<Text|a=0|x=185.0|y=243.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=244.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防5%>
+<Text|a=0|x=564.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=266.0|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+#IF
+equal U0 1
+equal <$CLIENTFLAG> 1
+#SAY
+<Img|x=0.0|y=-1.0|width=520|height=220|rotate=0|scale9l=10|scale9r=10|bg=1|scale9b=10|scale9t=10|move=0|img=public/bg_npc_01.png|reset=1>
+<Layout|x=497.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=519.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=13|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=238.0|y=25.0|tipsx=10|tipsy=80|color=254|size=13|text=你当前先天之体为【LV<$STR(U0)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=254|size=13|text=功能介绍:每级增加暴击，吸血，破防1%>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=85.0|tipsx=10|tipsy=80|color=251|size=13|text=先天之体LV1|link=@XIANLV1>
+<Text|a=0|x=165.0|y=85.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=85.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防1%>
+<Text|a=0|x=434.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=105.0|tipsx=10|tipsy=80|color=251|size=13|text=先天之体LV2|link=@XIANLV2>
+<Text|a=0|x=165.0|y=105.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=105.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防2%>
+<Text|a=0|x=434.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=125.0|tipsx=10|tipsy=80|color=236|size=13|text=先天之体LV3>
+<Text|a=0|x=165.0|y=125.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=125.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防3%>
+<Text|a=0|x=434.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=145.0|tipsx=10|tipsy=80|color=236|size=13|text=先天之体LV4|>
+<Text|a=0|x=165.0|y=145.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=145.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防4%>
+<Text|a=0|x=434.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=165.0|tipsx=10|tipsy=80|color=236|size=13|text=先天之体LV5>
+<Text|a=0|x=165.0|y=165.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=165.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防5%>
+<Text|a=0|x=434.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+#IF
+equal U0 1
+equal <$CLIENTFLAG> 2
+#SAY
+<Img|width=650|height=300|rotate=0|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1|scale9l=10>
+<Layout|x=628.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=650.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=18|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=263.0|y=25.0|tipsx=10|tipsy=80|color=254|size=18|text=你当前先天之体为【LV<$STR(U0)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32.0|y=63.0|tipsx=10|tipsy=80|color=254|size=18|text=功能介绍:每级增加暴击，吸血，破防1%>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=先天之体LV1|link=@XIANLV1>
+<Text|a=0|x=185.0|y=84.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=84.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=85.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防1%>
+<Text|a=0|x=564.0|y=85.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=125.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=先天之体LV2|link=@XIANLV2>
+<Text|a=0|x=185.0|y=124.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=125.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防2%>
+<Text|a=0|x=564.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=166.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=166.0|tipsx=10|tipsy=80|color=236|size=18|text=先天之体LV3>
+<Text|a=0|x=185.0|y=165.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=166.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防3%>
+<Text|a=0|x=564.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=205.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=205.0|tipsx=10|tipsy=80|color=236|size=18|text=先天之体LV4>
+<Text|a=0|x=185.0|y=204.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=205.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防4%>
+<Text|a=0|x=564.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=244.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=243.0|tipsx=10|tipsy=80|color=236|size=18|text=先天之体LV5>
+<Text|a=0|x=185.0|y=243.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=244.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防5%>
+<Text|a=0|x=564.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=266.0|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+
+#IF
+equal U0 0
+equal <$CLIENTFLAG> 1
+#SAY
+<Img|x=0.0|y=-1.0|width=520|height=220|rotate=0|scale9l=10|scale9r=10|bg=1|scale9b=10|scale9t=10|move=0|img=public/bg_npc_01.png|reset=1>
+<Layout|x=497.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=519.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=13|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=238.0|y=25.0|tipsx=10|tipsy=80|color=254|size=13|text=你当前先天之体为【LV<$STR(U0)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=254|size=13|text=功能介绍:每级增加暴击，吸血，破防1%>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=85.0|tipsx=10|tipsy=80|color=251|size=13|text=先天之体LV1|link=@XIANLV1>
+<Text|a=0|x=165.0|y=85.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=85.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防1%>
+<Text|a=0|x=434.0|y=85.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=105.0|tipsx=10|tipsy=80|color=236|size=13|text=先天之体LV2>
+<Text|a=0|x=165.0|y=105.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=105.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防2%>
+<Text|a=0|x=434.0|y=105.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=125.0|tipsx=10|tipsy=80|color=236|size=13|text=先天之体LV3>
+<Text|a=0|x=165.0|y=125.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=125.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防3%>
+<Text|a=0|x=434.0|y=125.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=145.0|tipsx=10|tipsy=80|color=236|size=13|text=先天之体LV4|>
+<Text|a=0|x=165.0|y=145.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=145.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防4%>
+<Text|a=0|x=434.0|y=145.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=88.0|y=165.0|tipsx=10|tipsy=80|color=236|size=13|text=先天之体LV5>
+<Text|a=0|x=165.0|y=165.0|tipsx=10|tipsy=80|color=249|size=13|text=◆◆◆◆>
+<Text|a=0|x=239.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=282.0|y=165.0|tipsx=10|tipsy=80|color=253|size=13|text=增加暴击，吸血，破防5%>
+<Text|a=0|x=434.0|y=165.0|tipsx=10|tipsy=80|color=250|size=13|text=◆◆◆>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=58|size=13|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+#IF
+equal U0 0
+equal <$CLIENTFLAG> 2
+#SAY
+<Img|width=650|height=300|rotate=0|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1|scale9l=10>
+<Layout|x=647.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=669.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=209,253,254,252,215,95,252,247|size=18|text=◆<$SERVERNAME>◆>
+<Text|a=0|x=263.0|y=25.0|tipsx=10|tipsy=80|color=254|size=18|text=你当前先天之体为【LV<$STR(U0)>】!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32.0|y=63.0|tipsx=10|tipsy=80|color=254|size=18|text=功能介绍:每级增加暴击，吸血，破防1%>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=先天之体LV1|link=@XIANLV1>
+<Text|a=0|x=185.0|y=84.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=84.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=85.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防1%>
+<Text|a=0|x=564.0|y=85.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=125.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=125.0|tipsx=10|tipsy=80|color=236|size=18|text=先天之体LV2>
+<Text|a=0|x=185.0|y=124.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=125.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防2%>
+<Text|a=0|x=564.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=166.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=166.0|tipsx=10|tipsy=80|color=236|size=18|text=先天之体LV3>
+<Text|a=0|x=185.0|y=165.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=166.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防3%>
+<Text|a=0|x=564.0|y=166.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=205.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=205.0|tipsx=10|tipsy=80|color=236|size=18|text=先天之体LV4>
+<Text|a=0|x=185.0|y=204.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=205.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防4%>
+<Text|a=0|x=564.0|y=205.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=244.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=80.0|y=243.0|tipsx=10|tipsy=80|color=236|size=18|text=先天之体LV5>
+<Text|a=0|x=185.0|y=243.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=316.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=354.0|y=244.0|tipsx=10|tipsy=80|color=253|size=18|text=增加暴击，吸血，破防5%>
+<Text|a=0|x=564.0|y=244.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆>
+<Text|a=0|x=32.0|y=266.0|tipsx=10|tipsy=80|color=58|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+
+[@xianlv8]
+#IF
+equal U0 7
+CHECKBAGSIZE  2
+CHECKITEM 洗髓丹 99
+#act
+DEPRIVETITLE 先天之体lv1
+DEPRIVETITLE 先天之体lv2
+DEPRIVETITLE 先天之体lv3
+DEPRIVETITLE 先天之体lv4
+DEPRIVETITLE 先天之体lv5
+DEPRIVETITLE 先天之体lv6
+DEPRIVETITLE 先天之体lv7
+DEPRIVETITLE 先天之体lv8
+TAKE 洗髓丹 99
+CONFERTITLE 先天之体lv8
+MOV U0 8
+MESSAGEBOX 恭喜你炼成先天之体lv8成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[先天之体lv8]
+#ELSEACT
+MESSAGEBOX 错误\\①你没有洗髓丹99个\\②你不是lv7无法直接升lv8\\③背包要留出2个空格！
+BREAK
+
+[@xianlv7]
+#IF
+equal U0 6
+CHECKBAGSIZE  2
+CHECKITEM 洗髓丹 99
+#act
+DEPRIVETITLE 先天之体lv1
+DEPRIVETITLE 先天之体lv2
+DEPRIVETITLE 先天之体lv3
+DEPRIVETITLE 先天之体lv4
+DEPRIVETITLE 先天之体lv5
+DEPRIVETITLE 先天之体lv6
+DEPRIVETITLE 先天之体lv7
+DEPRIVETITLE 先天之体lv8
+TAKE 洗髓丹 99
+CONFERTITLE 先天之体lv7
+MOV U0 7
+MESSAGEBOX 恭喜你炼成先天之体lv7成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[先天之体lv7]
+#ELSEACT
+MESSAGEBOX 错误\\①你没有洗髓丹99个\\②你不是lv6无法直接升lv7\\③背包要留出2个空格！
+BREAK
+
+[@xianlv6]
+#IF
+equal U0 5
+CHECKBAGSIZE  2
+CHECKITEM 洗髓丹 99
+#act
+DEPRIVETITLE 先天之体lv1
+DEPRIVETITLE 先天之体lv2
+DEPRIVETITLE 先天之体lv3
+DEPRIVETITLE 先天之体lv4
+DEPRIVETITLE 先天之体lv5
+DEPRIVETITLE 先天之体lv6
+DEPRIVETITLE 先天之体lv7
+DEPRIVETITLE 先天之体lv8
+TAKE 洗髓丹 99
+CONFERTITLE 先天之体lv6
+MOV U0 6
+MESSAGEBOX 恭喜你炼成先天之体lv6成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[先天之体lv6]
+#ELSEACT
+MESSAGEBOX 错误\\①你没有洗髓丹99个\\②你不是lv5无法直接升lv6\\③背包要留出2个空格！
+BREAK
+
+
+[@xianlv5]
+#IF
+equal U0 4
+CHECKBAGSIZE  2
+CHECKITEM 洗髓丹 99
+#act
+DEPRIVETITLE 先天之体lv1
+DEPRIVETITLE 先天之体lv2
+DEPRIVETITLE 先天之体lv3
+DEPRIVETITLE 先天之体lv4
+DEPRIVETITLE 先天之体lv5
+DEPRIVETITLE 先天之体lv6
+DEPRIVETITLE 先天之体lv7
+DEPRIVETITLE 先天之体lv8
+TAKE 洗髓丹 99
+CONFERTITLE 先天之体lv5
+MOV U0 5
+MESSAGEBOX 恭喜你炼成先天之体lv5成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[先天之体lv5]
+goto @main
+#ELSEACT
+MESSAGEBOX 错误\\①你没有洗髓丹99个\\②你不是lv4无法直接升lv5\\③背包要留出2个空格！
+BREAK
+
+[@xianlv4]
+#IF
+equal U0 3
+CHECKBAGSIZE  2
+CHECKITEM 洗髓丹 40
+#act
+DEPRIVETITLE 先天之体lv1
+DEPRIVETITLE 先天之体lv2
+DEPRIVETITLE 先天之体lv3
+DEPRIVETITLE 先天之体lv4
+DEPRIVETITLE 先天之体lv5
+DEPRIVETITLE 先天之体lv6
+DEPRIVETITLE 先天之体lv7
+DEPRIVETITLE 先天之体lv8
+TAKE 洗髓丹 40
+CONFERTITLE 先天之体lv4
+MOV U0 4
+MESSAGEBOX 恭喜你炼成先天之体lv4成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[先天之体lv4]
+goto @main
+#ELSEACT
+MESSAGEBOX 错误\\①你没有洗髓丹40个\\②你不是lv3无法直接升lv4\\③背包要留出2个空格！
+BREAK
+
+[@xianlv3]
+#IF
+equal U0 2
+CHECKBAGSIZE  2
+CHECKITEM 洗髓丹 20
+#act
+DEPRIVETITLE 先天之体lv1
+DEPRIVETITLE 先天之体lv2
+DEPRIVETITLE 先天之体lv3
+DEPRIVETITLE 先天之体lv4
+DEPRIVETITLE 先天之体lv5
+DEPRIVETITLE 先天之体lv6
+DEPRIVETITLE 先天之体lv7
+DEPRIVETITLE 先天之体lv8
+TAKE 洗髓丹 20
+CONFERTITLE 先天之体lv3
+MOV U0 3
+MESSAGEBOX 恭喜你炼成先天之体lv3成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[先天之体lv3]
+goto @main
+#ELSEACT
+MESSAGEBOX 错误\\①你没有洗髓丹20个\\②你不是lv2无法直接升lv3\\③背包要留出2个空格！
+BREAK
+
+[@xianlv2]
+#IF
+equal U0 1
+CHECKBAGSIZE  2
+CHECKITEM 洗髓丹 10
+#act
+DEPRIVETITLE 先天之体lv1
+DEPRIVETITLE 先天之体lv2
+DEPRIVETITLE 先天之体lv3
+DEPRIVETITLE 先天之体lv4
+DEPRIVETITLE 先天之体lv5
+DEPRIVETITLE 先天之体lv6
+DEPRIVETITLE 先天之体lv7
+DEPRIVETITLE 先天之体lv8
+TAKE 洗髓丹 10
+CONFERTITLE 先天之体lv2
+MOV U0 2
+MESSAGEBOX 恭喜你炼成先天之体lv2成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[先天之体lv2]
+goto @main
+#ELSEACT
+MESSAGEBOX 错误\\①你没有洗髓丹10个\\②你不是lv1无法直接升lv2\\③背包要留出2个空格！
+BREAK
+
+[@xianlv1]
+#IF
+equal U0 0
+CHECKBAGSIZE  2
+CHECKITEM 洗髓丹 3
+#act
+DEPRIVETITLE 先天之体lv1
+DEPRIVETITLE 先天之体lv2
+DEPRIVETITLE 先天之体lv3
+DEPRIVETITLE 先天之体lv4
+DEPRIVETITLE 先天之体lv5
+DEPRIVETITLE 先天之体lv6
+DEPRIVETITLE 先天之体lv7
+DEPRIVETITLE 先天之体lv8
+TAKE 洗髓丹 3
+CONFERTITLE 先天之体lv1
+MOV U0 1
+MESSAGEBOX 恭喜你炼成先天之体lv1成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[先天之体lv1]
+goto @main
+#ELSEACT
+MESSAGEBOX 错误\\①你没有洗髓丹3个\\②你已经是先天之体lv1了\\③背包要留出2个空格！
+BREAK

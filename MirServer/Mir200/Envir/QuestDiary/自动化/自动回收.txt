@@ -1,0 +1,58 @@
+[@自动回收]
+{
+
+
+#IF
+#ACT
+MOV N$自动回收结算1 0
+MOV N$自动回收结算2 0
+MOV N$自动回收结算3 0
+
+; sendmsg 5 确认自动回收了！！！！
+
+#if
+#act
+LoopBagItems @自动回收回调 S$自动回收ID S$自动回收KEY
+
+
+#IF
+EQUAL <$str(N$自动回收结算1)> 0
+EQUAL <$str(N$自动回收结算2)> 0
+EQUAL <$str(N$自动回收结算3)> 0
+#ACT
+messagebox 您没有可以需要自动回收的物品。
+BREAK
+
+#if
+#act
+money 元宝 + <$str(N$自动回收结算1)>
+money RMB点 + <$str(N$自动回收结算2)>
+CHANGEEXP + <$str(N$自动回收结算3)>
+mov S12
+GuildNoticeMsg 255 56 玩家:『<$USERNAME>』自动回收获得大量货币！！
+
+
+[@自动回收回调]
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\新装备回收\回收分类\回收价格.txt 1 <$STR(S$自动回收KEY)> S$自动回收收益A
+GetValidstr <$STR(S$自动回收收益A)> & S$剩余收益A S$装备标记
+GetValidstr <$STR(S$剩余收益A)> * S$元宝收益 S$剩余收益
+GetValidstr <$STR(S$剩余收益)> * S$RMB点收益 S$经验值收益
+
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\新装备回收\回收分类\回收名单.txt <$STR(S$自动回收KEY)>
+equal U<$str(S$装备标记)> 1
+#ACT
+
+DelItemByMakeIndex <$STR(S$自动回收ID)>
+AnsiReplaceText S12 <$STR(S$自动回收ID)>,    
+
+INC N$自动回收结算1 <$STR(S$元宝收益)>
+INC N$自动回收结算2 <$STR(S$RMB点收益)>
+INC N$自动回收结算3 <$STR(S$经验值收益)>
+
+
+}

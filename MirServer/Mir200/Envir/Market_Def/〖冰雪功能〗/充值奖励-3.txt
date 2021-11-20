@@ -1,0 +1,140 @@
+[@main]
+{<$SERVERNAME>/FCOLOR=241}    <充 值 奖 励/AUTOCOLOR=251>  <你共充值:><$GAMEPOINT><元>\
+<----------------------------------------------------------/AUTOCOLOR=250,253,254,241>\
+<首充礼包66元 HP永久提升1200+MP永久提升400+赠送洗髓丹*3+血龙魄珠*3/AUTOCOLOR=253>\
+<充值满  88元 一转材料+洗髓丹* 2+血龙魄珠* 2+迷失特戒+1000W经验卷1个/AUTOCOLOR=251>\
+<充值满 288元 二转材料+洗髓丹* 3+血龙魄珠* 3+舍利(碎片)* 2+黄昏特戒+2000W经验卷*1+幸运斗笠盾/AUTOCOLOR=251>\
+<充值满 588元 三四材料+洗髓丹* 5+血龙魄珠* 5+舍利(碎片)* 3+迷失特戒+3000W经验卷*1+青铜斗笠盾/AUTOCOLOR=250>\
+<充值满1088元 五转材料+洗髓丹*10+血龙魄珠*10+舍利(碎片)* 5+帝王特戒+5000W经验卷*1+白银斗笠盾/AUTOCOLOR=250>\
+<充值满1888元 六转材料+洗髓丹*20+血龙魄珠*20+菩提(碎片)*10+修罗特戒+1亿经验卷*1 + 黄金斗笠盾/AUTOCOLOR=253>\
+<领首充/@首充>  <领取88元/@88元>  <领取288元/@288元>  <领取588元/@588元>  <领取1088元/@1088元>  <领取1888元/@1888元>
+
+[@首充]
+#IF
+CHECKGAMEPOINT > 65
+CHECKBAGSIZE  2
+check [017] 0
+#act
+SET [017] 1
+GIVE 洗髓丹 3
+GIVE 血龙魄珠 3
+USEBONUSPOINT 6 + 1200
+USEBONUSPOINT 6 + 400
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功领取66元首充礼包！！
+#ELSEACT
+MESSAGEBOX 错误\\①你充值金额不足\\②你已经领取过此首充礼包！\\③背包要留出2个空格！
+BREAK
+
+[@1888元]
+#IF
+CHECKGAMEPOINT > 1887
+CHECKBAGSIZE  11
+check [016] 0
+#act
+SET [016] 1
+GIVE 天精岩六转 1
+GIVE 地狱火六转 1
+GIVE 洗髓丹 20
+GIVE 血龙魄珠 20
+GIVE 菩提(碎片) 10
+GIVE 麻痹戒指+6 1
+GIVE 复活戒指+6 1
+GIVE 护身戒指+6 1
+GIVE 1亿经验卷 1
+GIVE 黄金斗笠 1
+GIVE 黄金·盾 1
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功领取1888元充值奖励！！
+#ELSEACT
+MESSAGEBOX 错误\\①你充值金额不足\\②你已经领取过此奖励了！\\③背包要留出11个空格！
+BREAK
+
+[@1088元]
+#IF
+CHECKGAMEPOINT > 1087
+CHECKBAGSIZE  11
+check [015] 0
+#act
+SET [015] 1
+GIVE 天精岩五转 2
+GIVE 地狱火五转 2
+GIVE 洗髓丹 10
+GIVE 血龙魄珠 10
+GIVE 舍利(碎片) 5
+GIVE 麻痹戒指+5 1
+GIVE 复活戒指+5 1
+GIVE 护身戒指+5 1
+GIVE 5000W经验卷 1
+GIVE 白银斗笠 1
+GIVE 白银·盾 1
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功领取1088元充值奖励！！
+#ELSEACT
+MESSAGEBOX 错误\\①你充值金额不足\\②你已经领取过此奖励了！\\③背包要留出11个空格！
+BREAK
+
+[@588元]
+#IF
+CHECKGAMEPOINT > 587
+CHECKBAGSIZE  11
+check [014] 0
+#act
+SET [014] 1
+GIVE 天精岩三转 3
+GIVE 地狱火三转 3
+GIVE 天精岩四转 4
+GIVE 地狱火四转 4
+GIVE 洗髓丹 5
+GIVE 血龙魄珠 5
+GIVE 舍利(碎片) 3
+GIVE 麻痹戒指+4 1
+GIVE 复活戒指+4 1
+GIVE 护身戒指+4 1
+GIVE 3000W经验卷 1
+GIVE 青铜斗笠 1
+GIVE 青铜 1
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功领取588元充值奖励！！
+#ELSEACT
+MESSAGEBOX 错误\\①你充值金额不足\\②你已经领取过此奖励了！\\③背包要留出11个空格！
+BREAK
+
+[@288元]
+#IF
+CHECKGAMEPOINT > 287
+CHECKBAGSIZE  11
+check [013] 0
+#act
+SET [013] 1
+GIVE 天精岩二转 2
+GIVE 地狱火二转 2
+GIVE 洗髓丹 3
+GIVE 血龙魄珠 3
+GIVE 舍利(碎片) 2
+GIVE 麻痹戒指+3 1
+GIVE 复活戒指+3 1
+GIVE 护身戒指+3 1
+GIVE 2000W经验卷 1
+GIVE 幸运斗笠 1
+GIVE 幸运·盾 1
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功领取288元充值奖励！！
+#ELSEACT
+MESSAGEBOX 错误\\①你充值金额不足\\②你已经领取过此奖励了！\\③背包要留出11个空格！
+BREAK
+
+[@88元]
+#IF
+CHECKGAMEPOINT > 87
+CHECKBAGSIZE  11
+check [012] 0
+#act
+SET [012] 1
+GIVE 天精岩一转 2
+GIVE 地狱火一转 2
+GIVE 洗髓丹 2
+GIVE 血龙魄珠 2
+GIVE 麻痹戒指+2 1
+GIVE 复活戒指+2 1
+GIVE 护身戒指+2 1
+GIVE 1000W经验卷 1
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功领取88元充值奖励！！
+#ELSEACT
+MESSAGEBOX 错误\\①你充值金额不足\\②你已经领取过此奖励了！\\③背包要留出11个空格！
+BREAK

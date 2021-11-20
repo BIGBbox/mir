@@ -1,0 +1,129 @@
+[@装备加星]
+{
+#IF
+CHECKCUSTOMITEMVALUE -1 0 = 1
+#ACT
+break
+
+#IF
+CHECKCUSTOMITEMVALUE -1 0 = 2
+#ACT
+break
+
+#IF
+CHECKCUSTOMITEMVALUE -1 0 = 3
+#ACT
+break
+
+#IF
+CHECKCUSTOMITEMVALUE -1 0 = 4
+#ACT
+break
+
+#IF
+CHECKCUSTOMITEMVALUE -1 0 = 5
+#ACT
+break
+
+#IF
+CHECKCUSTOMITEMVALUE -1 0 = 6
+#ACT
+break
+
+#IF
+CHECKCUSTOMITEMVALUE -1 0 = 7
+#ACT
+break
+
+#IF
+CHECKCUSTOMITEMVALUE -1 0 = 8
+#ACT
+break
+
+#IF
+CheckContainsTextListEx ..\QuestDiary\数据文件\品鉴抽取\装备名称.txt <$CURRTEMNAME>
+random 500
+#ACT
+MOV S10
+MOV S11 <$CURRTEMNAME>
+GetRandomText ..\QuestDiary\数据文件\品鉴抽取\衣服一星位置抽取.txt S10
+CHANGECUSTOMITEMTEXT -1 久久品鉴*1星
+CHANGECUSTOMITEMTEXTCOLOR -1 250
+CHANGECUSTOMITEMABIL -1 0 0 154
+CHANGECUSTOMITEMABIL -1 0 1 <$STR(S10)>
+CHANGECUSTOMITEMVALUE -1 0 = 8
+CHANGECUSTOMITEMABIL -1 0 2 0
+ChangeItemUpgradeCount -1 = 5
+;SENDUPGRADEITEM
+SendMsg 0 {久久评鉴ぐ|151:0:1}：{%s|227:0:1}福星降临鉴定出{[五星]|154:0:1}的{[<$STR(S11)>]|250:0:1}
+break
+
+#IF
+CheckContainsTextListEx ..\QuestDiary\数据文件\品鉴抽取\装备名称.txt <$CURRTEMNAME>
+random 180
+#ACT
+MOV S10
+MOV S11 <$CURRTEMNAME>
+GetRandomText ..\QuestDiary\数据文件\品鉴抽取\衣服一星位置抽取.txt S10
+CHANGECUSTOMITEMTEXT -1 久久品鉴*4星
+CHANGECUSTOMITEMTEXTCOLOR -1 250
+CHANGECUSTOMITEMABIL -1 0 0 154
+CHANGECUSTOMITEMABIL -1 0 1 <$STR(S10)>
+CHANGECUSTOMITEMVALUE -1 0 = 5
+CHANGECUSTOMITEMABIL -1 0 2 0
+ChangeItemUpgradeCount -1 = 4
+;SENDUPGRADEITEM
+SendMsg 0 {久久评鉴ぐ|151:0:1}：{%s|227:0:1}福星降临鉴定出{[四星]|154:0:1}的{[<$STR(S11)>]|250:0:1}
+break
+
+#IF
+CheckContainsTextListEx ..\QuestDiary\数据文件\品鉴抽取\装备名称.txt <$CURRTEMNAME>
+random 15
+#ACT
+MOV S10 0
+GetRandomText ..\QuestDiary\数据文件\品鉴抽取\衣服一星位置抽取.txt S10
+CHANGECUSTOMITEMTEXT -1 久久品鉴*3星
+CHANGECUSTOMITEMTEXTCOLOR -1 250
+CHANGECUSTOMITEMABIL -1 0 0 154
+CHANGECUSTOMITEMABIL -1 0 1 <$STR(S10)>
+CHANGECUSTOMITEMVALUE -1 0 = 3
+CHANGECUSTOMITEMABIL -1 1 2 0
+ChangeItemUpgradeCount -1 = 3
+;SENDUPGRADEITEM
+SENDMSG 7 装备鉴定星级为：★★★
+break
+
+#IF
+CheckContainsTextListEx ..\QuestDiary\数据文件\品鉴抽取\装备名称.txt <$CURRTEMNAME>
+random 6
+#ACT
+MOV S10 0
+GetRandomText ..\QuestDiary\数据文件\品鉴抽取\衣服一星位置抽取.txt S10
+CHANGECUSTOMITEMTEXT -1 久久品鉴*2星
+CHANGECUSTOMITEMTEXTCOLOR -1 250
+CHANGECUSTOMITEMABIL -1 0 0 154
+CHANGECUSTOMITEMABIL -1 0 1 <$STR(S10)>
+CHANGECUSTOMITEMVALUE -1 0 = 2
+CHANGECUSTOMITEMABIL -1 1 2 0
+ChangeItemUpgradeCount -1 = 2
+;SENDUPGRADEITEM
+SENDMSG 7 装备鉴定星级为：★★
+break
+
+#IF
+CheckContainsTextListEx ..\QuestDiary\数据文件\品鉴抽取\装备名称.txt <$CURRTEMNAME>
+random 1
+#ACT
+MOV S10 0
+GetRandomText ..\QuestDiary\数据文件\品鉴抽取\衣服一星位置抽取.txt S10
+CHANGECUSTOMITEMTEXT -1 久久品鉴*1星
+CHANGECUSTOMITEMTEXTCOLOR -1 250
+CHANGECUSTOMITEMABIL -1 0 0 154
+CHANGECUSTOMITEMABIL -1 0 1 <$STR(S10)>
+CHANGECUSTOMITEMVALUE -1 0 = 1
+CHANGECUSTOMITEMABIL -1 0 2 0
+ChangeItemUpgradeCount -1 = 1
+;SENDUPGRADEITEM
+SENDMSG 7 装备鉴定星级为：★
+break
+}

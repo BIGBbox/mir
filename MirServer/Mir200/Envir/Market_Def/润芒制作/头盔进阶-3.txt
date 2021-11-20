@@ -1,0 +1,189 @@
+[@main]
+#IF
+#SAY
+\ \
+头盔进阶 需要 装备一件加 40万元宝或者 40灵符 <查询进阶规则/@规则>\ \
+头盔进阶 需要 装备一件加 40万元宝或者 40灵符 <查询可进阶物品|243#点点神力1.1倍^243#点点神力1.2倍^243#点点神力1.3倍^243#一相之力^243#二相之力^243#三相之力>\ \
+#ACT
+OPENUPGRADEDLG 头盔进阶(头盔进阶)
+
+
+
+
+
+
+
+
+[@规则]
+进阶之后  \
+增加暴击元素  攻击伤害增加元素  人物体力元素  物理伤害减免元素   \
+人物魔力元素  忽视目标防御元素  目标爆率元素  魔法伤害减免元素  \
+每次加百分之1 （可以进阶5次 ） \
+进阶失败装备不消失但所有属性清0  \
+
+
+
+[@UpgradeDlgItem]
+#IF
+CheckContainsTextList ..\QuestDiary\火星\头盔.txt <$DLGITEM.NAME>
+#SAY
+\
+您当前淬炼物品名称:<$DLGITEM.NAME>\
+<元宝进阶/@元宝进阶>    <灵符进阶/@灵符进阶>
+#ACT
+#ELSEACT
+RECLAIMITEM
+MESSAGEBOX 错误\\当前物品禁止进阶！
+
+
+
+
+[@元宝进阶]
+#IF
+CHECKCUSTOMITEMVALUE -1 0 = 5
+#ACT
+MESSAGEBOX 当前装备已经进阶完成无须继续进阶
+RECLAIMITEM
+GOTO @MAIN
+BREAK
+
+#IF
+CheckContainsTextList ..\QuestDiary\火星\头盔.txt <$DLGITEM.NAME>
+CHECKGAMEGOLD < 399999
+#ACT
+MESSAGEBOX 您的元宝不足无法进阶
+RECLAIMITEM
+GOTO @MAIN
+BREAK
+
+#IF
+CHECKCUSTOMITEMVALUE -1 0 < 5
+CheckContainsTextList ..\QuestDiary\火星\头盔.txt <$DLGITEM.NAME>
+CHECKGAMEGOLD > 399999
+RANDOM 5
+#act
+CHANGECUSTOMITEMTEXT -1 [进阶次数]:
+CHANGECUSTOMITEMTEXTCOLOR -1 251
+CHANGECUSTOMITEMABIL -1 0 1 8
+CHANGECUSTOMITEMABIL -1 0 2 0
+CHANGECUSTOMITEMABIL -1 0 3 0
+CHANGECUSTOMITEMVALUE -1 0 + 1
+CHANGECUSTOMITEMABIL -1 0 0 254
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』进阶『<$DLGITEM.NAME>』装备成功!！
+gamegold - 400000
+SetNewItemValue -1 0 + 1
+SetNewItemValue -1 1 + 1
+SetNewItemValue -1 2 + 1
+SetNewItemValue -1 3 + 1
+SetNewItemValue -1 4 + 1
+SetNewItemValue -1 6 + 1
+SetNewItemValue -1 7 + 1
+SetNewItemValue -1 8 + 1
+RECLAIMITEM
+GOTO @MAIN
+BREAK
+#elseact
+GOTO @失败检测
+
+[@失败检测]
+#IF
+CheckContainsTextList ..\QuestDiary\火星\头盔.txt <$DLGITEM.NAME>
+#ACT
+gamegold - 400000
+CHANGECUSTOMITEMTEXT -1 [进阶次数]:
+CHANGECUSTOMITEMTEXTCOLOR -1 251
+CHANGECUSTOMITEMABIL -1 0 1 8
+CHANGECUSTOMITEMABIL -1 0 2 0
+CHANGECUSTOMITEMABIL -1 0 3 0
+CHANGECUSTOMITEMVALUE -1 0 = 0
+CHANGECUSTOMITEMABIL -1 0 0 254
+SetNewItemValue -1 0 = 0
+SetNewItemValue -1 1 = 0
+SetNewItemValue -1 2 = 0
+SetNewItemValue -1 3 = 0
+SetNewItemValue -1 4 = 0
+SetNewItemValue -1 6 = 0
+SetNewItemValue -1 7 = 0
+SetNewItemValue -1 8 = 0
+MESSAGEBOX 进阶失败元宝扣除40万,装备返还
+RECLAIMITEM
+GOTO @MAIN
+BREAK
+
+
+
+
+
+
+
+[@灵符进阶]
+#IF
+CHECKCUSTOMITEMVALUE -1 0 = 5
+#ACT
+MESSAGEBOX 当前装备已经进阶完成无须继续进阶
+RECLAIMITEM
+GOTO @MAIN
+BREAK
+
+#IF
+CheckContainsTextList ..\QuestDiary\火星\头盔.txt <$DLGITEM.NAME>
+CHECKGAMEGIRD < 39
+#ACT
+MESSAGEBOX 您的灵符不足无法进阶
+RECLAIMITEM
+GOTO @MAIN
+BREAK
+
+#IF
+CHECKCUSTOMITEMVALUE -1 0 < 5
+CheckContainsTextList ..\QuestDiary\火星\头盔.txt <$DLGITEM.NAME>
+CHECKGAMEGIRD > 39
+RANDOM 5
+#act
+CHANGECUSTOMITEMTEXT -1 [进阶次数]:
+CHANGECUSTOMITEMTEXTCOLOR -1 251
+CHANGECUSTOMITEMABIL -1 0 1 8
+CHANGECUSTOMITEMABIL -1 0 2 0
+CHANGECUSTOMITEMABIL -1 0 3 0
+CHANGECUSTOMITEMVALUE -1 0 + 1
+CHANGECUSTOMITEMABIL -1 0 0 254
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』进阶『<$DLGITEM.NAME>』装备成功!！
+GAMEGIRD - 40
+SetNewItemValue -1 0 + 1
+SetNewItemValue -1 1 + 1
+SetNewItemValue -1 2 + 1
+SetNewItemValue -1 3 + 1
+SetNewItemValue -1 4 + 1
+SetNewItemValue -1 6 + 1
+SetNewItemValue -1 7 + 1
+SetNewItemValue -1 8 + 1
+RECLAIMITEM
+GOTO @MAIN
+BREAK
+#elseact
+GOTO @失败检测1
+
+[@失败检测1]
+#IF
+CheckContainsTextList ..\QuestDiary\火星\头盔.txt <$DLGITEM.NAME>
+#ACT
+GAMEGIRD - 40
+CHANGECUSTOMITEMTEXT -1 [进阶次数]:
+CHANGECUSTOMITEMTEXTCOLOR -1 251
+CHANGECUSTOMITEMABIL -1 0 1 8
+CHANGECUSTOMITEMABIL -1 0 2 0
+CHANGECUSTOMITEMABIL -1 0 3 0
+CHANGECUSTOMITEMVALUE -1 0 = 0
+CHANGECUSTOMITEMABIL -1 0 0 254
+SetNewItemValue -1 0 = 0
+SetNewItemValue -1 1 = 0
+SetNewItemValue -1 2 = 0
+SetNewItemValue -1 3 = 0
+SetNewItemValue -1 4 = 0
+SetNewItemValue -1 6 = 0
+SetNewItemValue -1 7 = 0
+SetNewItemValue -1 8 = 0
+MESSAGEBOX 进阶失败灵符扣除40,装备返还
+RECLAIMITEM
+GOTO @MAIN
+BREAK

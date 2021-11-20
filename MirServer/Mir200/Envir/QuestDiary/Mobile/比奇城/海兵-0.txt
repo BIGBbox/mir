@@ -1,0 +1,44 @@
+[@Settings]
+{
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>\ \
+
+<Text|text=你想去挑战强大的怪物吗？不过你只有60分钟时间，|x=30|y=60|size=16>
+<Text|text=毕竟抓来他们也不容易，而且我也不能保证你们的安全。|x=30|y=80|size=16>
+<Text|text=那么还想试试吗？每进去一次收你一点声望值。|x=30|y=100|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@jump_M>
+<Text|text=进入圣域|x=60|y=133|size=16|color=1001|link=@jump_M>
+
+
+<Img|img=public/btn_npcfh_03.png|x=175|y=138>
+<Layout|x=175|y=120|width=80|height=50|link=@sabout_M>
+<Text|text=打听圣域的消息|x=200|y=133|size=16|color=1001|link=@sabout_M>
+
+
+[@sabout_M]
+
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>\ \
+
+<Text|text=荣誉勋章乃圣域至宝，不过你会首先到达一个|x=30|y=60|size=16>
+<Text|text=叫“圣域之门”的地方。可别在这个空旷的房间里|x=30|y=80|size=16>
+<Text|text=滞留太长时间哦，迈出你的第一步，传说中的圣域异兽就会出现。|x=30|y=100|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@exit>
+<Text|text=关闭|x=60|y=133|size=16|color=1001|link=@exit>
+
+
+
+[@jump_M]
+#if
+random 2
+#act
+timerecall 60
+map B101
+#elseact
+timerecall 60
+map B102
+
+
+}

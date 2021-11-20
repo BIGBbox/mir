@@ -1,0 +1,11 @@
+[@Settings]
+{
+<Text|text=<$NPCNAME>|x=30|y=20|size=18|color=1005>
+<Text|text=封魔谷是一个诅咒之城,|x=30|y=60|size=16>
+<Text|text=自古进来的人就没有一个活着离开过......|x=30|y=80|size=16>
+<Text|text=看什么看,你也一样!|x=30|y=100|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@exit>
+<Text|text=离开|x=60|y=133|size=16|color=1001|link=@exit>
+}

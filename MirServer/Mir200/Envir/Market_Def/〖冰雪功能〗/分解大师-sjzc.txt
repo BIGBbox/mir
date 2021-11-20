@@ -1,0 +1,125 @@
+(@ReclaimItem )
+
+[@main]
+#if
+#act
+MOV S$分解大师box提示 tips={请放入你要分解的装备/FCOLOR=255}
+MOV S$分解大师按钮触发 @确定分解
+MOV S$分解大师按钮所需元宝 请放入你要分解的装备
+goto @分解大师say
+
+[@分解大师say]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<Img|x=1.0|y=0.0|width=620|height=220|scale9r=10|scale9t=10|scale9l=10|img=public/bg_npc_01.png|reset=1|move=0|bg=1|scale9b=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=250|size=13|text=我可以分解1-4转那些史诗,传承,罕世装备！>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=250|size=13|text=不过也不是免费的，你需要支付一定的费用！>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=250|size=13|text=分解装备有一定几率获得（药品,材料印记,碎片,元宝,经验）！>
+<Text|a=0|x=32.0|y=139.0|tipsx=10|tipsy=80|color=254|size=13|text=<$str(S$分解大师按钮所需元宝)>>
+<Text|a=0|x=179.0|y=139.0|tipsx=10|tipsy=80|color=255|size=13|text=→>
+<ITEMBOX|x=221.0|y=118.0|width=55|height=55|boxindex=1|stdmode=*|<$str(S$分解大师box提示)>|tipsx=1|tipsy=65|img=public/1900000651_3.png>
+<Text|a=0|x=305.0|y=138.0|tipsx=10|tipsy=80|color=251|size=13|text=确定分解|link=<$str(S$分解大师按钮触发)>>
+#elsesay
+<Img|width=620|height=240|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=250|size=18|text=我可以分解1-4转那些史诗,传承,罕世装备！>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=250|size=18|text=不过也不是免费的，你需要支付一定的费用！>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=250|size=18|text=分解装备有一定几率获得（药品,材料印记,碎片,元宝,经验）！>
+<Text|a=0|x=30.0|y=147.0|tipsx=10|tipsy=80|color=254|size=18|text=<$str(S$分解大师按钮所需元宝)>>
+<Text|a=0|x=230.0|y=146.0|tipsx=10|tipsy=80|color=255|size=18|text=→>
+<ITEMBOX|x=271.0|y=133.0|width=55|height=55|boxindex=1|stdmode=*|<$str(S$分解大师box提示)>|tipsx=1|tipsy=65|img=public/1900000651_3.png>
+<Text|a=0|x=410.0|y=147.0|tipsx=10|tipsy=80|color=251|size=18|text=确定分解|link=<$str(S$分解大师按钮触发)>>
+
+[@ItemIntoBox1]
+#IF
+CheckContainsTextList ..\QuestDiary\分解装备\分解的装备1.txt <$BOXITEM[1].NAME>
+#act
+MOV S$分解大师box提示
+MOV S$分解大师按钮触发 @确定分解1
+MOV S$分解大师按钮所需元宝 分解此装备需要2W元宝
+GOTO @分解大师say
+BREAK
+
+#IF
+CheckContainsTextList ..\QuestDiary\分解装备\分解的装备2.txt <$BOXITEM[1].NAME>
+#act
+MOV S$分解大师box提示
+MOV S$分解大师按钮触发 @确定分解2
+MOV S$分解大师按钮所需元宝 分解此装备需要3W元宝
+GOTO @分解大师say
+BREAK
+
+#IF
+CheckContainsTextList ..\QuestDiary\分解装备\分解的装备3.txt <$BOXITEM[1].NAME>
+#act
+MOV S$分解大师box提示
+MOV S$分解大师按钮触发 @确定分解3
+MOV S$分解大师按钮所需元宝 分解此装备需要5W元宝
+GOTO @分解大师say
+BREAK
+#ELSEACT
+ReturnBoxItem 1
+UpDateBoxItem 1
+MESSAGEBOX 错误\\当前物品禁止分解！
+BREAK
+
+[@ItemOutBox1]
+#IF
+#act
+UpDateBoxItem 1
+BREAK
+
+[@确定分解1]
+#IF
+CheckBoxItemCount 1 1
+CHECKGAMEGOLD > 19999
+#act
+GAMEGOLD - 20000
+DELBOXITEM 1 1
+GetRandomText ..\QuestDiary\分解装备\奖励物品1.txt S10
+give <$STR(S10)> 1
+UpDateBoxItem 1
+#ELSEACT
+ReturnBoxItem 1
+UpDateBoxItem 1
+MESSAGEBOX 元宝不足20000,不能分解！
+BREAK
+
+
+[@确定分解2]
+#IF
+CheckBoxItemCount 1 1
+CHECKGAMEGOLD > 29999
+#act
+GAMEGOLD - 30000
+DELBOXITEM 1 1
+GetRandomText ..\QuestDiary\分解装备\奖励物品2.txt S10
+give <$STR(S10)> 1
+UpDateBoxItem 1
+#ELSEACT
+ReturnBoxItem 1
+UpDateBoxItem 1
+MESSAGEBOX 元宝不足30000,不能分解！
+BREAK
+
+
+[@确定分解3]
+#IF
+CheckBoxItemCount 1 1
+CHECKGAMEGOLD > 49999
+#act
+GAMEGOLD - 50000
+DELBOXITEM 1 1
+GetRandomText ..\QuestDiary\分解装备\奖励物品3.txt S10
+give <$STR(S10)> 1
+UpDateBoxItem 1
+#ELSEACT
+ReturnBoxItem 1
+UpDateBoxItem 1
+MESSAGEBOX 元宝不足50000,不能分解！
+BREAK
+

@@ -1,0 +1,200 @@
+[@Settings]
+{
+#IF
+#ACT
+GOTO @NPC_0
+GOTO @NPC_1
+GOTO @NPC_2
+
+[@物品列表]
+#ACT
+Mov N$当前页数 1
+Mov N$最大页数 1
+Mov S$ItemList1 彩票
+
+
+
+[@NPC_1]
+#IF
+#ACT
+
+Mov S$名字 <Text|text=<$NPCNAME>|x=30|y=20|size=18|color=1005>
+Mov S$内容1 <Text|text=欢迎光临，不想试一下你的运气吗？就算没有中奖，我也不负责。|x=30|y=60|size=16>
+Mov S$内容2 <Text|text=如果你同意，就请抽奖吧。到了一定的限度，你的钱会掉到地上，|x=30|y=80|size=16>
+Mov S$内容3 <Text|text=请注意啊!|x=30|y=100|size=16>
+
+Mov S$标识1 <Img|img=public/btn_npcfh_03.png|x=35|y=138>
+Mov S$范围1 <Layout|x=60|y=120|width=80|height=50|link=@buy_c>
+Mov S$按钮1 <Text|text=买彩票|x=60|y=133|size=16|color=1001|link=@buy_c>
+
+Mov S$标识2 <Img|img=public/btn_npcfh_03.png|x=155|y=138>
+Mov S$范围2 <Layout|x=180|y=120|width=80|height=50|link=@Bingo_2>
+Mov S$按钮2 <Text|text=了解彩票|x=180|y=133|size=16|color=1001|link=@Bingo_2>
+
+
+;buy sell repair
+
+Mov S$购买1 <Text|text=请选择要购买的彩票?中不中我可就不清楚了|x=30|y=60|size=16>
+;Mov S$购买2 <Text|text=内容|x=30|y=80|size=16>
+;Mov S$购买3 <Text|text=内容|x=30|y=100|size=16>
+
+Mov S$返回1 <Img|img=public/btn_npcfh_03.png|x=35|y=138>
+Mov S$返回2 <Layout|x=35|y=120|width=80|height=50|link=@main>
+Mov S$返回3 <Text|text=返回|x=60|y=133|size=16|color=1004|link=@main>
+
+[@NPC_2]
+
+<$STR(S$名字)>
+<$STR(S$内容1)>
+<$STR(S$内容2)>
+<$STR(S$内容3)>
+
+<$STR(S$标识1)>
+<$STR(S$按钮1)>
+<$STR(S$范围1)>
+
+<$STR(S$标识2)>
+<$STR(S$按钮2)>
+<$STR(S$范围2)>
+
+<$STR(S$标识3)>
+<$STR(S$按钮3)>
+<$STR(S$范围3)>
+
+<$STR(S$标识4)>
+<$STR(S$按钮4)>
+<$STR(S$范围4)>
+
+
+[@buy_c]
+#IF
+#ACT
+
+MOV N$货币类型 1
+MOV S$货币显示 金币
+
+goto @物品列表
+goto @读取物品
+goto @读取物品价格
+
+
+[@说话]
+#IF
+#ACT
+Mov N$当前页数 1
+#SAY
+
+<Button|x=334|y=179|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Layout|x=337|y=180|width=80|height=80|link=@main>
+
+<$STR(S$名字)>\
+<$STR(S$购买1)>
+
+<$STR(S$返回1)>
+<$STR(S$返回2)>
+<$STR(S$返回3)>
+
+
+<Img|id=50|img=public/bg_npc_02.png|y=179>
+
+<Img|id=51|img=public/bg_npcsm_01.png|x=9|y=188>
+<Img|id=52|img=public/bg_npcsm_01.png|x=9|y=251>
+<Img|id=53|img=public/bg_npcsm_01.png|x=9|y=314>
+<Img|id=54|img=public/bg_npcsm_01.png|x=9|y=377>
+<Img|id=55|img=public/bg_npcsm_01.png|x=9|y=440>
+<Img|id=56|img=public/bg_npcsm_01.png|x=9|y=503>
+
+<Layout|id=57|y=565|width=130|height=50|link=@上一页>
+<Layout|id=58|x=200|y=565|width=130|height=50|link=@下一页>
+
+<Button|id=59|x=73|y=570|nimg=public/btn_fanye_01.png|pimg=public/btn_fanye_01_1.png|link=@上一页>
+<Img|id=60|img=public/1900000676.png|x=125|y=570>
+<Text|id=61|text=<$STR(N$当前页数)>／<$STR(N$最大页数)>|x=143|y=573|size=18>
+<Button|id=62|x=206|y=570|nimg=public/btn_fanye_02.png|pimg=public/btn_fanye_02_1.png|link=@下一页>
+
+#IF
+Not Equal N$ItemListId1 0
+#SAY
+<ItemShow|id=63|x=12|y=190|itemid=<$STR(N$ItemListId1)>|showtips=<$STR(S$Itemtips)>>
+<Text|id=64|text=<$STR(S$ItemList1)>|x=80|y=195|size=18|color=1005>
+<Text|id=65|text=<$STR(S$货币显示)>：<$STR(N$ItemListPrice1)>|x=80|y=224|size=18>
+
+<Layout|id=66|x=245|y=200|width=80|height=50|link=@购买1>
+<Button|id=67|x=243|y=221|nimg=public/1900000653.png|pimg=public/1900000652.png|text=购    买|link=@购买1>
+
+
+[@购买1]
+#IF
+CHECKMONEY <$STR(N$货币类型)> = N$ItemListPrice1
+#ACT
+MONEY <$STR(N$货币类型)> - N$ItemListPrice1
+give S$ItemList1 1
+SENDMSG 10 购买<$STR(S$ItemList1)>成功！ 1006 -1
+Break
+#ElseAct
+#IF
+CHECKMONEY <$STR(N$货币类型)> > N$ItemListPrice1
+#ACT
+MONEY <$STR(N$货币类型)> - N$ItemListPrice1
+give S$ItemList1 1
+SENDMSG 10 购买<$STR(S$ItemList1)>成功！ 1006 -1
+#ELSEACT
+SENDMSG 10 对不起，您的<$STR(S$货币显示)>不足<$STR(N$ItemListPrice1)>. 1009 -1
+
+
+[@读取物品]
+;读取物品
+#IF
+not Equal S$ItemList1 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList1)> idx N$ItemListId1
+
+[@读取物品价格]
+#IF
+not Equal S$ItemList1 
+#ACT
+GetDBItemFieldValue <$STR(S$ItemList1)> Price N$ItemListPrice1
+
+#IF
+#ACT
+goto @说话
+
+[@Bingo_2]
+
+<$STR(S$名字)>\
+<Text|text=1等　　1,000,000金币　　4等　　　10,000金币|x=30|y=60|size=16>
+<Text|text=2等　　　200,000金币　　5等　　　 1,000金币|x=30|y=80|size=16>
+<Text|text=3等　　　100,000金币　　6等　　　　 500金币|x=30|y=100|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@exit>
+<Text|text=离开|x=60|y=133|size=16|color=1001|link=@exit>
+
+
+[@NPC_0]
+#If
+#Act
+Mov N$ItemListPrice1 0
+Mov N$ItemListId1 0
+
+MOV S$内容1 
+MOV S$内容2 
+MOV S$内容3 
+
+MOV S$标识1 
+MOV S$按钮1 
+MOV S$范围1 
+
+MOV S$标识2 
+MOV S$按钮2 
+MOV S$范围2 
+
+MOV S$标识3 
+MOV S$按钮3 
+MOV S$范围3 
+
+MOV S$标识4 
+MOV S$按钮4 
+MOV S$范围4 
+
+}

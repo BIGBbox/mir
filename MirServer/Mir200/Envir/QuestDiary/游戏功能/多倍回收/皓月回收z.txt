@@ -1,0 +1,48 @@
+[@皓月1回收]
+{
+#if
+checkitem 皓月仙の盔 1
+#ACT
+take 皓月仙の盔 1
+GAMEGOLD + 5000
+CHANGEEXP + 5000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了皓月装备，获得了大量元宝经验！
+GOTO @皓月1回收
+break
+#if
+checkitem 皓月仙の链 1
+#ACT
+take 皓月仙の链 1
+GAMEGOLD + 5000
+CHANGEEXP + 5000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了皓月装备，获得了大量元宝经验！
+GOTO @皓月1回收
+break
+#if
+checkitem 皓月仙の镯 1
+#ACT
+take 皓月仙の镯 1
+GAMEGOLD + 5000
+CHANGEEXP + 5000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了皓月装备，获得了大量元宝经验！
+GOTO @皓月1回收
+break
+#if
+checkitem 皓月仙の手 1
+#ACT
+take 皓月仙の手 1
+GAMEGOLD + 5000
+CHANGEEXP + 5000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了皓月装备，获得了大量元宝经验！
+GOTO @皓月1回收
+break
+#if
+checkitem 皓月仙の勋 1
+#ACT
+take 皓月仙の勋 1
+GAMEGOLD + 5000
+CHANGEEXP + 5000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了皓月装备，获得了大量元宝经验！
+GOTO @皓月1回收
+break
+}

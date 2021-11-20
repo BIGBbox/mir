@@ -1,0 +1,147 @@
+[@雪花回收]
+{
+#if
+checkitem 冰雪の带[极品] 1
+#ACT
+take 冰雪の带[极品] 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了雪花装备，获得了大量元宝经验！
+GOTO @雪花回收
+break
+#if
+checkitem 冰雪の靴[极品] 1
+#ACT
+take 冰雪の靴[极品] 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了雪花装备，获得了大量元宝经验！
+GOTO @雪花回收
+break
+#if
+checkitem 冰雪の带[优品] 1
+#ACT
+take 冰雪の带[优品] 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了雪花装备，获得了大量元宝经验！
+GOTO @雪花回收
+break
+#if
+checkitem 冰雪の靴[优品] 1
+#ACT
+take 冰雪の靴[优品] 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了雪花装备，获得了大量元宝经验！
+GOTO @雪花回收
+break
+#if
+checkitem 冰雪の帶[良品] 1
+#ACT
+take 冰雪の帶[良品] 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了雪花装备，获得了大量元宝经验！
+GOTO @雪花回收
+break
+#if
+checkitem 冰雪の靴[良品] 1
+#ACT
+take 冰雪の靴[良品] 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了雪花装备，获得了大量元宝经验！
+GOTO @雪花回收
+break
+#if
+checkitem 望月仙の盔 1
+#ACT
+take 望月仙の盔 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了雪花装备，获得了大量元宝经验！
+GOTO @雪花回收
+break
+#if
+checkitem 望月仙の链 1
+#ACT
+take 望月仙の链 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了雪花装备，获得了大量元宝经验！
+GOTO @雪花回收
+break
+#if
+checkitem 望月仙の镯 1
+#ACT
+take 望月仙の镯 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了雪花装备，获得了大量元宝经验！
+GOTO @雪花回收
+break
+#if
+checkitem 望月仙の手 1
+#ACT
+take 望月仙の手 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了雪花装备，获得了大量元宝经验！
+GOTO @雪花回收
+break
+#if
+checkitem 望月仙の勋 1
+#ACT
+take 望月仙の勋 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了雪花装备，获得了大量元宝经验！
+GOTO @雪花回收
+break
+#if
+checkitem 皓月仙の盔 1
+#ACT
+take 皓月仙の盔 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了雪花装备，获得了大量元宝经验！
+GOTO @雪花回收
+break
+#if
+checkitem 皓月仙の链 1
+#ACT
+take 皓月仙の链 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了雪花装备，获得了大量元宝经验！
+GOTO @雪花回收
+break
+#if
+checkitem 皓月仙の镯 1
+#ACT
+take 皓月仙の镯 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了雪花装备，获得了大量元宝经验！
+GOTO @雪花回收
+break
+#if
+checkitem 皓月仙の手 1
+#ACT
+take 皓月仙の手 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了雪花装备，获得了大量元宝经验！
+GOTO @雪花回收
+break
+#if
+checkitem 皓月仙の勋 1
+#ACT
+take 皓月仙の勋 1
+GAMEGOLD + 5000
+CHANGEEXP + 10000000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了雪花装备，获得了大量元宝经验！
+GOTO @雪花回收
+break
+}

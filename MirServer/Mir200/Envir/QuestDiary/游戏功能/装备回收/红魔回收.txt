@@ -1,0 +1,273 @@
+[@红魔回收]
+{
+#if
+checkitem 红魔道扇 1
+#ACT
+take 红魔道扇 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔道甲 1
+#ACT
+take 红魔道甲 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔道衣 1
+#ACT
+take 红魔道衣 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔道镯 1
+#ACT
+take 红魔道镯 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔道链 1
+#ACT
+take 红魔道链 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔道盔 1
+#ACT
+take 红魔道盔 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔道勋 1
+#ACT
+take 红魔道勋 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔道靴 1
+#ACT
+take 红魔道靴 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔道带 1
+#ACT
+take 红魔道带 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔道指 1
+#ACT
+take 红魔道指 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔法杖 1
+#ACT
+take 红魔法杖 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔法甲 1
+#ACT
+take 红魔法甲 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔法衣 1
+#ACT
+take 红魔法衣 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔法镯 1
+#ACT
+take 红魔法镯 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔法链 1
+#ACT
+take 红魔法链 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔法盔 1
+#ACT
+take 红魔法盔 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔法勋 1
+#ACT
+take 红魔法勋 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔法靴 1
+#ACT
+take 红魔法靴 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔法带 1
+#ACT
+take 红魔法带 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔法指 1
+#ACT
+take 红魔法指 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔战刃 1
+#ACT
+take 红魔战刃 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔战甲 1
+#ACT
+take 红魔战甲 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔战衣 1
+#ACT
+take 红魔战衣 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔战镯 1
+#ACT
+take 红魔战镯 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔战链 1
+#ACT
+take 红魔战链 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔战盔 1
+#ACT
+take 红魔战盔 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔战勋 1
+#ACT
+take 红魔战勋 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔战靴 1
+#ACT
+take 红魔战靴 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔战带 1
+#ACT
+take 红魔战带 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+#if
+checkitem 红魔战指 1
+#ACT
+take 红魔战指 1
+GAMEGOLD + 120
+CHANGEEXP + 140000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了红魔装备，获得了大量元宝经验！
+GOTO @红魔回收
+break
+}

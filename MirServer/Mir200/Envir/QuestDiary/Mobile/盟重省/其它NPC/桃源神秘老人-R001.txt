@@ -1,0 +1,67 @@
+[@Settings]
+{
+#IF
+checklevel 48
+#SAY
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>
+
+<RText|text=
+\ \ \
+
+我清楚你的能力,可是里面太恐怖了.. \
+你做好充分准备了吗?\ \
+
+>
+
+<Img|x=25|y=135|img=public/btn_npcfh_03.png>
+<Layout|x=25|y=130|width=120|height=50|link=@exit_1>
+<Text|x=50|y=130|color=1005|size=16|text=进入未知世界|link=@exit_1>
+
+<Img|x=180|y=135|img=public/btn_npcfh_03.png>
+<Layout|x=180|y=130|width=120|height=50|link=@mwmove>
+<Text|x=210|y=130|color=1005|size=16|text=回到盟重|link=@mwmove>
+
+<Img|x=330|y=135|img=public/btn_npcfh_03.png>
+<Layout|x=330|y=130|width=120|height=50|link=@exit>
+<Text|x=360|y=130|color=1005|size=16|text=继续留在这里|link=@exit>
+
+
+
+
+#ELSESAY
+
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>
+
+<RText|text=
+\ \ \
+
+里面是一个危险的未知世界， \
+最以你现在的实力还不能去那里， \
+等以后再来吧！ \
+我可以把你送回你原来的世界。>
+
+
+<Img|x=30|y=135|img=public/btn_npcfh_03.png>
+<Layout|x=30|y=130|width=120|height=50|link=@mwmove>
+<Text|x=50|y=130|color=1005|size=16|text=回到盟重|link=@mwmove>
+
+<Img|x=180|y=135|img=public/btn_npcfh_03.png>
+<Layout|x=180|y=130|width=120|height=50|link=@exit>
+<Text|x=210|y=130|color=1005|size=16|text=继续留在这里|link=@exit>
+
+
+
+[@exit_1]
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>
+
+<RText|text=
+\ \ \
+
+非常抱歉,由于服务器资源原因,更多神秘未知地图\
+将在近期开放,请您时刻关注我们的官方网站的更新情况 >
+
+
+<Img|x=25|y=135|img=public/btn_npcfh_03.png>
+<Layout|x=25|y=130|width=120|height=50|link=@main>
+<Text|x=50|y=130|color=1005|size=16|text=返 回|link=@main>
+}

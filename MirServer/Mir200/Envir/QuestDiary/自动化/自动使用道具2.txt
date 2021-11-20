@@ -1,0 +1,10 @@
+[@自动使用道具2]
+{
+
+; #IF
+; CHECKITEM 祝福油
+; #ACT
+; take 祝福油 1
+; goto @StdModeFunc68
+
+; }

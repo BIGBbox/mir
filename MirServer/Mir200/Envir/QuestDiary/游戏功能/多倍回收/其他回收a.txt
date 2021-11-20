@@ -1,0 +1,586 @@
+[@a三级综合回收2]
+{
+#if
+checkitem 攻[精准+3] 1
+#ACT
+take 攻[精准+3] 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[精准+3]装备，获得了大量元宝！
+GOTO @a三级综合回收2
+break
+#if
+checkitem 攻[强化+3] 1
+#ACT
+take 攻[强化+3] 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[强化+3]装备，获得了大量元宝！
+GOTO @a三级综合回收2
+break
+#if
+checkitem 攻[运筹+3] 1
+#ACT
+take 攻[运筹+3] 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[运筹+3]装备，获得了大量元宝！
+GOTO @a三级综合回收2
+break
+#if
+checkitem 攻[吸血+3] 1
+#ACT
+take 攻[吸血+3] 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[吸血+3]装备，获得了大量元宝！
+GOTO @a三级综合回收2
+break
+#if
+checkitem 攻[蝶魂+3] 1
+#ACT
+take 攻[蝶魂+3] 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[蝶魂+3]装备，获得了大量元宝！
+GOTO @a三级综合回收2
+break
+#if
+checkitem 攻[身强+3] 1
+#ACT
+take 攻[身强+3] 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[身强+3]装备，获得了大量元宝！
+GOTO @a三级综合回收2
+break
+#if
+checkitem 攻[强掠+3] 1
+#ACT
+take 攻[强掠+3] 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[强掠+3]装备，获得了大量元宝！
+GOTO @a三级综合回收2
+break
+#if
+checkitem 攻[穿杨+3] 1
+#ACT
+take 攻[穿杨+3] 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[穿杨+3]装备，获得了大量元宝！
+GOTO @a三级综合回收2
+break
+#if
+checkitem 攻[国色+3] 1
+#ACT
+take 攻[国色+3] 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[国色+3]装备，获得了大量元宝！
+GOTO @a三级综合回收2
+break
+#if
+checkitem 防[精准+3] 1
+#ACT
+take 防[精准+3] 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[精准+3]装备，获得了大量元宝！
+GOTO @a三级综合回收2
+break
+#if
+checkitem 防[强化+3] 1
+#ACT
+take 防[强化+3] 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[强化+3]装备，获得了大量元宝！
+GOTO @a三级综合回收2
+break
+#if
+checkitem 防[运筹+3] 1
+#ACT
+take 防[运筹+3] 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[运筹+3]装备，获得了大量元宝！
+GOTO @a三级综合回收2
+break
+#if
+checkitem 防[吸血+3] 1
+#ACT
+take 防[吸血+3] 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[吸血+3]装备，获得了大量元宝！
+GOTO @a三级综合回收2
+break
+#if
+checkitem 防[蝶魂+3] 1
+#ACT
+take 防[蝶魂+3] 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[蝶魂+3]装备，获得了大量元宝！
+GOTO @a三级综合回收2
+break
+#if
+checkitem 防[身强+3] 1
+#ACT
+take 防[身强+3] 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[身强+3]装备，获得了大量元宝！
+GOTO @a三级综合回收2
+break
+#if
+checkitem 防[强掠+3] 1
+#ACT
+take 防[强掠+3] 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[强掠+3]装备，获得了大量元宝！
+GOTO @a三级综合回收2
+break
+#if
+checkitem 防[穿杨+3] 1
+#ACT
+take 防[穿杨+3] 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[穿杨+3]装备，获得了大量元宝！
+GOTO @a三级综合回收2
+break
+#if
+checkitem 防[国色+3] 1
+#ACT
+take 防[国色+3] 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[国色+3]装备，获得了大量元宝！
+GOTO @a三级综合回收2
+break
+}
+[@a一级综合回收2]
+{
+#if
+checkitem 攻[精准+1] 1
+#ACT
+take 攻[精准+1] 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[精准+1]装备，获得了大量元宝！
+GOTO @a一级综合回收2
+break
+#if
+checkitem 攻[强化+1] 1
+#ACT
+take 攻[强化+1] 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[强化+1]装备，获得了大量元宝！
+GOTO @a一级综合回收2
+break
+#if
+checkitem 攻[运筹+1] 1
+#ACT
+take 攻[运筹+1] 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[运筹+1]装备，获得了大量元宝！
+GOTO @a一级综合回收2
+break
+#if
+checkitem 攻[吸血+1] 1
+#ACT
+take 攻[吸血+1] 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[吸血+1]装备，获得了大量元宝！
+GOTO @a一级综合回收2
+break
+#if
+checkitem 攻[蝶魂+1] 1
+#ACT
+take 攻[蝶魂+1] 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[蝶魂+1]装备，获得了大量元宝！
+GOTO @a一级综合回收2
+break
+#if
+checkitem 攻[身强+1] 1
+#ACT
+take 攻[身强+1] 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[身强+1]装备，获得了大量元宝！
+GOTO @a一级综合回收2
+break
+#if
+checkitem 攻[强掠+1] 1
+#ACT
+take 攻[强掠+1] 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[强掠+1]装备，获得了大量元宝！
+GOTO @a一级综合回收2
+break
+#if
+checkitem 攻[穿杨+1] 1
+#ACT
+take 攻[穿杨+1] 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[穿杨+1]装备，获得了大量元宝！
+GOTO @a一级综合回收2
+break
+#if
+checkitem 攻[国色+1] 1
+#ACT
+take 攻[国色+1] 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[国色+1]装备，获得了大量元宝！
+GOTO @a一级综合回收2
+break
+#if
+checkitem 防[精准+1] 1
+#ACT
+take 防[精准+1] 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[精准+1]装备，获得了大量元宝！
+GOTO @a一级综合回收2
+break
+#if
+checkitem 防[强化+1] 1
+#ACT
+take 防[强化+1] 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[强化+1]装备，获得了大量元宝！
+GOTO @a一级综合回收2
+break
+#if
+checkitem 防[运筹+1] 1
+#ACT
+take 防[运筹+1] 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[运筹+1]装备，获得了大量元宝！
+GOTO @a一级综合回收2
+break
+#if
+checkitem 防[吸血+1] 1
+#ACT
+take 防[吸血+1] 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[吸血+1]装备，获得了大量元宝！
+GOTO @a一级综合回收2
+break
+#if
+checkitem 防[蝶魂+1] 1
+#ACT
+take 防[蝶魂+1] 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[蝶魂+1]装备，获得了大量元宝！
+GOTO @a一级综合回收2
+break
+#if
+checkitem 防[身强+1] 1
+#ACT
+take 防[身强+1] 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[身强+1]装备，获得了大量元宝！
+GOTO @a一级综合回收2
+break
+#if
+checkitem 防[强掠+1] 1
+#ACT
+take 防[强掠+1] 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[强掠+1]装备，获得了大量元宝！
+GOTO @a一级综合回收2
+break
+#if
+checkitem 防[穿杨+1] 1
+#ACT
+take 防[穿杨+1] 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[穿杨+1]装备，获得了大量元宝！
+GOTO @a一级综合回收2
+break
+#if
+checkitem 防[国色+1] 1
+#ACT
+take 防[国色+1] 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[国色+1]装备，获得了大量元宝！
+GOTO @a一级综合回收2
+break
+}
+[@a二级综合回收2]
+{
+#if
+checkitem 攻[精准+2] 1
+#ACT
+take 攻[精准+2] 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[精准+2]装备，获得了大量元宝！
+GOTO @a二级综合回收2
+break
+#if
+checkitem 攻[强化+2] 1
+#ACT
+take 攻[强化+2] 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[强化+2]装备，获得了大量元宝！
+GOTO @a二级综合回收2
+break
+#if
+checkitem 攻[运筹+2] 1
+#ACT
+take 攻[运筹+2] 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[运筹+2]装备，获得了大量元宝！
+GOTO @a二级综合回收2
+break
+#if
+checkitem 攻[吸血+2] 1
+#ACT
+take 攻[吸血+2] 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[吸血+2]装备，获得了大量元宝！
+GOTO @a二级综合回收2
+break
+#if
+checkitem 攻[蝶魂+2] 1
+#ACT
+take 攻[蝶魂+2] 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[蝶魂+2]装备，获得了大量元宝！
+GOTO @a二级综合回收2
+break
+#if
+checkitem 攻[身强+2] 1
+#ACT
+take 攻[身强+2] 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[身强+2]装备，获得了大量元宝！
+GOTO @a二级综合回收2
+break
+#if
+checkitem 攻[强掠+2] 1
+#ACT
+take 攻[强掠+2] 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[强掠+2]装备，获得了大量元宝！
+GOTO @a二级综合回收2
+break
+#if
+checkitem 攻[穿杨+2] 1
+#ACT
+take 攻[穿杨+2] 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[穿杨+2]装备，获得了大量元宝！
+GOTO @a二级综合回收2
+break
+#if
+checkitem 攻[国色+2] 1
+#ACT
+take 攻[国色+2] 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了攻[国色+2]装备，获得了大量元宝！
+GOTO @a二级综合回收2
+break
+#if
+checkitem 防[精准+2] 1
+#ACT
+take 防[精准+2] 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[精准+2]装备，获得了大量元宝！
+GOTO @a二级综合回收2
+break
+#if
+checkitem 防[强化+2] 1
+#ACT
+take 防[强化+2] 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[强化+2]装备，获得了大量元宝！
+GOTO @a二级综合回收2
+break
+#if
+checkitem 防[运筹+2] 1
+#ACT
+take 防[运筹+2] 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[运筹+2]装备，获得了大量元宝！
+GOTO @a二级综合回收2
+break
+#if
+checkitem 防[吸血+2] 1
+#ACT
+take 防[吸血+2] 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[吸血+2]装备，获得了大量元宝！
+GOTO @a二级综合回收2
+break
+#if
+checkitem 防[蝶魂+2] 1
+#ACT
+take 防[蝶魂+2] 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[蝶魂+2]装备，获得了大量元宝！
+GOTO @a二级综合回收2
+break
+#if
+checkitem 防[身强+2] 1
+#ACT
+take 防[身强+2] 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[身强+2]装备，获得了大量元宝！
+GOTO @a二级综合回收2
+break
+#if
+checkitem 防[强掠+2] 1
+#ACT
+take 防[强掠+2] 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[强掠+2]装备，获得了大量元宝！
+GOTO @a二级综合回收2
+break
+#if
+checkitem 防[穿杨+2] 1
+#ACT
+take 防[穿杨+2] 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[穿杨+2]装备，获得了大量元宝！
+GOTO @a二级综合回收2
+break
+#if
+checkitem 防[国色+2] 1
+#ACT
+take 防[国色+2] 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了防[国色+2]装备，获得了大量元宝！
+GOTO @a二级综合回收2
+break
+}
+[@a清风综合回收2]
+{
+#if
+checkitem 治疗宝珠① 1
+#ACT
+take 治疗宝珠① 1
+GAMEGOLD + 12
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了治疗宝珠①装备，获得了大量元宝！
+GOTO @a清风综合回收2
+break
+}
+[@a迷失综合回收2]
+{
+#if
+checkitem 治疗宝珠② 1
+#ACT
+take 治疗宝珠② 1
+GAMEGOLD + 36
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了治疗宝珠②装备，获得了大量元宝！
+GOTO @a迷失综合回收2
+break
+}
+[@a黄昏综合回收2]
+{
+#if
+checkitem 治疗宝珠③ 1
+#ACT
+take 治疗宝珠③ 1
+GAMEGOLD + 72
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了治疗宝珠③装备，获得了大量元宝！
+GOTO @a黄昏综合回收2
+break
+}
+[@a迷失综合回收22]
+{
+#if
+checkitem 治疗宝珠④ 1
+#ACT
+take 治疗宝珠④ 1
+GAMEGOLD + 180
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了治疗宝珠④装备，获得了大量元宝！
+GOTO @a迷失综合回收2
+break
+}
+[@a帝王综合回收2]
+{
+#if
+checkitem 治疗宝珠⑤ 1
+#ACT
+take 治疗宝珠⑤ 1
+GAMEGOLD + 360
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了治疗宝珠⑤装备，获得了大量元宝！
+GOTO @a帝王综合回收2
+break
+}
+[@a修罗综合回收2]
+{
+#if
+checkitem 治疗宝珠⑥ 1
+#ACT
+take 治疗宝珠⑥ 1
+GAMEGOLD + 960
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了治疗宝珠⑥装备，获得了大量元宝！
+GOTO @a修罗综合回收2
+break
+}
+[@a基础综合回收2]
+{
+#if
+checkitem 天精岩一转 1
+#ACT
+take 天精岩一转 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了基础之精装备，获得了大量元宝！
+GOTO @a基础综合回收2
+break
+#if
+checkitem 地狱火一转 1
+#ACT
+take 地狱火一转 1
+GAMEGOLD + 120
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了基础之神装备，获得了大量元宝！
+GOTO @a基础综合回收2
+break
+}
+[@a入微综合回收2]
+{
+#if
+checkitem 天精岩二转 1
+#ACT
+take 天精岩二转 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了入微之精装备，获得了大量元宝！
+GOTO @a入微综合回收2
+break
+#if
+checkitem 地狱火二转 1
+#ACT
+take 地狱火二转 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了入微之神装备，获得了大量元宝！
+GOTO @a入微综合回收2
+break
+}
+[@a天人综合回收2]
+{
+#if
+checkitem 天精岩三转 1
+#ACT
+take 天精岩三转 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了天人之精装备，获得了大量元宝！
+GOTO @a天人综合回收2
+break
+#if
+checkitem 地狱火三转 1
+#ACT
+take 地狱火三转 1
+GAMEGOLD + 480
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了天人之神装备，获得了大量元宝！
+GOTO @a天人综合回收2
+break
+}
+[@a洗髓丹综合回收2]
+{
+#if
+checkitem 洗髓丹 1
+#ACT
+take 洗髓丹 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了洗髓丹装备，获得了大量元宝！
+GOTO @a洗髓丹综合回收2
+break
+}
+[@a血龙魄珠综合回收2]
+{
+#if
+checkitem 血龙魄珠 1
+#ACT
+take 血龙魄珠 1
+GAMEGOLD + 240
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了血龙魄珠装备，获得了大量元宝！
+GOTO @a血龙魄珠综合回收2
+break
+}

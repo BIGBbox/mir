@@ -1,0 +1,34 @@
+[@Settings]
+{
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>\ \
+
+<Text|text=欢迎.. 有什么事情找我?|x=30|y=60|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@s_repair>
+<Text|text=特殊修理|x=60|y=133|size=16|color=1001|link=@s_repair>
+
+<Img|img=public/btn_npcfh_03.png|x=175|y=138>
+<Layout|x=175|y=120|width=80|height=50|link=@exit>
+<Text|text=关 闭|x=200|y=133|size=16|color=1001|link=@exit>
+
+}
+
+
+[@Mobile_s_repair]
+{
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>\ \
+
+<Text|text=别看我像喝醉了酒，我会好好给你磨的。|x=30|y=60|size=16>
+<Text|text=全包在我身上。|x=30|y=80|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@main_n>
+<Text|text=返回|x=60|y=133|size=16|color=1001|link=@main_n>
+
+[@main_n]
+#IF
+#ACT
+close
+GOTO @main
+}

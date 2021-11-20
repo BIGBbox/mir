@@ -1,0 +1,29 @@
+[@Settings]
+{
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>\ \
+
+<Text|text=哈哈,有人来了.|x=30|y=60|size=16>
+<Text|text=封魔堡属于我的主人"虹魔教主",|x=30|y=80|size=16>
+<Text|text=你们是来给他当早餐的吧,嘿嘿......|x=30|y=100|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@info_2>
+<Text|text=打听消息|x=60|y=133|size=16|color=1001|link=@info_2>
+
+<Img|img=public/btn_npcfh_03.png|x=175|y=138>
+<Layout|x=175|y=120|width=80|height=50|link=@exit>
+<Text|text=确定|x=200|y=133|size=16|color=1001|link=@exit>
+
+
+[@info_2]
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>\ \
+
+<Text|text=前几天抓来一个疯疯癫癫的老头,|x=30|y=60|size=16>
+<Text|text=总说自己是什么掌管世人姻缘的神仙,|x=30|y=80|size=16>
+<Text|text=被我关到阁楼里去了.你认识他吗?|x=30|y=100|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@main>
+<Text|text=返回|x=60|y=133|size=16|color=1001|link=@main>
+
+}

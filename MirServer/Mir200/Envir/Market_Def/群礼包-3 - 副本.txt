@@ -1,0 +1,94 @@
+(@@InPutString @@InPutInteger)
+[@main]
+#IF
+#Act
+;CloseBigDialogBox
+#say
+\ \
+
+<大型公益/FCOLOR=254><≡≡【冰雪之城】≡≡/FCOLOR=253><小极品新版本/FCOLOR=254>\
+<---------------------------------------------------------/FCOLOR=9>\
+<新人加入官方QQ商贸群平台.即可兑换超级大礼包!方便快捷/FCOLOR=154>\
+<获取方法:点击加入QQ商贸群平台，进群有提示或看群公告即可/FCOLOR=70>\
+<QQ群专属特权来啦赶快加入我们吧~QQ群：28026931 /FCOLOR=249>\
+<---------------------------------------------------------/FCOLOR=9>\
+<免费领取QQ礼包:/FCOLOR=250><1.5倍爆率勋章/FCOLOR=243>        <点击兑换QQ群礼包/@@InPutString22>                   \
+
+
+
+[@InPutString22]
+#if
+CHECK [195] 0
+CHECKBAGSIZE 5
+CHECKTEXTLIST ..\QuestDiary\QQ群KYE.txt <$STR(S22)>
+#ACT
+;DELTEXTLIST ..\QuestDiary\QQ群KYE.txt <$STR(S22)>
+set [195] 1
+goto @奖励aa
+#elseact
+MESSAGEBOX 提示:\　\1.QQ群兑换码错误,需要加入QQ群后获取领取码哦\　\2.你的背包没有5个空位　\3.您领取过了！
+goto @main
+break
+
+[@奖励aa]
+#IF
+#ACT
+give 1.5倍爆率勋章 1
+goto @白银白银
+SENDMSG 0 恭喜(%s)使用QQ群KEY码兑换(QQ群专署礼包).快人一步.加入QQ商贸群即可获得KEY码
+SENDMSG 0 恭喜(%s)使用QQ群KEY码兑换(QQ群专署礼包).快人一步.加入QQ商贸群即可获得KEY码
+SENDMSG 0 恭喜(%s)使用QQ群KEY码兑换(QQ群专署礼包).快人一步.加入QQ商贸群即可获得KEY码
+MESSAGEBOX 提示:兑换QQ群礼包成功
+break
+
+
+[@白银白银]
+#if
+equal u22 4
+#act
+MESSAGEBOX \\晋级失败:原因如下\\　　　　1.您已经是"至尊会员"无再次晋升！
+break
+#if
+equal u22 3
+#act
+MESSAGEBOX \\晋级失败:原因如下\\　　　　1.您已经是"钻石会员"无再次晋升！
+break
+#if
+equal u22 2
+#act
+MESSAGEBOX \\晋级失败:原因如下\\　　　　1.您已经是"黄金会员"无再次晋升！
+break
+#if
+equal u22 1
+#act
+MESSAGEBOX \\晋级失败:原因如下\\　　　　1.您已经是"白银会员"无再次晋升！
+break
+
+
+#IF
+equal U22 0
+;CHECKGAMEGIRD > 99
+#act
+;GAMEGIRD - 100
+GIVE 天精岩一转 2
+GIVE 地狱火一转 2
+GIVE 洗髓丹 3
+GIVE 血龙魄珠 3
+GIVE 麻痹戒指+1 1
+GIVE 复活戒指+1 1
+GIVE 护身戒指+1 1
+GIVE 1000W经验卷 1
+GIVE 白银斗笠 1
+GIVE 白银·盾 1
+GIVE 10000元宝 1
+mov U22 1
+SetIcon 0 1 52 0 -22 1 0 200 0
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服荣誉的【白银会员】！！！
+MESSAGEBOX 恭喜你成为本服荣誉的【白银会员】系统将赠送你：1.1倍爆率属性！
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+#ELSEACT
+MESSAGEBOX 错误\\①你已经领取过此会员！
+BREAK
+
+
+

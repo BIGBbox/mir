@@ -1,0 +1,82 @@
+[@main]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<三界六道唯我尊，苍茫大地主浮沉。/FCOLOR=250>\
+<杀亲绝情复轮回，再战天道定乾坤！/FCOLOR=253>\
+<------------------------------------------------->\
+<千重劫，百世难，亘古匆匆，弹指间。/FCOLOR=254>\
+<本图共7层，清完本层所有怪才可进入下一层！/FCOLOR=253>\
+<本地图怪物相当变态，爆率相当变态，3转以上组队2人以上队长点击才可进入！  /FCOLOR=250>\
+\
+<Hot~/FCOLOR=58>        <花5000元宝+三转组队进入/@chun21通天1>         <黄金赞助免费进入/@chun21通天2> \
+<我不想组队也没有3转以上但是就是想进去涨涨见识>  <花1万元宝进去参观一下/@chun21通天3>
+#elsesay
+<Img|width=680|height=260|rotate=0|scale9l=10|scale9t=10|reset=1|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9r=10>
+<Layout|x=658.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=680.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=250|size=18|text=三界六道唯我尊，苍茫大地主浮沉。>
+<Text|a=0|x=32.0|y=47.0|tipsx=10|tipsy=80|color=253|size=18|text=杀亲绝情复轮回，再战天道定乾坤！>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=255|size=18|text=------------------------------------------------->
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=254|size=18|text=千重劫，百世难，亘古匆匆，弹指间。>
+<Text|a=0|x=32.0|y=107.0|tipsx=10|tipsy=80|color=253|size=18|text=本图共7层，清完本层所有怪才可进入下一层！>
+<Text|a=0|x=32.0|y=130.0|tipsx=10|tipsy=80|color=250|size=18|text=本地图怪物相当变态，爆率相当变态，3转以上组队2人以上队长点击才可进入！>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=58|size=18|text=HOT~>
+<Text|a=0|x=111.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=花5000元宝+三转组队进入|link=@CHUN21通天1>
+<Text|a=0|x=363.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=黄金赞助免费进入|link=@CHUN21通天2>
+<Text|a=0|x=32.0|y=196.0|tipsx=10|tipsy=80|color=255|size=18|text=我不想组队也没有3转以上但是就是想进去涨涨见识>
+<Text|a=0|x=441.0|y=195.0|tipsx=10|tipsy=80|color=251|size=18|text=花1万元宝进去参观一下|link=@CHUN21通天3>
+
+
+[@chun21通天2]
+#OR
+equal U22 4
+equal U22 3
+equal U22 2
+equal U22 1
+#ACT
+;give 回城卷 1
+MapMove cd1
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！ 1 3
+;SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！ 1 3
+;GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！
+break
+#elseact
+SendMsg 7 你还不是我们的白金赞助！
+break
+
+[@chun21通天3]
+#if
+CHECKGAMEGOLD > 9999
+#ACT
+;give 回城卷 1
+GAMEGOLD - 10000
+MapMove cd1
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！ 1 3
+;SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！ 1 3
+;GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！
+break
+#elseact
+SendMsg 7 你元宝不足,不能进入！
+break
+
+
+[@chun21通天1]
+#if
+ISGROUPMASTER
+CHECKRENEWLEVEL > 2
+CHECKGAMEGOLD > 4999
+#ACT
+;give 回城卷 1
+GAMEGOLD - 5000
+GROUPMAPMOVE cd1 23 20 1 @GROUPMAPMOVE
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！ 1 3
+;SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！ 1 3
+;GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！
+break
+#elseact
+SendMsg 7 你没有组队，或者元宝不足/或者没有3转！
+break

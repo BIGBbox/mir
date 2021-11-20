@@ -1,0 +1,35 @@
+[@main]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<本服安全区无死人,所有人点大退直接踢下线,能看到的全活人!/AUTOCOLOR=250>\
+<没有人会站在安全区给别人看,那是假人或者死人!/AUTOCOLOR=251>\
+<删除垃圾装备掉落提示,聊天框信息滚动那么快还叫聊天框吗?/AUTOCOLOR=250>\
+<4站同开,一共16个区,即使每个区留10个玩家合区也有160人/AUTOCOLOR=250>\
+<新区只是给玩家一个发展空间,合区才是激情的开始/AUTOCOLOR=250>\
+<请不要放弃新区发展的空间,合区后你可能抢不到怪!/AUTOCOLOR=250>\
+<本服人气比看到的要多,因为都在地图里/AUTOCOLOR=253>\
+<您玩本服,不管花不花钱都是对我们的支持-----谢谢>\
+<开始游戏之旅/@开始>\
+#elsesay
+<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=250|size=18|text=本服安全区无死人,所有人点大退直接踢下线,能看到的全活人!>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=251|size=18|text=没有人会站在安全区给别人看,那是假人或者死人!>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=250|size=18|text=删除垃圾装备掉落提示,聊天框信息滚动那么快还叫聊天框吗?>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=250|size=18|text=4站同开,一共16个区,即使每个区留10个玩家合区也有160人>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=250|size=18|text=新区只是给玩家一个发展空间,合区才是激情的开始>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=250|size=18|text=请不要放弃新区发展的空间,合区后你可能抢不到怪!>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=253|size=18|text=本服人气比看到的要多,因为都在地图里>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=255|size=18|text=您玩本服,不管花不花钱都是对我们的支持-----谢谢>
+<Text|a=0|x=32.0|y=212.0|tipsx=10|tipsy=80|color=251|size=18|text=开始游戏之旅|link=@开始>
+
+
+[@开始]
+#if
+CHECKLEVELEX > 49
+#act
+mapmove qdmg
+#ELSEACT
+MESSAGEBOX 请50级之后再出去！

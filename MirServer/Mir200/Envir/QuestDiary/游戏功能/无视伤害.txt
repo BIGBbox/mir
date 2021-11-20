@@ -1,0 +1,78 @@
+[@无视伤害a]
+{
+#IF
+equal U3 1
+random 24
+#ACT
+;ChangeModeEx 1 2
+SENDMSG 6 神佑无视伤害触发！
+BREAK
+#IF
+equal U3 2
+random 23
+#ACT
+;ChangeModeEx 1 2
+SENDMSG 6 神佑无视伤害触发！
+BREAK
+#IF
+equal U3 3
+random 22
+#ACT
+;ChangeModeEx 1 2
+SENDMSG 6 神佑无视伤害触发！
+BREAK
+#IF
+equal U3 4
+random 21
+#ACT
+;ChangeModeEx 1 2
+SENDMSG 6 神佑无视伤害触发！
+BREAK
+#IF
+equal U3 5
+random 20
+#ACT
+;ChangeModeEx 1 2
+SENDMSG 6 神佑无视伤害触发！
+BREAK
+#IF
+equal U3 6
+random 19
+#ACT
+;ChangeModeEx 1 2
+SENDMSG 6 神佑无视伤害触发！
+BREAK
+#IF
+equal U3 7
+random 18
+#ACT
+;ChangeModeEx 1 2
+SENDMSG 6 神佑无视伤害触发！
+BREAK
+#IF
+equal U3 8
+random 17
+#ACT
+;ChangeModeEx 1 2
+SENDMSG 6 神佑无视伤害触发！
+BREAK
+#IF
+equal U3 9
+random 16
+#ACT
+;ChangeModeEx 1 2
+SENDMSG 6 神佑无视伤害触发！
+BREAK
+#IF
+equal U3 10
+random 15
+#ACT
+;ChangeModeEx 1 2
+SENDMSG 6 神佑无视伤害触发！
+BREAK
+#IF
+equal U3 0
+random 1
+#ACT
+BREAK
+}

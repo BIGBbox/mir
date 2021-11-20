@@ -1,0 +1,67 @@
+[@main]
+\
+¤╭⌒╮╭⌒╮                   \
+< ╱◥██◣/FCOLOR=249>╭⌒╮           <欢迎光临/FCOLOR=254>{<$SERVERNAME>/FCOLOR=249}\
+<︱田︱田田|╰-------------/FCOLOR=150>    　   　< 王者领域/FCOLOR=253>\
+<╔┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╗/FCOLOR=241>\
+<┊/FCOLOR=241><用心打造王者领域，让您找回曾经的传奇PK寻宝乐趣！。/FCOLOR=250>　<┊/FCOLOR=241>\
+<┊/FCOLOR=241><本地图为限时寻宝地图！。/FCOLOR=250><┊/FCOLOR=241>\
+<┊/FCOLOR=241><谢谢你的支持和赞助！必须王者会员才能进！/FCOLOR=243>　　　　　　　　　　　　　　　<┊/FCOLOR=241>\
+<┊/FCOLOR=241>　　 <【8W元宝进入】/@进入1>            <【16W元宝进入】/@进入2>　　　 <┊/FCOLOR=241>\
+<╚┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╝/FCOLOR=241>\
+
+[@进入2]
+#IF
+check [030] 1
+#ACT
+GOTO @进入2A
+BREAK
+#ELSEACT
+MESSAGEBOX 你不是王者会员，不能进入！！
+BREAK
+
+[@进入1]
+#IF
+check [030] 1
+#ACT
+GOTO @进入1A
+BREAK
+#ELSEACT
+MESSAGEBOX 你不是王者会员，不能进入！！
+BREAK
+
+[@进入1A]
+#if
+CHECKGAMEGOLD > 79999
+#ACT
+;give 回城卷 1
+GAMEGOLD - 80000
+TimeRecall 60
+MapMove wzly
+SendCenterMsg 180 251 你还剩余[%d秒]离开王者领域. 0 3600 @离开
+;SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖王者领域〗,寻找高级装备！ 1 3
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖王者领域〗,寻找高级装备！ 1 3
+;GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖王者领域〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖王者领域〗,寻找高级装备！
+break
+#elseact
+SendMsg 7 你的元宝不足！无法进入！
+break
+
+[@进入2A]
+#if
+CHECKGAMEGOLD > 159999
+#ACT
+;give 回城卷 1
+GAMEGOLD - 160000
+TimeRecall 120
+MapMove wzly
+SendCenterMsg 180 251 你还剩余[%d秒]离开王者领域. 0 7200 @离开
+;SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖王者领域〗,寻找高级装备！ 1 3
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖王者领域〗,寻找高级装备！ 1 3
+;GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖王者领域〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖王者领域〗,寻找高级装备！
+break
+#elseact
+SendMsg 7 你的元宝不足！无法进入！
+break

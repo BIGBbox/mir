@@ -1,0 +1,49 @@
+[@main]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<举报外挂奖励规则:>\
+<!> \
+<如果确实开挂了,管理会把开挂人身上所有的元宝奖励给举报者/FCOLOR=254>\ \
+
+<我们不会透露给任何人举报者的信息.让我们一起携手打造一个无挂的游戏/FCOLOR=250>\ \
+
+<被举报者惩罚如下>\
+<如被举报,经过抓挂人员核实,封号处理.解封200元!/FCOLOR=254>\
+<查看如何举报外挂/@举报流程>
+#elsesay
+<Img|width=640|height=250|rotate=0|scale9l=10|scale9t=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9r=10|reset=1>
+<Layout|x=617.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=639.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=18|text=举报外挂奖励规则:>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=254|size=18|text=如果确实开挂了,管理会把开挂人身上所有的元宝奖励给举报者>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=250|size=18|text=我们不会透露给任何人举报者的信息.让我们一起携手打造一个无挂的游戏>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=255|size=18|text=被举报者惩罚如下>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=254|size=18|text=如被举报,经过抓挂人员核实,封号处理.解封200元!>
+<Text|a=0|x=32.0|y=195.0|tipsx=10|tipsy=80|color=251|size=18|text=查看如何举报外挂|link=@举报流程>
+
+
+[@举报流程]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<举报外挂请加群,【啊三传奇：(群号:36742300)】/FCOLOR=254>\
+<进群后找管理私聊,别往群里发,防止抓挂人员核实的时候对方把挂退了/FCOLOR=254>\
+<举报后我们会有专业人员进游戏核实./FCOLOR=254>\
+<如果我们亲眼所见,确实开挂了,封号处理,并且给予举报者奖励!/FCOLOR=254>\ \
+
+<-----------欢迎大家举报外挂> \ \
+
+<我们会努力做的更好>  <感谢这么久以来大家对我们的支持/FCOLOR=250>\
+#elsesay
+<Img|width=600|height=250|rotate=0|scale9l=10|scale9t=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9r=10|reset=1>
+<Layout|x=576.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=598.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=254|size=18|text=举报外挂请加群,【啊三传奇：(群号:36742300)】>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=254|size=18|text=进群后找管理私聊,别往群里发,防止抓挂人员核实的时候对方把挂退了>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=254|size=18|text=举报后我们会有专业人员进游戏核实.>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=254|size=18|text=如果我们亲眼所见,确实开挂了,封号处理,并且给予举报者奖励!>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=255|size=18|text=-----------欢迎大家举报外挂>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=255|size=18|text=我们会努力做的更好>
+<Text|a=0|x=252|y=165|tipsx=10|tipsy=80|color=250|size=18|text=感谢这么久以来大家对我们的支持>
+

@@ -1,0 +1,273 @@
+[@a黄昏回收]
+{
+#if
+checkitem 聖龍道扇 1
+#ACT
+take 聖龍道扇 1
+GAMEGOLD + 240
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍道甲 1
+#ACT
+take 聖龍道甲 1
+GAMEGOLD + 240
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍道衣 1
+#ACT
+take 聖龍道衣 1
+GAMEGOLD + 240
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍道镯 1
+#ACT
+take 聖龍道镯 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍道链 1
+#ACT
+take 聖龍道链 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍道盔 1
+#ACT
+take 聖龍道盔 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍道勋 1
+#ACT
+take 聖龍道勋 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍道靴 1
+#ACT
+take 聖龍道靴 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍道带 1
+#ACT
+take 聖龍道带 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍道指 1
+#ACT
+take 聖龍道指 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍魔杖 1
+#ACT
+take 聖龍魔杖 1
+GAMEGOLD + 240
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍魔甲 1
+#ACT
+take 聖龍魔甲 1
+GAMEGOLD + 240
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍魔衣 1
+#ACT
+take 聖龍魔衣 1
+GAMEGOLD + 240
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍魔镯 1
+#ACT
+take 聖龍魔镯 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍魔链 1
+#ACT
+take 聖龍魔链 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍魔盔 1
+#ACT
+take 聖龍魔盔 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍魔勋 1
+#ACT
+take 聖龍魔勋 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍魔靴 1
+#ACT
+take 聖龍魔靴 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍魔带 1
+#ACT
+take 聖龍魔带 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍魔指 1
+#ACT
+take 聖龍魔指 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍战刃 1
+#ACT
+take 聖龍战刃 1
+GAMEGOLD + 240
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍战甲 1
+#ACT
+take 聖龍战甲 1
+GAMEGOLD + 240
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍战衣 1
+#ACT
+take 聖龍战衣 1
+GAMEGOLD + 240
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍战镯 1
+#ACT
+take 聖龍战镯 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍战链 1
+#ACT
+take 聖龍战链 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍战盔 1
+#ACT
+take 聖龍战盔 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍战勋 1
+#ACT
+take 聖龍战勋 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍战靴 1
+#ACT
+take 聖龍战靴 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍战带 1
+#ACT
+take 聖龍战带 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+#if
+checkitem 聖龍战指 1
+#ACT
+take 聖龍战指 1
+GAMEGOLD + 120
+CHANGEEXP + 80000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黄昏装备，获得了大量元宝经验！
+GOTO @a黄昏回收
+break
+}

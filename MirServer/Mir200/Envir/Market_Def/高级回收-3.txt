@@ -1,0 +1,569 @@
+[@main]
+这里是回收系统你可以把你不需要的东西在我这里回收\
+<冰雪装备>：冰雪系列装备换成3000元宝和700W经验\
+<上古装备>：上古系列装备换成10W元宝和2亿经验\
+<起源装备>：起源系列装备换成30元宝和5亿经验\
+<特殊回收>：可以将你不需要的特殊装备换成元宝\
+『<冰雪装备/@王者>』 『<上古装备/@金牛>』『<皓月忘月/@皓月忘月>』\
+『<上古装备/@金牛>』 『<起源装备/@皇灵>』『<特殊装备/@天怨>』   \
+『<技能之心/@技能>』 『<回收价格/@价格>』\
+『<返回/@main>』 『<离开/@exit>』\
+
+
+[@技能]
+#if
+checkitem 刺杀之心 1
+#ACT
+take 刺杀之心 1
+CHANGEEXP + 200000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了技能之心，获得了大量元宝经验
+#if
+checkitem 烈火之心 1
+#ACT
+take 烈火之心 1
+CHANGEEXP + 200000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了技能之心，获得了大量元宝经验
+#if
+checkitem 飓风之心 1
+#ACT
+take 飓风之心 1
+CHANGEEXP + 200000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了技能之心，获得了大量元宝经验
+#if
+checkitem 雷霆之心 1
+#ACT
+take 雷霆之心 1
+CHANGEEXP + 200000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了技能之心，获得了大量元宝经验
+#if
+checkitem 逐日之心 1
+#ACT
+take 逐日之心 1
+CHANGEEXP + 200000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了技能之心，获得了大量元宝经验
+#if
+checkitem 攻杀之心 1
+#ACT
+take 攻杀之心 1
+CHANGEEXP + 200000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了技能之心，获得了大量元宝经验
+#if
+checkitem 火墙之心 1
+#ACT
+take 火墙之心 1
+CHANGEEXP + 200000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了技能之心，获得了大量元宝经验
+#if
+checkitem 雷电之心 1
+#ACT
+take 雷电之心 1
+CHANGEEXP + 200000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了技能之心，获得了大量元宝经验
+#if
+checkitem 寒冰之心 1
+#ACT
+take 寒冰之心 1
+CHANGEEXP + 200000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了技能之心，获得了大量元宝经验
+
+
+[@价格]
+『<下一页/@w1>』 『<返回/@main>』\
+冰雪腰带 靴子（包括良品 精品  极品）   回收     3000元宝加上700万经验\
+麻痹复活护身+9回收      3000元宝加上700万经验 \
+冰雪死亡坠   冰雪毁灭坠  暴风噬血链   回收5000元宝  1000万经验\
+点点死亡坠   点点毁灭坠  点点噬血链   回收10000元宝 2000万经验\
+上古装备            回收  10万元宝加上2亿经验\
+起源装备            回收  30万元宝加上5亿经验\
+
+
+[@w1]
+残装备回收  『<返回/@main>』\
+残系列  武器 回收   15万元宝 \
+残系列  衣服 回收   10万元宝 \
+特殊回收
+无之盾  冰雪城主令  点点神力1.1倍   一相之力  残暴之力  最后的轻语 回收 8000元宝加上1500万经验 \
+二相之力   点点神力1.2倍   黑色切割者  回收  3万元宝加上 5000万经验 \
+三相之力   点点神力1.3倍   回收  20万元宝加上3亿经验 \
+终极特殊戒指回收   10万元宝 2亿经验 \
+
+
+[@皓月忘月]
+#if
+checkitem 望月仙の盔 1
+#ACT
+take 望月仙の盔 1
+CHANGEEXP + 50000000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了皓月望月装备，获得了大量元宝经验
+#if
+checkitem 望月仙の链 1
+#ACT
+take 望月仙の链 1
+CHANGEEXP + 50000000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了皓月望月装备，获得了大量元宝经验
+#if
+checkitem 望月仙の镯 1
+#ACT
+take 望月仙の镯 1
+CHANGEEXP + 50000000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了皓月望月装备，获得了大量元宝经验
+#if
+checkitem 望月仙の手 1
+#ACT
+take 望月仙の手 1
+CHANGEEXP + 50000000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了皓月望月装备，获得了大量元宝经验
+#if
+checkitem 望月仙の勋 1
+#ACT
+take 望月仙の勋 1
+CHANGEEXP + 50000000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了皓月望月装备，获得了大量元宝经验
+#if
+checkitem 皓月仙の盔 1
+#ACT
+take 皓月仙の盔 1
+CHANGEEXP + 50000000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了皓月望月装备，获得了大量元宝经验
+#if
+checkitem 皓月仙の链 1
+#ACT
+take 皓月仙の链 1
+CHANGEEXP + 50000000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了皓月望月装备，获得了大量元宝经验
+#if
+checkitem 皓月仙の镯 1
+#ACT
+take 皓月仙の镯 1
+CHANGEEXP + 50000000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了皓月望月装备，获得了大量元宝经验
+#if
+checkitem 皓月仙の手 1
+#ACT
+take 皓月仙の手 1
+CHANGEEXP + 50000000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了皓月望月装备，获得了大量元宝经验
+#if
+checkitem 皓月仙の勋 1
+#ACT
+take 皓月仙の勋 1
+CHANGEEXP + 50000000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了皓月望月装备，获得了大量元宝经验
+
+[@王者]
+#if
+checkitem 冰雪の带[极品] 1
+#ACT
+take 冰雪の带[极品] 1
+CHANGEEXP + 7000000
+GAMEGOLD + 3000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了冰雪装备，获得了大量元宝经验
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了冰雪装备，获得了大量元宝经验
+#if
+checkitem 冰雪の靴[极品] 1
+#ACT
+take 冰雪の靴[极品] 1
+CHANGEEXP + 7000000
+GAMEGOLD + 3000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了冰雪装备，获得了大量元宝经验
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了冰雪装备，获得了大量元宝经验
+#if
+checkitem 冰雪の带[优品] 1
+#ACT
+take 冰雪の带[优品] 1
+CHANGEEXP + 7000000
+GAMEGOLD + 3000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了冰雪装备，获得了大量元宝经验
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了冰雪装备，获得了大量元宝经验
+#if
+checkitem 冰雪の靴[优品] 1
+#ACT
+take 冰雪の靴[优品] 1
+CHANGEEXP + 7000000
+GAMEGOLD + 3000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了冰雪装备，获得了大量元宝经验
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了冰雪装备，获得了大量元宝经验
+#if
+checkitem 冰雪の带[良品] 1
+#ACT
+take 冰雪の带[良品] 1
+CHANGEEXP + 7000000
+GAMEGOLD + 3000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了冰雪装备，获得了大量元宝经验
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了冰雪装备，获得了大量元宝经验
+#if
+checkitem 冰雪の靴[良品] 1
+#ACT
+take 冰雪の靴[良品] 1
+CHANGEEXP + 7000000
+GAMEGOLD + 3000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了冰雪装备，获得了大量元宝经验
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了冰雪装备，获得了大量元宝经验
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了冰雪装备，获得了大量元宝经验
+
+
+[@金牛]
+#if
+checkitem 上古·盔 1
+#ACT
+take 上古·盔 1
+CHANGEEXP + 200000000
+GAMEGOLD + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了上古装备，获得了大量元宝经验！
+#if
+checkitem 上古·链 1
+#ACT
+take 上古·链 1
+CHANGEEXP + 200000000
+GAMEGOLD + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了上古装备，获得了大量元宝经验！
+#if
+checkitem 上古·镯 1
+#ACT
+take 上古·镯 1
+CHANGEEXP + 200000000
+GAMEGOLD + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了上古装备，获得了大量元宝经验！
+#if
+checkitem 上古·手 1
+#ACT
+take 上古·手 1
+CHANGEEXP + 200000000
+GAMEGOLD + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了上古装备，获得了大量元宝经验！
+#if
+checkitem 上古·指 1
+#ACT
+take 上古·指
+CHANGEEXP + 200000000
+GAMEGOLD + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了上古装备，获得了大量元宝经验！
+#if
+checkitem 上古·勋 1
+#ACT
+take 上古·勋 1
+CHANGEEXP + 200000000
+GAMEGOLD + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了上古装备，获得了大量元宝经验！
+#if
+checkitem 上古·带 1
+#ACT
+take 上古·带 1
+CHANGEEXP + 200000000
+GAMEGOLD + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了上古装备，获得了大量元宝经验！
+#if
+checkitem 上古·靴 1
+#ACT
+take 上古·靴 1
+CHANGEEXP + 200000000
+GAMEGOLD + 100000
+SENDMSG 6 〖提示〗上古装备回收成功
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了上古装备，获得了大量元宝经验！
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了上古装备，获得了大量元宝经验！
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了上古装备，获得了大量元宝经验！
+
+
+
+
+[@皇灵]
+#if
+checkitem 起源·盔 1
+#ACT
+take 起源·盔 1
+CHANGEEXP + 500000000
+GAMEGOLD + 300000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了起源装备，获得了大量元宝经验
+#if
+checkitem 起源·链 1
+#ACT
+take 起源·链 1
+CHANGEEXP + 500000000
+GAMEGOLD + 300000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了起源装备，获得了大量元宝经验
+#if
+checkitem 起源·镯 1
+#ACT
+take 起源·镯 1
+CHANGEEXP + 500000000
+GAMEGOLD + 300000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了起源装备，获得了大量元宝经验
+#if
+checkitem 起源·手 1
+#ACT
+take 起源·手 1
+CHANGEEXP + 500000000
+GAMEGOLD + 300000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了起源装备，获得了大量元宝经验
+#if
+checkitem 起源·指 1
+#ACT
+take 起源·指
+CHANGEEXP + 500000000
+GAMEGOLD + 300000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了起源装备，获得了大量元宝经验
+#if
+checkitem 起源·勋 1
+#ACT
+take 起源·勋
+CHANGEEXP + 500000000
+GAMEGOLD + 300000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了起源装备，获得了大量元宝经验
+#if
+checkitem 起源·带 1
+#ACT
+take 起源·带
+CHANGEEXP + 500000000
+GAMEGOLD + 300000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了起源装备，获得了大量元宝经验
+#if
+checkitem 起源·靴 1
+#ACT
+take 起源·靴
+CHANGEEXP + 500000000
+GAMEGOLD + 300000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了起源装备，获得了大量元宝经验！
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了起源装备，获得了大量元宝经验！
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了起源装备，获得了大量元宝经验！
+！
+SENDMSG 6 〖提示〗起源回收成功
+
+[@天怨]
+╔┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄╗\
+┆选择你需要回收的特殊装备：          『<下一页/@x1>』 『<返回/@main>』 ┆\
+╚┄┄┄┄┄┄┄┄╩┄┄┄┄┄┄┄┄╩┄┄┄┄┄┄┄┄╝\
+『<冰雪项链等/@冰雪项>』┆    『<点点项链等/@点点>』┆     『<终极戒指/@终戒指>』┆\
+\
+『<残衣服/@残衣>』┆    『<残武器/@残武>』┆     『<二相1.2黑切/@杂物>』┆\
+\
+『<无盾雪令等/@无盾雪令>』┆   『<返回/@main>』 『<离开/@exit>』 \
+
+
+
+[@无盾雪令]
+#if
+checkitem 无之盾 1
+#ACT
+take 无之盾 1
+CHANGEEXP + 15000000
+GAMEGOLD + 8000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了无之盾，获得了大量元宝经验！
+#if
+checkitem 冰雪城主令 1
+#ACT
+take 冰雪城主令 1
+CHANGEEXP + 15000000
+GAMEGOLD + 8000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了冰雪城主令，获得了大量元宝经验！
+#if
+checkitem 点点神力1.1倍 1
+#ACT
+take 点点神力1.1倍 1
+CHANGEEXP + 15000000
+GAMEGOLD + 8000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了点点神力1.1倍，获得了大量元宝经验！
+#if
+checkitem 一相之力 1
+#ACT
+take 一相之力 1
+CHANGEEXP + 15000000
+GAMEGOLD + 8000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了一相之力，获得了大量元宝经验！
+#if
+checkitem 残暴之力 1
+#ACT
+take 残暴之力 1
+CHANGEEXP + 15000000
+GAMEGOLD + 8000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了残暴之力，获得了大量元宝经验！
+#if
+checkitem 最后的轻语 1
+#ACT
+take 最后的轻语 1
+CHANGEEXP + 15000000
+GAMEGOLD + 8000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了最后的轻语，获得了大量元宝经验！
+
+
+[@杂物]
+#if
+checkitem 二相之力 1
+#ACT
+take 二相之力 1
+CHANGEEXP + 50000000
+GAMEGOLD + 30000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了二相之力，获得了大量元宝经验！
+#if
+checkitem 点点神力1.2倍 1
+#ACT
+take 点点神力1.2倍 1
+CHANGEEXP + 50000000
+GAMEGOLD + 30000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了点点神力1.2倍，获得了大量元宝经验！
+#if
+checkitem 黑色切割者 1
+#ACT
+take 黑色切割者 1
+CHANGEEXP + 50000000
+GAMEGOLD + 30000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了黑色切割者，获得了大量元宝经验！
+
+
+[@残武]
+#if
+checkitem 【残】鬼王 1
+#ACT
+take 【残】鬼王 1
+CHANGEEXP + 200000000
+GAMEGOLD + 150000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了残武器装备，获得了大量元宝经验！
+#if
+checkitem 【残】耀光 1
+#ACT
+take 【残】耀光 1
+CHANGEEXP + 200000000
+GAMEGOLD + 150000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了残武器装备，获得了大量元宝经验！
+#if
+checkitem 【残】诛仙 1
+#ACT
+take 【残】诛仙 1
+CHANGEEXP + 200000000
+GAMEGOLD + 150000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了残武器装备，获得了大量元宝经验！
+#if
+checkitem 【残】流光 1
+#ACT
+take 【残】流光 1
+CHANGEEXP + 200000000
+GAMEGOLD + 150000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了残武器装备，获得了大量元宝经验！
+SENDMSG 6 〖提示〗一键回收成功
+GOTO
+
+[@残衣]
+#if
+checkitem 【残】流云·男 1
+#ACT
+take 【残】流云·男 1
+CHANGEEXP + 200000000
+GAMEGOLD + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了残衣服装备，获得了大量元宝经验！
+#if
+checkitem 【残】流云·女 1
+#ACT
+take 【残】流云·女 1
+CHANGEEXP + 200000000
+GAMEGOLD + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了残衣服装备，获得了大量元宝经验！
+#if
+checkitem 【残】鬼甲 1
+#ACT
+take 【残】鬼甲 1
+CHANGEEXP + 200000000
+GAMEGOLD + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了残衣服装备，获得了大量元宝经验！
+#if
+checkitem 【残】鬼衣 1
+#ACT
+take 【残】鬼衣 1
+CHANGEEXP + 200000000
+GAMEGOLD + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了残衣服装备，获得了大量元宝经验！
+
+[@终戒指]
+#if
+checkitem 终极麻痹戒指 1
+#ACT
+take 终极麻痹戒指 1
+CHANGEEXP + 200000000
+GAMEGOLD + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了终极戒指装备，获得了大量元宝经验！
+#if
+checkitem 终极复活戒指 1
+#ACT
+take 终极复活戒指 1
+CHANGEEXP + 200000000
+GAMEGOLD + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了终极戒指装备，获得了大量元宝经验！
+#if
+checkitem 终极护身戒指 1
+#ACT
+take 终极护身戒指 1
+CHANGEEXP + 200000000
+GAMEGOLD + 100000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了终极戒指装备，获得了大量元宝经验！
+SENDMSG 6 〖提示〗一键回收成功
+GOTO
+
+
+[@点点]
+#if
+checkitem 点点死亡坠 1
+#ACT
+take 点点死亡坠 1
+CHANGEEXP + 200000000
+GAMEGOLD + 10000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了点点项链装备，获得了大量元宝经验！
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了点点项链装备，获得了大量元宝经验
+#if
+checkitem 点点毁灭坠 1
+#ACT
+take 点点毁灭坠 1
+CHANGEEXP + 200000000
+GAMEGOLD + 10000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了点点项链装备，获得了大量元宝经验！
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了点点项链装备，获得了大量元宝经验
+#if
+checkitem 点点噬血链 1
+#ACT
+take 点点噬血链 1
+CHANGEEXP + 200000000
+GAMEGOLD + 10000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了点点项链装备，获得了大量元宝经验！
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了点点项链装备，获得了大量元宝经验！
+SENDMSG 6 〖提示〗一键回收成功
+
+
+
+[@冰雪项]
+#if
+checkitem 冰雪死亡坠 1
+#ACT
+take 冰雪死亡坠
+CHANGEEXP + 100000000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了冰雪装备，获得了大量元宝经验！
+#if
+checkitem 冰雪毁灭坠 1
+#ACT
+take 冰雪毁灭坠
+CHANGEEXP + 100000000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了冰雪装备，获得了大量元宝经验！
+#if
+checkitem 暴风噬血链 1
+#ACT
+take 暴风噬血链
+CHANGEEXP + 100000000
+GAMEGOLD + 5000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了冰雪装备，获得了大量元宝经验！

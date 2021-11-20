@@ -1,0 +1,66 @@
+[@a修罗回收]
+{
+#if
+checkitem 修罗の刃 1
+#ACT
+take 修罗の刃 1
+GAMEGOLD + 1680
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了修罗装备，获得了大量元宝经验！
+GOTO @a修罗回收
+break
+#if
+checkitem 修罗の甲 1
+#ACT
+take 修罗の甲 1
+GAMEGOLD + 1680
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了修罗装备，获得了大量元宝经验！
+GOTO @a修罗回收
+break
+#if
+checkitem 修罗の衣 1
+#ACT
+take 修罗の衣 1
+GAMEGOLD + 1680
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了修罗装备，获得了大量元宝经验！
+GOTO @a修罗回收
+break
+#if
+checkitem 修罗の镯 1
+#ACT
+take 修罗の镯 1
+GAMEGOLD + 840
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了修罗装备，获得了大量元宝经验！
+GOTO @a修罗回收
+break
+#if
+checkitem 修罗の链 1
+#ACT
+take 修罗の链 1
+GAMEGOLD + 840
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了修罗装备，获得了大量元宝经验！
+GOTO @a修罗回收
+break
+#if
+checkitem 修罗の盔 1
+#ACT
+take 修罗の盔 1
+GAMEGOLD + 840
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了修罗装备，获得了大量元宝经验！
+GOTO @a修罗回收
+break
+#if
+checkitem 修罗の勋 1
+#ACT
+take 修罗の勋 1
+GAMEGOLD + 840
+CHANGEEXP + 400000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了修罗装备，获得了大量元宝经验！
+GOTO @a修罗回收
+break
+}

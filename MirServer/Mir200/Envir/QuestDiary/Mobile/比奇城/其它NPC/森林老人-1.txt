@@ -1,0 +1,11 @@
+[@Settings]
+{
+<Text|text=<$NPCNAME>|x=25|y=20|size=18|color=1005>\ \
+
+<Text|text=真怀念当年跟两个兄弟一起闯荡江湖的日子啊!|x=25|y=60|size=16>
+
+<Img|img=public/btn_npcfh_03.png|x=35|y=138>
+<Layout|x=35|y=120|width=80|height=50|link=@exit>
+<Text|text=我要去打教主,让开|x=60|y=133|size=16|color=1001|link=@exit>
+
+}

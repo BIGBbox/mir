@@ -1,0 +1,84 @@
+[@天怒1天劫天妒]
+{
+#if
+checkitem 天妒 1
+#ACT
+take 天妒 1
+GAMEGOLD + 440
+CHANGEEXP + 800000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @天怒1天劫天妒
+break
+#if
+checkitem 天裂铠 1
+#ACT
+take 天裂铠 1
+GAMEGOLD + 440
+CHANGEEXP + 800000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @天怒1天劫天妒
+break
+#if
+checkitem 天裂袍 1
+#ACT
+take 天裂袍 1
+GAMEGOLD + 440
+CHANGEEXP + 800000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @天怒1天劫天妒
+break
+#if
+checkitem 天劫 1
+#ACT
+take 天劫 1
+GAMEGOLD + 440
+CHANGEEXP + 800000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @天怒1天劫天妒
+break
+#if
+checkitem 天残·铠 1
+#ACT
+take 天残·铠 1
+GAMEGOLD + 440
+CHANGEEXP + 800000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @天怒1天劫天妒
+break
+#if
+checkitem 天残·袍 1
+#ACT
+take 天残·袍 1
+GAMEGOLD + 440
+CHANGEEXP + 800000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @天怒1天劫天妒
+break
+#if
+checkitem 天怒 1
+#ACT
+take 天怒 1
+GAMEGOLD + 440
+CHANGEEXP + 800000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @天怒1天劫天妒
+break
+#if
+checkitem 天哭·铠 1
+#ACT
+take 天哭·铠 1
+GAMEGOLD + 440
+CHANGEEXP + 800000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @天怒1天劫天妒
+break
+#if
+checkitem 天哭·袍 1
+#ACT
+take 天哭·袍 1
+GAMEGOLD + 440
+CHANGEEXP + 800000
+GuildNoticeMsg 252 151 恭喜：〖<$USERNAME>〗回收了迷失装备，获得了大量元宝经验！
+GOTO @天怒1天劫天妒
+break
+}
