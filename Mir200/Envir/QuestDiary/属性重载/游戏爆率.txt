@@ -23,6 +23,11 @@ equal <$MAPTITLE> 西游狂暴之地
 equal <$MAPTITLE> 三国狂暴之地
 equal <$MAPTITLE> 帝王狂暴之地
 equal <$MAPTITLE> 金庸狂暴之地
+equal <$MAPTITLE> 圣斗士沙捐之地
+equal <$MAPTITLE> 水浒沙捐之地
+equal <$MAPTITLE> 诛仙沙捐之地
+equal <$MAPTITLE> 暗黑沙捐之地
+equal <$MAPTITLE> 神域沙捐之地
 #act
 mov N$地图临时增加 200
 
@@ -31,14 +36,9 @@ equal <$MAPTITLE> 西游沙捐之地
 equal <$MAPTITLE> 三国沙捐之地
 equal <$MAPTITLE> 帝王沙捐之地
 equal <$MAPTITLE> 金庸沙捐之地
-equal <$MAPTITLE> 圣斗士沙捐之地
-equal <$MAPTITLE> 水浒沙捐之地
-equal <$MAPTITLE> 诛仙沙捐之地
-equal <$MAPTITLE> 暗黑沙捐之地
-equal <$MAPTITLE> 神域沙捐之地
-
 #act
 mov N$地图临时增加 400
+
 
 #if
 #act
@@ -1282,6 +1282,56 @@ CHECKITEMW 鸿钧的傲慢
 #ACT
 INC N$暴率加成 40
 
+#IF
+CHECKITEMW 太极坤≮壹≯
+#ACT
+INC N$暴率加成 1
+
+#IF
+CHECKITEMW 太极坤≮贰≯
+#ACT
+INC N$暴率加成 2
+
+#IF
+CHECKITEMW 太极坤≮叁≯
+#ACT
+INC N$暴率加成 3
+
+#IF
+CHECKITEMW 太极坤≮肆≯
+#ACT
+INC N$暴率加成 5
+
+#IF
+CHECKITEMW 太极坤≮伍≯
+#ACT
+INC N$暴率加成 7
+
+#IF
+CHECKITEMW 太极坤≮陆≯
+#ACT
+INC N$暴率加成 10
+
+#IF
+CHECKITEMW 太极坤≮柒≯
+#ACT
+INC N$暴率加成 13
+
+#IF
+CHECKITEMW 太极坤≮捌≯
+#ACT
+INC N$暴率加成 17
+
+#IF
+CHECKITEMW 太极坤≮玖≯
+#ACT
+INC N$暴率加成 21
+
+#IF
+CHECKITEMW 太极坤≮拾≯
+#ACT
+INC N$暴率加成 25
+
 
 #IF
 CHECK [300] 1
@@ -1637,6 +1687,91 @@ INC N$暴率加成 40
 CHECKITEMW 礼【特权神器】
 #ACT
 INC N$暴率加成 80
+
+#IF
+CHECKITEMW 异火恒古尺【天使神器】
+#ACT
+INC N$暴率加成 90
+
+#IF
+CHECKITEMW 太古虫皇衣【天使神器】
+#ACT
+INC N$暴率加成 90
+
+#IF
+CHECKITEMW 厄难毒体【天使神器】
+#ACT
+INC N$暴率加成 90
+
+#IF
+CHECKITEMW 帝炎【天使神器】
+#ACT
+INC N$暴率加成 90
+
+#IF
+CHECKITEMW 斩帝鬼血手【天使神器】
+#ACT
+INC N$暴率加成 90
+
+#IF
+CHECKITEMW 永恒圣皇手【永恒神器】
+#ACT
+INC N$暴率加成 90
+
+#IF
+CHECKITEMW 永恒圣皇戒【永恒神器】
+#ACT
+INC N$暴率加成 90
+
+#IF
+CHECKITEMW 永恒圣皇靴【永恒神器】
+#ACT
+INC N$暴率加成 90
+
+#IF
+CHECKITEMW 永恒圣皇带【永恒神器】
+#ACT
+INC N$暴率加成 90
+
+#IF
+CHECKITEMW 永恒圣皇盔【永恒神器】
+#ACT
+INC N$暴率加成 90
+
+#IF
+CHECKITEMW 海心焰
+#ACT
+INC N$暴率加成 30
+
+#IF
+CHECKITEMW 风刹湮罡
+#ACT
+INC N$暴率加成 30
+
+#IF
+CHECKITEMW 太虚古龙
+#ACT
+INC N$暴率加成 30
+
+#IF
+CHECKITEMW 黑魔鼎
+#ACT
+INC N$暴率加成 30
+
+#IF
+CHECKITEMW 圣皇天妖石
+#ACT
+INC N$暴率加成 30
+
+#IF
+CHECKITEMW 圣皇天妖鼓
+#ACT
+INC N$暴率加成 30
+
+#IF
+CHECKITEMW 圣皇天妖章
+#ACT
+INC N$暴率加成 30
 
 #IF
 CHECKITEMW 萨德【Zod】

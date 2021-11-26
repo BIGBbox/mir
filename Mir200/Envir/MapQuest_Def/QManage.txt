@@ -713,6 +713,14 @@ AddhpPer + 25
 checkitemw 阿波罗的愤怒
 #ACT
 AddhpPer + 25
+#IF
+checkitemw 海心焰
+#ACT
+AddhpPer + 30
+#IF
+checkitemw 圣皇天妖章
+#ACT
+AddhpPer + 30
 
 
 

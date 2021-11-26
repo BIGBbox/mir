@@ -994,6 +994,93 @@ INC N$怪物额外伤害 50
 
 
 #IF
+CHECKITEMW 异火恒古尺【天使神器】
+#ACT
+INC N$怪物额外伤害 40
+
+
+#IF
+CHECKITEMW 太古虫皇衣【天使神器】
+#ACT
+INC N$怪物额外伤害 40
+
+#IF
+CHECKITEMW 厄难毒体【天使神器】
+#ACT
+INC N$怪物额外伤害 35
+
+#IF
+CHECKITEMW 帝炎【天使神器】
+#ACT
+INC N$怪物额外伤害 35
+
+#IF
+CHECKITEMW 斩帝鬼血手【天使神器】
+#ACT
+INC N$怪物额外伤害 35
+
+#IF
+CHECKITEMW 海心焰
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKITEMW 风刹湮罡
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKITEMW 太虚古龙
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKITEMW 黑魔鼎
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKITEMW 永恒圣皇手【永恒神器】
+#ACT
+INC N$怪物额外伤害 40
+
+#IF
+CHECKITEMW 永恒圣皇戒【永恒神器】
+#ACT
+INC N$怪物额外伤害 40
+
+#IF
+CHECKITEMW 永恒圣皇靴【永恒神器】
+#ACT
+INC N$怪物额外伤害 35
+
+#IF
+CHECKITEMW 永恒圣皇带【永恒神器】
+#ACT
+INC N$怪物额外伤害 35
+
+#IF
+CHECKITEMW 永恒圣皇盔【永恒神器】
+#ACT
+INC N$怪物额外伤害 35
+
+#IF
+CHECKITEMW 圣皇天妖石
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKITEMW 圣皇天妖鼓
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKITEMW 圣皇天妖章
+#ACT
+INC N$怪物额外伤害 10
+
+
+#IF
 CHECKITEMW 蛛王戒
 #ACT
 INC N$道术切割 1
@@ -1393,11 +1480,165 @@ INC N$魔法切割 20
 INC N$道术切割 20
 
 #IF
+CHECKITEMW 太极阴≮壹≯
+#ACT
+INC N$魔法切割 1
+
+#IF
+CHECKITEMW 太极阴≮贰≯
+#ACT
+INC N$魔法切割 2
+
+#IF
+CHECKITEMW 太极阴≮叁≯
+#ACT
+INC N$魔法切割 3
+
+#IF
+CHECKITEMW 太极阴≮肆≯
+#ACT
+INC N$魔法切割 5
+
+#IF
+CHECKITEMW 太极阴≮伍≯
+#ACT
+INC N$魔法切割 7
+
+#IF
+CHECKITEMW 太极阴≮陆≯
+#ACT
+INC N$魔法切割 10
+
+#IF
+CHECKITEMW 太极阴≮柒≯
+#ACT
+INC N$魔法切割 13
+
+#IF
+CHECKITEMW 太极阴≮捌≯
+#ACT
+INC N$魔法切割 17
+
+#IF
+CHECKITEMW 太极阴≮玖≯
+#ACT
+INC N$魔法切割 21
+
+#IF
+CHECKITEMW 太极阴≮拾≯
+#ACT
+INC N$魔法切割 25
+
+#IF
+CHECKITEMW 太极阳≮壹≯
+#ACT
+INC N$道术切割 1
+
+#IF
+CHECKITEMW 太极阳≮贰≯
+#ACT
+INC N$道术切割 2
+
+#IF
+CHECKITEMW 太极阳≮叁≯
+#ACT
+INC N$道术切割 3
+
+#IF
+CHECKITEMW 太极阳≮肆≯
+#ACT
+INC N$道术切割 5
+
+#IF
+CHECKITEMW 太极阳≮伍≯
+#ACT
+INC N$道术切割 7
+
+#IF
+CHECKITEMW 太极阳≮陆≯
+#ACT
+INC N$道术切割 10
+
+#IF
+CHECKITEMW 太极阳≮柒≯
+#ACT
+INC N$道术切割 13
+
+#IF
+CHECKITEMW 太极阳≮捌≯
+#ACT
+INC N$道术切割 17
+
+#IF
+CHECKITEMW 太极阳≮玖≯
+#ACT
+INC N$道术切割 21
+
+#IF
+CHECKITEMW 太极阳≮拾≯
+#ACT
+INC N$道术切割 25
+
+
+#IF
+CHECKITEMW 太极乾≮壹≯
+#ACT
+INC N$怪物额外伤害 1
+
+#IF
+CHECKITEMW 太极乾≮贰≯
+#ACT
+INC N$怪物额外伤害 2
+
+#IF
+CHECKITEMW 太极乾≮叁≯
+#ACT
+INC N$怪物额外伤害 3
+
+#IF
+CHECKITEMW 太极乾≮肆≯
+#ACT
+INC N$怪物额外伤害 5
+
+#IF
+CHECKITEMW 太极乾≮伍≯
+
+#ACT
+INC N$怪物额外伤害 7
+
+#IF
+CHECKITEMW 太极乾≮陆≯
+#ACT
+INC N$怪物额外伤害 10
+
+#IF
+CHECKITEMW 太极乾≮柒≯
+#ACT
+INC N$怪物额外伤害 13
+
+#IF
+CHECKITEMW 太极乾≮捌≯
+#ACT
+INC N$怪物额外伤害 17
+
+#IF
+CHECKITEMW 太极乾≮玖≯
+#ACT
+INC N$怪物额外伤害 21
+
+#IF
+CHECKITEMW 太极乾≮拾≯
+#ACT
+INC N$怪物额外伤害 25
+
+#IF
 CHECKITEMW 苍松道人的堕落
 CHECKITEMW 陆雪琪的清冷
 #ACT
+INC N$怪物额外伤害 10
 INC N$魔法切割 10
 INC N$道术切割 10
+
 
 #IF
 CHECKITEMW 桀骜不驯

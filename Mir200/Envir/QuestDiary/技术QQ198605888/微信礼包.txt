@@ -35,7 +35,7 @@ SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|254:39:0}{成功领取|116:39:0}{微信礼包|25
 NEWCOMPLETETASK 17
 NEWDELETETASK 17
 ; #CALL [\任务系统\任务文本.txt] @接取支线任务
-
+close
 
 #if
 check [99] 1

@@ -105,14 +105,13 @@ dec N$次数 1
 
 #if
 equal <$STR(S$是否付费)> 1
-not checkmoney 天下币 < <$STR(N$消耗天下币)>
+not checkmoney 天下币 < 100
 #act
 money 天下币 - 100
 
 #if
 #act
 take 灵兽精石 10
-
 goto @升级
 
 #if

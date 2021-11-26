@@ -1,0 +1,32 @@
+[@main]
+#IF
+CHECKLEVELEX > 204
+#act
+mov S$传送状态 已开启/FCOLOR=215
+#elseact
+mov S$传送状态 未开启/FCOLOR=58
+
+
+#If
+#act
+#say
+
+<Text|a=0|x=186|y=25|color=58|tips=|size=18|text=永恒之地>
+<Text|a=0|x=87|y=55|color=146|tips=|tipsx=10|tipsy=80|size=18|text=进入永恒之地需达到飞升5级 自动激活 >
+<RText|a=0|x=87|y=85|size=18|text=<传送状态:/FCOLOR=253><<$STR(S$传送状态)>>>
+<Button|id=click_btn1|x=195|y=125|nimg=public/1900000612.png|pimg=public/1900000611.png|text=传送|link=@传送永恒之地>
+
+
+
+[@传送永恒之地]
+#IF
+CHECKLEVELEX > 204
+#act
+MAPMOVE 永恒之地 32 36
+set [31] 1
+sendmsg 7 恭喜你探索了[永恒之地]点击游戏上方，世界地图可以直接进去！
+#elseact
+messagebox 你不满足传送条件，进入永恒之地需达到飞升5级!!
+break
+
+

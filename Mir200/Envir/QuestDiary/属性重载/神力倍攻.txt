@@ -88,6 +88,24 @@ CHECKTITLE 狂暴
 #ACT
 INC N$装备倍攻 10
 
+
+#IF
+CHECKITEMW 拍卖锤
+#ACT
+INC N$装备倍攻 4
+
+
+#IF
+CHECKITEMW 圣皇天妖刀
+#ACT
+INC N$装备倍攻 5
+
+#IF
+CHECKITEMW 圣皇天妖链
+#ACT
+INC N$装备倍攻 2
+
+
 ; #IF
 ; CHECKTITLE 沙城捐献
 ; #ACT

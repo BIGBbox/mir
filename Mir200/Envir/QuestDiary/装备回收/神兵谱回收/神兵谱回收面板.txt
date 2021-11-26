@@ -170,13 +170,13 @@ money 绑定元宝 + <$STR(N$回收结算)>
 #if
 not small <$STR(U17)> 1
 #act
-GuildNoticeMsg 255 56 至尊会员玩家:『<$USERNAME>』一键回收神兵谱装备获得大量货币！！！！！！
+GuildNoticeMsg 255 56 会员玩家:『<$USERNAME>』一键回收神兵谱装备获得大量天下币！！！！！！
 goto @神兵谱回收支线任务
 break
 
 #if
 #act
-GuildNoticeMsg 255 56 玩家:『<$USERNAME>』一键回收神兵谱装备获得大量货币！！！！！！
+GuildNoticeMsg 255 56 玩家:『<$USERNAME>』一键回收神兵谱装备获得大量天下币！！！！！！
 goto @神兵谱回收支线任务
 break
 

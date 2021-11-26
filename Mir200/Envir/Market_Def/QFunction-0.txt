@@ -2110,26 +2110,28 @@ MOV N$平定三藩 60
 #act
 #CALL [\捡取鉴定\自动使用物品.txt] @自动使用物品
 
+[@删除守护者]
+#if
+#act
+KILLCALLMOB 守护者 99 1
+
 ; --------------召唤骷髅-----------------
 [@MagSelfFunc17]
+#if
+CHECKSLAVECOUNT > 0 守护者
+#act
+sendmsg 7 守护者已存在,不可重复召唤!!
+break
 
 #IF
 EQUAL N$分身CD 0
 #ACT
 MOV N$分身CD 15
 #ELSEACT
-KILLCALLMOB 守护者 99 1
+DELAYGOTO 50 @删除守护者
+
 SENDMSG 7 守护者CD时间剩余<$STR(N$分身CD)>秒！
 break
-
-; #OR
-; IsOnMap 天下主城
-; IsOnMap N3
-; IsOnMap new0150
-; #ACT
-;SENDMSG 7 此地图不允许召唤！！！！
-; break
-
 
 ; #IF
 ; #ACT
@@ -2177,13 +2179,6 @@ inc N$分身防御计算 <$STR(N$人物防御计算)>
 inc N$分身魔御计算 <$STR(N$人物魔御计算)>
 inc N$分身血量计算 <$STR(N$人物血量计算)>
 inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
-; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
-; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
-; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
-; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
-; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
-; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
-; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
 DELAYGOTO 100 @守护者属性加成
 
 ; CHANGECUSTOMITEMABIL 0 1 1 10
@@ -2236,14 +2231,6 @@ inc N$分身魔御计算 <$STR(N$人物魔御计算)>
 inc N$分身血量计算 <$STR(N$人物血量计算)>
 inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
 DELAYGOTO 100 @守护者属性加成
-
-; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
-; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
-; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
-; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
-; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
-; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
-; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
 break
 
 
@@ -2279,14 +2266,6 @@ inc N$分身魔御计算 <$STR(N$人物魔御计算)>
 inc N$分身血量计算 <$STR(N$人物血量计算)>
 inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
 DELAYGOTO 100 @守护者属性加成
-
-; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
-; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
-; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
-; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
-; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
-; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
-; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
 break
 
 #IF
@@ -2321,16 +2300,7 @@ inc N$分身魔御计算 <$STR(N$人物魔御计算)>
 inc N$分身血量计算 <$STR(N$人物血量计算)>
 inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
 DELAYGOTO 100 @守护者属性加成
-
-; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
-; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
-; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
-; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
-; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
-; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
-; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
 break
-
 
 
 #IF
@@ -2365,16 +2335,7 @@ inc N$分身魔御计算 <$STR(N$人物魔御计算)>
 inc N$分身血量计算 <$STR(N$人物血量计算)>
 inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
 DELAYGOTO 100 @守护者属性加成
-
-; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
-; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
-; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
-; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
-; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
-; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
-; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
 break
-
 
 
 #IF
@@ -2409,14 +2370,6 @@ inc N$分身魔御计算 <$STR(N$人物魔御计算)>
 inc N$分身血量计算 <$STR(N$人物血量计算)>
 inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
 DELAYGOTO 100 @守护者属性加成
-
-; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
-; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
-; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
-; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
-; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
-; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
-; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
 break
 
 #IF
@@ -2451,14 +2404,6 @@ inc N$分身魔御计算 <$STR(N$人物魔御计算)>
 inc N$分身血量计算 <$STR(N$人物血量计算)>
 inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
 DELAYGOTO 100 @守护者属性加成
-
-; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
-; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
-; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
-; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
-; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
-; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
-; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
 break
 
 #IF
@@ -2493,14 +2438,6 @@ inc N$分身魔御计算 <$STR(N$人物魔御计算)>
 inc N$分身血量计算 <$STR(N$人物血量计算)>
 inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
 DELAYGOTO 100 @守护者属性加成
-
-; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
-; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
-; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
-; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
-; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
-; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
-; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
 break
 
 #IF
@@ -2535,14 +2472,6 @@ inc N$分身魔御计算 <$STR(N$人物魔御计算)>
 inc N$分身血量计算 <$STR(N$人物血量计算)>
 inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
 DELAYGOTO 100 @守护者属性加成
-
-; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
-; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
-; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
-; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
-; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
-; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
-; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
 break
 
 #IF
@@ -2577,14 +2506,6 @@ inc N$分身魔御计算 <$STR(N$人物魔御计算)>
 inc N$分身血量计算 <$STR(N$人物血量计算)>
 inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
 DELAYGOTO 100 @守护者属性加成
-
-; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
-; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
-; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
-; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
-; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
-; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
-; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
 break
 
 #IF
@@ -2619,14 +2540,6 @@ inc N$分身魔御计算 <$STR(N$人物魔御计算)>
 inc N$分身血量计算 <$STR(N$人物血量计算)>
 inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
 DELAYGOTO 100 @守护者属性加成
-
-; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
-; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
-; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
-; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
-; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
-; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
-; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
 break
 
 #IF
@@ -2661,7 +2574,6 @@ inc N$分身魔御计算 <$STR(N$人物魔御计算)>
 inc N$分身血量计算 <$STR(N$人物血量计算)>
 inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
 DELAYGOTO 100 @守护者属性加成
-
 break
 
 #IF
@@ -2696,8 +2608,6 @@ inc N$分身魔御计算 <$STR(N$人物魔御计算)>
 inc N$分身血量计算 <$STR(N$人物血量计算)>
 inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
 DELAYGOTO 100 @守护者属性加成
-
-
 break
 
 
@@ -2728,16 +2638,7 @@ inc N$分身魔御计算 <$STR(N$人物魔御计算)>
 inc N$分身血量计算 <$STR(N$人物血量计算)>
 inc N$分身蓝量计算 <$STR(N$人物蓝量计算)>
 DELAYGOTO 100 @守护者属性加成
-
-; CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
-; CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
-; CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
-; CHANGEMOBABILITY 守护者 8 + <$STR(N$分身魔法计算)> 9999
-; CHANGEMOBABILITY 守护者 10 + <$STR(N$分身道术计算)> 9999
-; CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
-; CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
 break
-
 
 
 #IF
@@ -2778,6 +2679,8 @@ break
 [@守护者属性加成]
 #if
 #act
+KILLCALLMOB 守护者 99 1
+RECALLMOB 守护者 1 30 0
 CHANGEMOBABILITY 守护者 2 + <$STR(N$分身防御计算)> 9999
 CHANGEMOBABILITY 守护者 4 + <$STR(N$分身魔御计算)> 9999
 CHANGEMOBABILITY 守护者 6 + <$STR(N$分身攻击计算)> 9999
@@ -2787,6 +2690,7 @@ CHANGEMOBABILITY 守护者 11 + <$STR(N$分身血量计算)> 9999
 CHANGEMOBABILITY 守护者 12 + <$STR(N$分身蓝量计算)> 9999
 mov N$宝宝血量 <$STR(N$分身血量计算)>
 inc N$宝宝血量 110000
+sendmsg 5 宝宝血量::<$str(N$宝宝血量)>
 ; sendmsg 5 血量__<$str(N$宝宝血量)>
 MEBabyHP 守护者 = <$str(N$宝宝血量)> 0
 ; MEBabyHP 守护者 = <$STR(N$分身血量计算)> 0
@@ -4561,13 +4465,11 @@ CheckBindMoney 元宝 > 1499999
 CHECKITEM 修炼石 30
 CHECKITEM 天外陨石 30
 CHECKITEM 神器碎片 300
-CHECKITEM 魅影神甲 1
 #ACT
 money 绑定元宝 - 1500000
 TAKE 修炼石 30
 TAKE 天外陨石 30
 TAKE 神器碎片 300
-TAKE 魅影神甲 1
 GIVE 真·魅影神甲 1
 mov S$锻造专属 真·魅影神甲
 mov S$锻造位置 衣服
@@ -4605,13 +4507,11 @@ CheckBindMoney 元宝 > 1699999
 CHECKITEM 修炼石 34
 CHECKITEM 天外陨石 34
 CHECKITEM 神器碎片 340
-CHECKITEM 倚天战甲 1
 #ACT
 money 绑定元宝 - 1700000
 TAKE 修炼石 34
 TAKE 天外陨石 34
 TAKE 神器碎片 340
-TAKE 倚天战甲 1
 GIVE 真·倚天战甲 1
 mov S$锻造专属 真·倚天战甲
 mov S$锻造位置 衣服
@@ -6868,9 +6768,9 @@ CHECKITEM 仁【特权神器】 1
 TAKE 仁【特权神器】 1
 GIVE 义【特权神器】 1
 mov S$锻造专属 义【特权神器】
-mov S$锻造位置 戒指
+mov S$锻造位置 手镯
 MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【义【特权神器】】戒指/FCOLOR=58>
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【义【特权神器】】手镯/FCOLOR=58>
 BREAK
 #ELSEACT
 GiveStateItem 义【特权神器】图纸 1 1 1 0 1 1 1 1 1
@@ -6884,12 +6784,572 @@ CHECKITEM 义【特权神器】 1
 TAKE 义【特权神器】 1
 GIVE 礼【特权神器】 1
 mov S$锻造专属 礼【特权神器】
-mov S$锻造位置 戒指
+mov S$锻造位置 手镯
 MOVR <$STR(N$纵轴坐标)> 100 500
-SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【礼【特权神器】】戒指/FCOLOR=58>
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【礼【特权神器】】手镯/FCOLOR=58>
 BREAK
 #ELSEACT
 GiveStateItem 礼【特权神器】图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc358]
+#IF
+CHECKITEM 太极阴≮壹≯ 3
+#ACT
+TAKE 太极阴≮壹≯ 3
+GIVE 太极阴≮贰≯ 1
+mov S$锻造专属 太极阴≮贰≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极阴≮贰≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极阴≮贰≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc359]
+#IF
+CHECKITEM 太极阴≮贰≯ 3
+#ACT
+TAKE 太极阴≮贰≯ 3
+GIVE 太极阴≮叁≯ 1
+mov S$锻造专属 太极阴≮叁≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极阴≮叁≯】】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极阴≮叁≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc360]
+#IF
+CHECKITEM 太极阴≮叁≯ 3
+#ACT
+TAKE 太极阴≮叁≯ 3
+GIVE 太极阴≮肆≯ 1
+mov S$锻造专属 太极阴≮肆≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极阴≮肆≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极阴≮肆≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc361]
+#IF
+CHECKITEM 太极阴≮肆≯ 3
+#ACT
+TAKE 太极阴≮肆≯ 3
+GIVE 太极阴≮伍≯ 1
+mov S$锻造专属 太极阴≮伍≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极阴≮伍≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极阴≮伍≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc362]
+#IF
+CHECKITEM 太极阴≮伍≯ 3
+#ACT
+TAKE 太极阴≮伍≯ 3
+GIVE 太极阴≮陆≯ 1
+GiveStateItem 太极阴≮陆≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极阴≮陆≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极阴≮陆≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极阴≮陆≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc363]
+#IF
+CHECKITEM 太极阴≮陆≯ 3
+#ACT
+TAKE 太极阴≮陆≯ 3
+GIVE 太极阴≮柒≯ 1
+GiveStateItem 太极阴≮柒≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极阴≮柒≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极阴≮柒≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极阴≮柒≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc364]
+#IF
+CHECKITEM 太极阴≮柒≯ 3
+#ACT
+TAKE 太极阴≮柒≯ 3
+GIVE 太极阴≮捌≯ 1
+GiveStateItem 太极阴≮捌≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极阴≮捌≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极阴≮捌≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极阴≮捌≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc365]
+#IF
+CHECKITEM 太极阴≮捌≯ 3
+#ACT
+TAKE 太极阴≮捌≯ 3
+GIVE 太极阴≮玖≯ 1
+GiveStateItem 太极阴≮玖≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极阴≮玖≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极阴≮玖≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极阴≮玖≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc366]
+#IF
+CHECKITEM 太极阴≮玖≯ 3
+#ACT
+TAKE 太极阴≮玖≯ 3
+GIVE 太极阴≮拾≯ 1
+GiveStateItem 太极阴≮拾≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极阴≮拾≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极阴≮拾≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极阴≮拾≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc367]
+#IF
+CHECKITEM 太极阳≮壹≯ 3
+#ACT
+TAKE 太极阳≮壹≯ 3
+GIVE 太极阳≮贰≯ 1
+mov S$锻造专属 太极阳≮贰≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极阳≮贰≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极阳≮贰≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc368]
+#IF
+CHECKITEM 太极阳≮贰≯ 3
+#ACT
+TAKE 太极阳≮贰≯ 3
+GIVE 太极阳≮叁≯ 1
+mov S$锻造专属 太极阳≮叁≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极阳≮叁≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极阳≮叁≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc369]
+#IF
+CHECKITEM 太极阳≮叁≯ 3
+#ACT
+TAKE 太极阳≮叁≯ 3
+GIVE 太极阳≮肆≯ 1
+mov S$锻造专属 太极阳≮肆≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极阳≮肆≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极阳≮肆≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc370]
+#IF
+CHECKITEM 太极阳≮肆≯ 3
+#ACT
+TAKE 太极阳≮肆≯ 3
+GIVE 太极阳≮伍≯ 1
+mov S$锻造专属 太极阳≮伍≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极阳≮伍≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极阳≮伍≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc371]
+#IF
+CHECKITEM 太极阳≮伍≯ 3
+#ACT
+TAKE 太极阳≮伍≯ 3
+GIVE 太极阳≮陆≯ 1
+GiveStateItem 太极阳≮陆≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极阳≮陆≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极阳≮陆≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极阳≮陆≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc372]
+#IF
+CHECKITEM 太极阳≮陆≯ 3
+#ACT
+TAKE 太极阳≮陆≯ 3
+GIVE 太极阳≮柒≯ 1
+GiveStateItem 太极阳≮柒≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极阳≮柒≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极阳≮柒≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极阳≮柒≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc373]
+#IF
+CHECKITEM 太极阳≮柒≯ 3
+#ACT
+TAKE 太极阳≮柒≯ 3
+GIVE 太极阳≮捌≯ 1
+GiveStateItem 太极阳≮捌≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极阳≮捌≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极阳≮捌≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极阳≮捌≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc374]
+#IF
+CHECKITEM 太极阳≮捌≯ 3
+#ACT
+TAKE 太极阳≮捌≯ 3
+GIVE 太极阳≮玖≯ 1
+GiveStateItem 太极阳≮玖≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极阳≮玖≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极阳≮玖≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极阳≮玖≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc375]
+#IF
+CHECKITEM 太极阳≮玖≯ 3
+#ACT
+TAKE 太极阳≮玖≯ 3
+GIVE 太极阳≮拾≯ 1
+GiveStateItem 太极阳≮拾≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极阳≮拾≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极阳≮拾≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极阳≮拾≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc376]
+#IF
+CHECKITEM 太极乾≮壹≯ 3
+#ACT
+TAKE 太极乾≮壹≯ 3
+GIVE 太极乾≮贰≯ 1
+mov S$锻造专属 太极乾≮贰≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极乾≮贰≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极乾≮贰≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc377]
+#IF
+CHECKITEM 太极乾≮贰≯ 3
+#ACT
+TAKE 太极乾≮贰≯ 3
+GIVE 太极乾≮叁≯ 1
+mov S$锻造专属 太极乾≮叁≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极乾≮叁≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极乾≮叁≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc378]
+#IF
+CHECKITEM 太极乾≮叁≯ 3
+#ACT
+TAKE 太极乾≮叁≯ 3
+GIVE 太极乾≮肆≯ 1
+mov S$锻造专属 太极乾≮肆≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极乾≮肆≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极乾≮肆≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc379]
+#IF
+CHECKITEM 太极乾≮肆≯ 3
+#ACT
+TAKE 太极乾≮肆≯ 3
+GIVE 太极乾≮伍≯ 1
+mov S$锻造专属 太极乾≮伍≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极乾≮伍≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极乾≮伍≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc380]
+#IF
+CHECKITEM 太极乾≮伍≯ 3
+#ACT
+TAKE 太极乾≮伍≯ 3
+GIVE 太极乾≮陆≯ 1
+GiveStateItem 太极乾≮陆≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极乾≮陆≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极乾≮陆≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极乾≮陆≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc381]
+#IF
+CHECKITEM 太极乾≮陆≯ 3
+#ACT
+TAKE 太极乾≮陆≯ 3
+GIVE 太极乾≮柒≯ 1
+GiveStateItem 太极乾≮柒≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极乾≮柒≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极乾≮柒≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极乾≮柒≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc382]
+#IF
+CHECKITEM 太极乾≮柒≯ 3
+#ACT
+TAKE 太极乾≮柒≯ 3
+GIVE 太极乾≮捌≯ 1
+GiveStateItem 太极乾≮捌≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极乾≮捌≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极乾≮捌≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极乾≮捌≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc383]
+#IF
+CHECKITEM 太极乾≮捌≯ 3
+#ACT
+TAKE 太极乾≮捌≯ 3
+GIVE 太极乾≮玖≯ 1
+GiveStateItem 太极乾≮玖≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极乾≮玖≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极乾≮玖≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极乾≮玖≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc384]
+#IF
+CHECKITEM 太极乾≮玖≯ 3
+#ACT
+TAKE 太极乾≮玖≯ 3
+GIVE 太极乾≮拾≯ 1
+GiveStateItem 太极乾≮拾≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极乾≮拾≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极乾≮拾≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极乾≮拾≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc385]
+#IF
+CHECKITEM 太极坤≮壹≯ 3
+#ACT
+TAKE 太极坤≮壹≯ 3
+GIVE 太极坤≮贰≯ 1
+mov S$锻造专属 太极坤≮贰≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极坤≮贰≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极坤≮贰≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc386]
+#IF
+CHECKITEM 太极坤≮贰≯ 3
+#ACT
+TAKE 太极坤≮贰≯ 3
+GIVE 太极坤≮叁≯ 1
+mov S$锻造专属 太极坤≮叁≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极坤≮叁≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极坤≮叁≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc387]
+#IF
+CHECKITEM 太极坤≮叁≯ 3
+#ACT
+TAKE 太极坤≮叁≯ 3
+GIVE 太极坤≮肆≯ 1
+mov S$锻造专属 太极坤≮肆≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极坤≮肆≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极坤≮肆≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc388]
+#IF
+CHECKITEM 太极坤≮肆≯ 3
+#ACT
+TAKE 太极坤≮肆≯ 3
+GIVE 太极坤≮伍≯ 1
+mov S$锻造专属 礼【特权神器】
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极坤≮伍≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极坤≮伍≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc389]
+#IF
+CHECKITEM 太极坤≮伍≯ 3
+#ACT
+TAKE 太极坤≮伍≯ 3
+GIVE 太极坤≮陆≯ 1
+GiveStateItem 太极坤≮陆≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极坤≮陆≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极坤≮陆≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极坤≮陆≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc390]
+#IF
+CHECKITEM 太极坤≮陆≯ 3
+#ACT
+TAKE 太极坤≮陆≯ 3
+GIVE 太极坤≮柒≯ 1
+GiveStateItem 太极坤≮柒≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极坤≮柒≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极坤≮柒≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极坤≮柒≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc391]
+#IF
+CHECKITEM 太极坤≮柒≯ 3
+#ACT
+TAKE 太极坤≮柒≯ 3
+GIVE 太极坤≮捌≯ 1
+GiveStateItem 太极坤≮捌≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极坤≮捌≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极坤≮捌≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极坤≮捌≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc392]
+#IF
+CHECKITEM 太极坤≮捌≯ 3
+#ACT
+TAKE 太极坤≮捌≯ 3
+GIVE 太极坤≮玖≯ 1
+GiveStateItem 太极坤≮玖≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极坤≮玖≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极坤≮玖≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极坤≮玖≯图纸 1 1 1 0 1 1 1 1 1
+MESSAGEBOX 打造条件不足??\\1、材料不足！
+
+[@StdModeFunc393]
+#IF
+CHECKITEM 太极坤≮玖≯ 3
+#ACT
+TAKE 太极坤≮玖≯ 3
+GIVE 太极坤≮拾≯ 1
+GiveStateItem 太极坤≮拾≯图纸 1 1 1 0 1 1 1 1 1
+mov S$锻造专属 太极坤≮拾≯
+mov S$锻造位置 戒指
+MOVR <$STR(N$纵轴坐标)> 100 500
+SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=250><【<$USERNAME>】成功获得/FCOLOR=253><【太极坤≮拾≯】时装守护/FCOLOR=58>
+BREAK
+#ELSEACT
+GiveStateItem 太极坤≮拾≯图纸 1 1 1 0 1 1 1 1 1
 MESSAGEBOX 打造条件不足??\\1、材料不足！
 
 
@@ -8054,6 +8514,27 @@ GetValidstr <$STR(S$道具串)> * S$道具名 S$道具数量
 GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
 
 
+[@StdModeFunc394]
+
+#if
+#act
+movr N$Ran 1 61
+ReadConfigFileItem ..\QuestDiary\礼包\礼包列表.txt 初级时装守护宝箱 <$STR(N$Ran)> S$道具串
+GetValidstr <$STR(S$道具串)> * S$道具名 S$道具数量
+GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
+
+
+[@StdModeFunc395]
+
+#if
+#act
+movr N$Ran 1 61
+ReadConfigFileItem ..\QuestDiary\礼包\礼包列表.txt 高级时装守护宝箱 <$STR(N$Ran)> S$道具串
+GetValidstr <$STR(S$道具串)> * S$道具名 S$道具数量
+GIVE <$STR(S$道具名)> <$STR(S$道具数量)>
+
+
+
 ;远程回收体验卡-------------------------------------------
 [@StdModeFunc329]
 #if
@@ -8846,7 +9327,7 @@ not CheckContainsText <$STR(A490)> <$KILLMONNAME>
 #act
 mov S$怪物名字 A490
 mov A490 <$KILLMONNAME>_<$str(S$怪物名字)>
-#Call [\Mobile\特殊NPC\TOP图标.txt] @导航
+; #Call [\Mobile\特殊NPC\TOP图标.txt] @导航
 
 [@击杀怪物记录]
 ;怪物数量标记U120-U128
@@ -8994,6 +9475,29 @@ break
 ;---------------------充值回调--------
 
 [@ReCharge]
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\投资\投资数据.txt  基础信息 金额<$str(U22)> S$充值金额
+
+
+; 记录投资次数
+#if
+equal <$str(S$充值金额)> <$STR(M0)>
+#act
+; 投资次数
+inc U22 1
+; 可领取返利档次
+inc U21 1
+
+mov N$RMB点 <$STR(S$充值金额)>
+mul N$RMB点 10
+money RMB点 - <$str(N$RMB点)>
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>成功投资<$STR(S$充值金额)>,三天内都会获得高额返利！！
+break
+
+
+
 #IF
 #ACT
 ;累充
@@ -9005,12 +9509,15 @@ CALCVAR HUMAN 今日充值 + <$STR(M0)>
 SAVEVAR HUMAN 今日充值
 SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>成功充值。
 mov S$支线任务临时变量 <$STR(T108)>
+
+
 #CALL [\系统功能\充值功能.txt] @计算是否可以领取充值礼包
 ; 更新首充图标样式
 #Call [\Mobile\特殊NPC\TOP图标.txt] @导航
 goto @充值记录回调
 goto @属性刷新
 goto @累计充值奖励发放
+
 
 #if
 not small <$str(U91)> 50
@@ -9659,3 +10166,270 @@ MailGIVE 天下币 1000
 MailGIVE 御兽石【青骓】 1 1#4#5#6#8
 SendMail 1 系统奖励 累计充值31天奖励已发放完毕,请尽快提取附件!!
 break
+
+[@CanBuyShopItem100]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem101]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem102]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem103]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem104]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem105]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem106]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem107]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem108]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem109]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem110]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem111]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem112]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem113]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem114]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem115]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem116]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem117]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem118]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem119]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem120]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem121]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem122]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem123]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem124]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem125]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem126]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem127]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem128]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem129]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem130]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem131]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem132]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem133]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem134]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem135]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem136]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+
+[@CanBuyShopItem137]
+#IF
+CHECKLEVELEX < 180
+#ACT
+NotAllowBuy 1
+MESSAGEBOX 等级未达到180级不允许购买此物品[<$STR(S0)>]
+

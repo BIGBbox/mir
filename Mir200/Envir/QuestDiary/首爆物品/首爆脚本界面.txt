@@ -156,25 +156,25 @@ dec N$按钮0 55
 #ACT
 MOV N$读取行 0
 INC N$读取行 <$STR(N$页数_首爆)>
-GetListString ..\QuestDiary\首爆物品\<$STR(S$读取界面)>.txt <$STR(N$读取行)> S$首爆名0
+GetListString ..\QuestDiary\首爆物品\物品列表.txt <$STR(N$读取行)> S$首爆名0
 INC N$读取行 1
-GetListString ..\QuestDiary\首爆物品\<$STR(S$读取界面)>.txt <$STR(N$读取行)> S$首爆名1
+GetListString ..\QuestDiary\首爆物品\物品列表.txt <$STR(N$读取行)> S$首爆名1
 INC N$读取行 1
-GetListString ..\QuestDiary\首爆物品\<$STR(S$读取界面)>.txt <$STR(N$读取行)> S$首爆名2
+GetListString ..\QuestDiary\首爆物品\物品列表.txt <$STR(N$读取行)> S$首爆名2
 INC N$读取行 1
-GetListString ..\QuestDiary\首爆物品\<$STR(S$读取界面)>.txt <$STR(N$读取行)> S$首爆名3
+GetListString ..\QuestDiary\首爆物品\物品列表.txt <$STR(N$读取行)> S$首爆名3
 INC N$读取行 1
-GetListString ..\QuestDiary\首爆物品\<$STR(S$读取界面)>.txt <$STR(N$读取行)> S$首爆名4
+GetListString ..\QuestDiary\首爆物品\物品列表.txt <$STR(N$读取行)> S$首爆名4
 INC N$读取行 1
-GetListString ..\QuestDiary\首爆物品\<$STR(S$读取界面)>.txt <$STR(N$读取行)> S$首爆名5
+GetListString ..\QuestDiary\首爆物品\物品列表.txt <$STR(N$读取行)> S$首爆名5
 INC N$读取行 1
-GetListString ..\QuestDiary\首爆物品\<$STR(S$读取界面)>.txt <$STR(N$读取行)> S$首爆名6
+GetListString ..\QuestDiary\首爆物品\物品列表.txt <$STR(N$读取行)> S$首爆名6
 INC N$读取行 1
-GetListString ..\QuestDiary\首爆物品\<$STR(S$读取界面)>.txt <$STR(N$读取行)> S$首爆名7
+GetListString ..\QuestDiary\首爆物品\物品列表.txt <$STR(N$读取行)> S$首爆名7
 INC N$读取行 1
-GetListString ..\QuestDiary\首爆物品\<$STR(S$读取界面)>.txt <$STR(N$读取行)> S$首爆名8
+GetListString ..\QuestDiary\首爆物品\物品列表.txt <$STR(N$读取行)> S$首爆名8
 INC N$读取行 1
-GetListString ..\QuestDiary\首爆物品\<$STR(S$读取界面)>.txt <$STR(N$读取行)> S$首爆名9
+GetListString ..\QuestDiary\首爆物品\物品列表.txt <$STR(N$读取行)> S$首爆名9
 INC N$读取行 1
 
 #IF

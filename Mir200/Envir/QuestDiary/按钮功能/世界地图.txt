@@ -136,13 +136,13 @@ MOV S$降生之地1 01472
 
 
 #IF
-CHECK [32] 0
+not large <$str(G300)> 29
 #act
-MOV S$永恒之地 01481
+MOV S$永恒之地 00823
 MOV S$永恒之地1 0
 #elseact
-MOV S$永恒之地 01478
-MOV S$永恒之地1 01480
+MOV S$永恒之地 00820
+MOV S$永恒之地1 00822
 
 #IF
 CHECK [34] 0
@@ -165,11 +165,12 @@ MOV S$隐秘之地1 00826
 #IF
 CHECK [27] 0
 #act
-MOV S$天使之城 01477
+MOV S$天使之城 00815
 MOV S$天使之城1
 #elseact
-MOV S$天使之城 01474
-MOV S$天使之城1 01476
+MOV S$天使之城 00812
+MOV S$天使之城1 00814
+
 
 #if
 #act
@@ -339,6 +340,13 @@ CHECKRENEWLEVEL < 11
 MESSAGEBOX  需要11转才能进入!!
 break
 
+#if
+not CheckContainsText <$STR(T1)> 金庸之力⑤
+#act
+messagebox 需要激活金庸之力⑤称号才能进入
+break
+
+
 #IF
 #ACT
 MAPMOVE 圣斗士异世界 156 152
@@ -365,6 +373,12 @@ CHECKRENEWLEVEL < 13
 MESSAGEBOX  需要13转才能进入!!
 break
 
+#if
+not CheckContainsText <$STR(T1)> 圣斗士之力⑧
+#act
+messagebox 需要激活圣斗士之力⑧称号才能进入
+break
+
 #IF
 #ACT
 MAPMOVE 水浒异世界 113 109
@@ -389,6 +403,12 @@ break
 CHECKRENEWLEVEL < 15
 #act
 MESSAGEBOX  需要15转才能进入!!
+break
+
+#if
+not CheckContainsText <$STR(T1)> 水浒之力⑧
+#act
+messagebox 需要激活水浒之力⑧称号才能进入
 break
 
 #IF
@@ -418,6 +438,12 @@ CHECKRENEWLEVEL < 17
 MESSAGEBOX  需要17转才能进入!!
 break
 
+#if
+not CheckContainsText <$STR(T1)> 诛仙之力⑩
+#act
+messagebox 需要激活诛仙之力⑩称号才能进入
+break
+
 #IF
 #ACT
 MAPMOVE 暗黑异世界 175 129
@@ -438,26 +464,34 @@ CHECKRENEWLEVEL < 19
 MESSAGEBOX  需要19转才能进入!!
 break
 
-#or
-CHECKTITLE 暗黑之力⑩
-CHECKTITLE 神域之力①
-CHECKTITLE 神域之力②
-CHECKTITLE 神域之力③
-CHECKTITLE 神域之力④
-CHECKTITLE 神域之力⑤
-CHECKTITLE 神域之力⑥
-CHECKTITLE 神域之力⑦
-CHECKTITLE 神域之力⑧
-CHECKTITLE 神域之力⑨
-CHECKTITLE 神域之力⑩
+#if
+not CheckContainsText <$STR(T1)> 暗黑之力⑩
+#act
+messagebox 需要激活暗黑之力⑩称号才能进入
+break
+
+#if
 #act
 MAPMOVE 神之领域 59 66
-#elseact
-MESSAGEBOX  提示:进入神之领域，需升级暗黑之力⑩！！
-break
+
 
 
 [@天使之城]
+#if
+checklevelex < 202
+#act
+MESSAGEBOX  需要飞升2级才能进入!!
+break
+
+#if
+not CheckContainsText <$STR(T1)> 神域之力⑩
+#act
+MESSAGEBOX  需要神之领域称号全满才能进入!!
+break
+
+#if
+#act
+MAPMOVE 天使之城 51 42
 
 ;#IF
 ;large N$攻击CD 0
@@ -465,19 +499,18 @@ break
 ;SENDMSG 6 {〖提示〗请在<$STR(N$攻击CD)>秒后使用随机|116:39:0}
 ;BREAK
 
-#if
-check [34] 0
-#act
-MESSAGEBOX  抱歉:未知领域，你还未达到条件！！
-break
+; #if
+; check [34] 0
+; #act
+; MESSAGEBOX  抱歉:未知领域，你还未达到条件！！
+; break
 
 
-#IF
-#ACT
-MESSAGEBOX  抱歉:未知领域，你还未达到条件！！
-MAPMOVE 未知之地 272 22
-set [34] 1
-break
+; #IF
+; #ACT
+; MESSAGEBOX  抱歉:未知领域，你还未达到条件！！
+; set [34] 1
+; break
 
 
 [@降生之地]
@@ -504,6 +537,37 @@ break
 
 
 [@永恒之地]
+; #if
+; ; check [34] 0
+; #act
+; MESSAGEBOX  该地图尚未开通！！
+; break
+#if
+#act
+mov N$开区天数 <$str(G300)>
+inc N$开区天数 1
+
+#if
+not large <$str(G300)> 29
+#act
+MESSAGEBOX  开区30天后才能进入当前地图才能进入!!\当前为开区第<$str(N$开区天数)>天
+break
+
+#if
+#act
+MAPMOVE 永恒之地 51 42
+; #if
+; checklevelex < 205
+; #act
+; MESSAGEBOX  需要飞升5级才能进入!!
+; break
+
+; #if
+; not CheckContainsText <$STR(T1)> 神域之力⑩
+; #act
+; MESSAGEBOX  需要神之领域称号全满才能进入!!
+; break
+
 
 ;#IF
 ;large N$攻击CD 0
@@ -511,19 +575,19 @@ break
 ;SENDMSG 6 {〖提示〗请在<$STR(N$攻击CD)>秒后使用随机|116:39:0}
 ;BREAK
 
-#if
-check [34] 0
-#act
-MESSAGEBOX  抱歉:未知领域，你还未达到条件！！
-break
+; #if
+; check [34] 0
+; #act
+; MESSAGEBOX  抱歉:未知领域，你还未达到条件！！
+; break
 
 
-#IF
-#ACT
-MESSAGEBOX  抱歉:未知领域，你还未达到条件！！
-MAPMOVE 未知之地 272 22
-set [34] 1
-break
+; #IF
+; #ACT
+; MESSAGEBOX  抱歉:未知领域，你还未达到条件！！
+; MAPMOVE 未知之地 272 22
+; set [34] 1
+; break
 
 
 [@冰雪之城]

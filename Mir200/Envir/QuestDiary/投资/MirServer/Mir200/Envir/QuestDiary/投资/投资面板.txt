@@ -1,0 +1,186 @@
+[@投资面板]
+{
+#if
+#act
+mov N$序号1 <$str(U22)>
+dec N$序号1 1
+; sendmsg 5 <$str(N$序号1)>----<$str(U22)>
+
+#if
+not large <$str(N$序号1)> 0
+#act
+mov N$序号1 0
+
+#if
+#act
+
+ReadConfigFileItem ..\QuestDiary\投资\投资数据.txt  基础信息 倍率 S$倍率
+ReadConfigFileItem ..\QuestDiary\投资\投资数据.txt  基础信息 金额<$str(N$序号1)> S$金额
+goto @获取当前数据
+
+
+[@投资主面板]
+
+#IF
+#ACT
+#say
+<Img|layerid=100|children=bg1,bg2,title,titleBg,_网格,金额,容器1,closeBtn,button,bbg1,bbg2,bbg3|x=200|y=45|show=0|reset=0|move=1|img=public/sf1/19/bg5.png|bg=1|reset=1>
+<Button|id=closeBtn|x=750|y=25.0|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|link=@exit>
+<Img|id=bg1|x=35.0|y=50.0|img=public/haha/f_0005a1.png>
+<Img|id=bg2|x=7.0|y=55.0|width=785|height=470|img=public/sf1/19/touzi/Bg.png>
+; <Img|id=titleBg|x=270.0|y=125.0|img=public/sf1/19/artFont1.png>
+<Img|id=title|x=355.0|y=23.0|img=public/sf1/19/touzi/title.png>
+<$str(S$顶部描述)>
+<$str(S$小北京)>
+<Button|id=button|x=640|y=85.0|nimg=public/sf1/19/button4.png|color=251|text=立即投资|link=@立即投资>
+
+[@创建小背景]
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\投资\投资数据.txt  第<$str(N$背景序号)>天 返利<$str(N$序号1)> S$返利11
+GetValidstr <$STR(S$返利11)> * S$货币类型 S$返利1
+
+mov N$X坐标 90
+
+#if
+equal <$str(S$货币类型)> RMB点
+#act
+mov S$图片1 RMB
+mov S$图片2 point1
+
+#if
+equal <$str(S$货币类型)> 天下币
+#act
+mov S$图片1 money1
+mov S$图片2 0
+
+#if
+CheckStringlength <$str(S$返利1)> > 3
+#act
+dec N$X坐标 20
+
+#if
+CheckStringlength <$str(S$返利1)> > 5
+#act
+dec N$X坐标 20
+
+#if
+#act
+
+inc S$小北京 <Img|id=bbg<$str(N$背景序号)>|x=<$str(N$背景X)>|y=185.0|children={bbg<$str(N$背景序号)>_1,bbg<$str(N$背景序号)>_2,bbg<$str(N$背景序号)>_3,bbg<$str(N$背景序号)>_4,bbg<$str(N$背景序号)>_5,bbg<$str(N$背景序号)>_6,bbg<$str(N$背景序号)>_7,}|img=public/sf1/19/touzi/kuang.png>
+inc S$小北京 <Img|id=bbg<$str(N$背景序号)>_1|x=20.0|y=26.0|img=public/sf1/19/touzi/days.png>
+inc S$小北京 <Img|id=bbg<$str(N$背景序号)>_2|x=115.0|y=11.0|img=public/sf1/19/touzi/bonus1.png>
+inc S$小北京 <TextAtlas|id=bbg<$str(N$背景序号)>_3|img=public/sf1/19/touzi/num2.png|x=60.0|y=24.0|iheight=43|iwidth=27|text=<$str(N$背景序号)>>
+inc S$小北京 <Img|id=bbg<$str(N$背景序号)>_4|x=135.0|y=211.0|img=public/sf1/19/touzi/<$str(S$图片1)>.png>
+inc S$小北京 <Img|id=bbg<$str(N$背景序号)>_5|x=205.0|y=203.0|img=public/sf1/19/touzi/<$str(S$图片2)>.png>
+inc S$小北京 <TextAtlas|id=bbg<$str(N$背景序号)>_6|img=public/sf1/19/touzi/num3.png|x=<$str(N$X坐标)>|y=125.0|iheight=37|iwidth=25|text=<$str(S$返利1)>>
+inc S$小北京 <Button|id=bbg<$str(N$背景序号)>_7|x=30|y=270.0|nimg=public/sf1/19/button2.png|color=255|text=立即领取|link=@立即领取按钮#阐述=<$str(N$背景序号)>>
+
+
+
+#if
+not large <$str(N$背景序号)> 2
+#act
+
+inc N$背景序号 1
+inc N$背景X 260
+inc N$背景X1 260
+inc N$背景X2 260
+goto @创建小背景
+
+
+[@获取当前数据]
+#if
+#act
+mov S$小北京
+mov N$背景X 15
+mov N$背景X1 20
+mov N$背景X2 115
+mov N$背景序号 1
+goto @创建小背景
+
+mov S$顶部描述
+mov N$显示金额 <$str(S$金额)>
+mov N$返利 <$str(N$显示金额)>
+mul N$返利 10
+mov N$X1 0
+mov N$X2 0
+
+#if
+CheckStringlength <$STR(N$显示金额)> > 2
+#act
+inc N$X1 20
+inc N$X2 20
+
+#if
+#act
+
+inc S$顶部描述 <TextAtlas|img=public/sf1/19/touzi/num3.png|id=金额|children={99}|x=45.0|y=80.0|iheight=37|iwidth=25|text=<$STR(N$显示金额)>>
+inc S$顶部描述 <Img|id=99||children={1,2,3,4,5,6,7,8,999}|x=<$str(N$X1)>|y=2.0|img=public/sf1/19/0.png>
+inc S$顶部描述 <Img|id=1|x=50.0|y=5.0|img=public/sf1/19/touzi/yuan.png>
+inc S$顶部描述 <TextAtlas|id=2|img=public/sf1/19/touzi/num2.png|x=85.0|y=-2.0|iheight=43|iwidth=27|text=3>
+inc S$顶部描述 <Img|id=3|x=110.0|y=6.0|img=public/sf1/19/touzi/tips.png>
+inc S$顶部描述 <TextAtlas|id=4|img=public/sf1/19/touzi/num3.png|x=195.0|y=0.0|iheight=37|iwidth=25|text=<$str(S$倍率)>>
+inc S$顶部描述 <Img|id=5|x=270.0|y=-0.0|img=public/sf1/19/touzi/last.png>
+inc S$顶部描述 <Img|id=6|x=305.0|y=4.0|img=public/sf1/19/touzi/bonus.png>
+inc S$顶部描述 <Img|id=7|x=275.0|y=45.0|img=public/sf1/19/touzi/title1.png>
+inc S$顶部描述 <TextAtlas|id=8|img=public/sf1/19/touzi/num3.png|x=380.0|y=40.0|iheight=37|iwidth=25|text=<$str(N$返利)>>
+inc S$顶部描述 <Img|id=999||children={9,10}|x=<$str(N$X2)>|y=0.0|img=public/sf1/19/0.png>
+inc S$顶部描述 <Img|id=9|x=455.0|y=52.0|img=public/sf1/19/touzi/RMB1.png>
+inc S$顶部描述 <Img|id=10|x=512.0|y=45.0|img=public/sf1/19/touzi/point.png>
+goto @投资主面板
+
+
+[@立即投资]
+#if
+not large <$str(U21)> 3
+not equal <$str(U22)> 0
+#act
+messagebox 3天内当前档次只能投资一次!!
+break
+
+#if
+#act
+Pullpay <$STR(S$金额)> 1 8
+
+[@立即领取按钮]
+
+#if
+not large <$str(U22)> 0
+#act
+messagebox 先去投资,再来领取返利吧！
+break
+
+#if
+small <$str(U21)> <$str(S$阐述)>
+#act
+messagebox 第<$str(S$阐述)>天再来领取返利吧！
+break
+
+#if
+not check [70] 0
+#act
+messagebox 第<$str(S$阐述)>天已经领取了,明天再来领取后面的返利吧！
+break
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\投资\投资数据.txt  第<$str(S$阐述)>天 返利<$str(N$序号1)> S$领取返利
+GetValidstr <$STR(S$领取返利)> * S$货币类型123 S$返利123
+money <$str(S$货币类型123)> + <$str(S$返利123)>
+sendmsg 7 第<$str(S$阐述)>天返利领取成功!!
+
+set [70] 1
+; inc U21 1
+; sendmsg 5 <$str(S$领取返利)>--<$str(N$序号1)>
+
+#if
+equal <$str(U21)> 3
+; equal <$str(U22)> 3
+#act
+inc U21 1
+sendmsg 7 投资已重置,请重新购买!!
+
+
+}

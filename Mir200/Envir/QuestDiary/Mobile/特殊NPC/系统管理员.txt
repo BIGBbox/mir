@@ -214,17 +214,22 @@ goto @获取图鉴
 
 #if
 #act
-CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
-CLEARNAMELIST ..\QuestDiary\捐献系统\捐献排名.txt
-CLEARNAMELIST ..\QuestDiary\捐献系统\捐献数据.txt
-CLEARNAMELIST ..\QuestDiary\技术QQ198605888\沙城成员领取记录.txt
-ClearHumCustVar 沙城捐献 0
-mov G16 0
+set [70] 0
+mov U22 1
+mov U21 1
+sendmsg 5 U22:<$str(U22)>
+; #Call [\Mobile\特殊NPC\TOP图标.txt] @导航
+; CLEARNAMELIST ..\QuestDiary\捐献系统\捐献名单.txt
+; CLEARNAMELIST ..\QuestDiary\捐献系统\捐献排名.txt
+; CLEARNAMELIST ..\QuestDiary\捐献系统\捐献数据.txt
+; CLEARNAMELIST ..\QuestDiary\技术QQ198605888\沙城成员领取记录.txt
+; ClearHumCustVar 沙城捐献 0
+; mov G16 0
 
-; mov G9 0
-CALCVAR GLOBAL 沙捐总值 = 0
-SAVEVAR GLOBAL 沙捐总值
-sendmsg 5 清除沙捐排行榜
+; ; mov G9 0
+; CALCVAR GLOBAL 沙捐总值 = 0
+; SAVEVAR GLOBAL 沙捐总值
+; sendmsg 5 清除沙捐排行榜
 ; set [50] 0
 ; set [51] 0
 ; break

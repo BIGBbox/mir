@@ -13,13 +13,23 @@ mov U114 0
 CALCVAR HUMAN 今日充值领取标记 = 0
 SAVEVAR HUMAN 今日充值领取标记
 ;sendmsg 5 每日首次登陆触发!!!
-
+; 返利礼包领取标记
+set [70] 0 
 ;-------发放会员每日礼包--------
 #IF
 #act
 mov N$会员等级 <$STR(U17)>
 goto @发放会员每日礼包
 
+#if
+not small <$str(U22)> 0
+#act
+inc U21 1
+
+#if
+large <$str(U21)> 3
+#act
+mov U21 0
 
 [@发放会员每日礼包]
 #if

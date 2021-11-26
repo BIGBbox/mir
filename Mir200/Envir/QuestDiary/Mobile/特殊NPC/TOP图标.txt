@@ -64,6 +64,7 @@ goto @每日活动按钮
 goto @新会员系统按钮
 goto @首充按钮
 goto @赞助按钮
+goto @投资图标
 
 #if
 #act
@@ -156,6 +157,25 @@ not large U99 388
 dec N$坐标X 65
 INC S$图标2 <Button|id=116|children=116_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00022.png|link=@赞助>
 
+[@投资图标]
+#if
+not check [99] 1
+#act
+break
+
+#if
+small <$str(N$坐标X)> -800
+#act
+
+MOV N$坐标X -255
+inc N$坐标Y1 70
+
+#if
+
+#act
+dec N$坐标X 65
+INC S$图标2 <Button|id=118|children=116_0|x=<$STR(N$坐标X)>|y=<$STR(N$坐标Y1)>|nimg=public/sf1/19/top/00026.png|link=@投资>
+
 [@伸缩]
 #IF
 Equal <$CLIENTFLAG> 2
@@ -209,6 +229,11 @@ addbutton 102 2 <$STR(S$图标2)>
 #IF
 #ACT
 #CALL [\赞助\赞助面板.txt] @赞助面板
+
+[@投资]
+#IF
+#ACT
+#CALL [\投资\投资面板.txt] @投资面板
 
 [@每日活动]
 #IF

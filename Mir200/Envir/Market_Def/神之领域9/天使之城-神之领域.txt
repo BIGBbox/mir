@@ -1,0 +1,32 @@
+[@main]
+#or
+CHECKTITLE 神域之力⑩
+#act
+mov S$传送状态 已开启/FCOLOR=215
+#elseact
+mov S$传送状态 未开启/FCOLOR=58
+
+
+#If
+#act
+#say
+
+<Text|a=0|x=186|y=25|color=58|tips=|size=18|text=天使之城>
+<Text|a=0|x=87|y=55|color=146|tips=|tipsx=10|tipsy=80|size=18|text=进入天使之城需升级到神域之力⑩ 自动激活 >
+<RText|a=0|x=87|y=85|size=18|text=<传送状态:/FCOLOR=253><<$STR(S$传送状态)>>>
+<Button|id=click_btn1|x=195|y=125|nimg=public/1900000612.png|pimg=public/1900000611.png|text=传送|link=@传送天使之城>
+
+
+
+[@传送天使之城]
+#or
+CHECKTITLE 神域之力⑩
+#act
+MAPMOVE 天使之城 35 49
+set [31] 1
+sendmsg 7 恭喜你探索了[天使之城]点击游戏上方，世界地图可以直接进去！
+#elseact
+messagebox 你不满足传送条件!!
+break
+
+

@@ -295,6 +295,18 @@ checkitemw 不死皇冠【暗黑神器】 1
 #IF
 CHECKCURRTARGETRACE = 0
 RANDOM 111
+checkitemw 永恒圣皇盔【永恒神器】 1
+#ACT
+<$CURRRTARGETNAME>.MOV N$灼烧持续时间 20
+<$CURRRTARGETNAME>.SETBODYCOLOR 18 20
+;<$CURRRTARGETNAME>.sendmsg 7 对方的永恒圣皇盔【永恒神器】BUFF触发，你进入灼烧状态,每秒损失3%的血量.持续20秒.
+;sendmsg 6 你的永恒圣皇盔【永恒神器】】BUFF触发，你把对方灼烧状态,每秒损失3%的血量.持续20秒.
+;SendCenterMsg 180 251 《<$username>的永恒圣皇盔【永恒神器】】BUFF触发，让<$CURRRTARGETNAME>入灼烧状态,每秒损失3%的血量.持续20秒！》 1 3
+
+
+#IF
+CHECKCURRTARGETRACE = 0 
+RANDOM 111
 checkitemw 帝喾神盔 1
 #ACT
 <$CURRRTARGETNAME>.MOV N$灼烧持续时间 15

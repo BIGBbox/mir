@@ -112,6 +112,17 @@ CHECKITEMW 天下神铠
 INC N$游戏吸收伤害总 900
 
 
+#if
+CHECKITEMW 斗帝之身
+#act
+INC N$游戏吸收伤害总 1000
+
+#if
+CHECKITEMW 圣皇天妖甲
+#act
+INC N$游戏吸收伤害总 1000
+
+
 
 #IF
 equal U24 1

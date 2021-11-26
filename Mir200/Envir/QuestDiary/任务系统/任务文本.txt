@@ -661,7 +661,7 @@ NEWCOMPLETETASK 9
 NEWDELETETASK 9
 mov U108 11
 sendmsg 完成任务啦
-CHANGEEXP + 10000000
+CHANGEEXP + 15000000
 mapmove 新手村 127 85
 OPENNPCSHOWEX 69
 #CALL [\任务系统\任务文本.txt] @接取任务
@@ -680,7 +680,7 @@ mov U108 14
 mapmove 新手村 123 85
 OPENNPCSHOWEX 70
 sendmsg 完成任务啦
-CHANGEEXP + 20000000
+CHANGEEXP + 25000000
 #CALL [\任务系统\任务文本.txt] @接取任务
 break
 #elseact
@@ -697,7 +697,7 @@ mov U108 17
 mapmove 新手村 119 85
 OPENNPCSHOWEX 71
 sendmsg 完成任务啦
-CHANGEEXP + 30000000
+CHANGEEXP + 35000000
 #CALL [\任务系统\任务文本.txt] @接取任务
 goto @刷新等级任务5
 goto @刷新等级任务4
