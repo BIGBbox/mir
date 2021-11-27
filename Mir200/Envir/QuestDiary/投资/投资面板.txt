@@ -40,6 +40,8 @@ goto @获取当前数据
 #act
 ReadConfigFileItem ..\QuestDiary\投资\投资数据.txt  第<$str(N$背景序号)>天 返利<$str(N$序号1)> S$返利11
 GetValidstr <$STR(S$返利11)> * S$货币类型 S$返利1
+mov S$状态领取 <Button|id=bbg<$str(N$背景序号)>_7|x=30|y=270.0|nimg=public/sf1/19/button2.png|color=255|text=立即领取|link=@立即领取按钮#阐述=<$str(N$背景序号)>>
+; mov S$状态领取 立即领取
 
 mov N$X坐标 90
 
@@ -65,6 +67,13 @@ CheckStringlength <$str(S$返利1)> > 5
 #act
 dec N$X坐标 20
 
+
+#if
+not small <$str(U21)> <$str(N$背景序号)>
+check [70] 1
+#act
+mov S$状态领取 <Button|id=bbg<$str(N$背景序号)>_7|x=30|y=270.0|nimg=public/sf1/19/button2.png|color=255|grey=1|text=已领取>
+
 #if
 #act
 
@@ -75,9 +84,10 @@ inc S$小北京 <TextAtlas|id=bbg<$str(N$背景序号)>_3|img=public/sf1/19/touzi/num2.
 inc S$小北京 <Img|id=bbg<$str(N$背景序号)>_4|x=135.0|y=211.0|img=public/sf1/19/touzi/<$str(S$图片1)>.png>
 inc S$小北京 <Img|id=bbg<$str(N$背景序号)>_5|x=205.0|y=203.0|img=public/sf1/19/touzi/<$str(S$图片2)>.png>
 inc S$小北京 <TextAtlas|id=bbg<$str(N$背景序号)>_6|img=public/sf1/19/touzi/num3.png|x=<$str(N$X坐标)>|y=125.0|iheight=37|iwidth=25|text=<$str(S$返利1)>>
-inc S$小北京 <Button|id=bbg<$str(N$背景序号)>_7|x=30|y=270.0|nimg=public/sf1/19/button2.png|color=255|text=立即领取|link=@立即领取按钮#阐述=<$str(N$背景序号)>>
+; inc S$小北京 <Button|id=bbg<$str(N$背景序号)>_7|x=30|y=270.0|nimg=public/sf1/19/button2.png|color=255|text=立即领取|link=@立即领取按钮#阐述=<$str(N$背景序号)>>
+inc S$小北京 <$str(S$状态领取)>
 
-
+; 
 
 #if
 not large <$str(N$背景序号)> 2
@@ -134,8 +144,8 @@ goto @投资主面板
 
 [@立即投资]
 #if
-not large <$str(U21)> 3
-not equal <$str(U22)> 0
+large <$str(U21)> 0
+; large <$str(U22)> 0
 #act
 messagebox 3天内当前档次只能投资一次!!
 break
@@ -145,6 +155,10 @@ break
 Pullpay <$STR(S$金额)> 1 8
 
 [@立即领取按钮]
+
+; #if
+; #act
+; sendmsg 5 U24:<$str(U24)>--U21:<$str(U21)>---
 
 #if
 not large <$str(U22)> 0
@@ -162,6 +176,7 @@ break
 not check [70] 0
 #act
 messagebox 第<$str(S$阐述)>天已经领取了,明天再来领取后面的返利吧！
+
 break
 
 #if
@@ -170,7 +185,6 @@ ReadConfigFileItem ..\QuestDiary\投资\投资数据.txt  第<$str(S$阐述)>天 返利<$str
 GetValidstr <$STR(S$领取返利)> * S$货币类型123 S$返利123
 money <$str(S$货币类型123)> + <$str(S$返利123)>
 sendmsg 7 第<$str(S$阐述)>天返利领取成功!!
-
 set [70] 1
 ; inc U21 1
 ; sendmsg 5 <$str(S$领取返利)>--<$str(N$序号1)>
@@ -179,8 +193,16 @@ set [70] 1
 equal <$str(U21)> 3
 ; equal <$str(U22)> 3
 #act
-inc U21 1
+set [70] 0
+inc U22 1
+mov U21 0
 sendmsg 7 投资已重置,请重新购买!!
+
+#if
+#act
+close
+#CALL [\投资\投资面板.txt] @投资面板
+
 
 
 }

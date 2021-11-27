@@ -52,7 +52,7 @@ GOTO @分身主界面1
     <RText|id=6|x=32|y=230|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑥：/FCOLOR=250><打怪伤害+70%/FCOLOR=151>>
     <RText|id=7|x=32|y=260|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑦：/FCOLOR=250><体力值+4000/FCOLOR=151>>
     <RText|id=8|x=32|y=290|color=250|tips=|tipsx=10|tipsy=80|size=16|text=<时装神器属性⑧：/FCOLOR=250><*/FCOLOR=151>>
-    <RText|id=9|x=44|y=320|color=70|tips=|tipsx=10|tipsy=80|size=16|text=<晋升消耗材料 ：  /FCOLOR=250><时装神器碎片*6000/FCOLOR=249>>
+    <RText|id=9|x=44|y=320|color=70|tips=|tipsx=10|tipsy=80|size=16|text=<晋升消耗材料 ：  /FCOLOR=250><时装神器碎片*600/FCOLOR=249>>
 <Button|id=click_btn|x=132|y=365|nimg=public/sf1/1/01807.png|pimg=public/sf1/1/01809.png|tips=|tipsx=10|tipsy=80|size=16|color=249|link=@晋升1>
 
 [@分身主界面2]

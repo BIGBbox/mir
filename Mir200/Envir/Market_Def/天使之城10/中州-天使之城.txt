@@ -25,5 +25,5 @@ CHECKLEVELEX > 201
 MAPMOVE 中州
 GuildNoticeMsg 251 66 系统提示：玩家[%s]进入了【中州】！！！
 #ELSEACT
-MESSAGEBOX 你还没有到达等级要求，请飞升一级之后再进入!
+MESSAGEBOX 你还没有到达等级要求，请飞升二级之后再进入!
 BREAK

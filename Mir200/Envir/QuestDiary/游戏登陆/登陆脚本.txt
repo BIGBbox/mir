@@ -22,14 +22,14 @@ mov N$会员等级 <$STR(U17)>
 goto @发放会员每日礼包
 
 #if
-not small <$str(U22)> 0
+large <$str(U22)> 0
 #act
 inc U21 1
 
-#if
-large <$str(U21)> 3
-#act
-mov U21 0
+; #if
+; large <$str(U21)> 3
+; #act
+; mov U21 0
 
 [@发放会员每日礼包]
 #if

@@ -9480,15 +9480,14 @@ break
 #act
 ReadConfigFileItem ..\QuestDiary\投资\投资数据.txt  基础信息 金额<$str(U22)> S$充值金额
 
-
 ; 记录投资次数
 #if
 equal <$str(S$充值金额)> <$STR(M0)>
 #act
 ; 投资次数
-inc U22 1
-; 可领取返利档次
 inc U21 1
+; 可领取返利档次
+inc U22 1
 
 mov N$RMB点 <$STR(S$充值金额)>
 mul N$RMB点 10

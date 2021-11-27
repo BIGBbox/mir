@@ -550,7 +550,7 @@ inc N$开区天数 1
 #if
 not large <$str(G300)> 29
 #act
-MESSAGEBOX  开区30天后才能进入当前地图才能进入!!\当前为开区第<$str(N$开区天数)>天
+MESSAGEBOX  开区30天后才能进入当前地图!!\当前为开区第<$str(N$开区天数)>天
 break
 
 #if

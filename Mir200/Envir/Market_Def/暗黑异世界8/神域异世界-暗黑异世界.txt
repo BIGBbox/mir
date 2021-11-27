@@ -42,7 +42,7 @@ CHECKTITLE 神域之力⑧
 CHECKTITLE 神域之力⑨
 CHECKTITLE 神域之力⑩
 #act
-MAPMOVE 神之领域 211 155
+MAPMOVE 神之领域 59 64
 set [31] 1
 sendmsg 7 恭喜你探索了[神之领域]点击游戏上方，世界地图可以直接进去！
 #elseact
