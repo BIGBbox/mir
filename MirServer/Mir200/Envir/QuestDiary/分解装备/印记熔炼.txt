@@ -8,19 +8,8 @@ goto @印记锻造say
 
 [@印记锻造say]
 #IF
-equal <$CLIENTFLAG> 1
 #say
-<Img|ay=1|x=0|y=0|width=500|height=220|scale9r=10|scale9l=10|scale9t=10|img=public/bg_npc_01.png|reset=1|move=0|bg=1|scale9b=10>
-<Layout|x=478.0|y=3.0|width=80|height=80|link=@exit>
-<Button|x=500.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=22.0|y=18.0|tipsx=10|tipsy=80|color=253|size=13|text=印记熔炼，三个印记熔炼有几率升星，印记不在垃圾！>
-<ITEMBOX|x=224.0|y=46.0|width=55|height=55|boxindex=0|stdmode=*|tips={请放入你要熔炼的印记/FCOLOR=255}|tipsx=1|tipsy=65|img=public/1900000651_3.png>
-<Text|a=0|x=416.0|y=53.0|tipsx=10|tipsy=80|color=251|size=13|text=查看规则|link=@查看规则>
-<Text|a=0|x=69.0|y=49.0|tipsx=10|tipsy=80|color=255|size=13|text=\  需要元宝:0\>
-<ITEMBOX|ay=1|x=116.0|y=105.0|width=55|height=55|boxindex=1|stdmode=*|tips={请放入你要熔炼的印记/FCOLOR=255}|tipsx=1|tipsy=65|img=public/1900000651_3.png>
-<ITEMBOX|ay=1|x=328.0|y=105.0|width=55|height=55|boxindex=7|stdmode=*|tips={请放入你要熔炼的印记/FCOLOR=255}|tipsx=1|tipsy=65|img=public/1900000651_3.png>
-<Text|a=0|x=223.0|y=177.0|tipsx=10|tipsy=80|color=251|size=13|text=开始.熔炼|link=<$str(S$开始熔炼方法)>>
-#elsesay
+
 <Img|x=0.0|y=0.0|width=550|height=240|rotate=0|scale9t=10|scale9l=10|bg=1|scale9b=10|reset=1|move=0|img=public/bg_npc_01.png|scale9r=10>
 <Layout|x=528.0|y=3.0|width=80|height=80|link=@exit>
 <Button|x=550.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
@@ -31,25 +20,11 @@ equal <$CLIENTFLAG> 1
 <ITEMBOX|ay=1|x=357.0|y=125|width=55|height=55|boxindex=1|stdmode=*|tips={请放入你要熔炼的印记/FCOLOR=255}|tipsx=1|tipsy=65|img=public/1900000651_3.png>
 <ITEMBOX|ay=1|x=127.0|y=125|width=55|height=55|boxindex=7|stdmode=*|tips={请放入你要熔炼的印记/FCOLOR=255}|tipsx=1|tipsy=65|img=public/1900000651_3.png>
 <Text|a=0|x=233.0|y=190.0|tipsx=10|tipsy=80|color=251|size=18|text=开始.熔炼|link=<$str(S$开始熔炼方法)>>
-
+<Text|a=0|x=333.0|y=190.0|tipsx=10|tipsy=80|color=251|size=18|text=开始.熔炼|link=@查看变量>
 
 [@查看规则]
 #IF
-equal <$CLIENTFLAG> 1
 #say
-<Img|width=500|height=220|rotate=0|scale9l=10|scale9t=10|reset=1|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9r=10>
-<Layout|x=477.0|y=3.0|width=80|height=80|link=@exit>
-<Button|x=499.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=56|size=13|text=以下是主印辅助熔炼规则！>
-<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=254|size=13|text=三个主印，必出主印！>
-<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=254|size=13|text=三个辅印，必出辅印！>
-<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=56|size=13|text=主印辅助乱放，随机出主印辅助！>
-<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=250|size=13|text=三个完全一样的印，有几率升星！>
-<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=250|size=13|text=三个完全一样的印，有几率熔出高级随机印！>
-<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=250|size=13|text=三个完全一样的印，有几率不升星，随机出本级的印！>
-<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=250|size=13|text=三个不一样的印，有几率升星，有几率不升星.结果随机出！>
-
-#elsesay
 <Img|width=550|height=240|rotate=0|scale9l=10|scale9t=10|reset=1|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9r=10>
 <Layout|x=527.0|y=3.0|width=80|height=80|link=@exit>
 <Button|x=549.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
@@ -64,1042 +39,1034 @@ equal <$CLIENTFLAG> 1
 
 
 
-[@ItemIntoBox0]
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[0].NAME>
-#act
-GOTO @印记1
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[0].NAME>
-#act
-GOTO @印记2
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[0].NAME>
-#act
-GOTO @印记3
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[0].NAME>
-#act
-GOTO @印记4
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[0].NAME>
-#act
-GOTO @印记5
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[0].NAME>
-#act
-GOTO @印记6
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[0].NAME>
-#act
-GOTO @印记7
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[0].NAME>
-#act
-GOTO @印记8
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[0].NAME>
-#act
-GOTO @印记9
-BREAK
-
-#ELSEACT
-ReturnBoxItem 0
-UpDateBoxItem 0
-MESSAGEBOX 操作失败！只允许放如相同的【主印】或【辅印】
-BREAK
-
-[@ItemIntoBox1]
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[1].NAME>
-#act
-GOTO @印记1
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[1].NAME>
-#act
-GOTO @印记2
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[1].NAME>
-#act
-GOTO @印记3
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[1].NAME>
-#act
-GOTO @印记4
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[1].NAME>
-#act
-GOTO @印记5
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[1].NAME>
-#act
-GOTO @印记6
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[1].NAME>
-#act
-GOTO @印记7
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[1].NAME>
-#act
-GOTO @印记8
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[1].NAME>
-#act
-GOTO @印记9
-BREAK
-#ELSEACT
-ReturnBoxItem 1
-UpDateBoxItem 1
-MESSAGEBOX 操作失败！只允许放如相同的【主印】或【辅印】
-BREAK
-
-[@ItemIntoBox7]
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[7].NAME>
-#act
-GOTO @印记1
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[7].NAME>
-#act
-GOTO @印记2
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[7].NAME>
-#act
-GOTO @印记3
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[7].NAME>
-#act
-GOTO @印记4
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[7].NAME>
-#act
-GOTO @印记5
-BREAK
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[7].NAME>
-#act
-GOTO @印记6
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[7].NAME>
-#act
-GOTO @印记7
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[7].NAME>
-#act
-GOTO @印记8
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[7].NAME>
-#act
-GOTO @印记9
-BREAK
-#ELSEACT
-ReturnBoxItem 7
-UpDateBoxItem 7
-MESSAGEBOX 操作失败！只允许放如相同的【主印】或【辅印】
-BREAK
-
-
-
-[@印记1]
-#IF
-#Act
-MOV S$开始熔炼方法 @开始.熔炼1
-goto @印记锻造say
-
-[@印记2]
-#IF
-#Act
-MOV S$开始熔炼方法 @开始.熔炼2
-goto @印记锻造say
-
-
-[@印记3]
-#IF
-#Act
-MOV S$开始熔炼方法 @开始.熔炼3
-goto @印记锻造say
-
-
-[@印记4]
-#IF
-#Act
-MOV S$开始熔炼方法 @开始.熔炼4
-goto @印记锻造say
-
-[@印记5]
-#IF
-#Act
-MOV S$开始熔炼方法 @开始.熔炼5
-goto @印记锻造say
-
-
-[@印记6]
-#IF
-#Act
-MOV S$开始熔炼方法 @开始.熔炼6
-goto @印记锻造say
-
-
-[@印记7]
-#IF
-#Act
-MOV S$开始熔炼方法 @开始.熔炼7
-goto @印记锻造say
-
-[@印记8]
-#IF
-#Act
-MOV S$开始熔炼方法 @开始.开始.熔炼8
-goto @印记锻造say
-
-[@印记9]
-#IF
-#Act
-MOV S$开始熔炼方法 @开始.熔炼9
-goto @印记锻造say
-
-
-
-[@开始.熔炼1]
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[7].NAME>
-CheckContainsText <$BOXITEM[0].NAME> 主印
-CheckContainsText <$BOXITEM[1].NAME> 主印
-CheckContainsText <$BOXITEM[7].NAME> 主印
-CHECKGAMEGOLD > 4999
-#ACT
-GAMEGOLD - 5000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\主记1.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[7].NAME>
-CheckContainsText <$BOXITEM[0].NAME> 辅印
-CheckContainsText <$BOXITEM[1].NAME> 辅印
-CheckContainsText <$BOXITEM[7].NAME> 辅印
-CHECKGAMEGOLD > 4999
-#ACT
-GAMEGOLD - 5000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\辅记1.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-
-
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[7].NAME>
-CHECKGAMEGOLD > 4999
-#ACT
-GAMEGOLD - 5000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\印记1.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-#ELSEACT
-ReturnBoxItem 0
-UpDateBoxItem 0
-ReturnBoxItem 1
-UpDateBoxItem 1
-ReturnBoxItem 7
-UpDateBoxItem 7
-MESSAGEBOX 元宝不足5000,不能熔炼！
-BREAK
-
-[@开始.熔炼2]
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[7].NAME>
-CheckContainsText <$BOXITEM[0].NAME> 主印
-CheckContainsText <$BOXITEM[1].NAME> 主印
-CheckContainsText <$BOXITEM[7].NAME> 主印
-CHECKGAMEGOLD > 19999
-#ACT
-GAMEGOLD - 20000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\主记2.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[7].NAME>
-CheckContainsText <$BOXITEM[0].NAME> 辅印
-CheckContainsText <$BOXITEM[1].NAME> 辅印
-CheckContainsText <$BOXITEM[7].NAME> 辅印
-CHECKGAMEGOLD > 19999
-#ACT
-GAMEGOLD - 20000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\辅记2.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-
-
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[7].NAME>
-CHECKGAMEGOLD > 19999
-#ACT
-GAMEGOLD - 20000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\印记2.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-#ELSEACT
-ReturnBoxItem 0
-UpDateBoxItem 0
-ReturnBoxItem 1
-UpDateBoxItem 1
-ReturnBoxItem 7
-UpDateBoxItem 7
-MESSAGEBOX 元宝不足10000,不能熔炼！
-BREAK
-
-
-[@开始.熔炼3]
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[7].NAME>
-CheckContainsText <$BOXITEM[0].NAME> 主印
-CheckContainsText <$BOXITEM[1].NAME> 主印
-CheckContainsText <$BOXITEM[7].NAME> 主印
-CHECKGAMEGOLD > 29999
-#ACT
-GAMEGOLD - 30000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\主记3.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[7].NAME>
-CheckContainsText <$BOXITEM[0].NAME> 辅印
-CheckContainsText <$BOXITEM[1].NAME> 辅印
-CheckContainsText <$BOXITEM[7].NAME> 辅印
-CHECKGAMEGOLD > 29999
-#ACT
-GAMEGOLD - 30000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\辅记3.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-
-
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[7].NAME>
-CHECKGAMEGOLD > 29999
-#ACT
-GAMEGOLD - 30000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\印记3.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-#ELSEACT
-ReturnBoxItem 0
-UpDateBoxItem 0
-ReturnBoxItem 1
-UpDateBoxItem 1
-ReturnBoxItem 7
-UpDateBoxItem 7
-MESSAGEBOX 元宝不足30000,不能熔炼！
-BREAK
-
-[@开始.熔炼4]
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[7].NAME>
-CheckContainsText <$BOXITEM[0].NAME> 主印
-CheckContainsText <$BOXITEM[1].NAME> 主印
-CheckContainsText <$BOXITEM[7].NAME> 主印
-CHECKGAMEGOLD > 49999
-#ACT
-GAMEGOLD - 50000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\主记4.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[7].NAME>
-CheckContainsText <$BOXITEM[0].NAME> 辅印
-CheckContainsText <$BOXITEM[1].NAME> 辅印
-CheckContainsText <$BOXITEM[7].NAME> 辅印
-CHECKGAMEGOLD > 49999
-#ACT
-GAMEGOLD - 50000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\辅记4.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-
-
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[7].NAME>
-CHECKGAMEGOLD > 49999
-#ACT
-GAMEGOLD - 50000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\印记4.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-#ELSEACT
-ReturnBoxItem 0
-UpDateBoxItem 0
-ReturnBoxItem 1
-UpDateBoxItem 1
-ReturnBoxItem 7
-UpDateBoxItem 7
-MESSAGEBOX 元宝不足50000,不能熔炼！
-BREAK
-
-
-
-
-[@开始.熔炼5]
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[7].NAME>
-CheckContainsText <$BOXITEM[0].NAME> 主印
-CheckContainsText <$BOXITEM[1].NAME> 主印
-CheckContainsText <$BOXITEM[7].NAME> 主印
-CHECKGAMEGOLD > 79999
-#ACT
-GAMEGOLD - 80000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\主记5.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[7].NAME>
-CheckContainsText <$BOXITEM[0].NAME> 辅印
-CheckContainsText <$BOXITEM[1].NAME> 辅印
-CheckContainsText <$BOXITEM[7].NAME> 辅印
-CHECKGAMEGOLD > 79999
-#ACT
-GAMEGOLD - 80000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\辅记5.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-
-
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[7].NAME>
-CHECKGAMEGOLD > 79999
-#ACT
-GAMEGOLD - 80000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\印记5.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-#ELSEACT
-ReturnBoxItem 0
-UpDateBoxItem 0
-ReturnBoxItem 1
-UpDateBoxItem 1
-ReturnBoxItem 7
-UpDateBoxItem 7
-MESSAGEBOX 元宝不足80000,不能熔炼！
-BREAK
-
-
-[@开始.熔炼6]
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[7].NAME>
-CheckContainsText <$BOXITEM[0].NAME> 主印
-CheckContainsText <$BOXITEM[1].NAME> 主印
-CheckContainsText <$BOXITEM[7].NAME> 主印
-CHECKGAMEGOLD > 99999
-#ACT
-GAMEGOLD - 100000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\主记6.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[7].NAME>
-CheckContainsText <$BOXITEM[0].NAME> 辅印
-CheckContainsText <$BOXITEM[1].NAME> 辅印
-CheckContainsText <$BOXITEM[7].NAME> 辅印
-CHECKGAMEGOLD > 99999
-#ACT
-GAMEGOLD - 100000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\辅记6.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-
-
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[7].NAME>
-CHECKGAMEGOLD > 99999
-#ACT
-GAMEGOLD - 100000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\印记6.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-#ELSEACT
-ReturnBoxItem 0
-UpDateBoxItem 0
-ReturnBoxItem 1
-UpDateBoxItem 1
-ReturnBoxItem 7
-UpDateBoxItem 7
-MESSAGEBOX 元宝不足100000,不能熔炼！
-BREAK
-
-
-
-[@开始.熔炼7]
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[7].NAME>
-CheckContainsText <$BOXITEM[0].NAME> 主印
-CheckContainsText <$BOXITEM[1].NAME> 主印
-CheckContainsText <$BOXITEM[7].NAME> 主印
-CHECKGAMEGOLD > 199999
-#ACT
-GAMEGOLD - 200000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\主记7.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[7].NAME>
-CheckContainsText <$BOXITEM[0].NAME> 辅印
-CheckContainsText <$BOXITEM[1].NAME> 辅印
-CheckContainsText <$BOXITEM[7].NAME> 辅印
-CHECKGAMEGOLD > 199999
-#ACT
-GAMEGOLD - 200000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\辅记7.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-
-
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[7].NAME>
-CHECKGAMEGOLD > 199999
-#ACT
-GAMEGOLD - 200000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\印记7.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-#ELSEACT
-ReturnBoxItem 0
-UpDateBoxItem 0
-ReturnBoxItem 1
-UpDateBoxItem 1
-ReturnBoxItem 7
-UpDateBoxItem 7
-MESSAGEBOX 元宝不足200000,不能熔炼！
-BREAK
-
-
-[@开始.熔炼8]
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[7].NAME>
-CheckContainsText <$BOXITEM[0].NAME> 主印
-CheckContainsText <$BOXITEM[1].NAME> 主印
-CheckContainsText <$BOXITEM[7].NAME> 主印
-CHECKGAMEGOLD > 299999
-#ACT
-GAMEGOLD - 300000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\主记8.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[7].NAME>
-CheckContainsText <$BOXITEM[0].NAME> 辅印
-CheckContainsText <$BOXITEM[1].NAME> 辅印
-CheckContainsText <$BOXITEM[7].NAME> 辅印
-CHECKGAMEGOLD > 299999
-#ACT
-GAMEGOLD - 300000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\辅记8.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-
-
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[7].NAME>
-CHECKGAMEGOLD > 299999
-#ACT
-GAMEGOLD - 300000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\印记8.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-#ELSEACT
-ReturnBoxItem 0
-UpDateBoxItem 0
-ReturnBoxItem 1
-UpDateBoxItem 1
-ReturnBoxItem 7
-UpDateBoxItem 7
-MESSAGEBOX 元宝不足300000,不能熔炼！
-BREAK
-
-
-[@开始.熔炼9]
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[7].NAME>
-CheckContainsText <$BOXITEM[0].NAME> 主印
-CheckContainsText <$BOXITEM[1].NAME> 主印
-CheckContainsText <$BOXITEM[7].NAME> 主印
-CHECKGAMEGOLD > 499999
-#ACT
-GAMEGOLD - 500000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\主记9.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[7].NAME>
-CheckContainsText <$BOXITEM[0].NAME> 辅印
-CheckContainsText <$BOXITEM[1].NAME> 辅印
-CheckContainsText <$BOXITEM[7].NAME> 辅印
-CHECKGAMEGOLD > 499999
-#ACT
-GAMEGOLD - 500000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\辅记9.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-
-
-
-#IF
-CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[0].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[1].NAME>
-CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[7].NAME>
-CHECKGAMEGOLD > 499999
-#ACT
-GAMEGOLD - 500000
-DELBOXITEM 0 1
-DELBOXITEM 1 1
-DELBOXITEM 7 1
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
-GetRandomText ..\QuestDiary\分解装备\几率.txt S11
-GetRandomText ..\QuestDiary\分解装备\印记9.txt S10
-give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
-UpDateBoxItem 0
-UpDateBoxItem 1
-UpDateBoxItem 7
-goto @印记锻造say
-BREAK
-#ELSEACT
-ReturnBoxItem 0
-UpDateBoxItem 0
-ReturnBoxItem 1
-UpDateBoxItem 1
-ReturnBoxItem 7
-UpDateBoxItem 7
-MESSAGEBOX 元宝不足500000,不能熔炼！
-BREAK
-
-
-[@ItemOutBox0]
-#IF
-#act
-goto @印记锻造say
-UpDateBoxItem 0
-BREAK
-
-[@ItemOutBox1]
-#IF
-#act
-goto @印记锻造say
-UpDateBoxItem 1
-BREAK
-
-[@ItemOutBox7]
-#IF
-#act
-goto @印记锻造say
-UpDateBoxItem 7
-BREAK
-
-
-
-
-
-
-
-
+; [@ItemIntoBox0]
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[0].NAME>
+; #act
+; GOTO @印记1
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[0].NAME>
+; #act
+; GOTO @印记2
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[0].NAME>
+; #act
+; GOTO @印记3
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[0].NAME>
+; #act
+; GOTO @印记4
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[0].NAME>
+; #act
+; GOTO @印记5
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[0].NAME>
+; #act
+; GOTO @印记6
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[0].NAME>
+; #act
+; GOTO @印记7
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[0].NAME>
+; #act
+; GOTO @印记8
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[0].NAME>
+; #act
+; GOTO @印记9
+; BREAK
+
+; #ELSEACT
+; ReturnBoxItem 0
+; UpDateBoxItem 0
+; MESSAGEBOX 操作失败！只允许放如相同的【主印】或【辅印】
+; BREAK
+
+; [@ItemIntoBox1]
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[1].NAME>
+; #act
+; GOTO @印记1
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[1].NAME>
+; #act
+; GOTO @印记2
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[1].NAME>
+; #act
+; GOTO @印记3
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[1].NAME>
+; #act
+; GOTO @印记4
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[1].NAME>
+; #act
+; GOTO @印记5
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[1].NAME>
+; #act
+; GOTO @印记6
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[1].NAME>
+; #act
+; GOTO @印记7
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[1].NAME>
+; #act
+; GOTO @印记8
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[1].NAME>
+; #act
+; GOTO @印记9
+; BREAK
+; #ELSEACT
+; ReturnBoxItem 1
+; UpDateBoxItem 1
+; MESSAGEBOX 操作失败！只允许放如相同的【主印】或【辅印】
+; BREAK
+
+; [@ItemIntoBox7]
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[7].NAME>
+; #act
+; GOTO @印记1
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[7].NAME>
+; #act
+; GOTO @印记2
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[7].NAME>
+; #act
+; GOTO @印记3
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[7].NAME>
+; #act
+; GOTO @印记4
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[7].NAME>
+; #act
+; GOTO @印记5
+; BREAK
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[7].NAME>
+; #act
+; GOTO @印记6
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[7].NAME>
+; #act
+; GOTO @印记7
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[7].NAME>
+; #act
+; GOTO @印记8
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[7].NAME>
+; #act
+; GOTO @印记9
+; BREAK
+; #ELSEACT
+; ReturnBoxItem 7
+; UpDateBoxItem 7
+; MESSAGEBOX 操作失败！只允许放如相同的【主印】或【辅印】
+; BREAK
+
+
+
+; [@印记1]
+; #IF
+; #Act
+; MOV S$开始熔炼方法 @开始.熔炼1
+; goto @印记锻造say
+
+; [@印记2]
+; #IF
+; #Act
+; MOV S$开始熔炼方法 @开始.熔炼2
+; goto @印记锻造say
+
+
+; [@印记3]
+; #IF
+; #Act
+; MOV S$开始熔炼方法 @开始.熔炼3
+; goto @印记锻造say
+
+
+; [@印记4]
+; #IF
+; #Act
+; MOV S$开始熔炼方法 @开始.熔炼4
+; goto @印记锻造say
+
+; [@印记5]
+; #IF
+; #Act
+; MOV S$开始熔炼方法 @开始.熔炼5
+; goto @印记锻造say
+
+
+; [@印记6]
+; #IF
+; #Act
+; MOV S$开始熔炼方法 @开始.熔炼6
+; goto @印记锻造say
+
+
+; [@印记7]
+; #IF
+; #Act
+; MOV S$开始熔炼方法 @开始.熔炼7
+; goto @印记锻造say
+
+; [@印记8]
+; #IF
+; #Act
+; MOV S$开始熔炼方法 @开始.开始.熔炼8
+; goto @印记锻造say
+
+; [@印记9]
+; #IF
+; #Act
+; MOV S$开始熔炼方法 @开始.熔炼9
+; goto @印记锻造say
+
+
+
+; [@开始.熔炼1]
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[7].NAME>
+; CheckContainsText <$BOXITEM[0].NAME> 主印
+; CheckContainsText <$BOXITEM[1].NAME> 主印
+; CheckContainsText <$BOXITEM[7].NAME> 主印
+; CHECKGAMEGOLD > 4999
+; #ACT
+; GAMEGOLD - 5000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\主记1.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[7].NAME>
+; CheckContainsText <$BOXITEM[0].NAME> 辅印
+; CheckContainsText <$BOXITEM[1].NAME> 辅印
+; CheckContainsText <$BOXITEM[7].NAME> 辅印
+; CHECKGAMEGOLD > 4999
+; #ACT
+; GAMEGOLD - 5000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\辅记1.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+
+
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[7].NAME>
+; CHECKGAMEGOLD > 4999
+; #ACT
+; GAMEGOLD - 5000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\印记1.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+; #ELSEACT
+; ReturnBoxItem 0
+; UpDateBoxItem 0
+; ReturnBoxItem 1
+; UpDateBoxItem 1
+; ReturnBoxItem 7
+; UpDateBoxItem 7
+; MESSAGEBOX 元宝不足5000,不能熔炼！
+; BREAK
+
+; [@开始.熔炼2]
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[7].NAME>
+; CheckContainsText <$BOXITEM[0].NAME> 主印
+; CheckContainsText <$BOXITEM[1].NAME> 主印
+; CheckContainsText <$BOXITEM[7].NAME> 主印
+; CHECKGAMEGOLD > 19999
+; #ACT
+; GAMEGOLD - 20000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\主记2.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[7].NAME>
+; CheckContainsText <$BOXITEM[0].NAME> 辅印
+; CheckContainsText <$BOXITEM[1].NAME> 辅印
+; CheckContainsText <$BOXITEM[7].NAME> 辅印
+; CHECKGAMEGOLD > 19999
+; #ACT
+; GAMEGOLD - 20000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\辅记2.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+
+
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[7].NAME>
+; CHECKGAMEGOLD > 19999
+; #ACT
+; GAMEGOLD - 20000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\印记2.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+; #ELSEACT
+; ReturnBoxItem 0
+; UpDateBoxItem 0
+; ReturnBoxItem 1
+; UpDateBoxItem 1
+; ReturnBoxItem 7
+; UpDateBoxItem 7
+; MESSAGEBOX 元宝不足10000,不能熔炼！
+; BREAK
+
+
+; [@开始.熔炼3]
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[7].NAME>
+; CheckContainsText <$BOXITEM[0].NAME> 主印
+; CheckContainsText <$BOXITEM[1].NAME> 主印
+; CheckContainsText <$BOXITEM[7].NAME> 主印
+; CHECKGAMEGOLD > 29999
+; #ACT
+; GAMEGOLD - 30000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\主记3.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[7].NAME>
+; CheckContainsText <$BOXITEM[0].NAME> 辅印
+; CheckContainsText <$BOXITEM[1].NAME> 辅印
+; CheckContainsText <$BOXITEM[7].NAME> 辅印
+; CHECKGAMEGOLD > 29999
+; #ACT
+; GAMEGOLD - 30000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\辅记3.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+
+
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[7].NAME>
+; CHECKGAMEGOLD > 29999
+; #ACT
+; GAMEGOLD - 30000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\印记3.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+; #ELSEACT
+; ReturnBoxItem 0
+; UpDateBoxItem 0
+; ReturnBoxItem 1
+; UpDateBoxItem 1
+; ReturnBoxItem 7
+; UpDateBoxItem 7
+; MESSAGEBOX 元宝不足30000,不能熔炼！
+; BREAK
+
+; [@开始.熔炼4]
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[7].NAME>
+; CheckContainsText <$BOXITEM[0].NAME> 主印
+; CheckContainsText <$BOXITEM[1].NAME> 主印
+; CheckContainsText <$BOXITEM[7].NAME> 主印
+; CHECKGAMEGOLD > 49999
+; #ACT
+; GAMEGOLD - 50000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\主记4.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[7].NAME>
+; CheckContainsText <$BOXITEM[0].NAME> 辅印
+; CheckContainsText <$BOXITEM[1].NAME> 辅印
+; CheckContainsText <$BOXITEM[7].NAME> 辅印
+; CHECKGAMEGOLD > 49999
+; #ACT
+; GAMEGOLD - 50000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\辅记4.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+
+
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[7].NAME>
+; CHECKGAMEGOLD > 49999
+; #ACT
+; GAMEGOLD - 50000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\印记4.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+; #ELSEACT
+; ReturnBoxItem 0
+; UpDateBoxItem 0
+; ReturnBoxItem 1
+; UpDateBoxItem 1
+; ReturnBoxItem 7
+; UpDateBoxItem 7
+; MESSAGEBOX 元宝不足50000,不能熔炼！
+; BREAK
+
+
+
+
+; [@开始.熔炼5]
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[7].NAME>
+; CheckContainsText <$BOXITEM[0].NAME> 主印
+; CheckContainsText <$BOXITEM[1].NAME> 主印
+; CheckContainsText <$BOXITEM[7].NAME> 主印
+; CHECKGAMEGOLD > 79999
+; #ACT
+; GAMEGOLD - 80000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\主记5.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[7].NAME>
+; CheckContainsText <$BOXITEM[0].NAME> 辅印
+; CheckContainsText <$BOXITEM[1].NAME> 辅印
+; CheckContainsText <$BOXITEM[7].NAME> 辅印
+; CHECKGAMEGOLD > 79999
+; #ACT
+; GAMEGOLD - 80000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\辅记5.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+
+
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[7].NAME>
+; CHECKGAMEGOLD > 79999
+; #ACT
+; GAMEGOLD - 80000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\印记5.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+; #ELSEACT
+; ReturnBoxItem 0
+; UpDateBoxItem 0
+; ReturnBoxItem 1
+; UpDateBoxItem 1
+; ReturnBoxItem 7
+; UpDateBoxItem 7
+; MESSAGEBOX 元宝不足80000,不能熔炼！
+; BREAK
+
+
+; [@开始.熔炼6]
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[7].NAME>
+; CheckContainsText <$BOXITEM[0].NAME> 主印
+; CheckContainsText <$BOXITEM[1].NAME> 主印
+; CheckContainsText <$BOXITEM[7].NAME> 主印
+; CHECKGAMEGOLD > 99999
+; #ACT
+; GAMEGOLD - 100000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\主记6.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[7].NAME>
+; CheckContainsText <$BOXITEM[0].NAME> 辅印
+; CheckContainsText <$BOXITEM[1].NAME> 辅印
+; CheckContainsText <$BOXITEM[7].NAME> 辅印
+; CHECKGAMEGOLD > 99999
+; #ACT
+; GAMEGOLD - 100000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\辅记6.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+
+
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[7].NAME>
+; CHECKGAMEGOLD > 99999
+; #ACT
+; GAMEGOLD - 100000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\印记6.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+; #ELSEACT
+; ReturnBoxItem 0
+; UpDateBoxItem 0
+; ReturnBoxItem 1
+; UpDateBoxItem 1
+; ReturnBoxItem 7
+; UpDateBoxItem 7
+; MESSAGEBOX 元宝不足100000,不能熔炼！
+; BREAK
+
+
+
+; [@开始.熔炼7]
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[7].NAME>
+; CheckContainsText <$BOXITEM[0].NAME> 主印
+; CheckContainsText <$BOXITEM[1].NAME> 主印
+; CheckContainsText <$BOXITEM[7].NAME> 主印
+; CHECKGAMEGOLD > 199999
+; #ACT
+; GAMEGOLD - 200000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\主记7.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[7].NAME>
+; CheckContainsText <$BOXITEM[0].NAME> 辅印
+; CheckContainsText <$BOXITEM[1].NAME> 辅印
+; CheckContainsText <$BOXITEM[7].NAME> 辅印
+; CHECKGAMEGOLD > 199999
+; #ACT
+; GAMEGOLD - 200000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\辅记7.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+
+
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[7].NAME>
+; CHECKGAMEGOLD > 199999
+; #ACT
+; GAMEGOLD - 200000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\印记7.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+; #ELSEACT
+; ReturnBoxItem 0
+; UpDateBoxItem 0
+; ReturnBoxItem 1
+; UpDateBoxItem 1
+; ReturnBoxItem 7
+; UpDateBoxItem 7
+; MESSAGEBOX 元宝不足200000,不能熔炼！
+; BREAK
+
+
+; [@开始.熔炼8]
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[7].NAME>
+; CheckContainsText <$BOXITEM[0].NAME> 主印
+; CheckContainsText <$BOXITEM[1].NAME> 主印
+; CheckContainsText <$BOXITEM[7].NAME> 主印
+; CHECKGAMEGOLD > 299999
+; #ACT
+; GAMEGOLD - 300000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\主记8.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[7].NAME>
+; CheckContainsText <$BOXITEM[0].NAME> 辅印
+; CheckContainsText <$BOXITEM[1].NAME> 辅印
+; CheckContainsText <$BOXITEM[7].NAME> 辅印
+; CHECKGAMEGOLD > 299999
+; #ACT
+; GAMEGOLD - 300000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\辅记8.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+
+
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[7].NAME>
+; CHECKGAMEGOLD > 299999
+; #ACT
+; GAMEGOLD - 300000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\印记8.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+; #ELSEACT
+; ReturnBoxItem 0
+; UpDateBoxItem 0
+; ReturnBoxItem 1
+; UpDateBoxItem 1
+; ReturnBoxItem 7
+; UpDateBoxItem 7
+; MESSAGEBOX 元宝不足300000,不能熔炼！
+; BREAK
+
+
+; [@开始.熔炼9]
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[7].NAME>
+; CheckContainsText <$BOXITEM[0].NAME> 主印
+; CheckContainsText <$BOXITEM[1].NAME> 主印
+; CheckContainsText <$BOXITEM[7].NAME> 主印
+; CHECKGAMEGOLD > 499999
+; #ACT
+; GAMEGOLD - 500000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\主记9.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[7].NAME>
+; CheckContainsText <$BOXITEM[0].NAME> 辅印
+; CheckContainsText <$BOXITEM[1].NAME> 辅印
+; CheckContainsText <$BOXITEM[7].NAME> 辅印
+; CHECKGAMEGOLD > 499999
+; #ACT
+; GAMEGOLD - 500000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\辅记9.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+
+
+
+; #IF
+; CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[0].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[1].NAME>
+; CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[7].NAME>
+; CHECKGAMEGOLD > 499999
+; #ACT
+; GAMEGOLD - 500000
+; DELBOXITEM 0 1
+; DELBOXITEM 1 1
+; DELBOXITEM 7 1
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GuildNoticeMsg 251 0 恭喜『<$USERNAME>』熔炼『印记<$STR(S10)>』装备成功!！
+; GetRandomText ..\QuestDiary\分解装备\几率.txt S11
+; GetRandomText ..\QuestDiary\分解装备\印记9.txt S10
+; give <$STR(S10)> 1 <$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>|<$STR(S11)>
+; UpDateBoxItem 0
+; UpDateBoxItem 1
+; UpDateBoxItem 7
+; goto @印记锻造say
+; BREAK
+; #ELSEACT
+; ReturnBoxItem 0
+; UpDateBoxItem 0
+; ReturnBoxItem 1
+; UpDateBoxItem 1
+; ReturnBoxItem 7
+; UpDateBoxItem 7
+; MESSAGEBOX 元宝不足500000,不能熔炼！
+; BREAK
+
+
+; [@ItemOutBox0]
+; #IF
+; #act
+; goto @印记锻造say
+; UpDateBoxItem 0
+; BREAK
+
+; [@ItemOutBox1]
+; #IF
+; #act
+; goto @印记锻造say
+; UpDateBoxItem 1
+; BREAK
+
+; [@ItemOutBox7]
+; #IF
+; #act
+; goto @印记锻造say
+; UpDateBoxItem 7
+; BREAK
 
 
 }

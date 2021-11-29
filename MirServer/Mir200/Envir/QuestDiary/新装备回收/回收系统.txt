@@ -20,7 +20,7 @@ LoopBagItems @勾选背包物品 S$勾选背包ID S$勾选背包KEY
 ;SENDMSG 6 删除串2233:<$STR(S$删除串)>
 MOV N$是否自动回收 0
 mov N$页签 1
-sendmsg 5 <$STR(S$页签)>----
+; sendmsg 5 <$STR(S$页签)>----
 ; SelectBagItems <$str(S12)>
 
 GOTO @显示<$STR(S$页签)>

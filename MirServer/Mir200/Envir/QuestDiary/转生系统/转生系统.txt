@@ -1,0 +1,306 @@
+[@转生系统面板]
+{
+
+#if
+#act
+mov S$获取途径
+mov S$获取图鉴窗口 0
+mov N$转生等级 0
+goto @获取转生数据
+
+[@获取转生数据]
+#if
+#act
+goto @获取当前转生等级
+mov S$当前转生等级 <$str(N$转生等级)>
+mov S$元宝颜色 161
+
+; #if
+; #act
+; mov S$当前转生等级 0
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt 最大转生等级 最大转生等级 S$最大转生等级
+ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(S$当前转生等级)> 需要人物等级 S$需要人物等级
+ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(S$当前转生等级)> 需要材料 S$需要材料
+ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(S$当前转生等级)> 所需货币 S$所需货币
+ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(S$当前转生等级)> 当前全属性加成 S$当前全属性加成
+ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(S$当前转生等级)> 下级全属性加成 S$下级全属性加成
+ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(S$当前转生等级)> 下降等级 S$下降等级
+
+GetValidstr <$STR(S$需要材料)> & S$需要材料1 S$需要材料2
+GetValidstr <$STR(S$需要材料1)> * S$需要材料名1 S$需要材料数量1
+GetDBItemFieldValue <$str(S$需要材料名1)> idx S$需要材料名ID1
+
+GetValidstr <$STR(S$需要材料2)> * S$需要材料名2 S$需要材料数量2
+GetDBItemFieldValue <$str(S$需要材料名2)> idx S$需要材料名ID2
+
+GetValidstr <$STR(S$所需货币)> * S$所需货币名 S$所需货币数量
+; sendmsg 5 <$str(S$需要材料1)>==<$str(S$需要材料2)>==
+
+#IF
+equal <$str(S$所需货币名)> 元宝
+CheckBindMoney 元宝 > <$str(S$所需货币数量)>
+#ACT
+mov S$元宝颜色 251
+
+#IF
+not equal <$str(S$所需货币名)> 元宝
+not checkmoney <$str(S$所需货币名)> > <$str(S$所需货币数量)>
+#ACT
+mov S$元宝颜色 251
+
+#if
+#act
+goto @转生系统主面板
+
+[@转生面板]
+#if
+#act
+goto @获取转生数据
+
+[@转生系统主面板]
+#if
+#act
+#say
+<Img|x=0|y=0|width=9999|height=9999|children={转生系统主面板}|img=public/0.png|bg=1|link=@exit>
+<Img|id=转生系统主面板|x=210|y=30|img=public/sf1/2/bg2.png|children={内框背景,标题,列表1,官位背景,升级条件1,升级条件2,当前转生等级,获取途径,获取途径控件,closeBtn}|reset=1|link=@>
+
+<Button|id=closeBtn|x=765|y=65.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=转 生|link=@转生面板>
+<Text|id=标题|x=180|y=45|color=255|size=18|text=转生系统>
+<Text|id=当前转生等级|x=370.0|y=105.0|color=251|size=18|text=人物转生等级：<$str(S$当前转生等级)> 转>
+<Img|id=内框背景|x=187|y=80|width=565|height=320|img=public/haha/ty_bg.png>
+
+<Img|id=官位背景|x=200|y=200|children={当前称号,下级称号,箭头,当前属性加成,下级属性加成}|width=540|height=135|img=public/haha/split/common_panel2035.png>
+<Img|id=箭头|x=190|y=5|width=146|height=120|img=public/haha/f_00039e.png>
+<RText|id=当前称号|x=80|y=-30|size=16|text=<当前属性/FCOLOR=251>>
+<RText|id=下级称号|x=360|y=-30|size=16|text=<下级属性/FCOLOR=251>>
+<RText|id=当前属性加成|x=80|y=50|text=<攻魔道＋<$str(S$当前全属性加成)>/FCOLOR=161>>
+<RText|id=下级属性加成|x=360|y=50|text=<攻魔道＋<$str(S$下级全属性加成)>/FCOLOR=161>>
+
+<RText|id=升级条件1|x=405.0|y=405.0|color=251|size=16|text=<人物/FCOLOR=161>< <$str(S$需要人物等级)>级/FCOLOR=251><,/FCOLOR=161><转生后/FCOLOR=161><降<$str(S$下降等级)>级/FCOLOR=249>>
+<RText|id=升级条件2|children={需要道具1,连接图片1,连接图片2,需要道具2,需要道具3,,okBtn}|x=310.0|y=445.0|color=251|size=16|text=<消耗材料：/FCOLOR=251>>
+<ItemShow|id=需要道具1|x=80|y=-20|itemid=<$STR(S$需要材料名ID1)>|itemcount=<$STR(S$需要材料数量1)>|showtips=1|bgtype=1|scale=0.8>
+<ItemShow|id=需要道具2|x=160|y=-20|itemid=<$STR(S$需要材料名ID2)>|itemcount=<$STR(S$需要材料数量2)>|showtips=1|bgtype=1|scale=0.8>
+<Img|id=连接图片1|x=145|y=0|width=19|height=25|img=public/uipic/01709.png>
+<Img|id=连接图片2|x=220|y=0|width=19|height=25|img=public/uipic/01709.png>
+<RText|id=需要道具3|x=250.0|y=0|color=251|size=16|text=<<$str(S$所需货币数量)>元宝/FCOLOR=<$str(S$元宝颜色)>>>
+<Button|id=okBtn|x=100|y=25.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=我要转生|link=@转生升级>
+
+<Text|id=获取途径|x=670.0|y=480.0|color=250|size=18|text=获取途径|link=@获取途径按钮>
+<$str(S$获取途径)>
+
+[@获取当前转生等级]
+#if
+not large <$STR(N$转生等级)> 20
+#act
+GetListString ..\QuestDiary\转生系统\转生等级.txt <$STR(N$转生等级)> S$玩家转生等级
+
+#if
+CHECKRENEWLEVEL = <$STR(S$玩家转生等级)>
+#act
+mov N$转生等级 <$STR(S$玩家转生等级)>
+break
+
+#if
+not large <$STR(N$转生等级)> 20
+#act
+inc N$转生等级 1
+goto @获取当前转生等级
+
+[@转生升级]
+#if
+equal <$str(S$所需货币名)> 元宝
+#act
+mov S$所需货币名 绑定元宝
+
+#if
+not CHECKRENEWLEVEL < <$str(S$最大转生等级)>
+#act
+messagebox 转生等级已达最大！
+break
+
+#or
+not CHECKLEVELEX > <$str(S$需要人物等级)>
+not checkmoney <$str(S$所需货币名)> > <$str(S$所需货币数量)>
+not CHECKITEM <$str(S$需要材料名1)> <$str(S$需要材料数量1)>
+not CHECKITEM <$str(S$需要材料名2)> <$str(S$需要材料数量2)>
+#act
+messagebox 转生条件不足！
+break
+
+
+#if
+#act
+; money <$str(S$所需货币名)> - <$str(S$所需货币数量)>
+; TAKE <$str(S$需要材料名)> <$str(S$需要材料数量)>
+
+take <$str(S$需要材料名1)> <$str(S$需要材料数量1)>
+take <$str(S$需要材料名2)> <$str(S$需要材料数量2)>
+money <$str(S$所需货币名)> - <$str(S$所需货币数量)>
+RENEWLEVEL 1 0 0
+CHANGELEVEL - <$str(S$下降等级)>
+
+sendmsg 5 转生成功!!
+goto @转生属性提升
+
+[@转生属性提升]
+#if
+#act
+; SETICON 0 0 <$str(S$下级转生称号)> 0 -22 0 0
+#CALL [\人物属性加成\人物属性提升.txt] @基础属性
+goto @获取转生数据
+
+[@获取途径按钮]
+#if
+equal <$str(S$获取图鉴窗口)> 1
+#act
+mov S$获取途径
+mov S$获取图鉴窗口 0
+goto @获取转生数据
+break
+
+#if
+#act
+inc S$获取途径 <Img|id=获取途径控件|children={途径标题1,途径标题2,途径标题3,途径标题4,途径标题5,途径按钮1,途径按钮2,途径按钮3,途径按钮4,途径关闭}|width=245|height=460|x=515|y=68|img=public/haha/split/common_panel2045.png|link=@>
+inc S$获取途径 <Text|id=途径标题1|x=90.0|y=15.0|color=251|size=16|text=获取途径>
+; inc S$获取途径 <Text|id=途径标题2|x=30.0|y=40.0|color=161|size=16|text=本服转生证明全部怪物掉落>
+inc S$获取途径 <Text|id=途径标题3|x=45.0|y=65.0|color=161|size=16|text=当前转生材料高爆产地>
+; inc S$获取途径 <Text|id=途径标题4|x=60.0|y=90.0|color=250|size=16|text=绑元不足扣除元宝>
+; #等级=105#地图名字=冰之雪崖
+inc S$获取途径 <Button|id=途径按钮1|x=65|y=125.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=雪龙殿|link=@途径传送按钮1>
+inc S$获取途径 <Button|id=途径按钮2|x=65|y=185.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=神秘峡谷|link=@途径传送按钮2>
+inc S$获取途径 <Button|id=途径按钮3|x=65|y=245.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=囚魔炼狱|link=@途径传送按钮3>
+inc S$获取途径 <Button|id=途径按钮4|x=65|y=305.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=海外仙岛|link=@途径传送按钮4>
+inc S$获取途径 <Button|id=途径关闭|x=-42|y=165.0|nimg=public/sf1/2/btn_sifud_30.png|color=161|size=17|text=关\闭|link=@获取途径按钮>
+inc S$获取途径 <Text|id=途径标题5|x=60.0|y=385.0|color=250|size=16|text=点击按钮直接前往>
+mov S$获取图鉴窗口 1
+goto @获取转生数据
+
+
+[@途径传送按钮1]
+#if
+not CHECKRENEWLEVEL > 2
+not large <$str(U22)> 0
+CheckBindMoney 元宝 < 500
+#act
+MESSAGEBOX 不满足当前地图的最低要求！无法进入！
+break
+
+
+
+#if
+not CHECKRENEWLEVEL > 2
+not large <$str(U22)> 0
+not CheckBindMoney 元宝 < 500
+#act
+money 绑定元宝 - 500
+MapMove xls1
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖雪龙殿〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖雪龙殿〗,寻找高级装备！
+
+#or
+not CHECKRENEWLEVEL < 2
+large <$str(U22)> 0
+#act
+give 回城卷 1
+MapMove xls1
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖雪龙殿〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖雪龙殿〗,寻找高级装备！
+
+
+[@途径传送按钮2]
+#if
+not large <$str(U22)> 0
+CheckBindMoney 元宝 < 1000
+checklevelex < 110
+#act
+MESSAGEBOX 不满足当前地图的最低要求！无法进入！
+break
+
+
+#if
+checklevelex < 110
+not large <$str(U22)> 0
+not CheckBindMoney 元宝 < 1000
+#act
+money 绑定元宝 - 1000
+
+give 回城卷 1
+MapMove wld1
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了〖神秘峡谷一层〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了〖神秘峡谷一层〗,寻找高级装备！
+
+#or
+not checklevelex < 110
+large <$str(U22)> 0
+#ACT
+give 回城卷 1
+MapMove wld1
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了〖神秘峡谷一层〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了〖神秘峡谷一层〗,寻找高级装备！
+
+
+[@途径传送按钮3]
+#if
+not large <$str(U22)> 0
+not check [007] 1
+CheckBindMoney 元宝 < 500
+#act
+MESSAGEBOX 不满足当前地图的最低要求！无法进入！
+break
+
+#if
+not check [007] 1
+not large <$str(U22)> 0
+not CheckBindMoney 元宝 < 500
+#act
+money 绑定元宝 - 500
+give 回城卷 1
+MapMove hdt1 11 65
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！
+
+#or
+check [007] 1
+large <$str(U22)> 0
+#ACT
+give 回城卷 1
+MapMove hdt1 11 65
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！
+
+[@途径传送按钮4]
+#if
+not large <$str(U22)> 0
+CheckBindMoney 元宝 < 500
+not CHECKRENEWLEVEL > 2
+#act
+MESSAGEBOX 不满足当前地图的最低要求！无法进入！
+break
+
+#if
+not large <$str(U22)> 0
+not CHECKRENEWLEVEL > 2
+not CheckBindMoney 元宝 < 500
+#act
+money 绑定元宝 - 500
+give 回城卷 1
+MapMove hwxd 158 33
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖海外仙岛〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖海外仙岛〗,寻找高级装备！
+
+
+#or
+large <$str(U22)> 0
+CHECKRENEWLEVEL > 2
+#ACT
+give 回城卷 1
+MapMove hwxd 158 33
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖海外仙岛〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖海外仙岛〗,寻找高级装备！
+
+
+}

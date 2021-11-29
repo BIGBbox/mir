@@ -1,0 +1,137 @@
+[@囚魔炼狱]
+{
+#IF
+#act
+mov S$掉落显示窗口
+mov S$显示掉落窗口打开 0
+
+
+goto @囚魔炼狱主界面
+
+
+[@囚魔炼狱主界面]
+#if
+#act
+
+#say
+
+<Img|width=620|height=240|children={掉落窗口}|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=20.0|y=25.0|tipsx=10|tipsy=80|color=253|size=18|text=囚魔炼狱>
+<Text|a=0|x=20.0|y=50.0|tipsx=10|tipsy=80|color=250|size=18|text=[地图介绍]：>
+<Text|a=0|ax=0|x=120.0|y=50.0|tipsx=10|tipsy=80|color=70|size=18|text=囚魔职员、战士、法师、道士.千古魔主！！>
+<Text|a=0|x=20.0|y=75.0|tipsx=10|tipsy=80|color=250|size=18|text=[刷新时间]：>
+<Text|a=0|ax=0|x=120.0|y=75.0|tipsx=10|tipsy=80|color=70|size=18|text=普通怪10分钟，Boss1小时>
+<Text|a=0|ax=0|x=20.0|y=100.0|tipsx=10|tipsy=80|color=244|size=18|text=110级、赞助免费进入.也可花500元宝进！！>
+<Button|x=515|y=25.0|nimg=public/icon/common1087.png|link=@显示掉落>
+<Text|a=0|x=120.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=护军进入|link=@囚魔炼狱按钮#参数=1>
+<Text|a=0|x=220.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=赞助进入|link=@囚魔炼狱按钮#参数=2>
+<Text|a=0|x=320.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=元宝进入|link=@囚魔炼狱按钮#参数=3>
+<$str(S$掉落显示窗口)>
+; common1085
+
+[@囚魔炼狱按钮]
+#if
+equal <$str(S$参数)> 1
+not check [007] 1
+#act
+MESSAGEBOX 你的官爵不是“三品护军”！无法进入！
+break
+
+#if
+equal <$str(S$参数)> 2
+not large <$str(U22)> 0
+#act
+MESSAGEBOX 你还不是本服的会员！无法进入！
+break
+
+#if
+equal <$str(S$参数)> 3
+CheckBindMoney 元宝 < 500
+#act
+MESSAGEBOX 你的元宝不足！无法进入！
+break
+
+#if
+equal <$str(S$参数)> 3
+not CheckBindMoney 元宝 < 500
+#act
+money 绑定元宝 - 500
+
+
+#if
+#ACT
+give 回城卷 1
+MapMove hdt1 11 65
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！
+
+
+[@显示掉落]
+
+#if
+#act
+mov N$物品序号 0
+mov N$道具X0 12
+mov N$道具X1 12
+mov N$道具X2 12
+mov N$道具X3 12
+mov N$道具X4 12
+mov N$道具X5 12
+
+mov N$道具Y 20
+
+
+#if
+equal <$str(S$显示掉落窗口打开)> 1
+#act
+mov S$掉落显示窗口
+mov S$显示掉落窗口打开 0
+goto @囚魔炼狱主界面
+break
+
+#if
+#act
+mov S$显示掉落窗口打开 1
+
+inc S$掉落显示窗口 <Img|id=掉落窗口|children={lin1,lin2,lin3,lin4,name0,name1,name2,name3,name4,name5,}|width=120|height=250|x=630.0|y=58.0|img=public/haha/ty_bg.png|link=@>
+inc S$掉落显示窗口 <Img|id=lin1|width=115|height=2|x=2.0|y=48.0|img=public/sf1/19/line.png>
+inc S$掉落显示窗口 <Img|id=lin2|width=115|height=2|x=2.0|y=98.0|img=public/sf1/19/line.png>
+inc S$掉落显示窗口 <Img|id=lin3|width=115|height=2|x=2.0|y=148.0|img=public/sf1/19/line.png>
+inc S$掉落显示窗口 <Img|id=lin4|width=115|height=2|x=2.0|y=198.0|img=public/sf1/19/line.png>
+
+
+goto @获取掉落列表
+
+
+[@获取掉落列表]
+#if
+#act
+GetListString ..\QuestDiary\〖冰雪地图〗\囚魔炼狱掉落.txt <$str(N$物品序号)> S$材料名<$str(N$物品序号)> 
+
+#if
+not CheckStringlength <$str(S$材料名<$str(N$物品序号)>)> > 8
+#act
+inc N$道具X<$str(N$物品序号)> 10
+
+#if
+CheckStringlength <$str(S$材料名<$str(N$物品序号)>)> > 8
+not CheckStringlength <$str(S$材料名<$str(N$物品序号)>)> > 10
+#act
+inc N$道具X<$str(N$物品序号)> 7
+
+#if
+#act
+inc S$掉落显示窗口 <Text|id=name<$str(N$物品序号)>|x=<$str(N$道具X<$str(N$物品序号)>)>|y=<$str(N$道具Y)>|tipsx=10|tipsy=80|color=158|size=18|text=<$str(S$材料名<$str(N$物品序号)>)>>
+
+#if
+not equal <$str(S$材料名<$str(N$物品序号)>)>
+#act
+inc N$物品序号 1
+inc N$道具Y 50
+goto @获取掉落列表
+#elseact
+goto @囚魔炼狱主界面
+
+}

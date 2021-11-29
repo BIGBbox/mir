@@ -40,6 +40,11 @@ CHECKLEVELEX > 0
 #act
 CALCVAR HUMAN KP + 1
 SAVEVAR HUMAN KP
+
+#IF
+#ACT
+#CALL [\触发系列\杀人触发.txt] @杀人触发
+
 ;-----------------------------------------------------------------------------------------------------------------
 [@PlayLevelUp]
 #IF
@@ -53,6 +58,13 @@ GIVE 随机传送石 1
 break
 ;-----------------------------------------------------------------------------------------------------------------
 [@PlayDie]
+#if
+#act
+REALIVE
+mapmove 3 333 333
+; break
+
+
 #IF
 CHECKITEMW 死也不爆 1
 #ACT
@@ -72,6 +84,16 @@ SendCenterMsg 250 0 战报：【<$CURRRTARGETNAME>】干掉了拥有【天神下凡】的[<$USERN
 SendCenterMsg 250 0 战报：【<$CURRRTARGETNAME>】干掉了拥有【天神下凡】的[<$USERNAME>]获得100000元宝奖励！！ 1 3
 
 
+#IF
+check [058] 1
+CHECKCURRTARGETRACE = 0
+#ACT
+<$CURRRTARGETNAME>.money RMB点 + 100000
+SET [059] 0
+SETICON 1 -1
+SendCenterMsg 250 0 战报：【<$CURRRTARGETNAME>】干掉了拥有【天神下凡】的[<$USERNAME>]获得1000RMB点奖励！！ 1 3
+SendCenterMsg 250 0 战报：【<$CURRRTARGETNAME>】干掉了拥有【天神下凡】的[<$USERNAME>]获得1000RMB点奖励！！ 1 3
+SendCenterMsg 250 0 战报：【<$CURRRTARGETNAME>】干掉了拥有【天神下凡】的[<$USERNAME>]获得1000RMB点奖励！！ 1 3
 
 
 #IF
@@ -749,7 +771,7 @@ BREAK
 
 [@StdModeFunc93]
 #act
-#CALL [\游戏功能\快捷功能.txt] @服务功能
+#CALL [\装备合成\快捷功能.txt] @服务功能
 GIVE 快捷功能 1
 BREAK
 
@@ -1657,6 +1679,13 @@ mapmove 3 330 330
 BREAK
 ;-----------------------------------------------------------------------------------------------------------------
 
+[@TakeOnEx]
+#if
+; equal <$MAPTITLE> 比奇城
+#ACT
+#CALL [\游戏登陆\右下显示.txt] @属性显示
+
+
 [@TakeOn2]
 #IF
 CHECKITEMW 1.5倍爆率勋章 1
@@ -2117,42 +2146,11 @@ BREAK
 [@主界面按钮设置]
 #CALL [\基础按钮\主界面基础按钮QF.txt] @基础按钮QF
 
-[@伸缩]
-#IF
-Equal <$CLIENTFLAG> 2
-#ACT
-delbutton 102 2
-MOV S$图标2 <Button|x=-230|a=3|y=35|rotate=180|nimg=official/top/1900012531.png|link=@展开>
-addbutton 102 2 <$STR(S$图标2)>
 
-
-[@展开]
-#IF
-Equal <$CLIENTFLAG> 2
-#ACT
-delbutton 102 2
-MOV S$图标2 <Button|x=-230|y=35|nimg=official/top/1900012531.png|link=@伸缩>
-
-INC S$图标2 <Button|x=-320|y=35|nimg=official/top/1900012611.png|link=@建议>
-INC S$图标2 <Button|x=-400|y=35|nimg=official/top/1900012607.png|link=@首充>
-INC S$图标2 <Button|x=-480|y=35|nimg=official/top/1900012601.png|link=@活动>
-INC S$图标2 <Button|x=-560|y=35|nimg=official/top/1900012602.png|link=@飞鞋>
-addbutton 102 2 <$STR(S$图标2)>
-break
-
-
-[@管理模式]
-#IF
-#ACT
-#Call [\Mobile\特殊NPC\系统管理员.txt] @GM
-
-
-
-
-[@飞鞋]
-#IF
-#ACT
-#Call [\Mobile\特殊NPC\传送员.txt] @Settings_cs
+; [@飞鞋]
+; #IF
+; #ACT
+; #Call [\Mobile\特殊NPC\传送员.txt] @Settings_cs
 
 
 [@StartAutoPlayGame]
@@ -2207,8 +2205,6 @@ equal <$STR(U209)> 1
 #CALL [\自动化\自动使用道具1.txt] @自动使用道具1
 
 
-
-
 [@勾选背包物品]
 #if
 #act
@@ -2231,3 +2227,71 @@ AnsiReplaceText S12 <$STR(S$勾选ID)>,
 #if
 #act
 SelectBagItems <$str(S12)>
+
+
+;任意地图杀死怪物触发
+[@KillMon]
+#if
+#act
+
+ReadConfigFileItem ..\QuestDiary\击杀怪物统计\击杀怪物统计.txt <$MAPTITLE> 标记 S$怪物击杀标记
+ReadConfigFileItem ..\QuestDiary\击杀怪物统计\击杀怪物统计.txt <$MAPTITLE> 所有怪物 S$所有怪物列表
+
+
+#if
+not equal <$str(S$怪物击杀标记)>
+; CheckContainsText <$STR(S$所有怪物列表)> <$KILLMONNAME>
+#act
+inc U<$str(S$怪物击杀标记)> 1
+; sendmsg 7 成功击杀了<$KILLMONNAME>!!
+
+;---------------------充值回调--------
+
+[@ReCharge]
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\每日悬赏系统\每日悬赏数据.txt 基本数据 特权价格 S$特权价格
+
+#if
+equal <$STR(M0)> <$str(S$特权价格)>
+#act
+sendmsg 5 购买特权触发!!
+set [100] 1
+break
+
+#IF
+#ACT
+;累充
+INC U99 <$STR(M0)>
+;日充
+INC U91 <$STR(M0)>
+
+CALCVAR HUMAN 今日充值 + <$STR(M0)>
+SAVEVAR HUMAN 今日充值
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>成功充值。
+
+;-----------每日首次登录触发--------------
+[@SetDay]
+
+#IF
+equal U20 0
+#ACT
+#CALL [\游戏登陆\每日首次登录.txt] @每日首次登陆触发
+
+
+#IF
+#ACT
+mov U20 0
+
+
+[@充值界面]
+#if
+; #act
+; close
+; OPENHYPERLINK 26
+#act
+; close
+#call [\系统功能\充值功能.txt] @充值主面板
+
+

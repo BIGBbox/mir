@@ -43,13 +43,15 @@ REFRESHBAG
 [@打开回收面板]
 #act
 ; #CALL [\游戏功能\装备回收.txt] @开始回收
+
+
 #CALL [\新装备回收\回收系统.txt] @回收
 ; OPENHYPERLINK 7
 
 
 [@打开合成面板]
 #act
-#CALL [\游戏功能\快捷功能.txt] @服务功能
+#CALL [\装备合成\快捷功能.txt] @服务功能
 OPENHYPERLINK 7
 
 

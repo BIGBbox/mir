@@ -1,4 +1,4 @@
 [@main]
 #act
-#CALL [\游戏功能\快捷功能.txt] @服务功能
+#CALL [\装备合成\快捷功能.txt] @服务功能
 BREAK

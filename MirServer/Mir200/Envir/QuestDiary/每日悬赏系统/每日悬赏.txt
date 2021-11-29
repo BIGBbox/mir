@@ -1,0 +1,276 @@
+
+[@每日悬赏主面板]
+{
+#if
+#act
+mov N$按钮序号 1
+mov S$参数 1
+mov S$地图按钮列表
+
+ReadConfigFileItem ..\QuestDiary\每日悬赏系统\每日悬赏数据.txt 基本数据 特权价格 S$特权价格
+ReadConfigFileItem ..\QuestDiary\每日悬赏系统\每日悬赏数据.txt 基本数据 特权倍率 S$特权倍率
+
+goto @获取地图列表
+goto @左边地图按钮
+
+
+[@每日悬赏面板显示]
+#IF
+#ACT
+
+#SAY
+<Img|layerid=99|children={bg0,xBg1,xBg2,地图按钮列表,cl_Btn1,cl_Btn2,cl_Btn3,tips1,tips2,介绍,大标题,close_btn}|x=120|y=60|show=0|reset=0|move=1|img=public/sf1/19/bg5.png|bg=1|reset=1>
+
+<Img|id=bg0|x=10|y=55.0|width=780|img=public/sf1/19/bg4.png>
+<Img|id=大标题|x=360|y=25.0|img=public/sf1/19/title1.png>
+; <Img|id=1111|x=465|y=75.0|width=330|height=350|img=public/sf1/19/coverBG.png>
+<Button|id=close_btn|x=795.0|y=23.0|size=18|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<ListView|id=地图按钮列表|children={1_1,1_2,1_3,1_4,1_5,1_6,1_7,1_8,1_9,1_10,1_11,1_12,1_13,1_14,1_15,1_16,1_17,1_18,1_19,1_20,}|direction=1|bounce=0|x=15|y=75.0|margin=10|height=440|width=125|img=public/1900000665.png>
+    <$str(S$地图按钮列表)>
+    <$str(S$地图奖励信息)>
+<Img|id=xBg1|x=155|y=75.0|children={2_1,2_2,2_3,2_4,2_5,2_6,2_7,2_8,2_9,2_10,2_11,2_12,2_13,2_14,2_15,2_16,2_17,2_18,2_19,2_20}|img=private/npc/bg_zbhstips_01.png>
+<Img|id=xBg2|x=455|y=75.0|children={3_1,3_2,3_3,3_4,3_5,3_6,3_7,3_8,3_9,3_10,3_11,3_12,3_13,3_14,3_15,3_16,3_17,3_18,3_19,3_20}|img=private/npc/bg_zbhstips_01.png>
+
+<RText|id=tips1|x=195.0|y=398.0|size=19|text=<↓完成任务免费领取↓/FCOLOR=249>>
+<RText|id=tips2|x=495.0|y=398.0|size=19|text=<↓完成任务特权领取↓/FCOLOR=249>>
+<Button|id=cl_Btn1|x=230.0|y=428.0|width=100|height=35|size=18|nimg=public/sf1/19/button3.png|text=普通领取|link=@普通领取按钮>
+<Button|id=cl_Btn2|x=530.0|y=428.0|width=100|height=35|size=18|nimg=public/sf1/19/button3.png|text=特权领取|link=@特权领取按钮>
+<Button|id=cl_Btn3|x=680.0|y=478.0|width=100|size=18|nimg=public/sf1/19/button4.png|text=购买特权|link=@充值按钮>
+; <RText|id=介绍|x=495.0|y=398.0|size=19|text=<↓完成任务特权领取↓/FCOLOR=249>>
+
+[@获取地图列表]
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\每日悬赏系统\每日悬赏数据.txt <$str(N$按钮序号)> 地图显示名字 S$地图显示名字
+mov S$地图奖励信息
+
+#if
+not equal <$str(S$地图显示名字)>
+#act
+INC S$地图按钮列表 <Button|id=1_<$STR(N$按钮序号)>|x=0|y=0|size=18|width=120|height=45|color=168|text=<$STR(S$地图显示名字)>|nimg=public/sf1/19/btn2.png|pimg=public/sf1/19/btn1.png|link=@左边地图按钮#参数=<$STR(N$按钮序号)>#参数1=<$STR(N$按钮序号)>#x坐标=<$STR(S$x坐标)>#y坐标=<$STR(S$y坐标)>>
+inc N$按钮序号 1
+goto @获取地图列表
+#elseact
+goto @每日悬赏面板显示
+
+
+[@左边地图按钮]
+#if
+#act
+mov N$奖励序号 1
+mov N$图标序号 12
+mov N$奖励总值1 0
+mov N$奖励总值2 0
+mov N$奖励信息1Y 94 
+mov N$奖励信息2Y 86
+mov S$临时记录领取变量1
+mov S$临时记录领取变量2
+
+mov N$给奖励21
+mov N$给奖励22
+mov N$给奖励23
+mov N$给奖励24
+mov N$给奖励25
+mov N$给奖励26
+
+mov S$给道具数量1
+mov S$给道具数量2
+mov S$给道具数量3
+mov S$给道具数量4
+mov S$给道具数量5
+mov S$给道具数量6
+
+mov S$给道具名字1
+mov S$给道具名字2
+mov S$给道具名字3
+mov S$给道具名字4
+mov S$给道具名字5
+mov S$给道具名字6
+
+goto @获取地图信息
+
+[@获取地图信息]
+#if
+#act
+; sendmsg 5 <$str(S$参数)>---<$str(S$参数1)>-
+ReadConfigFileItem ..\QuestDiary\每日悬赏系统\每日悬赏数据.txt <$str(S$参数)> 地图显示名字 S$地图显示名字
+ReadConfigFileItem ..\QuestDiary\每日悬赏系统\每日悬赏数据.txt <$str(S$参数)> 悬赏标记 S$悬赏标记
+ReadConfigFileItem ..\QuestDiary\每日悬赏系统\每日悬赏数据.txt <$str(S$参数)> 普通领取标记 S$普通领取标记
+ReadConfigFileItem ..\QuestDiary\每日悬赏系统\每日悬赏数据.txt <$str(S$参数)> 特权领取标记 S$特权领取标记
+ReadConfigFileItem ..\QuestDiary\每日悬赏系统\每日悬赏数据.txt <$str(S$参数)> 第<$str(N$奖励序号)>档击杀数量 S$第<$str(N$奖励序号)>档击杀数量
+ReadConfigFileItem ..\QuestDiary\每日悬赏系统\每日悬赏数据.txt <$str(S$参数)> 第<$str(N$奖励序号)>档奖励 S$第<$str(N$奖励序号)>档奖励
+
+INC S$地图奖励信息 <RText|id=2_9|x=85.0|y=14.0|size=19|text=<<$str(S$地图显示名字)>/FCOLOR=251>>
+INC S$地图奖励信息 <RText|id=3_9|x=85.0|y=14.0|size=19|text=<<$str(S$地图显示名字)>/FCOLOR=251>>
+
+INC S$地图奖励信息 <RText|id=2_10|x=45.0|y=54.0|size=19|text=<<$str(S$地图显示名字)>击杀BOSS/FCOLOR=251>>
+INC S$地图奖励信息 <RText|id=3_10|x=45.0|y=54.0|size=19|text=<<$str(S$地图显示名字)>击杀BOSS/FCOLOR=251>>
+
+GetValidstr <$str(S$第<$str(N$奖励序号)>档奖励)> * S$奖励道具名字<$str(N$奖励序号)> S$奖励道具数量<$str(N$奖励序号)>
+
+mov N$奖励2<$str(N$奖励序号)> <$str(S$奖励道具数量<$str(N$奖励序号)>)>
+mul N$奖励2<$str(N$奖励序号)> <$str(S$特权倍率)>
+
+
+
+; 未完成本档任务
+#if
+small <$str(U<$str(S$悬赏标记)>)> <$str(S$第<$str(N$奖励序号)>档击杀数量)>
+not equal <$str(S$第<$str(N$奖励序号)>档击杀数量)>
+not equal <$str(S$第<$str(N$奖励序号)>档奖励)>
+#act
+INC S$地图奖励信息 <RText|id=2_<$str(N$奖励序号)>|x=45.0|y=<$str(N$奖励信息1Y)>|size=19|text=<[<$str(U<$str(S$悬赏标记)>)>/<$str(S$第<$str(N$奖励序号)>档击杀数量)>]/FCOLOR=10><--/FCOLOR=0><<$str(S$奖励道具名字<$str(N$奖励序号)>)>*<$str(S$奖励道具数量<$str(N$奖励序号)>)>/FCOLOR=10>>
+INC S$地图奖励信息 <RText|id=3_<$str(N$奖励序号)>|x=45.0|y=<$str(N$奖励信息1Y)>|size=19|text=<[<$str(U<$str(S$悬赏标记)>)>/<$str(S$第<$str(N$奖励序号)>档击杀数量)>]/FCOLOR=10><--/FCOLOR=0><<$str(S$奖励道具名字<$str(N$奖励序号)>)>*<$str(N$奖励2<$str(N$奖励序号)>)>/FCOLOR=10>>
+; sendmsg 5 <$str(N$图标序号)>***<$str(N$奖励信息2Y)>
+
+
+; 已领取本档普通奖励
+#if
+not small <$str(U<$str(S$悬赏标记)>)> <$str(S$第<$str(N$奖励序号)>档击杀数量)>
+CheckContainsText <$str(T<$STR(S$普通领取标记)>)> <$str(N$奖励序号)>
+not equal <$str(S$第<$str(N$奖励序号)>档击杀数量)>
+not equal <$str(S$第<$str(N$奖励序号)>档奖励)>
+#act
+INC S$地图奖励信息 <RText|id=2_<$str(N$奖励序号)>|x=45.0|y=<$str(N$奖励信息1Y)>|size=19|text=<[<$str(U<$str(S$悬赏标记)>)>/<$str(S$第<$str(N$奖励序号)>档击杀数量)>]/FCOLOR=250><--/FCOLOR=0><<$str(S$奖励道具名字<$str(N$奖励序号)>)>*<$str(S$奖励道具数量<$str(N$奖励序号)>)>/FCOLOR=250>>
+INC S$地图奖励信息 <Img|id=2_<$str(N$图标序号)>|x=195.0|y=<$str(N$奖励信息2Y)>|img=public/icon/common1000.png>
+
+; 已领取本档特权奖励
+#if
+not small <$str(U<$str(S$悬赏标记)>)> <$str(S$第<$str(N$奖励序号)>档击杀数量)>
+CheckContainsText <$str(T<$STR(S$特权领取标记)>)> <$str(N$奖励序号)>
+not equal <$str(S$第<$str(N$奖励序号)>档击杀数量)>
+not equal <$str(S$第<$str(N$奖励序号)>档奖励)>
+#act
+INC S$地图奖励信息 <RText|id=3_<$str(N$奖励序号)>|x=45.0|y=<$str(N$奖励信息1Y)>|size=19|text=<[<$str(U<$str(S$悬赏标记)>)>/<$str(S$第<$str(N$奖励序号)>档击杀数量)>]/FCOLOR=250><--/FCOLOR=0><<$str(S$奖励道具名字<$str(N$奖励序号)>)>*<$str(N$奖励2<$str(N$奖励序号)>)>/FCOLOR=250>>
+INC S$地图奖励信息 <Img|id=3_<$str(N$图标序号)>|x=195.0|y=<$str(N$奖励信息2Y)>|img=public/icon/common1000.png>
+
+; 完成且未领取本档普通任务
+#if
+not small <$str(U<$str(S$悬赏标记)>)> <$str(S$第<$str(N$奖励序号)>档击杀数量)>
+not CheckContainsText <$str(T<$STR(S$普通领取标记)>)> <$str(N$奖励序号)>
+not equal <$str(S$第<$str(N$奖励序号)>档击杀数量)>
+not equal <$str(S$第<$str(N$奖励序号)>档奖励)>
+#act
+
+mov S$给道具名字<$str(N$奖励序号)> <$str(S$奖励道具名字<$str(N$奖励序号)>)>
+mov S$给道具数量<$str(N$奖励序号)> <$str(S$奖励道具数量<$str(N$奖励序号)>)>
+
+inc S$临时记录领取变量1 <$str(N$奖励序号)>_
+INC S$地图奖励信息 <RText|id=2_<$str(N$奖励序号)>|x=45.0|y=<$str(N$奖励信息1Y)>|size=19|text=<[<$str(U<$str(S$悬赏标记)>)>/<$str(S$第<$str(N$奖励序号)>档击杀数量)>]/FCOLOR=250><--/FCOLOR=0><<$str(S$奖励道具名字<$str(N$奖励序号)>)>*<$str(S$奖励道具数量<$str(N$奖励序号)>)>/FCOLOR=250>>
+
+
+; 完成且未领取本档特殊任务
+#if
+not small <$str(U<$str(S$悬赏标记)>)> <$str(S$第<$str(N$奖励序号)>档击杀数量)>
+not CheckContainsText <$str(T<$STR(S$特权领取标记)>)> <$str(N$奖励序号)>
+not equal <$str(S$第<$str(N$奖励序号)>档击杀数量)>
+not equal <$str(S$第<$str(N$奖励序号)>档奖励)>
+#act
+
+mov S$给道具名字<$str(N$奖励序号)> <$str(S$奖励道具名字<$str(N$奖励序号)>)>
+mov N$给奖励2<$str(N$奖励序号)> <$str(N$奖励2<$str(N$奖励序号)>)>
+
+inc S$临时记录领取变量2 <$str(N$奖励序号)>_
+INC S$地图奖励信息 <RText|id=3_<$str(N$奖励序号)>|x=45.0|y=<$str(N$奖励信息1Y)>|size=19|text=<[<$str(U<$str(S$悬赏标记)>)>/<$str(S$第<$str(N$奖励序号)>档击杀数量)>]/FCOLOR=250><--/FCOLOR=0><<$str(S$奖励道具名字<$str(N$奖励序号)>)>*<$str(N$奖励2<$str(N$奖励序号)>)>/FCOLOR=250>>
+
+
+#or
+not equal <$str(S$第<$str(N$奖励序号)>档击杀数量)>
+not equal <$str(S$第<$str(N$奖励序号)>档奖励)>
+#act
+inc N$奖励序号 1
+inc N$图标序号 1
+inc N$奖励信息1Y 38
+inc N$奖励信息2Y 38
+goto @获取地图信息
+#elseact
+
+goto @每日悬赏面板显示
+
+; sendmsg 5 奖励1:<$str(N$奖励总值1)>
+; sendmsg 5 奖励1:<$str(N$奖励总值2)>
+
+; sendmsg 5 临时记录领取变量1:<$str(S$临时记录领取变量1)>=
+; sendmsg 5 临时记录领取变量2:<$str(S$临时记录领取变量2)>=
+
+; sendmsg 5 <$str(S$给道具名字1)>++<$str(S$给道具数量1)>++<$str(N$给奖励21)>
+; sendmsg 5 <$str(S$给道具名字2)>++<$str(S$给道具数量2)>++<$str(N$给奖励22)>
+; sendmsg 5 <$str(S$给道具名字3)>++<$str(S$给道具数量3)>++<$str(N$给奖励23)>
+; sendmsg 5 <$str(S$给道具名字4)>++<$str(S$给道具数量4)>++<$str(N$给奖励24)>
+; sendmsg 5 <$str(S$给道具名字5)>++<$str(S$给道具数量5)>++<$str(N$给奖励25)>
+; sendmsg 5 <$str(S$给道具名字6)>++<$str(S$给道具数量6)>++<$str(N$给奖励26)>
+
+[@普通领取按钮]
+
+#if
+equal <$str(S$临时记录领取变量1)> 
+#act
+messagebox 你当前没有可领取的奖励!!
+break
+
+#if
+CheckContainsText <$str(T<$str(S$普通领取标记)>)> <$str(S$临时记录领取变量1)>
+#act
+messagebox 你已经领取过次档的奖励!!
+break
+
+
+#if
+#act
+mov T<$str(S$普通领取标记)> <$str(T<$str(S$普通领取标记)>)><$str(S$临时记录领取变量1)>
+
+MailGIVE <$str(S$给道具名字1)> <$str(S$给道具数量1)> 1#4#5#6#8
+MailGIVE <$str(S$给道具名字2)> <$str(S$给道具数量2)> 1#4#5#6#8
+MailGIVE <$str(S$给道具名字3)> <$str(S$给道具数量3)> 1#4#5#6#8
+MailGIVE <$str(S$给道具名字4)> <$str(S$给道具数量4)> 1#4#5#6#8
+MailGIVE <$str(S$给道具名字5)> <$str(S$给道具数量5)> 1#4#5#6#8
+MailGIVE <$str(S$给道具名字6)> <$str(S$给道具数量6)> 1#4#5#6#8
+
+SendMail 1 系统奖励 你好<$USERNAME>,<$str(S$地图显示名字)>击杀任务奖励已发放,请点及时提取! 
+sendmsg 7 普通奖励领取成功!!
+#Call [\每日悬赏系统\每日悬赏.txt] @每日悬赏主面板
+
+
+[@特权领取按钮]
+
+#if
+not check [100] 1
+#act
+messagebox 需要使用<$str(S$特权价格)>元购买特权功能,才能使用该特权!!
+break
+
+#if
+equal <$str(S$临时记录领取变量2)> 
+#act
+messagebox 你当前没有可领取的奖励!!
+break
+
+
+#if
+CheckContainsText <$str(T<$str(S$特权领取标记)>)> <$str(S$临时记录领取变量2)>
+#act
+messagebox 你已经领取过次档的奖励!!
+break
+
+#if
+#act
+
+mov T<$str(S$特权领取标记)> <$str(T<$str(S$特权领取标记)>)><$str(S$临时记录领取变量2)>
+
+MailGIVE <$str(S$给道具名字1)> <$str(N$给奖励21)> 1#4#5#6#8
+MailGIVE <$str(S$给道具名字2)> <$str(N$给奖励22)> 1#4#5#6#8
+MailGIVE <$str(S$给道具名字3)> <$str(N$给奖励23)> 1#4#5#6#8
+MailGIVE <$str(S$给道具名字4)> <$str(N$给奖励24)> 1#4#5#6#8
+MailGIVE <$str(S$给道具名字5)> <$str(N$给奖励25)> 1#4#5#6#8
+MailGIVE <$str(S$给道具名字6)> <$str(N$给奖励26)> 1#4#5#6#8
+SendMail 1 系统奖励 你好<$USERNAME>,<$str(S$地图显示名字)>击杀任务奖励已发放,请点及时提取! 
+sendmsg 7 特权奖励领取成功!!
+#Call [\每日悬赏系统\每日悬赏.txt] @每日悬赏主面板
+
+[@充值按钮]
+#if
+#act
+sendmsg 7 购买特权按钮!!
+Pullpay <$STR(S$特权价格)> 1 7
+
+}

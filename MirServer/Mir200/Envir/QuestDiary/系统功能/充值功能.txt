@@ -1,0 +1,291 @@
+[@充值主面板]
+{
+#IF
+#ACT
+mov N$moveX <$SCREENWIDTH>
+mov N$moveY <$SCREENHEIGHT>
+
+mov N$SizeX 800
+mov N$SizeY 533
+dec N$moveX N$SizeX
+dec N$moveY N$SizeY
+div N$moveX 2
+div N$moveY 2
+
+mov N$按钮 N$SizeX
+dec N$按钮 38
+mov N$按钮0 N$SizeX
+dec N$按钮0 38
+goto @充值列表数据
+goto @充值商城显示
+
+[@充值商城显示]
+#IF
+#ACT
+#say
+<Img|children=bg1,容器1,容器2,btn1,btn2,btn3,btn4,title,2,3,payPage,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24|bg=1|move=1|x=<$STR(N$moveX)>|y=<$STR(N$moveY)>|width=<$STR(N$SizeX)>|height=<$STR(N$SizeY)>|img=public/chongzhi/bg5.png>
+
+<Layout|id=btn1|x=<$STR(N$按钮0)>|y=18|width=80|height=80|link=@exit>
+<Button|id=btn2|x=<$STR(N$按钮)>|y=20.0|nimg=public/chongzhi/00173.png|pimg=public/chongzhi/00174.png|link=@exit>
+<Img|id=2|x=8.0|y=55.0|width=786|height=87|esc=0|img=public/chongzhi/titlebg.png>
+
+<Img|id=title|x=375.0|y=22.0|img=public/chongzhi/title.png>
+
+<ListView|id=容器1|children={<$STR(S$列表list)>}|x=7.0|y=143.0|width=786|height=370|esc=0>
+
+<$STR(S$充值列表信息)>
+
+[@充值列表数据]
+#if
+#act
+mov S$列表list
+mov S$充值列表信息
+ReadConfigFileItem ..\QuestDiary\系统功能\充值赠送列表.ini 充值列表 总列表数 N$总列表数
+ReadConfigFileItem ..\QuestDiary\系统功能\充值赠送列表.ini 充值列表 总行数 N$总行数
+ReadConfigFileItem ..\QuestDiary\系统功能\充值赠送列表.ini 货币参数 币种 S$充值币种
+ReadConfigFileItem ..\QuestDiary\系统功能\充值赠送列表.ini 货币参数 比例 N$充值比例
+
+;sendmsg 5 ###<$STR(N$总行数)>
+
+mov N$临时列表id 0
+goto @充值列表for
+
+
+[@充值列表for]
+#if
+small N$临时列表id <$STR(N$总行数)>
+#act
+mov S$子列表list
+goto @充值列表for1
+
+inc S$充值列表信息 <Img|id=充值_横_<$STR(N$临时列表id)>|children={<$STR(S$子列表list)>}|x=0.0|y=0.0|scale9r=10|scale9l=10|scale9b=10|scale9t=10|width=785|height=290|img=public/1900000582.png>
+inc S$列表list 充值_横_<$STR(N$临时列表id)>,
+
+mov N$临时列表id_纵_X坐标 8
+mov N$临时列表id_纵 0
+mov N$临时列表id_偏移
+
+inc N$临时列表id 1
+goto @充值列表for
+
+[@充值列表for1]
+#if
+#act
+MUL N$临时列表id_偏移 <$STR(N$临时列表id)> 4
+inc N$临时列表id_偏移 <$STR(N$临时列表id_纵)>
+
+#if
+small N$临时列表id_纵 4
+small N$临时列表id_偏移 <$STR(N$总列表数)>
+#act
+
+mov N$列表id_偏移 <$STR(N$临时列表id_偏移)>
+inc N$列表id_偏移 1
+
+;sendmsg 5 偏移——<$STR(N$列表id_偏移)>
+
+ReadConfigFileItem ..\QuestDiary\系统功能\充值赠送列表.ini <$STR(N$列表id_偏移)> 充值 N$充值数额
+
+ReadConfigFileItem ..\QuestDiary\系统功能\充值赠送列表.ini <$STR(N$列表id_偏移)> 标记 N$充值标记
+
+ReadConfigFileItem ..\QuestDiary\系统功能\充值赠送列表.ini <$STR(N$列表id_偏移)> 图片 N$充值图片
+
+ReadConfigFileItem ..\QuestDiary\系统功能\充值赠送列表.ini <$STR(N$列表id_偏移)> 数字坐标 S$数字坐标
+GetValidstr <$STR(S$数字坐标)> # S$数字坐标1 S$数字坐标2
+
+mul N$临时充值额度 <$STR(N$充值数额)> <$STR(N$充值比例)>
+
+
+;---------------------
+
+
+mov S$充值控件列表list
+mov N$奖励道具X坐标 52
+inc S$充值列表信息 <RText|id=充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_title|x=40|y=10|color=251|size=20|text=<$STR(N$临时充值额度)><$STR(S$充值币种)>>
+
+inc S$充值控件列表list 充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_title,
+
+inc S$充值列表信息 <Img|id=充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_img_1|x=25|y=45|img=public/chongzhi/<$STR(N$充值图片)>.png|esc=0>
+inc S$充值控件列表list 充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_img_1,
+
+inc S$充值列表信息 <TextAtlas|id=充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_num_1|x=<$STR(S$数字坐标1)>|y=155|img=public/chongzhi/number.png|schar=0|iheight=27|iwidth=19|schar=0|text=<$STR(N$充值数额)>>
+inc S$充值控件列表list 充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_num_1,
+inc S$充值列表信息 <Img|id=充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_num_2|x=<$STR(S$数字坐标2)>|y=155|img=public/chongzhi/yuan.png>
+inc S$充值控件列表list 充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_num_2,
+
+goto @是否显示充值赠送道具
+
+
+;sendmsg 6 xxx——<$STR(S$充值控件列表list)>...<$STR(N$充值数额)>
+;---------------------
+inc S$充值列表信息 <Img|id=充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>|children={<$STR(S$充值控件列表list)>}|x=<$STR(N$临时列表id_纵_X坐标)>|y=10.0|width=191|height=272|img=public/chongzhi/cellbg.png|esc=0|link=@callPay1#充值额度=<$STR(N$充值数额)>>
+
+
+inc N$临时列表id_纵_X坐标 192
+inc S$子列表list 充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>,
+
+inc N$临时列表id_纵 1
+
+goto @充值列表for1
+
+[@是否显示充值赠送道具]
+#if
+check [<$STR(N$充值标记)>] 0
+#act
+mov N$赠送道具id 1
+ReadConfigFileItem ..\QuestDiary\系统功能\充值赠送列表.ini <$STR(N$列表id_偏移)> 奖励 S$充值奖励串
+
+inc S$充值列表信息 <Img|id=充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_give|childeren=充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_give_1|x=-3|y=210|img=public/chongzhi/give.png|esc=0>
+inc S$充值控件列表list 充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_give,
+inc S$充值列表信息 <Img|id=充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_give_1|x=0|y=180|img=public/chongzhi/first.png|esc=0>
+inc S$充值控件列表list 充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_give_1,
+
+goto @充值赠送for
+#elseact
+goto @判定是否展示充值额外奖励
+
+[@判定是否展示充值额外奖励]
+#if
+#act
+
+ReadConfigFileItem ..\QuestDiary\系统功能\充值赠送列表.ini <$STR(N$列表id_偏移)> 额外奖励 S$充值奖励串
+;sendmsg 5 外奖励：<$STR(N$列表id_偏移)>::<$STR(S$充值奖励串)>
+
+#if
+not equal S$充值奖励串
+#act
+inc S$充值列表信息 <Img|id=充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_give|childeren=充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_give_1|x=-3|y=210|img=public/chongzhi/give.png|esc=0>
+inc S$充值控件列表list 充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_give,
+inc S$充值列表信息 <Img|id=充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_give_1|x=0|y=180|img=public/chongzhi/other.png|esc=0>
+inc S$充值控件列表list 充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_give_1,
+goto @充值赠送for
+#elseact
+
+inc S$充值列表信息 <Button|id=充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_button|children=充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_img,|x=33|y=215.0|nimg=public/chongzhi/button4.png|link=@callPay1#充值额度=<$STR(N$充值数额)>>
+inc S$充值控件列表list 充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_button,
+inc S$充值列表信息 <Img|id=充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_img|x=20|y=10|img=public/chongzhi/chong.png|esc=0>
+inc S$充值控件列表list 充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_img,
+
+[@充值赠送for]
+#if
+not equal S$充值奖励串
+#act
+GetValidstr <$STR(S$充值奖励串)> & S$充值奖励子串 S$充值奖励串
+GetValidstr <$STR(S$充值奖励子串)> * S$充值奖励道具 S$充值奖励道具数量
+
+GetDBItemFieldValue <$STR(S$充值奖励道具)> idx S$充值奖励道具id
+
+;sendmsg 5 bg——<$STR(N$奖励道具X坐标)>
+
+INC S$充值列表信息 <Img|id=充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_<$STR(N$赠送道具id)>_bg|children={充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_<$STR(N$赠送道具id)>}|x=<$STR(N$奖励道具X坐标)>|y=220|width=40|height=40|img=public/1900000651_4.png>
+INC S$充值列表信息 <ItemShow|id=充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_<$STR(N$赠送道具id)>|x=-14|y=-13|width=65|height=65|itemid=<$STR(S$充值奖励道具id)>|itemcount=<$STR(S$充值奖励道具数量)>|showtips=1|bgtype=0|scale=0.6>
+inc S$充值控件列表list 充值_横_<$STR(N$临时列表id)>_纵_<$STR(N$临时列表id_纵)>_<$STR(N$赠送道具id)>_bg,
+
+inc N$赠送道具id 1
+inc N$奖励道具X坐标 45
+
+goto @充值赠送for
+
+[@拉起充值]
+#if
+#act
+; sendmsg 5 1额度:<$STR(S$充值额度)>
+Pullpay <$STR(S$充值额度)> 3 8
+goto @充值列表数据
+
+
+;INC S$充值列表信息 <Img|id=payPage|children=2btn1,payNum,pay1,pay2|x=175.0|y=180.0|width=430|height=200|esc=0|img=public/uibg/00032.png>
+
+;INC S$充值列表信息 <Button|id=2btn1|x=390|y=3|nimg=public/button/00173.png|link=@repage>
+
+;INC S$充值列表信息 <RText|id=payNum|x=64.0|y=0.0|size=18|text=<充值：/FCOLOR=243><<$STR(S$充值额度)>/FCOLOR=250>元>
+
+;INC S$充值列表信息 <Button|id=pay1|x=50|y=110|width=150|height=80|nimg=public/button/weixin.png|link=@callPay1>
+;INC S$充值列表信息 <Button|id=pay2|x=250|y=110|width=150|height=80|nimg=public/button/zhifubao.png|link=@callPay2>
+
+goto @充值商城显示
+
+[@repage]
+#if
+#act
+goto @充值列表数据
+goto @充值商城显示
+
+[@callPay1]
+#IF
+#ACT
+; sendmsg 5 ￥￥￥￥：<$STR(S$充值额度)>
+Pullpay <$STR(S$充值额度)> 3 8
+
+; close
+
+[@callPay2]
+#IF
+#ACT
+; sendmsg 5 2额度:<$STR(S$充值额度)>
+Pullpay <$STR(S$充值额度)> 1 8
+
+[@计算是否可以领取充值礼包]
+#if
+large M0 0
+#act
+;sendmsg 5 ￥￥￥￥：<$STR(M0)>
+
+ReadConfigFileItem ..\QuestDiary\系统功能\充值赠送列表.ini 反向验证 <$STR(M0)> N$反向验证参数
+
+#elseact
+break
+
+
+#if
+not equal N$反向验证参数 0
+#act
+ReadConfigFileItem ..\QuestDiary\系统功能\充值赠送列表.ini <$STR(N$反向验证参数)> 标记 N$反向验证标记
+ReadConfigFileItem ..\QuestDiary\系统功能\充值赠送列表.ini <$STR(N$反向验证参数)> 奖励 S$反向验证奖励串
+ReadConfigFileItem ..\QuestDiary\系统功能\充值赠送列表.ini <$STR(N$反向验证参数)> 额外奖励 S$反向验证奖励串2
+
+
+goto @反向验证奖励发放
+
+[@反向验证奖励发放]
+#IF
+#ACT
+; sendmsg 5 ！！！！：<$STR(N$反向验证标记)>:<$STR(S$反向验证奖励串2)>
+
+#if
+check [<$STR(N$反向验证标记)>] 1
+not equal S$反向验证奖励串2
+#act
+mov S$反向验证奖励串 <$STR(S$反向验证奖励串2)>
+
+;sendmsg 5 ！！！！：已经领取！
+goto @反向验证奖励发放for
+SendMail 1 系统奖励 你好【<$USERNAME>】,<【<$STR(M0)>元】/FCOLOR=249>额外礼包已发放，请点击查收！
+break
+
+#if
+check [<$STR(N$反向验证标记)>] 0
+#act
+
+;sendmsg 5 ！！！！：准备领取！
+
+goto @反向验证奖励发放for
+
+SendMail 1 系统奖励 你好【<$USERNAME>】,<【<$STR(M0)>元】/FCOLOR=249>首冲礼包已发放，请点击查收！
+set [<$STR(N$反向验证标记)>] 1
+
+
+[@反向验证奖励发放for]
+#IF
+NOT EQUAL S$反向验证奖励串
+#ACT
+GetValidstr <$STR(S$反向验证奖励串)> & S$取出材料串 S$反向验证奖励串
+GetValidstr <$STR(S$取出材料串)> * S$取出材料key S$取出材料count
+
+MailGIVE <$STR(S$取出材料key)> <$STR(S$取出材料count)> 1#4#5#6#8
+
+#IF
+NOT EQUAL S$反向验证奖励串
+#ACT
+GOTO @反向验证奖励发放for
+}

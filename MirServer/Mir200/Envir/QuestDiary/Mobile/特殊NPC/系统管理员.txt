@@ -89,14 +89,15 @@ CHANGELEVEL + 10
 [@02]
 #IF
 #ACT
-RENEWLEVEL 20 50 100
+RENEWLEVEL 10 50 100
 
 
 
 [@03]
 #IF
 #ACT
-GMEXECUTE Superman
+ChangeModeEx 1 65535
+sendmsg 5 开启无敌
 
 
 [@04]
@@ -193,8 +194,19 @@ Mov U52 3
 [@99]
 #if
 #act
-mov S12
-ReadConfigFileItem ..\QuestDiary\新装备回收\回收分类\回收价格.txt 回收价格 战神腰带 S$回收收益
+; mov S12
 
-sendmsg 5 <$str(S$回收收益)>---
+; mov U100 12
+MOV T13
+; mov T30
+; mov T31
+; BONUSPOINT + 300
+mov N$变量1 1
+div N$变量1 2
+; CHECKRENEWLEVEL = 0
+CHANGELEVEL = 10
+
+
+
+sendmsg 5 -=--<$str(N$变量1)>
 }

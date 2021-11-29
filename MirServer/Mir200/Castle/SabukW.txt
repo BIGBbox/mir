@@ -2,7 +2,7 @@
 CastleName=É³°Í¿Ë
 ChangeDate=2021/6/10 16:35:14
 WarDate=2021/6/10 16:35:14
-IncomeToday=2021/11/20 10:12:47
+IncomeToday=2021/11/29 11:18:26
 [Defense]
 CastleMap=3
 CastleHomeMap=3
@@ -59,7 +59,7 @@ Guard_3_HP=0
 Guard_4_Name=Guard
 Guard_4_HP=0
 MainDoorOpen=1
-MainDoorHP=2000
-LeftWallHP=2000
-CenterWallHP=2000
-RightWallHP=2000
+MainDoorHP=2134
+LeftWallHP=2067
+CenterWallHP=2067
+RightWallHP=2067

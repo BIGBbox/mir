@@ -1,0 +1,201 @@
+[@狂暴功能面板]
+{
+
+
+#if
+#act
+goto @切换界面1
+goto @狂暴主界面
+
+[@狂暴主界面]
+#if
+#act
+#say
+<Img|x=0|y=0|width=9999|height=9999|children={狂暴状态主面板}|img=public/0.png|bg=1|link=@exit>
+<Img|id=狂暴状态|x=210|y=30|img=public/sf1/2/bg1.png|children={内框背景,标题,小标题,okBtn,okBtn1,标记1,标记2,标记3,标记4,标记5,标记6,标记7,列表1,列表2,列表3,列表4,列表5,列表6,官位背景,升级条件1,获取途径控件,closeBtn}|reset=1|link=@>
+<Img|id=内框背景|x=187|y=80|width=565|height=360|img=public/haha/ty_bg.png>
+<Button|id=closeBtn|x=765|y=65.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|id=标题|x=180|y=45|color=255|size=18|text=狂暴状态>
+
+<$str(S$按钮列表)>
+<$str(S$主界面)>
+
+
+[@切换界面1]
+
+#if
+#act
+mov S$狂暴状态 <已开启/FCOLOR=250>
+
+#if
+check [059] 0
+#act
+mov S$狂暴状态 <未开启/FCOLOR=249>
+
+#if
+#act
+mov S$主界面
+mov S$按钮列表
+mov S$当前界面 狂暴之力
+mov S$货币类型 元宝
+mov S$货币数量 200000
+mov S$货币显示数量 20W
+mov S$击杀者奖励 100000
+mov S$击杀奖励 <攻击提高70-70,获得1.1倍攻击,打怪爆率提升15%,回收加成20%,/FCOLOR=161>
+inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=狂暴之力|link=@切换界面1>
+inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=疾风之力|link=@切换界面2>
+
+goto @创建主界面
+
+
+[@切换界面2]
+#if
+#act
+mov S$狂暴状态 <已开启/FCOLOR=250>
+
+#if
+check [058] 0
+#act
+mov S$狂暴状态 <未开启/FCOLOR=249>
+
+#if
+#act
+mov S$主界面
+mov S$按钮列表
+mov S$当前界面 疾风之力
+mov S$货币类型 RMB点
+mov S$货币数量 2000
+mov S$货币显示数量 2000
+mov S$击杀者奖励 1000
+mov S$击杀奖励 <攻击提高80-80,获得1.2倍攻击,打怪爆率提升15%,回收加成20%,/FCOLOR=161>
+inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=狂暴之力|link=@切换界面1>
+inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=疾风之力|link=@切换界面2>
+goto @创建主界面
+
+[@创建主界面]
+#if
+; equal <$str(S$当前界面)> 狂暴之力
+#act
+inc S$主界面 <Text|id=小标题|x=200|y=90|color=251|size=16|text=狂暴状态,气血倒流激发潜能,能带来一切毁灭>
+inc S$主界面 <Img|id=标记1|x=200|y=120|width=30|height=30|children=内容1|img=public/1900000657.png>
+inc S$主界面 <RText|id=内容1|x=32|y=4|color=255|size=15|text=<在/FCOLOR=161><【<$str(S$当前界面)>】/FCOLOR=249><状态下被其他玩家击杀,狂暴状态消失./FCOLOR=161>>
+
+inc S$主界面 <Img|id=标记2|x=200|y=150|width=30|height=30|children=内容2|img=public/1900000657.png>
+inc S$主界面 <RText|id=内容2|x=32|y=4|color=255|size=15|text=<击杀/FCOLOR=161><【<$str(S$当前界面)>】/FCOLOR=249><状态下的玩家,将获得<$str(S$货币类型)><$str(S$击杀者奖励)>个./FCOLOR=161>>
+
+inc S$主界面 <Img|id=标记3|x=200|y=180|width=30|height=30|children={内容3,内容3_1}|img=public/1900000657.png>
+inc S$主界面 <RText|id=内容3|x=32|y=4|color=255|size=15|text=<【<$str(S$当前界面)>】/FCOLOR=249><状态下只有其他玩家击杀,狂暴状态才会消失,/FCOLOR=161>>
+inc S$主界面 <RText|id=内容3_1|x=35|y=30|color=255|size=15|text=<被怪物、宝宝击杀或者大退小退都不会消失./FCOLOR=161>>
+
+inc S$主界面 <Img|id=标记4|x=200|y=240|children=内容4|width=30|height=30|img=public/sf1/19/0.png>
+inc S$主界面 <RText|id=内容4|x=12|y=4|color=255|size=15|text=<=================【<$str(S$当前界面)>属性介绍】=================/FCOLOR=250>>
+
+inc S$主界面 <Img|id=标记5|x=200|y=280|width=30|height=30|children=内容5,内容5_1|img=public/1900000657.png>
+inc S$主界面 <RText|id=内容5|x=32|y=4|color=255|size=15|text=<$str(S$击杀奖励)>>
+inc S$主界面 <RText|id=内容5_1|x=35|y=30|color=255|size=15|text=<获得/FCOLOR=161><【杀死有惊喜】/FCOLOR=249><称号/FCOLOR=161>>
+inc S$主界面 <RText|id=标记6|x=407|y=350|color=255|size=15|text=<需要：/FCOLOR=161><<$str(S$货币显示数量)>/FCOLOR=250><<$str(S$货币类型)>/FCOLOR=161>>
+inc S$主界面 <Button|id=okBtn|x=405|y=370.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=我要开启|link=@开启狂暴之力>
+inc S$主界面 <RText|id=标记7|x=200|y=470|outline=2|outlinecolor=0|size=15|text=<当前狂暴状态：/FCOLOR=161><$str(S$狂暴状态)>>
+
+#if
+equal <$str(S$当前界面)> 疾风之力
+#act
+inc S$主界面 <Button|id=okBtn1|x=615|y=450.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=我要充值|link=@充值界面>
+
+#if
+#act
+goto @狂暴主界面
+
+[@充值界面]
+#if
+#act
+close
+#call [\系统功能\充值功能.txt] @充值主面板
+
+
+[@开启狂暴之力]
+
+#if
+CheckBindMoney <$str(S$货币类型)> < <$str(S$货币数量)>
+#act
+MESSAGEBOX 你的<$str(S$货币类型)>不足！！
+break
+
+#IF
+equal <$str(S$当前界面)> 狂暴之力
+; CheckBindMoney <$str(S$货币类型)> < <$str(S$货币数量)>
+check [59] 1
+#act
+MESSAGEBOX 你已经开启了【<$str(S$当前界面)>】
+break
+
+#IF
+equal <$str(S$当前界面)> 疾风之力
+; CheckMoney <$str(S$货币类型)> < <$str(S$货币数量)>
+check [58] 1
+#act
+MESSAGEBOX 你已经开启了【<$str(S$当前界面)>】
+break
+
+
+#if
+equal <$str(S$当前界面)> 狂暴之力
+#act
+
+SET [59] 1
+SETICON 0 1 12000 0 -50 0 0
+; SetIcon 1 1 109 1 -50 6
+ChangeHumAbility 5 + 88
+ChangeHumAbility 6 + 88
+ChangeHumAbility 7 + 88
+ChangeHumAbility 8 + 88
+ChangeHumAbility 9 + 88
+ChangeHumAbility 10 + 88
+goto @切换界面1
+
+
+#if
+equal <$str(S$当前界面)> 疾风之力
+#act
+
+SET [58] 1
+SETICON 0 1 12000 0 -50 0 0
+; SetIcon 1 1 109 1 -50 6
+ChangeHumAbility 5 + 88
+ChangeHumAbility 6 + 88
+ChangeHumAbility 7 + 88
+ChangeHumAbility 8 + 88
+ChangeHumAbility 9 + 88
+ChangeHumAbility 10 + 88
+goto @切换界面2
+
+#if
+#act
+money <$str(S$货币类型)> - <$str(S$货币数量)>
+GuildNoticeMsg 5 255 大家注意啦！玩家[<$USERNAME>]开启了【<$str($str(S$当前界面)>)>】...
+GuildNoticeMsg 5 255 大家注意啦！玩家[<$USERNAME>]开启了【<$str($str(S$当前界面)>)>】...
+#CALL [\人物属性加成\人物属性提升.txt] @基础属性
+
+
+[@灵符开启状态]
+#IF
+CHECKGAMEGIRD > 19
+check [059] 0
+#act
+SET [059] 1
+GAMEGIRD - 20
+ChangeHumAbility 5 + 88
+ChangeHumAbility 6 + 88
+ChangeHumAbility 7 + 88
+ChangeHumAbility 8 + 88
+ChangeHumAbility 9 + 88
+ChangeHumAbility 10 + 88
+SETICON 0 1 12000 0 -50 0 0
+; SetIcon 1 1 109 1 -50 6
+GuildNoticeMsg 5 255 大家注意啦！玩家[<$USERNAME>]开启了【狂暴之力】...
+GuildNoticeMsg 5 255 大家注意啦！玩家[<$USERNAME>]开启了【狂暴之力】...
+GOTO @main
+#ELSEACT
+MESSAGEBOX 你的灵符不足或你已经开启了【狂暴之力】
+BREAK
+}

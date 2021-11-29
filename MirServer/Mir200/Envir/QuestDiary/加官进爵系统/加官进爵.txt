@@ -1,0 +1,598 @@
+[@加官进爵面板]
+{
+
+#if
+#act
+mov S$获取途径
+mov S$获取图鉴窗口 0
+goto @获取官职数据
+
+[@获取官职数据]
+#if
+#act
+mov S$当前官位 <$STR(T13)>
+mov S$元宝颜色 161
+
+#if
+equal <$str(S$当前官位)>
+#act
+mov S$当前官位 暂无
+
+#if
+#act
+
+ReadConfigFileItem ..\QuestDiary\加官进爵系统\加官进爵数据.txt <$str(S$当前官位)> 下级称号 S$下级称号
+ReadConfigFileItem ..\QuestDiary\加官进爵系统\加官进爵数据.txt <$str(S$当前官位)> 当前官职称号 S$当前官职称号
+ReadConfigFileItem ..\QuestDiary\加官进爵系统\加官进爵数据.txt <$str(S$当前官位)> 下级官职称号 S$下级官职称号
+ReadConfigFileItem ..\QuestDiary\加官进爵系统\加官进爵数据.txt <$str(S$当前官位)> 需要人物等级 S$需要人物等级
+ReadConfigFileItem ..\QuestDiary\加官进爵系统\加官进爵数据.txt <$str(S$当前官位)> 需要材料 S$需要材料
+ReadConfigFileItem ..\QuestDiary\加官进爵系统\加官进爵数据.txt <$str(S$当前官位)> 所需货币 S$所需货币
+ReadConfigFileItem ..\QuestDiary\加官进爵系统\加官进爵数据.txt <$str(S$当前官位)> 当前全属性加成 S$当前全属性加成
+ReadConfigFileItem ..\QuestDiary\加官进爵系统\加官进爵数据.txt <$str(S$当前官位)> 下级全属性加成 S$下级全属性加成
+
+GetValidstr <$STR(S$需要材料)> * S$需要材料名 S$需要材料数量
+GetDBItemFieldValue <$str(S$需要材料名)> idx S$需要材料名ID
+
+GetValidstr <$STR(S$所需货币)> * S$所需货币名 S$所需货币数量
+; GetDBItemFieldValue <$str(S$需要材料名)> idx S$需要材料名ID
+; sendmsg 5 <$STR(S$需要材料名)>--<$str(S$需要材料数量)>--<$str(S$需要材料名ID)>
+; sendmsg 7 <$str(S$当前官职称号)>==<$str(S$下级官职称号)>==
+
+#IF
+equal <$str(S$所需货币名)> 元宝
+CheckBindMoney 元宝 > <$str(S$所需货币数量)>
+#ACT
+mov S$元宝颜色 251
+
+#IF
+not equal <$str(S$所需货币名)> 元宝
+not checkmoney <$str(S$所需货币名)> > <$str(S$所需货币数量)>
+#ACT
+mov S$元宝颜色 251
+
+#if
+#act
+goto @加官进爵主面板
+
+[@官职面板]
+#if
+#act
+goto @获取官职数据
+
+[@加官进爵主面板]
+#if
+#act
+#say
+<Img|x=0|y=0|width=9999|height=9999|children={加官进爵主面板}|img=public/0.png|bg=1|link=@exit>
+<Img|id=加官进爵主面板|x=210|y=30|img=public/sf1/2/bg2.png|children={内框背景,标题,列表1,官位背景,升级条件1,升级条件2,当前官位,获取途径,获取途径控件,closeBtn}|reset=1|link=@>
+
+<Button|id=closeBtn|x=765|y=65.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=官 职|link=@官职面板>
+<Text|id=标题|x=180|y=45|color=255|size=18|text=加官进爵>
+<Text|id=当前官位|x=370.0|y=105.0|color=251|size=18|text=您当前官爵为：<$str(S$当前官位)>\>
+<Img|id=内框背景|x=187|y=80|width=565|height=320|img=public/haha/ty_bg.png>
+
+<Img|id=官位背景|x=200|y=200|children={当前称号,下级称号,箭头,当前属性加成,下级属性加成}|width=540|height=135|img=public/haha/split/common_panel2035.png>
+<Img|id=箭头|x=240|y=40|img=public/haha/f_0000a2070.png>
+<Img|id=当前称号|x=80|y=-30|img=Topwear/<$str(S$当前官职称号)>.png>
+<Img|id=下级称号|x=360|y=-30|img=Topwear/<$str(S$下级官职称号)>.png>
+<RText|id=当前属性加成|x=80|y=50|text=<全属性＋<$str(S$当前全属性加成)>/FCOLOR=161>>
+<RText|id=下级属性加成|x=360|y=50|text=<全属性＋<$str(S$下级全属性加成)>/FCOLOR=161>>
+
+<RText|id=升级条件1|x=405.0|y=405.0|color=251|size=16|text=<条件：人物/FCOLOR=161>< <$str(S$需要人物等级)>级/FCOLOR=251>>
+<RText|id=升级条件2|children={需要道具1,连接图片,需要道具2,,okBtn}|x=360.0|y=445.0|color=251|size=16|text=<消耗材料：/FCOLOR=251>>
+<ItemShow|id=需要道具1|x=80|y=-20|itemid=<$STR(S$需要材料名ID)>|itemcount=<$STR(S$需要材料数量)>|showtips=1|bgtype=1|scale=0.8>
+<Img|id=连接图片|x=145|y=0|width=19|height=25|img=public/uipic/01709.png>
+<RText|id=需要道具2|x=170.0|y=0|color=251|size=16|text=<<$str(S$所需货币数量)>元宝/FCOLOR=<$str(S$元宝颜色)>>>
+<Button|id=okBtn|x=60|y=25.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=官职升级|link=@官职升级>
+
+<Text|id=获取途径|x=670.0|y=480.0|color=250|size=18|text=获取途径|link=@获取途径按钮>
+<$str(S$获取途径)>
+
+[@官职升级]
+#if
+equal <$str(S$所需货币名)> 元宝
+#act
+mov S$所需货币名 绑定元宝
+
+#or
+not CHECKLEVELEX > <$str(S$需要人物等级)>
+not checkmoney <$str(S$所需货币名)> > <$str(S$所需货币数量)>
+not CHECKITEM <$str(S$需要材料名)> <$str(S$需要材料数量)>
+#act
+messagebox 晋级条件不足！
+break
+
+
+#if
+#act
+; money <$str(S$所需货币名)> - <$str(S$所需货币数量)>
+; TAKE <$str(S$需要材料名)> <$str(S$需要材料数量)>
+MOV T13 <$str(S$下级称号)>
+MESSAGEBOX 恭喜你成为【<$str(S$下级称号)>】特此奖励20点属性！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【<$str(S$下级称号)>】...
+goto @官职属性提升
+
+[@官职属性提升]
+#if
+#act
+SETICON 0 0 <$str(S$下级官职称号)> 0 -22 0 0
+#CALL [\人物属性加成\人物属性提升.txt] @基础属性
+goto @获取官职数据
+
+[@获取途径按钮]
+
+
+#if
+equal <$str(S$获取图鉴窗口)> 1
+#act
+mov S$获取途径
+mov S$获取图鉴窗口 0
+goto @获取官职数据
+break
+
+#if
+#act
+inc S$获取途径 <Img|id=获取途径控件|children={途径标题1,途径标题2,途径标题3,途径标题4,途径标题5,途径按钮1,途径按钮2,途径按钮3,途径按钮4,途径关闭}|width=245|height=460|x=515|y=68|img=public/haha/split/common_panel2045.png|link=@>
+inc S$获取途径 <Text|id=途径标题1|x=90.0|y=15.0|color=251|size=16|text=获取途径>
+inc S$获取途径 <Text|id=途径标题2|x=30.0|y=40.0|color=161|size=16|text=本服官职证明全部怪物掉落>
+inc S$获取途径 <Text|id=途径标题3|x=45.0|y=65.0|color=161|size=16|text=九品官职证明高爆产地>
+inc S$获取途径 <Text|id=途径标题4|x=60.0|y=90.0|color=250|size=16|text=绑元不足扣除元宝>
+; #等级=105#地图名字=冰之雪崖
+inc S$获取途径 <Button|id=途径按钮1|x=65|y=125.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=证明合成|link=@证明合成>
+inc S$获取途径 <Button|id=途径按钮2|x=65|y=185.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=冰之雪崖|link=@途径传送按钮1>
+inc S$获取途径 <Button|id=途径按钮3|x=65|y=245.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=秦始皇陵|link=@途径传送按钮2>
+inc S$获取途径 <Button|id=途径按钮4|x=65|y=305.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=黑暗魔窟|link=@途径传送按钮3>
+inc S$获取途径 <Button|id=途径关闭|x=-42|y=165.0|nimg=public/sf1/2/btn_sifud_30.png|color=161|size=17|text=关\闭|link=@获取途径按钮>
+inc S$获取途径 <Text|id=途径标题5|x=60.0|y=385.0|color=250|size=16|text=点击按钮直接前往>
+mov S$获取图鉴窗口 1
+goto @获取官职数据
+
+[@途径传送按钮1]
+#if
+not CHECKLEVELEX < 105
+#act
+MESSAGEBOX 您的等级太高了,大姥级别了还欺负新人去？
+break
+
+#if
+#act
+MapMove byxy
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖冰之雪崖〗,寻找高级装备！
+
+[@途径传送按钮2]
+#if
+not CHECKLEVELEX < 110
+#act
+MESSAGEBOX 您的等级太高了,大姥级别了还欺负新人去？
+break
+
+#if
+#act
+MapMove qshl1
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖秦始皇陵〗,寻找高级装备！
+
+[@途径传送按钮3]
+#if
+not CHECKLEVELEX < 115
+#act
+MESSAGEBOX 您的等级太高了,大姥级别了还欺负新人去？
+break
+
+#if
+#act
+MapMove heian1
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖黑暗魔窟〗,寻找高级装备！
+
+[@证明合成]
+#if
+#act
+sendmsg 7 证明合成按钮!
+
+; [@jinjue_015]
+; #if
+; equal <$CLIENTFLAG> 1
+; #say
+; <Img|width=500|height=200|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10>
+; <Layout|x=478.0|y=3.0|width=80|height=80|link=@exit>
+; <Button|x=500.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=32.0|y=34.0|tipsx=10|tipsy=80|color=251|size=13|text=合成八品证明|link=@GUANHE_8>
+; <Text|a=0|x=173.0|y=34.0|tipsx=10|tipsy=80|color=249|size=13|text=需要九品证明X3>
+; <Text|a=0|x=32.0|y=51.0|tipsx=10|tipsy=80|color=251|size=13|text=合成七品证明|link=@GUANHE_7>
+; <Text|a=0|x=172.0|y=51.0|tipsx=10|tipsy=80|color=249|size=13|text=需要八品证明X3>
+; <Text|a=0|x=33.0|y=70.0|tipsx=10|tipsy=80|color=251|size=13|text=合成六品证明|link=@GUANHE_6>
+; <Text|a=0|x=172.0|y=71.0|tipsx=10|tipsy=80|color=249|size=13|text=需要七品证明 X 3  + 1000元宝>
+; <Text|a=0|x=32.0|y=90.0|tipsx=10|tipsy=80|color=251|size=13|text=合成五品证明|link=@GUANHE_5>
+; <Text|a=0|x=171.0|y=90.0|tipsx=10|tipsy=80|color=250|size=13|text=需要六品证明 X 3  + 2000元宝>
+; <Text|a=0|x=32.0|y=110.0|tipsx=10|tipsy=80|color=251|size=13|text=合成四品证明|link=@GUANHE_4>
+; <Text|a=0|x=171.0|y=110.0|tipsx=10|tipsy=80|color=250|size=13|text=需要五品证明 X 3  + 4000元宝>
+; <Text|a=0|x=32.0|y=130.0|tipsx=10|tipsy=80|color=251|size=13|text=合成三品证明|link=@GUANHE_3>
+; <Text|a=0|x=171.0|y=130.0|tipsx=10|tipsy=80|color=250|size=13|text=需要四品证明 X 3  + 6000元宝>
+; <Text|a=0|x=203.0|y=159.0|tipsx=10|tipsy=80|color=251|size=13|text=合成证明下一页|link=@JINJUE_016>
+
+; #elsesay
+; <Img|width=530|height=250|rotate=0|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1|scale9t=10>
+; <Layout|x=508.0|y=3.0|width=80|height=80|link=@exit>
+; <Button|x=530.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|ay=1|x=33.0|y=23.0|tipsx=10|tipsy=80|size=18|color=251|text=合成八品证明|link=@GUANHE_8>
+; <Text|a=0|ay=1|x=214.0|y=54.0|tipsx=10|tipsy=80|size=18|color=249|text=需要九品证明X3>
+; <Text|a=0|ay=1|x=33.0|y=54.0|tipsx=10|tipsy=80|size=18|color=251|text=合成七品证明|link=@GUANHE_7>
+; <Text|a=0|ay=1|x=213.0|y=23.0|tipsx=10|tipsy=80|size=18|color=249|text=需要八品证明X3>
+; <Text|a=0|x=32.0|y=84.0|tipsx=10|tipsy=80|color=251|size=18|text=合成六品证明|link=@GUANHE_6>
+; <Text|a=0|x=212.0|y=84.0|tipsx=10|tipsy=80|color=249|size=18|text=需要七品证明 X 3  + 1000元宝>
+; <Text|a=0|x=32.0|y=116.0|tipsx=10|tipsy=80|color=251|size=18|text=合成五品证明|link=@GUANHE_5>
+; <Text|a=0|x=212.0|y=116.0|tipsx=10|tipsy=80|color=250|size=18|text=需要六品证明 X 3  + 2000元宝>
+; <Text|a=0|x=32.0|y=146.0|tipsx=10|tipsy=80|color=251|size=18|text=合成四品证明|link=@GUANHE_4>
+; <Text|a=0|x=212.0|y=146.0|tipsx=10|tipsy=80|color=250|size=18|text=需要五品证明 X 3  + 4000元宝>
+; <Text|a=0|x=32.0|y=176.0|tipsx=10|tipsy=80|color=251|size=18|text=合成三品证明|link=@GUANHE_3>
+; <Text|a=0|x=212.0|y=176.0|tipsx=10|tipsy=80|color=250|size=18|text=需要四品证明 X 3  + 6000元宝>
+; <Text|a=0|x=163.0|y=207.0|tipsx=10|tipsy=80|color=251|size=18|text=合成证明下一页|link=@JINJUE_016>
+
+; [@jinjue_016]
+; #if
+; equal <$CLIENTFLAG> 1
+; #say
+; <Img|x=0.0|y=1.0|width=500|height=200|rotate=0|bg=1|scale9t=10|scale9b=10|scale9r=10|move=0|img=public/bg_npc_01.png|reset=1|scale9l=10>
+; <Layout|x=478.0|y=3.0|width=80|height=80|link=@exit>
+; <Button|x=500.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=100.0|y=26.0|tipsx=10|tipsy=80|color=251|size=13|text=合成二品证明|link=@GUANHE_2>
+; <Text|a=0|ax=0|x=228.0|y=26.0|tipsx=10|tipsy=80|color=249|size=13|text=需要三品证明 X 3  + 8000元宝>
+; <Text|a=0|x=100.0|y=51.0|tipsx=10|tipsy=80|color=251|size=13|text=合成一品证明|link=@GUANHE_1>
+; <Text|a=0|ax=0|x=228.0|y=51.0|tipsx=10|tipsy=80|color=249|size=13|text=需要二品证明 X 3  + 10000元宝>
+; <Text|a=0|x=100.0|y=75.0|tipsx=10|tipsy=80|color=251|size=13|text=合成郡王令牌|link=@GUANHE_0>
+; <Text|a=0|ax=0|x=228.0|y=75.0|tipsx=10|tipsy=80|color=250|size=13|text=需要一品证明 X 3  + 12000元宝>
+; <Text|a=0|x=100.0|y=98.0|tipsx=10|tipsy=80|color=251|size=13|text=合成雄霸令牌|link=@GUANHE_00>
+; <Text|a=0|ax=0|x=228.0|y=98.0|tipsx=10|tipsy=80|color=250|size=13|text=需要郡王令牌 X 3  + 15000元宝>
+; <Text|a=0|x=58.0|y=127.0|tipsx=10|tipsy=80|color=255|size=13|text=╔┄┄┄┄┄┄╦┄┄┄┄┄┄╦┄┄┄┄┄┄┄╦┄┄┄┄┄┄╗\>
+; <Text|a=0|x=58.0|y=147.0|tipsx=10|tipsy=80|color=255|size=13|text=┆>
+; <Text|a=0|x=77.0|y=147.0|tipsx=10|tipsy=80|color=251|size=13|text=合成证明上一页|link=@JINJUE_015>
+; <Text|a=0|x=313.0|y=147.0|tipsx=10|tipsy=80|color=251|size=13|text=返回首页官爵|link=@MAIN>
+; <Text|a=0|x=435.0|y=147.0|tipsx=10|tipsy=80|color=255|size=13|text=┆\>
+; <Text|a=0|x=58.0|y=167.0|tipsx=10|tipsy=80|color=255|size=13|text=╚┄┄┄┄┄┄╩┄┄┄┄┄┄╩┄┄┄┄┄┄┄╩┄┄┄┄┄┄╝\>
+
+; #elsesay
+; <Img|x=0.0|y=0.0|width=620|height=300|scale9r=10|scale9l=10|bg=1|scale9b=10|reset=1|move=0|img=public/bg_npc_01.png|scale9t=10>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=68.0|y=43.0|tipsx=10|tipsy=80|color=251|size=18|text=合成二品证明|link=@GUANHE_2>
+; <Text|a=0|x=310.0|y=43.0|tipsx=10|tipsy=80|color=249|size=18|text=需要三品证明 X 3  + 8000元宝>
+; <Text|a=0|x=68.0|y=87.0|tipsx=10|tipsy=80|color=251|size=18|text=合成一品证明|link=@GUANHE_1>
+; <Text|a=0|x=310.0|y=87.0|tipsx=10|tipsy=80|color=249|size=18|text=需要二品证明 X 3  + 10000元宝>
+; <Text|a=0|x=68.0|y=128.0|tipsx=10|tipsy=80|color=251|size=18|text=合成郡王令牌|link=@GUANHE_0>
+; <Text|a=0|x=310.0|y=128.0|tipsx=10|tipsy=80|color=250|size=18|text=需要一品证明 X 3  + 12000元宝>
+; <Text|a=0|x=68.0|y=169.0|tipsx=10|tipsy=80|color=251|size=18|text=合成雄霸令牌|link=@GUANHE_00>
+; <Text|a=0|x=310.0|y=169.0|tipsx=10|tipsy=80|color=250|size=18|text=需要郡王令牌 X 3  + 15000元宝>
+; <Text|a=0|x=84.0|y=210.0|tipsx=10|tipsy=80|color=255|size=18|text=╔┄┄┄┄┄┄╦┄┄┄┄┄┄┄┄┄┄┄┄╦┄┄┄┄┄┄┄┄┄┄┄┄╦┄┄┄┄┄┄╗\>
+; <Text|a=0|x=84.0|y=230.0|tipsx=10|tipsy=80|color=255|size=18|text=┆>
+; <Text|a=0|x=110.0|y=230.0|tipsx=10|tipsy=80|color=251|size=18|text=合成证明上一页|link=@JINJUE_015>
+; <Text|a=0|x=399.0|y=230.0|tipsx=10|tipsy=80|color=251|size=18|text=返回首页官爵|link=@MAIN>
+; <Text|a=0|x=304.0|y=230.0|tipsx=10|tipsy=80|color=255|size=18|text=┆\>
+; <Text|a=0|x=84.0|y=250.0|tipsx=10|tipsy=80|color=255|size=18|text=╚┄┄┄┄┄┄╩┄┄┄┄┄┄┄┄┄┄┄┄╩┄┄┄┄┄┄┄┄┄┄┄┄╩┄┄┄┄┄┄╝\>
+; <Text|x=525.0|y=230.0|color=255|size=18|text=┆>
+
+
+[@guanhe_00]
+#IF
+CHECKGAMEGOLD > 14999
+CHECKITEM 郡王令牌 3
+#act
+GAMEGOLD - 15000
+TAKE 郡王令牌 3
+GIVE 雄霸令牌 1
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@guanhe_0]
+#IF
+CHECKGAMEGOLD > 11999
+CHECKITEM 一品证明 3
+#act
+GAMEGOLD - 12000
+TAKE 一品证明 3
+GIVE 郡王令牌 1
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@guanhe_1]
+#IF
+CHECKGAMEGOLD > 9999
+CHECKITEM 二品证明 3
+#act
+GAMEGOLD - 10000
+TAKE 二品证明 3
+GIVE 一品证明 1
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@guanhe_2]
+#IF
+CHECKGAMEGOLD > 7999
+CHECKITEM 三品证明 3
+#act
+GAMEGOLD - 8000
+TAKE 三品证明 3
+GIVE 二品证明 1
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@guanhe_3]
+#IF
+CHECKGAMEGOLD > 5999
+CHECKITEM 四品证明 3
+#act
+GAMEGOLD - 6000
+TAKE 四品证明 3
+GIVE 三品证明 1
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@guanhe_4]
+#IF
+CHECKGAMEGOLD > 3999
+CHECKITEM 五品证明 3
+#act
+GAMEGOLD - 4000
+TAKE 五品证明 3
+GIVE 四品证明 1
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@guanhe_5]
+#IF
+CHECKGAMEGOLD > 1999
+CHECKITEM 六品证明 3
+#act
+GAMEGOLD - 2000
+TAKE 六品证明 3
+GIVE 五品证明 1
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@guanhe_6]
+#IF
+CHECKGAMEGOLD > 999
+CHECKITEM 七品证明 3
+#act
+GAMEGOLD - 1000
+TAKE 七品证明 3
+GIVE 六品证明 1
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@guanhe_7]
+#IF
+CHECKITEM 八品证明 3
+#act
+TAKE 八品证明 3
+GIVE 七品证明 1
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@guanhe_8]
+#IF
+CHECKITEM 九品证明 3
+#act
+TAKE 九品证明 3
+GIVE 八品证明 1
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@jinjue_000]
+#IF
+CHECKLEVELEX > 109
+CHECKGAMEGOLD > 99999
+CHECKITEM 雄霸令牌 3
+equal T13 万夫莫敌
+#act
+MOV T13 雄霸天下
+GAMEGOLD - 100000
+BONUSPOINT + 500
+TAKE 雄霸令牌 3
+SETICON 0 0 000025 0 -22 0 0
+; SetIcon 0 1 25 0 -22 1 0 200 0
+MESSAGEBOX 恭喜你成为【雄霸天下】特此奖励500点属性！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【雄霸天下】...
+#ELSEACT
+MESSAGEBOX 晋级条件不足或已经晋级过了！
+BREAK
+
+[@jinjue_00]
+#IF
+CHECKLEVELEX > 99
+CHECKGAMEGOLD > 59999
+CHECKITEM 郡王令牌 3
+equal T13 一品统帅
+#act
+MOV T13 万夫莫敌
+GAMEGOLD - 60000
+BONUSPOINT + 400
+TAKE 郡王令牌 3
+SETICON 0 0 000036 0 -22 0 0
+; SetIcon 0 1 36 0 -22 1 0 200 0
+MESSAGEBOX 恭喜你成为【万夫莫敌】特此奖励400点属性！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【万夫莫敌】...
+#ELSEACT
+MESSAGEBOX 晋级条件不足或已经晋级过了！
+BREAK
+
+[@jinjue_01]
+#IF
+CHECKLEVELEX > 89
+CHECKGAMEGOLD > 29999
+CHECKITEM 一品证明 3
+equal T13 二品将军
+#act
+MOV T13 一品统帅
+GAMEGOLD - 30000
+BONUSPOINT + 300
+TAKE 一品证明 3
+SETICON 0 0 000049 0 -22 0 0
+; SetIcon 0 1 49 0 -22 1 0 200 0
+MESSAGEBOX 恭喜你成为【一品统帅】特此奖励300点属性！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【一品统帅】...
+#ELSEACT
+MESSAGEBOX 晋级条件不足或已经晋级过了！
+BREAK
+
+[@jinjue_02]
+#IF
+CHECKLEVELEX > 84
+CHECKGAMEGOLD > 19999
+CHECKITEM 二品证明 3
+equal T13 三品大将
+#act
+MOV T13 二品将军
+GAMEGOLD - 20000
+BONUSPOINT + 250
+TAKE 二品证明 3
+SETICON 0 0 000039 0 -22 0 0
+; SetIcon 0 1 39 0 -22 1 0 200 0
+MESSAGEBOX 恭喜你成为【二品将军】特此奖励250点属性！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【二品将军】...
+#ELSEACT
+MESSAGEBOX 晋级条件不足或已经晋级过了！
+BREAK
+
+[@jinjue_03]
+#IF
+CHECKLEVELEX > 79
+CHECKGAMEGOLD > 14999
+CHECKITEM 三品证明 3
+equal T13 四品参将
+#act
+MOV T13 三品大将
+GAMEGOLD - 15000
+BONUSPOINT + 200
+TAKE 三品证明 3
+SETICON 0 0 000038 0 -22 0 0
+; SetIcon 0 1 38 0 -22 1 0 200 0
+MESSAGEBOX 恭喜你成为【三品大将】特此奖励200点属性！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【三品大将】...
+#ELSEACT
+MESSAGEBOX 晋级条件不足或已经晋级过了！
+BREAK
+
+[@jinjue_04]
+#IF
+CHECKLEVELEX > 74
+CHECKGAMEGOLD > 9999
+CHECKITEM 四品证明 3
+equal T13 五品左领
+#act
+MOV T13 四品参将
+GAMEGOLD - 10000
+BONUSPOINT + 160
+TAKE 四品证明 3
+SETICON 0 0 000042 0 -22 0 0
+; SetIcon 0 1 42 0 -22 1 0 200 0
+MESSAGEBOX 恭喜你成为【四品参将】特此奖励160点属性！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【四品参将】...
+#ELSEACT
+MESSAGEBOX 晋级条件不足或已经晋级过了！
+BREAK
+
+[@jinjue_05]
+#IF
+CHECKLEVELEX > 69
+CHECKGAMEGOLD > 7999
+CHECKITEM 五品证明 3
+equal T13 六品护卫
+#act
+MOV T13 五品左领
+GAMEGOLD - 8000
+BONUSPOINT + 120
+TAKE 五品证明 3
+SETICON 0 0 000045 0 -22 0 0
+; SetIcon 0 1 45 0 -22 1 0 200 0
+MESSAGEBOX 恭喜你成为【五品左领】特此奖励120点属性！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【五品左领】...
+#ELSEACT
+MESSAGEBOX 晋级条件不足或已经晋级过了！
+BREAK
+
+[@jinjue_06]
+#IF
+CHECKLEVELEX > 64
+CHECKGAMEGOLD > 5999
+CHECKITEM 六品证明 3
+equal T13 七品前锋
+#act
+MOV T13 六品护卫
+GAMEGOLD - 6000
+BONUSPOINT + 80
+TAKE 六品证明 3
+SETICON 0 0 000044 0 -22 0 0
+; SetIcon 0 1 44 0 -22 1 0 200 0
+MESSAGEBOX 恭喜你成为【五品左领】特此奖励80点属性！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【五品左领】...
+#ELSEACT
+MESSAGEBOX 晋级条件不足或已经晋级过了！
+BREAK
+
+[@jinjue_07]
+#IF
+equal T13 八品骑士
+CHECKLEVELEX > 59
+CHECKGAMEGOLD > 3999
+CHECKITEM 七品证明 3
+#act
+MOV T13 七品前锋
+GAMEGOLD - 4000
+BONUSPOINT + 50
+TAKE 七品证明 3
+SETICON 0 0 000046 0 -22 0 0
+; SetIcon 0 1 46 0 -22 1 0 200 0
+MESSAGEBOX 恭喜你成为【七品前锋】特此奖励50点属性！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【七品前锋】...
+#ELSEACT
+MESSAGEBOX 晋级条件不足或已经晋级过了！
+BREAK
+
+[@jinjue_08]
+#IF
+equal T13 九品仕郎
+CHECKLEVELEX > 54
+CHECKGAMEGOLD > 1999
+CHECKITEM 八品证明 3
+#act
+GAMEGOLD - 2000
+BONUSPOINT + 30
+TAKE 八品证明 3
+MOV T13 八品骑士
+SETICON 0 0 000047 0 -22 0 0
+; SetIcon 0 1 47 0 -22 1 0 200 0
+MESSAGEBOX 恭喜你成为【八品骑士】特此奖励30点属性！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【八品骑士】...
+#ELSEACT
+MESSAGEBOX 晋级条件不足或已经晋级过了！
+BREAK
+
+[@jinjue_09]
+#IF
+equal T13
+CHECKLEVELEX > 49
+CHECKGAMEGOLD > 999
+CHECKITEM 九品证明 3
+#act
+GAMEGOLD - 1000
+BONUSPOINT + 20
+TAKE 九品证明 3
+MOV T13 九品仕郎
+SETICON 0 0 000043 0 -22 0 0
+; SetIcon 0 1 43 0 -22 1 0 200 0
+MESSAGEBOX 恭喜你成为【九品仕郎】特此奖励20点属性！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【九品仕郎】...
+#ELSEACT
+MESSAGEBOX 晋级条件不足或已经晋级过了！
+BREAK
+}

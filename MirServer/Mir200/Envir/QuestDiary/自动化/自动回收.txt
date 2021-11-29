@@ -20,7 +20,7 @@ EQUAL <$str(N$自动回收结算1)> 0
 EQUAL <$str(N$自动回收结算2)> 0
 EQUAL <$str(N$自动回收结算3)> 0
 #ACT
-messagebox 您没有可以需要自动回收的物品。
+; messagebox 您没有可以需要自动回收的物品。
 BREAK
 
 #if

@@ -1,0 +1,681 @@
+[@神魔之体面板]
+{
+
+#if
+#act
+mov S$主界面
+mov S$获取途径
+mov S$获取途径
+mov S$获取图鉴窗口 0
+mov N$神魔之体等级 0
+
+goto @切换面板1
+; goto @神魔之体系统主面板
+
+
+[@神魔之体系统主面板]
+#if
+#act
+#say
+<Img|x=0|y=0|width=9999|height=9999|children={神魔之体系统主面板}|img=public/0.png|bg=1|link=@exit>
+<Img|id=神魔之体系统主面板|x=210|y=30|img=public/sf1/2/bg6.png|children={内框背景,标题,列表1,列表2,列表3,列表4,控件1,控件2,控件3,控件4,控件5,控件6,控件7,获取途径,获取途径控件,closeBtn}|reset=1|link=@>
+
+<Button|id=closeBtn|x=765|y=65.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|id=标题|x=180|y=45|color=255|size=18|text=神魔之体>
+
+<$str(S$获取途径)>
+<$str(S$按钮列表)>
+<$str(S$主界面)>
+
+[@切换面板1]
+#if
+#act
+
+mov S$主界面
+mov S$获取途径
+mov S$按钮列表
+mov S$获取图鉴窗口 0
+inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=神魔之体|link=@切换面板1>
+inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神魔组合|link=@切换面板2>
+inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神魔说明|link=@切换面板3>
+inc S$按钮列表 <Button|id=列表4|x=60|y=200.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神魔保险|link=@切换面板4>
+
+mov N$嗜血 <$STR(U5)>
+mul N$嗜血 1
+
+mov N$穿杨 <$STR(U6)>
+mul N$穿杨 1
+
+mov N$强化 <$STR(U7)>
+mul N$强化 1
+
+mov N$精准 <$STR(U8)>
+mul N$精准 1
+
+inc S$主界面 <RText|id=控件1|x=200|y=95|outline=2|outlinecolor=0|size=16|text=<技能最高10级，成功率50%，成功增加一级，失败降低一级！/FCOLOR=251>>
+; inc S$主界面 <RText|id=控件2|x=200|y=125|size=16|text=</FCOLOR=161>>
+inc S$主界面 <Text|id=控件3|children={3_1,3_2,3_3,3_4,}|x=200|y=175|color=161|size=20|text=嗜血>
+inc S$主界面 <Text|id=3_1|x=110|y=0|color=161|size=16|text=攻击吸血<$str(N$嗜血)>%>
+inc S$主界面 <Text|id=3_2|x=260|y=0|color=161|size=16|text=当前等级<$STR(U5)>级>
+inc S$主界面 <Button|id=3_3|x=410|y=-6|width=100|height=40|nimg=public/1900001022.png|color=161|size=17|text=修炼|link=@嗜血>
+inc S$主界面 <Text|id=控件4|children={4_1,4_2,4_3,4_4,}|x=200|y=230|color=161|size=20|text=穿杨>
+inc S$主界面 <Text|id=4_1|x=110|y=0|color=161|size=16|text=忽视防御<$str(N$穿杨)>%>
+inc S$主界面 <Text|id=4_2|x=260|y=0|color=161|size=16|text=当前等级<$STR(U6)>级>
+inc S$主界面 <Button|id=4_3|x=410|y=-6|width=100|height=40|nimg=public/1900001022.png|color=161|size=17|text=修炼|link=@穿杨>
+inc S$主界面 <Text|id=控件5|children={5_1,5_2,5_3,5_4,}|x=200|y=285|color=161|size=20|text=强化>
+inc S$主界面 <Text|id=5_1|x=110|y=0|color=161|size=16|text=攻击伤害<$str(N$强化)>%>
+inc S$主界面 <Text|id=5_2|x=260|y=0|color=161|size=16|text=当前等级<$STR(U7)>级>
+inc S$主界面 <Button|id=5_3|x=410|y=-6|width=100|height=40|nimg=public/1900001022.png|color=161|size=17|text=修炼|link=@强化>
+inc S$主界面 <Text|id=控件6|children={6_1,6_2,6_3,6_4,}|x=200|y=340|color=161|size=20|text=精准>
+inc S$主界面 <Text|id=6_1|x=110|y=0|color=161|size=16|text=致命一击<$str(N$精准)>%>
+inc S$主界面 <Text|id=6_2|x=260|y=0|color=161|size=16|text=当前等级<$STR(U8)>级>
+inc S$主界面 <Button|id=6_3|x=410|y=-6|width=100|height=40|nimg=public/1900001022.png|color=161|size=17|text=修炼|link=@精准>
+inc S$主界面 <RText|id=控件7|children={7_1,7_2,7_3,7_4,}|outline=2|outlinecolor=0|x=270|y=430|color=161|size=18|text=<神魔之体修炼每级消耗均为/FCOLOR=161><5W元宝/FCOLOR=251>>
+
+; mov S$窗口名 血龙之体
+goto @获取升级数据
+
+; goto @神魔之体系统主面板
+    
+[@切换面板2]
+#if
+#act
+
+mov S$主界面
+mov S$获取途径
+mov S$按钮列表
+mov S$获取图鉴窗口 0
+inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神魔之体|link=@切换面板1>
+inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=神魔组合|link=@切换面板2>
+inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神魔说明|link=@切换面板3>
+inc S$按钮列表 <Button|id=列表4|x=60|y=200.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神魔保险|link=@切换面板4>
+
+goto @获取升级数据
+
+[@切换面板3]
+#if
+#act
+
+mov S$主界面
+mov S$获取途径
+mov S$按钮列表
+mov S$获取图鉴窗口 0
+inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神魔之体|link=@切换面板1>
+inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神魔组合|link=@切换面板2>
+inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=神魔说明|link=@切换面板3>
+inc S$按钮列表 <Button|id=列表4|x=60|y=200.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神魔保险|link=@切换面板4>
+goto @获取升级数据
+
+[@切换面板4]
+#if
+#act
+
+mov S$主界面
+mov S$获取途径
+mov S$按钮列表
+mov S$获取图鉴窗口 0
+inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神魔之体|link=@切换面板1>
+inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神魔组合|link=@切换面板2>
+inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神魔说明|link=@切换面板3>
+inc S$按钮列表 <Button|id=列表4|x=60|y=200.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=神魔保险|link=@切换面板4>
+
+goto @获取升级数据
+
+[@获取升级数据]
+#if
+#act
+; sendmsg 5 神魔之体系统主面板
+goto @神魔之体系统主面板
+
+
+[@精准]
+#IF
+equal U8 10
+#act
+MESSAGEBOX 你的精准已经是最高境界了！
+BREAK
+
+#IF
+CHECKGAMEGOLD > 99999
+#act
+GOTO @炼成精准
+#ELSEACT
+MESSAGEBOX 错误\\①你没有10W元宝！
+BREAK
+
+[@炼成精准]
+#IF
+equal U8 0
+#act
+GAMEGOLD - 100000
+MOV U8 1
+MESSAGEBOX 恭喜你学习精准lv1成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功学习[精准lv1]
+GOTO @切换面板1
+#ELSEACT
+GOTO @炼成精准a
+BREAK
+
+[@炼成精准a]
+#if
+random 2
+#act
+DEC U8 1
+SENDMSG 6 很遗憾,你学习失败,精准降低一级,请下次继续努力！
+GOTO @切换面板1
+BREAK
+
+#if
+random 1
+#act
+GOTO @精准成功
+BREAK
+
+[@精准成功]
+#IF
+equal U8 9
+#act
+GAMEGOLD - 100000
+MOV U8 10
+CONFERTITLE 精准lv10
+MESSAGEBOX 恭喜你炼成精准lv10成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[精准lv10]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U8 8
+#act
+GAMEGOLD - 100000
+MOV U8 9
+MESSAGEBOX 恭喜你炼成精准lv9成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[精准lv9]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U8 7
+#act
+GAMEGOLD - 100000
+MOV U8 8
+CONFERTITLE 精准lv8
+MESSAGEBOX 恭喜你炼成精准lv8成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[精准lv8]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U8 6
+#act
+GAMEGOLD - 100000
+MOV U8 7
+MESSAGEBOX 恭喜你炼成精准lv7成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[精准lv7]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U8 5
+#act
+GAMEGOLD - 100000
+MOV U8 6
+CONFERTITLE 精准lv6
+MESSAGEBOX 恭喜你炼成精准lv6成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[精准lv6]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U8 4
+#act
+GAMEGOLD - 100000
+MOV U8 5
+MESSAGEBOX 恭喜你炼成精准lv5成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[精准lv5]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U8 3
+#act
+GAMEGOLD - 100000
+MOV U8 4
+CONFERTITLE 精准lv4
+MESSAGEBOX 恭喜你炼成精准lv4成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[精准lv4]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U8 2
+#act
+GAMEGOLD - 100000
+MOV U8 3
+MESSAGEBOX 恭喜你炼成精准lv3成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[精准lv3]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U8 1
+#act
+GAMEGOLD - 100000
+MOV U8 2
+CONFERTITLE 精准lv2
+MESSAGEBOX 恭喜你炼成精准lv2成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[精准lv2]
+GOTO @切换面板1
+BREAK
+
+[@强化]
+#IF
+equal U7 10
+#act
+MESSAGEBOX 你的强化已经是最高境界了！
+BREAK
+
+#IF
+CHECKGAMEGOLD > 99999
+#act
+GOTO @炼成强化
+#ELSEACT
+MESSAGEBOX 错误\\①你没有10W元宝！
+BREAK
+
+[@炼成强化]
+#IF
+equal U7 0
+#act
+GAMEGOLD - 100000
+MOV U7 1
+MESSAGEBOX 恭喜你学习强化lv1成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功学习[强化lv1]
+GOTO @切换面板1
+#ELSEACT
+GOTO @炼成强化a
+BREAK
+
+[@炼成强化a]
+#if
+random 2
+#act
+DEC U7 1
+SENDMSG 6 很遗憾,你学习失败,强化降低一级,请下次继续努力！
+GOTO @切换面板1
+BREAK
+
+#if
+random 1
+#act
+GOTO @强化成功
+BREAK
+
+[@强化成功]
+#IF
+equal U7 9
+#act
+GAMEGOLD - 100000
+MOV U7 10
+CONFERTITLE 强化lv10
+MESSAGEBOX 恭喜你炼成强化lv10成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[强化lv10]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U7 8
+#act
+GAMEGOLD - 100000
+MOV U7 9
+MESSAGEBOX 恭喜你炼成强化lv9成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[强化lv9]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U7 7
+#act
+GAMEGOLD - 100000
+MOV U7 8
+CONFERTITLE 强化lv8
+MESSAGEBOX 恭喜你炼成强化lv8成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[强化lv8]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U7 6
+#act
+GAMEGOLD - 100000
+MOV U7 7
+MESSAGEBOX 恭喜你炼成强化lv7成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[强化lv7]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U7 5
+#act
+GAMEGOLD - 100000
+MOV U7 6
+CONFERTITLE 强化lv6
+MESSAGEBOX 恭喜你炼成强化lv6成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[强化lv6]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U7 4
+#act
+GAMEGOLD - 100000
+MOV U7 5
+MESSAGEBOX 恭喜你炼成强化lv5成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[强化lv5]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U7 3
+#act
+GAMEGOLD - 100000
+MOV U7 4
+CONFERTITLE 强化lv4
+MESSAGEBOX 恭喜你炼成强化lv4成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[强化lv4]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U7 2
+#act
+GAMEGOLD - 100000
+MOV U7 3
+MESSAGEBOX 恭喜你炼成强化lv3成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[强化lv3]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U7 1
+#act
+GAMEGOLD - 100000
+MOV U7 2
+CONFERTITLE 强化lv2
+MESSAGEBOX 恭喜你炼成强化lv2成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[强化lv2]
+GOTO @切换面板1
+BREAK
+
+[@穿杨]
+#IF
+equal U6 10
+#act
+MESSAGEBOX 你的穿杨已经是最高境界了！
+BREAK
+
+#IF
+CHECKGAMEGOLD > 49999
+#act
+GOTO @炼成穿杨
+#ELSEACT
+MESSAGEBOX 错误\\①你没有5W元宝！
+BREAK
+
+[@炼成穿杨]
+#IF
+equal U6 0
+#act
+GAMEGOLD - 50000
+MOV U6 1
+MESSAGEBOX 恭喜你学习穿杨lv1成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功学习[穿杨lv1]
+GOTO @切换面板1
+#ELSEACT
+GOTO @炼成穿杨a
+BREAK
+
+[@炼成穿杨a]
+#if
+random 2
+#act
+DEC U6 1
+SENDMSG 6 很遗憾,你学习失败,穿杨降低一级,请下次继续努力！
+GOTO @切换面板1
+BREAK
+
+#if
+random 1
+#act
+GOTO @穿杨成功
+BREAK
+
+[@穿杨成功]
+#IF
+equal U6 9
+#act
+GAMEGOLD - 50000
+MOV U6 10
+CONFERTITLE 穿杨lv10
+MESSAGEBOX 恭喜你炼成穿杨lv10成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[穿杨lv10]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U6 8
+#act
+GAMEGOLD - 50000
+MOV U6 9
+MESSAGEBOX 恭喜你炼成穿杨lv9成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[穿杨lv9]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U6 7
+#act
+GAMEGOLD - 50000
+MOV U6 8
+CONFERTITLE 穿杨lv8
+MESSAGEBOX 恭喜你炼成穿杨lv8成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[穿杨lv8]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U6 6
+#act
+GAMEGOLD - 50000
+MOV U6 7
+MESSAGEBOX 恭喜你炼成穿杨lv7成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[穿杨lv7]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U6 5
+#act
+GAMEGOLD - 50000
+MOV U6 6
+CONFERTITLE 穿杨lv6
+MESSAGEBOX 恭喜你炼成穿杨lv6成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[穿杨lv6]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U6 4
+#act
+GAMEGOLD - 50000
+MOV U6 5
+MESSAGEBOX 恭喜你炼成穿杨lv5成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[穿杨lv5]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U6 3
+#act
+GAMEGOLD - 50000
+MOV U6 4
+CONFERTITLE 穿杨lv4
+MESSAGEBOX 恭喜你炼成穿杨lv4成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[穿杨lv4]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U6 2
+#act
+GAMEGOLD - 50000
+MOV U6 3
+MESSAGEBOX 恭喜你炼成穿杨lv3成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[穿杨lv3]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U6 1
+#act
+GAMEGOLD - 50000
+MOV U6 2
+CONFERTITLE 穿杨lv2
+MESSAGEBOX 恭喜你炼成穿杨lv2成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[穿杨lv2]
+GOTO @切换面板1
+BREAK
+
+[@嗜血]
+#IF
+equal U5 10
+#act
+MESSAGEBOX 你的嗜血已经是最高境界了！
+BREAK
+
+#IF
+CHECKGAMEGOLD > 49999
+#act
+GOTO @炼成嗜血
+#ELSEACT
+MESSAGEBOX 错误\\①你没有5W元宝！
+BREAK
+
+[@炼成嗜血]
+#IF
+equal U5 0
+#act
+GAMEGOLD - 50000
+MOV U5 1
+MESSAGEBOX 恭喜你学习嗜血lv1成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功学习[嗜血lv1]
+GOTO @切换面板1
+#ELSEACT
+GOTO @炼成嗜血a
+BREAK
+
+[@炼成嗜血a]
+#if
+random 2
+#act
+DEC U5 1
+SENDMSG 6 很遗憾,你学习失败,嗜血降低一级,请下次继续努力！
+GOTO @切换面板1
+BREAK
+
+#if
+random 1
+#act
+GOTO @嗜血成功
+BREAK
+
+[@嗜血成功]
+#IF
+equal U5 9
+#act
+GAMEGOLD - 50000
+MOV U5 10
+MESSAGEBOX 恭喜你炼成嗜血lv10成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[嗜血lv10]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U5 8
+#act
+GAMEGOLD - 50000
+MOV U5 9
+MESSAGEBOX 恭喜你炼成嗜血lv9成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[嗜血lv9]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U5 7
+#act
+GAMEGOLD - 50000
+MOV U5 8
+MESSAGEBOX 恭喜你炼成嗜血lv8成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[嗜血lv8]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U5 6
+#act
+GAMEGOLD - 50000
+MOV U5 7
+MESSAGEBOX 恭喜你炼成嗜血lv7成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[嗜血lv7]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U5 5
+#act
+GAMEGOLD - 50000
+MOV U5 6
+MESSAGEBOX 恭喜你炼成嗜血lv6成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[嗜血lv6]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U5 4
+#act
+GAMEGOLD - 50000
+MOV U5 5
+MESSAGEBOX 恭喜你炼成嗜血lv5成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[嗜血lv5]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U5 3
+#act
+GAMEGOLD - 50000
+MOV U5 4
+MESSAGEBOX 恭喜你炼成嗜血lv4成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[嗜血lv4]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U5 2
+#act
+GAMEGOLD - 50000
+MOV U5 3
+MESSAGEBOX 恭喜你炼成嗜血lv3成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[嗜血lv3]
+GOTO @切换面板1
+BREAK
+
+#IF
+equal U5 1
+#act
+GAMEGOLD - 50000
+MOV U5 2
+MESSAGEBOX 恭喜你炼成嗜血lv2成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[嗜血lv2]
+GOTO @切换面板1
+BREAK
+}

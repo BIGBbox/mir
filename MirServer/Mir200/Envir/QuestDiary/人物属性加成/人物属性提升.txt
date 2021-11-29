@@ -1,0 +1,130 @@
+[@基础属性]
+{
+
+#if
+#act
+
+mov N$人物攻击 0
+mov N$人物魔法 0
+mov N$人物道术 0
+mov N$人物防御 0
+mov N$人物魔御 0
+mov N$人物血量 0
+mov N$人物蓝量 0
+mov N$人物准确 0
+mov N$人物敏捷 0
+
+mov N$人物攻击计算 0
+mov N$人物魔法计算 0
+mov N$人物道术计算 0
+mov N$人物防御计算 0
+mov N$人物魔御计算 0
+mov N$人物血量计算 0
+mov N$人物蓝量计算 0
+
+mov N$人物攻击百分比 0
+mov N$人物魔法百分比 0
+mov N$人物道术百分比 0
+mov N$人物防御百分比 0
+mov N$人物魔御百分比 0
+mov N$人物血量百分比 0
+mov N$人物蓝量百分比 0
+
+
+
+; -------------------官职相关属性加成-----------------------
+mov S$当前官位 <$STR(T13)>
+#if
+equal <$str(S$当前官位)>
+#act
+mov S$当前官位 暂无
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\加官进爵系统\加官进爵数据.txt <$str(S$当前官位)> 当前全属性加成 S$当前全属性加成
+#if
+not equal <$str(S$当前全属性加成)>
+#act
+inc N$人物攻击 <$str(S$当前全属性加成)>
+inc N$人物魔法 <$str(S$当前全属性加成)>
+inc N$人物道术 <$str(S$当前全属性加成)>
+
+; -------------------转生相关属性加成-----------------------
+
+#if
+#act
+
+ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(S$当前转生等级)> 需要人物等级 S$需要人物等级
+ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(S$当前转生等级)> 需要材料 S$需要材料
+ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(S$当前转生等级)> 所需货币 S$所需货币
+ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(S$当前转生等级)> 当前全属性加成 S$当前全属性加成
+ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(S$当前转生等级)> 下级全属性加成 S$下级全属性加成
+ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(S$当前转生等级)> 下降等级 S$下降等级
+
+
+#IF
+#ACT
+mov N$人物攻击计算 <$MAXDC>
+mov N$人物魔法计算 <$MAXMC>
+mov N$人物道术计算 <$MAXSC>
+mov N$人物防御计算 <$MAXAC>
+mov N$人物魔御计算 <$MAXMAC>
+mov N$人物血量计算 <$MAXHP>
+mov N$人物蓝量计算 <$MAXMP>
+mov N$人物准确计算 <$HIT>
+mov N$人物敏捷计算 <$SPD>
+
+
+inc N$人物攻击计算 <$STR(N$人物攻击)>
+inc N$人物魔法计算 <$STR(N$人物魔法)>
+inc N$人物道术计算 <$STR(N$人物道术)>
+inc N$人物防御计算 <$STR(N$人物防御)>
+inc N$人物魔御计算 <$STR(N$人物魔御)>
+inc N$人物血量计算 <$STR(N$人物血量)>
+inc N$人物蓝量计算 <$STR(N$人物蓝量)>
+inc N$人物准确计算 <$STR(N$人物准确)>
+inc N$人物敏捷计算 <$STR(N$人物敏捷)>
+
+
+; Mul N$人物攻击计算 <$STR(N$人物攻击百分比)>
+; Mul N$人物魔法计算 <$STR(N$人物魔法百分比)>
+; Mul N$人物道术计算 <$STR(N$人物道术百分比)>
+; Mul N$人物防御计算 <$STR(N$人物防御百分比)>
+; Mul N$人物魔御计算 <$STR(N$人物魔御百分比)>
+; Mul N$人物血量计算 <$STR(N$人物血量百分比)>
+; Mul N$人物蓝量计算 <$STR(N$人物蓝量百分比)>
+
+; div N$人物攻击计算 100
+; div N$人物魔法计算 100
+; div N$人物道术计算 100
+; div N$人物防御计算 100
+; div N$人物魔御计算 100
+; div N$人物血量计算 100
+; div N$人物蓝量计算 100
+
+inc N$人物攻击 <$STR(N$人物攻击计算)>
+inc N$人物魔法 <$STR(N$人物魔法计算)>
+inc N$人物道术 <$STR(N$人物道术计算)>
+inc N$人物防御 <$STR(N$人物防御计算)>
+inc N$人物魔御 <$STR(N$人物魔御计算)>
+inc N$人物血量 <$STR(N$人物血量计算)>
+inc N$人物蓝量 <$STR(N$人物蓝量计算)>
+
+
+ChangeHumAbility 2 = <$STR(N$人物防御)> 65535
+ChangeHumAbility 4 = <$STR(N$人物魔御)> 65535
+ChangeHumAbility 6 = <$STR(N$人物攻击)> 65535
+ChangeHumAbility 8 = <$STR(N$人物魔法)> 65535
+ChangeHumAbility 10 = <$STR(N$人物道术)> 65535
+ChangeHumAbility 11 = <$STR(N$人物血量)> 65535
+ChangeHumAbility 12 = <$STR(N$人物蓝量)> 65535
+ChangeHumAbility 18 = <$STR(N$人物准确)> 65535
+ChangeHumAbility 19 = <$STR(N$人物敏捷)> 65535
+
+; ChangeHumAbility 3 = <$STR(N$人物魔御)> 65535
+; ChangeHumAbility 1 = <$STR(N$人物防御)> 65535
+; ChangeHumAbility 5 = <$STR(N$人物攻击)> 65535
+; ChangeHumAbility 7 = <$STR(N$人物魔法)> 65535
+; ChangeHumAbility 9 = <$STR(N$人物道术)> 65535
+
+}

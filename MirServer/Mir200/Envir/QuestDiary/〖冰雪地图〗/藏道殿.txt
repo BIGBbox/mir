@@ -1,0 +1,152 @@
+[@藏道殿]
+{
+#IF
+#act
+mov S$掉落显示窗口
+mov S$显示掉落窗口打开 0
+
+
+goto @藏道殿主界面
+
+
+[@藏道殿主界面]
+#if
+#act
+
+#say
+
+<Img|width=620|height=240|children={掉落窗口}|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=250|size=18|text=三界六道唯我尊，苍茫大地主浮沉。>
+<Text|a=0|x=32.0|y=47.0|tipsx=10|tipsy=80|color=253|size=18|text=杀亲绝情复轮回，再战天道定乾坤！>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=255|size=18|text=------------------------------------------------->
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=254|size=18|text=千重劫，百世难，亘古匆匆，弹指间。>
+<Text|a=0|x=32.0|y=107.0|tipsx=10|tipsy=80|color=253|size=18|text=本图共7层，清完本层所有怪才可进入下一层！>
+<Text|a=0|x=32.0|y=130.0|tipsx=10|tipsy=80|color=250|size=18|text=本地图怪物相当变态，爆率相当变态，3转以上组队2人以上队长点击才可进入！>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=58|size=18|text=HOT~>
+<Text|a=0|x=111.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=花5000元宝+三转组队进入|link=@CHUN21通天1>
+<Text|a=0|x=363.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=黄金赞助免费进入|link=@CHUN21通天2>
+<Text|a=0|x=32.0|y=196.0|tipsx=10|tipsy=80|color=255|size=18|text=我不想组队也没有3转以上但是就是想进去涨涨见识>
+<Text|a=0|x=441.0|y=195.0|tipsx=10|tipsy=80|color=251|size=18|text=花1万元宝进去参观一下|link=@CHUN21通天3>
+
+<Button|x=515|y=25.0|nimg=public/icon/common1087.png|link=@显示掉落>
+<$str(S$掉落显示窗口)>
+; common1085
+
+[@chun21通天2]
+#OR
+equal U22 4
+equal U22 3
+equal U22 2
+equal U22 1
+#ACT
+;give 回城卷 1
+MapMove cd1
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！ 1 3
+
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！
+break
+#elseact
+SendMsg 7 你还不是我们的白金赞助！
+break
+
+[@chun21通天3]
+#if
+CHECKGAMEGOLD > 9999
+#ACT
+;give 回城卷 1
+GAMEGOLD - 10000
+MapMove cd1
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！ 1 3
+
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！
+break
+#elseact
+SendMsg 7 你元宝不足,不能进入！
+break
+
+
+[@chun21通天1]
+#if
+ISGROUPMASTER
+CHECKRENEWLEVEL > 2
+CHECKGAMEGOLD > 4999
+#ACT
+;give 回城卷 1
+GAMEGOLD - 5000
+GROUPMAPMOVE cd1 23 20 1 @GROUPMAPMOVE
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！ 1 3
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！
+break
+#elseact
+SendMsg 7 你没有组队，或者元宝不足/或者没有3转！
+break
+
+[@显示掉落]
+
+#if
+#act
+mov N$物品序号 0
+mov N$道具X0 12
+mov N$道具X1 12
+mov N$道具X2 12
+mov N$道具X3 12
+mov N$道具X4 12
+mov N$道具X5 12
+
+mov N$道具Y 20
+
+
+#if
+equal <$str(S$显示掉落窗口打开)> 1
+#act
+mov S$掉落显示窗口
+mov S$显示掉落窗口打开 0
+goto @藏道殿主界面
+break
+
+#if
+#act
+mov S$显示掉落窗口打开 1
+
+inc S$掉落显示窗口 <Img|id=掉落窗口|children={lin1,lin2,lin3,lin4,name0,name1,name2,name3,name4,name5,}|width=120|height=250|x=630.0|y=58.0|img=public/haha/ty_bg.png|link=@>
+inc S$掉落显示窗口 <Img|id=lin1|width=115|height=2|x=2.0|y=48.0|img=public/sf1/19/line.png>
+inc S$掉落显示窗口 <Img|id=lin2|width=115|height=2|x=2.0|y=98.0|img=public/sf1/19/line.png>
+inc S$掉落显示窗口 <Img|id=lin3|width=115|height=2|x=2.0|y=148.0|img=public/sf1/19/line.png>
+inc S$掉落显示窗口 <Img|id=lin4|width=115|height=2|x=2.0|y=198.0|img=public/sf1/19/line.png>
+
+
+goto @获取掉落列表
+
+
+[@获取掉落列表]
+#if
+#act
+GetListString ..\QuestDiary\〖冰雪地图〗\藏道殿掉落.txt <$str(N$物品序号)> S$材料名<$str(N$物品序号)> 
+
+#if
+not CheckStringlength <$str(S$材料名<$str(N$物品序号)>)> > 8
+#act
+inc N$道具X<$str(N$物品序号)> 10
+
+#if
+CheckStringlength <$str(S$材料名<$str(N$物品序号)>)> > 8
+not CheckStringlength <$str(S$材料名<$str(N$物品序号)>)> > 10
+#act
+inc N$道具X<$str(N$物品序号)> 7
+
+#if
+#act
+inc S$掉落显示窗口 <Text|id=name<$str(N$物品序号)>|x=<$str(N$道具X<$str(N$物品序号)>)>|y=<$str(N$道具Y)>|tipsx=10|tipsy=80|color=158|size=18|text=<$str(S$材料名<$str(N$物品序号)>)>>
+
+#if
+not equal <$str(S$材料名<$str(N$物品序号)>)>
+#act
+inc N$物品序号 1
+inc N$道具Y 50
+goto @获取掉落列表
+#elseact
+goto @藏道殿主界面
+
+}

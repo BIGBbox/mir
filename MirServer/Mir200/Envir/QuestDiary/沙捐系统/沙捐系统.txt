@@ -1,0 +1,789 @@
+
+[@沙捐面板]
+{
+#IF
+#ACT
+GetRandomText ..\QuestDiary\元宝捐款\第一排名.txt S21
+GetRandomText ..\QuestDiary\元宝捐款\第二排名.txt S22
+GetRandomText ..\QuestDiary\元宝捐款\第三排名.txt S23
+GetRandomText ..\QuestDiary\元宝捐款\第四排名.txt S24
+GetRandomText ..\QuestDiary\元宝捐款\第五排名.txt S25
+GetRandomText ..\QuestDiary\元宝捐款\第一排名元宝数.txt S31
+GetRandomText ..\QuestDiary\元宝捐款\第二排名元宝数.txt S32
+GetRandomText ..\QuestDiary\元宝捐款\第三排名元宝数.txt S33
+GetRandomText ..\QuestDiary\元宝捐款\第四排名元宝数.txt S34
+GetRandomText ..\QuestDiary\元宝捐款\第五排名元宝数.txt S35
+MOV A200 <$STR(S21)>
+MOV A201 <$STR(S22)>
+MOV A202 <$STR(S23)>
+MOV A203 <$STR(S24)>
+MOV A204 <$STR(S25)>
+MOV G200 <$STR(S31)>
+MOV G201 <$STR(S32)>
+MOV G202 <$STR(S33)>
+MOV G203 <$STR(S34)>
+MOV G204 <$STR(S35)>
+
+
+
+GOTO @捐款用1
+GOTO @捐献说明界面
+BREAK
+
+[@捐款用1]
+#if
+
+#say
+<Img|x=0|y=0|width=9999|height=9999|children={沙城主面板}|img=public/0.png|bg=1|link=@exit>
+<Img|id=沙城主面板|x=210|y=30|img=public/sf1/2/bg2.png|children={内框背景,标题,第一名,第二名,第三名,第四名,第五名,第六名,获取途径控件,我的捐献,我的排名,按钮1,按钮2,closeBtn,adButt}|reset=1|link=@>
+<Button|id=closeBtn|x=765|y=65.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<$str(S$捐献说明)>
+<$str(S$捐献排名)>
+<Button|id=按钮1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=捐献说明|link=@捐献说明界面>
+<Button|id=按钮2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=捐献排名|link=@捐献排名界面>
+
+
+[@捐献说明界面]
+#if
+#act
+mov S$捐献说明
+mov S$捐献排名
+inc S$捐献说明 <Text|id=标题|x=200|y=90|color=251|size=18|text=您好,欢迎您使用俸禄捐献系统!>
+
+inc S$捐献说明 <Img|id=第一名|x=187|y=120|width=565|height=45|children={文本1,2}|img=public/haha/ty_bg.png>
+inc S$捐献说明 <Text|id=文本1|x=40|y=10|color=249|size=18|text=第一名>
+inc S$捐献说明 <Text|id=2|x=160|y=10|color=249|size=18|text=属性奖励:攻道魔50-50>
+
+inc S$捐献说明 <Img|id=第二名|x=187|y=170|width=565|height=45|children={文本2,3}|img=public/haha/ty_bg.png>
+inc S$捐献说明 <Text|id=文本2|x=40|y=10|color=125|size=18|text=第二名>
+inc S$捐献说明 <Text|id=3|x=160|y=10|color=125|size=18|text=属性奖励:攻道魔30-30>
+
+inc S$捐献说明 <Img|id=第三名|x=187|y=220|width=565|height=45|children={文本3,4}|img=public/haha/ty_bg.png>
+inc S$捐献说明 <Text|id=文本3|x=40|y=10|color=150|size=18|text=第三名>
+inc S$捐献说明 <Text|id=4|x=160|y=10|color=150|size=18|text=属性奖励:攻道魔20-20>
+
+inc S$捐献说明 <Img|id=第四名|x=187|y=270|width=565|height=45|children={文本4,5}|img=public/haha/ty_bg.png>
+inc S$捐献说明 <Text|id=文本4|x=40|y=10|color=191|size=18|text=第四名>
+inc S$捐献说明 <Text|id=5|x=160|y=10|color=191|size=18|text=属性奖励:攻道魔15-15>
+
+inc S$捐献说明 <Img|id=第五名|x=187|y=320|width=565|height=45|children={文本5,6}|img=public/haha/ty_bg.png>
+inc S$捐献说明 <Text|id=文本5|x=40|y=10|color=168|size=18|text=第五名>
+inc S$捐献说明 <Text|id=6|x=160|y=10|color=168|size=18|text=属性奖励:攻道魔10-10>
+
+inc S$捐献说明 <Img|id=第六名|x=187|y=370|width=565|height=45|children={文本6,7}|img=public/haha/ty_bg.png>
+inc S$捐献说明 <Text|id=文本6|x=40|y=10|color=251|size=18|text=第六名>
+inc S$捐献说明 <Text|id=7|x=160|y=10|color=251|size=18|text=属性奖励:攻道魔5-5>
+
+inc S$捐献说明 <Button|id=adButt|x=630|y=460.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=我要捐献|link=@@INPUTINTEGER15(最少需要捐5000元宝)>
+inc S$捐献说明 <RText|id=我的捐献|x=230|y=460|size=16|text=<我已捐献：/FCOLOR=161><0元宝/FCOLOR=250>>
+inc S$捐献说明 <RText|id=我的排名|x=230|y=480|size=16|text=<我的排名：/FCOLOR=161><未上榜/FCOLOR=249>>
+GOTO @捐款用1
+
+[@捐献排名界面]
+#if
+#act
+mov S$捐献说明
+mov S$捐献排名
+inc S$捐献排名 <Text|id=标题|x=200|y=90|color=251|size=18|text=捐献必须高于5000元宝才可以获得俸禄!>
+
+inc S$捐献排名 <Img|id=第一名|x=187|y=120|width=565|height=45|children={文本1,拍1,拍2}|img=public/haha/ty_bg.png>
+inc S$捐献排名 <Text|id=文本1|x=40|y=10|color=249|size=18|text=第一名>
+inc S$捐献排名 <Text|id=拍1|x=180|y=10|color=251|size=18|text=<$STR(A200)>>
+inc S$捐献排名 <Text|id=拍2|x=300|y=10|color=161|size=18|text=捐献元宝:<$STR(G200)>>
+
+inc S$捐献排名 <Img|id=第二名|x=187|y=170|width=565|height=45|children={文本2,拍3,拍4}|img=public/haha/ty_bg.png>
+inc S$捐献排名 <Text|id=文本2|x=40|y=10|color=125|size=18|text=第二名:>
+inc S$捐献排名 <Text|id=拍3|x=180|y=10|color=251|size=18|text=<$STR(A201)>>
+inc S$捐献排名 <Text|id=拍4|x=300|y=10|color=161|size=18|text=捐献元宝:<$STR(G201)>>
+
+inc S$捐献排名 <Img|id=第三名|x=187|y=220|width=565|height=45|children={文本3,拍5,拍6}|img=public/haha/ty_bg.png>
+inc S$捐献排名 <Text|id=文本3|x=40|y=10|color=150|size=18|text=第三名:>
+inc S$捐献排名 <Text|id=拍5|x=180|y=10|color=251|size=18|text=<$STR(A202)>>
+inc S$捐献排名 <Text|id=拍6|x=300|y=10|color=161|size=18|text=捐献元宝:<$STR(G202)>>
+
+inc S$捐献排名 <Img|id=第四名|x=187|y=270|width=565|height=45|children={文本4,拍7,拍8}|img=public/haha/ty_bg.png>
+inc S$捐献排名 <Text|id=文本4|x=40|y=10|color=191|size=18|text=第四名:>
+inc S$捐献排名 <Text|id=拍7|x=180|y=10|color=251|size=18|text=<$STR(A203)>>
+inc S$捐献排名 <Text|id=拍8|x=300|y=10|color=161|size=18|text=捐献元宝:<$STR(G203)>>
+
+inc S$捐献排名 <Img|id=第五名|x=187|y=320|width=565|height=45|children={文本5,拍9,拍10}|img=public/haha/ty_bg.png>
+inc S$捐献排名 <Text|id=文本5|x=40|y=10|color=168|size=18|text=第五名:>
+inc S$捐献排名 <Text|id=拍9|x=180|y=10|color=251|size=18|text=<$STR(A204)>>
+inc S$捐献排名 <Text|id=拍10|x=300|y=10|color=161|size=18|text=捐献元宝:<$STR(G204)>>
+
+inc S$捐献排名 <Img|id=第六名|x=187|y=370|width=565|height=45|children={文本6,拍11,拍12}|img=public/haha/ty_bg.png>
+inc S$捐献排名 <Text|id=文本6|x=40|y=10|color=251|size=18|text=第六名:>
+inc S$捐献排名 <Text|id=拍11|x=180|y=10|color=251|size=18|text=<$STR(A205)>>
+inc S$捐献排名 <Text|id=拍12|x=300|y=10|color=161|size=18|text=捐献元宝:<$STR(G205)>>
+
+inc S$捐献排名 <Button|id=adButt|x=630|y=460.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=我要捐献|link=@@INPUTINTEGER15(最少需要捐5000元宝)>
+inc S$捐献排名 <RText|id=我的捐献|x=230|y=460|size=16|text=<我已捐献：/FCOLOR=161><0元宝/FCOLOR=250>>
+inc S$捐献排名 <RText|id=我的排名|x=230|y=480|size=16|text=<我的排名：/FCOLOR=161><未上榜/FCOLOR=249>>
+GOTO @捐款用1
+
+
+
+[@沙城捐献1]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<第①名/FCOLOR=100><属性奖励:50-50/FCOLOR=253>：<『/FCOLOR=251><$STR(A200)><』/FCOLOR=251> <捐献元宝：/FCOLOR=222><≮/FCOLOR=168>{<$STR(G200)>/FCOLOR=70}<≯/FCOLOR=168>\
+<第②名/FCOLOR=100><属性奖励:30-30/FCOLOR=046>：<『/FCOLOR=251><$STR(A201)><』/FCOLOR=251> <捐献元宝：/FCOLOR=222><≮/FCOLOR=168>{<$STR(G201)>/FCOLOR=70}<≯/FCOLOR=168>\
+<第③名/FCOLOR=100><属性奖励:20-20/FCOLOR=249>：<『/FCOLOR=251><$STR(A202)><』/FCOLOR=251> <捐献元宝：/FCOLOR=222><≮/FCOLOR=168>{<$STR(G202)>/FCOLOR=70}<≯/FCOLOR=168>\
+<第④名/FCOLOR=100><属性奖励:15-15/FCOLOR=254>：<『/FCOLOR=251><$STR(A203)><』/FCOLOR=251> <捐献元宝：/FCOLOR=222><≮/FCOLOR=168>{<$STR(G203)>/FCOLOR=70}<≯/FCOLOR=168>\
+<第⑤名/FCOLOR=100><属性奖励:10-10/FCOLOR=222>：<『/FCOLOR=251><$STR(A204)><』/FCOLOR=251> <捐献元宝：/FCOLOR=222><≮/FCOLOR=168>{<$STR(G204)>/FCOLOR=70}<≯/FCOLOR=168>\
+<第⑥名/FCOLOR=100><属性奖励:5-5/FCOLOR=251>：　<查询自己是否在排行/@查看是否排名>\　\
+
+<我要捐献/@@InPutInteger15>　\
+#elsesay
+<Img|x=0.0|y=1.0|width=670|height=220|scale9r=10|scale9l=10|bg=1|scale9b=10|reset=1|move=0|img=public/bg_npc_01.png|scale9t=10>
+<Layout|x=648.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=670.0|y=1.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=100|size=18|text=第①名>
+<Text|a=0|x=98|y=25|tipsx=10|tipsy=80|color=253|size=18|text=属性奖励:50-50>
+<Text|a=0|x=224.0|y=25.0|tipsx=10|tipsy=80|color=255|size=18|text=：>
+<Text|a=0|x=243.0|y=25.0|tipsx=10|tipsy=80|color=251|size=18|text=『>
+<Text|a=0|x=265.0|y=25.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(A200)>>
+<Text|a=0|x=377.0|y=25.0|tipsx=10|tipsy=80|color=251|size=18|text=』>
+<Text|a=0|x=406.0|y=25.0|tipsx=10|tipsy=80|color=222|size=18|text=捐献元宝：>
+<Text|a=0|x=498.0|y=24.0|tipsx=10|tipsy=80|color=168|size=18|text=≮>
+<Text|a=0|x=520.0|y=25.0|tipsx=10|tipsy=80|color=70|size=18|text=<$STR(G200)>>
+<Text|a=0|x=634.0|y=24.0|tipsx=10|tipsy=80|color=168|size=18|text=≯>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=100|size=18|text=第②名>
+<Text|a=0|x=98|y=45|tipsx=10|tipsy=80|color=046|size=18|text=属性奖励:30-30>
+<Text|a=0|x=224.0|y=45.0|tipsx=10|tipsy=80|color=255|size=18|text=：>
+<Text|a=0|x=243.0|y=45.0|tipsx=10|tipsy=80|color=251|size=18|text=『>
+<Text|a=0|x=265.0|y=45.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(A201)>>
+<Text|a=0|x=377.0|y=45.0|tipsx=10|tipsy=80|color=251|size=18|text=』>
+<Text|a=0|x=406.0|y=45.0|tipsx=10|tipsy=80|color=222|size=18|text=捐献元宝：>
+<Text|a=0|x=498.0|y=45.0|tipsx=10|tipsy=80|color=168|size=18|text=≮>
+<Text|a=0|x=520.0|y=45.0|tipsx=10|tipsy=80|color=70|size=18|text=<$STR(G201)>>
+<Text|a=0|x=634.0|y=44.0|tipsx=10|tipsy=80|color=168|size=18|text=≯>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=100|size=18|text=第③名>
+<Text|a=0|x=98|y=65|tipsx=10|tipsy=80|color=249|size=18|text=属性奖励:20-20>
+<Text|a=0|x=224.0|y=65.0|tipsx=10|tipsy=80|color=255|size=18|text=：>
+<Text|a=0|x=243.0|y=65.0|tipsx=10|tipsy=80|color=251|size=18|text=『>
+<Text|a=0|x=265.0|y=65.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(A202)>>
+<Text|a=0|x=377.0|y=65.0|tipsx=10|tipsy=80|color=251|size=18|text=』>
+<Text|a=0|x=406.0|y=65.0|tipsx=10|tipsy=80|color=222|size=18|text=捐献元宝：>
+<Text|a=0|x=498.0|y=65.0|tipsx=10|tipsy=80|color=168|size=18|text=≮>
+<Text|a=0|x=520.0|y=65.0|tipsx=10|tipsy=80|color=70|size=18|text=<$STR(G202)>>
+<Text|a=0|x=634.0|y=64.0|tipsx=10|tipsy=80|color=168|size=18|text=≯>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=100|size=18|text=第④名>
+<Text|a=0|x=98|y=85|tipsx=10|tipsy=80|color=254|size=18|text=属性奖励:15-15>
+<Text|a=0|x=224.0|y=85.0|tipsx=10|tipsy=80|color=255|size=18|text=：>
+<Text|a=0|x=243.0|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=『>
+<Text|a=0|x=265.0|y=85.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(A203)>>
+<Text|a=0|x=377.0|y=85.0|tipsx=10|tipsy=80|color=251|size=18|text=』>
+<Text|a=0|x=406.0|y=85.0|tipsx=10|tipsy=80|color=222|size=18|text=捐献元宝：>
+<Text|a=0|x=498.0|y=85.0|tipsx=10|tipsy=80|color=168|size=18|text=≮>
+<Text|a=0|x=520.0|y=85.0|tipsx=10|tipsy=80|color=70|size=18|text=<$STR(G203)>>
+<Text|a=0|x=634.0|y=84.0|tipsx=10|tipsy=80|color=168|size=18|text=≯>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=100|size=18|text=第⑤名>
+<Text|a=0|x=98|y=105|tipsx=10|tipsy=80|color=222|size=18|text=属性奖励:10-10>
+<Text|a=0|x=224.0|y=105.0|tipsx=10|tipsy=80|color=255|size=18|text=：>
+<Text|a=0|x=243.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=『>
+<Text|a=0|x=265.0|y=105.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(A204)>>
+<Text|a=0|x=377.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=』>
+<Text|a=0|x=406.0|y=105.0|tipsx=10|tipsy=80|color=222|size=18|text=捐献元宝：>
+<Text|a=0|x=498.0|y=105.0|tipsx=10|tipsy=80|color=168|size=18|text=≮>
+<Text|a=0|x=520.0|y=105.0|tipsx=10|tipsy=80|color=70|size=18|text=<$STR(G204)>>
+<Text|a=0|x=634.0|y=104.0|tipsx=10|tipsy=80|color=168|size=18|text=≯>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=100|size=18|text=第⑥名>
+<Text|a=0|x=98|y=125|tipsx=10|tipsy=80|color=251|size=18|text=属性奖励:5-5>
+<Text|a=0|x=230|y=125|tipsx=10|tipsy=80|color=255|size=18|text=：　>
+<Text|a=0|x=230|y=125|tipsx=10|tipsy=80|color=251|size=18|text=查询自己是否在排行|link=@查看是否排名>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=251|size=18|text=我要捐献|link=@@INPUTINTEGER15>
+
+[@查看是否排名]
+#if
+not CHECKNAMELIST ..\QuestDiary\元宝捐款\第六排名.txt
+#act
+messagebox 您不在第六排名里!
+GOTO @WYJK
+BREAK
+
+#if
+equal <$CLIENTFLAG> 1
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第六排名.txt
+#say
+╔═══════════════════════════╗\
+║　　　　　　　　　　　　　　　　　　　　　　　　　　　║\
+║　　　　　　　　　感谢您对本服的支持　 　　　　　　　 ║\
+║　　　　　　 您上线时攻魔道同时增加5-5点 　　　　　　 ║\
+║　　　　　　　　　　　　　　　　　　　　　　　　　　　║\
+║　　　　　　　　　　　　　　　　　　　　　　　　　　　║\
+╚═══════════════════════════╝\
+
+#if
+equal <$CLIENTFLAG> 2
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第六排名.txt
+#say
+<Img|x=0.0|y=0.0|width=575|height=200|rotate=0|scale9t=10|scale9l=10|bg=1|scale9b=10|reset=1|move=0|img=public/bg_npc_01.png|scale9r=10>
+<Layout|x=552.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=574.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=18|text=╔════════════════════════════════════════════╗\>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=255|size=18|text=║>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=255|size=18|text=║　　　　　　　　　感谢您对本服的支持>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=255|size=18|text=║　　　　　　 您上线时攻魔道同时增加5-5点>
+<Text|a=0|x=32.0|y=104.0|tipsx=10|tipsy=80|color=255|size=18|text=║>
+<Text|a=0|x=32.0|y=125.0|tipsx=10|tipsy=80|color=255|size=18|text=║>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=255|size=18|text=╚════════════════════════════════════════════╝\>
+<Text|x=527.0|y=47.0|color=255|size=18|text=║>
+<Text|x=527.0|y=68.0|color=255|size=18|text=║>
+<Text|x=527.0|y=89.0|color=255|size=18|text=║>
+<Text|x=527.0|y=123.0|color=255|size=18|text=║>
+<Text|x=527.0|y=104.0|color=255|size=18|text=║>
+
+[@InPutInteger15]
+#IF
+EQUAL N15
+#ACT
+messagebox 请输入捐款金额!
+GOTO @WYJK
+BREAK
+
+#IF
+SMALL N15 5000
+#ACT
+messagebox 您所要的捐款的金额小于5000元宝!
+GOTO @WYJK
+BREAK
+
+#IF
+CHECKGAMEGOLD > <$STR(N15)>
+#ACT
+GOTO @JKKS
+BREAK
+
+#IF
+CHECKGAMEGOLD = <$STR(N15)>
+#ACT
+GOTO @JKKS
+BREAK
+#ELSEACT
+messagebox 您没有那么多的元宝!
+BREAK
+
+[@JKKS]
+#IF
+#ACT
+GAMEGOLD - <$STR(N15)>
+CALCVAR HUMAN JK + <$STR(N15)>
+SAVEVAR HUMAN JK
+GOTO @JKJC
+BREAK
+
+[@JKJC]
+#IF
+CHECKVAR HUMAN JK > 4999
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第六排名.txt
+#ACT
+GOTO @JKPAIM
+BREAK
+
+#IF
+CHECKVAR HUMAN JK > 4999
+#ACT
+Addnamelist ..\QuestDiary\元宝捐款\第六排名.txt
+messagebox 感谢您对本服的支持!
+BREAK
+close
+#ELSEACT
+MESSAGEBOX 感谢您对本服的支持!
+BREAK
+close
+
+[@JKPAIM]
+#IF
+CHECKVAR HUMAN JK > <$STR(G200)>
+#ACT
+GOTO @BAOCUN
+MESSAGEBOX 感谢您对本服的支持!
+BREAK
+close
+#ELSEACT
+GOTO @JKPAIM1
+BREAK
+
+[@JKPAIM1]
+#IF
+CHECKVAR HUMAN JK > <$STR(G201)>
+#ACT
+GOTO @BAOCUN1
+MESSAGEBOX 感谢您对本服的支持!
+BREAK
+close
+#ELSEACT
+GOTO @JKPAIM2
+BREAK
+
+[@JKPAIM2]
+#IF
+CHECKVAR HUMAN JK > <$STR(G202)>
+#ACT
+GOTO @BAOCUN2
+MESSAGEBOX 感谢您对本服的支持!
+BREAK
+close
+#ELSEACT
+GOTO @JKPAIM3
+BREAK
+
+[@JKPAIM3]
+#IF
+CHECKVAR HUMAN JK > <$STR(G203)>
+#ACT
+GOTO @BAOCUN3
+MESSAGEBOX 感谢您对本服的支持!
+BREAK
+close
+#ELSEACT
+GOTO @JKPAIM4
+BREAK
+
+[@JKPAIM4]
+#IF
+CHECKVAR HUMAN JK > <$STR(G204)>
+#ACT
+GOTO @BAOCUN4
+MESSAGEBOX 感谢您对本服的支持!
+BREAK
+close
+#ELSEACT
+MESSAGEBOX 感谢您对本服的支持!
+BREAK
+close
+
+[@BAOCUN]
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第一排名.txt
+#ACT
+ClearNameList ..\QuestDiary\元宝捐款\第一排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第一排名.txt
+Addnamelist ..\QuestDiary\元宝捐款\第一排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第一排名元宝数.txt <$HUMAN(JK)>
+BREAK
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第二排名.txt
+#ACT
+ClearNameList ..\QuestDiary\元宝捐款\第一排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第二排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第一排名.txt
+ClearNameList ..\QuestDiary\元宝捐款\第二排名.txt
+Addnamelist ..\QuestDiary\元宝捐款\第一排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第二排名.txt <$STR(A200)>
+AddTextListex ..\QuestDiary\元宝捐款\第一排名元宝数.txt <$HUMAN(JK)>
+AddTextListex ..\QuestDiary\元宝捐款\第二排名元宝数.txt <$STR(G200)>
+BREAK
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第三排名.txt
+#ACT
+ClearNameList ..\QuestDiary\元宝捐款\第一排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第二排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第三排名元宝数.txt
+
+ClearNameList ..\QuestDiary\元宝捐款\第一排名.txt
+ClearNameList ..\QuestDiary\元宝捐款\第二排名.txt
+ClearNameList ..\QuestDiary\元宝捐款\第三排名.txt
+
+Addnamelist ..\QuestDiary\元宝捐款\第一排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第二排名.txt <$STR(A200)>
+AddTextListex ..\QuestDiary\元宝捐款\第一排名元宝数.txt <$HUMAN(JK)>
+AddTextListex ..\QuestDiary\元宝捐款\第二排名元宝数.txt <$STR(G200)>
+AddTextListex ..\QuestDiary\元宝捐款\第三排名.txt <$STR(A201)>
+AddTextListex ..\QuestDiary\元宝捐款\第三排名元宝数.txt <$STR(G201)>
+BREAK
+
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第四排名.txt
+#ACT
+ClearNameList ..\QuestDiary\元宝捐款\第一排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第二排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第三排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第四排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第一排名.txt
+ClearNameList ..\QuestDiary\元宝捐款\第二排名.txt
+ClearNameList ..\QuestDiary\元宝捐款\第三排名.txt
+ClearNameList ..\QuestDiary\元宝捐款\第四排名.txt
+
+Addnamelist ..\QuestDiary\元宝捐款\第一排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第二排名.txt <$STR(A200)>
+AddTextListex ..\QuestDiary\元宝捐款\第一排名元宝数.txt <$HUMAN(JK)>
+AddTextListex ..\QuestDiary\元宝捐款\第二排名元宝数.txt <$STR(G200)>
+AddTextListex ..\QuestDiary\元宝捐款\第三排名.txt <$STR(A201)>
+AddTextListex ..\QuestDiary\元宝捐款\第三排名元宝数.txt <$STR(G201)>
+AddTextListex ..\QuestDiary\元宝捐款\第四排名.txt <$STR(A202)>
+AddTextListex ..\QuestDiary\元宝捐款\第四排名元宝数.txt <$STR(G202)>
+BREAK
+
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第五排名.txt
+#ACT
+ClearNameList ..\QuestDiary\元宝捐款\第一排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第二排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第三排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第四排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第五排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第一排名.txt
+ClearNameList ..\QuestDiary\元宝捐款\第二排名.txt
+ClearNameList ..\QuestDiary\元宝捐款\第三排名.txt
+ClearNameList ..\QuestDiary\元宝捐款\第四排名.txt
+ClearNameList ..\QuestDiary\元宝捐款\第五排名.txt
+
+Addnamelist ..\QuestDiary\元宝捐款\第一排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第一排名元宝数.txt <$HUMAN(JK)>
+AddTextListex ..\QuestDiary\元宝捐款\第二排名.txt <$STR(A200)>
+AddTextListex ..\QuestDiary\元宝捐款\第二排名元宝数.txt <$STR(G200)>
+AddTextListex ..\QuestDiary\元宝捐款\第三排名.txt <$STR(A201)>
+AddTextListex ..\QuestDiary\元宝捐款\第三排名元宝数.txt <$STR(G201)>
+AddTextListex ..\QuestDiary\元宝捐款\第四排名.txt <$STR(A202)>
+AddTextListex ..\QuestDiary\元宝捐款\第四排名元宝数.txt <$STR(G202)>
+AddTextListex ..\QuestDiary\元宝捐款\第五排名.txt <$STR(A203)>
+AddTextListex ..\QuestDiary\元宝捐款\第五排名元宝数.txt <$STR(G203)>
+BREAK
+
+
+
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第六排名.txt
+#ACT
+ClearNameList ..\QuestDiary\元宝捐款\第一排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第二排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第三排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第四排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第五排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第一排名.txt
+ClearNameList ..\QuestDiary\元宝捐款\第二排名.txt
+ClearNameList ..\QuestDiary\元宝捐款\第三排名.txt
+ClearNameList ..\QuestDiary\元宝捐款\第四排名.txt
+ClearNameList ..\QuestDiary\元宝捐款\第五排名.txt
+
+Addnamelist ..\QuestDiary\元宝捐款\第一排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第一排名元宝数.txt <$HUMAN(JK)>
+AddTextListex ..\QuestDiary\元宝捐款\第二排名.txt <$STR(A200)>
+AddTextListex ..\QuestDiary\元宝捐款\第二排名元宝数.txt <$STR(G200)>
+AddTextListex ..\QuestDiary\元宝捐款\第三排名.txt <$STR(A201)>
+AddTextListex ..\QuestDiary\元宝捐款\第三排名元宝数.txt <$STR(G201)>
+AddTextListex ..\QuestDiary\元宝捐款\第四排名.txt <$STR(A202)>
+AddTextListex ..\QuestDiary\元宝捐款\第四排名元宝数.txt <$STR(G202)>
+AddTextListex ..\QuestDiary\元宝捐款\第五排名.txt <$STR(A203)>
+AddTextListex ..\QuestDiary\元宝捐款\第五排名元宝数.txt <$STR(G203)>
+AddTextListex ..\QuestDiary\元宝捐款\第六排名.txt <$STR(A204)>
+BREAK
+
+
+
+
+
+
+
+
+[@BAOCUN1]
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第二排名.txt
+#ACT
+ClearNameList ..\QuestDiary\元宝捐款\第二排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第二排名.txt
+Addnamelist ..\QuestDiary\元宝捐款\第二排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第二排名元宝数.txt <$HUMAN(JK)>
+BREAK
+
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第三排名.txt
+#ACT
+
+ClearNameList ..\QuestDiary\元宝捐款\第二排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第二排名.txt
+
+ClearNameList ..\QuestDiary\元宝捐款\第三排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第三排名.txt
+
+Addnamelist ..\QuestDiary\元宝捐款\第二排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第二排名元宝数.txt <$HUMAN(JK)>
+
+AddTextListex ..\QuestDiary\元宝捐款\第三排名.txt <$STR(A201)>
+AddTextListex ..\QuestDiary\元宝捐款\第三排名元宝数.txt <$STR(G201)>
+BREAK
+
+
+
+
+
+
+
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第四排名.txt
+#ACT
+
+ClearNameList ..\QuestDiary\元宝捐款\第二排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第二排名.txt
+
+ClearNameList ..\QuestDiary\元宝捐款\第三排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第三排名.txt
+
+ClearNameList ..\QuestDiary\元宝捐款\第四排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第四排名.txt
+
+Addnamelist ..\QuestDiary\元宝捐款\第二排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第二排名元宝数.txt <$HUMAN(JK)>
+
+AddTextListex ..\QuestDiary\元宝捐款\第三排名.txt <$STR(A201)>
+AddTextListex ..\QuestDiary\元宝捐款\第三排名元宝数.txt <$STR(G201)>
+
+
+AddTextListex ..\QuestDiary\元宝捐款\第四排名.txt <$STR(A202)>
+AddTextListex ..\QuestDiary\元宝捐款\第四排名元宝数.txt <$STR(G202)>
+BREAK
+
+
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第五排名.txt
+#ACT
+
+ClearNameList ..\QuestDiary\元宝捐款\第二排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第二排名.txt
+
+ClearNameList ..\QuestDiary\元宝捐款\第三排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第三排名.txt
+
+ClearNameList ..\QuestDiary\元宝捐款\第四排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第四排名.txt
+
+ClearNameList ..\QuestDiary\元宝捐款\第五排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第五排名.txt
+
+Addnamelist ..\QuestDiary\元宝捐款\第二排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第二排名元宝数.txt <$HUMAN(JK)>
+
+AddTextListex ..\QuestDiary\元宝捐款\第三排名.txt <$STR(A201)>
+AddTextListex ..\QuestDiary\元宝捐款\第三排名元宝数.txt <$STR(G201)>
+
+
+AddTextListex ..\QuestDiary\元宝捐款\第四排名.txt <$STR(A202)>
+AddTextListex ..\QuestDiary\元宝捐款\第四排名元宝数.txt <$STR(G202)>
+
+AddTextListex ..\QuestDiary\元宝捐款\第五排名.txt <$STR(A203)>
+AddTextListex ..\QuestDiary\元宝捐款\第五排名元宝数.txt <$STR(G203)>
+BREAK
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第六排名.txt
+#ACT
+
+ClearNameList ..\QuestDiary\元宝捐款\第二排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第二排名.txt
+
+ClearNameList ..\QuestDiary\元宝捐款\第三排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第三排名.txt
+
+ClearNameList ..\QuestDiary\元宝捐款\第四排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第四排名.txt
+
+ClearNameList ..\QuestDiary\元宝捐款\第五排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第五排名.txt
+
+Addnamelist ..\QuestDiary\元宝捐款\第二排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第二排名元宝数.txt <$HUMAN(JK)>
+
+AddTextListex ..\QuestDiary\元宝捐款\第三排名.txt <$STR(A201)>
+AddTextListex ..\QuestDiary\元宝捐款\第三排名元宝数.txt <$STR(G201)>
+
+
+AddTextListex ..\QuestDiary\元宝捐款\第四排名.txt <$STR(A202)>
+AddTextListex ..\QuestDiary\元宝捐款\第四排名元宝数.txt <$STR(G202)>
+
+AddTextListex ..\QuestDiary\元宝捐款\第五排名.txt <$STR(A203)>
+AddTextListex ...\QuestDiary\元宝捐款\第五排名元宝数.txt <$STR(G203)>
+
+AddTextListex ..\QuestDiary\元宝捐款\第六排名.txt <$STR(A203)>
+BREAK
+
+
+
+[@BAOCUN2]
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第三排名.txt
+#ACT
+ClearNameList ..\QuestDiary\元宝捐款\第三排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第三排名.txt
+Addnamelist ..\QuestDiary\元宝捐款\第三排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第三排名元宝数.txt <$HUMAN(JK)>
+BREAK
+
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第四排名.txt
+#ACT
+
+ClearNameList ..\QuestDiary\元宝捐款\第三排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第三排名.txt
+
+ClearNameList ..\QuestDiary\元宝捐款\第四排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第四排名.txt
+
+Addnamelist ..\QuestDiary\元宝捐款\第三排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第三排名元宝数.txt <$HUMAN(JK)>
+
+AddTextListex ..\QuestDiary\元宝捐款\第四排名.txt <$STR(A202)>
+AddTextListex ..\QuestDiary\元宝捐款\第四排名元宝数.txt <$STR(G202)>
+BREAK
+
+
+
+
+
+
+
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第五排名.txt
+#ACT
+
+ClearNameList ..\QuestDiary\元宝捐款\第三排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第三排名.txt
+
+ClearNameList ..\QuestDiary\元宝捐款\第四排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第四排名.txt
+
+
+ClearNameList ..\QuestDiary\元宝捐款\第五排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第五排名.txt
+
+
+Addnamelist ..\QuestDiary\元宝捐款\第三排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第三排名元宝数.txt <$HUMAN(JK)>
+
+AddTextListex ..\QuestDiary\元宝捐款\第四排名.txt <$STR(A202)>
+AddTextListex ..\QuestDiary\元宝捐款\第四排名元宝数.txt <$STR(G202)>
+
+
+AddTextListex ..\QuestDiary\元宝捐款\第五排名.txt <$STR(A203)>
+AddTextListex ..\QuestDiary\元宝捐款\第五排名元宝数.txt <$STR(G203)>
+BREAK
+
+
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第六排名.txt
+#ACT
+
+
+
+ClearNameList ..\QuestDiary\元宝捐款\第三排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第三排名.txt
+
+ClearNameList ..\QuestDiary\元宝捐款\第四排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第四排名.txt
+
+ClearNameList ..\QuestDiary\元宝捐款\第五排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第五排名.txt
+
+Addnamelist ..\QuestDiary\元宝捐款\第三排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第三排名元宝数.txt <$HUMAN(JK)>
+
+AddTextListex ..\QuestDiary\元宝捐款\第四排名.txt <$STR(A202)>
+AddTextListex ..\QuestDiary\元宝捐款\第四排名元宝数.txt <$STR(G202)>
+
+
+AddTextListex ..\QuestDiary\元宝捐款\第五排名.txt <$STR(A203)>
+AddTextListex ..\QuestDiary\元宝捐款\第五排名元宝数.txt <$STR(G203)>
+
+AddTextListex ..\QuestDiary\元宝捐款\第六排名.txt <$STR(A204)>
+BREAK
+
+
+[@BAOCUN3]
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第四排名.txt
+#ACT
+ClearNameList ..\QuestDiary\元宝捐款\第四排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第四排名.txt
+Addnamelist ..\QuestDiary\元宝捐款\第四排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第四排名元宝数.txt <$HUMAN(JK)>
+
+BREAK
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第五排名.txt
+#ACT
+
+ClearNameList ..\QuestDiary\元宝捐款\第四排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第四排名.txt
+
+ClearNameList ..\QuestDiary\元宝捐款\第五排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第五排名.txt
+
+Addnamelist ..\QuestDiary\元宝捐款\第四排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第四排名元宝数.txt <$HUMAN(JK)>
+
+AddTextListex ..\QuestDiary\元宝捐款\第五排名.txt <$STR(A203)>
+AddTextListex ..\QuestDiary\元宝捐款\第五排名元宝数.txt <$STR(G203)>
+BREAK
+
+
+
+
+
+
+
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第六排名.txt
+#ACT
+
+ClearNameList ..\QuestDiary\元宝捐款\第四排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第四排名.txt
+
+ClearNameList ..\QuestDiary\元宝捐款\第五排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第五排名.txt
+
+Addnamelist ..\QuestDiary\元宝捐款\第四排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第四排名元宝数.txt <$HUMAN(JK)>
+
+AddTextListex ..\QuestDiary\元宝捐款\第六排名.txt <$STR(A204)>
+BREAK
+
+
+
+[@BAOCUN4]
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第五排名.txt
+#ACT
+ClearNameList ..\QuestDiary\元宝捐款\第五排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第五排名.txt
+Addnamelist ..\QuestDiary\元宝捐款\第五排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第五排名元宝数.txt <$HUMAN(JK)>
+BREAK
+
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\元宝捐款\第六排名.txt
+#ACT
+
+
+
+ClearNameList ..\QuestDiary\元宝捐款\第五排名元宝数.txt
+ClearNameList ..\QuestDiary\元宝捐款\第五排名.txt
+
+Addnamelist ..\QuestDiary\元宝捐款\第五排名.txt
+AddTextListex ..\QuestDiary\元宝捐款\第五排名元宝数.txt <$HUMAN(JK)>
+
+AddTextListex ..\QuestDiary\元宝捐款\第六排名.txt <$STR(A204)>
+BREAK
+}

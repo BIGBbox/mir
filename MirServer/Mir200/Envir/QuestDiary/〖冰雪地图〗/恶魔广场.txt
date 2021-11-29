@@ -1,0 +1,142 @@
+[@恶魔广场]
+{
+#IF
+#act
+mov S$掉落显示窗口
+mov S$显示掉落窗口打开 0
+
+
+goto @恶魔广场主界面
+
+
+[@恶魔广场主界面]
+#if
+#act
+
+#say
+
+<Img|width=620|height=240|children={掉落窗口}|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=255|size=18|text=¤╭⌒╮╭⌒╮                   \>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=249|size=18|text=╱◥██◣>
+<Text|a=0|x=153|y=45|tipsx=10|tipsy=80|color=255|size=18|text=╭⌒╮>
+<Text|a=0|x=340|y=45|tipsx=10|tipsy=80|color=254|size=18|text=欢迎光临>
+<Text|a=0|x=428|y=45|tipsx=10|tipsy=80|color=249|size=18|text=<$SERVERNAME>>
+<Text|a=0|x=32|y=65|tips={╰-------------/FCOLOR=255}|tipsx=10|tipsy=80|color=150|size=18|text=︱田︱田田>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=64|size=18|text=╬╬╬╬╬╬╬╬╬╬╬╬╬>
+<Text|a=0|x=395|y=85|tipsx=10|tipsy=80|color=253|size=18|text=恶魔广场>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=250|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=253|size=18|text=恶魔之地，生人勿近！此地图BOSS两个小时刷新，领主四个小时！>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=56|size=18|text=本地图一共三层，三层领主会秒人的，装备太差就不要进入寻求刺激了>
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=251|size=18|text=四转进入|link=@恶魔广场>
+<Text|a=0|x=233.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=3000元宝进入|link=@恶魔广场1>
+<Text|a=0|x=428.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=VIP会员免费进入|link=@会员免费进入>
+<Button|x=515|y=25.0|nimg=public/icon/common1087.png|link=@显示掉落>
+<$str(S$掉落显示窗口)>
+; common1085
+
+[@恶魔广场按钮]
+#if
+equal <$str(S$参数)> 1
+checklevelex < 110
+#act
+MESSAGEBOX 人物等级不够！无法进入！
+break
+
+#if
+equal <$str(S$参数)> 2
+not large <$str(U22)> 0
+#act
+MESSAGEBOX 你还不是本服的会员！无法进入！
+break
+
+#if
+equal <$str(S$参数)> 3
+CheckBindMoney 元宝 < 1000
+#act
+MESSAGEBOX 你的元宝不足！无法进入！
+break
+
+#if
+equal <$str(S$参数)> 3
+not CheckBindMoney 元宝 < 1000
+#act
+money 绑定元宝 - 1000
+
+
+#if
+#ACT
+give 回城卷 1
+MapMove ymxy1
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖恶魔广场〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖恶魔广场〗,寻找高级装备！
+
+
+[@显示掉落]
+
+#if
+#act
+mov N$物品序号 0
+mov N$道具X0 12
+mov N$道具X1 12
+mov N$道具X2 12
+mov N$道具X3 12
+mov N$道具X4 12
+mov N$道具X5 12
+
+mov N$道具Y 20
+
+
+#if
+equal <$str(S$显示掉落窗口打开)> 1
+#act
+mov S$掉落显示窗口
+mov S$显示掉落窗口打开 0
+goto @恶魔广场主界面
+break
+
+#if
+#act
+mov S$显示掉落窗口打开 1
+
+inc S$掉落显示窗口 <Img|id=掉落窗口|children={lin1,lin2,lin3,lin4,name0,name1,name2,name3,name4,name5,}|width=120|height=250|x=630.0|y=58.0|img=public/haha/ty_bg.png|link=@>
+inc S$掉落显示窗口 <Img|id=lin1|width=115|height=2|x=2.0|y=48.0|img=public/sf1/19/line.png>
+inc S$掉落显示窗口 <Img|id=lin2|width=115|height=2|x=2.0|y=98.0|img=public/sf1/19/line.png>
+inc S$掉落显示窗口 <Img|id=lin3|width=115|height=2|x=2.0|y=148.0|img=public/sf1/19/line.png>
+inc S$掉落显示窗口 <Img|id=lin4|width=115|height=2|x=2.0|y=198.0|img=public/sf1/19/line.png>
+
+
+goto @获取掉落列表
+
+
+[@获取掉落列表]
+#if
+#act
+GetListString ..\QuestDiary\〖冰雪地图〗\恶魔广场掉落.txt <$str(N$物品序号)> S$材料名<$str(N$物品序号)> 
+
+#if
+not CheckStringlength <$str(S$材料名<$str(N$物品序号)>)> > 8
+#act
+inc N$道具X<$str(N$物品序号)> 10
+
+#if
+CheckStringlength <$str(S$材料名<$str(N$物品序号)>)> > 8
+not CheckStringlength <$str(S$材料名<$str(N$物品序号)>)> > 10
+#act
+inc N$道具X<$str(N$物品序号)> 7
+
+#if
+#act
+inc S$掉落显示窗口 <Text|id=name<$str(N$物品序号)>|x=<$str(N$道具X<$str(N$物品序号)>)>|y=<$str(N$道具Y)>|tipsx=10|tipsy=80|color=158|size=18|text=<$str(S$材料名<$str(N$物品序号)>)>>
+
+#if
+not equal <$str(S$材料名<$str(N$物品序号)>)>
+#act
+inc N$物品序号 1
+inc N$道具Y 50
+goto @获取掉落列表
+#elseact
+goto @恶魔广场主界面
+
+}

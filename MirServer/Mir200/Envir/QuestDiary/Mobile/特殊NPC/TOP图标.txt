@@ -4,16 +4,35 @@
 #IF
 #ACT
 ;BREAK
+goto @手游top1
 
-; #IF
-; Equal <$CLIENTFLAG> 2
-; #ACT
-; MOV S$图标2 <Button|x=-230|y=35|nimg=official/top/1900012531.png|link=@伸缩>
-; INC S$图标2 <Button|x=-320|y=35|nimg=official/top/1900012611.png|link=@建议>
-; INC S$图标2 <Button|x=-400|y=35|nimg=official/top/1900012607.png|link=@首充>
-; INC S$图标2 <Button|x=-480|y=35|nimg=official/top/1900012601.png|link=@活动>
-; INC S$图标2 <Button|x=-560|y=35|nimg=official/top/1900012602.png|link=@飞鞋>
-; addbutton 102 2 <$STR(S$图标2)>
+
+[@手游top1]
+
+#IF
+Equal <$CLIENTFLAG> 2
+#ACT
+MOV N$坐标Y1 45
+MOV N$坐标Y2 110
+MOV N$坐标Y3 110
+
+;delbutton 102 2
+MOV S$展示 <Button|x=-230|y=<$STR(N$坐标Y1)>|nimg=official/top/1900012531.png|link=@伸缩>
+MOV S$图标2 <Button|x=-230|y=<$STR(N$坐标Y1)>|nimg=official/top/1900012531.png|link=@伸缩>
+MOV N$坐标X2 -320
+
+INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=official/top/1900012601.png|link=@每日悬赏>
+
+; dec N$坐标X2 80
+; INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=official/top/1900012611.png|link=@建议>
+
+; dec N$坐标X2 80
+; INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=official/top/1900012607.png|link=@首充>
+
+; dec N$坐标X2 80
+; INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=official/top/1900012602.png|link=@飞鞋>
+
+addbutton 102 2 <$STR(S$图标2)>
 
 
 #IF
@@ -24,5 +43,30 @@ MOV S$admin <Button|x=-250|y=220|nimg=official/top/1900012530.png|link=@管理模式
 
 addbutton 102 4 <$STR(S$admin)>
 
+[@伸缩]
+#if
+#act
+;delbutton 102 2
+MOV S$展示 <Button|x=-230|a=3|y=45|rotate=180|nimg=official/top/1900012531.png|link=@展开>
+addbutton 102 2 <$STR(S$展示)>
+
+; ;delbutton 102 2
+
+[@每日悬赏]
+#if
+#act
+#Call [\每日悬赏系统\每日悬赏.txt] @每日悬赏主面板
+
+
+[@管理模式]
+#IF
+#ACT
+#Call [\Mobile\特殊NPC\系统管理员.txt] @GM
+
+[@展开]
+
+#IF
+#ACT
+addbutton 102 2 <$STR(S$图标2)>
 
 }

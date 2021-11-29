@@ -1,0 +1,642 @@
+[@服务功能]
+{
+
+#if
+#act
+mov S$面板 斗笠
+goto @获取装备数据
+goto @面板切换按钮
+
+[@获取装备数据]
+#if
+#act
+
+mov N$道具序号 1
+mov N$窗口序号 1
+
+mov N$控件坐标X 10
+mov N$控件坐标Y 5
+
+goto @装备合成主界面
+
+
+[@装备合成主界面]
+#if
+#act
+#say
+<Img|x=0|y=0|width=9999|height=9999|children={装备合成主面板}|img=public/0.png|bg=1>
+<Img|id=装备合成主面板|x=210|y=30|img=public/sf1/2/bg2.png|children={内框背景,标题,按钮1,按钮2,按钮3,按钮4,按钮5,按钮6,按钮7,按钮8,官位背景,升级条件1,升级条件2,当前官位,获取途径,获取途径控件,closeBtn}|reset=1>
+
+<Button|id=closeBtn|x=765|y=65.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Img|id=内框背景|x=187|y=80|width=565|height=441|children={容器}|img=public/haha/ty_bg.png>
+<Button|id=按钮1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=斗笠合成|link=@面板切换按钮#面板=斗笠>
+<Button|id=按钮2|x=60|y=125.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=盾牌合成|link=@面板切换按钮#面板=盾牌>
+<Button|id=按钮3|x=60|y=170.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=宝珠合成|link=@面板切换按钮#面板=宝珠>
+<Button|id=按钮4|x=60|y=215.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=特戒合成|link=@面板切换按钮#面板=特戒>
+<Button|id=按钮5|x=60|y=260.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=官职合成|link=@面板切换按钮#面板=官职>
+<Button|id=按钮6|x=60|y=305.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=经验合成|link=@面板切换按钮#面板=经验>
+<Button|id=按钮7|x=60|y=350.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=主印合成|link=@面板切换按钮#面板=主印>
+<Button|id=按钮8|x=60|y=395.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=辅印合成|link=@面板切换按钮#面板=辅印>
+<ListView|id=容器|children={控件1,控件2,控件3,控件4,控件5,控件6,控件7,控件8,控件9,控件10,}|margin=3|x=4.0|y=2.0|width=786|height=435>
+
+; <$str(S$主印合成面板)>
+; <$str(S$斗笠合成面板)>
+; <$str(S$盾牌合成面板)>
+; <$str(S$宝珠合成面板)>
+; <$str(S$特戒合成面板)>
+; <$str(S$官职合成面板)>
+; <$str(S$经验合成面板)>
+; <$str(S$辅印合成面板)>
+
+<$str(S$合成面板)>
+
+
+[@面板切换按钮]
+
+#if
+#act
+; mov S$斗笠合成面板
+; mov S$盾牌合成面板
+; mov S$宝珠合成面板
+; mov S$特戒合成面板
+; mov S$官职合成面板
+; mov S$经验合成面板
+; mov S$主印合成面板
+; mov S$辅印合成面板
+mov S$合成面板
+
+mov S$窗口名字 <$str(S$面板)>
+ReadConfigFileItem ..\QuestDiary\装备合成\<$str(S$窗口名字)>\<$str(S$窗口名字)>数据.txt 行数 行数 S$行数
+sendmsg 5 参数::<$str(S$面板)>::<$str(S$行数)>
+sendmsg 5 
+goto @滚动窗口
+goto @获取装备数据
+
+
+[@滚动窗口]
+#if
+#act
+
+inc S$合成面板 <Img|id=控件<$str(N$窗口序号)>|x=0|y=0|width=560|height=160|children={小窗口<$str(N$窗口序号)>1,小窗口<$str(N$窗口序号)>2,}|img=public/chongzhi/0.png>
+mov N$标记 1
+goto @装备合成面板
+
+#if
+small <$str(N$窗口序号)> <$str(S$行数)>
+#act
+inc N$窗口序号 1
+goto @滚动窗口
+
+
+[@装备合成面板]
+
+#if
+#act
+; sendmsg 5 <$str(S$窗口名字)>----
+; width=565|height=441|
+ReadConfigFileItem ..\QuestDiary\装备合成\<$str(S$窗口名字)>\<$str(S$窗口名字)>数据.txt <$str(N$道具序号)> 道具名 S$道具
+ReadConfigFileItem ..\QuestDiary\装备合成\<$str(S$窗口名字)>\<$str(S$窗口名字)>数据.txt <$str(N$道具序号)> 材料 S$材料
+ReadConfigFileItem ..\QuestDiary\装备合成\<$str(S$窗口名字)>\<$str(S$窗口名字)>数据.txt <$str(N$道具序号)> 货币 S$货币
+ReadConfigFileItem ..\QuestDiary\装备合成\<$str(S$窗口名字)>\<$str(S$窗口名字)>数据.txt <$str(N$道具序号)> x S$控件坐标X
+ReadConfigFileItem ..\QuestDiary\装备合成\<$str(S$窗口名字)>\<$str(S$窗口名字)>数据.txt <$str(N$道具序号)> y S$控件坐标Y
+GetValidstr <$STR(S$道具)> * S$道具名<$str(N$道具序号)> S$道具数量<$str(N$道具序号)>
+GetValidstr <$STR(S$材料)> * S$材料名<$str(N$道具序号)> S$材料数量<$str(N$道具序号)>
+GetValidstr <$STR(S$货币)> * S$货币名<$str(N$道具序号)> S$货币数量<$str(N$道具序号)>
+
+GetDBItemFieldValue <$str(S$道具名<$str(N$道具序号)>)> idx S$道具名ID<$str(N$道具序号)>
+GetDBItemFieldValue <$str(S$货币名<$str(N$道具序号)>)> Looks S$道具名Looks<$str(N$道具序号)>
+GETBAGITEMCOUNT <$str(S$材料名<$str(N$道具序号)>)> N$实际数量
+; sendmsg 5 <$str(S$道具名Looks)>---
+; sendmsg 5 <$str(S$控件坐标Y)>==<$str(S$控件坐标X)>
+#if
+not equal <$str(S$道具)>
+#act
+
+inc S$合成面板 <Img|id=小窗口<$str(N$窗口序号)><$str(N$标记)>|x=<$str(S$控件坐标X)>|y=<$str(S$控件坐标Y)>|width=250|height=160|children={标题<$str(N$道具序号)>,需要道具<$str(N$道具序号)>,需要材料<$str(N$道具序号)>,需要货币图标<$str(N$道具序号)>,需要货币数量<$str(N$道具序号)>,合成按钮<$str(N$道具序号)>}|img=public/chongzhi/cellbg.png>
+inc S$合成面板 <Text|id=标题<$str(N$道具序号)>|x=80|y=3|color=253|size=18|text=<$str(S$道具名<$str(N$道具序号)>)>>
+inc S$合成面板 <ItemShow|id=需要道具<$str(N$道具序号)>|x=5|y=25|itemid=<$STR(S$道具名ID<$str(N$道具序号)>)>|itemcount=<$STR(S$道具数量<$str(N$道具序号)>)>|showtips=1|bgtype=1|scale=0.8>
+inc S$合成面板 <RText|id=需要材料<$str(N$道具序号)>|x=70|y=35|size=16|text=<材料：/FCOLOR=161><<$str(S$材料名<$str(N$道具序号)>)>/FCOLOR=253><(<$str(N$实际数量)>/<$str(S$材料数量<$str(N$道具序号)>)>)/FCOLOR=161>>
+inc S$合成面板 <Img|id=需要货币图标<$str(N$道具序号)>|x=70|y=55|img=item/item_0/000<$str(S$道具名Looks<$str(N$道具序号)>)>.png>
+inc S$合成面板 <Text|id=需要货币数量<$str(N$道具序号)>|x=120|y=60|color=161|size=18|text=<$str(S$货币数量<$str(N$道具序号)>)>>
+inc S$合成面板 <Button|id=合成按钮<$str(N$道具序号)>|x=75|y=105.0|nimg=public/haha/1900012825.png|color=161|size=17|text=合成|link=@装备合成按钮#参数=<$str(N$道具序号)>>
+
+inc N$道具序号 1
+; mov N$控件坐标X 270
+
+#if
+not equal <$str(S$道具)>
+small <$str(N$标记)> 2
+; small <$str(N$道具序号)> 3
+#act
+inc N$标记 1
+goto @装备合成面板
+#elseact
+goto @装备合成主界面
+
+
+[@装备合成按钮]
+
+#if
+equal <$str(S$货币名)> 元宝
+#act
+
+#or
+not checkitem <$str(S$材料名<$str(S$参数)>)> <$str(S$材料数量<$str(S$参数)>)>
+checkmoney <$str(S$货币名<$str(S$参数)>)> < <$str(S$货币数量<$str(S$参数)>)>
+#act
+messagebox 材料不足无法合成!!
+break
+
+#if
+#act
+money <$str(S$货币名<$str(S$参数)>)> - <$str(S$货币数量<$str(S$参数)>)>
+TAKE <$str(S$材料名<$str(S$参数)>)> <$str(S$材料数量<$str(S$参数)>)>
+GiveStateItem <$str(S$道具名<$str(S$参数)>)> <$str(S$道具数量<$str(S$参数)>)> 0 1 0 0 1 1 1 1
+sendmsg 7 合成<$str(S$道具名<$str(S$参数)>)>成功!!
+goto @面板切换按钮
+
+
+
+[@起源斗笠]
+#IF
+CHECKGAMEGOLD > 29999
+CHECKITEM 上古斗笠 3
+#act
+GAMEGOLD - 30000
+TAKE 上古斗笠 3
+GIVE 起源斗笠 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 需要【上古斗笠】3个+80000元宝！
+BREAK
+
+[@上古斗笠]
+#IF
+CHECKGAMEGOLD > 29999
+CHECKITEM 冰雪斗笠 3
+#act
+GAMEGOLD - 30000
+TAKE 冰雪斗笠 3
+GIVE 上古斗笠 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 需要【冰雪斗笠】3个+50000元宝！
+BREAK
+
+[@冰雪斗笠]
+#IF
+CHECKGAMEGOLD > 29999
+CHECKITEM 王者斗笠 3
+#act
+GAMEGOLD - 30000
+TAKE 王者斗笠 3
+GIVE 冰雪斗笠 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 需要【王者斗笠】3个+30000元宝！
+BREAK
+
+
+
+[@起源·盾]
+#IF
+CHECKGAMEGOLD > 29999
+CHECKITEM 上古·盾 3
+#act
+GAMEGOLD - 30000
+TAKE 上古·盾 3
+GIVE 起源·盾 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 需要【上古·盾】3个+80000元宝！
+BREAK
+
+[@上古·盾]
+#IF
+CHECKGAMEGOLD > 29999
+CHECKITEM 冰雪·盾 3
+#act
+GAMEGOLD - 30000
+TAKE 冰雪·盾 3
+GIVE 上古·盾 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 需要【冰雪·盾】3个+50000元宝！
+BREAK
+
+[@冰雪·盾]
+#IF
+CHECKGAMEGOLD > 29999
+CHECKITEM 王者·盾 3
+#act
+GAMEGOLD - 30000
+TAKE 王者·盾 3
+GIVE 冰雪·盾 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 需要【王者·盾】3个+30000元宝！
+BREAK
+
+
+[@王者·盾]
+#IF
+CHECKGAMEGOLD > 9999
+CHECKITEM 超凡·盾 2
+#act
+GAMEGOLD - 10000
+TAKE 超凡·盾 2
+GIVE 王者·盾 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@超凡·盾]
+#IF
+CHECKGAMEGOLD > 7999
+CHECKITEM 钻石·盾 2
+#act
+GAMEGOLD - 8000
+TAKE 钻石·盾 2
+GIVE 超凡·盾 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@钻石·盾]
+#IF
+CHECKGAMEGOLD > 5999
+CHECKITEM 白金·盾 2
+#act
+GAMEGOLD - 6000
+TAKE 白金·盾 2
+GIVE 钻石·盾 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@白金·盾]
+#IF
+CHECKGAMEGOLD > 3999
+CHECKITEM 黄金·盾 2
+#act
+GAMEGOLD - 4000
+TAKE 黄金·盾 2
+GIVE 白金·盾 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@黄金·盾]
+#IF
+CHECKGAMEGOLD > 1999
+CHECKITEM 白银·盾 2
+#act
+GAMEGOLD - 2000
+TAKE 白银·盾 2
+GIVE 黄金·盾 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@白银·盾]
+#IF
+CHECKGAMEGOLD > 999
+CHECKITEM 青铜·盾 2
+#act
+GAMEGOLD - 1000
+TAKE 青铜·盾 2
+GIVE 白银·盾 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@青铜]
+#IF
+CHECKGAMEGOLD > 499
+CHECKITEM 幸运·盾 2
+#act
+GAMEGOLD - 500
+TAKE 幸运·盾 2
+GIVE 青铜·盾 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@王者斗笠]
+#IF
+CHECKGAMEGOLD > 9999
+CHECKITEM 超凡斗笠 2
+#act
+GAMEGOLD - 10000
+TAKE 超凡斗笠 2
+GIVE 王者斗笠 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@超凡斗笠]
+#IF
+CHECKGAMEGOLD > 7999
+CHECKITEM 钻石斗笠 2
+#act
+GAMEGOLD - 8000
+TAKE 钻石斗笠 2
+GIVE 超凡斗笠 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@钻石斗笠]
+#IF
+CHECKGAMEGOLD > 5999
+CHECKITEM 白金斗笠 2
+#act
+GAMEGOLD - 6000
+TAKE 白金斗笠 2
+GIVE 钻石斗笠 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@白金斗笠]
+#IF
+CHECKGAMEGOLD > 3999
+CHECKITEM 黄金斗笠 2
+#act
+GAMEGOLD - 4000
+TAKE 黄金斗笠 2
+GIVE 白金斗笠 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@黄金斗笠]
+#IF
+CHECKGAMEGOLD > 1999
+CHECKITEM 白银斗笠 2
+#act
+GAMEGOLD - 2000
+TAKE 白银斗笠 2
+GIVE 黄金斗笠 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@白银斗笠]
+#IF
+CHECKGAMEGOLD > 999
+CHECKITEM 青铜斗笠 2
+#act
+GAMEGOLD - 1000
+TAKE 青铜斗笠 2
+GIVE 白银斗笠 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@青铜斗笠]
+#IF
+CHECKGAMEGOLD > 499
+CHECKITEM 幸运斗笠 2
+#act
+GAMEGOLD - 500
+TAKE 幸运斗笠 2
+GIVE 青铜斗笠 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+
+
+
+[@治疗宝珠]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<Img|width=500|height=220|rotate=0|scale9l=10|scale9t=10|reset=1|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9r=10>
+<Layout|x=478.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=500.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=245|size=13|text=神器，征伐天下的脚步将从这里拉开序幕>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=155|size=13|text=------------------------------------------------------------->
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=251|size=13|text=合成治疗宝珠②|link=@治疗宝珠②>
+<Text|a=0|x=140.0|y=65.0|tipsx=10|tipsy=80|color=254|size=13|text=需要条件:>
+<Text|a=0|x=202.0|y=65.0|tipsx=10|tipsy=80|color=254|size=13|text=治疗宝珠① 3个，2000元宝合成>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=251|size=13|text=合成治疗宝珠③|link=@治疗宝珠③>
+<Text|a=0|x=140.0|y=85.0|tipsx=10|tipsy=80|color=254|size=13|text=需要条件:>
+<Text|a=0|x=202.0|y=85.0|tipsx=10|tipsy=80|color=254|size=13|text=治疗宝珠② 3个，4000元宝合成>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=251|size=13|text=合成治疗宝珠④|link=@治疗宝珠④>
+<Text|a=0|x=140.0|y=105.0|tipsx=10|tipsy=80|color=254|size=13|text=需要条件:>
+<Text|a=0|x=202.0|y=105.0|tipsx=10|tipsy=80|color=254|size=13|text=治疗宝珠③ 3个，6000元宝合成>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=251|size=13|text=合成治疗宝珠⑤|link=@治疗宝珠⑤>
+<Text|a=0|x=140.0|y=125.0|tipsx=10|tipsy=80|color=254|size=13|text=需要条件:>
+<Text|a=0|x=202.0|y=125.0|tipsx=10|tipsy=80|color=254|size=13|text=治疗宝珠④ 3个，10000元宝合成>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=251|size=13|text=合成治疗宝珠⑥|link=@治疗宝珠⑥>
+<Text|a=0|x=140.0|y=145.0|tipsx=10|tipsy=80|color=254|size=13|text=需要条件:>
+<Text|a=0|x=202.0|y=145.0|tipsx=10|tipsy=80|color=254|size=13|text=治疗宝珠⑤ 3个，10000元宝合成>
+<Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=155|size=13|text=------------------------------------------------------------->
+<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=251|size=13|text=下一页|link=@下一页2>
+
+#elsesay
+<Img|x=-1.0|y=0.0|width=620|height=300|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=245|size=18|text=神器，征伐天下的脚步将从这里拉开序幕>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=155|size=18|text=------------------------------------------------------------->
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=251|size=18|text=合成治疗宝珠②|link=@治疗宝珠②>
+<Text|a=0|x=181.0|y=65.0|tipsx=10|tipsy=80|color=254|size=18|text=需要条件:>
+<Text|a=0|x=264.0|y=65.0|tipsx=10|tipsy=80|color=254|size=18|text=治疗宝珠① 3个，2000元宝合成>
+<Text|a=0|x=33.0|y=106.0|tipsx=10|tipsy=80|color=251|size=18|text=合成治疗宝珠③|link=@治疗宝珠③>
+<Text|a=0|x=182.0|y=106.0|tipsx=10|tipsy=80|color=254|size=18|text=需要条件:>
+<Text|a=0|x=264.0|y=106.0|tipsx=10|tipsy=80|color=254|size=18|text=治疗宝珠② 3个，4000元宝合成>
+<Text|a=0|x=33.0|y=146.0|tipsx=10|tipsy=80|color=251|size=18|text=合成治疗宝珠④|link=@治疗宝珠④>
+<Text|a=0|x=182.0|y=146.0|tipsx=10|tipsy=80|color=254|size=18|text=需要条件:>
+<Text|a=0|x=264.0|y=146.0|tipsx=10|tipsy=80|color=254|size=18|text=治疗宝珠③ 3个，6000元宝合成>
+<Text|a=0|x=32.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=合成治疗宝珠⑤|link=@治疗宝珠⑤>
+<Text|a=0|x=181.0|y=185.0|tipsx=10|tipsy=80|color=254|size=18|text=需要条件:>
+<Text|a=0|x=264.0|y=185.0|tipsx=10|tipsy=80|color=254|size=18|text=治疗宝珠④ 3个，10000元宝合成>
+<Text|a=0|x=32.0|y=222.0|tipsx=10|tipsy=80|color=251|size=18|text=合成治疗宝珠⑥|link=@治疗宝珠⑥>
+<Text|a=0|x=181.0|y=222.0|tipsx=10|tipsy=80|color=254|size=18|text=需要条件:>
+<Text|a=0|x=264.0|y=222.0|tipsx=10|tipsy=80|color=254|size=18|text=治疗宝珠⑤ 3个，10000元宝合成>
+<Text|a=0|x=32.0|y=242.0|tipsx=10|tipsy=80|color=155|size=18|text=------------------------------------------------------------->
+<Text|a=0|x=279.0|y=260.0|tipsx=10|tipsy=80|color=251|size=18|text=下一页|link=@下一页2>
+
+
+[@下一页2]
+#if
+equal <$CLIENTFLAG> 1
+#say
+<Img|width=500|height=220|rotate=0|scale9l=10|scale9r=10|scale9t=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=477.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=499.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=245|size=13|text=神器，征伐天下的脚步将从这里拉开序幕>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=155|size=13|text=------------------------------------------------------------->
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=251|size=13|text=合成治疗宝珠⑦|link=@治疗宝珠⑦>
+<Text|a=0|x=142.0|y=65.0|tipsx=10|tipsy=80|color=254|size=13|text=需要条件:>
+<Text|a=0|x=207.0|y=65.0|tipsx=10|tipsy=80|color=254|size=13|text=治疗宝珠⑥ 3个，15000元宝合成>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=251|size=13|text=合成治疗宝珠⑧|link=@治疗宝珠⑧>
+<Text|a=0|x=142.0|y=85.0|tipsx=10|tipsy=80|color=254|size=13|text=需要条件:>
+<Text|a=0|x=207.0|y=85.0|tipsx=10|tipsy=80|color=254|size=13|text=治疗宝珠⑦ 3个，20000元宝合成>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=251|size=13|text=合成治疗宝珠⑨|link=@治疗宝珠⑨>
+<Text|a=0|x=142.0|y=105.0|tipsx=10|tipsy=80|color=254|size=13|text=需要条件:>
+<Text|a=0|x=207.0|y=105.0|tipsx=10|tipsy=80|color=254|size=13|text=治疗宝珠⑧ 3个，25000元宝合成>
+<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=251|size=13|text=合终极治疗宝珠|link=@终极治疗宝珠>
+<Text|a=0|x=142.0|y=125.0|tipsx=10|tipsy=80|color=254|size=13|text=需要条件:>
+<Text|a=0|x=207.0|y=125.0|tipsx=10|tipsy=80|color=254|size=13|text=治疗宝珠⑨ 3个，30000元宝合成>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=155|size=13|text=------------------------------------------------------------->
+<Text|a=0|x=32.0|y=165.0|tipsx=10|tipsy=80|color=251|size=13|text=点此返回功能首页|link=@MAIN>
+
+#elsesay
+<Img|x=0.0|y=0.0|width=620|height=300|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=245|size=18|text=神器，征伐天下的脚步将从这里拉开序幕>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=155|size=18|text=------------------------------------------------------------->
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=251|size=18|text=合成治疗宝珠⑦|link=@治疗宝珠⑦>
+<Text|a=0|x=178.0|y=65.0|tipsx=10|tipsy=80|color=254|size=18|text=需要条件:>
+<Text|a=0|x=263.0|y=65.0|tipsx=10|tipsy=80|color=254|size=18|text=治疗宝珠⑥ 3个，15000元宝合成>
+<Text|a=0|x=32.0|y=119.0|tipsx=10|tipsy=80|color=251|size=18|text=合成治疗宝珠⑧|link=@治疗宝珠⑧>
+<Text|a=0|x=178.0|y=119.0|tipsx=10|tipsy=80|color=254|size=18|text=需要条件:>
+<Text|a=0|x=263.0|y=119.0|tipsx=10|tipsy=80|color=254|size=18|text=治疗宝珠⑦ 3个，20000元宝合成>
+<Text|a=0|x=32.0|y=174.0|tipsx=10|tipsy=80|color=251|size=18|text=合成治疗宝珠⑨|link=@治疗宝珠⑨>
+<Text|a=0|x=178.0|y=174.0|tipsx=10|tipsy=80|color=254|size=18|text=需要条件:>
+<Text|a=0|x=263.0|y=174.0|tipsx=10|tipsy=80|color=254|size=18|text=治疗宝珠⑧ 3个，25000元宝合成>
+<Text|a=0|x=32.0|y=228.0|tipsx=10|tipsy=80|color=251|size=18|text=合终极治疗宝珠|link=@终极治疗宝珠>
+<Text|a=0|x=178.0|y=228.0|tipsx=10|tipsy=80|color=254|size=18|text=需要条件:>
+<Text|a=0|x=263.0|y=228.0|tipsx=10|tipsy=80|color=254|size=18|text=治疗宝珠⑨ 3个，30000元宝合成>
+<Text|a=0|x=32.0|y=244.0|tipsx=10|tipsy=80|color=155|size=18|text=------------------------------------------------------------->
+<Text|a=0|x=236.0|y=263.0|tipsx=10|tipsy=80|color=251|size=18|text=点此返回功能首页|link=@MAIN>
+
+
+
+[@终极治疗宝珠]
+#IF
+CHECKGAMEGOLD > 29999
+CHECKITEM 治疗宝珠⑨ 3
+#act
+GAMEGOLD - 30000
+TAKE 治疗宝珠⑨ 3
+GIVE 终极治疗宝珠 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@治疗宝珠⑨]
+#IF
+CHECKGAMEGOLD > 24999
+CHECKITEM 治疗宝珠⑧ 3
+#act
+GAMEGOLD - 25000
+TAKE 治疗宝珠⑧ 3
+GIVE 治疗宝珠⑨ 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@治疗宝珠⑧]
+#IF
+CHECKGAMEGOLD > 19999
+CHECKITEM 治疗宝珠⑦ 3
+#act
+GAMEGOLD - 20000
+TAKE 治疗宝珠⑦ 3
+GIVE 治疗宝珠⑧ 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@治疗宝珠⑦]
+#IF
+CHECKGAMEGOLD > 14999
+CHECKITEM 治疗宝珠⑥ 3
+#act
+GAMEGOLD - 15000
+TAKE 治疗宝珠⑥ 3
+GIVE 治疗宝珠⑦ 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@治疗宝珠⑥]
+#IF
+CHECKGAMEGOLD > 9999
+CHECKITEM 治疗宝珠⑤ 3
+#act
+GAMEGOLD - 10000
+TAKE 治疗宝珠⑤ 3
+GIVE 治疗宝珠⑥ 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@治疗宝珠⑤]
+#IF
+CHECKGAMEGOLD > 9999
+CHECKITEM 治疗宝珠④ 3
+#act
+GAMEGOLD - 10000
+TAKE 治疗宝珠④ 3
+GIVE 治疗宝珠⑤ 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@治疗宝珠④]
+#IF
+CHECKGAMEGOLD > 5999
+CHECKITEM 治疗宝珠③ 3
+#act
+GAMEGOLD - 6000
+TAKE 治疗宝珠③ 3
+GIVE 治疗宝珠④ 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@治疗宝珠③]
+#IF
+CHECKGAMEGOLD > 3999
+CHECKITEM 治疗宝珠② 3
+#act
+GAMEGOLD - 4000
+TAKE 治疗宝珠② 3
+GIVE 治疗宝珠③ 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+[@治疗宝珠②]
+#IF
+CHECKGAMEGOLD > 1999
+CHECKITEM 治疗宝珠① 3
+#act
+GAMEGOLD - 2000
+TAKE 治疗宝珠① 3
+GIVE 治疗宝珠② 1
+MESSAGEBOX 合成成功！
+#ELSEACT
+MESSAGEBOX 合成条件不足！
+BREAK
+
+}

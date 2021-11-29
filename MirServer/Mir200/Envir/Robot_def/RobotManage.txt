@@ -1,3 +1,11 @@
+[@服务器天数]
+#IF
+#ACT
+inc G80 1
+GMEXECUTE StartQuest @QM零点重置
+
+
+
 [@装备拣取]
 #IF
 EQUAL G400 0
@@ -255,12 +263,6 @@ MONGENEX  HDCD 42 42 [领主]冰城魔王  2 1 0 244
 GMEXECUTE 开始提问 @冰城之战a
 SendCenterMsg 249 0 提示：刺杀稻草人活动已经开启！！请玩家速速赶往参加！ 1 3
 SendCenterMsg 249 0 提示：刺杀稻草人活动已经开启！！请玩家速速赶往参加！ 1 3
-
-
-[@服务器天数]
-#IF
-#ACT
-inc G80 1
 
 
 [@清理拿沙数据]
