@@ -20,8 +20,7 @@ goto @切换面板1
 #act
 #say
 ; <Img|x=0|y=0|width=9999|height=9999|children={装备熔炼系统主面板}|img=public/0.png|bg=1|link=@exit>
-<Img|id=装备熔炼系统主面板|x=210|y=30|img=public/sf1/2/bg6.png|children={内框背景,标题,列表1,列表2,列表3,列表4,控件9,获取途径,获取途径控件,closeBtn}|reset=1|move=1|bg=1>
-
+<Img|id=装备熔炼系统主面板|x=210|y=30|img=public/sf1/2/bg6.png|children={内框背景,标题,列表1,列表2,列表3,列表4,控件9,获取途径,获取途径控件,closeBtn}|bg=1|move=1>
 
 <Button|id=closeBtn|x=765|y=65.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
 <Text|id=标题|x=180|y=45|color=255|size=18|text=装备熔炼>
@@ -80,6 +79,8 @@ mov S$元宝消耗 500000
 #if
 #act
 ; MOV S$开始熔炼方法 @开始.熔炼
+
+mov S$窗口名 印记熔炼
 mov S$主界面
 mov S$获取途径
 mov S$按钮列表
@@ -90,7 +91,6 @@ inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/190
 inc S$按钮列表 <Button|id=列表4|x=60|y=200.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神器熔炼|link=@切换面板4>
 
 
-; mov S$窗口名 血龙之体
 goto @获取升级数据
 
 ; goto @装备熔炼系统主面板
@@ -98,7 +98,7 @@ goto @获取升级数据
 [@切换面板2]
 #if
 #act
-
+mov S$窗口名 印记合成
 mov S$主界面
 mov S$获取途径
 mov S$按钮列表
@@ -114,6 +114,7 @@ goto @获取升级数据
 #if
 #act
 
+mov S$窗口名 残·神器熔炼
 mov S$主界面
 mov S$获取途径
 mov S$按钮列表
@@ -128,6 +129,7 @@ goto @获取升级数据
 #if
 #act
 
+mov S$窗口名 神器熔炼
 mov S$主界面
 mov S$获取途径
 mov S$按钮列表
@@ -141,9 +143,10 @@ goto @获取升级数据
 
 [@获取升级数据]
 #if
+equal <$str(S$窗口名)> 印记熔炼
 #act
 
-sendmsg 5 <$str(S$元宝消耗)>元宝
+; sendmsg 5 <$str(S$元宝消耗)>元宝
 inc S$主界面 <Img|x=170|y=70|id=控件9|width=0|height=0|children={控件1,控件2,控件3,控件4,控件5,控件6,控件7,控件8,控件10,ok1,ok2,ok3,连接图片1,连接图片2,连接图片3,btn1,btn2,btn3}|img=public/0.png|bg=1|link=@exit>
 
 inc S$主界面 <Text|id=控件1|x=32|y=25|tipsx=10|tipsy=80|color=56|size=15|text=以下是主印辅助熔炼规则！>
@@ -164,37 +167,396 @@ inc S$主界面 <Button|id=btn1|x=210|y=330.0|width=120|height=40|nimg=public/19000
 inc S$主界面 <RText|id=控件10|x=220|y=385|size=16|text=<熔炼消耗：/FCOLOR=161><<$str(S$元宝消耗)>元宝/FCOLOR=251>>
 ; inc S$按钮列表 <Button|id=btn2|x=210|y=360.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=熔炼|link=@查看变量123>
 
+#if
+equal <$str(S$窗口名)> 印记合成
+#act
+sendmsg 5 印记合成
+inc S$主界面 <Img|x=170|y=70|id=控件9|width=0|height=0|children={控件1,控件2,控件3,控件4,控件5,控件6,控件7,控件8,控件10,ok1,ok2,ok3,合成列表,连接图片1,连接图片2,连接图片3,btn1,btn2,btn3}|img=public/0.png|bg=1|link=@exit>
+
+inc S$主界面 <Text|id=控件1|x=32|y=25|tipsx=10|tipsy=80|color=56|size=15|text=以下是主印辅助合成规则！>
+inc S$主界面 <Text|id=控件2|x=32|y=45|tipsx=10|tipsy=80|color=254|size=15|text=十个主印碎片，合成对应的主印！>
+inc S$主界面 <Text|id=控件3|x=32|y=65|tipsx=10|tipsy=80|color=254|size=15|text=十个辅印碎片，合成对应的辅印！>
+inc S$主界面 <Text|id=控件4|x=32|y=85|tipsx=10|tipsy=80|color=254|size=15|text=合成费用为10W元宝！>
+inc S$主界面 <ListView|id=合成列表|children={1_1,1_2,1_3,1_4,1_5,1_6,1_7,1_8,1_9,1_10,1_11,1_12,1_13,1_14,1_15,1_16,1_17,1_18,1_19,1_20,1_21,1_22,1_23,1_24,1_25,1_26,1_27,1_28,1_29,1_30,1_31,1_32,1_33,1_34,1_35,1_36,1_37,1_38,1_39,1_40,1_41,1_42,1_43,1_44,1_45,1_46,1_47,1_48,1_49,1_50,1_51,1_52,1_53,1_54,1_55,1_56,1_57,1_58,1_59,1_60,}|img=public/1900000680.png|direction=1|bounce=1|x=120|y=120.0|margin=5|height=250|width=505>
+
+inc S$主界面 <Button|id=ok1|x=70|y=400.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=主印合成|link=@主印>
+inc S$主界面 <Button|id=ok2|x=300|y=400.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=辅印合成|link=@辅印>
+ReadConfigFileItem ..\QuestDiary\装备熔炼系统\物品列表\列表.txt 1 碎片 S$碎片
+mov N$印记序号 1
+goto @显示印记列表
+
+#if
+equal <$str(S$窗口名)> 残·神器熔炼
+#act
+inc S$主界面 <Img|x=170|y=70|id=控件9|width=0|height=0|children={控件1,控件2,控件3,控件4,控件5,控件6,控件7,控件8,控件10,成功率,合成按钮,ok1,ok2,ok3,ok4,ok5,合成列表,连接图片1,连接图片2,连接图片3,连接图片4,btn1,btn2,btn3}|img=public/0.png|bg=1|link=@exit>
+inc S$主界面 <Text|id=控件1|x=32|y=25|tipsx=10|tipsy=80|color=56|size=15|text=以下是主印辅助熔炼规则！>
+inc S$主界面 <Text|id=控件2|x=32|y=45|tipsx=10|tipsy=80|color=254|size=15|text=第一个格子放入需要熔炼的装备>
+inc S$主界面 <Text|id=控件3|x=32|y=65|tipsx=10|tipsy=80|color=254|size=15|text=第二个格子放入祭品！>
+inc S$主界面 <Text|id=控件4|x=32|y=85|tipsx=10|tipsy=80|color=56|size=15|text=第三个格子放入恶魔令牌可提高成功率，越多成功率越大>
+inc S$主界面 <Text|id=控件5|x=32|y=105|tipsx=10|tipsy=80|color=250|size=15|text=第四个格子放入血龙魄珠可提高成功率，越多成功率越大>
+inc S$主界面 <Text|id=控件6|x=32|y=125|tipsx=10|tipsy=80|color=250|size=15|text=第五个格子放入洗髓丹可提高成功率，越多成功率越大>
+inc S$主界面 <Img|id=连接图片1|x=120|y=235|img=public/uipic/01709.png>
+inc S$主界面 <Img|id=连接图片2|x=230|y=235|img=public/uipic/01709.png>
+inc S$主界面 <Img|id=连接图片3|x=340|y=235|img=public/uipic/01709.png>
+inc S$主界面 <Img|id=连接图片4|x=450|y=235|img=public/uipic/01709.png>
+inc S$主界面 <ITEMBOX|id=ok1|x=60|y=235.0|width=55|height=55|boxindex=2|stdmode=*|tips={请放入你要熔炼的装备/FCOLOR=255}|tipsx=1|tipsy=65|img=public/1900000651_3.png>
+inc S$主界面 <ITEMBOX|id=ok2|x=170.0|y=235.0|width=55|height=55|boxindex=3|stdmode=*|tips={放入祭品/FCOLOR=255}|tipsx=1|tipsy=65|img=public/1900000651_3.png>
+inc S$主界面 <ITEMBOX|id=ok3|x=280.0|y=235.0|width=55|height=55|boxindex=4|stdmode=*|tips={放入恶魔令牌可提高成功率，越多成功率越大/FCOLOR=255}|tipsx=1|tipsy=65|img=public/1900000651_3.png>
+inc S$主界面 <ITEMBOX|id=ok4|x=390.0|y=235.0|width=55|height=55|boxindex=5|stdmode=*|tips={放入血龙魄珠可提高成功率，越多成功率越大/FCOLOR=255}|tipsx=1|tipsy=65|img=public/1900000651_3.png>
+inc S$主界面 <ITEMBOX|id=ok5|x=500.0|y=235|width=55|height=55|boxindex=6|stdmode=*|tips={放入洗髓丹可提高成功率，越多成功率越大/FCOLOR=255}|tipsx=1|tipsy=65|img=public/1900000651_3.png>
+inc S$主界面 <Text|id=成功率|x=100|y=180|tipsx=10|tipsy=80|size=18|color=250|text=当前成功率:万分之<$GAMEGLORY>>
+inc S$主界面 <Button|id=合成按钮|x=230|y=330|tipsx=10|tipsy=80|nimg=PUBLIC/1900000612.png|pimg=PUBLIC/1900000611.png|color=123|size=13|text=开始熔炼|link=@LABEL>
+
+
+#if
+equal <$str(S$窗口名)> 神器熔炼
+#act
+inc S$主界面 <Img|x=170|y=70|id=控件9|width=0|height=0|children={控件1,控件2,控件3,控件4,控件5,控件6,控件7,控件8,控件10,ok1,ok2,ok3,合成列表,连接图片1,连接图片2,连接图片3,btn1,btn2,btn3}|img=public/0.png|bg=1|link=@exit>
+
+inc S$主界面 <Text|id=控件1|x=32|y=25|tipsx=10|tipsy=80|color=56|size=15|text=以下是主印辅助合成规则！>
+inc S$主界面 <Text|id=控件2|x=32|y=45|tipsx=10|tipsy=80|color=254|size=15|text=十个残【上古】，合成对应的上古装备！>
+; inc S$主界面 <Text|id=控件3|x=32|y=65|tipsx=10|tipsy=80|color=254|size=15|text=十个辅印碎片，合成对应的辅印！>
+inc S$主界面 <Text|id=控件4|x=32|y=85|tipsx=10|tipsy=80|color=254|size=15|text=合成费用为100W元宝！>
+inc S$主界面 <ListView|id=合成列表|children={1_1,1_2,1_3,1_4,1_5,1_6,1_7,1_8,1_9,1_10,1_11,1_12,1_13,1_14,1_15,1_16,1_17,1_18,1_19,1_20,1_21,1_22,1_23,1_24,1_25,1_26,1_27,1_28,1_29,1_30,1_31,1_32,1_33,1_34,1_35,1_36,1_37,1_38,1_39,1_40,1_41,1_42,1_43,1_44,1_45,1_46,1_47,1_48,1_49,1_50,1_51,1_52,1_53,1_54,1_55,1_56,1_57,1_58,1_59,1_60,}|img=public/1900000680.png|direction=1|bounce=1|x=140|y=120.0|margin=5|height=250|width=505>
+
+inc S$主界面 <Button|id=ok1|x=220|y=400.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=神器熔炼|link=@拼凑一下>
+ReadConfigFileItem ..\QuestDiary\装备熔炼系统\物品列表\神器熔炼.txt 1 残 S$碎片
+mov N$神器序号 1
+goto @显示神器列表
+
+#if
+#act
 goto @装备熔炼系统主面板
+
+[@显示印记列表]
+
+#if
+not equal <$str(S$碎片)>
+#act
+mov S$碎片
+mov S$目标
+ReadConfigFileItem ..\QuestDiary\装备熔炼系统\物品列表\列表.txt <$str(N$印记序号)> 碎片 S$碎片
+ReadConfigFileItem ..\QuestDiary\装备熔炼系统\物品列表\列表.txt <$str(N$印记序号)> 目标 S$目标
+
+
+#if
+small <$str(N$印记序号)> 60
+#act
+mov S$颜色 244
+
+#if
+small <$str(N$印记序号)> 50
+#act
+mov S$颜色 149
+
+#if
+small <$str(N$印记序号)> 40
+#act
+mov S$颜色 147
+
+#if
+small <$str(N$印记序号)> 30
+#act
+mov S$颜色 140
+
+#if
+small <$str(N$印记序号)> 20
+#act
+mov S$颜色 130
+
+#if
+small <$str(N$印记序号)> 10
+#act
+mov S$颜色 110
+
+#if
+not equal <$str(S$碎片)>
+#act
+inc S$主界面 <RText|id=1_<$str(N$印记序号)>|x=70|y=330.0|size=15|text=<<$str(S$碎片)>/FCOLOR=<$str(S$颜色)>><+/FCOLOR=250><10W元宝/FCOLOR=<$str(S$颜色)>><=/FCOLOR=250><<$str(S$目标)>/FCOLOR=<$str(S$颜色)>>>
+
+#if
+not equal <$str(S$碎片)>
+#act
+inc N$印记序号 1
+
+goto @显示印记列表
+
+
+[@显示神器列表]
+
+#if
+not equal <$str(S$碎片)>
+#act
+mov S$碎片
+mov S$目标
+ReadConfigFileItem ..\QuestDiary\装备熔炼系统\物品列表\神器熔炼.txt <$str(N$神器序号)> 残 S$碎片
+ReadConfigFileItem ..\QuestDiary\装备熔炼系统\物品列表\神器熔炼.txt <$str(N$神器序号)> 目标 S$目标
+
+
+#if
+small <$str(N$神器序号)> 60
+#act
+mov S$颜色 244
+
+#if
+small <$str(N$神器序号)> 50
+#act
+mov S$颜色 149
+
+#if
+small <$str(N$神器序号)> 40
+#act
+mov S$颜色 147
+
+#if
+small <$str(N$神器序号)> 30
+#act
+mov S$颜色 140
+
+#if
+small <$str(N$神器序号)> 20
+#act
+mov S$颜色 130
+
+#if
+small <$str(N$神器序号)> 10
+#act
+mov S$颜色 110
+
+#if
+not equal <$str(S$碎片)>
+#act
+inc S$主界面 <RText|id=1_<$str(N$神器序号)>|x=70|y=330.0|size=15|text=<<$str(S$碎片)>/FCOLOR=<$str(S$颜色)>><+/FCOLOR=250><100W元宝/FCOLOR=<$str(S$颜色)>><=/FCOLOR=250><<$str(S$目标)>/FCOLOR=<$str(S$颜色)>>>
+
+#if
+not equal <$str(S$碎片)>
+#act
+inc N$神器序号 1
+
+goto @显示神器列表
+
+
+
+[@拼凑一下]
+
+#IF
+not CheckBindMoney 元宝 < 1000000
+#act
+; sendmsg 5 够<$str(S11)>
+GOTO @拼凑一下1
+#ELSEACT
+; sendmsg 5 不够<$str(S11)>
+MESSAGEBOX 100W元宝辛苦费都没有，滚蛋！
+BREAK
+
+
+[@拼凑一下1]
+
+#IF
+CHECKITEM  【残】起源·甲 10
+not CheckBindMoney 元宝 < 1000000
+#act
+money 绑定元宝 - 1000000
+TAKE 【残】起源·甲 10
+GIVE 起源·甲 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  【残】起源·衣 10
+not CheckBindMoney 元宝 < 1000000
+#act
+money 绑定元宝 - 1000000
+TAKE  【残】起源·衣 10
+GIVE 起源·衣 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  【残】起源·刃 10
+not CheckBindMoney 元宝 < 1000000
+#act
+money 绑定元宝 - 1000000
+TAKE  【残】起源·刃 10
+GIVE 起源·刃 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM 【残】鬼甲 10
+not CheckBindMoney 元宝 < 1000000
+#act
+money 绑定元宝 - 1000000
+TAKE 【残】鬼甲 10
+GIVE 鬼甲 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM 【残】鬼衣 10
+not CheckBindMoney 元宝 < 1000000
+#act
+money 绑定元宝 - 1000000
+TAKE 【残】鬼衣 10
+GIVE 鬼衣 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM 【残】鬼甲 10
+not CheckBindMoney 元宝 < 1000000
+#act
+money 绑定元宝 - 1000000
+TAKE 【残】鬼甲 10
+GIVE 鬼甲 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM 【残】鬼衣 10
+not CheckBindMoney 元宝 < 1000000
+#act
+money 绑定元宝 - 1000000
+TAKE 【残】鬼衣 10
+GIVE 鬼衣 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM 【残】流云·男 10
+not CheckBindMoney 元宝 < 1000000
+#act
+money 绑定元宝 - 1000000
+TAKE 【残】流云·男 10
+GIVE 流云·男 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM 【残】流云·女 10
+not CheckBindMoney 元宝 < 1000000
+#act
+money 绑定元宝 - 1000000
+TAKE 【残】流云·女 10
+GIVE 流云·女 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+
+#IF
+CHECKITEM 【残】鬼王 10
+not CheckBindMoney 元宝 < 1000000
+#act
+money 绑定元宝 - 1000000
+TAKE 【残】鬼王 10
+GIVE 鬼王 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM 【残】耀光 10
+not CheckBindMoney 元宝 < 1000000
+#act
+money 绑定元宝 - 1000000
+TAKE 【残】耀光 10
+GIVE 耀光 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM 【残】诛仙 10
+not CheckBindMoney 元宝 < 1000000
+#act
+money 绑定元宝 - 1000000
+TAKE 【残】诛仙 10
+GIVE 诛仙 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM 【残】流光 10
+not CheckBindMoney 元宝 < 1000000
+#act
+money 绑定元宝 - 1000000
+TAKE 【残】流光 10
+GIVE 流光 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#if
+#act
+
+MESSAGEBOX 条件不足，我没这个能力给你拼凑！！
+BREAK
+
+
 
 [@神之印记熔炼]
 #IF
 #Act
 #CALL [\分解装备\印记熔炼.txt] @印记锻造
 
-
-[@领取测试装备]
+[@ItemIntoBox2]
 #IF
+CheckContainsTextList ..\QuestDiary\分解装备\神器装备.txt <$BOXITEM[2].NAME>
 #act
-give 洗髓丹 5000
-give 恶魔令牌 5000
-give 血龙魄珠 5000
-give 上古诛仙【残】
-give 诛仙
-give 上古鬼王【残】
-give 鬼王
-give 上古耀光【残】
-give 耀光
+mov P0 0
+GOTO @切换面板3
+BREAK
+#ELSEACT
+ReturnBoxItem 2
+UpDateBoxItem 2
+MESSAGEBOX 您放入的不是神器这一级别的武器和装备！
+BREAK
 
-give 辅印【精准⑤】 1
-give 辅印【强化⑤】 1
-give 辅印【穿杨⑤】 1
-give 辅印【国色⑤】 1
-give 辅印【蝶魂⑤】 1
-give 主印【复仇⑤】 1
-give 主印【强掠⑤】 1
-give 主印【身强⑤】 1
-give 主印【运筹⑤】 1
-give 主印【吸血⑤】 1
+[@ItemIntoBox3]
+#IF
+CheckContainsTextList ..\QuestDiary\分解装备\残缺装备.txt <$BOXITEM[3].NAME>
+; CheckContainsText <$BOXITEM[3].NAME> <$BOXITEM[2].NAME>
+#act
+GOTO @切换面板3
+BREAK
+#ELSEACT
+ReturnBoxItem 3
+UpDateBoxItem 3
+MESSAGEBOX 您放入的不是<$BOXITEM[2].NAME>【残】！
+
+[@ItemIntoBox4]
+#IF
+CheckContainsTextList ..\QuestDiary\分解装备\高成功率1.txt <$BOXITEM[4].NAME>
+#act
+GOTO @恶魔令牌
+BREAK
+#ELSEACT
+ReturnBoxItem 4
+UpDateBoxItem 4
+MESSAGEBOX 您放入的物品不正确！(只允许放入,恶魔令牌)
+BREAK
+
+
+[@ItemIntoBox5]
+#IF
+CheckContainsTextList ..\QuestDiary\分解装备\高成功率2.txt <$BOXITEM[5].NAME>
+#act
+GOTO @血龙魄珠
+BREAK
+#ELSEACT
+ReturnBoxItem 5
+UpDateBoxItem 5
+MESSAGEBOX 您放入的物品不正确！(只允许放入,血龙魄珠)
+BREAK
+
+[@ItemIntoBox6]
+#IF
+CheckContainsTextList ..\QuestDiary\分解装备\高成功率3.txt <$BOXITEM[6].NAME>
+#act
+GOTO @洗髓丹
+BREAK
+#ELSEACT
+ReturnBoxItem 6
+UpDateBoxItem 6
+MESSAGEBOX 您放入的物品不正确！(只允许放入,洗髓丹)
+BREAK
 
 [@ItemIntoBox0]
 #IF
@@ -474,9 +836,9 @@ CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[7].NAME>
 CheckContainsText <$BOXITEM[0].NAME> 主印
 CheckContainsText <$BOXITEM[1].NAME> 主印
 CheckContainsText <$BOXITEM[7].NAME> 主印
-CHECKGAMEGOLD > 4999
+not CheckBindMoney 元宝 < 5000
 #ACT
-GAMEGOLD - 5000
+money 绑定元宝 - 5000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -498,9 +860,9 @@ CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[7].NAME>
 CheckContainsText <$BOXITEM[0].NAME> 辅印
 CheckContainsText <$BOXITEM[1].NAME> 辅印
 CheckContainsText <$BOXITEM[7].NAME> 辅印
-CHECKGAMEGOLD > 4999
+not CheckBindMoney 元宝 < 5000
 #ACT
-GAMEGOLD - 5000
+money 绑定元宝 - 5000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -521,9 +883,9 @@ BREAK
 CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[0].NAME>
 CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[1].NAME>
 CheckContainsTextList ..\QuestDiary\分解装备\印记1.txt <$BOXITEM[7].NAME>
-CHECKGAMEGOLD > 4999
+not CheckBindMoney 元宝 < 5000
 #ACT
-GAMEGOLD - 5000
+money 绑定元宝 - 5000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -555,9 +917,9 @@ CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[7].NAME>
 CheckContainsText <$BOXITEM[0].NAME> 主印
 CheckContainsText <$BOXITEM[1].NAME> 主印
 CheckContainsText <$BOXITEM[7].NAME> 主印
-CHECKGAMEGOLD > 19999
+not CheckBindMoney 元宝 < 20000
 #ACT
-GAMEGOLD - 20000
+money 绑定元宝 - 20000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -579,9 +941,9 @@ CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[7].NAME>
 CheckContainsText <$BOXITEM[0].NAME> 辅印
 CheckContainsText <$BOXITEM[1].NAME> 辅印
 CheckContainsText <$BOXITEM[7].NAME> 辅印
-CHECKGAMEGOLD > 19999
+not CheckBindMoney 元宝 < 20000
 #ACT
-GAMEGOLD - 20000
+money 绑定元宝 - 20000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -602,9 +964,9 @@ BREAK
 CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[0].NAME>
 CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[1].NAME>
 CheckContainsTextList ..\QuestDiary\分解装备\印记2.txt <$BOXITEM[7].NAME>
-CHECKGAMEGOLD > 19999
+not CheckBindMoney 元宝 < 20000
 #ACT
-GAMEGOLD - 20000
+money 绑定元宝 - 20000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -637,9 +999,9 @@ CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[7].NAME>
 CheckContainsText <$BOXITEM[0].NAME> 主印
 CheckContainsText <$BOXITEM[1].NAME> 主印
 CheckContainsText <$BOXITEM[7].NAME> 主印
-CHECKGAMEGOLD > 29999
+not CheckBindMoney 元宝 < 30000
 #ACT
-GAMEGOLD - 30000
+money 绑定元宝 - 30000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -661,9 +1023,9 @@ CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[7].NAME>
 CheckContainsText <$BOXITEM[0].NAME> 辅印
 CheckContainsText <$BOXITEM[1].NAME> 辅印
 CheckContainsText <$BOXITEM[7].NAME> 辅印
-CHECKGAMEGOLD > 29999
+not CheckBindMoney 元宝 < 30000
 #ACT
-GAMEGOLD - 30000
+money 绑定元宝 - 30000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -684,9 +1046,9 @@ BREAK
 CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[0].NAME>
 CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[1].NAME>
 CheckContainsTextList ..\QuestDiary\分解装备\印记3.txt <$BOXITEM[7].NAME>
-CHECKGAMEGOLD > 29999
+not CheckBindMoney 元宝 < 30000
 #ACT
-GAMEGOLD - 30000
+money 绑定元宝 - 30000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -718,9 +1080,9 @@ CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[7].NAME>
 CheckContainsText <$BOXITEM[0].NAME> 主印
 CheckContainsText <$BOXITEM[1].NAME> 主印
 CheckContainsText <$BOXITEM[7].NAME> 主印
-CHECKGAMEGOLD > 49999
+not CheckBindMoney 元宝 < 50009
 #ACT
-GAMEGOLD - 50000
+money 绑定元宝 - 50000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -742,9 +1104,9 @@ CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[7].NAME>
 CheckContainsText <$BOXITEM[0].NAME> 辅印
 CheckContainsText <$BOXITEM[1].NAME> 辅印
 CheckContainsText <$BOXITEM[7].NAME> 辅印
-CHECKGAMEGOLD > 49999
+not CheckBindMoney 元宝 < 50009
 #ACT
-GAMEGOLD - 50000
+money 绑定元宝 - 50000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -765,9 +1127,9 @@ BREAK
 CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[0].NAME>
 CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[1].NAME>
 CheckContainsTextList ..\QuestDiary\分解装备\印记4.txt <$BOXITEM[7].NAME>
-CHECKGAMEGOLD > 49999
+not CheckBindMoney 元宝 < 50009
 #ACT
-GAMEGOLD - 50000
+money 绑定元宝 - 50000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -802,9 +1164,9 @@ CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[7].NAME>
 CheckContainsText <$BOXITEM[0].NAME> 主印
 CheckContainsText <$BOXITEM[1].NAME> 主印
 CheckContainsText <$BOXITEM[7].NAME> 主印
-CHECKGAMEGOLD > 79999
+not CheckBindMoney 元宝 < 30000> 79999
 #ACT
-GAMEGOLD - 80000
+money 绑定元宝 - 80000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -826,9 +1188,9 @@ CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[7].NAME>
 CheckContainsText <$BOXITEM[0].NAME> 辅印
 CheckContainsText <$BOXITEM[1].NAME> 辅印
 CheckContainsText <$BOXITEM[7].NAME> 辅印
-CHECKGAMEGOLD > 79999
+not CheckBindMoney 元宝 < 30000> 79999
 #ACT
-GAMEGOLD - 80000
+money 绑定元宝 - 80000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -849,9 +1211,9 @@ BREAK
 CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[0].NAME>
 CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[1].NAME>
 CheckContainsTextList ..\QuestDiary\分解装备\印记5.txt <$BOXITEM[7].NAME>
-CHECKGAMEGOLD > 79999
+not CheckBindMoney 元宝 < 30000> 79999
 #ACT
-GAMEGOLD - 80000
+money 绑定元宝 - 80000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -884,9 +1246,9 @@ CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[7].NAME>
 CheckContainsText <$BOXITEM[0].NAME> 主印
 CheckContainsText <$BOXITEM[1].NAME> 主印
 CheckContainsText <$BOXITEM[7].NAME> 主印
-CHECKGAMEGOLD > 99999
+not CheckBindMoney 元宝 < 100000
 #ACT
-GAMEGOLD - 100000
+money 绑定元宝 - 100000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -908,9 +1270,9 @@ CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[7].NAME>
 CheckContainsText <$BOXITEM[0].NAME> 辅印
 CheckContainsText <$BOXITEM[1].NAME> 辅印
 CheckContainsText <$BOXITEM[7].NAME> 辅印
-CHECKGAMEGOLD > 99999
+not CheckBindMoney 元宝 < 100000
 #ACT
-GAMEGOLD - 100000
+money 绑定元宝 - 100000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -931,9 +1293,9 @@ BREAK
 CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[0].NAME>
 CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[1].NAME>
 CheckContainsTextList ..\QuestDiary\分解装备\印记6.txt <$BOXITEM[7].NAME>
-CHECKGAMEGOLD > 99999
+not CheckBindMoney 元宝 < 100000
 #ACT
-GAMEGOLD - 100000
+money 绑定元宝 - 100000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -967,9 +1329,9 @@ CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[7].NAME>
 CheckContainsText <$BOXITEM[0].NAME> 主印
 CheckContainsText <$BOXITEM[1].NAME> 主印
 CheckContainsText <$BOXITEM[7].NAME> 主印
-CHECKGAMEGOLD > 199999
+not CheckBindMoney 元宝 < 200009
 #ACT
-GAMEGOLD - 200000
+money 绑定元宝 - 200000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -991,9 +1353,9 @@ CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[7].NAME>
 CheckContainsText <$BOXITEM[0].NAME> 辅印
 CheckContainsText <$BOXITEM[1].NAME> 辅印
 CheckContainsText <$BOXITEM[7].NAME> 辅印
-CHECKGAMEGOLD > 199999
+not CheckBindMoney 元宝 < 200009
 #ACT
-GAMEGOLD - 200000
+money 绑定元宝 - 200000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -1014,9 +1376,9 @@ BREAK
 CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[0].NAME>
 CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[1].NAME>
 CheckContainsTextList ..\QuestDiary\分解装备\印记7.txt <$BOXITEM[7].NAME>
-CHECKGAMEGOLD > 199999
+not CheckBindMoney 元宝 < 200009
 #ACT
-GAMEGOLD - 200000
+money 绑定元宝 - 200000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -1049,9 +1411,9 @@ CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[7].NAME>
 CheckContainsText <$BOXITEM[0].NAME> 主印
 CheckContainsText <$BOXITEM[1].NAME> 主印
 CheckContainsText <$BOXITEM[7].NAME> 主印
-CHECKGAMEGOLD > 299999
+not CheckBindMoney 元宝 < 30000
 #ACT
-GAMEGOLD - 300000
+money 绑定元宝 - 300000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -1073,9 +1435,9 @@ CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[7].NAME>
 CheckContainsText <$BOXITEM[0].NAME> 辅印
 CheckContainsText <$BOXITEM[1].NAME> 辅印
 CheckContainsText <$BOXITEM[7].NAME> 辅印
-CHECKGAMEGOLD > 299999
+not CheckBindMoney 元宝 < 30000
 #ACT
-GAMEGOLD - 300000
+money 绑定元宝 - 300000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -1096,9 +1458,9 @@ BREAK
 CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[0].NAME>
 CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[1].NAME>
 CheckContainsTextList ..\QuestDiary\分解装备\印记8.txt <$BOXITEM[7].NAME>
-CHECKGAMEGOLD > 299999
+not CheckBindMoney 元宝 < 30000
 #ACT
-GAMEGOLD - 300000
+money 绑定元宝 - 300000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -1131,9 +1493,9 @@ CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[7].NAME>
 CheckContainsText <$BOXITEM[0].NAME> 主印
 CheckContainsText <$BOXITEM[1].NAME> 主印
 CheckContainsText <$BOXITEM[7].NAME> 主印
-CHECKGAMEGOLD > 499999
+not CheckBindMoney 元宝 < 500099
 #ACT
-GAMEGOLD - 500000
+money 绑定元宝 - 500000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -1155,9 +1517,9 @@ CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[7].NAME>
 CheckContainsText <$BOXITEM[0].NAME> 辅印
 CheckContainsText <$BOXITEM[1].NAME> 辅印
 CheckContainsText <$BOXITEM[7].NAME> 辅印
-CHECKGAMEGOLD > 499999
+not CheckBindMoney 元宝 < 500099
 #ACT
-GAMEGOLD - 500000
+money 绑定元宝 - 500000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -1178,9 +1540,9 @@ BREAK
 CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[0].NAME>
 CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[1].NAME>
 CheckContainsTextList ..\QuestDiary\分解装备\印记9.txt <$BOXITEM[7].NAME>
-CHECKGAMEGOLD > 499999
+not CheckBindMoney 元宝 < 500099
 #ACT
-GAMEGOLD - 500000
+money 绑定元宝 - 500000
 DELBOXITEM 0 1
 DELBOXITEM 1 1
 DELBOXITEM 7 1
@@ -1224,6 +1586,2516 @@ BREAK
 #act
 goto @切换面板1
 UpDateBoxItem 7
+BREAK
+
+[@主印]
+#IF
+not CheckBindMoney 元宝 < 100000
+#act
+GOTO @拼凑主印1
+#ELSEACT
+MESSAGEBOX 10W元宝辛苦费都没有，滚蛋！
+BREAK
+
+[@辅印]
+#IF
+not CheckBindMoney 元宝 < 100000
+#act
+GOTO @拼凑辅印1
+#ELSEACT
+MESSAGEBOX 10W元宝辛苦费都没有，滚蛋！
+BREAK
+
+
+[@拼凑主印1]
+#IF
+CHECKITEM 主印【精准⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【精准⑥】碎片 10
+GIVE 主印【精准⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【精准⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【精准⑦】碎片 10
+GIVE 主印【精准⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【精准⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【精准⑧】碎片 10
+GIVE 主印【精准⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【精准⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【精准⑨】碎片 10
+GIVE 主印【精准⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【精准⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【精准⑩】碎片 10
+GIVE 主印【精准⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;====================================
+#IF
+CHECKITEM  主印【强化⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【强化⑥】碎片 10
+GIVE 主印【强化⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【强化⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【强化⑦】碎片 10
+GIVE 主印【强化⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【强化⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【强化⑧】碎片 10
+GIVE 主印【强化⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【强化⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【强化⑨】碎片 10
+GIVE 主印【强化⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【强化⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【强化⑩】碎片 10
+GIVE 主印【强化⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  主印【穿杨⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【穿杨⑥】碎片 10
+GIVE 主印【穿杨⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【穿杨⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【穿杨⑦】碎片 10
+GIVE 主印【穿杨⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【穿杨⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【穿杨⑧】碎片 10
+GIVE 主印【穿杨⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【穿杨⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【穿杨⑨】碎片 10
+GIVE 主印【穿杨⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【穿杨⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【穿杨⑩】碎片 10
+GIVE 主印【穿杨⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  主印【国色⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【国色⑥】碎片 10
+GIVE 主印【国色⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【国色⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【国色⑦】碎片 10
+GIVE 主印【国色⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【国色⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【国色⑧】碎片 10
+GIVE 主印【国色⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【国色⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【国色⑨】碎片 10
+GIVE 主印【国色⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【国色⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【国色⑩】碎片 10
+GIVE 主印【国色⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  主印【蝶魂⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【蝶魂⑥】碎片 10
+GIVE 主印【蝶魂⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【蝶魂⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【蝶魂⑦】碎片 10
+GIVE 主印【蝶魂⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【蝶魂⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【蝶魂⑧】碎片 10
+GIVE 主印【蝶魂⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【蝶魂⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【蝶魂⑨】碎片 10
+GIVE 主印【蝶魂⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【蝶魂⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【蝶魂⑩】碎片 10
+GIVE 主印【蝶魂⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  主印【复仇⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【复仇⑥】碎片 10
+GIVE 主印【复仇⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【复仇⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【复仇⑦】碎片 10
+GIVE 主印【复仇⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【复仇⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【复仇⑧】碎片 10
+GIVE 主印【复仇⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【复仇⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【复仇⑨】碎片 10
+GIVE 主印【复仇⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【复仇⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【复仇⑩】碎片 10
+GIVE 主印【复仇⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  主印【强掠⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【强掠⑥】碎片 10
+GIVE 主印【强掠⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【强掠⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【强掠⑦】碎片 10
+GIVE 主印【强掠⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【强掠⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【强掠⑧】碎片 10
+GIVE 主印【强掠⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【强掠⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【强掠⑨】碎片 10
+GIVE 主印【强掠⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【强掠⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【强掠⑩】碎片 10
+GIVE 主印【强掠⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【身强⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【身强⑥】碎片 10
+GIVE 主印【身强⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【身强⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【身强⑦】碎片 10
+GIVE 主印【身强⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【身强⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【身强⑧】碎片 10
+GIVE 主印【身强⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【身强⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【身强⑨】碎片 10
+GIVE 主印【身强⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【身强⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【身强⑩】碎片 10
+GIVE 主印【身强⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【运筹⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【运筹⑥】碎片 10
+GIVE 主印【运筹⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【运筹⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【运筹⑦】碎片 10
+GIVE 主印【运筹⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【运筹⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【运筹⑧】碎片 10
+GIVE 主印【运筹⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【运筹⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【运筹⑨】碎片 10
+GIVE 主印【运筹⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【运筹⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【运筹⑩】碎片 10
+GIVE 主印【运筹⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【吸血⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【吸血⑥】碎片 10
+GIVE 主印【吸血⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【吸血⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【吸血⑦】碎片 10
+GIVE 主印【吸血⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【吸血⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【吸血⑧】碎片 10
+GIVE 主印【吸血⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【吸血⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【吸血⑨】碎片 10
+GIVE 主印【吸血⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  主印【吸血⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  主印【吸血⑩】碎片 10
+GIVE 主印【吸血⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+#ELSEACT
+MESSAGEBOX 条件不足，您没有10个一样的主印碎片！
+BREAK
+;========================================
+
+
+[@拼凑辅印1]
+#IF
+CHECKITEM  辅印【精准⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【精准⑥】碎片 10
+GIVE 辅印【精准⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【精准⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【精准⑦】碎片 10
+GIVE 辅印【精准⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【精准⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【精准⑧】碎片 10
+GIVE 辅印【精准⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【精准⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【精准⑨】碎片 10
+GIVE 辅印【精准⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【精准⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【精准⑩】碎片 10
+GIVE 辅印【精准⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;====================================
+#IF
+CHECKITEM  辅印【强化⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【强化⑥】碎片 10
+GIVE 辅印【强化⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【强化⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【强化⑦】碎片 10
+GIVE 辅印【强化⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【强化⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【强化⑧】碎片 10
+GIVE 辅印【强化⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【强化⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【强化⑨】碎片 10
+GIVE 辅印【强化⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【强化⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【强化⑩】碎片 10
+GIVE 辅印【强化⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  辅印【穿杨⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【穿杨⑥】碎片 10
+GIVE 辅印【穿杨⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【穿杨⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【穿杨⑦】碎片 10
+GIVE 辅印【穿杨⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【穿杨⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【穿杨⑧】碎片 10
+GIVE 辅印【穿杨⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【穿杨⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【穿杨⑨】碎片 10
+GIVE 辅印【穿杨⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【穿杨⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【穿杨⑩】碎片 10
+GIVE 辅印【穿杨⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  辅印【国色⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【国色⑥】碎片 10
+GIVE 辅印【国色⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【国色⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【国色⑦】碎片 10
+GIVE 辅印【国色⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【国色⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【国色⑧】碎片 10
+GIVE 辅印【国色⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【国色⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【国色⑨】碎片 10
+GIVE 辅印【国色⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【国色⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【国色⑩】碎片 10
+GIVE 辅印【国色⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  辅印【蝶魂⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【蝶魂⑥】碎片 10
+GIVE 辅印【蝶魂⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【蝶魂⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【蝶魂⑦】碎片 10
+GIVE 辅印【蝶魂⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【蝶魂⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【蝶魂⑧】碎片 10
+GIVE 辅印【蝶魂⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【蝶魂⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【蝶魂⑨】碎片 10
+GIVE 辅印【蝶魂⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【蝶魂⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【蝶魂⑩】碎片 10
+GIVE 辅印【蝶魂⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  辅印【复仇⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【复仇⑥】碎片 10
+GIVE 辅印【复仇⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【复仇⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【复仇⑦】碎片 10
+GIVE 辅印【复仇⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【复仇⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【复仇⑧】碎片 10
+GIVE 辅印【复仇⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【复仇⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【复仇⑨】碎片 10
+GIVE 辅印【复仇⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【复仇⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【复仇⑩】碎片 10
+GIVE 辅印【复仇⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+;========================================
+#IF
+CHECKITEM  辅印【强掠⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【强掠⑥】碎片 10
+GIVE 辅印【强掠⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【强掠⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【强掠⑦】碎片 10
+GIVE 辅印【强掠⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【强掠⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【强掠⑧】碎片 10
+GIVE 辅印【强掠⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【强掠⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【强掠⑨】碎片 10
+GIVE 辅印【强掠⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【强掠⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【强掠⑩】碎片 10
+GIVE 辅印【强掠⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【身强⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【身强⑥】碎片 10
+GIVE 辅印【身强⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【身强⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【身强⑦】碎片 10
+GIVE 辅印【身强⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【身强⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【身强⑧】碎片 10
+GIVE 辅印【身强⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【身强⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【身强⑨】碎片 10
+GIVE 辅印【身强⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【身强⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【身强⑩】碎片 10
+GIVE 辅印【身强⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【运筹⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【运筹⑥】碎片 10
+GIVE 辅印【运筹⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【运筹⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【运筹⑦】碎片 10
+GIVE 辅印【运筹⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【运筹⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【运筹⑧】碎片 10
+GIVE 辅印【运筹⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【运筹⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【运筹⑨】碎片 10
+GIVE 辅印【运筹⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【运筹⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【运筹⑩】碎片 10
+GIVE 辅印【运筹⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【吸血⑥】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【吸血⑥】碎片 10
+GIVE 辅印【吸血⑥】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【吸血⑦】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【吸血⑦】碎片 10
+GIVE 辅印【吸血⑦】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【吸血⑧】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【吸血⑧】碎片 10
+GIVE 辅印【吸血⑧】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【吸血⑨】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【吸血⑨】碎片 10
+GIVE 辅印【吸血⑨】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+
+#IF
+CHECKITEM  辅印【吸血⑩】碎片 10
+not CheckBindMoney 元宝 < 100000
+#act
+money 绑定元宝 - 100000
+TAKE  辅印【吸血⑩】碎片 10
+GIVE 辅印【吸血⑩】 1
+MESSAGEBOX 恭喜你拼凑成功！！
+BREAK
+#ELSEACT
+MESSAGEBOX 条件不足，您没有10个一样的辅印碎片！
+BREAK
+;========================================
+
+
+
+[@Label]
+#IF
+CheckContainsTextList ..\QuestDiary\分解装备\神器装备.txt <$BOXITEM[2].NAME>
+CheckContainsTextList ..\QuestDiary\分解装备\残缺装备.txt <$BOXITEM[3].NAME>
+CHECKGAMEGLORY  > 9999
+#act
+MOV S10 <$BOXITEM[2].NAME>
+
+GAMEGLORY = 500
+DELBOXITEM 2 1
+DELBOXITEM 3 1
+DELBOXITEM 4 10000
+DELBOXITEM 5 10000
+DELBOXITEM 6 10000
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+GetValidstr <$STR(S10)> · S$残 S$名字
+mov S10 起源·<$STR(S$名字)>
+
+give 起源·<$STR(S$名字)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+
+#IF
+CheckContainsTextList ..\QuestDiary\分解装备\神器装备.txt <$BOXITEM[2].NAME>
+CheckContainsTextList ..\QuestDiary\分解装备\残缺装备.txt <$BOXITEM[3].NAME>
+CHECKGAMEGLORY  > 8999
+CHECKGAMEGLORY  < 10000
+#act
+MOV S10 <$BOXITEM[2].NAME>
+GAMEGLORY = 500
+DELBOXITEM 2 1
+DELBOXITEM 3 1
+DELBOXITEM 4 10000
+DELBOXITEM 5 10000
+DELBOXITEM 6 10000
+goto @随即熔炼1
+BREAK
+
+#IF
+CheckContainsTextList ..\QuestDiary\分解装备\神器装备.txt <$BOXITEM[2].NAME>
+CheckContainsTextList ..\QuestDiary\分解装备\残缺装备.txt <$BOXITEM[3].NAME>
+CHECKGAMEGLORY  > 7999
+CHECKGAMEGLORY  < 9000
+#act
+MOV S10 <$BOXITEM[2].NAME>
+GAMEGLORY = 500
+DELBOXITEM 2 1
+DELBOXITEM 3 1
+DELBOXITEM 4 10000
+DELBOXITEM 5 10000
+DELBOXITEM 6 10000
+goto @随即熔炼2
+BREAK
+
+#IF
+CheckContainsTextList ..\QuestDiary\分解装备\神器装备.txt <$BOXITEM[2].NAME>
+CheckContainsTextList ..\QuestDiary\分解装备\残缺装备.txt <$BOXITEM[3].NAME>
+CHECKGAMEGLORY  > 6999
+CHECKGAMEGLORY  < 8000
+#act
+MOV S10 <$BOXITEM[2].NAME>
+GAMEGLORY = 500
+DELBOXITEM 2 1
+DELBOXITEM 3 1
+DELBOXITEM 4 10000
+DELBOXITEM 5 10000
+DELBOXITEM 6 10000
+goto @随即熔炼3
+BREAK
+
+
+#IF
+CheckContainsTextList ..\QuestDiary\分解装备\神器装备.txt <$BOXITEM[2].NAME>
+CheckContainsTextList ..\QuestDiary\分解装备\残缺装备.txt <$BOXITEM[3].NAME>
+CHECKGAMEGLORY  > 5999
+CHECKGAMEGLORY  < 7000
+#act
+MOV S10 <$BOXITEM[2].NAME>
+GAMEGLORY = 500
+DELBOXITEM 2 1
+DELBOXITEM 3 1
+DELBOXITEM 4 10000
+DELBOXITEM 5 10000
+DELBOXITEM 6 10000
+goto @随即熔炼4
+BREAK
+
+
+#IF
+CheckContainsTextList ..\QuestDiary\分解装备\神器装备.txt <$BOXITEM[2].NAME>
+CheckContainsTextList ..\QuestDiary\分解装备\残缺装备.txt <$BOXITEM[3].NAME>
+CHECKGAMEGLORY  > 4999
+CHECKGAMEGLORY  < 6000
+#act
+MOV S10 <$BOXITEM[2].NAME>
+GAMEGLORY = 500
+DELBOXITEM 2 1
+DELBOXITEM 3 1
+DELBOXITEM 4 10000
+DELBOXITEM 5 10000
+DELBOXITEM 6 10000
+goto @随即熔炼5
+BREAK
+
+#IF
+CheckContainsTextList ..\QuestDiary\分解装备\神器装备.txt <$BOXITEM[2].NAME>
+CheckContainsTextList ..\QuestDiary\分解装备\残缺装备.txt <$BOXITEM[3].NAME>
+CHECKGAMEGLORY  > 0
+CHECKGAMEGLORY  < 5000
+#act
+MOV S10 <$BOXITEM[2].NAME>
+GAMEGLORY = 500
+DELBOXITEM 2 1
+DELBOXITEM 3 1
+DELBOXITEM 4 10000
+DELBOXITEM 5 10000
+DELBOXITEM 6 10000
+goto @随即熔炼6
+BREAK
+
+#ELSEACT
+ReturnBoxItem 2
+UpDateBoxItem 2
+ReturnBoxItem 3
+UpDateBoxItem 3
+ReturnBoxItem 4
+UpDateBoxItem 4
+ReturnBoxItem 5
+UpDateBoxItem 5
+ReturnBoxItem 6
+UpDateBoxItem 6
+MESSAGEBOX 不知道什么原因，不能熔炼！
+BREAK
+
+
+
+
+
+[@ItemOutBox2]
+#IF
+#act
+GAMEGLORY = 500
+GOTO @切换面板3
+UpDateBoxItem 2
+BREAK
+
+[@ItemOutBox3]
+#IF
+#act
+GAMEGLORY = 500
+GOTO @切换面板3
+UpDateBoxItem 3
+BREAK
+
+[@ItemOutBox4]
+#IF
+#act
+GAMEGLORY = 500
+UpDateBoxItem 4
+ReturnBoxItem 4
+UpDateBoxItem 5
+ReturnBoxItem 5
+UpDateBoxItem 6
+ReturnBoxItem 6
+GOTO @切换面板3
+BREAK
+
+[@ItemOutBox5]
+#IF
+#act
+GAMEGLORY = 500
+UpDateBoxItem 4
+ReturnBoxItem 4
+UpDateBoxItem 5
+ReturnBoxItem 5
+UpDateBoxItem 6
+ReturnBoxItem 6
+GOTO @切换面板3
+BREAK
+
+[@ItemOutBox6]
+#IF
+#act
+GAMEGLORY = 500
+UpDateBoxItem 4
+ReturnBoxItem 4
+UpDateBoxItem 5
+ReturnBoxItem 5
+UpDateBoxItem 6
+ReturnBoxItem 6
+GOTO @切换面板3
+BREAK
+
+
+[@血龙魄珠]
+#IF
+CheckBoxItemCount 5 9000
+#act
+GAMEGLORY + 9000
+GOTO @切换面板3
+BREAK
+
+
+#IF
+CheckBoxItemCount 5 8000
+#act
+GAMEGLORY + 8000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 5 7000
+#act
+GAMEGLORY + 7000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 5 6000
+#act
+GAMEGLORY + 6000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 5 5000
+#act
+GAMEGLORY + 5000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 5 4000
+#act
+GAMEGLORY + 4000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 5 3000
+#act
+GAMEGLORY + 3000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 5 2000
+#act
+GAMEGLORY + 2000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 5 1000
+#act
+GAMEGLORY + 1000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 5 900
+#act
+GAMEGLORY + 900
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 5 800
+#act
+GAMEGLORY + 800
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 5 700
+#act
+GAMEGLORY + 700
+GOTO @切换面板3
+BREAK
+
+
+
+
+#IF
+CheckBoxItemCount 5 600
+#act
+GAMEGLORY + 600
+GOTO @切换面板3
+BREAK
+
+
+#IF
+CheckBoxItemCount 5 500
+#act
+GAMEGLORY + 500
+GOTO @切换面板3
+BREAK
+
+
+#IF
+CheckBoxItemCount 5 400
+#act
+GAMEGLORY + 400
+GOTO @切换面板3
+BREAK
+
+
+#IF
+CheckBoxItemCount 5 300
+#act
+GAMEGLORY + 300
+GOTO @切换面板3
+BREAK
+
+
+#IF
+CheckBoxItemCount 5 200
+#act
+GAMEGLORY + 200
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 5 100
+#act
+GAMEGLORY + 100
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 5 90
+#act
+GAMEGLORY + 90
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 5 80
+#act
+GAMEGLORY + 80
+GOTO @切换面板3
+BREAK
+#IF
+CheckBoxItemCount 5 70
+#act
+GAMEGLORY + 70
+GOTO @切换面板3
+BREAK
+#IF
+CheckBoxItemCount 5 60
+#act
+GAMEGLORY + 60
+GOTO @切换面板3
+BREAK
+#IF
+CheckBoxItemCount 5 50
+#act
+GAMEGLORY + 50
+GOTO @切换面板3
+BREAK
+#IF
+CheckBoxItemCount 5 40
+#act
+GAMEGLORY + 40
+GOTO @切换面板3
+BREAK
+#IF
+CheckBoxItemCount 5 30
+#act
+GAMEGLORY + 30
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 5 20
+#act
+GAMEGLORY + 20
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 5 10
+#act
+GAMEGLORY + 10
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 5 9
+#act
+GAMEGLORY + 9
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 5 8
+#act
+GAMEGLORY + 8
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 5 7
+#act
+GAMEGLORY + 7
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 5 6
+#act
+GAMEGLORY + 6
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 5 5
+#act
+GAMEGLORY + 5
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 5 4
+#act
+GAMEGLORY + 4
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 5 3
+#act
+GAMEGLORY + 3
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 5 2
+#act
+GAMEGLORY + 2
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 5 1
+#act
+GAMEGLORY + 1
+GOTO @切换面板3
+BREAK
+
+[@恶魔令牌]
+#IF
+CheckBoxItemCount 4 9000
+#act
+GAMEGLORY + 9000
+GOTO @切换面板3
+BREAK
+
+
+#IF
+CheckBoxItemCount 4 8000
+#act
+GAMEGLORY + 8000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 4 7000
+#act
+GAMEGLORY + 7000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 4 6000
+#act
+GAMEGLORY + 6000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 4 5000
+#act
+GAMEGLORY + 5000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 4 4000
+#act
+GAMEGLORY + 4000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 4 3000
+#act
+GAMEGLORY + 3000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 4 2000
+#act
+GAMEGLORY + 2000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 4 1000
+#act
+GAMEGLORY + 1000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 4 900
+#act
+GAMEGLORY + 900
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 4 800
+#act
+GAMEGLORY + 800
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 4 700
+#act
+GAMEGLORY + 700
+GOTO @切换面板3
+BREAK
+
+
+
+
+#IF
+CheckBoxItemCount 4 600
+#act
+GAMEGLORY + 600
+GOTO @切换面板3
+BREAK
+
+
+#IF
+CheckBoxItemCount 4 500
+#act
+GAMEGLORY + 500
+GOTO @切换面板3
+BREAK
+
+
+#IF
+CheckBoxItemCount 4 400
+#act
+GAMEGLORY + 400
+GOTO @切换面板3
+BREAK
+
+
+#IF
+CheckBoxItemCount 4 300
+#act
+GAMEGLORY + 300
+GOTO @切换面板3
+BREAK
+
+
+#IF
+CheckBoxItemCount 4 200
+#act
+GAMEGLORY + 200
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 4 100
+#act
+GAMEGLORY + 100
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 4 90
+#act
+GAMEGLORY + 90
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 4 80
+#act
+GAMEGLORY + 80
+GOTO @切换面板3
+BREAK
+#IF
+CheckBoxItemCount 4 70
+#act
+GAMEGLORY + 70
+GOTO @切换面板3
+BREAK
+#IF
+CheckBoxItemCount 4 60
+#act
+GAMEGLORY + 60
+GOTO @切换面板3
+BREAK
+#IF
+CheckBoxItemCount 4 50
+#act
+GAMEGLORY + 50
+GOTO @切换面板3
+BREAK
+#IF
+CheckBoxItemCount 4 40
+#act
+GAMEGLORY + 40
+GOTO @切换面板3
+BREAK
+#IF
+CheckBoxItemCount 4 30
+#act
+GAMEGLORY + 30
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 4 20
+#act
+GAMEGLORY + 20
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 4 10
+#act
+GAMEGLORY + 10
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 4 9
+#act
+GAMEGLORY + 9
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 4 8
+#act
+GAMEGLORY + 8
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 4 7
+#act
+GAMEGLORY + 7
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 4 6
+#act
+GAMEGLORY + 6
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 4 5
+#act
+GAMEGLORY + 5
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 4 4
+#act
+GAMEGLORY + 4
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 4 3
+#act
+GAMEGLORY + 3
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 4 2
+#act
+GAMEGLORY + 2
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 4 1
+#act
+GAMEGLORY + 1
+GOTO @切换面板3
+BREAK
+;==============================================================1
+[@洗髓丹]
+
+#IF
+CheckBoxItemCount 6 9000
+#act
+GAMEGLORY + 9000
+GOTO @切换面板3
+BREAK
+
+
+#IF
+CheckBoxItemCount 6 8000
+#act
+GAMEGLORY + 8000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 6 7000
+#act
+GAMEGLORY + 7000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 6 6000
+#act
+GAMEGLORY + 6000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 6 5000
+#act
+GAMEGLORY + 5000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 6 4000
+#act
+GAMEGLORY + 4000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 6 3000
+#act
+GAMEGLORY + 3000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 6 2000
+#act
+GAMEGLORY + 2000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 6 1000
+#act
+GAMEGLORY + 1000
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 6 900
+#act
+GAMEGLORY + 900
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 6 800
+#act
+GAMEGLORY + 800
+GOTO @切换面板3
+BREAK
+
+
+
+#IF
+CheckBoxItemCount 6 700
+#act
+GAMEGLORY + 700
+GOTO @切换面板3
+BREAK
+
+
+
+
+#IF
+CheckBoxItemCount 6 600
+#act
+GAMEGLORY + 600
+GOTO @切换面板3
+BREAK
+
+
+#IF
+CheckBoxItemCount 6 500
+#act
+GAMEGLORY + 500
+GOTO @切换面板3
+BREAK
+
+
+#IF
+CheckBoxItemCount 6 400
+#act
+GAMEGLORY + 400
+GOTO @切换面板3
+BREAK
+
+
+#IF
+CheckBoxItemCount 6 300
+#act
+GAMEGLORY + 300
+GOTO @切换面板3
+BREAK
+
+
+#IF
+CheckBoxItemCount 6 200
+#act
+GAMEGLORY + 200
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 6 100
+#act
+GAMEGLORY + 100
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 6 90
+#act
+GAMEGLORY + 90
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 6 80
+#act
+GAMEGLORY + 80
+GOTO @切换面板3
+BREAK
+#IF
+CheckBoxItemCount 6 70
+#act
+GAMEGLORY + 70
+GOTO @切换面板3
+BREAK
+#IF
+CheckBoxItemCount 6 60
+#act
+GAMEGLORY + 60
+GOTO @切换面板3
+BREAK
+#IF
+CheckBoxItemCount 6 50
+#act
+GAMEGLORY + 50
+GOTO @切换面板3
+BREAK
+#IF
+CheckBoxItemCount 6 40
+#act
+GAMEGLORY + 40
+GOTO @切换面板3
+BREAK
+#IF
+CheckBoxItemCount 6 30
+#act
+GAMEGLORY + 30
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 6 20
+#act
+GAMEGLORY + 20
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 6 10
+#act
+GAMEGLORY + 10
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 6 9
+#act
+GAMEGLORY + 9
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 6 8
+#act
+GAMEGLORY + 8
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 6 7
+#act
+GAMEGLORY + 7
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 6 6
+#act
+GAMEGLORY + 6
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 6 5
+#act
+GAMEGLORY + 5
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 6 4
+#act
+GAMEGLORY + 4
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 6 3
+#act
+GAMEGLORY + 3
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 6 2
+#act
+GAMEGLORY + 2
+GOTO @切换面板3
+BREAK
+
+#IF
+CheckBoxItemCount 6 1
+#act
+GAMEGLORY + 1
+GOTO @切换面板3
+BREAK
+
+
+
+
+;========================================================2
+
+;========================================================2
+;========================================================2
+[@随即熔炼6]
+#IF
+random 7
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+give 上古<$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+#IF
+random 6
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+#IF
+random 5
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+#IF
+random 4
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+#IF
+random 3
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+#IF
+random 2
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+#IF
+random 1
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+;========================================================2
+[@随即熔炼5]
+#IF
+random 6
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+give 上古<$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+#IF
+random 5
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+#IF
+random 4
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+#IF
+random 3
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+#IF
+random 2
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+#IF
+random 1
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+;========================================================2
+[@随即熔炼4]
+#IF
+random 5
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+give 上古<$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+#IF
+random 4
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+#IF
+random 3
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+#IF
+random 2
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+#IF
+random 1
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+;========================================================2
+[@随即熔炼3]
+#IF
+random 4
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+give 上古<$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+
+#IF
+random 3
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+#IF
+random 2
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+#IF
+random 1
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+;========================================================2
+[@随即熔炼2]
+#IF
+random 3
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+give 上古<$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+#IF
+random 2
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+#IF
+random 1
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+;========================================================2
+[@随即熔炼1]
+#IF
+random 2
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『上古<$STR(S10)>』装备成功!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+give 上古<$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
+BREAK
+
+
+#IF
+random 1
+#act
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』熔炼『<$STR(S10)>』失败!！
+;GetRandomText ..\QuestDiary\分解装备\获得的装备.txt S10
+;give <$STR(S10)> 1
+UpDateBoxItem 2
+UpDateBoxItem 3
+UpDateBoxItem 4
+UpDateBoxItem 5
+UpDateBoxItem 6
 BREAK
 
 

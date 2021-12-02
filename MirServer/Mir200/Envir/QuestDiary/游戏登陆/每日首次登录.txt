@@ -1,15 +1,12 @@
 [@每日首次登陆触发]
 {
+    ;sendmsg 5 每日首次登陆触发!!!
 
 #IF
 #ACT
 ;--------清空日充---------
 mov U91 0
-;-------清除每日活动礼包标记-------
-mov U111 0
-mov U112 0
-mov U113 0
-mov U114 0
+
 
 ; --------------每日悬赏-----------
 ; 地图怪物击杀数量统计
@@ -23,22 +20,46 @@ mov U105 0
 ; 悬赏购买标记
 set [100] 0
 
-; 每档领取记录清除
-mov T30
-mov T31
-mov T32
-mov T33
-mov T34
-mov T35
-mov T36
-mov T37
-mov T38
-mov T39
-mov T40
+; ; 每档领取记录清除
+; mov T30
+; mov T31
+; mov T32
+; mov T33
+; mov T34
+; mov T35
+; mov T36
+; mov T37
+; mov T38
+; mov T39
+; mov T40
+
+; 清空会员V值
+mov U12 0
+
+; 清除会员礼包领取标记
+set [61] 0
+set [62] 0
+set [63] 0
+set [64] 0
+set [65] 0
+set [66] 0
+set [67] 0
+set [68] 0
+set [69] 0
+set [70] 0
+set [71] 0
 
 
+; 清除贵族每日礼包购买标记
+set [90] 0
+set [91] 0
+set [92] 0
+set [93] 0
 
-;sendmsg 5 每日首次登陆触发!!!
+; 重置批量范围拾取
+mov U21 0
+SETSPRITEMODE 2
+
 
 ;-------发放会员每日礼包--------
 ;#IF

@@ -379,6 +379,7 @@ money 元宝 + <$str(N$回收结算1)>
 money RMB点 + <$str(N$回收结算2)>
 CHANGEEXP + <$str(N$回收结算3)>
 GuildNoticeMsg 255 56 玩家:『<$USERNAME>』回收获得大量货币！！
+goto @回收加成
 ; sendmsg 5 回收成功!!+<$str(N$回收结算1)>+<$str(N$回收结算2)>+<$str(N$回收结算3)>
 
 [@回收回调]
@@ -405,13 +406,20 @@ INC N$回收结算1 <$STR(S$元宝收益)>
 INC N$回收结算2 <$STR(S$RMB点收益)>
 INC N$回收结算3 <$STR(S$经验值收益)>
 
-mov N$回收结算4 <$STR(S$元宝收益)>
-mov N$回收结算5 <$STR(S$RMB点收益)>
-mov N$回收结算6 <$STR(S$经验值收益)>
+; mov N$回收结算4 <$STR(S$元宝收益)>
+; mov N$回收结算5 <$STR(S$RMB点收益)>
+; mov N$回收结算6 <$STR(S$经验值收益)>
 
 
 
 [@自动使用物品1]
+#if
+small <$str(U98)> 1
+#act
+messagebox 蓝钻贵族开启自动使用经验券和元宝！！
+goto @显示1
+break
+
 #IF
 EQUAL U<$STR(S$改变KEY)> 0
 #ACT
@@ -437,6 +445,14 @@ MOV U<$STR(S$改变KEY)> 0
 SENDMSG 6 自动使用祝福油已关闭!!
 
 [@自动回收开启]
+#if
+small <$str(U98)> 3
+#act
+messagebox 金钻贵族开启自动回收！！
+goto @显示1
+break
+
+
 #IF
 check [799] 0
 #ACT
@@ -447,25 +463,22 @@ SENDMSG 6 自动回收已开启!!
 set [799] 0
 SENDMSG 6 自动回收已关闭!!
 
-; [@开启799]
-; #IF
-; ;充值大于100
-; large U97 0
-; #ACT
-; SET [799] 1
-; ;GOTO @显示<$STR(N$页签)>
-; SENDMSG 6 开启自动回收。
-; #elseact
-; messagebox  只有开通青铜赞助才能开启！
 
-; [@回收加成]
-; #IF
-; large U96 0
-; #ACT
-; CalcPer <$STR(N$回收结算1)> <$STR(U96)> N$回收结算1加成
-; ;CalcPer <$STR(N$回收结算2)> <$STR(U96)> N$回收结算2加成
-; inc N$回收结算1 <$STR(N$回收结算1加成)>
-; ;inc N$回收结算2 <$STR(N$回收结算2加成)>
+[@回收加成]
+#IF
+large <$str(U98)> 0
+#ACT
+ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(U98)> 额外回收比例 S$额外回收加成
+
+CalcPer <$STR(N$回收结算1)> <$STR(S$额外回收加成)> N$回收结算1加成
+CalcPer <$STR(N$回收结算2)> <$STR(S$额外回收加成)> N$回收结算1加成
+CalcPer <$STR(N$回收结算3)> <$STR(S$额外回收加成)> N$回收结算1加成
+
+money 元宝 + <$str(N$回收结算1加成)>
+money RMB点 + <$str(N$回收结算1加成)>
+CHANGEEXP + <$str(N$回收结算1加成)>
+
+
 
 
 ; [@选择物品]

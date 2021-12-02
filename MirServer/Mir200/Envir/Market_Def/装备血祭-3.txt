@@ -1,0 +1,4 @@
+[@main]
+#act
+#CALL [\装备血祭系统\装备血祭.txt] @装备血祭功能
+BREAK

@@ -22,9 +22,24 @@ ISADMIN
 <Button|x=190|y=210|nimg=public/bg_hhzy_01_3.png|text=增加RMB点|link=@10>
 <Button|x=190|y=280|nimg=public/bg_hhzy_01_3.png|text=清理背包|link=@09>
 <Button|x=190|y=350|nimg=public/bg_hhzy_01_3.png|text=城市传送|link=@08>
+<Button|x=240|y=400|nimg=public/1900000611.png|text=测试充值|link=@page10>
+<Button|x=50|y=400|nimg=public/1900000611.png|text=测试|link=@99>
 
-<Button|x=50|y=400|nimg=public/1900000660.png|text=测试|link=@99>
 
+[@page10]
+
+<Img|bg=1|move=1|reset=0|width=380|height=500|img=public/icon_paihangbang_05.png>
+<Img|x=20|y=20|img=public/btn_szjm_03.png>
+<Text|text=GM background v1.2|x=80|y=20|size=22|color=246>
+<Layout|x=340|width=80|height=80|link=@exit>
+<Button|x=340|y=20|nimg=public/btn_gban_01.png|link=@exit>
+
+<Button|x=40|y=70|nimg=public/bg_hhzy_01_3.png|text=充值10元|link=@cc1>
+<Button|x=190|y=70|nimg=public/bg_hhzy_01_3.png|text=充值20元|link=@cc2>
+<Button|x=40|y=140|nimg=public/bg_hhzy_01_3.png|text=充值50元|link=@cc3>
+<Button|x=190|y=140|nimg=public/bg_hhzy_01_3.png|text=充值100元|link=@cc4>
+<Button|x=40|y=210|nimg=public/bg_hhzy_01_3.png|text=充值200元|link=@cc5>
+<Button|x=190|y=210|nimg=public/bg_hhzy_01_3.png|text=充值500元|link=@cc6>
 
 
 [@08]
@@ -91,6 +106,56 @@ CHANGELEVEL + 10
 #ACT
 RENEWLEVEL 10 50 100
 
+
+[@cc1]
+#if
+#act
+mov M0 10
+money RMB点 + 1000
+goto @ReCharge
+goto @page10
+
+[@cc2]
+#if
+#act
+mov M0 20
+money RMB点 + 2000
+goto @ReCharge
+goto @page10
+
+[@cc3]
+#if
+#act
+
+mov M0 50
+money RMB点 + 5000
+goto @ReCharge
+goto @page10
+
+[@cc4]
+#if
+#act
+money RMB点 + 10000
+mov M0 100
+
+goto @ReCharge
+goto @page10
+
+[@cc5]
+#if
+#act
+mov M0 200
+money RMB点 + 20000
+goto @ReCharge
+goto @page10
+
+[@cc6]
+#if
+#act
+mov M0 500
+money RMB点 + 50000
+goto @ReCharge
+goto @page10
 
 
 [@03]
@@ -194,19 +259,9 @@ Mov U52 3
 [@99]
 #if
 #act
-; mov S12
+#Call [\Mobile\特殊NPC\TOP图标.txt] @导航
+; ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(U98)> 会员V点恢复/时 S$V值额外恢复数
+; sendmsg 5 V值额外恢复数::::<$str(S$V值额外恢复数)>
+sendmsg 5 98::<$str(U98)>
 
-; mov U100 12
-MOV T13
-; mov T30
-; mov T31
-; BONUSPOINT + 300
-mov N$变量1 1
-div N$变量1 2
-; CHECKRENEWLEVEL = 0
-CHANGELEVEL = 10
-
-
-
-sendmsg 5 -=--<$str(N$变量1)>
 }

@@ -81,7 +81,7 @@ MOVR G131 13 17
 EQUAL G111 1
 #Act
 MOV G111 0
-GMEXECUTE 开始提问 @地图加价1
+GMEXECUTE StartQuest @地图加价1
 
 
 [@地图减价]
@@ -89,13 +89,13 @@ GMEXECUTE 开始提问 @地图加价1
 EQUAL G111 0
 #Act
 MOV G111 1
-GMEXECUTE 开始提问 @地图减价1
+GMEXECUTE StartQuest @地图减价1
 
 
 [@秒修装备]
 #If
 #Act
-GMEXECUTE 开始提问 @秒修装备1
+GMEXECUTE StartQuest @秒修装备1
 
 
 [@早上提示]
@@ -169,7 +169,7 @@ MOV G30 0
 #IF
 #ACT
 MOV I66 1
-GMEXECUTE 开始提问 @激情派对
+GMEXECUTE StartQuest @激情派对
 SendCenterMsg 249 0 提示：奖励大量元宝经验的激情派对活动已经开启！！请玩家速速赶往土药参加！ 1 3
 SendCenterMsg 249 0 提示：奖励大量元宝经验的激情派对活动已经开启！！请玩家速速赶往土药参加！ 1 3
 SendCenterMsg 249 0 提示：奖励大量元宝经验的激情派对活动已经开启！！请玩家速速赶往土药参加！ 1 3
@@ -242,7 +242,7 @@ SENDMSG 0 激情派对活动已经关闭，请玩家关注下次活动！
 CLEARMAPMON  HDCD
 MONGENEX  HDCD 42 42 疯狂半兽人1  20 50 0 244
 MONGENEX  HDCD 42 42 疯狂半兽人  20 50 0 244
-GMEXECUTE 开始提问 @真假半兽人
+GMEXECUTE StartQuest @真假半兽人
 SendCenterMsg 249 0 提示：疯狂半兽人活动已经开启！！请玩家速速赶往参加！ 1 3
 SendCenterMsg 249 0 提示：疯狂半兽人活动已经开启！！请玩家速速赶往参加！ 1 3
 [@刺杀稻草人]
@@ -251,7 +251,7 @@ SendCenterMsg 249 0 提示：疯狂半兽人活动已经开启！！请玩家速速赶往参加！ 1 3
 CLEARMAPMON  HDCD
 MONGENEX  HDCD 42 42 活动稻草人  20 20 0 244
 MONGENEX  HDCD 42 42 [领主]稻草人  20 5 0 244
-GMEXECUTE 开始提问 @刺杀稻草人a
+GMEXECUTE StartQuest @刺杀稻草人a
 SendCenterMsg 249 0 提示：刺杀稻草人活动已经开启！！请玩家速速赶往参加！ 1 3
 SendCenterMsg 249 0 提示：刺杀稻草人活动已经开启！！请玩家速速赶往参加！ 1 3
 
@@ -260,7 +260,7 @@ SendCenterMsg 249 0 提示：刺杀稻草人活动已经开启！！请玩家速速赶往参加！ 1 3
 #ACT
 CLEARMAPMON  HDCD
 MONGENEX  HDCD 42 42 [领主]冰城魔王  2 1 0 244
-GMEXECUTE 开始提问 @冰城之战a
+GMEXECUTE StartQuest @冰城之战a
 SendCenterMsg 249 0 提示：刺杀稻草人活动已经开启！！请玩家速速赶往参加！ 1 3
 SendCenterMsg 249 0 提示：刺杀稻草人活动已经开启！！请玩家速速赶往参加！ 1 3
 
@@ -280,7 +280,7 @@ SENDMSG 0 ┇[每3小时一次]降元宝、装备、转生材料、锻体材料、锻造材料等.┇
 SENDMSG 0 ┇[每3小时一次]降元宝、装备、转生材料、锻体材料、锻造材料等.┇
 SENDMSG 0 ╚┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╝
 SENDMSG 0 ┗≈☆★≈☆★≈☆★☆≈【天降福利】≈☆★☆≈★☆≈★☆≈┛
-GMEXECUTE 开始提问 @天降福利
+GMEXECUTE StartQuest @天降福利
 ThrowItem 3 355 339 7 500元宝 5|60
 ThrowItem 3 355 339 7 500元宝 5|60
 ThrowItem 3 355 339 7 1000元宝 3|60
@@ -310,3 +310,8 @@ ThrowItem 3 355 339 7 1角人民币 5|60
 ThrowItem 3 355 339 7 治疗宝珠③ 3|60
 ThrowItem 3 355 339 7 治疗宝珠④ 3|60
 BREAK
+
+[@增加会员V值]
+#if
+#act
+GMEXECUTE StartQuest @增加会员V值

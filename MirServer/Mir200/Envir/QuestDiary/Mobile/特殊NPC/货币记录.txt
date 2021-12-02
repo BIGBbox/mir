@@ -30,7 +30,13 @@ addbutton 7 1 <$STR(S$图标2)>
 
 [@打开仓库]
 #if
+large <$str(U98)> 0
 #act
+CHANGESTORAGE 240
+
+#if
+#act
+sendmsg 5 98***<$str(U98)>
 OPENSTORAGE
 
 
@@ -44,12 +50,18 @@ REFRESHBAG
 #act
 ; #CALL [\游戏功能\装备回收.txt] @开始回收
 
-
 #CALL [\新装备回收\回收系统.txt] @回收
 ; OPENHYPERLINK 7
 
 
 [@打开合成面板]
+#if
+small <$str(U98)> 2
+#act
+messagebox 红钻贵族开启随身合成！！
+break
+
+#if
 #act
 #CALL [\装备合成\快捷功能.txt] @服务功能
 OPENHYPERLINK 7

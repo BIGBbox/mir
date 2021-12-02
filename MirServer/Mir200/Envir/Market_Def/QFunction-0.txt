@@ -1,5 +1,5 @@
 
-(@storage @getback @@InPutInteger @@InPutString @@useitemname @@OffLineMsg @@dealgold @MUZHUANG @OnKillMob)
+; (@storage @getback @@InPutInteger @@InPutString @@useitemname @@OffLineMsg @@dealgold @MUZHUANG @OnKillMob)
 [@PlayOffLine]
 #IF
 CheckRangeHumCount 3 330 330 20 < 120
@@ -22,16 +22,20 @@ SendMsg 7 你转生等级不足1转！无法使用！
 break
 
 [@OnKillMob]
+#if
+#act
+mov N$鞭尸几率 0
+goto @鞭尸
 ;RANDOM 300
 ;#act
 ;MOV U10 <$x>
 ;MOV U11 <$Y>
 ;MOV T10 <$MAP>
 ;mapmove 验证3530054 28 28
-;SENDMSG 6 {ぐ〖提示〗:|251:0:0}{您触发防脱机验证系统：|222:0}{请站在光圈内点击NPC!验证成功送您回原坐标点|222:0}
-;SENDMSG 6 {ぐ〖提示〗:|251:0:0}{您触发防脱机验证系统：|222:0}{请站在光圈内点击NPC!验证成功送您回原坐标点|222:0}
-;SENDMSG 6 {ぐ〖提示〗:|251:0:0}{您触发防脱机验证系统：|222:0}{请站在光圈内点击NPC!验证成功送您回原坐标点|222:0}
-;SENDMSG 6 {ぐ〖提示〗:|251:0:0}{您触发防脱机验证系统：|222:0}{请站在光圈内点击NPC!验证成功送您回原坐标点|222:0}
+;SENDMSG 7 {ぐ〖提示〗:|251:0:0}{您触发防脱机验证系统：|222:0}{请站在光圈内点击NPC!验证成功送您回原坐标点|222:0}
+;SENDMSG 7 {ぐ〖提示〗:|251:0:0}{您触发防脱机验证系统：|222:0}{请站在光圈内点击NPC!验证成功送您回原坐标点|222:0}
+;SENDMSG 7 {ぐ〖提示〗:|251:0:0}{您触发防脱机验证系统：|222:0}{请站在光圈内点击NPC!验证成功送您回原坐标点|222:0}
+;SENDMSG 7 {ぐ〖提示〗:|251:0:0}{您触发防脱机验证系统：|222:0}{请站在光圈内点击NPC!验证成功送您回原坐标点|222:0}
 
 
 [@KillPlay]
@@ -538,75 +542,75 @@ MESSAGEBOX 元宝不够
 #if
 #ACT
 CHANGEEXP + 100000000
-SENDMSG 6 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{1亿|222:0}
+SENDMSG 7 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{1亿|222:0}
 BREAK
 [@StdModeFunc70]
 #if
 #ACT
 CHANGEEXP + 10000000
-SENDMSG 6 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{1000W|222:0}
+SENDMSG 7 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{1000W|222:0}
 BREAK
 [@StdModeFunc71]
 #if
 #ACT
 CHANGEEXP + 20000000
-SENDMSG 6 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{2000W|222:0}
+SENDMSG 7 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{2000W|222:0}
 BREAK
 [@StdModeFunc72]
 #if
 #ACT
 CHANGEEXP + 30000000
-SENDMSG 6 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{3000W|222:0}
+SENDMSG 7 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{3000W|222:0}
 BREAK
 [@StdModeFunc73]
 #if
 #ACT
 CHANGEEXP + 50000000
-SENDMSG 6 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{5000W|222:0}
+SENDMSG 7 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{5000W|222:0}
 BREAK
 [@StdModeFunc75]
 #if
 #ACT
 CHANGEEXP + 200000000
-SENDMSG 6 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{2亿经验|222:0}
+SENDMSG 7 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{2亿经验|222:0}
 BREAK
 [@StdModeFunc76]
 #if
 #ACT
 CHANGEEXP + 500000000
-SENDMSG 6 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{5亿经验|222:0}
+SENDMSG 7 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{5亿经验|222:0}
 BREAK
 [@StdModeFunc77]
 #if
 #ACT
 CHANGEEXP + 1000000
-SENDMSG 6 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{100W|222:0}
+SENDMSG 7 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{100W|222:0}
 BREAK
 [@StdModeFunc78]
 #if
 #ACT
 CHANGEEXP + 2000000
-SENDMSG 6 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{200W|222:0}
+SENDMSG 7 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{200W|222:0}
 BREAK
 [@StdModeFunc79]
 #if
 #ACT
 CHANGEEXP + 5000000
-SENDMSG 6 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{500W|222:0}
+SENDMSG 7 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{500W|222:0}
 BREAK
 
 [@StdModeFunc188]
 #if
 #ACT
 CHANGEEXP + 200000
-SENDMSG 6 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{20W|222:0}
+SENDMSG 7 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{20W|222:0}
 BREAK
 
 [@StdModeFunc189]
 #if
 #ACT
 CHANGEEXP + 500000
-SENDMSG 6 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{50W|222:0}
+SENDMSG 7 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{50W|222:0}
 BREAK
 
 [@StdModeFunc80]
@@ -691,7 +695,7 @@ HaveGuild
 #ACT
 MOV A91 <$GUILDNAME>
 MOV A92 <$USERNAME>
-Gmexecute 开始提问 @行会召唤
+Gmexecute StartQuest @行会召唤
 SENDMSG 7 集结令已放出，请等待你的援军
 SENDMSG 7 集结令已放出，请等待你的援军
 #ELSEACT
@@ -800,6 +804,325 @@ BREAK
 #if
 #act
 MessageBox \ \需要收取5000元宝手续费\ \成功武器【攻击伤害几率增加1%】\ \失败武器【攻击伤害几率清零】 @确22定 @取消22
+
+
+[@StdModeFunc200]
+#if
+#act
+
+inc N$青铜爆率卡 50
+mov N$青铜爆率卡结束时间 <$UTCNOW8>
+inc N$青铜爆率卡结束时间 3600
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+
+#if
+large <$str(N$青铜爆率卡)> 50
+#act
+SENDMSG 6 青铜爆率卡使用成功！爆率提高50%,持续时间延长一小时！
+#elseact
+SENDMSG 6 青铜爆率卡使用成功！爆率提高50%,时间持续一小时！
+
+[@StdModeFunc201]
+#if
+#act
+
+inc N$白银爆率卡 100
+
+mov N$白银爆率卡结束时间 <$UTCNOW8>
+inc N$白银爆率卡结束时间 3600
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+
+#if
+large <$str(N$白银爆率卡)> 100
+#act
+SENDMSG 6 白银爆率卡使用成功！爆率提高100%,持续时间延长一小时！
+#elseact
+SENDMSG 6 白银爆率卡使用成功！爆率提高100%,时间持续一小时！
+
+[@StdModeFunc202]
+#if
+#act
+
+inc N$黄金爆率卡 150
+
+mov N$黄金爆率卡结束时间 <$UTCNOW8>
+inc N$黄金爆率卡结束时间 3600
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+
+#if
+large <$str(N$黄金爆率卡)> 150
+#act
+SENDMSG 6 黄金爆率卡使用成功！爆率提高150%,持续时间延长一小时！
+#elseact
+SENDMSG 6 黄金爆率卡使用成功！爆率提高150%,持续时间此项一小时！
+
+[@StdModeFunc203]
+#if
+#act
+
+inc N$铂金爆率卡 200
+
+mov N$铂金爆率卡结束时间 <$UTCNOW8>
+inc N$铂金爆率卡结束时间 3600
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+
+#if
+large <$str(N$铂金爆率卡)> 200
+#act
+SENDMSG 6 铂金爆率卡使用成功！爆率提高200%,持续时间延长一小时！
+#elseact
+SENDMSG 6 铂金爆率卡使用成功！爆率提高200%,持续时间此项一小时！
+
+[@StdModeFunc204]
+#if
+#act
+
+inc N$钻石爆率卡 250
+
+mov N$钻石爆率卡结束时间 <$UTCNOW8>
+inc N$钻石爆率卡结束时间 3600
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+
+#if
+large <$str(N$钻石爆率卡)> 250
+#act
+SENDMSG 6 钻石爆率卡使用成功！爆率提高250%,持续时间延长一小时！
+#elseact
+SENDMSG 6 钻石爆率卡使用成功！爆率提高250%,持续时间此项一小时！
+
+
+[@StdModeFunc205]
+#if
+#act
+
+inc N$星耀爆率卡 300
+
+mov N$星耀爆率卡结束时间 <$UTCNOW8>
+inc N$星耀爆率卡结束时间 3600
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+
+#if
+large <$str(N$星耀爆率卡)> 300
+#act
+SENDMSG 6 星耀爆率卡使用成功！爆率提高300%,持续时间延长一小时！
+#elseact
+SENDMSG 6 星耀爆率卡使用成功！爆率提高300%,持续时间此项一小时！
+
+[@StdModeFunc206]
+#if
+#act
+
+inc N$王者爆率卡 350
+
+mov N$王者爆率卡结束时间 <$UTCNOW8>
+inc N$王者爆率卡结束时间 3600
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+
+#if
+large <$str(N$王者爆率卡)> 350
+#act
+SENDMSG 6 王者爆率卡使用成功！爆率提高350%,持续时间延长一小时！
+#elseact
+SENDMSG 6 王者爆率卡使用成功！爆率提高350%,持续时间此项一小时！
+
+[@StdModeFunc207]
+#if
+#act
+
+inc N$荣耀爆率卡 400
+
+mov N$荣耀爆率卡结束时间 <$UTCNOW8>
+inc N$荣耀爆率卡结束时间 3600
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+
+#if
+large <$str(N$荣耀爆率卡)> 400
+#act
+SENDMSG 6 荣耀爆率卡使用成功！爆率提高400%,持续时间延长一小时！
+#elseact
+SENDMSG 6 荣耀爆率卡使用成功！爆率提高400%,持续时间此项一小时！
+
+[@StdModeFunc208]
+#if
+#act
+
+inc N$神圣爆率卡 450
+
+mov N$神圣爆率卡结束时间 <$UTCNOW8>
+inc N$神圣爆率卡结束时间 3600
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+
+#if
+large <$str(N$神圣爆率卡)> 450
+#act
+SENDMSG 6 神圣爆率卡使用成功！爆率提高450%,持续时间延长一小时！
+#elseact
+SENDMSG 6 神圣爆率卡使用成功！爆率提高450%,持续时间此项一小时！
+
+[@StdModeFunc209]
+#if
+#act
+
+inc N$永恒爆率卡 500
+
+mov N$永恒爆率卡结束时间 <$UTCNOW8>
+inc N$永恒爆率卡结束时间 3600
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+
+#if
+large <$str(N$永恒爆率卡)> 500
+#act
+SENDMSG 6 永恒爆率卡使用成功！爆率提高500%,持续时间延长一小时！
+#elseact
+SENDMSG 6 永恒爆率卡使用成功！爆率提高500%,持续时间此项一小时！
+
+[@StdModeFunc210]
+#if
+#act
+
+inc N$至尊爆率卡 500
+
+mov N$至尊爆率卡结束时间 <$UTCNOW8>
+inc N$至尊爆率卡结束时间 3600
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+
+#if
+large <$str(N$至尊爆率卡)> 500
+#act
+SENDMSG 6 至尊爆率卡使用成功！爆率提高500%,持续时间延长一小时！
+#elseact
+SENDMSG 6 至尊爆率卡使用成功！爆率提高500%,持续时间此项一小时！
+
+[@StdModeFunc211]
+#if
+#act
+
+inc N$100爆率卡 100
+
+mov N$100爆率卡结束时间 <$UTCNOW8>
+inc N$100爆率卡结束时间 86400
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+
+#if
+large <$str(N$100爆率卡)> 100
+#act
+SENDMSG 6 100%爆率卡使用成功！爆率提高100%,持续时间延长24小时！
+#elseact
+SENDMSG 6 100%爆率卡使用成功！爆率提高100%,持续时间此项24小时！
+
+[@StdModeFunc212]
+#if
+#act
+
+inc N$200爆率卡 200
+
+mov N$200爆率卡结束时间 <$UTCNOW8>
+inc N$200爆率卡结束时间 86400
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+
+#if
+large <$str(N$200爆率卡)> 200
+#act
+SENDMSG 6 200%爆率卡使用成功！爆率提高200%,持续时间延长24小时！
+#elseact
+SENDMSG 6 200%爆率卡使用成功！爆率提高200%,持续时间此项24小时！
+
+
+[@StdModeFunc213]
+#if
+#act
+
+inc N$300爆率卡 300
+
+mov N$300爆率卡结束时间 <$UTCNOW8>
+inc N$300爆率卡结束时间 86400
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+
+#if
+large <$str(N$300爆率卡)> 300
+#act
+SENDMSG 6 300%爆率卡使用成功！爆率提高300%,持续时间延长24小时！
+#elseact
+SENDMSG 6 300%爆率卡使用成功！爆率提高300%,持续时间此项24小时！
+
+
+[@StdModeFunc214]
+#if
+#act
+
+inc N$500爆率卡 500
+
+mov N$500爆率卡结束时间 <$UTCNOW8>
+inc N$500爆率卡结束时间 86400
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
+
+#if
+large <$str(N$500爆率卡)> 500
+#act
+SENDMSG 6 500%爆率卡使用成功！爆率提高500%,持续时间延长24小时！
+#elseact
+SENDMSG 6 500%爆率卡使用成功！爆率提高500%,持续时间此项24小时！
+
+
+[@取消使用批量卡]
+#if
+not equal <$str(S$批量拾取卡)>
+#act
+givestateitem <$str(S$批量拾取卡)> 1 0 1 0 0 1 1 1 1
+mov S$批量拾取卡
+
+[@StdModeFunc215]
+#if
+not small <$str(U21)> 1
+#act
+mov S$批量拾取卡 自动吸物【1*1范围】
+messagebox 当前拾取范围为4*4,请第二天再使用该道具 @取消使用批量卡
+break
+
+#if
+#act
+SENDMSG 6 自动吸物【1*1范围】使用成功！批量拾取范围提高到1*1,当天零点失效！
+mov U21 1
+
+
+[@StdModeFunc216]
+#if
+not small <$str(U21)> 2
+#act
+mov S$批量拾取卡 自动吸物【2*2范围】
+messagebox 当前拾取范围为4*4,请第二天再使用该道具 @取消使用批量卡
+break
+
+#if
+#act
+SENDMSG 6 自动吸物【2*2范围】使用成功！批量拾取范围提高到2*2,当天零点失效！
+mov U21 2
+
+[@StdModeFunc217]
+#if
+not small <$str(U21)> 3
+#act
+mov S$批量拾取卡 自动吸物【3*3范围】
+messagebox 当前拾取范围为4*4,请第二天再使用该道具 @取消使用批量卡
+break
+
+#if
+#act
+SENDMSG 6 自动吸物【3*3范围】使用成功！批量拾取范围提高到3*3,当天零点失效！
+mov U21 3
+
+[@StdModeFunc218]
+#if
+not small <$str(U21)> 4
+#act
+mov S$批量拾取卡 自动吸物【4*4范围】
+messagebox 当前拾取范围为4*4,请第二天再使用该道具 @取消使用批量卡
+break
+
+#if
+#act
+SENDMSG 6 自动吸物【4*4范围】使用成功！批量拾取范围提高到4*4,当天零点失效！
+mov U21 4
 
 
 [@确22定]
@@ -1808,84 +2131,84 @@ BREAK
 random 16
 #ACT
 GAMEGOLD + 1889
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{1889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{1889元宝|56:9}
 BREAK
 
 #IF
 random 14
 #ACT
 GAMEGOLD + 1589
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{1589元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{1589元宝|56:9}
 BREAK
 
 #IF
 random 12
 #ACT
 GAMEGOLD + 1189
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{1189元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{1189元宝|56:9}
 BREAK
 
 #IF
 random 10
 #ACT
 GAMEGOLD + 889
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{889元宝|56:9}
 BREAK
 
 #IF
 random 9
 #ACT
 GAMEGOLD + 689
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{689元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{689元宝|56:9}
 BREAK
 
 #IF
 random 7
 #ACT
 GAMEGOLD + 289
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{289元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{289元宝|56:9}
 BREAK
 
 #IF
 random 6
 #ACT
 GAMEGOLD + 389
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{389元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{389元宝|56:9}
 BREAK
 
 #IF
 random 5
 #ACT
 GAMEGOLD + 489
-SENDMSG 6 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{489元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{489元宝|56:9}
 BREAK
 
 #IF
 random 4
 #ACT
 GAMEGOLD + 189
-SENDMSG 6 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{189元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{189元宝|56:9}
 BREAK
 
 #IF
 random 3
 #ACT
 GAMEGOLD + 589
-SENDMSG 6 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{589元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{589元宝|56:9}
 BREAK
 
 #IF
 random 2
 #ACT
 GAMEGOLD + 189
-SENDMSG 6 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{189元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{189元宝|56:9}
 BREAK
 
 #IF
 random 1
 #ACT
 GAMEGOLD + 89
-SENDMSG 6 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{89元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{89元宝|56:9}
 BREAK
 ;-----------------------------------------------------------------------------------------------------------------
 [@StdModeFunc112]
@@ -1893,91 +2216,91 @@ BREAK
 random 16
 #ACT
 GAMEGOLD + 11889
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{11889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{11889元宝|56:9}
 BREAK
 
 #IF
 random 14
 #ACT
 GAMEGOLD + 11589
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{11589元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{11589元宝|56:9}
 BREAK
 
 #IF
 random 12
 #ACT
 GAMEGOLD + 11189
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{11189元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{11189元宝|56:9}
 BREAK
 
 #IF
 random 10
 #ACT
 GAMEGOLD + 9889
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{9889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{9889元宝|56:9}
 BREAK
 
 #IF
 random 9
 #ACT
 GAMEGOLD + 8889
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{8889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{8889元宝|56:9}
 BREAK
 
 #IF
 random 8
 #ACT
 GAMEGOLD + 7889
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{7889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{7889元宝|56:9}
 BREAK
 
 #IF
 random 7
 #ACT
 GAMEGOLD + 6689
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{6689元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{6689元宝|56:9}
 BREAK
 
 #IF
 random 6
 #ACT
 GAMEGOLD + 5889
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{5889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{5889元宝|56:9}
 BREAK
 
 #IF
 random 5
 #ACT
 GAMEGOLD + 4889
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{4889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{4889元宝|56:9}
 BREAK
 
 #IF
 random 4
 #ACT
 GAMEGOLD + 3889
-SENDMSG 6 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{3889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{3889元宝|56:9}
 BREAK
 
 #IF
 random 3
 #ACT
 GAMEGOLD + 2889
-SENDMSG 6 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{2889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{2889元宝|56:9}
 BREAK
 
 #IF
 random 2
 #ACT
 GAMEGOLD + 1889
-SENDMSG 6 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{1889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{1889元宝|56:9}
 BREAK
 
 #IF
 random 1
 #ACT
 GAMEGOLD + 1889
-SENDMSG 6 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{1889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{1889元宝|56:9}
 BREAK
 
 
@@ -1988,91 +2311,91 @@ BREAK
 random 16
 #ACT
 GAMEGOLD + 111889
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{111889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{111889元宝|56:9}
 BREAK
 
 #IF
 random 14
 #ACT
 GAMEGOLD + 101589
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{101589元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{101589元宝|56:9}
 BREAK
 
 #IF
 random 12
 #ACT
 GAMEGOLD + 91189
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{91189元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{91189元宝|56:9}
 BREAK
 
 #IF
 random 10
 #ACT
 GAMEGOLD + 89889
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{89889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{89889元宝|56:9}
 BREAK
 
 #IF
 random 9
 #ACT
 GAMEGOLD + 78889
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{78889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{78889元宝|56:9}
 BREAK
 
 #IF
 random 8
 #ACT
 GAMEGOLD + 67889
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{67889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{67889元宝|56:9}
 BREAK
 
 #IF
 random 7
 #ACT
 GAMEGOLD + 56689
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{56689元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{56689元宝|56:9}
 BREAK
 
 #IF
 random 6
 #ACT
 GAMEGOLD + 45889
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{45889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{45889元宝|56:9}
 BREAK
 
 #IF
 random 5
 #ACT
 GAMEGOLD + 34889
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{34889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了红包，里边竟然有|56:9}{34889元宝|56:9}
 BREAK
 
 #IF
 random 4
 #ACT
 GAMEGOLD + 38889
-SENDMSG 6 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{38889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{38889元宝|56:9}
 BREAK
 
 #IF
 random 3
 #ACT
 GAMEGOLD + 28889
-SENDMSG 6 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{28889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{28889元宝|56:9}
 BREAK
 
 #IF
 random 2
 #ACT
 GAMEGOLD + 18889
-SENDMSG 6 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{18889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{18889元宝|56:9}
 BREAK
 
 #IF
 random 1
 #ACT
 GAMEGOLD + 18889
-SENDMSG 6 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{18889元宝|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|251:0:0}{打开了红包，里边竟然有|56:9}{18889元宝|56:9}
 BREAK
 
 
@@ -2081,21 +2404,21 @@ BREAK
 #IF
 #ACT
 give 洗髓丹 50
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了洗髓丹[包]，里边竟然有|56:9}{50个洗髓丹|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了洗髓丹[包]，里边竟然有|56:9}{50个洗髓丹|56:9}
 BREAK
 
 [@StdModeFunc115]
 #IF
 #ACT
 give 恶魔令牌 50
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了恶魔令牌[包]，里边竟然有|56:9}{50个恶魔令牌|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了恶魔令牌[包]，里边竟然有|56:9}{50个恶魔令牌|56:9}
 BREAK
 
 [@StdModeFunc116]
 #IF
 #ACT
 give 血龙魄珠 50
-SENDMSG 6 {ぐ<$USERNAME>:|56:9:0}{打开了血龙魄珠[包]，里边竟然有|56:9}{50个血龙魄珠|56:9}
+SENDMSG 7 {ぐ<$USERNAME>:|56:9:0}{打开了血龙魄珠[包]，里边竟然有|56:9}{50个血龙魄珠|56:9}
 BREAK
 
 
@@ -2271,6 +2594,13 @@ CALCVAR HUMAN 今日充值 + <$STR(M0)>
 SAVEVAR HUMAN 今日充值
 SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>成功充值。
 
+
+#if
+#act
+mov N$QF贵族升级 1
+goto @贵族升级
+
+
 ;-----------每日首次登录触发--------------
 [@SetDay]
 
@@ -2294,4 +2624,64 @@ mov U20 0
 ; close
 #call [\系统功能\充值功能.txt] @充值主面板
 
+
+[@贵族升级]
+#if
+#act
+GetListString ..\QuestDiary\赞助系统\贵族升级对照.txt <$str(N$QF贵族升级)> S$所需充值额
+
+#if
+not small <$str(U99)> <$str(S$所需充值额)>
+#act
+mov U98 <$str(N$QF贵族升级)>
+SetIcon 8 0 00009<$str(U98)> 0 -10 0 0
+
+
+#if
+small <$str(U99)> <$str(S$所需充值额)>
+#act
+break
+
+#if
+not equal <$str(S$所需充值额)>
+#act
+inc N$QF贵族升级 1
+goto @贵族升级
+
+[@EnterMap]
+#if
+#act
+SETSPRITEMODE 2
+
+#if
+large <$str(U21)> 0
+not CheckTextList ..\QuestDiary\禁用批量拾取地图.txt <$MAPTITLE>
+#act
+SETSPRITEMODE 1
+PICKUPITEMS 0 <$str(U21)> 500
+
+[@鞭尸]
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(U98)> 贵族鞭尸特权 S$贵族鞭尸特权
+AnsiReplaceText S$贵族鞭尸特权 鞭尸+
+AnsiReplaceText S$贵族鞭尸特权 %
+
+movr N$随机数 100
+inc N$鞭尸几率 <$str(S$贵族鞭尸特权)>
+sendmsg 5 <$str(N$鞭尸几率)>::<$str(N$随机数)>:
+; mov N$鞭尸几率 100
+
+#or
+small <$str(N$随机数)> <$str(N$鞭尸几率)>
+large <$str(N$鞭尸几率)> 99
+#act
+SendCenterMsg 146 0 恭喜你触发鞭尸效果:召唤了一只<$KILLMONNAME>.
+RECALLMOB <$KILLMONNAME> 999 1
+MEBabyHP <$KILLMONNAME> = 100 0
+GetCallMob <$KILLMONNAME>
+
+; CHANGEMOBABILITY 狂徒勇士 11 = 10000 9999
+; MonGenEx <$MAP> <$X> <$Y> <$KILLMONNAME> 3 1 0 250
+; <$KILLMONNAME>.AddhpPer - 50
 

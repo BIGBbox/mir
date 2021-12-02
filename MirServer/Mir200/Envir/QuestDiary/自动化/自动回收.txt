@@ -30,6 +30,7 @@ money RMB点 + <$str(N$自动回收结算2)>
 CHANGEEXP + <$str(N$自动回收结算3)>
 mov S12
 GuildNoticeMsg 255 56 玩家:『<$USERNAME>』自动回收获得大量货币！！
+goto @回收加成
 
 
 [@自动回收回调]
@@ -54,5 +55,18 @@ INC N$自动回收结算1 <$STR(S$元宝收益)>
 INC N$自动回收结算2 <$STR(S$RMB点收益)>
 INC N$自动回收结算3 <$STR(S$经验值收益)>
 
+[@自动回收加成]
+#IF
+large <$str(U98)> 0
+#ACT
+ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(U98)> 额外回收比例 S$额外回收加成
+
+CalcPer <$STR(N$自动回收结算1)> <$STR(S$额外回收加成)> N$自动回收结算1加成
+CalcPer <$STR(N$自动回收结算2)> <$STR(S$额外回收加成)> N$自动回收结算1加成
+CalcPer <$STR(N$自动回收结算3)> <$STR(S$额外回收加成)> N$自动回收结算1加成
+
+money 元宝 + <$str(N$自动回收结算1加成)>
+money RMB点 + <$str(N$自动回收结算1加成)>
+CHANGEEXP + <$str(N$自动回收结算1加成)>
 
 }

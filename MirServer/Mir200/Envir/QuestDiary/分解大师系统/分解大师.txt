@@ -1,0 +1,169 @@
+
+[@分解大师功能]
+{
+#if
+#act
+
+goto @切换面板1
+
+
+
+[@分解大师系统主面板]
+#if
+#act
+mov S$随机道具
+mov S$展示物品
+mov N$展示道具序号 1
+mov N$创建展示道具序号 1
+mov N$展示y 20
+mov N$展示x 15
+goto @展示道具
+goto @创建展示道具
+
+
+#say
+; <Img|x=0|y=0|width=9999|height=9999|children={分解大师系统主面板}|img=public/0.png|bg=1|link=@exit>
+<Img|id=分解大师系统主面板|x=210|y=30|img=public/sf1/2/bg6.png|children={内框背景,okBtn,展示bg,ok框,标题,列表1,列表2,列表3,描述1,描述2,描述3,描述4,描述5,描述6,列表4,控件9,获取途径,获取途径控件,closeBtn}|bg=1|move=1>
+<Text|id=描述1|x=202|y=95|tipsx=10|tipsy=80|color=250|size=18|text=我可以分解1-4转那些史诗,传承,罕世装备！>
+<Text|id=描述2|x=202|y=115|tipsx=10|tipsy=80|color=250|size=18|text=不过也不是免费的，你需要支付一定的费用！>
+<Text|id=描述3|x=202|y=135|tipsx=10|tipsy=80|color=250|size=18|text=分解装备有一定几率获得（药品,材料印记,碎片,元宝,经验）！>
+<Text|id=描述4|x=260|y=250|color=250|size=16|text=放入分解装备>
+<Text|id=描述5|x=370|y=300|color=70|size=16|text=几率获得：>
+<RText|id=描述6|x=260|y=360|color=70|size=16|text=<分解费用：/FCOLOR=251><<$str(N$分解费用)>元宝/FCOLOR=161>>
+<Img|id=展示bg|x=480|y=180|children=展示1,展示2,展示3,展示4,展示5,展示6,展示7,展示8,展示9,|percentwidth=30|percentheight=44|img=public/uipic/00665.png>
+<ITEMBOX|id=ok框|x=280.0|y=280.0|width=55|height=55|boxindex=1|stdmode=*|<$str(S$分解大师box提示)>|tipsx=1|tipsy=65|img=public/1900000651_3.png>
+<Button|id=closeBtn|x=765|y=65.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Button|id=okBtn|x=420|y=460.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=分 解|link=<$str(S$分解大师按钮触发)>>
+<Text|id=标题|x=180|y=45|color=255|size=18|text=分解大师>
+<$str(S$按钮列表)>
+<$str(S$展示物品)>
+
+[@切换面板1]
+#if
+#act
+mov S$主界面
+mov S$界面序号 1
+mov S$按钮列表
+mov N$分解费用 20000
+
+inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=三转装备|link=@切换面板1>
+inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=四转装备|link=@切换面板2>
+inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=五转装备|link=@切换面板3>
+goto @分解大师系统主面板
+break
+
+[@切换面板2]
+#if
+#act
+mov S$主界面
+mov S$界面序号 2
+mov S$按钮列表
+mov N$分解费用 30000
+
+inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=三转装备|link=@切换面板1>
+inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=四转装备|link=@切换面板2>
+inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=五转装备|link=@切换面板3>
+
+goto @分解大师系统主面板
+break
+
+[@切换面板3]
+#if
+#act
+mov S$主界面
+mov S$界面序号 3
+mov S$按钮列表
+mov N$分解费用 50000
+
+inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=三转装备|link=@切换面板1>
+inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=四转装备|link=@切换面板2>
+inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=五转装备|link=@切换面板3>
+
+goto @分解大师系统主面板
+break
+
+[@创建展示道具]
+#if
+#act
+GetValidstr <$STR(S$随机道具)> * S$道具名字 S$随机道具
+GetDBItemFieldValue <$STR(S$道具名字)> idx S$展示道具ID1
+inc S$展示物品 <ItemShow|id=展示<$str(N$创建展示道具序号)>|x=<$str(N$展示x)>|y=<$str(N$展示y)>|itemid=<$STR(S$展示道具ID1)>|itemcount=1|showtips=1|bgtype=1|scale=1.1>
+
+#or
+equal <$str(N$创建展示道具序号)> 3
+equal <$str(N$创建展示道具序号)> 6
+equal <$str(N$创建展示道具序号)> 9
+#act
+inc N$展示y 70
+mov N$展示x -55
+
+#if
+not equal <$str(S$随机道具)>
+#act
+inc N$创建展示道具序号 1
+inc N$展示x 70
+goto @创建展示道具
+
+[@展示道具]
+#if
+#act
+GetRandomText ..\QuestDiary\分解装备\展示奖励物品<$str(S$界面序号)>.txt S98
+
+#if
+CheckContainsText <$STR(S$随机道具)> <$STR(S98)>
+#act
+dec N$展示道具序号 1
+AnsiReplaceText S$随机道具 <$STR(S98)>*
+
+#if
+not CheckContainsText <$STR(S$随机道具)> <$STR(S98)>
+#act
+inc S$随机道具 <$str(S98)>*
+
+#if
+small <$str(N$展示道具序号)> 9
+#act
+inc N$展示道具序号 1
+goto @展示道具
+
+
+[@ItemIntoBox1]
+#IF
+not CheckContainsTextList ..\QuestDiary\分解装备\分解的装备<$str(S$界面序号)>.txt <$BOXITEM[1].NAME>
+#act
+ReturnBoxItem 1
+UpDateBoxItem 1
+MESSAGEBOX 错误\\当前物品禁止分解！
+BREAK
+
+#IF
+#act
+MOV S$分解大师box提示
+MOV S$分解大师按钮触发 @确定分解
+GOTO @切换面板<$str(S$界面序号)>
+BREAK
+
+[@ItemOutBox1]
+#IF
+#act
+ReturnBoxItem 1
+UpDateBoxItem 1
+BREAK
+
+[@确定分解]
+#IF
+CheckBoxItemCount 1 1
+not CheckBindMoney 元宝 < <$str(N$分解费用)>
+#act
+money 绑定元宝 - <$str(N$分解费用)>
+DELBOXITEM 1 1
+GetRandomText ..\QuestDiary\分解装备\奖励物品<$str(S$界面序号)>.txt S10
+give <$STR(S10)> 1
+UpDateBoxItem 1
+#ELSEACT
+ReturnBoxItem 1
+UpDateBoxItem 1
+MESSAGEBOX 1.元宝不足<$str(N$分解费用)>,不能分解\2.物品框内没有物品！
+BREAK
+
+}

@@ -226,7 +226,7 @@ GAMEGIRD - 20
 MOV A91 <$GUILDNAME>
 MOV A92 <$USERNAME>
 MAPMOVE 0150
-Gmexecute 开始提问 @行会召唤
+Gmexecute StartQuest @行会召唤
 SENDMSG 7 集结令每次收取20灵符手续费..
 SENDMSG 7 集结令已放出，请等待你的援军
 SENDMSG 7 集结令已放出，请等待你的援军
@@ -248,7 +248,7 @@ GAMEGOLD - 200000
 MOV A91 <$GUILDNAME>
 MOV A92 <$USERNAME>
 MAPMOVE 0150
-Gmexecute 开始提问 @行会召唤
+Gmexecute StartQuest @行会召唤
 SENDMSG 7 集结令每次收取200000元宝手续费..
 SENDMSG 7 集结令已放出，请等待你的援军
 SENDMSG 7 集结令已放出，请等待你的援军

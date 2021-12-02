@@ -21,13 +21,13 @@ MOV S$展示 <Button|x=-230|y=<$STR(N$坐标Y1)>|nimg=official/top/1900012531.png|li
 MOV S$图标2 <Button|x=-230|y=<$STR(N$坐标Y1)>|nimg=official/top/1900012531.png|link=@伸缩>
 MOV N$坐标X2 -320
 
-INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=official/top/1900012601.png|link=@每日悬赏>
+INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=official/top/1900012604.png|link=@每日悬赏>
 
-; dec N$坐标X2 80
-; INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=official/top/1900012611.png|link=@建议>
+dec N$坐标X2 85
+INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=official/top/1900012606.png|link=@会员>
 
-; dec N$坐标X2 80
-; INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=official/top/1900012607.png|link=@首充>
+dec N$坐标X2 85
+INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=official/top/1900012600.png|link=@赞助>
 
 ; dec N$坐标X2 80
 ; INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=official/top/1900012602.png|link=@飞鞋>
@@ -56,6 +56,19 @@ addbutton 102 2 <$STR(S$展示)>
 #if
 #act
 #Call [\每日悬赏系统\每日悬赏.txt] @每日悬赏主面板
+
+[@会员]
+#if
+#act
+
+#Call [\会员系统\会员.txt] @会员面板
+; sendmsg 5 打开会员面板
+[@赞助]
+#if
+#act
+
+#Call [\赞助系统\赞助.txt] @赞助面板
+; sendmsg 5 打开会员面板
 
 
 [@管理模式]

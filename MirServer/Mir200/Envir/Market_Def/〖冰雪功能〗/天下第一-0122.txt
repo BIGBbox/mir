@@ -117,7 +117,7 @@ MOV A403 <$GUILDNAME>
 ChangeModeEx 14 999999
 ChangeModeEx 3 99999 1500
 ChangeModeEx 4 99999 500
-Gmexecute 开始提问 @清理美女第一
+Gmexecute StartQuest @清理美女第一
 GOTO @美女职业
 GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【天下第一美女】...
 GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【天下第一美女】...
@@ -177,7 +177,7 @@ MOV A401 <$GUILDNAME>
 ChangeModeEx 14 9999
 ChangeModeEx 3 999 1500
 ChangeModeEx 4 999 500
-Gmexecute 开始提问 @清理猛男第一
+Gmexecute StartQuest @清理猛男第一
 GOTO @猛男职业
 GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【天下第一猛男】...
 GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【天下第一猛男】...

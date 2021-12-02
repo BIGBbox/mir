@@ -53,6 +53,8 @@ VAR Integer HUMAN LoginPassWordStatus
 ;LOADVAR HUMAN LoginPassWordStatus ..\QuestDiary\临时数据\LoginPassWord.txt
 VAR Integer HUMAN LoginPassWordNum
 ;LOADVAR HUMAN LoginPassWordNum ..\QuestDiary\临时数据\LoginPassWord.txt
+SetIcon 8 0 00009<$str(U98)> 0 -10 0 0
+
 #CALL [\游戏登陆\登陆脚本.txt] @登陆设置
 #CALL [\游戏登陆\封号系统.txt] @封号分类
 ;#CALL [\二级密码\二级密码.txt] @登录检测
@@ -559,10 +561,18 @@ DEPRIVETITLE 血龙之体lv7
 DEPRIVETITLE 血龙之体lv8
 CONFERTITLE 血龙之体lv8
 
+
 [@OnTimer0]
+; #if
+; equal <$str(S$血祭窗口状态)> 1
+; #act
+; #CALL [\装备血祭系统\装备血祭.txt] @装备血祭功能
+
+; N$青铜爆率卡结束时间
 
 #if
 #act
+goto @重置会员爆率卡
 goto @自动勾选背包待回收物品
 
 #if
@@ -1036,3 +1046,155 @@ not large <$STR(N$转生等级)> 20
 #act
 inc N$转生等级 1
 goto @获取当前转生等级
+
+
+[@增加会员V值]
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\会员系统\会员数据.txt <$str(U9)> 会员V值 S$会员V值
+
+#if
+not small <$str(U12)> <$str(S$会员V值)>
+#act
+break
+
+#if
+Checkonline
+#act
+ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(U98)> 会员V点恢复/时 S$V值额外恢复数
+AnsiReplaceText S$V值额外恢复数 恢复+
+inc U12 <$str(S$V值额外恢复数)>
+inc U12 5
+
+
+[@重置会员爆率卡]
+#if
+#act
+mov N$当前时间 <$UTCNOW8>
+mov S$是否更新爆率 0
+
+#if
+large <$str(N$当前时间)> <$str(N$青铜爆率卡结束时间)> 
+not equal <$str(N$青铜爆率卡结束时间)> 0
+#act
+mov N$青铜爆率卡 0
+mov N$青铜爆率卡结束时间 0
+mov S$是否更新爆率 1
+
+#if
+large <$str(N$当前时间)> <$str(N$白银爆率卡结束时间)> 
+not equal <$str(N$白银爆率卡结束时间)> 0
+#act
+mov N$白银爆率卡 0
+mov N$白银爆率卡结束时间 0
+mov S$是否更新爆率 1
+
+#if
+large <$str(N$当前时间)> <$str(N$黄金爆率卡结束时间)> 
+not equal <$str(N$黄金爆率卡结束时间)> 0
+#act
+mov N$黄金爆率卡 0
+mov N$黄金爆率卡结束时间 0
+mov S$是否更新爆率 1
+
+#if
+large <$str(N$当前时间)> <$str(N$铂金爆率卡结束时间)> 
+not equal <$str(N$铂金爆率卡结束时间)> 0
+#act
+mov N$铂金爆率卡 0
+mov N$铂金爆率卡结束时间 0
+mov S$是否更新爆率 1
+
+#if
+large <$str(N$当前时间)> <$str(N$钻石爆率卡结束时间)> 
+not equal <$str(N$钻石爆率卡结束时间)> 0
+#act
+mov N$钻石爆率卡 0
+mov N$钻石爆率卡结束时间 0
+mov S$是否更新爆率 1
+
+#if
+large <$str(N$当前时间)> <$str(N$星耀爆率卡结束时间)> 
+not equal <$str(N$星耀爆率卡结束时间)> 0
+#act
+mov N$星耀爆率卡 0
+mov N$星耀爆率卡结束时间 0
+mov S$是否更新爆率 1
+
+#if
+large <$str(N$当前时间)> <$str(N$王者爆率卡结束时间)> 
+not equal <$str(N$王者爆率卡结束时间)> 0
+#act
+mov N$王者爆率卡 0
+mov N$王者爆率卡结束时间 0
+mov S$是否更新爆率 1
+
+#if
+large <$str(N$当前时间)> <$str(N$荣耀爆率卡结束时间)> 
+not equal <$str(N$荣耀爆率卡结束时间)> 0
+#act
+mov N$荣耀爆率卡 0
+mov N$荣耀爆率卡结束时间 0
+mov S$是否更新爆率 1
+
+#if
+large <$str(N$当前时间)> <$str(N$神圣爆率卡结束时间)> 
+not equal <$str(N$神圣爆率卡结束时间)> 0
+#act
+mov N$神圣爆率卡 0
+mov N$神圣爆率卡结束时间 0
+mov S$是否更新爆率 1
+
+#if
+large <$str(N$当前时间)> <$str(N$永恒爆率卡结束时间)> 
+not equal <$str(N$永恒爆率卡结束时间)> 0
+#act
+mov N$永恒爆率卡 0
+mov N$永恒爆率卡结束时间 0
+mov S$是否更新爆率 1
+
+#if
+large <$str(N$当前时间)> <$str(N$至尊爆率卡结束时间)> 
+not equal <$str(N$至尊爆率卡结束时间)> 0
+#act
+mov N$至尊爆率卡 0
+mov N$至尊爆率卡结束时间 0
+mov S$是否更新爆率 1
+
+#if
+large <$str(N$当前时间)> <$str(N$100爆率卡结束时间)> 
+not equal <$str(N$100爆率卡结束时间)> 0
+#act
+mov N$100爆率卡 0
+mov N$100爆率卡结束时间 0
+mov S$是否更新爆率 1
+
+#if
+large <$str(N$当前时间)> <$str(N$200爆率卡结束时间)> 
+not equal <$str(N$200爆率卡结束时间)> 0
+#act
+mov N$200爆率卡 0
+mov N$200爆率卡结束时间 0
+mov S$是否更新爆率 1
+
+#if
+large <$str(N$当前时间)> <$str(N$300爆率卡结束时间)> 
+not equal <$str(N$300爆率卡结束时间)> 0
+#act
+mov N$300爆率卡 0
+mov N$300爆率卡结束时间 0
+mov S$是否更新爆率 1
+
+#if
+large <$str(N$当前时间)> <$str(N$500爆率卡结束时间)> 
+not equal <$str(N$500爆率卡结束时间)> 0
+#act
+mov N$500爆率卡 0
+mov N$500爆率卡结束时间 0
+mov S$是否更新爆率 1
+
+
+#if
+equal <$str(S$是否更新爆率)> 1
+#act
+#CALL [\游戏功能\装备爆率.txt] @装备爆率
