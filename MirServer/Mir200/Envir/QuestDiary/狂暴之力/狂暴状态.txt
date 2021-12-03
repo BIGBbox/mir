@@ -159,7 +159,7 @@ equal <$str(S$当前界面)> 疾风之力
 #act
 
 SET [58] 1
-SETICON 0 1 12000 0 -50 0 0
+SETICON 1 2 12000 0 -80 0 0
 ; SetIcon 1 1 109 1 -50 6
 ChangeHumAbility 5 + 88
 ChangeHumAbility 6 + 88

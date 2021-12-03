@@ -53,7 +53,6 @@ VAR Integer HUMAN LoginPassWordStatus
 ;LOADVAR HUMAN LoginPassWordStatus ..\QuestDiary\临时数据\LoginPassWord.txt
 VAR Integer HUMAN LoginPassWordNum
 ;LOADVAR HUMAN LoginPassWordNum ..\QuestDiary\临时数据\LoginPassWord.txt
-SetIcon 8 0 00009<$str(U98)> 0 -10 0 0
 
 #CALL [\游戏登陆\登陆脚本.txt] @登陆设置
 #CALL [\游戏登陆\封号系统.txt] @封号分类
@@ -65,8 +64,6 @@ SetIcon 8 0 00009<$str(U98)> 0 -10 0 0
 #CALL [\游戏登陆\右下显示.txt] @属性显示
 SetOnTimer 0 1
 SetOnTimer 5 1
-
-
 
 #If
 EQUAL G111 0
@@ -1049,6 +1046,11 @@ goto @获取当前转生等级
 
 
 [@增加会员V值]
+#if
+small <$str(U9)> 1
+#act
+break
+
 #if
 #act
 ReadConfigFileItem ..\QuestDiary\会员系统\会员数据.txt <$str(U9)> 会员V值 S$会员V值

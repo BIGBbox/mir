@@ -110,6 +110,7 @@ money <$str(S$所需货币名)> - <$str(S$所需货币数量)>
 TAKE <$str(S$需要材料名)> <$str(S$需要材料数量)>
 MOV T13 <$str(S$下级称号)>
 inc T14 <$str(S$下级称号)>*
+SETICON 2 0 <$str(S$当前官职称号)> 0 -100 0 0
 MESSAGEBOX 恭喜你成为【<$str(S$下级称号)>】特此奖励20点属性！！
 GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【<$str(S$下级称号)>】...
 goto @官职属性提升

@@ -2631,6 +2631,7 @@ mov U20 0
 GetListString ..\QuestDiary\赞助系统\贵族升级对照.txt <$str(N$QF贵族升级)> S$所需充值额
 
 #if
+not equal <$str(S$所需充值额)>
 not small <$str(U99)> <$str(S$所需充值额)>
 #act
 mov U98 <$str(N$QF贵族升级)>

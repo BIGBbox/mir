@@ -26,6 +26,11 @@ mov N$页签 1
 GOTO @显示<$STR(S$页签)>
 
 [@显示1]
+
+#if
+#act
+mov N$界面序号 1
+
 #IF
 CHECK [799] 1
 #ACT
@@ -44,7 +49,7 @@ MOV N$是否自动回收 0
 <Button|id=page1|x=10.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=254|text=装备回收|size=18|link=@回收#页数=1#页签=1>
 <Button|id=page2|x=88.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=特殊回收|size=18|link=@回收#页数=2#页签=2>
 <Button|id=page3|x=166.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=其他回收|size=18|link=@回收#页数=3#页签=3>
-<Button|id=page4|x=247.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=特权回收|size=18|link=@回收#页数=4#页签=4>
+<Button|id=page4|x=247.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=贵族回收|size=18|link=@回收#页数=4#页签=4>
 
 
 <CheckBox|id=ckB1|x=22.0|y=60.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U200)>|checkboxid=1|link=@改变#改变KEY=200#系列=战神套>
@@ -80,6 +85,9 @@ MOV N$是否自动回收 0
 
 
 [@显示2]
+#if
+#act
+mov N$界面序号 2
 
 #IF
 #SAY
@@ -90,7 +98,7 @@ MOV N$是否自动回收 0
 <Button|id=page1|x=10.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=装备回收|size=18|link=@回收#页数=1#页签=1>
 <Button|id=page2|x=88.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=254|text=特殊回收|size=18|link=@回收#页数=2#页签=2>
 <Button|id=page3|x=166.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=其他回收|size=18|link=@回收#页数=3#页签=3>
-<Button|id=page4|x=247.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=特权回收|size=18|link=@回收#页数=4#页签=4>
+<Button|id=page4|x=247.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=贵族回收|size=18|link=@回收#页数=4#页签=4>
 
 
 <CheckBox|id=ckB1|x=22.0|y=60.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U211)>|checkboxid=1|link=@改变#改变KEY=211#系列=天怒系列>
@@ -125,6 +133,9 @@ MOV N$是否自动回收 0
 
 
 [@显示3]
+#if
+#act
+mov N$界面序号 3
 
 #IF
 #SAY
@@ -135,7 +146,7 @@ MOV N$是否自动回收 0
 <Button|id=page1|x=10.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=装备回收|size=18|link=@回收#页数=1#页签=1>
 <Button|id=page2|x=88.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=特殊回收|size=18|link=@回收#页数=2#页签=2>
 <Button|id=page3|x=166.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=254|text=其他回收|size=18|link=@回收#页数=3#页签=3>
-<Button|id=page4|x=247.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=特权回收|size=18|link=@回收#页数=4#页签=4>
+<Button|id=page4|x=247.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=贵族回收|size=18|link=@回收#页数=4#页签=4>
 
 
 <CheckBox|id=ckB1|x=22.0|y=60.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U224)>|checkboxid=1|link=@改变#改变KEY=224#系列=治疗宝珠①>
@@ -184,6 +195,9 @@ MOV N$是否自动回收 0
 
 
 [@显示4]
+#if
+#act
+mov N$界面序号 4
 
 #IF
 #SAY
@@ -194,7 +208,7 @@ MOV N$是否自动回收 0
 <Button|id=page1|x=10.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=装备回收|size=18|link=@回收#页数=1#页签=1>
 <Button|id=page2|x=88.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=特殊回收|size=18|link=@回收#页数=2#页签=2>
 <Button|id=page3|x=166.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=247|text=其他回收|size=18|link=@回收#页数=3#页签=3>
-<Button|id=page4|x=247.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=254|text=特权回收|size=18|link=@回收#页数=4#页签=4>
+<Button|id=page4|x=247.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=254|text=贵族回收|size=18|link=@回收#页数=4#页签=4>
 
 
 <CheckBox|id=ckB1|x=22.0|y=60.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U245)>|checkboxid=1|link=@改变#改变KEY=245#系列=4转材料>
@@ -252,7 +266,7 @@ mov N$color<$STR(S$页数)> 254
 <Button|id=page1|x=10.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=<$str(N$color1)>|text=装备回收|size=18|link=@回收#页数=1#页签=1>
 <Button|id=page2|x=88.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=<$str(N$color2)>|text=特殊回收|size=18|link=@回收#页数=2#页签=2>
 <Button|id=page3|x=166.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=<$str(N$color3)>|text=其他回收|size=18|link=@回收#页数=3#页签=3>
-<Button|id=page4|x=247.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=<$str(N$color4)>|text=特权回收|size=18|link=@回收#页数=4#页签=4>
+<Button|id=page4|x=247.0|y=10.0|width=83|height=45|nimg=public/1900000611.png|color=<$str(N$color4)>|text=贵族回收|size=18|link=@回收#页数=4#页签=4>
 ; <RText|id=exitInfo|x=247.0|y=10.0|color=247|text=退出详情|size=250|link=@显示<$STR(S$页数)>>
 <ListView|id=滑动窗口|x=10.0|y=5.0|children={收益详情1,收益详情2,收益详情3,收益详情4,收益详情5,收益详情6,收益详情7,收益详情8,收益详情9,收益详情10,收益详情11,收益详情12,收益详情13,收益详情14,收益详情15,收益详情16,收益详情17,收益详情18,收益详情19,收益详情20,收益详情21,收益详情22,收益详情23,收益详情24}|direction=1|bounce=0|margin=10|height=380|width=270|img=public/1900000678_3.png>
 
@@ -261,6 +275,26 @@ mov N$color<$STR(S$页数)> 254
 <$str(S$回收收益详情)>
 
 [@改变]
+; #or
+; equal <$str(S$改变KEY)> 245
+; equal <$str(S$改变KEY)> 246
+; equal <$str(S$改变KEY)> 247
+; equal <$str(S$改变KEY)> 248
+; equal <$str(S$改变KEY)> 249
+; equal <$str(S$改变KEY)> 250
+; equal <$str(S$改变KEY)> 251
+; #act
+
+#if
+equal <$str(N$界面序号)> 4
+small <$str(U98)> 4
+#act
+messagebox 你不是紫钻会员,无法使用该功能！！
+goto @显示4
+break
+
+
+; <$str(U98)>
 #IF
 EQUAL U<$STR(S$改变KEY)> 0
 #ACT
@@ -274,7 +308,6 @@ MOV U<$STR(S$改变KEY)> 0
 #IF
 #ACT
 mov S$回收系列 <$str(T20)>
-
 MOV S10
 
 ; MOV N$回收结算1 0

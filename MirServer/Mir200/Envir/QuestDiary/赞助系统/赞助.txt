@@ -4,10 +4,26 @@
 #act
 ; sendmsg 5 打开赞助面板!!
 mov N$赞助道具界面 <$str(U98)>
+mov N$打开界面1 <$str(U98)>
+mov N$打开界面 <$str(U98)>
+inc N$打开界面 1
+
 #if
 small <$str(N$赞助道具界面)> 1
 #act
 mov N$赞助道具界面 1
+
+; #if
+; small <$str(N$打开界面)> 1
+; #act
+; mov N$打开界面 1
+
+#if
+small <$str(N$打开界面1)> 1
+#act
+mov N$打开界面1 1
+
+
 
 #if
 #act
@@ -17,25 +33,76 @@ goto @切换会员界面
 [@赞助系统主面板]
 #if
 #act
-ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(N$赞助道具界面)> 充值额 S$充值额
+ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(N$打开界面)> 充值额 S$充值额
+ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(N$打开界面1)> 大图标 S$大图标img
+ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(N$打开界面)> 会员名 S$显示会员名
+
+mov S$展示图片img 0
+mov N$展示图片 1
+; mov N$ID 1
+mov N$展示截止 <$str(N$赞助道具界面)>
+mul N$展示截止 3
+mov N$展示起点 <$str(N$赞助道具界面)>
+mul N$展示起点 3
+dec N$展示起点 2
 
 mov N$RMB点 <$str(S$充值额)>
 mul N$RMB点 100
 
 mov N$充值额 <$str(U99)>
 mul N$充值额 100
-; sendmsg 5 <$str(S$首次购买标记)>==<$str(S$后续购买标记)>==400-110 -100 -45
+
+
+mov N$升级所需 <$str(N$RMB点)>
+dec N$升级所需 <$str(N$充值额)>
+; <需要/FCOLOR=161><<$str(N$RMB点)>RMB点/FCOLOR=251>
+mov S$所需显示 <需要/FCOLOR=161><<$str(N$升级所需)>RMB点/FCOLOR=251><即可购买<$str(S$显示会员名)>/FCOLOR=161>
+
+mov N$标题X 300
+mov N$百分比 <$str(U99)>
+mul N$百分比 100
+div N$百分比 <$str(S$充值额)>
+mov N$宽度 335
+CalcPer <$str(N$宽度)> <$str(N$百分比)> N$宽度
+mov S$充值进度显示 <<$str(N$充值额)>/<$str(N$RMB点)>/FCOLOR=161>
+mov N$进度条X 410
+
+#if
+equal <$str(N$RMB点)> 0
+#act
+mov S$所需显示 <你已经达到顶级会员/FCOLOR=251>
+mov N$宽度 335
+mov N$标题X 370
+mov S$充值进度显示 <<$str(N$充值额)>/100000/FCOLOR=249>
+mov S$充值进度显示 <MAX/FCOLOR=249>
+mov N$进度条X 400
+mov N$进度条X 435
+
+#if
+equal <$str(S$参数)> 1
+#act
+goto @创建展示图片
+
+
+#if
+#act
 #say
 <Img|x=0|y=0|width=9999|height=9999|children={赞助系统主面板}|img=public/0.png|bg=1|link=@exit>
-<Img|id=赞助系统主面板|x=150|y=60|img=public/sf1/2/zanz/vipBg.png|children={closeBtn,标题文字,切换按钮1,切换按钮2,标题,logo,logo2,cash,进度条,赞助详情}|link=@1>
+<Img|id=赞助系统主面板|x=150|y=60|img=public/sf1/2/zanz/vipBg.png|children={closeBtn,特效,标题文字,lineBg,切换按钮1,切换按钮2,标题,logo,logo2,cash,进度条,赞助详情}|link=@1>
 <Button|id=closeBtn|x=755|y=22.0|nimg=public/sf1/2/zanz/closeBtn.png|link=@exit>
-<RText|id=标题|x=300|y=65|size=18|outline=2|outlinecolor=0|text=<需要/FCOLOR=161><<$str(N$RMB点)>RMB点/FCOLOR=251><即可购买最强王者/FCOLOR=161>>
+<RText|id=标题|x=<$str(N$标题X)>|y=65|size=18|outline=2|outlinecolor=0|text=<$str(S$所需显示)>>
 <Img|id=logo|x=120|y=85|img=public/sf1/2/zanz/<$str(S$大图标img)>.png>
+<Img|id=lineBg|x=282|y=97|children={进度条}|img=public/sf1/2/lineK.png>
+<Img|id=特效|x=286|y=100|width=<$str(N$宽度)>|height=20|img=public/sf1/2/greenLine.png>
 
+; <Effect|id=特效|x=300|y=458|effectid=4203|effecttype=0|scale=2|speed=1.2|act=0|dir=2>
+; <Effect|id=特效|x=320|y=178|effectid=1015|effecttype=0|scale=1|speed=1.2|act=0|dir=2>
+
+; <Button|id=1_0|x=140|y=355|nimg=public/sf1/2/zanz/imag1.png|link=@123>
 <RText|id=标题文字|size=18|x=410|y=20|size=18|outline=2|outlinecolor=0|text=<贵族特权/FCOLOR=251>>
-<RText|id=进度条|x=410|y=98|size=16|outline=2|outlinecolor=0|text=<<$str(N$充值额)>/<$str(N$RMB点)>/FCOLOR=161>>
-; <Button|id=购买礼包按钮|x=540|y=70.0|nimg=public/sf1/19/button3.png|color=161|size=16|text=购买|link=@购买礼包>
-<Button|id=cash|x=640|y=85.0|color=161|nimg=public/1900000680.png|text=立即充值|link=@充值界面>
+<RText|id=进度条|x=<$str(N$进度条X)>|y=98|size=16|outline=2|outlinecolor=0|text=<$str(S$充值进度显示)>>
+<Button|id=cash|x=650|y=90.0|color=161|nimg=public/sf1/2/zanz/btnn1.png|pimg=public/sf1/2/zanz/btnn2.png|text=立即充值|link=@充值界面>
+
 <$str(S$切换界面按钮)>
 <$str(S$主面板)>
 
@@ -61,6 +128,7 @@ inc S$切换界面按钮 <Button|id=切换按钮2|children=2|size=15|x=434|y=170.0|nimg=pu
 inc S$切换界面按钮 <RText|id=1|x=35|y=4|size=15|text=<贵族福利/FCOLOR=161>>
 inc S$切换界面按钮 <RText|id=2|x=10|y=4|size=15|text=<贵族特权/FCOLOR=248>>
 mov S$主面板
+
 goto @赞助福利界面
 
 
@@ -71,8 +139,10 @@ inc S$切换界面按钮 <Button|id=切换按钮1|children=1|x=330|y=170.0|nimg=public/sf1
 inc S$切换界面按钮 <Button|id=切换按钮2|children=2|x=434|y=170.0|nimg=public/sf1/2/zanz/btn2.png|color=161|link=@切换会员界面#参数=2>
 inc S$切换界面按钮 <RText|id=1|x=35|y=4|size=15|text=<贵族福利/FCOLOR=248>>
 inc S$切换界面按钮 <RText|id=2|x=10|y=4|size=15|text=<贵族特权/FCOLOR=161>>
-inc S$切换界面按钮 <ListView|id=合成列表|children={1_1,1_2,1_3,1_4,1_5,1_6,1_7,1_8,1_9,1_10,1_11,,1_12,1_13,1_14,1_15,}|img=public/1900000680.png|direction=1|bounce=0|x=270|y=302.0|margin=2|height=235|width=665>
+inc S$切换界面按钮 <ListView|id=合成列表|children={1_1,1_2,1_3,1_4,1_5,1_6,1_7,1_8,1_9,1_10,1_11,,1_12,1_13,1_14,1_15,}|img=public/1900000680.png|direction=1|bounce=0|x=270|y=302.0|margin=2|height=245|width=665>
 mov N$详情序号 1
+mov S$主面板
+
 goto @赞助奖励特权
 goto @赞助奖励特权详情
 
@@ -93,9 +163,10 @@ goto @获取数据
 
 ; inc S$主面板 <Img|id=赞助详情|children={标题1,标题2,标题3,标题4,标题5,}|x=220|y=250|img=public/sf1/2/zanz/title.png>
 ; inc S$主面板 <RText|id=标题1|x=35|y=3|size=18|outline=2|outlinecolor=0|text=<贵族特权/FCOLOR=251>>
-inc S$主面板 <Img|id=logo2|x=140|y=355|children={logo1,leftBtn,rightBtn,购买礼包按钮,物品背景}|img=public/sf1/2/zanz/gitfLog.png>
+inc S$主面板 <Img|id=logo2|x=140|y=355|children={logo1,图片展示,leftBtn,rightBtn,购买礼包按钮,物品背景}|img=public/sf1/2/zanz/gitfLog.png>
 inc S$主面板 <Img|id=物品背景|width=600|height=80|children={show1,show2,show3,show4,show5,show6,show7}|x=30|y=50|img=public/zjm_txt_di.png>
-
+inc S$主面板 <ListView|id=图片展示|children={9_1,9_2,9_3,}|img=public/1900000680.png|direction=2|bounce=0|x=-20|y=-145.0|margin=2|height=235|width=665>
+; inc S$主面板 <Button|id=1_0|x=140|y=355|nimg=public/sf1/2/zanz/imag1.png|link=@123>
 inc S$主面板 <Button|id=leftBtn|x=180|y=10.0|nimg=public/sf1/2/zanz/left.png|link=@左切>
 inc S$主面板 <Button|id=rightBtn|x=350|y=10.0|nimg=public/sf1/2/zanz/right.png|link=@右切>
 
@@ -103,11 +174,57 @@ inc S$主面板 <Button|id=rightBtn|x=350|y=10.0|nimg=public/sf1/2/zanz/right.png|l
 check [<$str(S$首次购买标记)>] 1
 check [<$str(S$后续购买标记)>] 1
 #act
-inc S$主面板 <Button|id=购买礼包按钮|x=540|y=70.0|nimg=public/sf1/19/button3.png|color=161|size=16|text=已购买|grey=1>
-; inc S$主面板 <Img|id=logo1|x=487|y=410|img=public/sf1/2/zanz/<$str(S$小图标img)>.png>
+inc S$主面板 <Button|id=购买礼包按钮|x=530|y=75.0|nimg=public/sf1/2/zanz/btnn1.png|pimg=public/sf1/2/zanz/btnn2.png|color=161|size=16|text=已购买|grey=1>
+
 #if
 #act
+
 goto @创建展示道具
+
+[@创建展示图片]
+; mul N$展示截止 3
+; mov N$展示起点 <$str(N$赞助道具界面)>
+
+#if
+not equal <$str(S$展示图片img)>
+#act
+GetListString ..\QuestDiary\赞助系统\图片播放.txt <$str(N$展示起点)> S$展示图片img
+; sendmsg 5 起点:::<$str(N$展示起点)>---截止:::<$str(N$展示截止)>---ig:::<$str(S$展示图片img)>
+
+inc S$主面板 <Button|id=9_<$str(N$展示图片)>|x=0|y=0|width=220|height=130|nimg=public/sf1/2/zanz/zanImg/<$str(S$展示图片img)>.png|link=@123#ID=<$str(N$展示图片)>>
+
+#if
+; not equal <$str(S$展示图片img)>
+small <$str(N$展示起点)> <$str(N$展示截止)>
+#act
+inc N$展示起点 1
+inc N$展示图片 1
+goto @创建展示图片
+
+; [@123]
+; #if
+; #act
+; GetListString ..\QuestDiary\赞助系统\图片播放.txt <$str(N$展示图片)> S$展示图片img
+
+; #if
+; equal <$str(S$ID)> <$str(N$展示图片)>
+; #act
+; sendmsg 5 1id:<$str(S$ID)>
+; inc S$主面板 <Button|id=1_<$str(N$展示图片)>|x=0|y=0|width=240|height=150|nimg=public/sf1/2/zanz/<$str(S$展示图片img)>.png|link=@123#ID=<$str(N$展示图片)>>
+; #elseact
+; sendmsg 5 2id:<$str(S$ID)>
+
+; inc S$主面板 <Button|id=1_<$str(N$展示图片)>|x=0|y=0|width=220|height=130|nimg=public/sf1/2/zanz/<$str(S$展示图片img)>.png|link=@123#ID=<$str(N$展示图片)>>
+
+; #if
+; not equal <$str(S$展示图片img)>
+; ; small <$str(N$展示图片)> 8
+; #act
+; inc N$展示图片 1
+; goto @123
+; #elseact
+; ; goto @切换会员界面
+
 
 [@购买礼包]
 #if
@@ -121,7 +238,6 @@ break
 
 goto @获取数据
 
-; sendmsg 5 购买礼包+++<$str(S$礼包类型)>
 GetValidstr <$STR(S$<$str(S$礼包价格)>)> * S$货币类型 S$货币数量
 
 #if
@@ -137,12 +253,6 @@ equal <$str(S$礼包类型)> 后续礼包
 #act
 messagebox 当前礼包每日只能购买一次,不能重复购买！！
 break
-
-
-
-#if
-#act
-; sendmsg 5 <$str(S$货币类型)>===<$str(S$货币数量)>
 
 #if
 checkmoney <$str(S$货币类型)> < <$str(S$货币数量)>
@@ -160,7 +270,6 @@ equal <$str(S$礼包类型)> 后续礼包
 #act
 set [<$str(S$后续购买标记)>] 1
 
-; sendmsg 5 <$str(S$货币类型)>--<$str(S$货币数量)>++++<$str(S$礼包类型)>--<$str(S$礼包价格)>
 #if
 #act
 money <$str(S$货币类型)> - <$str(S$货币数量)>
@@ -188,7 +297,6 @@ SendMail 1 贵族大使 贵族每日礼包已发放,请尽快提取附件!
 [@左切]
 #if
 #act
-; sendmsg 5 左切<$str(N$赞助道具界面)>
 mov N$赞助道具序号 1
 mov N$展示x -10
 
@@ -227,8 +335,6 @@ inc N$赞助道具界面 1
 
 
 goto @获取数据
-; mov S$礼包类型 首次礼包
-; mov S$礼包价格 首次价格
 goto @创建展示道具
 goto @赞助系统主面板
 
@@ -237,14 +343,16 @@ goto @赞助系统主面板
 #act
 mov S$礼包类型 首次礼包
 mov S$礼包价格 首次价格
-ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(N$赞助道具界面)> 大图标 S$大图标img
 ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(N$赞助道具界面)> 小图标 S$小图标img
-; sendmsg 5 +++<$str(S$礼包类型)>
-; sendmsg 5 +++<$str(S$礼包价格)>
+ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(N$赞助道具界面)> 会员名 S$会员名
+
+
+inc S$主面板 <Button|id=购买礼包按钮|x=530|y=75.0|nimg=public/sf1/2/zanz/btnn1.png|pimg=public/sf1/2/zanz/btnn2.png|color=161|size=16|text=购买|link=@购买礼包>
 
 ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(N$赞助道具界面)> 首次购买标记 S$首次购买标记
 ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(N$赞助道具界面)> 后续购买标记 S$后续购买标记
-inc S$主面板 <Button|id=购买礼包按钮|x=540|y=70.0|nimg=public/sf1/19/button3.png|color=161|size=16|text=购买|link=@购买礼包>
+; ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(N$赞助道具界面)> 充值额 S$充值额
+; mov U99 300
 
 #if
 check [<$str(S$首次购买标记)>] 1
@@ -257,7 +365,7 @@ check [<$str(S$首次购买标记)>] 1
 check [<$str(S$后续购买标记)>] 1
 #act
 ; sendmsg 5 <$str(S$首次购买标记)>+++<$str(S$后续购买标记)>--
-inc S$主面板 <Button|id=购买礼包按钮|x=540|y=70.0|nimg=public/sf1/19/button3.png|color=161|size=16|grey=1|text=已购买>
+inc S$主面板 <Button|id=购买礼包按钮|x=540|y=70.0|nimg=public/sf1/2/zanz/btnn2.png|color=161|size=16|grey=1|text=已购买>
 
 #if
 #act

@@ -262,6 +262,6 @@ Mov U52 3
 #Call [\Mobile\特殊NPC\TOP图标.txt] @导航
 ; ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(U98)> 会员V点恢复/时 S$V值额外恢复数
 ; sendmsg 5 V值额外恢复数::::<$str(S$V值额外恢复数)>
-sendmsg 5 98::<$str(U98)>
+
 
 }

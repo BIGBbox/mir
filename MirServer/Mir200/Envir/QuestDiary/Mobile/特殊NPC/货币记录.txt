@@ -36,7 +36,6 @@ CHANGESTORAGE 240
 
 #if
 #act
-sendmsg 5 98***<$str(U98)>
 OPENSTORAGE
 
 
