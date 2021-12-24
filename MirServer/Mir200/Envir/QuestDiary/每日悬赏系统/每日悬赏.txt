@@ -19,23 +19,24 @@ goto @左边地图按钮
 #ACT
 
 #SAY
-<Img|layerid=99|children={bg0,xBg1,xBg2,地图按钮列表,cl_Btn1,cl_Btn2,cl_Btn3,tips1,tips2,介绍,大标题,close_btn}|x=120|y=60|show=0|reset=0|move=1|img=public/sf1/19/bg5.png|bg=1|reset=1>
+<Img|layerid=99|children={bg0,line,xBg1,xBg2,地图按钮列表,cl_Btn1,cl_Btn2,cl_Btn3,tips1,tips2,介绍,大标题,close_btn}|x=120|y=60|show=0|reset=0|move=1|img=public/sf1/2/zanz/bg6.png|bg=1|reset=1>
 
-<Img|id=bg0|x=10|y=55.0|width=780|img=public/sf1/19/bg4.png>
-<Img|id=大标题|x=360|y=25.0|img=public/sf1/19/title1.png>
-; <Img|id=1111|x=465|y=75.0|width=330|height=350|img=public/sf1/19/coverBG.png>
-<Button|id=close_btn|x=795.0|y=23.0|size=18|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<ListView|id=地图按钮列表|children={1_1,1_2,1_3,1_4,1_5,1_6,1_7,1_8,1_9,1_10,1_11,1_12,1_13,1_14,1_15,1_16,1_17,1_18,1_19,1_20,}|direction=1|bounce=0|x=15|y=75.0|margin=10|height=440|width=125|img=public/1900000665.png>
+<Img|id=bg0|x=10|y=30.0|width=780|img=public/sf1/2/zanz/innerBg.png>
+<Img|id=line|x=145|y=31.0|img=public/sf1/2/zanz/dLine.png>
+<Img|id=大标题|x=360|y=2.0|img=public/sf1/2/zanz/dailyTitle.png>
+; <Img|id=coverBg|x=465|y=75.0|img=public/sf1/2/zanz/innerBg.png>
+<Button|id=close_btn|x=765|y=10.0|nimg=public/sf1/2/btn_close.png|link=@exit>
+<ListView|id=地图按钮列表|children={1_1,1_2,1_3,1_4,1_5,1_6,1_7,1_8,1_9,1_10,1_11,1_12,1_13,1_14,1_15,1_16,1_17,1_18,1_19,1_20,}|direction=1|bounce=0|x=15|y=35.0|margin=1|height=460|width=125|img=public/1900000665.png>
     <$str(S$地图按钮列表)>
     <$str(S$地图奖励信息)>
-<Img|id=xBg1|x=155|y=75.0|children={2_1,2_2,2_3,2_4,2_5,2_6,2_7,2_8,2_9,2_10,2_11,2_12,2_13,2_14,2_15,2_16,2_17,2_18,2_19,2_20}|img=private/npc/bg_zbhstips_01.png>
-<Img|id=xBg2|x=455|y=75.0|children={3_1,3_2,3_3,3_4,3_5,3_6,3_7,3_8,3_9,3_10,3_11,3_12,3_13,3_14,3_15,3_16,3_17,3_18,3_19,3_20}|img=private/npc/bg_zbhstips_01.png>
+<Img|id=xBg1|x=155|y=45.0|children={2_1,2_2,2_3,2_4,2_5,2_6,2_7,2_8,2_9,2_10,2_11,2_12,2_13,2_14,2_15,2_16,2_17,2_18,2_19,2_20}|img=public/sf1/2/zanz/neiKuang_1.png>
+<Img|id=xBg2|x=455|y=45.0|children={3_1,3_2,3_3,3_4,3_5,3_6,3_7,3_8,3_9,3_10,3_11,3_12,3_13,3_14,3_15,3_16,3_17,3_18,3_19,3_20}|img=public/sf1/2/zanz/neiKuang_1.png>
 
-<RText|id=tips1|x=195.0|y=398.0|size=19|text=<↓完成任务免费领取↓/FCOLOR=249>>
-<RText|id=tips2|x=495.0|y=398.0|size=19|text=<↓完成任务特权领取↓/FCOLOR=249>>
-<Button|id=cl_Btn1|x=230.0|y=428.0|width=100|height=35|size=18|nimg=public/sf1/19/button3.png|text=普通领取|link=@普通领取按钮>
-<Button|id=cl_Btn2|x=530.0|y=428.0|width=100|height=35|size=18|nimg=public/sf1/19/button3.png|text=特权领取|link=@特权领取按钮>
-<Button|id=cl_Btn3|x=680.0|y=478.0|width=100|size=18|nimg=public/sf1/19/button4.png|text=购买特权|link=@充值按钮>
+<RText|id=tips1|x=195.0|y=360.0|size=19|text=<↓完成任务免费领取↓/FCOLOR=249>>
+<RText|id=tips2|x=495.0|y=360.0|size=19|text=<↓完成任务特权领取↓/FCOLOR=249>>
+<Button|id=cl_Btn1|x=230.0|y=392.0|width=100|height=35|size=18|nimg=public/sf1/2/btn_11.png|text=普通领取|link=@普通领取按钮>
+<Button|id=cl_Btn2|x=530.0|y=392.0|width=100|height=35|size=18|nimg=public/sf1/2/btn_11.png|text=特权领取|link=@特权领取按钮>
+<Button|id=cl_Btn3|x=680.0|y=440.0|width=100|size=18|nimg=public/sf1/2/zanz/btnn1.png|pimg=public/sf1/2/zanz/btnn2.png|text=购买特权|link=@充值按钮>
 ; <RText|id=介绍|x=495.0|y=398.0|size=19|text=<↓完成任务特权领取↓/FCOLOR=249>>
 
 [@获取地图列表]
@@ -46,11 +47,22 @@ mov S$地图奖励信息
 
 #if
 not equal <$str(S$地图显示名字)>
+equal <$str(S$参数)> <$str(N$按钮序号)>
 #act
-INC S$地图按钮列表 <Button|id=1_<$STR(N$按钮序号)>|x=0|y=0|size=18|width=120|height=45|color=168|text=<$STR(S$地图显示名字)>|nimg=public/sf1/19/btn2.png|pimg=public/sf1/19/btn1.png|link=@左边地图按钮#参数=<$STR(N$按钮序号)>#参数1=<$STR(N$按钮序号)>#x坐标=<$STR(S$x坐标)>#y坐标=<$STR(S$y坐标)>>
+INC S$地图按钮列表 <Button|id=1_<$STR(N$按钮序号)>|x=0|y=0|size=18|color=255|text=<$STR(S$地图显示名字)>|nimg=public/sf1/2/btn_13.png|pimg=public/sf1/2/btn_12.png|link=@左边地图按钮#参数=<$STR(N$按钮序号)>#参数1=<$STR(N$按钮序号)>#x坐标=<$STR(S$x坐标)>#y坐标=<$STR(S$y坐标)>>
+
+#if
+not equal <$str(S$地图显示名字)>
+not equal <$str(S$参数)> <$str(N$按钮序号)>
+#act
+INC S$地图按钮列表 <Button|id=1_<$STR(N$按钮序号)>|x=0|y=0|size=18|color=160|text=<$STR(S$地图显示名字)>|nimg=public/sf1/2/btn_12.png|pimg=public/sf1/2/btn_13.png|link=@左边地图按钮#参数=<$STR(N$按钮序号)>#参数1=<$STR(N$按钮序号)>#x坐标=<$STR(S$x坐标)>#y坐标=<$STR(S$y坐标)>>
+
+#if
+not equal <$str(S$地图显示名字)>
+#act
 inc N$按钮序号 1
+
 goto @获取地图列表
-#elseact
 goto @每日悬赏面板显示
 
 
@@ -86,7 +98,10 @@ mov S$给道具名字3
 mov S$给道具名字4
 mov S$给道具名字5
 mov S$给道具名字6
+mov S$地图奖励信息
+mov N$按钮序号 1
 
+goto @获取地图列表
 goto @获取地图信息
 
 [@获取地图信息]
@@ -184,7 +199,6 @@ inc N$奖励信息1Y 38
 inc N$奖励信息2Y 38
 goto @获取地图信息
 #elseact
-
 goto @每日悬赏面板显示
 
 ; sendmsg 5 奖励1:<$str(N$奖励总值1)>

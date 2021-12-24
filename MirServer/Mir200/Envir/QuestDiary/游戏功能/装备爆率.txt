@@ -17,6 +17,17 @@ large <$str(S$打怪额外爆率)> 0
 #act
 INC N2 <$str(S$打怪额外爆率)>
 
+#if
+check [59] 1
+#act
+INC N2 15
+
+#if
+check [58] 1
+#act
+INC N2 15
+
+
 #IF
 equal u22 5
 #ACT
@@ -53,85 +64,86 @@ large <$str(N$临时爆率卡)> 0
 INC N2 N$临时爆率卡
 
 #if
-large <$str(N$青铜爆率卡)> 0
+large <$str(U120)> 0
 #act
-INC N2 N$青铜爆率卡
+INC N2 <$str(U120)>
 
 #if
-large <$str(N$白银爆率卡)> 0
+large <$str(U122)> 0
 #act
-INC N2 N$白银爆率卡
+INC N2 <$str(U122)>
 
 #if
-large <$str(N$黄金爆率卡)> 0
+large <$str(U124)> 0
 #act
-INC N2 N$黄金爆率卡
+INC N2 <$str(U124)>
 
 #if
-large <$str(N$铂金爆率卡)> 0
+large <$str(U126)> 0
 #act
-INC N2 N$铂金爆率卡
+INC N2 <$str(U126)>
 
 #if
-large <$str(N$钻石爆率卡)> 0
+large <$str(U128)> 0
 #act
-INC N2 N$钻石爆率卡
+INC N2 <$str(U128)>
 
 #if
-large <$str(N$星耀爆率卡)> 0
+large <$str(U130)> 0
 #act
-INC N2 N$星耀爆率卡
+INC N2 <$str(U130)>
 
 #if
-large <$str(N$王者爆率卡)> 0
+large <$str(U132)> 0
 #act
-INC N2 N$王者爆率卡
+INC N2 <$str(U132)>
 
 #if
-large <$str(N$荣耀爆率卡)> 0
+large <$str(U134)> 0
 #act
-INC N2 N$荣耀爆率卡
+INC N2 <$str(U134)>
 
 #if
-large <$str(N$神圣爆率卡)> 0
+large <$str(U136)> 0
 #act
-INC N2 N$神圣爆率卡
+INC N2 <$str(U136)>
 
 #if
-large <$str(N$永恒爆率卡)> 0
+large <$str(U138)> 0
 #act
-INC N2 N$永恒爆率卡
+INC N2 <$str(U138)>
 
 #if
-large <$str(N$至尊爆率卡)> 0
+large <$str(U140)> 0
 #act
-INC N2 N$至尊爆率卡
+INC N2 <$str(U140)>
 
 #if
-large <$str(N$100爆率卡)> 0
+large <$str(U142)> 0
 #act
-INC N2 N$100爆率卡
+INC N2 <$str(U142)>
 
 #if
-large <$str(N$200爆率卡)> 0
+large <$str(U144)> 0
 #act
-INC N2 N$200爆率卡
+INC N2 <$str(U144)>
 
 #if
-large <$str(N$300爆率卡)> 0
+large <$str(U146)> 0
 #act
-INC N2 N$300爆率卡
+INC N2 <$str(U146)>
 
 #if
-large <$str(N$500爆率卡)> 0
+large <$str(U148)> 0
 #act
-INC N2 N$500爆率卡
+INC N2 <$str(U148)>
 
 #IF
 #ACT
 SendCenterMsg 180 251 您当前杀怪<$STR(N2)>%爆率！！ 0 5
 ;KILLMONBURSTRATE 20140220 20140221 <$STR(N2)> 20140223 20140224 20140225 20140226 65535 20140227 20140228
 KILLMONBURSTRATE <$STR(N2)> 65535
+#CALL [\游戏登陆\右下显示.txt] @属性显示
 BREAK
 
 

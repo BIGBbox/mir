@@ -3,8 +3,14 @@
 
 #if
 #act
-
+goto @获取当前转生等级
+mov N$无视防御 0
+mov N$经验加成 0
+mov N$暴击几率 0
+mov N$吸血比例 0
+mov N$人物倍击 100
 mov N$人物攻击 0
+mov N$攻击下限 0
 mov N$人物魔法 0
 mov N$人物道术 0
 mov N$人物防御 0
@@ -15,6 +21,7 @@ mov N$人物准确 0
 mov N$人物敏捷 0
 
 mov N$人物攻击计算 0
+mov N$攻击下限计算 0
 mov N$人物魔法计算 0
 mov N$人物道术计算 0
 mov N$人物防御计算 0
@@ -23,6 +30,7 @@ mov N$人物血量计算 0
 mov N$人物蓝量计算 0
 
 mov N$人物攻击百分比 0
+mov N$攻击下限百分比 0
 mov N$人物魔法百分比 0
 mov N$人物道术百分比 0
 mov N$人物防御百分比 0
@@ -30,6 +38,20 @@ mov N$人物魔御百分比 0
 mov N$人物血量百分比 0
 mov N$人物蓝量百分比 0
 
+; -------------------狂暴相关属性加成-----------------------
+#if
+check [59] 1
+#act
+inc N$人物攻击 88
+inc N$攻击下限 88
+inc N$人物倍击 10
+
+#if
+check [58] 1
+#act
+inc N$人物攻击 188
+inc N$攻击下限 88
+inc N$人物倍击 20
 
 
 ; -------------------官职相关属性加成-----------------------
@@ -53,18 +75,38 @@ inc N$人物道术 <$str(S$当前全属性加成)>
 
 #if
 #act
+ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(N$转生等级)> 当前全属性加成 S$当前全属性加成
 
-ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(S$当前转生等级)> 需要人物等级 S$需要人物等级
-ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(S$当前转生等级)> 需要材料 S$需要材料
-ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(S$当前转生等级)> 所需货币 S$所需货币
-ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(S$当前转生等级)> 当前全属性加成 S$当前全属性加成
-ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(S$当前转生等级)> 下级全属性加成 S$下级全属性加成
-ReadConfigFileItem ..\QuestDiary\转生系统\转生系统数据.txt <$str(S$当前转生等级)> 下降等级 S$下降等级
+inc N$人物攻击 <$str(S$当前全属性加成)>
+inc N$人物魔法 <$str(S$当前全属性加成)>
+inc N$人物道术 <$str(S$当前全属性加成)>
 
+; -------------------逆天改命相关属性加成-----------------------
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\逆天改命系统\数据\强身修炼.txt <$str(U2)> 当前属性加成 S$当前属性加成
+inc N$人物血量 <$str(S$当前属性加成)>
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\逆天改命系统\数据\血龙之体.txt <$str(U1)> 当前属性加成 S$当前属性加成
+inc N$人物血量百分比 <$str(S$当前属性加成)>
+; sendmsg 5 <$str(N$人物血量百分比)>---<$str(U1)>---<$str(S$当前属性加成)>
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\逆天改命系统\数据\先天之体.txt <$str(U0)> 当前属性加成 S$当前属性加成
+inc N$人物血量百分比 <$str(S$当前属性加成)>
+GETVALIDSTRSUPER <$str(S$当前属性加成)> , S$属性值
+inc N$暴击几率 <$str(S$属性值1)>
+inc N$吸血比例 <$str(S$属性值2)>
+inc N$无视防御 <$str(S$属性值3)>
 
 #IF
 #ACT
 mov N$人物攻击计算 <$MAXDC>
+mov N$攻击下限计算 <$DC>
 mov N$人物魔法计算 <$MAXMC>
 mov N$人物道术计算 <$MAXSC>
 mov N$人物防御计算 <$MAXAC>
@@ -76,6 +118,7 @@ mov N$人物敏捷计算 <$SPD>
 
 
 inc N$人物攻击计算 <$STR(N$人物攻击)>
+inc N$攻击下限计算 <$STR(N$攻击下限)>
 inc N$人物魔法计算 <$STR(N$人物魔法)>
 inc N$人物道术计算 <$STR(N$人物道术)>
 inc N$人物防御计算 <$STR(N$人物防御)>
@@ -86,23 +129,26 @@ inc N$人物准确计算 <$STR(N$人物准确)>
 inc N$人物敏捷计算 <$STR(N$人物敏捷)>
 
 
-; Mul N$人物攻击计算 <$STR(N$人物攻击百分比)>
-; Mul N$人物魔法计算 <$STR(N$人物魔法百分比)>
-; Mul N$人物道术计算 <$STR(N$人物道术百分比)>
-; Mul N$人物防御计算 <$STR(N$人物防御百分比)>
-; Mul N$人物魔御计算 <$STR(N$人物魔御百分比)>
-; Mul N$人物血量计算 <$STR(N$人物血量百分比)>
-; Mul N$人物蓝量计算 <$STR(N$人物蓝量百分比)>
+Mul N$人物攻击计算 <$STR(N$人物攻击百分比)>
+Mul N$攻击下限计算 <$STR(N$攻击下限百分比)>
+Mul N$人物魔法计算 <$STR(N$人物魔法百分比)>
+Mul N$人物道术计算 <$STR(N$人物道术百分比)>
+Mul N$人物防御计算 <$STR(N$人物防御百分比)>
+Mul N$人物魔御计算 <$STR(N$人物魔御百分比)>
+Mul N$人物血量计算 <$STR(N$人物血量百分比)>
+Mul N$人物蓝量计算 <$STR(N$人物蓝量百分比)>
 
-; div N$人物攻击计算 100
-; div N$人物魔法计算 100
-; div N$人物道术计算 100
-; div N$人物防御计算 100
-; div N$人物魔御计算 100
-; div N$人物血量计算 100
-; div N$人物蓝量计算 100
+div N$人物攻击计算 100
+div N$攻击下限计算 100
+div N$人物魔法计算 100
+div N$人物道术计算 100
+div N$人物防御计算 100
+div N$人物魔御计算 100
+div N$人物血量计算 100
+div N$人物蓝量计算 100
 
 inc N$人物攻击 <$STR(N$人物攻击计算)>
+inc N$攻击下限 <$STR(N$攻击下限计算)>
 inc N$人物魔法 <$STR(N$人物魔法计算)>
 inc N$人物道术 <$STR(N$人物道术计算)>
 inc N$人物防御 <$STR(N$人物防御计算)>
@@ -110,9 +156,13 @@ inc N$人物魔御 <$STR(N$人物魔御计算)>
 inc N$人物血量 <$STR(N$人物血量计算)>
 inc N$人物蓝量 <$STR(N$人物蓝量计算)>
 
+mul N$吸血比例 100
+mul N$无视防御 100
+mul N$经验加成 100
 
 ChangeHumAbility 2 = <$STR(N$人物防御)> 65535
 ChangeHumAbility 4 = <$STR(N$人物魔御)> 65535
+ChangeHumAbility 5 = <$STR(N$攻击下限)> 65535
 ChangeHumAbility 6 = <$STR(N$人物攻击)> 65535
 ChangeHumAbility 8 = <$STR(N$人物魔法)> 65535
 ChangeHumAbility 10 = <$STR(N$人物道术)> 65535
@@ -121,10 +171,17 @@ ChangeHumAbility 12 = <$STR(N$人物蓝量)> 65535
 ChangeHumAbility 18 = <$STR(N$人物准确)> 65535
 ChangeHumAbility 19 = <$STR(N$人物敏捷)> 65535
 
+POWERRATE <$str(N$人物倍击)> 65535
+KILLMONEXPRATE <$str(N$经验加成)> 65535
+ChangeHumNewValue 21 <$str(N$暴击几率)> 65535
+ChangeHumNewValue 78 <$str(N$无视防御)> 65535
+ChangeHumNewValue 34 <$str(N$吸血比例)> 65535
+; ChangeModeEx 20 65535 100 <$str(N$吸血比例)>
+; ChangeHumNewValue 60 <$STR(N$人物血量)> 65535
 ; ChangeHumAbility 3 = <$STR(N$人物魔御)> 65535
 ; ChangeHumAbility 1 = <$STR(N$人物防御)> 65535
 ; ChangeHumAbility 5 = <$STR(N$人物攻击)> 65535
 ; ChangeHumAbility 7 = <$STR(N$人物魔法)> 65535
 ; ChangeHumAbility 9 = <$STR(N$人物道术)> 65535
-
+#CALL [\游戏登陆\右下显示.txt] @属性显示
 }

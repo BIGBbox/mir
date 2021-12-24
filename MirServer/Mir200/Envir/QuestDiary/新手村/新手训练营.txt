@@ -1,0 +1,182 @@
+[@新手训练营面板]
+{
+
+#if
+CheckContainsText <$STR(T8)> 击杀新手训练营怪物
+not CheckContainsText <$STR(T8)> 新手训练营npc
+#act
+mov S$任务状态 圣战项链,强效金疮药*50/FCOLOR=250
+mov S$奖励idx1 10004
+mov S$奖励nme1 1
+mov S$奖励idx2 101595
+mov S$奖励nme2 25
+mov S$奖励idx3 101595
+mov S$奖励nme3 25
+mov S$描述 人总是在不断的变强,可以越强的人也越危险!
+mov S$领取奖励 领取奖励
+DELAYGOTO 10 @新手训练营
+break
+
+
+#if
+CheckContainsText <$STR(T8)> 泡点地图
+not CheckContainsText <$STR(T8)> 自动吸物
+#act
+mov S$描述 你已经顺利升到50级了,我想你可以去更广阔的世界了!\【自动吸物功能开通！】
+mov S$任务状态 5W经验值,圣战手镯和自动吸物【体验卡】*1/FCOLOR=250
+mov S$奖励idx1 6
+mov S$奖励nme1 50000
+mov S$奖励idx2 10005
+mov S$奖励nme2 1
+mov S$奖励idx3 100537
+mov S$奖励nme3 1
+mov S$领取奖励 领取奖励1
+DELAYGOTO 10 @新手训练营
+break
+
+#if
+CheckContainsText <$STR(T8)> 击杀新手训练营怪物50
+not CheckContainsText <$STR(T8)> 新手训练营npc1
+#act
+mov S$描述 我这次把圣战手镯送给你,希望你带着它能够创造伟业!
+mov S$任务状态 5W经验值,战神腰带和小还丹*50/FCOLOR=250
+mov S$领取奖励 领取奖励2
+mov S$奖励idx1 6
+mov S$奖励nme1 50000
+mov S$奖励idx2 10018
+mov S$奖励nme2 1
+mov S$奖励idx3 101506
+mov S$奖励nme3 50
+DELAYGOTO 10 @新手训练营
+break
+
+#if
+#act
+messagebox 尊敬的勇士,你已经做过这个任务了!!
+
+
+[@新手训练营]
+
+#If
+#act
+DELAYGOTO 5000 @<$str(S$领取奖励)>
+
+#say
+
+; <Text|a=0|x=20|y=20|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$str(S$描述)>>
+; <RText|a=0|x=20|y=95|size=18|text=<奖励:/FCOLOR=250><<$STR(S$任务状态)>>>
+; <Button|id=click_btn1|x=25|y=125|nimg=public/0.png|pimg=public/0.png|text=完成任务|color=251|link=@新手训练营任务>
+
+<Img|img=public/sf1/2/renwuK.png|children=vipD,closeBtn,title|x=400|y=200|bg=1|reset=1|move=0>
+<Button|id=closeBtn|x=420|y=2|nimg=public/sf1/2/btn_close.png|link=@exit>
+<Img|id=vipD|img=public/sf1/2/0.png|children=1,2,938,show1,show2,show3|x=0|y=20>
+<Text|id=1|x=20|y=20|color=153|tips=|tipsx=10|tipsy=80|size=18|text=<$str(S$描述)>>
+<Text|id=title|x=175|y=2|color=154|size=18|text=新手训练营>
+; <RText|id=2|x=20|y=95|size=18|text=<奖励:/FCOLOR=250><<$STR(S$任务状态)>>>
+<Img|id=show1|children={下方礼包1}|x=25|y=150|width=40|height=40|img=public/sf1/19/itemBg1.png>
+<ItemShow|id=下方礼包1|x=-12|y=-10|itemid=<$str(S$奖励idx1)>|itemcount=<$str(S$奖励nme1)>|showtips=1|color=250|scale=0.8>
+<Img|id=show2|children={下方礼包2}|x=85|y=150|width=40|height=40|img=public/sf1/19/itemBg1.png>
+<ItemShow|id=下方礼包2|x=-12|y=-10|itemid=<$str(S$奖励idx2)>|itemcount=<$str(S$奖励nme1)>|showtips=1|color=250|scale=0.8>
+<Img|id=show3|children={下方礼包3}|x=145|y=150|width=40|height=40|img=public/sf1/19/itemBg1.png>
+<ItemShow|id=下方礼包3|x=-12|y=-10|itemid=<$str(S$奖励idx3)>|itemcount=<$str(S$奖励nme1)>|showtips=1|color=250|scale=0.8>
+<Button|id=938|x=290|y=150|nimg=public/sf1/2/btn_11.png|pimg=public/sf1/2/btn_11_1.png|text=完成任务|color=255|link=@新手训练营任务>
+
+
+#IF
+#ACT
+Navigation 0 938 点击完成任务
+
+[@新手训练营任务]
+
+#if
+CheckContainsText <$STR(T8)> 击杀新手训练营怪物
+not CheckContainsText <$STR(T8)> 新手训练营npc
+#act
+goto @领取奖励
+break
+
+#if
+CheckContainsText <$STR(T8)> 泡点地图
+not CheckContainsText <$STR(T8)> 自动吸物
+#act
+goto @领取奖励1
+break
+
+#if
+CheckContainsText <$STR(T8)> 击杀新手训练营怪物50
+not CheckContainsText <$STR(T8)> 新手训练营npc1
+#act
+goto @领取奖励2
+break
+
+#if
+#act
+messagebox 尊敬的勇士,你已经做过这个任务了!!
+break
+
+
+[@领取奖励2]
+#if
+#act
+inc T8 _新手训练营npc1
+
+
+NEWCOMPLETETASK 13
+NEWDELETETASK 13
+
+give 战神腰带
+CHANGEEXP + 50000
+GiveStateItem 小还丹 50 0 1 0 0 1 1 1 1
+
+
+sendmsg 7 完成任务了!!
+#CALL [\任务系统\任务文本.txt] @接取任务
+CLEARDELAYGOTO
+close
+
+[@领取奖励1]
+#if
+#act
+inc T8 _自动吸物
+
+
+NEWCOMPLETETASK 11
+NEWDELETETASK 11
+
+give 圣战腰带 1
+CHANGEEXP + 50000
+GiveStateItem 自动吸物【体验卡】 1 0 1 0 0 1 1 1 1
+TakeOnItem 圣战腰带 10
+
+sendmsg 7 完成任务了!!
+#CALL [\任务系统\任务文本.txt] @接取任务
+CLEARDELAYGOTO
+close
+
+[@领取奖励]
+#if
+#act
+; break
+inc T8 _新手训练营npc
+
+
+NEWCOMPLETETASK 6
+NEWDELETETASK 6
+
+
+give 圣战项链 1
+
+TakeOnItem 圣战项链 3
+
+
+GiveStateItem 强效金疮药 50 0 1 0 0 1 1 1 1
+
+
+
+sendmsg 7 完成任务了!!
+#CALL [\任务系统\任务文本.txt] @接取任务
+CLEARDELAYGOTO
+close
+
+
+}

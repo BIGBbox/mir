@@ -1,0 +1,282 @@
+[@攻略面板]
+
+{
+#if
+#act
+goto @攻略主面板初始化
+
+[@攻略主面板]
+#if
+#say
+<Img|x=0|y=0|width=9999|height=9999|children={游戏攻略,1,2,3}|img=public/0.png|bg=1|reset=1|link=@exit>
+<Img|id=游戏攻略|x=0|y=0|width=<$SCREENWIDTH>|height=<$SCREENHEIGHT>|img=public/sf1/2/llll/BG.png|children={closeBtn,leftBtn,rightBtn,titleImg,downImg,leftBtnS,downBtnS}|link=@1>
+<Button|id=closeBtn|x=1055|y=40.0|nimg=public/sf1/2/llll/closeBtn.png|pimg=public/sf1/2/llll/closeBtn_1.png|link=@exit>
+<Img|id=titleImg|x=550|y=45|img=public/sf1/2/llll/road.png>
+<Img|id=downImg|x=430|y=450|img=public/sf1/2/llll/text.png>
+<Img|id=leftBtnS|x=185|y=50|children={leftBtn1,leftBtn2,leftBtn3,leftBtn4,leftBtn5,leftBtn6,leftBtn7,leftBtn8}|width=125|height=370|img=public/sf1/2/zanz/0.png>
+<Img|id=downBtnS|x=200|y=520|children={downBtn1,downBtn2,downBtn3,downBtn4,downBtn5,downBtn6,downBtn7,downBtn8}|width=780|height=70|img=public/sf1/2/zanz/0.png>
+<Img|id=1|x=390|y=130|children={showitem11,showitem12,showitem13,showitem14,showitem15,showitem16,showitem17,showitem18,showitem19,showitem110}|width=540|height=50|img=public/sf1/2/0.png>
+<Img|id=2|x=390|y=130|children={showitem21,showitem22,showitem23,showitem24,showitem25,showitem26,showitem27,showitem28,showitem29,showitem210}|width=540|height=50|img=public/sf1/2/0.png>
+<Img|id=3|x=390|y=130|children={showitem31,showitem32,showitem33,showitem34,showitem35,showitem36,showitem37,showitem38,showitem39,showitem310}|width=540|height=50|img=public/sf1/2/0.png>
+<Img|id=centerInfoS|x=390|y=130|children={center1,center2,center3,center4,center5,center6,center7,center8,center9,center10,center11,center12}|width=540|height=300|img=public/sf1/2/0.png>
+<$str(S$downBtnS)>
+<$str(S$leftBtnS)>
+<$str(S$centerInfo)>
+
+<$str(S$showitem1)>
+<$str(S$showitem2)>
+<$str(S$showitem3)>
+
+[@攻略主面板初始化]
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\游戏攻略\底部按钮.txt 1 按钮 S$首个底部按钮
+ReadConfigFileItem ..\QuestDiary\游戏攻略\人物.txt 1 按钮 S$当前左侧按钮
+
+mov S$downBtnS
+mov S$leftBtnS
+
+mov N$leftBtn_Idx 1
+mov N$downBtn_Idx 1
+
+mov N$leftBtn_posX 3
+mov N$leftBtn_posY 10
+
+
+mov N$downBtn_posX -100
+mov N$downBtn_posY 10
+
+mov S$thisBtn <$str(S$首个底部按钮)>
+mov S$leftBtn <$str(S$当前左侧按钮)>
+
+goto @更新左侧按钮
+goto @更新底部按钮
+goto @更新左侧按钮样式
+goto @攻略主面板
+
+[@更新左侧按钮]
+#if
+#act
+
+
+; ReadConfigFileItem ..\QuestDiary\游戏攻略\<$str(S$thisBtn)>.txt <$str(N$leftBtn_Idx)> 按钮 S$左侧按钮文字
+; sendmsg 9 左侧按钮<$str(S$左侧按钮文字)>*****<$str(S$leftBtn)>-----<$str(S$左侧详情解释)>
+; sendmsg 9 <$str(N$leftBtn_Idx)>****<$str(S$左侧按钮文字)>
+#if
+equal <$str(S$leftBtn)> <$str(S$左侧按钮文字)>
+not equal <$str(S$左侧按钮文字)>
+#act
+inc S$leftBtnS <Button|id=leftBtn<$str(N$leftBtn_Idx)>|x=<$str(N$leftBtn_posX)>|y=<$str(N$leftBtn_posY)>|nimg=public/sf1/2/llll/btn2.png|pimg=public/sf1/2/llll/btn2_1.png|color=255|text=<$str(S$左侧按钮文字)>|link=@更新左侧按钮样式#当前左侧按钮=<$str(S$左侧按钮文字)>#序号=<$str(N$leftBtn_Idx)>>
+
+#if
+not equal <$str(S$leftBtn)> <$str(S$左侧按钮文字)>
+not equal <$str(S$左侧按钮文字)>
+#act
+inc S$leftBtnS <Button|id=leftBtn<$str(N$leftBtn_Idx)>|x=<$str(N$leftBtn_posX)>|y=<$str(N$leftBtn_posY)>|nimg=public/sf1/2/llll/btn2_1.png|pimg=public/sf1/2/llll/btn2.png|color=160|text=<$str(S$左侧按钮文字)>|link=@更新左侧按钮样式#当前左侧按钮=<$str(S$左侧按钮文字)>#序号=<$str(N$leftBtn_Idx)>>
+
+; 
+
+#or
+not equal <$str(S$左侧按钮文字)>
+equal <$str(N$leftBtn_Idx)> 1
+#act
+ReadConfigFileItem ..\QuestDiary\游戏攻略\<$str(S$thisBtn)>.txt <$str(N$leftBtn_Idx)> 按钮 S$左侧按钮文字
+
+inc N$leftBtn_posY 50
+inc N$leftBtn_Idx 1
+goto @更新左侧按钮
+
+
+[@更新底部按钮]
+#if
+equal <$str(S$thisBtn)> <$str(S$按钮文字)>
+not equal <$str(S$按钮文字)>
+#act
+inc S$downBtnS <Button|id=downBtn<$str(N$downBtn_Idx)>|x=<$str(N$downBtn_posX)>|y=<$str(N$downBtn_posY)>|nimg=public/sf1/2/llll/btn1.png|pimg=public/sf1/2/llll/btn1_1.png|outline=2|outlinecolor=0|color=146|text=<$str(S$按钮文字)>|link=@更新底部按钮样式#当前按钮=<$str(S$按钮文字)>>
+
+#if
+not equal <$str(S$thisBtn)> <$str(S$按钮文字)>
+not equal <$str(S$按钮文字)>
+#act
+inc S$downBtnS <Button|id=downBtn<$str(N$downBtn_Idx)>|x=<$str(N$downBtn_posX)>|y=<$str(N$downBtn_posY)>|nimg=public/sf1/2/llll/btn1_1.png|pimg=public/sf1/2/llll/btn1.pngoutline=2|outlinecolor=0|color=160|text=<$str(S$按钮文字)>|link=@更新底部按钮样式#当前按钮=<$str(S$按钮文字)>>
+
+
+#or
+not equal <$str(S$按钮文字)>
+equal <$str(N$downBtn_Idx)> 1
+#act
+ReadConfigFileItem ..\QuestDiary\游戏攻略\底部按钮.txt <$str(N$downBtn_Idx)> 按钮 S$按钮文字
+inc N$downBtn_posX 200
+inc N$downBtn_Idx 1
+goto @更新底部按钮
+
+[@更新底部按钮样式]
+#if
+#act
+mov N$downBtn_posX -100
+mov N$downBtn_posY 10
+mov N$downBtn_Idx 1
+mov S$downBtnS 
+
+mov S$thisBtn <$str(S$当前按钮)>
+
+ReadConfigFileItem ..\QuestDiary\游戏攻略\<$str(S$thisBtn)>.txt 1 按钮 S$首个左侧按钮
+mov S$当前左侧按钮 <$str(S$首个左侧按钮)>
+
+goto @更新左侧按钮样式
+goto @更新底部按钮
+goto @攻略主面板
+
+[@更新左侧按钮样式]
+#if
+#act
+mov N$leftBtn_posX 3
+mov N$leftBtn_posY 10
+mov N$leftBtn_Idx 1
+mov S$leftBtnS
+; mov S$leftBtn <$str(S$首个左侧按钮)>
+mov S$leftBtn <$str(S$当前左侧按钮)>
+
+mov N$描述索引X1 10
+mov N$描述索引X2 10
+mov N$描述索引X3 10
+mov S$showitem1
+mov S$showitem2
+mov S$showitem3
+mov N$装备展示1 1
+mov N$装备展示2 1
+mov N$装备展示3 1
+
+mov N$描述索引 1
+mov N$描述索引Y 0
+mov S$centerInfo
+
+; mov S$leftBtn <$str(S$当前左侧按钮)>
+mov N$按钮序号 <$str(S$序号)>
+dec N$按钮序号 1
+
+
+ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 详情解释1 S$左侧详情解释
+ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 展示装备1 S$展示装备1
+ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 展示装备2 S$展示装备2
+ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 展示装备3 S$展示装备3
+
+; sendmsg 9 <$str(S$leftBtn)>-----<$str(S$展示装备1)>
+
+GETVALIDSTRSUPER <$str(S$左侧详情解释)> # S$左侧详情
+GETVALIDSTRSUPER <$str(S$展示装备1)> & S$展示装备名1
+GETVALIDSTRSUPER <$str(S$展示装备2)> & S$展示装备名2
+GETVALIDSTRSUPER <$str(S$展示装备3)> & S$展示装备名3
+
+
+#if
+
+#act
+goto @展示装备
+
+
+#if
+#act
+; mov N$描述索引 1
+; mov N$描述索引Y 0
+; mov S$centerInfo
+
+goto @显示描述
+goto @更新左侧按钮
+; goto @更新底部按钮
+goto @攻略主面板
+
+[@展示装备]
+#if
+not equal <$str(S$展示装备1)>
+not equal <$str(S$展示装备2)>
+not equal <$str(S$展示装备3)>
+#act
+
+inc S$centerInfo <Button|id=leftBtn|x=550|y=423.0|width=50|height=20|nimg=public/sf1/2/zanz/left.png|pimg=public/sf1/2/zanz/left_1.png|link=@exit>
+inc S$centerInfo <Button|id=rightBtn|x=670|y=423.0|width=50|height=20|nimg=public/sf1/2/zanz/right.png|pimg=public/sf1/2/zanz/right_1.png|link=@exit>
+
+#if
+not equal <$str(S$展示装备1)>
+#act
+goto @展示装备1
+
+#if
+not equal <$str(S$展示装备2)>
+#act
+goto @展示装备2
+
+#if
+not equal <$str(S$展示装备3)>
+#act
+goto @展示装备3
+
+[@展示装备1]
+#if
+#act
+; GetDBItemFieldValue <$str(S$展示装备名3<$str(N$装备展示)>)> idx S$展示装备名idx13
+; sendmsg 9 <$str(S$展示装备名1<$str(N$装备展示1)>)>-------<$str(N$装备展示1)>
+
+#if
+not equal <$str(S$展示装备名1<$str(N$装备展示1)>)>
+#act
+GetDBItemFieldValue <$str(S$展示装备名1<$str(N$装备展示1)>)> idx S$展示装备名idx11
+
+; sendmsg 9 <$str(S$展示装备1)>````<$str(S$展示装备名idx1)>
+inc S$showitem1 <Img|id=showitem1<$str(N$装备展示1)>|children=showitem1<$str(N$装备展示1)>_<$str(N$装备展示1)>|x=<$str(N$描述索引X1)>|y=33|width=55|height=55|img=public/sf1/2/itembg.png>
+inc S$showitem1 <ItemShow|id=showitem1<$str(N$装备展示1)>_<$str(N$装备展示1)>|x=-6|y=-6|itemid=<$STR(S$展示装备名idx11)>|itemcount=1|showtips=1|scale=1.3|bgtype=0>
+mov S$展示装备名1<$str(N$装备展示1)>
+inc N$描述索引X1 55
+inc N$装备展示1 1
+; mov S$展示装备名idx11
+goto @展示装备1
+
+[@展示装备2]
+#if
+not equal <$str(S$展示装备名2<$str(N$装备展示2)>)>
+#act
+GetDBItemFieldValue <$str(S$展示装备名2<$str(N$装备展示2)>)> idx S$展示装备名idx12
+; sendmsg 9 ===showitem2<$str(N$装备展示2)>
+inc S$showitem2 <Img|id=showitem2<$str(N$装备展示2)>|children=showitem2<$str(N$装备展示2)>_<$str(N$装备展示2)>|x=<$str(N$描述索引X2)>|y=133|width=55|height=55|img=public/sf1/2/itembg.png>
+inc S$showitem2 <ItemShow|id=showitem2<$str(N$装备展示2)>_<$str(N$装备展示2)>|x=-6|y=-6|itemid=<$STR(S$展示装备名idx12)>|itemcount=1|showtips=1|scale=1.3|bgtype=0>
+mov S$展示装备名2<$str(N$装备展示2)>
+inc N$描述索引X2 55
+inc N$装备展示2 1
+goto @展示装备2
+; inc S$showitem3 <ItemShow|id=showitem3<$str(N$装备展示)>|x=10|y=225|itemid=<$STR(S$展示装备名idx1)>|itemcount=1|showtips=1|bgtype=1>
+
+[@展示装备3]
+#if
+not equal <$str(S$展示装备名3<$str(N$装备展示3)>)>
+#act
+GetDBItemFieldValue <$str(S$展示装备名3<$str(N$装备展示3)>)> idx S$展示装备名idx13
+; sendmsg 9 ===showitem2<$str(N$装备展示3)>
+inc S$showitem3 <Img|id=showitem3<$str(N$装备展示3)>|children=showitem3<$str(N$装备展示3)>_<$str(N$装备展示3)>|x=<$str(N$描述索引X3)>|y=233|width=55|height=55|img=public/sf1/2/itembg.png>
+inc S$showitem3 <ItemShow|id=showitem3<$str(N$装备展示3)>_<$str(N$装备展示3)>|x=-6|y=-6|itemid=<$STR(S$展示装备名idx13)>|itemcount=1|showtips=1|scale=1.3|bgtype=0>
+mov S$展示装备名3<$str(N$装备展示3)>
+inc N$描述索引X3 55
+inc N$装备展示3 1
+goto @展示装备3
+
+
+
+
+[@显示描述]
+#if
+not equal <$str(S$左侧详情<$str(N$描述索引)>)> %%
+#act
+
+; sendmsg 9 <$str(S$左侧详情1)>******<$str(S$左侧详情1)>---<$str(S$左侧详情2)>---<$str(S$左侧详情3)>
+inc S$centerInfo <RText|id=center<$str(N$描述索引)>|x=0|y=<$str(N$描述索引Y)>|size=16|text=<<$str(S$左侧详情<$str(N$描述索引)>)>>>
+; mov S$左侧详情<$str(N$描述索引)>
+; sendmsg 9 <$str(S$左侧详情<$str(N$描述索引)>)>------------<$str(N$描述索引)>
+
+#if
+not equal <$str(S$左侧详情<$str(N$描述索引)>)>
+#act
+mov S$左侧详情<$str(N$描述索引)>
+inc N$描述索引Y 25
+inc N$描述索引 1
+goto @显示描述
+
+}

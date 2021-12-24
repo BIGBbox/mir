@@ -1,28 +1,29 @@
 [@货币]
 {
 #IF
-Equal <$CLIENTFLAG> 2
+; Equal <$CLIENTFLAG> 2
 #ACT
+mov S$图标1
+INC S$图标1 <Img|x=-555|y=-31|img=item/item_0/000124.png>
+INC S$图标1 <Text|text=$STM(ITEMCOUNT_元宝)|x=-510|y=-27|size=20>
 
-MOV S$图标1 <Img|x=70|y=-3|img=item/item_0/000123.png>
-INC S$图标1 <Text|text=$STM(ITEMCOUNT_金币)|x=120|y=1|size=20>
+INC S$图标1 <Img|x=-390|y=-25|height=25|width=30|img=item/item_1/000000.png>
+INC S$图标1 <Text|text=$STM(ITEMCOUNT_7)|x=-355|y=-27|size=20>
 
-INC S$图标1 <Img|x=230|y=-3|img=item/item_0/000124.png>
-INC S$图标1 <Text|text=$STM(ITEMCOUNT_元宝)|x=280|y=1|size=20>
+; INC S$图标1 <Img|x=-200|y=-31|img=item/item_1/000000.png>
+; INC S$图标1 <Text|text=$STM(ITEMCOUNT_12)|x=440|y=1|size=20>
 
-INC S$图标1 <Img|x=390|y=2|img=item/item_0/000270.png>
-INC S$图标1 <Text|text=$STM(ITEMCOUNT_7)|x=440|y=1|size=20>
+DELBUTTON 108 1
+addbutton 108 1 <$STR(S$图标1)>
 
-DELBUTTON 101 1
-addbutton 101 1 <$STR(S$图标1)>
-
-MOV S$图标2 <Text|text=$STM(ITEMCOUNT_金币)|x=150|y=345|size=20|ax=0.5>
-INC S$图标2 <Text|text=元宝：$STM(ITEMCOUNT_元宝)|x=100|y=395|size=20>
+MOV S$图标2 <Text|text=$STM(ITEMCOUNT_元宝)|x=150|y=345|size=20|ax=0.5>
+INC S$图标2 <Text|text=灵符：$STM(ITEMCOUNT_12)|x=100|y=395|size=20>
 INC S$图标2 <Text|text=RMB点：$STM(ITEMCOUNT_7)|x=100|y=420|size=20>
 INC S$图标2 <Button|x=260|y=338|text=整理|height=40|width=100|color=251|nimg=private/bag_ui/bag_ui_mobile/1900015211.png|link=@整理背包>
 INC S$图标2 <Button|x=380|y=338|text=回收|height=40|width=100|color=250|nimg=private/bag_ui/bag_ui_mobile/1900015210.png|link=@打开回收面板>
 INC S$图标2 <Button|x=510|y=344|nimg=private/chat/1900012856.png|link=@打开合成面板>
 INC S$图标2 <Button|x=480|y=404|nimg=private/main/bottom/1900012597.png|link=@打开仓库>
+INC S$图标2 <Button|x=8|y=350|nimg=item/item_0/000124.png>
 
 DELBUTTON 7 1
 addbutton 7 1 <$STR(S$图标2)>

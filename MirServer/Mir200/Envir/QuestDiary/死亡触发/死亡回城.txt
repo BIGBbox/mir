@@ -1,0 +1,69 @@
+[@死亡回城]
+{
+#IF
+#ACT
+sendmsg 5 你被【<$CURRRTARGETNAME>】杀死了
+; SENDDELAYMSG 人物死亡,%s后自动回城复活 3 249 0 @送你回家
+goto @复活界面
+
+
+[@送你回家]
+#IF
+#ACT
+REALIVE
+movr N$随机坐标X 325 335
+movr N$随机坐标Y 325 335
+mapmove 3 <$STR(N$随机坐标X)> <$STR(N$随机坐标Y)>
+;CloseBigDialogBox
+
+
+[@复活界面]
+#IF
+#act
+
+#SAY
+<Img|children={0,1,2,3,4,5,6,7}|a=1|x=737.0|y=201.0|reset=1|move=1|img=private/revive/bg_swfh_1.png|bg=1>
+<Layout|id=0|width=348|height=200>
+<Text|id=1|x=163|y=73|size=16|color=1006|text=消耗：　　x100>
+<Text|id=2|x=110|y=15|size=18|color=1001|text=死亡复活>
+<Text|id=3|x=77.0|y=45.0|size=16|color=1006|text=你被 【<$CURRRTARGETNAME>】 杀死了！>
+<Img|id=4|x=210.0|y=70.0|width=25|height=25|img=item/item_1/000000.png>
+<COUNTDOWN|id=5|x=70|y=73|time=5|count=1|size=16|color=249|link=@复活1>
+<Button|id=6|x=45|y=100|pimg=public/1900000652.png|nimg=public/1900000653.png|color=1020|size=17|text=免费复活|link=@复活1>
+<Button|id=7|x=170|y=100|pimg=public/1900000652.png|nimg=public/1900000653.png|color=1020|size=17|text=原地复活|link=@复活2>
+
+
+[@复活1]
+#IF
+#ACT
+REALIVE
+movr N$随机坐标X 325 335
+movr N$随机坐标Y 325 335
+mapmove 3 <$STR(N$随机坐标X)> <$STR(N$随机坐标Y)>
+
+[@复活2]
+#if
+#act
+REALIVE
+
+#if
+checkmoney RMB点 < 20
+#act
+messagebox RMB点不足,已将你送回到天下主城!
+movr N$随机坐标X 325 335
+movr N$随机坐标Y 325 335
+mapmove 3 <$STR(N$随机坐标X)> <$STR(N$随机坐标Y)>
+break
+
+#if
+#act
+money RMB点 - 100
+; sendmsg 5 名字:<$MAPTITLE>
+; sendmsg 5 X:<$X>
+
+; sendmsg 5 Y:<$Y>
+; mapmove <$MAPTITLE> <$STR(N$随机坐标X)> <$STR(N$随机坐标Y)>
+
+
+
+}

@@ -66,13 +66,13 @@ MOV N$是否自动回收 0
 
 <RText|id=ckT1|x=55|y=63.0|color=255|size=17|text=<战神套/FCOLOR=69><[45级]/FCOLOR=149>>
 <RText|id=ckT2|x=195|y=63.0|color=250|size=17|text=<清风套/FCOLOR=69><[50级]/FCOLOR=149>>
-<RText|id=ckT3|x=55|y=103.0|color=252|size=17|text=<热血套/FCOLOR=149><[45级]/FCOLOR=149>>
-<RText|id=ckT4|x=195|y=103.0|color=253|size=17|text=<苍茫套/FCOLOR=172><[45级]/FCOLOR=149>>
-<RText|id=ckT5|x=55|y=143.0|color=253|size=17|text=<迷失套/FCOLOR=2><[45级]/FCOLOR=149>>
-<RText|id=ckT6|x=195|y=143.0|color=249|size=17|text=<情天套/FCOLOR=180><[45级]/FCOLOR=149>>
-<RText|id=ckT7|x=55|y=183.0|color=243|size=17|text=<逐日套/FCOLOR=244><[45级]/FCOLOR=149>>
-<RText|id=ckT8|x=195|y=183.0|color=243|size=17|text=<遗忘套/FCOLOR=5><[45级]/FCOLOR=149>>
-<RText|id=ckT9|x=55|y=223.0|color=243|size=17|text=<红魔套/FCOLOR=244><[45级]/FCOLOR=149>>
+<RText|id=ckT3|x=55|y=103.0|color=252|size=17|text=<热血套/FCOLOR=149><[55级]/FCOLOR=149>>
+<RText|id=ckT4|x=195|y=103.0|color=253|size=17|text=<苍茫套/FCOLOR=172><[60级]/FCOLOR=149>>
+<RText|id=ckT5|x=55|y=143.0|color=253|size=17|text=<迷失套/FCOLOR=2><[65级]/FCOLOR=149>>
+<RText|id=ckT6|x=195|y=143.0|color=249|size=17|text=<情天套/FCOLOR=180><[70级]/FCOLOR=149>>
+<RText|id=ckT7|x=55|y=183.0|color=243|size=17|text=<逐日套/FCOLOR=244><[80级]/FCOLOR=149>>
+<RText|id=ckT8|x=195|y=183.0|color=243|size=17|text=<遗忘套/FCOLOR=5><[90级]/FCOLOR=149>>
+<RText|id=ckT9|x=55|y=223.0|color=243|size=17|text=<红魔套/FCOLOR=244><[100级]/FCOLOR=149>>
 <RText|id=ckT10|x=55|y=263.0|color=243|size=17|text=<经验券,元宝入包使用/FCOLOR=249>>
 <RText|id=ckT11|x=55|y=303.0|color=243|size=17|text=<祝福油入包使用/FCOLOR=249>>
 
@@ -106,28 +106,28 @@ mov N$界面序号 2
 <CheckBox|id=ckB3|x=22.0|y=100.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U213)>|checkboxid=1|link=@改变#改变KEY=213#系列=浩劫系列>
 <CheckBox|id=ckB4|x=162.0|y=100.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U214)>|checkboxid=1|link=@改变#改变KEY=214#系列=幽皇系列>
 <CheckBox|id=ckB5|x=22.0|y=140.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U215)>|checkboxid=1|link=@改变#改变KEY=215#系列=帝恨系列>
-<CheckBox|id=ckB6|x=162.0|y=140.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U216)>|checkboxid=1|link=@改变#改变KEY=216#系列=血祭红魔首饰>
-<CheckBox|id=ckB7|x=22.0|y=180.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U217)>|checkboxid=1|link=@改变#改变KEY=217#系列=血祭天怒剑甲>
+<CheckBox|id=ckB6|x=162.0|y=140.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U216)>|checkboxid=1|link=@改变#改变KEY=216#系列=血祭红魔系列>
+<CheckBox|id=ckB7|x=22.0|y=180.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U217)>|checkboxid=1|link=@改变#改变KEY=217#系列=血祭天怒系列>
 <CheckBox|id=ckB8|x=162.0|y=180.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U218)>|checkboxid=1|link=@改变#改变KEY=218#系列=血祭苍龙系列>
 <CheckBox|id=ckB9|x=22.0|y=220.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U219)>|checkboxid=1|link=@改变#改变KEY=219#系列=血祭浩劫系列>
-<CheckBox|id=ckB10|x=162.0|y=220.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U220)>|checkboxid=1|link=@改变#改变KEY=220#系列=判阴阳回收>
-<CheckBox|id=ckB11|x=22.0|y=260.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U221)>|checkboxid=1|link=@改变#改变KEY=221#系列=天罪回收>
-<CheckBox|id=ckB12|x=162.0|y=260.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U222)>|checkboxid=1|link=@改变#改变KEY=222#系列=仙界魔魂回收>
-<CheckBox|id=ckB13|x=22.0|y=300.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U223)>|checkboxid=1|link=@改变#改变KEY=223#系列=二级魔器>
+<CheckBox|id=ckB10|x=162.0|y=220.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U220)>|checkboxid=1|link=@改变#改变KEY=220#系列=血祭幽皇系列>
+<CheckBox|id=ckB11|x=22.0|y=260.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U221)>|checkboxid=1|link=@改变#改变KEY=221#系列=血祭帝恨系列>
+; <CheckBox|id=ckB12|x=162.0|y=260.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U222)>|; checkboxid=1|link=@改变#改变KEY=222#系列=仙界魔魂回收>
+; <CheckBox|id=ckB13|x=22.0|y=300.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U223)>|checkboxid=1|; link=@改变#改变KEY=223#系列=二级魔器>
 
 <RText|id=ckT1|x=55|y=63.0|color=255|size=17|text=<天怒系列/FCOLOR=149>>
 <RText|id=ckT2|x=195|y=63.0|color=250|size=17|text=<苍龙系列/FCOLOR=149>>
 <RText|id=ckT3|x=55|y=103.0|color=252|size=17|text=<浩劫系列/FCOLOR=149>>
 <RText|id=ckT4|x=195|y=103.0|color=253|size=17|text=<幽皇系列/FCOLOR=149>>
 <RText|id=ckT5|x=55|y=143.0|color=253|size=17|text=<帝恨系列/FCOLOR=149>>
-<RText|id=ckT6|x=195|y=143.0|color=249|size=17|text=<血祭红魔首饰/FCOLOR=149>>
-<RText|id=ckT7|x=55|y=183.0|color=243|size=17|text=<血祭天怒剑甲/FCOLOR=149>>
+<RText|id=ckT6|x=195|y=143.0|color=249|size=17|text=<血祭红魔系列/FCOLOR=149>>
+<RText|id=ckT7|x=55|y=183.0|color=243|size=17|text=<血祭天怒系列/FCOLOR=149>>
 <RText|id=ckT8|x=195|y=183.0|color=243|size=17|text=<血祭苍龙系列/FCOLOR=149>>
 <RText|id=ckT9|x=55|y=223.0|color=243|size=17|text=<血祭浩劫系列/FCOLOR=149>>
-<RText|id=ckT10|x=195|y=223.0|color=243|size=17|text=<判阴阳回收/FCOLOR=149>>
-<RText|id=ckT11|x=55|y=263.0|color=243|size=17|text=<天罪回收/FCOLOR=149>>
-<RText|id=ckT12|x=195|y=263.0|color=243|size=17|text=<仙界魔魂回收/FCOLOR=149>>
-<RText|id=ckT13|x=55|y=303.0|color=243|size=17|text=<二级魔器/FCOLOR=149>>
+<RText|id=ckT10|x=195|y=223.0|color=243|size=17|text=<血祭幽皇系列/FCOLOR=149>>
+<RText|id=ckT11|x=55|y=263.0|color=243|size=17|text=<血祭帝恨系列/FCOLOR=149>>
+; <RText|id=ckT12|x=195|y=263.0|color=243|size=17|text=<仙界魔魂回收/FCOLOR=149>>
+; <RText|id=ckT13|x=55|y=303.0|color=243|size=17|text=<二级魔器/FCOLOR=149>>
 
 <Text|id=info|size=16|x=255.0|y=400.0|color=250|text=查看详情|link=@回收说明#页数=2>
 
@@ -217,15 +217,15 @@ mov N$界面序号 4
 <CheckBox|id=ckB4|x=22.0|y=180.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U248)>|checkboxid=1|link=@改变#改变KEY=248#系列=7转材料>
 <CheckBox|id=ckB5|x=22.0|y=220.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U249)>|checkboxid=1|link=@改变#改变KEY=249#系列=8转材料>
 <CheckBox|id=ckB6|x=22.0|y=260.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U250)>|checkboxid=1|link=@改变#改变KEY=250#系列=9转材料>
-<CheckBox|id=ckB7|x=22.0|y=300.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U251)>|checkboxid=1|link=@改变#改变KEY=251#系列=10转材料>
+;<CheckBox|id=ckB7|x=22.0|y=300.0|pimg=public/1900000551.png|nimg=public/1900000550.png|default=<$STR(U251)>|checkboxid=1|link=@改变#改变KEY=251#系列=10转材料>
 
 <RText|id=ckT1|x=55|y=63.0|color=255|size=17|text=<天精岩和地狱火/FCOLOR=103><[四转]/FCOLOR=251>>
 <RText|id=ckT2|x=55|y=103.0|color=250|size=17|text=<天精岩和地狱火/FCOLOR=103><[五转]/FCOLOR=251>>
 <RText|id=ckT3|x=55|y=143.0|color=252|size=17|text=<天精岩和地狱火/FCOLOR=103><[六转]/FCOLOR=251>>
 <RText|id=ckT4|x=55|y=183.0|color=253|size=17|text=<天精岩和地狱火/FCOLOR=103><[七转]/FCOLOR=251>>
-<RText|id=ckT5|x=55|y=223.0|color=253|size=17|text=<天精岩和地狱火/FCOLOR=103><[八转]/FCOLOR=251>>
-<RText|id=ckT6|x=55|y=263.0|color=249|size=17|text=<天精岩和地狱火/FCOLOR=103><[九转]/FCOLOR=251>>
-<RText|id=ckT7|x=55|y=303.0|color=243|size=17|text=<天精岩和地狱火/FCOLOR=103><[十转]/FCOLOR=251>>
+<RText|id=ckT5|x=55|y=223.0|color=253|size=17|text=<归一之精和归一之神/FCOLOR=103><[八转]/FCOLOR=251>>
+<RText|id=ckT6|x=55|y=263.0|color=249|size=17|text=<归真之精和归真之神/FCOLOR=103><[九转]/FCOLOR=251>>
+; <RText|id=ckT7|x=55|y=303.0|color=243|size=17|text=<天精岩和地狱火/FCOLOR=103><[十转]/FCOLOR=251>>
 
 <Text|id=info|size=16|x=255.0|y=400.0|color=250|text=查看详情|link=@回收说明#页数=4>
 
@@ -274,6 +274,26 @@ mov N$color<$STR(S$页数)> 254
 
 <$str(S$回收收益详情)>
 
+清空已选择的套装数量
+[@ClearAllRecord]
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\新装备回收\回收分类\套装列表.txt 0 list S$AllSuit
+goto @ClearRecord
+
+[@ClearRecord]
+#if
+equal S$AllSuit
+#act
+break
+
+#if
+#act
+GetValidstr <$STR(S$AllSuit)> # S$SuitName S$AllSuit
+mov N$<$str(S$SuitName)> 0
+
+goto @ClearRecord
+
 [@改变]
 ; #or
 ; equal <$str(S$改变KEY)> 245
@@ -304,7 +324,6 @@ mov T20 <$str(T20)>&<$str(S$系列)>
 AnsiReplaceText T20 &<$str(S$系列)>  
 MOV U<$STR(S$改变KEY)> 0
 
-
 #IF
 #ACT
 mov S$回收系列 <$str(T20)>
@@ -313,21 +332,36 @@ MOV S10
 ; MOV N$回收结算1 0
 ; MOV N$回收结算2 0
 
+; 清空选择记录
+; goto @ClearAllRecord
+mov N$<$str(S$系列)> 0
+mov N$<$str(S$系列)>Yb 0
+
 LoopBagItems @勾选回调 S$勾选ID S$勾选KEY
 ; GOTO @回收加成
 GOTO @显示<$STR(S$页签)>
 
 [@勾选回调]
-
 #IF
 CHECKTEXTLIST ..\QuestDiary\新装备回收\回收分类\<$str(S$系列)>\<$str(S$系列)>列表.txt <$STR(S$勾选KEY)>
 EQUAL <$str(U<$str(S$改变KEY)>)> 1
 not CheckContainsText S12 <$STR(S$勾选ID)> 
 #ACT
-ReadConfigFileItem ..\QuestDiary\新装备回收\回收分类\<$str(S$系列)>\<$str(S$系列)>价格.txt <$STR(S$勾选KEY)> 元宝 N$元宝参数
-ReadConfigFileItem ..\QuestDiary\新装备回收\回收分类\<$str(S$系列)>\<$str(S$系列)>价格.txt <$STR(S$勾选KEY)> RMB点 N$RMB点参数
-ReadConfigFileItem ..\QuestDiary\新装备回收\回收分类\<$str(S$系列)>\<$str(S$系列)>价格.txt <$STR(S$勾选KEY)> 经验值 N$经验值参数
+; ReadConfigFileItem ..\QuestDiary\新装备回收\回收分类\<$str(S$系列)>\<$str(S$系列)>价格.txt <$STR(S$勾选KEY)> 元宝 N$元宝参数
+; ReadConfigFileItem ..\QuestDiary\新装备回收\回收分类\<$str(S$系列)>\<$str(S$系列)>价格.txt <$STR(S$勾选KEY)> RMB点 N$RMB点参数
+; ReadConfigFileItem ..\QuestDiary\新装备回收\回收分类\<$str(S$系列)>\<$str(S$系列)>价格.txt <$STR(S$勾选KEY)> 经验值 N$经验值参数
 ; INC S12 <$STR(S$勾选ID)>,
+
+; 套装数量统计
+inc N$<$str(S$系列)> 1
+; sendmsg 5 [<$str(S$系列)>] + 1 = [<$str(N$<$str(S$系列)>)>]
+
+ReadConfigFileItem ..\QuestDiary\新装备回收\回收分类\回收价格.txt 1 <$STR(S$勾选KEY)> S$RecvAwards
+GetValidstr <$STR(S$RecvAwards)> # S$Item S$RecvAwards
+GetValidstr <$STR(S$Item)> * S$ItemType S$ItemCnt
+
+mov N$Tmp <$str(S$ItemCnt)> 1
+inc N$<$str(S$系列)>Yb N$Tmp
 
 
 #if
@@ -374,8 +408,36 @@ AnsiReplaceText S12 <$STR(S$勾选ID)>,
 #if
 #act
 SelectBagItems <$str(S12)>
+
 ; sendmsg 5 S18***<$str(S18)>
 ; S$勾选背包ID S$勾选背包KEY
+
+[@BroadCastAllRecv]
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\新装备回收\回收分类\套装列表.txt 0 list S$AllSuit
+goto @BroadCastRecv
+
+[@BroadCastRecv]
+#if
+equal S$AllSuit
+#act
+break
+
+#if
+#act
+GetValidstr <$STR(S$AllSuit)> # S$SuitName S$AllSuit
+; sendmsg 5 [<$str(S$SuitName)>][<$str(N$<$str(S$SuitName)>)>]
+
+#if
+large N$<$str(S$SuitName)> 0
+#act
+; GuildNoticeMsg 255 56 玩家<$USERNAME>回收<$str(S$SuitName)>*<$str(N$<$str(S$SuitName)>)>获得[<$str(N$<$str(S$SuitName)>Yb)>]元宝
+SENDMSG 7 玩家{<$USERNAME>|251:0:0}回收{<$str(S$SuitName)>|22:0:0}*{<$str(N$<$str(S$SuitName)>)>|249:0:0}获得{元宝|249:0:0}{<$str(N$<$str(S$SuitName)>Yb)>|215:0:0}
+
+#if
+#act
+goto @BroadCastRecv
 
 [@确认回收]
 #IF
@@ -383,12 +445,8 @@ SelectBagItems <$str(S12)>
 MOV N$回收结算1 0
 MOV N$回收结算2 0
 MOV N$回收结算3 0
-MOV N$回收结算4 0
-MOV N$回收结算5 0
-MOV N$回收结算6 0
-; sendmsg 5 确认回收了！！！！<$str(S12)>
-; DelItemByMakeIndex 258
-; break
+mov N$回收数量 0
+
 
 #if
 #act
@@ -397,21 +455,81 @@ LoopBagItems @回收回调 S$回收ID S$回收KEY
 ; money 元宝 + <$str(N$回收结算1)>
 ; money RMB点 + <$str(N$回收结算2)>
 ; CHANGEEXP + <$str(N$回收结算3)>
+; sendmsg 5 111
 
 #IF
-EQUAL <$str(N$回收结算1)> 0
-EQUAL <$str(N$回收结算2)> 0
-EQUAL <$str(N$回收结算3)> 0
+equal <$str(N$回收数量)> 0
 #ACT
 messagebox 您没有可以需要回收的物品。
 BREAK
 
 #if
 #act
-money 元宝 + <$str(N$回收结算1)>
-money RMB点 + <$str(N$回收结算2)>
-CHANGEEXP + <$str(N$回收结算3)>
-GuildNoticeMsg 255 56 玩家:『<$USERNAME>』回收获得大量货币！！
+goto @BroadCastAllRecv
+
+goto @ClearAllRecord
+
+; #if
+; #act
+; GetDBItemFieldValue <$STR(S$收益类型1)> StdMode S$StdMode1
+; GetDBItemFieldValue <$STR(S$收益类型2)> StdMode S$StdMode2
+; GetDBItemFieldValue <$STR(S$收益类型3)> StdMode S$StdMode3
+; ; money 元宝 + <$str(N$回收结算1)>
+; ; money RMB点 + <$str(N$回收结算2)>
+; ; CHANGEEXP + <$str(N$回收结算3)>
+
+; #if
+; equal S$StdMode1 41
+; #act
+; money <$STR(S$收益类型1)> + <$str(N$回收结算1)>
+
+; #if
+; equal S$StdMode2 41
+; #act
+; money <$STR(S$收益类型2)> + <$str(N$回收结算2)>
+
+; #if
+; equal S$StdMode3 41
+; #act
+; money <$STR(S$收益类型3)> + <$str(N$回收结算3)>
+
+
+; #if
+; not equal S$StdMode1 41
+; #act
+; givestateitem <$str(S$收益类型1)> <$str(N$回收结算1)> 0 1 0 0 1 1 1 1
+
+; #if
+; not equal S$StdMode2 41
+; #act
+; givestateitem <$str(S$收益类型2)> <$str(N$回收结算2)> 0 1 0 0 1 1 1 1
+
+; #if
+; not equal S$StdMode3 41
+; #act
+; givestateitem <$str(S$收益类型3)> <$str(N$回收结算3)> 0 1 0 0 1 1 1 1
+
+; #if
+; equal <$str(S$收益类型1)> 经验值
+; #act
+; CHANGEEXP + <$str(N$回收结算1)>
+
+; #if
+; equal <$str(S$收益类型2)> 经验值
+; #act
+; CHANGEEXP + <$str(N$回收结算2)>
+
+; #if
+; equal <$str(S$收益类型3)> 经验值
+; #act
+; CHANGEEXP + <$str(N$回收结算3)>
+
+
+
+#if
+#act
+
+; GuildNoticeMsg 255 56 玩家:『<$USERNAME>』回收获得巨大收益！！
 goto @回收加成
 ; sendmsg 5 回收成功!!+<$str(N$回收结算1)>+<$str(N$回收结算2)>+<$str(N$回收结算3)>
 
@@ -419,29 +537,126 @@ goto @回收加成
 
 #if
 #act
+
+mov N$回收结算1 0
+mov N$回收结算2 0
+mov N$回收结算3 0
+
+mov S$StdMode1 0
+mov S$StdMode2 0
+mov S$StdMode3 0
+
 ReadConfigFileItem ..\QuestDiary\新装备回收\回收分类\回收价格.txt 1 <$STR(S$回收KEY)> S$回收收益A
 GetValidstr <$STR(S$回收收益A)> & S$剩余收益A S$装备标记
-GetValidstr <$STR(S$剩余收益A)> * S$元宝收益 S$剩余收益
-GetValidstr <$STR(S$剩余收益)> * S$RMB点收益 S$经验值收益
+; sendmsg 5 <$STR(S$回收KEY)>---<$str(S$回收收益A)>
+
+#or
+equal <$str(S$回收收益A)>
+not CHECKTEXTLIST ..\QuestDiary\新装备回收\回收分类\回收名单.txt <$STR(S$回收KEY)>
+not equal U<$str(S$装备标记)> 1
+#act
+break
+
+
+
+#if
+#act
+; sendmsg 5 <$STR(S$回收KEY)>---<$str(S$回收收益A)>
+
+inc N$回收数量 1
+
+GetValidstr <$STR(S$剩余收益A)> # S$收益1 S$剩余收益B
+GetValidstr <$STR(S$剩余收益B)> # S$收益2 S$收益3
+
+GetValidstr <$STR(S$收益1)> * S$收益类型1 S$收益数值1
+GetValidstr <$STR(S$收益2)> * S$收益类型2 S$收益数值2
+GetValidstr <$STR(S$收益3)> * S$收益类型3 S$收益数值3
+
+; sendmsg 5 收益1::<$STR(S$收益1)>--<$STR(S$回收KEY)>
+; sendmsg 5 收益2::<$STR(S$收益2)>--<$STR(S$回收KEY)>
+; sendmsg 5 收益3::<$STR(S$收益3)>--<$STR(S$回收KEY)>
+; sendmsg 5 收益数值2::<$STR(S$收益数值2)>
+; sendmsg 5 收益数值3::<$STR(S$收益数值3)>
+
+; sendmsg 5 装备标记::<$STR(S$装备标记)>
 ; sendmsg 5 <$str(S$装备标记)>*--
 
-#IF
-CHECKTEXTLIST ..\QuestDiary\新装备回收\回收分类\回收名单.txt <$STR(S$回收KEY)>
-equal U<$str(S$装备标记)> 1
-; CheckContainsText <$STR(S12)> <$STR(S$回收ID)>
-#ACT
+; #IF
+; CHECKTEXTLIST ..\QuestDiary\新装备回收\回收分类\回收名单.txt <$STR(S$回收KEY)>
+; equal U<$str(S$装备标记)> 1
+; ; CheckContainsText <$STR(S12)> <$STR(S$回收ID)>
+; #ACT
+; sendmsg 5 回收KEY::<$STR(S$回收KEY)>
+; sendmsg 5 收益数值1::<$STR(S$收益数值1)>
+; sendmsg 5 收益数值2::<$STR(S$收益数值2)>
+; sendmsg 5 收益数值3::<$STR(S$收益数值3)>
+
+; sendmsg 5 回收收益A::<$STR(S$回收收益A)>
+; sendmsg 5 剩余收益A::<$STR(S$剩余收益A)>
 
 DelItemByMakeIndex <$STR(S$回收ID)>
-
 AnsiReplaceText S12 <$STR(S$回收ID)>,    
 
-INC N$回收结算1 <$STR(S$元宝收益)>
-INC N$回收结算2 <$STR(S$RMB点收益)>
-INC N$回收结算3 <$STR(S$经验值收益)>
+mov N$回收结算1 <$STR(S$收益数值1)>
+mov N$回收结算2 <$STR(S$收益数值2)>
+mov N$回收结算3 <$STR(S$收益数值3)>
 
-; mov N$回收结算4 <$STR(S$元宝收益)>
-; mov N$回收结算5 <$STR(S$RMB点收益)>
-; mov N$回收结算6 <$STR(S$经验值收益)>
+
+GetDBItemFieldValue <$STR(S$收益类型1)> StdMode S$StdMode1
+GetDBItemFieldValue <$STR(S$收益类型2)> StdMode S$StdMode2
+GetDBItemFieldValue <$STR(S$收益类型3)> StdMode S$StdMode3
+; money 元宝 + <$str(N$回收结算1)>
+; money RMB点 + <$str(N$回收结算2)>
+; CHANGEEXP + <$str(N$回收结算3)>
+
+#if
+equal S$StdMode1 41
+#act
+money <$STR(S$收益类型1)> + <$str(N$回收结算1)>
+
+#if
+equal S$StdMode2 41
+#act
+money <$STR(S$收益类型2)> + <$str(N$回收结算2)>
+
+#if
+equal S$StdMode3 41
+#act
+money <$STR(S$收益类型3)> + <$str(N$回收结算3)>
+
+
+#if
+not equal S$StdMode1 41
+not equal <$str(S$收益类型1)> 经验值
+#act
+givestateitem <$str(S$收益类型1)> <$str(N$回收结算1)> 0 1 0 0 1 1 1 1
+
+#if
+not equal S$StdMode2 41
+not equal <$str(S$收益类型2)> 经验值
+#act
+givestateitem <$str(S$收益类型2)> <$str(N$回收结算2)> 0 1 0 0 1 1 1 1
+
+#if
+not equal S$StdMode3 41
+not equal <$str(S$收益类型3)> 经验值
+#act
+givestateitem <$str(S$收益类型3)> <$str(N$回收结算3)> 0 1 0 0 1 1 1 1
+
+#if
+equal <$str(S$收益类型1)> 经验值
+#act
+CHANGEEXP + <$str(N$回收结算1)>
+
+#if
+equal <$str(S$收益类型2)> 经验值
+#act
+CHANGEEXP + <$str(N$回收结算2)>
+
+#if
+equal <$str(S$收益类型3)> 经验值
+#act
+CHANGEEXP + <$str(N$回收结算3)>
 
 
 
@@ -529,13 +744,13 @@ CHANGEEXP + <$str(N$回收结算1加成)>
 #IF
 #ACT
 mov S$回收窗口打开 1 
-SENDMSG 7 面板打开
+; SENDMSG 7 面板打开
 
 [@CloseLayer1000]
 #IF
 #ACT
 mov S$回收窗口打开 0
-SENDMSG 7 面板关闭
+; SENDMSG 7 面板关闭
 mov S12
 SelectBagItems <$str(S12)>
 

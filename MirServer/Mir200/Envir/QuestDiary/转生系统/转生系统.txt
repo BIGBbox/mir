@@ -2,11 +2,118 @@
 {
 
 #if
+CheckContainsText <$STR(T8)> 秦始皇陵
+not CheckContainsText <$STR(T8)> 转生
+#act
+mov S$描述 据说是天精岩和地狱火么?还有一些元宝!
+mov S$任务状态 20W经验值,1000元宝和强效金疮药*50/FCOLOR=250
+mov S$领取奖励 转生任务奖励
+mov S$奖励idx1 6
+mov S$奖励nme1 200000
+mov S$奖励idx2 101595
+mov S$奖励nme2 50
+mov S$奖励idx3 101537
+mov S$奖励nme3 1
+goto @转生任务面板
+break
+
+#if
+CheckContainsText <$STR(T8)> 转生
+not CheckContainsText <$STR(T8)> 转生1
+#act
+mov S$描述 转生是一个合格战士所必备的条件!
+mov S$任务状态 20W经验值,25000元宝和烈火剑法/FCOLOR=250
+mov S$领取奖励 转生任务奖励1
+mov S$奖励idx1 6
+mov S$奖励nme1 200000
+mov S$奖励idx2 2
+mov S$奖励nme2 25000
+mov S$奖励idx3 100030
+mov S$奖励nme3 1
+goto @转生任务面板
+break
+
+#if
 #act
 mov S$获取途径
 mov S$获取图鉴窗口 0
 mov N$转生等级 0
 goto @获取转生数据
+
+[@转生任务面板]
+
+#If
+#act
+DELAYGOTO 5000 @<$str(S$领取奖励)>
+
+#say
+
+; <Text|a=0|x=20|y=20|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$str(S$描述)>>
+; <RText|a=0|x=20|y=95|size=18|text=<奖励:/FCOLOR=250><<$STR(S$任务状态)>>>
+; <Button|id=click_btn1|x=25|y=125|nimg=public/0.png|pimg=public/0.png|text=完成任务|color=251|link=@转生任务奖励>
+
+<Img|img=public/sf1/2/renwuK.png|children=vipD,closeBtn,title|x=400|y=200|bg=1|reset=1|move=0>
+<Button|id=closeBtn|x=420|y=2|nimg=public/sf1/2/btn_close.png|link=@exit>
+<Img|id=vipD|img=public/sf1/2/0.png|children=1,2,938,show1,show2,show3|x=0|y=20>
+<Text|id=1|x=20|y=20|color=153|tips=|tipsx=10|tipsy=80|size=18|text=<$str(S$描述)>>
+<Text|id=title|x=175|y=2|color=154|size=18|text=转生>
+; <RText|id=2|x=20|y=95|size=18|text=<奖励:/FCOLOR=250><<$STR(S$任务状态)>>>
+<Img|id=show1|children={下方礼包1}|x=25|y=150|width=40|height=40|img=public/sf1/19/itemBg1.png>
+<ItemShow|id=下方礼包1|x=-12|y=-10|itemid=<$str(S$奖励idx1)>|itemcount=<$str(S$奖励nme1)>|showtips=1|color=250|scale=0.8>
+<Img|id=show2|children={下方礼包2}|x=85|y=150|width=40|height=40|img=public/sf1/19/itemBg1.png>
+<ItemShow|id=下方礼包2|x=-12|y=-10|itemid=<$str(S$奖励idx2)>|itemcount=<$str(S$奖励nme1)>|showtips=1|color=250|scale=0.8>
+<Img|id=show3|children={下方礼包3}|x=145|y=150|width=40|height=40|img=public/sf1/19/itemBg1.png>
+<ItemShow|id=下方礼包3|x=-12|y=-10|itemid=<$str(S$奖励idx3)>|itemcount=<$str(S$奖励nme1)>|showtips=1|color=250|scale=0.8>
+<Button|id=938|x=290|y=150|nimg=public/sf1/2/btn_11.png|pimg=public/sf1/2/btn_11_1.png|text=完成任务|color=255|link=@<$str(S$领取奖励)>>
+
+
+#IF
+#ACT
+Navigation 0 938 点击完成任务
+
+[@转生任务奖励]
+#if
+#if
+CheckContainsText <$STR(T8)> 秦始皇陵
+not CheckContainsText <$STR(T8)> 转生
+#act
+
+inc T8 _转生
+
+NEWCOMPLETETASK 29
+NEWDELETETASK 29
+
+CHANGEEXP + 200000
+money 元宝 + 1000
+GiveStateItem 强效金疮药 50 0 1 0 0 1 1 1 1
+
+sendmsg 7 完成任务了!!
+#CALL [\任务系统\任务文本.txt] @接取任务
+CLEARDELAYGOTO
+close
+
+[@转生任务奖励1]
+#if
+#if
+CheckContainsText <$STR(T8)> 转生
+not CheckContainsText <$STR(T8)> 转生1
+#act
+
+inc T8 _转生1
+
+NEWCOMPLETETASK 30
+NEWDELETETASK 30
+
+CHANGEEXP + 200000
+money 元宝 + 25000
+addskill 烈火剑法
+
+sendmsg 7 完成任务了!!
+#CALL [\任务系统\任务文本.txt] @接取任务
+CLEARDELAYGOTO
+close
+
+
 
 [@获取转生数据]
 #if
@@ -15,9 +122,6 @@ goto @获取当前转生等级
 mov S$当前转生等级 <$str(N$转生等级)>
 mov S$元宝颜色 161
 
-; #if
-; #act
-; mov S$当前转生等级 0
 
 #if
 #act
@@ -65,31 +169,31 @@ goto @获取转生数据
 #act
 #say
 <Img|x=0|y=0|width=9999|height=9999|children={转生系统主面板}|img=public/0.png|bg=1|link=@exit>
-<Img|id=转生系统主面板|x=210|y=30|img=public/sf1/2/bg2.png|children={内框背景,标题,列表1,官位背景,升级条件1,升级条件2,当前转生等级,获取途径,获取途径控件,closeBtn}|reset=1|link=@>
+<Img|id=转生系统主面板|x=210|y=30|img=public/sf1/2/Bg.png|width=790|height=565|children={内框背景,标题,列表1,官位背景,升级条件1,升级条件2,当前转生等级,获取途径,获取途径控件,closeBtn}|reset=1|link=@>
 
-<Button|id=closeBtn|x=765|y=65.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=转 生|link=@转生面板>
-<Text|id=标题|x=180|y=45|color=255|size=18|text=转生系统>
+<Button|id=closeBtn|x=765|y=60.0|nimg=public/sf1/2/btn_close.png|link=@exit>
+<Button|id=列表1|x=10|y=90.0|width=133|height=40|nimg=public/sf1/2/btn_11.png|color=161|size=17|text=转 生|link=@转生面板>
+<Text|id=标题|x=360|y=52|color=255|size=18|text=转生系统>
 <Text|id=当前转生等级|x=370.0|y=105.0|color=251|size=18|text=人物转生等级：<$str(S$当前转生等级)> 转>
-<Img|id=内框背景|x=187|y=80|width=565|height=320|img=public/haha/ty_bg.png>
-
-<Img|id=官位背景|x=200|y=200|children={当前称号,下级称号,箭头,当前属性加成,下级属性加成}|width=540|height=135|img=public/haha/split/common_panel2035.png>
+<Img|id=内框背景|x=150|y=90|width=630|height=320|img=public/haha/ty_bg.png>
+;  y+10
+<Img|id=官位背景|x=200|y=220|children={当前称号,下级称号,箭头,当前属性加成,下级属性加成}|width=540|height=135|img=public/haha/split/common_panel2035.png>
 <Img|id=箭头|x=190|y=5|width=146|height=120|img=public/haha/f_00039e.png>
 <RText|id=当前称号|x=80|y=-30|size=16|text=<当前属性/FCOLOR=251>>
 <RText|id=下级称号|x=360|y=-30|size=16|text=<下级属性/FCOLOR=251>>
 <RText|id=当前属性加成|x=80|y=50|text=<攻魔道＋<$str(S$当前全属性加成)>/FCOLOR=161>>
 <RText|id=下级属性加成|x=360|y=50|text=<攻魔道＋<$str(S$下级全属性加成)>/FCOLOR=161>>
 
-<RText|id=升级条件1|x=405.0|y=405.0|color=251|size=16|text=<人物/FCOLOR=161>< <$str(S$需要人物等级)>级/FCOLOR=251><,/FCOLOR=161><转生后/FCOLOR=161><降<$str(S$下降等级)>级/FCOLOR=249>>
-<RText|id=升级条件2|children={需要道具1,连接图片1,连接图片2,需要道具2,需要道具3,,okBtn}|x=310.0|y=445.0|color=251|size=16|text=<消耗材料：/FCOLOR=251>>
+<RText|id=升级条件1|x=405.0|y=420.0|color=251|size=16|text=<人物/FCOLOR=161>< <$str(S$需要人物等级)>级/FCOLOR=251><,/FCOLOR=161><转生后/FCOLOR=161><降<$str(S$下降等级)>级/FCOLOR=249>>
+<RText|id=升级条件2|children={需要道具1,连接图片1,连接图片2,需要道具2,需要道具3,,okBtn}|x=310.0|y=460.0|color=251|size=16|text=<消耗材料：/FCOLOR=251>>
 <ItemShow|id=需要道具1|x=80|y=-20|itemid=<$STR(S$需要材料名ID1)>|itemcount=<$STR(S$需要材料数量1)>|showtips=1|bgtype=1|scale=0.8>
 <ItemShow|id=需要道具2|x=160|y=-20|itemid=<$STR(S$需要材料名ID2)>|itemcount=<$STR(S$需要材料数量2)>|showtips=1|bgtype=1|scale=0.8>
 <Img|id=连接图片1|x=145|y=0|width=19|height=25|img=public/uipic/01709.png>
 <Img|id=连接图片2|x=220|y=0|width=19|height=25|img=public/uipic/01709.png>
 <RText|id=需要道具3|x=250.0|y=0|color=251|size=16|text=<<$str(S$所需货币数量)>元宝/FCOLOR=<$str(S$元宝颜色)>>>
-<Button|id=okBtn|x=100|y=25.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=我要转生|link=@转生升级>
+<Button|id=okBtn|x=100|y=35.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=我要转生|link=@转生升级>
 
-<Text|id=获取途径|x=670.0|y=480.0|color=250|size=18|text=获取途径|link=@获取途径按钮>
+<Text|id=获取途径|x=680.0|y=510.0|color=250|size=18|text=获取途径|link=@获取途径按钮>
 <$str(S$获取途径)>
 
 [@获取当前转生等级]
@@ -164,7 +268,7 @@ break
 
 #if
 #act
-inc S$获取途径 <Img|id=获取途径控件|children={途径标题1,途径标题2,途径标题3,途径标题4,途径标题5,途径按钮1,途径按钮2,途径按钮3,途径按钮4,途径关闭}|width=245|height=460|x=515|y=68|img=public/haha/split/common_panel2045.png|link=@>
+inc S$获取途径 <Img|id=获取途径控件|children={途径标题1,途径标题2,途径标题3,途径标题4,途径标题5,途径按钮1,途径按钮2,途径按钮3,途径按钮4,途径关闭}|width=245|height=460|x=535|y=80|img=public/haha/split/common_panel2045.png|link=@>
 inc S$获取途径 <Text|id=途径标题1|x=90.0|y=15.0|color=251|size=16|text=获取途径>
 ; inc S$获取途径 <Text|id=途径标题2|x=30.0|y=40.0|color=161|size=16|text=本服转生证明全部怪物掉落>
 inc S$获取途径 <Text|id=途径标题3|x=45.0|y=65.0|color=161|size=16|text=当前转生材料高爆产地>
@@ -197,7 +301,7 @@ not large <$str(U22)> 0
 not CheckBindMoney 元宝 < 500
 #act
 money 绑定元宝 - 500
-MapMove xls1
+MapMove 血龙回廊
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖雪龙殿〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖雪龙殿〗,寻找高级装备！
 
@@ -205,8 +309,7 @@ GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖雪龙殿〗,寻找高级装备！
 not CHECKRENEWLEVEL < 2
 large <$str(U22)> 0
 #act
-give 回城卷 1
-MapMove xls1
+MapMove 血龙回廊
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖雪龙殿〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖雪龙殿〗,寻找高级装备！
 
@@ -228,8 +331,7 @@ not CheckBindMoney 元宝 < 1000
 #act
 money 绑定元宝 - 1000
 
-give 回城卷 1
-MapMove wld1
+MapMove 神秘峡谷一层
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了〖神秘峡谷一层〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了〖神秘峡谷一层〗,寻找高级装备！
 
@@ -237,8 +339,7 @@ GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了〖神秘峡谷一层〗,寻找高级装备！
 not checklevelex < 110
 large <$str(U22)> 0
 #ACT
-give 回城卷 1
-MapMove wld1
+MapMove 神秘峡谷一层
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了〖神秘峡谷一层〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了〖神秘峡谷一层〗,寻找高级装备！
 
@@ -258,8 +359,7 @@ not large <$str(U22)> 0
 not CheckBindMoney 元宝 < 500
 #act
 money 绑定元宝 - 500
-give 回城卷 1
-MapMove hdt1 11 65
+MapMove 囚魔炼狱一层 11 65
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！
 
@@ -267,8 +367,7 @@ GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！
 check [007] 1
 large <$str(U22)> 0
 #ACT
-give 回城卷 1
-MapMove hdt1 11 65
+MapMove 囚魔炼狱一层 11 65
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖囚魔炼狱〗,寻找高级装备！
 
@@ -287,8 +386,7 @@ not CHECKRENEWLEVEL > 2
 not CheckBindMoney 元宝 < 500
 #act
 money 绑定元宝 - 500
-give 回城卷 1
-MapMove hwxd 158 33
+MapMove 海外仙岛 158 33
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖海外仙岛〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖海外仙岛〗,寻找高级装备！
 
@@ -297,8 +395,7 @@ GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖海外仙岛〗,寻找高级装备！
 large <$str(U22)> 0
 CHECKRENEWLEVEL > 2
 #ACT
-give 回城卷 1
-MapMove hwxd 158 33
+MapMove 海外仙岛 158 33
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖海外仙岛〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖海外仙岛〗,寻找高级装备！
 

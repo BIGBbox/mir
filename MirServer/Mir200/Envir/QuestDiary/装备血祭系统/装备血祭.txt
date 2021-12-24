@@ -2,55 +2,66 @@
 {
 #if
 #act
+mov N$filter_Idx 0
+mov S$filter3 
+goto @获取血祭列表
 ; sendmsg 5 装备血祭功能
 mov S$血祭窗口状态 1
 mov N$成功率 5
 mov N$材料数量 1
 mov N$血祭所需 <$str(S$消耗货币数量)>
-ReadConfigFileItem ..\QuestDiary\装备血祭系统\血祭消耗.txt 1 货币类型 S$货币类型
+; ReadConfigFileItem ..\QuestDiary\装备血祭系统\血祭消耗.txt 1 货币类型 S$货币类型
 ReadConfigFileItem ..\QuestDiary\装备血祭系统\材料.txt 1 百分比基数 S$百分比基数
 ReadConfigFileItem ..\QuestDiary\装备血祭系统\材料.txt 1 材料 S$材料数据
 ReadConfigFileItem ..\QuestDiary\装备血祭系统\材料.txt 1 提升 S$提升数据
 GetDBItemFieldValue <$str(S$材料数据)> idx S$材料数据IDX
+mov S$祭品ID
+; mov S10
+goto @获取唯一id
 
 #if
 equal <$str(S$百分比基数)> 100
 #act
-mov S$分比 百分比
+mov S$分比 百分之
 
 #if
 equal <$str(S$百分比基数)> 1000
 #act
-mov S$分比 千分比
+mov S$分比 千分之
 
 #if
 equal <$str(S$百分比基数)> 10000
 #act
-mov S$分比 万分比
+mov S$分比 万分之
 
 
 
 #if
 #act
-
 goto @分解大师系统主面板
 
 [@分解大师系统主面板]
 #if
 #act
-
-
+; sendmsg 5 <$str(S$filter3)>===
+; sendmsg 5 <$STR(S0)>---<$STR(S$祭品ID)>
 #say
 ; <Img|x=0|y=0|width=9999|height=9999|children={分解大师系统主面板}|img=public/0.png|bg=1|link=@exit>
-<Img|id=分解大师系统主面板|x=210|y=30|width=670|img=public/sf1/2/bg7.png|children={内框背景,okBtn,展示bg,ok框1,输入框背景,,数量确定,ok框2,ok框3,,成功率,消耗货币,连接图片1,连接图片2,连接图片3,标题,描述1,描述2,描述3,描述4,描述5,描述6,描述7,描述8,控件9,描述9,获取途径,获取途径控件,closeBtn}|bg=1|move=1>
+<Img|id=分解大师系统主面板|x=210|y=30|width=670|img=public/sf1/2/bg7.png|children={内框背景,okBtn,ok框背景1,ok框背景2,展示bg,ok框1,输入框背景,物品列表,数量确定,ok框2,ok框3,,成功率,消耗货币,连接图片1,连接图片2,连接图片3,标题,描述1,描述2,描述3,描述4,描述5,描述6,描述7,描述8,控件9,描述9,获取途径,获取途径控件,closeBtn}|bg=1|move=1>
 <Button|id=closeBtn|x=650|y=65.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
 <RText|id=描述1|x=60|y=95|size=17|text=<放入/FCOLOR=251><祭品装备/FCOLOR=249><(祭品装备要和主品装备为同一种装备)/FCOLOR=250><和对应数量的/FCOLOR=251><血祭之心/FCOLOR=249>>
 <RText|id=描述2|x=60|y=120|size=17|text=<可以对/FCOLOR=251><进行血祭/FCOLOR=250><进行血祭/FCOLOR=251><斗笠,盾牌,特戒/FCOLOR=250><血祭成功随机获得/FCOLOR=251><下列一条属性/FCOLOR=253>>
 <RText|id=描述3|x=60|y=145|size=17|text=<【攻击加成5%-15%】【伤害加成5%-15%】【HP加成5%-15%】【MP加成5%/FCOLOR=249>>
 <RText|id=描述4|x=60|y=170|size=17|text=<-15%】【攻速加成1%-5%】【掉落加成5%-10%】【经验加成5%-10%】/FCOLOR=249>>
 <RText|id=描述5|x=60|y=195|size=17|text=<如果对获得的属性不满意,可以/FCOLOR=251><重复血祭,/FCOLOR=250><属性会/FCOLOR=251><覆盖上一次的属性/FCOLOR=250>>
-<ITEMBOX|id=ok框1|x=150.0|y=280.0|width=55|height=55|boxindex=1|stdmode=*|img=public/1900000651_3.png>
-<ITEMBOX|id=ok框2|x=300.0|y=280.0|width=55|height=55|boxindex=2|stdmode=*|img=public/1900000651_3.png>
+; <ITEMBOX|id=ok框1|x=150.0|y=280.0|width=55|height=55|boxindex=1|stdmode=*|img=public/1900000651_3.png>
+; <ITEMBOX|id=ok框2|x=300.0|y=280.0|width=55|height=55|boxindex=2|stdmode=*|img=public/1900000651_3.png>
+<DBItemShow|id=ok框1|x=150|y=280|makeindex=<$STR(S0)>|itemcount=0|showtips=1|bgtype=0|scale=1.2>
+<DBItemShow|id=ok框2|x=300.0|y=280.0|makeindex=<$STR(S$祭品ID)>|itemcount=0|showtips=1|bgtype=0|scale=1.2>
+<Img|id=ok框背景1|x=150|y=280|img=public/1900000651_3.png>
+<Img|id=ok框背景2|x=300|y=280|img=public/1900000651_3.png>
+; <ItemShow|id=ok框2|x=300|y=280|itemid=<$str(S$道具名字ID)>|itemcount=0|showtips=2|bgtype=1|scale=1.0>
+
 ; <ITEMBOX|id=ok框3|x=450.0|y=280.0|width=55|height=55|boxindex=3|stdmode=*|img=public/1900000651_3.png>
 <ItemShow|id=ok框3|x=450|y=278|itemid=<$STR(S$材料数据IDX)>|itemcount=<$STR(N$材料数量)>|showtips=1|bgtype=1|scale=1.0>
 <Img|id=输入框背景|width=40|height=30|children={输入框,countCoin}|x=540|y=300|move=1|img=public/sf1/2/00213.png|>
@@ -69,6 +80,72 @@ goto @分解大师系统主面板
 <Button|id=数量确定|submitInput=1|x=450|y=440.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=查看成功率|link=@更新成功率>
 <Text|id=标题|x=180|y=45|color=255|size=18|text=装备血祭>
 <ListView|id=合成列表|children={列表1,列表2,列表3,列表4,列表5,列表6,列表7,列表8,列表9,列表10,列表11,列表12,}|img=public/1900000680.png|direction=1|bounce=1|x=270|y=110.0|margin=5|height=440|width=130>
+<BAGITEMS|id=物品列表|condition=*|select=<$STR(S0)>|filter3=<$str(S$filter3)>|selecttype=1|count=18|row=6|x=-150|y=80|link=@选择物品2>
+<$str(S$成功率)>
+
+[@获取血祭列表]
+#if
+#act
+; GETRANDOMLINETEXT ..\QuestDiary\装备血祭系统\主品.txt 0 S$所有祭品
+GetListString ..\QuestDiary\装备血祭系统\主品.txt <$str(N$filter_Idx)> S$所有祭品
+; sendmsg 5 <$str(S$所有祭品)>===<$STR(N$filter_Idx)>
+
+#if
+not equal <$str(S$所有祭品)>
+#act
+inc N$filter_Idx 1
+inc S$filter3 <$str(S$所有祭品)>,
+goto @获取血祭列表
+
+[@获取唯一id]
+#IF
+#ACT
+LoopBagItems @获取当前背包所有物品 N$物品唯一ID S$物品的名称
+
+
+[@获取当前背包所有物品]
+#IF
+#ACT
+mov S$<$STR(S$物品的名称)>唯一ID <$STR(N$物品唯一ID)>
+; mov S10
+
+[@选择物品2]
+#IF
+#ACT
+SendMsg 0 --【0】--<$STR(S0)>
+GetItemNameByMakeIndex <$STR(S0)> S$道具名字
+mov S$祭品 <$str(S$道具名字)>
+AnsiReplaceText S$祭品 【血祭】
+
+mov S$祭品ID <$str(S$<$str(S$祭品)>唯一ID)>
+
+#IF
+not CheckContainsTextList ..\QuestDiary\装备血祭系统\主品.txt <$STR(S$道具名字)>
+#act
+ReturnBoxItem 1
+UpDateBoxItem 1
+MESSAGEBOX 错误\\当前物品禁止血祭！
+BREAK
+
+#IF
+CheckContainsText <$STR(S$道具名字)> 【血祭】
+not CheckContainsText <$STR(S$祭品)> 【血祭】
+#act
+mov N$成功率 100
+
+#IF
+#act
+ReadConfigFileItem ..\QuestDiary\装备血祭系统\血祭消耗.txt 1 <$STR(S$道具名字)> S$装备数据
+GetValidstr <$STR(S$装备数据)> & S$消耗货币 S$基础成功率
+GetValidstr <$STR(S$消耗货币)> * S$消耗货币类型 S$消耗货币数量
+mov N$血祭所需 <$str(S$消耗货币数量)>
+mov N$成功率 <$str(S$基础成功率)>
+sendmsg 5 血祭所需::<$str(N$血祭所需)>
+sendmsg 5 基础成功率::<$str(N$基础成功率)>
+GOTO @分解大师系统主面板
+
+; GOTO @分解大师系统主面板
+
 
 [@更新成功率]
 #if
@@ -77,6 +154,8 @@ mov N$材料数量 <$NPCINPUT(1)>
 mov N$成功率 <$str(N$材料数量)>
 mul N$成功率 <$str(S$提升数据)>
 ; mov N$材料数量 <$NPCINPUT(1)>
+; inc S$成功率 <RText|id=成功率|x=295|y=370|size=17|text=<成功率：/FCOLOR=161><<$str(S$分比)> <$str(N$成功率)>/FCOLOR=251>>
+; inc S$成功率 <RText|id=消耗货币|x=280|y=395|size=17|text=<血祭所需：/FCOLOR=161><<$str(N$血祭所需)> <$str(S$货币类型)>/FCOLOR=251>>
 
 #if
 large <$str(N$成功率)> <$str(S$百分比基数)>
@@ -104,7 +183,7 @@ sendmsg 5 血祭按钮!
 [@ItemIntoBox1]
 
 #IF
-not CheckContainsTextList ..\QuestDiary\装备血祭系统\主品.txt <$BOXITEM[1].NAME>
+not CheckContainsTextList ..\QuestDiary\装备血祭系统\主品.txt <$STR(S$道具名字)>
 #act
 ReturnBoxItem 1
 UpDateBoxItem 1
@@ -112,14 +191,14 @@ MESSAGEBOX 错误\\当前物品禁止血祭！
 BREAK
 
 #IF
-CheckContainsText <$BOXITEM[1].NAME> 【血祭】
+CheckContainsText <$STR(S$道具名字)> 【血祭】
 not CheckContainsText <$BOXITEM[2].NAME> 【血祭】
 #act
 mov N$成功率 100
 
 #IF
 #act
-ReadConfigFileItem ..\QuestDiary\装备血祭系统\血祭消耗.txt 1 <$BOXITEM[1].NAME> S$装备数据
+ReadConfigFileItem ..\QuestDiary\装备血祭系统\血祭消耗.txt 1 <$STR(S$道具名字)> S$装备数据
 GetValidstr <$STR(S$装备数据)> & S$消耗货币数量 S$基础成功率
 mov N$血祭所需 <$str(S$消耗货币数量)>
 mov N$成功率 <$str(S$基础成功率)>
@@ -138,8 +217,8 @@ BREAK
 
 #IF
 CheckBoxItemCount 1 1
-not CheckContainsText <$BOXITEM[1].NAME> 【血祭】
-not equal <$BOXITEM[2].NAME> <$BOXITEM[1].NAME>
+not CheckContainsText <$STR(S$道具名字)> 【血祭】
+not equal <$BOXITEM[2].NAME> <$STR(S$道具名字)>
 #act
 ReturnBoxItem 2
 UpDateBoxItem 2
@@ -155,7 +234,7 @@ MESSAGEBOX 错误\\当前物品禁止血祭！
 BREAK
 
 #IF
-CheckContainsText <$BOXITEM[1].NAME> 【血祭】
+CheckContainsText <$STR(S$道具名字)> 【血祭】
 not CheckContainsText <$BOXITEM[2].NAME> 【血祭】
 #act
 mov N$成功率 100

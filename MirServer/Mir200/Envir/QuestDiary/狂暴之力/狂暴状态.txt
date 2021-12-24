@@ -37,11 +37,11 @@ mov S$狂暴状态 <未开启/FCOLOR=249>
 mov S$主界面
 mov S$按钮列表
 mov S$当前界面 狂暴之力
-mov S$货币类型 元宝
-mov S$货币数量 200000
-mov S$货币显示数量 20W
-mov S$击杀者奖励 100000
-mov S$击杀奖励 <攻击提高70-70,获得1.1倍攻击,打怪爆率提升15%,回收加成20%,/FCOLOR=161>
+mov S$货币类型 灵符
+mov S$货币数量 2000
+mov S$货币显示数量 2000
+mov S$击杀者奖励 1000
+mov S$击杀奖励 <攻击提高88-88,获得1.1倍攻击,打怪爆率提升15%,回收加成20%,/FCOLOR=161>
 inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=狂暴之力|link=@切换界面1>
 inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=疾风之力|link=@切换界面2>
 
@@ -67,7 +67,7 @@ mov S$货币类型 RMB点
 mov S$货币数量 2000
 mov S$货币显示数量 2000
 mov S$击杀者奖励 1000
-mov S$击杀奖励 <攻击提高80-80,获得1.2倍攻击,打怪爆率提升15%,回收加成20%,/FCOLOR=161>
+mov S$击杀奖励 <攻击提高88-188,获得1.2倍攻击,打怪爆率提升15%,回收加成20%,/FCOLOR=161>
 inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=狂暴之力|link=@切换界面1>
 inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=疾风之力|link=@切换界面2>
 goto @创建主界面
@@ -116,7 +116,7 @@ close
 [@开启狂暴之力]
 
 #if
-CheckBindMoney <$str(S$货币类型)> < <$str(S$货币数量)>
+CheckMoney <$str(S$货币类型)> < <$str(S$货币数量)>
 #act
 MESSAGEBOX 你的<$str(S$货币类型)>不足！！
 break
@@ -143,14 +143,13 @@ equal <$str(S$当前界面)> 狂暴之力
 #act
 
 SET [59] 1
-SETICON 0 1 12000 0 -50 0 0
-; SetIcon 1 1 109 1 -50 6
-ChangeHumAbility 5 + 88
-ChangeHumAbility 6 + 88
-ChangeHumAbility 7 + 88
-ChangeHumAbility 8 + 88
-ChangeHumAbility 9 + 88
-ChangeHumAbility 10 + 88
+SETICON 0 1 12006 -152 -100 0 0
+#CALL [\人物属性加成\人物属性提升.txt] @基础属性
+; ChangeHumAbility 5 + 88
+; ChangeHumAbility 6 + 88
+; ChangeHumAbility 11 + 88
+; ChangeHumAbility 12 + 88
+
 goto @切换界面1
 
 
@@ -159,43 +158,14 @@ equal <$str(S$当前界面)> 疾风之力
 #act
 
 SET [58] 1
-SETICON 1 2 12000 0 -80 0 0
-; SetIcon 1 1 109 1 -50 6
-ChangeHumAbility 5 + 88
-ChangeHumAbility 6 + 88
-ChangeHumAbility 7 + 88
-ChangeHumAbility 8 + 88
-ChangeHumAbility 9 + 88
-ChangeHumAbility 10 + 88
+SETICON 1 1 12007 -45 -30 0 0
+#CALL [\人物属性加成\人物属性提升.txt] @基础属性
 goto @切换界面2
 
 #if
 #act
 money <$str(S$货币类型)> - <$str(S$货币数量)>
-GuildNoticeMsg 5 255 大家注意啦！玩家[<$USERNAME>]开启了【<$str($str(S$当前界面)>)>】...
-GuildNoticeMsg 5 255 大家注意啦！玩家[<$USERNAME>]开启了【<$str($str(S$当前界面)>)>】...
+GuildNoticeMsg 5 255 大家注意啦！玩家[<$USERNAME>]开启了【<$str(S$当前界面)>】...
+GuildNoticeMsg 5 255 大家注意啦！玩家[<$USERNAME>]开启了【<$str(S$当前界面)>】...
 #CALL [\人物属性加成\人物属性提升.txt] @基础属性
-
-
-[@灵符开启状态]
-#IF
-CHECKGAMEGIRD > 19
-check [059] 0
-#act
-SET [059] 1
-GAMEGIRD - 20
-ChangeHumAbility 5 + 88
-ChangeHumAbility 6 + 88
-ChangeHumAbility 7 + 88
-ChangeHumAbility 8 + 88
-ChangeHumAbility 9 + 88
-ChangeHumAbility 10 + 88
-SETICON 0 1 12000 0 -50 0 0
-; SetIcon 1 1 109 1 -50 6
-GuildNoticeMsg 5 255 大家注意啦！玩家[<$USERNAME>]开启了【狂暴之力】...
-GuildNoticeMsg 5 255 大家注意啦！玩家[<$USERNAME>]开启了【狂暴之力】...
-GOTO @main
-#ELSEACT
-MESSAGEBOX 你的灵符不足或你已经开启了【狂暴之力】
-BREAK
 }

@@ -1,11 +1,81 @@
 [@加官进爵面板]
 {
 
+
+
 #if
 #act
 mov S$获取途径
 mov S$获取图鉴窗口 0
 goto @获取官职数据
+
+#if
+CheckContainsText <$STR(T8)> 加官进爵
+not CheckContainsText <$STR(T8)> 加官进爵1
+#act
+mov S$描述 你已经成长的很厉害了,我想你马上就能成为一名合格的战士了!
+mov S$任务状态 20W经验值,1000元宝和强效金疮药*50/FCOLOR=250
+mov S$奖励idx1 6
+mov S$奖励nme1 200000
+mov S$奖励idx2 101595
+mov S$奖励nme2 50
+mov S$奖励idx3 101537
+mov S$奖励nme3 1
+mov S$领取奖励 领取奖励
+goto @加官进爵面板1
+break
+
+[@加官进爵面板1]
+
+#If
+#act
+DELAYGOTO 5000 @<$str(S$领取奖励)>
+
+#say
+
+; <Text|a=0|x=20|y=20|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$str(S$描述)>>
+; <RText|a=0|x=20|y=95|size=18|text=<奖励:/FCOLOR=250><<$STR(S$任务状态)>>>
+; <Button|id=click_btn1|x=25|y=125|nimg=public/0.png|pimg=public/0.png|text=完成任务|color=251|link=@加官进爵任务>
+
+<Img|img=public/sf1/2/renwuK.png|children=vipD,closeBtn,title|x=400|y=200|bg=1|reset=1|move=0>
+<Button|id=closeBtn|x=420|y=2|nimg=public/sf1/2/btn_close.png|link=@exit>
+<Img|id=vipD|img=public/sf1/2/0.png|children=1,2,938,show1,show2,show3|x=0|y=20>
+<Text|id=1|x=20|y=20|color=153|tips=|tipsx=10|tipsy=80|size=18|text=<$str(S$描述)>>
+<Text|id=title|x=175|y=2|color=154|size=18|text=限时奖励>
+; <RText|id=2|x=20|y=95|size=18|text=<奖励:/FCOLOR=250><<$STR(S$任务状态)>>>
+<Img|id=show1|children={下方礼包1}|x=25|y=150|width=40|height=40|img=public/sf1/19/itemBg1.png>
+<ItemShow|id=下方礼包1|x=-12|y=-10|itemid=<$str(S$奖励idx1)>|itemcount=<$str(S$奖励nme1)>|showtips=1|color=250|scale=0.8>
+<Img|id=show2|children={下方礼包2}|x=85|y=150|width=40|height=40|img=public/sf1/19/itemBg1.png>
+<ItemShow|id=下方礼包2|x=-12|y=-10|itemid=<$str(S$奖励idx2)>|itemcount=<$str(S$奖励nme1)>|showtips=1|color=250|scale=0.8>
+<Img|id=show3|children={下方礼包3}|x=145|y=150|width=40|height=40|img=public/sf1/19/itemBg1.png>
+<ItemShow|id=下方礼包3|x=-12|y=-10|itemid=<$str(S$奖励idx3)>|itemcount=<$str(S$奖励nme1)>|showtips=1|color=250|scale=0.8>
+<Button|id=938|x=290|y=150|nimg=public/sf1/2/btn_11.png|pimg=public/sf1/2/btn_11_1.png|text=完成任务|color=255|link=@加官进爵任务>
+
+
+#IF
+#ACT
+Navigation 0 938 点击完成任务
+
+[@加官进爵任务]
+
+#if
+CheckContainsText <$STR(T8)> 加官进爵
+not CheckContainsText <$STR(T8)> 加官进爵1
+#act
+
+inc T8 _加官进爵1
+
+NEWCOMPLETETASK 25
+NEWDELETETASK 25
+
+CHANGEEXP + 200000
+money 元宝 + 1000
+GiveStateItem 强效金疮药 50 0 1 0 0 1 1 1 1
+
+sendmsg 7 完成任务了!!
+#CALL [\任务系统\任务文本.txt] @接取任务
+CLEARDELAYGOTO
+close
 
 [@获取官职数据]
 #if
@@ -64,13 +134,13 @@ goto @获取官职数据
 #act
 #say
 <Img|x=0|y=0|width=9999|height=9999|children={加官进爵主面板}|img=public/0.png|bg=1|link=@exit>
-<Img|id=加官进爵主面板|x=210|y=30|img=public/sf1/2/bg2.png|children={内框背景,标题,列表1,官位背景,升级条件1,升级条件2,当前官位,获取途径,获取途径控件,closeBtn}|reset=1|link=@>
+<Img|id=加官进爵主面板|x=210|y=30|img=public/sf1/2/Bg.png|children={内框背景,标题,列表1,官位背景,升级条件1,升级条件2,当前官位,获取途径,获取途径控件,closeBtn}|reset=1|link=@>
 
-<Button|id=closeBtn|x=765|y=65.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=官 职|link=@官职面板>
-<Text|id=标题|x=180|y=45|color=255|size=18|text=加官进爵>
+<Button|id=closeBtn|x=765|y=65.0|nimg=public/sf1/2/btn_close.png|link=@exit>
+<Button|id=列表1|x=10|y=90.0|width=133|height=40|nimg=public/sf1/2/btn_11.png|color=161|size=17|text=官 职|link=@官职面板>
+<Text|id=标题|x=365|y=50|color=255|size=18|text=加官进爵>
 <Text|id=当前官位|x=370.0|y=105.0|color=251|size=18|text=您当前官爵为：<$str(S$当前官位)>\>
-<Img|id=内框背景|x=187|y=80|width=565|height=320|img=public/haha/ty_bg.png>
+<Img|id=内框背景|x=150|y=90|width=640|height=320|img=public/haha/ty_bg.png>
 
 <Img|id=官位背景|x=200|y=200|children={当前称号,下级称号,箭头,当前属性加成,下级属性加成}|width=540|height=135|img=public/haha/split/common_panel2035.png>
 <Img|id=箭头|x=240|y=40|img=public/haha/f_0000a2070.png>
@@ -86,10 +156,28 @@ goto @获取官职数据
 <RText|id=需要道具2|x=170.0|y=0|color=251|size=16|text=<<$str(S$所需货币数量)>元宝/FCOLOR=<$str(S$元宝颜色)>>>
 <Button|id=okBtn|x=60|y=25.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=官职升级|link=@官职升级>
 
-<Text|id=获取途径|x=670.0|y=480.0|color=250|size=18|text=获取途径|link=@获取途径按钮>
+<Text|id=获取途径|x=680.0|y=510.0|color=250|size=18|text=获取途径|link=@获取途径按钮>
+
 <$str(S$获取途径)>
 
+#if
+CheckContainsText <$STR(T8)> 限时奖励3
+not CheckContainsText <$STR(T8)> 加官进爵
+not CHECKITEM 九品证明 3
+; CheckBindMoney 元宝 < 1000
+#act
+Navigation 0 获取途径 点击获取途径
+break
+
+#if
+CheckContainsText <$STR(T8)> 限时奖励3
+not CheckContainsText <$STR(T8)> 加官进爵
+#act
+Navigation 0 okBtn 点击升级官职
+
 [@官职升级]
+
+
 #if
 equal <$str(S$所需货币名)> 元宝
 #act
@@ -110,15 +198,35 @@ money <$str(S$所需货币名)> - <$str(S$所需货币数量)>
 TAKE <$str(S$需要材料名)> <$str(S$需要材料数量)>
 MOV T13 <$str(S$下级称号)>
 inc T14 <$str(S$下级称号)>*
-SETICON 2 0 <$str(S$当前官职称号)> 0 -100 0 0
+;SETICON 2 0 <$str(S$当前官职称号)> 0 -100 0 0
 MESSAGEBOX 恭喜你成为【<$str(S$下级称号)>】特此奖励20点属性！！
 GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【<$str(S$下级称号)>】...
+#CALL [\游戏登陆\封号系统.txt] @封号分类
 goto @官职属性提升
+
+#if
+CheckContainsText <$STR(T8)> 限时奖励3
+not CheckContainsText <$STR(T8)> 加官进爵
+#act
+
+inc T8 _加官进爵
+
+NEWCOMPLETETASK 24
+NEWDELETETASK 24
+
+CHANGEEXP + 200000
+money 元宝 + 1000
+GiveStateItem 大还丹 50 0 1 0 0 1 1 1 1
+
+sendmsg 7 完成任务了!!
+#CALL [\任务系统\任务文本.txt] @接取任务
+CLEARDELAYGOTO
+close
 
 [@官职属性提升]
 #if
 #act
-SETICON 0 0 <$str(S$下级官职称号)> 0 -22 0 0
+; ;SETICON 0 0 <$str(S$下级官职称号)> 0 -22 0 0
 #CALL [\人物属性加成\人物属性提升.txt] @基础属性
 goto @获取官职数据
 
@@ -135,7 +243,7 @@ break
 
 #if
 #act
-inc S$获取途径 <Img|id=获取途径控件|children={途径标题1,途径标题2,途径标题3,途径标题4,途径标题5,途径按钮1,途径按钮2,途径按钮3,途径按钮4,途径关闭}|width=245|height=460|x=515|y=68|img=public/haha/split/common_panel2045.png|link=@>
+inc S$获取途径 <Img|id=获取途径控件|children={途径标题1,途径标题2,途径标题3,途径标题4,途径标题5,途径按钮1,途径按钮2,途径按钮3,途径按钮4,途径关闭}|width=245|height=460|x=535|y=80|img=public/haha/split/common_panel2045.png|link=@>
 inc S$获取途径 <Text|id=途径标题1|x=90.0|y=15.0|color=251|size=16|text=获取途径>
 inc S$获取途径 <Text|id=途径标题2|x=30.0|y=40.0|color=161|size=16|text=本服官职证明全部怪物掉落>
 inc S$获取途径 <Text|id=途径标题3|x=45.0|y=65.0|color=161|size=16|text=九品官职证明高爆产地>
@@ -150,40 +258,46 @@ inc S$获取途径 <Text|id=途径标题5|x=60.0|y=385.0|color=250|size=16|text=点击按钮
 mov S$获取图鉴窗口 1
 goto @获取官职数据
 
+#if
+CheckContainsText <$STR(T8)> 限时奖励3
+not CheckContainsText <$STR(T8)> 加官进爵
+#act
+Navigation 0 途径按钮2 点击冰之雪崖
+
 [@途径传送按钮1]
 #if
-not CHECKLEVELEX < 105
+not CHECKLEVELEX > 55
 #act
-MESSAGEBOX 您的等级太高了,大姥级别了还欺负新人去？
+MESSAGEBOX 等级不足55级！去升升级再来吧！
 break
 
 #if
 #act
-MapMove byxy
+MapMove 冰之雪崖
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖冰之雪崖〗,寻找高级装备！
 
 [@途径传送按钮2]
 #if
-not CHECKLEVELEX < 110
+not CHECKLEVELEX < 65
 #act
-MESSAGEBOX 您的等级太高了,大姥级别了还欺负新人去？
+MESSAGEBOX 等级不足65级！去升升级再来吧！
 break
 
 #if
 #act
-MapMove qshl1
+MapMove 皇陵广场
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖秦始皇陵〗,寻找高级装备！
 
 [@途径传送按钮3]
 #if
-not CHECKLEVELEX < 115
+not CHECKLEVELEX > 75
 #act
-MESSAGEBOX 您的等级太高了,大姥级别了还欺负新人去？
+MESSAGEBOX 等级不足75级！去升升级再来吧！
 break
 
 #if
 #act
-MapMove heian1
+MapMove 黑暗魔窑一层
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖黑暗魔窟〗,寻找高级装备！
 
 [@证明合成]
@@ -400,8 +514,8 @@ MOV T13 雄霸天下
 GAMEGOLD - 100000
 BONUSPOINT + 500
 TAKE 雄霸令牌 3
-SETICON 0 0 000025 0 -22 0 0
-; SetIcon 0 1 25 0 -22 1 0 200 0
+; ;SETICON 0 0 000025 0 -22 0 0
+; ;SETICON 0 1 25 0 -22 1 0 200 0
 MESSAGEBOX 恭喜你成为【雄霸天下】特此奖励500点属性！！
 GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【雄霸天下】...
 #ELSEACT
@@ -419,8 +533,8 @@ MOV T13 万夫莫敌
 GAMEGOLD - 60000
 BONUSPOINT + 400
 TAKE 郡王令牌 3
-SETICON 0 0 000036 0 -22 0 0
-; SetIcon 0 1 36 0 -22 1 0 200 0
+; ;SETICON 0 0 000036 0 -22 0 0
+; ;SETICON 0 1 36 0 -22 1 0 200 0
 MESSAGEBOX 恭喜你成为【万夫莫敌】特此奖励400点属性！！
 GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【万夫莫敌】...
 #ELSEACT
@@ -438,8 +552,8 @@ MOV T13 一品统帅
 GAMEGOLD - 30000
 BONUSPOINT + 300
 TAKE 一品证明 3
-SETICON 0 0 000049 0 -22 0 0
-; SetIcon 0 1 49 0 -22 1 0 200 0
+; ;SETICON 0 0 000049 0 -22 0 0
+; ;SETICON 0 1 49 0 -22 1 0 200 0
 MESSAGEBOX 恭喜你成为【一品统帅】特此奖励300点属性！！
 GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【一品统帅】...
 #ELSEACT
@@ -457,8 +571,8 @@ MOV T13 二品将军
 GAMEGOLD - 20000
 BONUSPOINT + 250
 TAKE 二品证明 3
-SETICON 0 0 000039 0 -22 0 0
-; SetIcon 0 1 39 0 -22 1 0 200 0
+; ;SETICON 0 0 000039 0 -22 0 0
+; ;SETICON 0 1 39 0 -22 1 0 200 0
 MESSAGEBOX 恭喜你成为【二品将军】特此奖励250点属性！！
 GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【二品将军】...
 #ELSEACT
@@ -476,8 +590,8 @@ MOV T13 三品大将
 GAMEGOLD - 15000
 BONUSPOINT + 200
 TAKE 三品证明 3
-SETICON 0 0 000038 0 -22 0 0
-; SetIcon 0 1 38 0 -22 1 0 200 0
+;SETICON 0 0 000038 0 -22 0 0
+; ;SETICON 0 1 38 0 -22 1 0 200 0
 MESSAGEBOX 恭喜你成为【三品大将】特此奖励200点属性！！
 GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【三品大将】...
 #ELSEACT
@@ -495,8 +609,8 @@ MOV T13 四品参将
 GAMEGOLD - 10000
 BONUSPOINT + 160
 TAKE 四品证明 3
-SETICON 0 0 000042 0 -22 0 0
-; SetIcon 0 1 42 0 -22 1 0 200 0
+;SETICON 0 0 000042 0 -22 0 0
+; ;SETICON 0 1 42 0 -22 1 0 200 0
 MESSAGEBOX 恭喜你成为【四品参将】特此奖励160点属性！！
 GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【四品参将】...
 #ELSEACT
@@ -514,8 +628,8 @@ MOV T13 五品左领
 GAMEGOLD - 8000
 BONUSPOINT + 120
 TAKE 五品证明 3
-SETICON 0 0 000045 0 -22 0 0
-; SetIcon 0 1 45 0 -22 1 0 200 0
+;SETICON 0 0 000045 0 -22 0 0
+; ;SETICON 0 1 45 0 -22 1 0 200 0
 MESSAGEBOX 恭喜你成为【五品左领】特此奖励120点属性！！
 GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【五品左领】...
 #ELSEACT
@@ -533,8 +647,8 @@ MOV T13 六品护卫
 GAMEGOLD - 6000
 BONUSPOINT + 80
 TAKE 六品证明 3
-SETICON 0 0 000044 0 -22 0 0
-; SetIcon 0 1 44 0 -22 1 0 200 0
+;SETICON 0 0 000044 0 -22 0 0
+; ;SETICON 0 1 44 0 -22 1 0 200 0
 MESSAGEBOX 恭喜你成为【五品左领】特此奖励80点属性！！
 GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【五品左领】...
 #ELSEACT
@@ -552,8 +666,8 @@ MOV T13 七品前锋
 GAMEGOLD - 4000
 BONUSPOINT + 50
 TAKE 七品证明 3
-SETICON 0 0 000046 0 -22 0 0
-; SetIcon 0 1 46 0 -22 1 0 200 0
+;SETICON 0 0 000046 0 -22 0 0
+; ;SETICON 0 1 46 0 -22 1 0 200 0
 MESSAGEBOX 恭喜你成为【七品前锋】特此奖励50点属性！！
 GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【七品前锋】...
 #ELSEACT
@@ -571,8 +685,8 @@ GAMEGOLD - 2000
 BONUSPOINT + 30
 TAKE 八品证明 3
 MOV T13 八品骑士
-SETICON 0 0 000047 0 -22 0 0
-; SetIcon 0 1 47 0 -22 1 0 200 0
+;SETICON 0 0 000047 0 -22 0 0
+; ;SETICON 0 1 47 0 -22 1 0 200 0
 MESSAGEBOX 恭喜你成为【八品骑士】特此奖励30点属性！！
 GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【八品骑士】...
 #ELSEACT
@@ -590,8 +704,8 @@ GAMEGOLD - 1000
 BONUSPOINT + 20
 TAKE 九品证明 3
 MOV T13 九品仕郎
-SETICON 0 0 000043 0 -22 0 0
-; SetIcon 0 1 43 0 -22 1 0 200 0
+;SETICON 0 0 000043 0 -22 0 0
+; ;SETICON 0 1 43 0 -22 1 0 200 0
 MESSAGEBOX 恭喜你成为【九品仕郎】特此奖励20点属性！！
 GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成为本服【九品仕郎】...
 #ELSEACT

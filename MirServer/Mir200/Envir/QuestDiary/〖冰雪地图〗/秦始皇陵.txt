@@ -8,6 +8,11 @@ mov S$显示掉落窗口打开 0
 
 goto @秦始皇陵主界面
 
+#IF
+CheckContainsText <$STR(T8)> 逆天改命1
+not CheckContainsText <$STR(T8)> 秦始皇陵
+#ACT
+DELAYGOTO 5000 @秦始皇陵按钮
 
 [@秦始皇陵主界面]
 #if
@@ -23,25 +28,29 @@ goto @秦始皇陵主界面
 <Text|a=0|ax=0|x=120.0|y=50.0|tipsx=10|tipsy=80|color=70|size=18|text=本地图一共四层,想找刺激的尽管去吧！！>
 <Text|a=0|x=20.0|y=75.0|tipsx=10|tipsy=80|color=250|size=18|text=[刷新时间]：>
 <Text|a=0|ax=0|x=120.0|y=75.0|tipsx=10|tipsy=80|color=70|size=18|text=普通怪10分钟，Boss1小时>
-<Text|a=0|ax=0|x=20.0|y=100.0|tipsx=10|tipsy=80|color=244|size=18|text=110级以下玩家免费进入！！>
-<Button|x=515|y=25.0|nimg=public/icon/common1087.png|link=@显示掉落>
-<Text|a=0|x=220.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=秦始皇陵|link=@秦始皇陵按钮>
+<Text|a=0|ax=0|x=20.0|y=100.0|tipsx=10|tipsy=80|color=244|size=18|text=进阶之路，怪物比较凶猛，最少需要65级玩家才能免费进入！！>
+<Button|x=515|y=25.0|nimg=public/icon/common1087.png|pimg=public/icon/12111.png|link=@显示掉落>
+<Text|id=click_btn1|x=220.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=秦始皇陵|link=@秦始皇陵按钮>
 <$str(S$掉落显示窗口)>
 ; common1085
-
+#IF
+CheckContainsText <$STR(T8)> 逆天改命1
+not CheckContainsText <$STR(T8)> 秦始皇陵
+#ACT
+Navigation 0 click_btn1 点击完成任务
 
 [@秦始皇陵按钮]
 
 #if
-CHECKLEVELEX < 110
+CHECKLEVELEX > 64
 #ACT
-give 回城卷 1
-MapMove qshl1 14 12
+MapMove 皇陵广场 14 12
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖秦始皇陵〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖秦始皇陵〗,寻找高级装备！
+CLEARDELAYGOTO
 break
 #ELSEACT
-MESSAGEBOX 您的等级太高了,大姥级别了还欺负新人去？
+MESSAGEBOX 级不足65级！去升升级再来吧！
 BREAK
 
 [@显示掉落]

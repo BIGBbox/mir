@@ -1,0 +1,528 @@
+[@逆天改命功能]
+{
+
+#if
+#act
+mov S$主界面
+mov S$获取途径
+mov S$获取途径
+mov S$获取图鉴窗口 0
+mov N$逆天改命等级 0
+; goto @获取升级数据
+goto @切换面板1
+
+#if
+CheckContainsText <$STR(T8)> 逆天改命
+not CheckContainsText <$STR(T8)> 逆天改命1
+#act
+goto @切换面板2
+#elseact
+goto @切换面板1
+
+#if
+#act
+
+goto @逆天改命系统主面板
+
+[@逆天改命面板]
+#if
+#act
+goto @获取升级数据
+
+[@逆天改命系统主面板]
+#if
+#act
+#say
+<Img|x=0|y=0|width=9999|height=9999|children={逆天改命系统主面板}|img=public/0.png|bg=1|link=@exit>
+<Img|id=逆天改命系统主面板|x=210|y=30|img=public/sf1/2/bg2.png|children={内框背景,标题,列表1,列表2,列表3,列表4,列表5,列表6,官位背景,升级条件1,升级条件2,当前血龙等级,获取途径,获取途径控件,closeBtn}|reset=1|link=@>
+
+<Button|id=closeBtn|x=765|y=65.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|id=标题|x=180|y=45|color=255|size=18|text=逆天改命系统>
+
+<$str(S$获取途径)>
+<$str(S$按钮列表)>
+<$str(S$主界面)>
+
+[@切换面板1]
+#if
+#act
+mov S$主界面
+mov S$获取途径
+mov S$按钮列表
+mov S$获取图鉴窗口 0
+inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=血龙之体|link=@切换面板1>
+inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=先天之体|link=@切换面板2>
+;inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=强身修炼|link=@切换面板3>
+;inc S$按钮列表 <Button|id=列表4|x=60|y=200.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神佑修炼|link=@切换面板4>
+
+mov S$窗口名 血龙之体
+goto @获取升级数据
+
+[@切换面板2]
+#if
+#act
+mov S$主界面
+mov S$按钮列表
+mov S$获取途径
+mov S$获取图鉴窗口 0
+inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=血龙之体|link=@切换面板1>
+inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=先天之体|link=@切换面板2>
+;inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=强身修炼|link=@切换面板3>
+;inc S$按钮列表 <Button|id=列表4|x=60|y=200.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神佑修炼|link=@切换面板4>
+
+mov S$窗口名 先天之体
+goto @获取升级数据
+
+[@切换面板3]
+#if
+#act
+mov S$主界面
+mov S$获取途径
+mov S$按钮列表
+mov S$获取图鉴窗口 0
+inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=血龙之体|link=@切换面板1>
+inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=先天之体|link=@切换面板2>
+;inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=强身修炼|link=@切换面板3>
+;inc S$按钮列表 <Button|id=列表4|x=60|y=200.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神佑修炼|link=@切换面板4>
+
+mov S$窗口名 强身修炼
+goto @获取升级数据
+
+[@切换面板4]
+#if
+#act
+mov S$主界面
+mov S$获取途径
+mov S$按钮列表
+mov S$获取图鉴窗口 0
+inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=血龙之体|link=@切换面板1>
+inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=先天之体|link=@切换面板2>
+;inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=强身修炼|link=@切换面板3>
+;inc S$按钮列表 <Button|id=列表4|x=60|y=200.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=神佑修炼|link=@切换面板4>
+
+
+mov S$窗口名 神佑修炼
+goto @获取升级数据
+
+
+[@获取升级数据]
+#if
+#act
+; goto @获取当前血龙等级
+; mov S$当前血龙等级 <$STR(U1)>
+mov S$元宝颜色 161
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\逆天改命系统\数据\<$str(S$窗口名)>.txt 最大<$str(S$窗口名)>等级 最大<$str(S$窗口名)>等级 S$最大<$str(S$窗口名)>等级
+ReadConfigFileItem ..\QuestDiary\逆天改命系统\数据\<$str(S$窗口名)>.txt 最大<$str(S$窗口名)>等级 属性类型 S$属性类型
+ReadConfigFileItem ..\QuestDiary\逆天改命系统\数据\<$str(S$窗口名)>.txt 最大<$str(S$窗口名)>等级 等级变量 S$等级变量
+ReadConfigFileItem ..\QuestDiary\逆天改命系统\数据\<$str(S$窗口名)>.txt 最大<$str(S$窗口名)>等级 大标题 S$大标题
+ReadConfigFileItem ..\QuestDiary\逆天改命系统\数据\<$str(S$窗口名)>.txt 最大<$str(S$窗口名)>等级 快捷购买 S$快捷购买
+ReadConfigFileItem ..\QuestDiary\逆天改命系统\数据\<$str(S$窗口名)>.txt <$str(<$str(S$等级变量)>)> 下一级 S$下一级
+ReadConfigFileItem ..\QuestDiary\逆天改命系统\数据\<$str(S$窗口名)>.txt <$str(<$str(S$等级变量)>)> 给予称号 S$给予称号
+ReadConfigFileItem ..\QuestDiary\逆天改命系统\数据\<$str(S$窗口名)>.txt <$str(<$str(S$等级变量)>)> 需要材料 S$需要材料
+ReadConfigFileItem ..\QuestDiary\逆天改命系统\数据\<$str(S$窗口名)>.txt <$str(<$str(S$等级变量)>)> 所需货币 S$所需货币
+ReadConfigFileItem ..\QuestDiary\逆天改命系统\数据\<$str(S$窗口名)>.txt <$str(<$str(S$等级变量)>)> 当前属性加成 S$当前属性加成
+ReadConfigFileItem ..\QuestDiary\逆天改命系统\数据\<$str(S$窗口名)>.txt <$str(<$str(S$等级变量)>)> 下级属性加成 S$下级属性加成
+
+GetValidstr <$STR(S$属性类型)> , S$属性类型1 S$属性类型11
+GetValidstr <$STR(S$属性类型11)> , S$属性类型2 S$属性类型22
+GetValidstr <$STR(S$属性类型22)> , S$属性类型3 S$属性类型33
+
+GetValidstr <$STR(S$当前属性加成)> , S$当前属性加成1 S$当前属性加成11
+GetValidstr <$STR(S$当前属性加成11)> , S$当前属性加成2 S$当前属性加成22
+GetValidstr <$STR(S$当前属性加成22)> , S$当前属性加成3 S$当前属性加成33
+
+GetValidstr <$STR(S$下级属性加成)> , S$下级属性加成1 S$下级属性加成11
+GetValidstr <$STR(S$下级属性加成11)> , S$下级属性加成2 S$下级属性加成22
+GetValidstr <$STR(S$下级属性加成22)> , S$下级属性加成3 S$下级属性加成33
+
+
+; sendmsg 5 <$str(S$当前属性加成1)>--<$str(S$当前属性加成2)>--<$str(S$当前属性加成3)>--<$str(S$当前属性加成)>
+; sendmsg 5 <$str(S$下级属性加成1)>==<$str(S$下级属性加成2)>==<$str(S$下级属性加成3)>==<$str(S$下级属性加成)>
+; sendmsg 5 <$str(S$当下级属性加成11)>==<$str(S$当下级属性加成22)>==<$str(S$当下级属性加成33)>==<$str(S$下级属性加成)>
+
+GetValidstr <$STR(S$需要材料)> * S$需要材料名1 S$需要材料数量1
+GetDBItemFieldValue <$str(S$需要材料名1)> idx S$需要材料名ID1
+
+GetDBItemFieldValue <$str(S$给予称号)> idx S$给予称号ID
+
+GetValidstr <$STR(S$所需货币)> * S$所需货币名 S$所需货币数量
+; sendmsg 5 <$str(S$需要材料)>==<$str(S$所需货币)>==
+
+#IF
+equal <$str(S$所需货币名)> 元宝
+CheckBindMoney 元宝 > <$str(S$所需货币数量)>
+#ACT
+mov S$元宝颜色 251
+
+#IF
+not equal <$str(S$所需货币名)> 元宝
+not checkmoney <$str(S$所需货币名)> > <$str(S$所需货币数量)>
+#ACT
+mov S$元宝颜色 251
+
+#IF
+#ACT
+; sendmsg 5 <$STR(<$str(S$等级变量)>)>***<$str(S$等级变量)>
+inc S$主界面 <Img|id=内框背景|x=187|y=80|width=565|height=320|img=public/haha/ty_bg.png>
+inc S$主界面 <Img|id=官位背景|x=200|y=240|children={当前称号,下级称号,箭头,当前属性加成1,当前属性加成2,当前属性加成3,大标题,下级属性加成1,下级属性加成2,下级属性加成3,显示道具}|width=540|height=135|img=public/haha/split/common_panel2035.png>
+inc S$主界面 <Img|id=箭头|x=190|y=5|width=146|height=120|img=public/haha/f_00039e.png>
+inc S$主界面 <ItemShow|id=显示道具|x=220|y=-130|children={道具名}|itemid=<$STR(S$给予称号ID)>|itemcount=0|showtips=1|bgtype=1|scale=0.8>
+inc S$主界面 <RText|id=大标题|x=100|y=-150|size=16|text=<<$str(S$大标题)>/FCOLOR=249>>
+inc S$主界面 <RText|id=道具名|x=-0|y=60|size=16|text=<<$str(S$给予称号)>/FCOLOR=251>>
+inc S$主界面 <RText|id=当前称号|x=80|y=-15|size=16|text=<当前等级：<$STR(<$str(S$等级变量)>)>/FCOLOR=251>>
+inc S$主界面 <RText|id=下级称号|x=360|y=-15|size=16|text=<下级等级：<$str(S$下一级)>/FCOLOR=251>>
+
+; inc S$主界面 ;<RText|id=升级条件1|x=405.0|y=405.0|color=251|size=16|text=<人物/FCOLOR=161>< <$str(S$需要人物等级)>级/FCOLOR=251><,/FCOLOR=161><逆天改命后/FCOLOR=161><降<$str(S$下降等级)>级/FCOLOR=249>>
+inc S$主界面 <RText|id=升级条件2|children={需要道具1,连接图片1,连接图片2,需要道具2,需要道具3,,okBtn}|x=310.0|y=430.0|color=251|size=16|text=<消耗材料：/FCOLOR=251>>
+inc S$主界面 <ItemShow|id=需要道具1|x=80|y=-20|itemid=<$STR(S$需要材料名ID1)>|itemcount=<$STR(S$需要材料数量1)>|showtips=1|bgtype=1|scale=0.8>
+; inc S$主界面 ; <ItemShow|id=需要道具2|x=160|y=-20|itemid=<$STR(S$需要材料名ID2)>|itemcount=<$STR(S$需要材料数量2)>|showtips=1|bgtype=1|scale=0.8>
+inc S$主界面 <Img|id=连接图片1|x=145|y=0|width=19|height=25|img=public/uipic/01709.png>
+; inc S$主界面 ; <Img|id=连接图片2|x=220|y=0|width=19|height=25|img=public/uipic/01709.png>
+inc S$主界面 <RText|id=需要道具3|x=170.0|y=0|color=251|size=16|text=<<$str(S$所需货币数量)>元宝/FCOLOR=<$str(S$元宝颜色)>>>
+inc S$主界面 <Button|id=okBtn|x=100|y=35.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=我要修炼|link=@雪龙之体升级>
+inc S$主界面 <Text|id=获取途径|x=670.0|y=480.0|color=250|size=18|text=获取途径|link=@获取途径按钮>
+
+#if
+CheckContainsText <$STR(T8)> 加官进爵1
+not CheckContainsText <$STR(T8)> 逆天改命
+not CHECKITEM 血龙魄珠 3
+; CheckBindMoney 元宝 < 1000
+#act
+Navigation 0 获取途径 点击获取途径
+
+
+#if
+CheckContainsText <$STR(T8)> 加官进爵1
+not CheckContainsText <$STR(T8)> 逆天改命
+CHECKITEM 血龙魄珠 3
+not CheckBindMoney 元宝 < 1000
+#act
+Navigation 0 okBtn 点击升级血龙之体
+
+
+#if
+CheckContainsText <$STR(T8)> 逆天改命
+not CheckContainsText <$STR(T8)> 逆天改命1
+not CHECKITEM 洗髓丹 3
+; CheckBindMoney 元宝 < 1000
+#act
+Navigation 0 获取途径 点击获取途径
+
+#if
+CheckContainsText <$STR(T8)> 逆天改命
+not CheckContainsText <$STR(T8)> 逆天改命1
+CHECKITEM 洗髓丹 3
+; CheckBindMoney 元宝 < 1000
+#act
+Navigation 0 okBtn 点击获取途径
+
+
+#if
+not equal <$str(S$属性类型1)>
+equal <$str(S$属性类型2)>
+equal <$str(S$属性类型3)>
+#act
+inc S$主界面 <RText|id=当前属性加成1|x=60|y=50|text=<<$str(S$属性类型1)>＋<$str(S$当前属性加成1)>/FCOLOR=161>>
+inc S$主界面 <RText|id=下级属性加成1|x=360|y=50|text=<<$str(S$属性类型1)>＋<$str(S$下级属性加成1)>/FCOLOR=161>>
+
+#if
+not equal <$str(S$属性类型1)>
+not equal <$str(S$属性类型2)>
+equal <$str(S$属性类型3)>
+#act
+inc S$主界面 <RText|id=当前属性加成1|x=60|y=30|text=<<$str(S$属性类型1)>＋<$str(S$当前属性加成1)>/FCOLOR=161>>
+inc S$主界面 <RText|id=下级属性加成1|x=360|y=30|text=<<$str(S$属性类型1)>＋<$str(S$下级属性加成1)>/FCOLOR=161>>
+
+inc S$主界面 <RText|id=当前属性加成2|x=60|y=55|text=<<$str(S$属性类型2)>＋<$str(S$当前属性加成2)>/FCOLOR=161>>
+inc S$主界面 <RText|id=下级属性加成2|x=360|y=55|text=<<$str(S$属性类型2)>＋<$str(S$下级属性加成2)>/FCOLOR=161>>
+
+#if
+not equal <$str(S$属性类型1)>
+not equal <$str(S$属性类型2)>
+not equal <$str(S$属性类型3)>
+#act
+inc S$主界面 <RText|id=当前属性加成1|x=60|y=30|text=<<$str(S$属性类型1)>＋<$str(S$当前属性加成1)>/FCOLOR=161>>
+inc S$主界面 <RText|id=下级属性加成1|x=360|y=30|text=<<$str(S$属性类型1)>＋<$str(S$下级属性加成1)>/FCOLOR=161>>
+
+inc S$主界面 <RText|id=当前属性加成2|x=60|y=55|text=<<$str(S$属性类型2)>＋<$str(S$当前属性加成2)>/FCOLOR=161>>
+inc S$主界面 <RText|id=下级属性加成2|x=360|y=55|text=<<$str(S$属性类型2)>＋<$str(S$下级属性加成2)>/FCOLOR=161>>
+
+inc S$主界面 <RText|id=当前属性加成3|x=60|y=80|text=<<$str(S$属性类型3)>＋<$str(S$当前属性加成3)>/FCOLOR=161>>
+inc S$主界面 <RText|id=下级属性加成3|x=360|y=80|text=<<$str(S$属性类型3)>＋<$str(S$下级属性加成3)>/FCOLOR=161>>
+
+
+#if
+#act
+goto @逆天改命系统主面板
+
+
+[@雪龙之体升级]
+#if
+equal <$str(S$所需货币名)> 元宝
+#act
+mov S$所需货币名 绑定元宝
+
+#if
+not small <$STR(U1)> <$str(S$最大<$str(S$窗口名)>等级)>
+#act
+messagebox <$str(S$窗口名)>等级已达最大！
+break
+
+#or
+checkmoney <$str(S$所需货币名)> < <$str(S$所需货币数量)>
+not CHECKITEM <$str(S$需要材料名1)> <$str(S$需要材料数量1)>
+#act
+messagebox <$str(S$窗口名)>升级条件不足！
+break
+
+
+#if
+#act
+take <$str(S$需要材料名1)> <$str(S$需要材料数量1)>
+money <$str(S$所需货币名)> - <$str(S$所需货币数量)>
+inc <$str(S$等级变量)> 1
+CONFERTITLE <$str(S$给予称号)>
+sendmsg 5 <$str(S$窗口名)>升级成功!!
+#CALL [\人物属性加成\人物属性提升.txt] @基础属性
+goto @逆天改命属性提升
+
+
+#if
+CheckContainsText <$STR(T8)> 加官进爵1
+not CheckContainsText <$STR(T8)> 逆天改命
+#act
+
+inc T8 _逆天改命
+
+NEWCOMPLETETASK 26
+NEWDELETETASK 26
+
+CHANGEEXP + 200000
+money 元宝 + 1000
+GiveStateItem 大还丹 50 0 1 0 0 1 1 1 1
+
+sendmsg 7 完成任务了!!
+#CALL [\任务系统\任务文本.txt] @接取任务
+CLEARDELAYGOTO
+close
+
+#if
+CheckContainsText <$STR(T8)> 逆天改命
+not CheckContainsText <$STR(T8)> 逆天改命1
+#act
+
+inc T8 _逆天改命1
+
+NEWCOMPLETETASK 27
+NEWDELETETASK 27
+
+CHANGEEXP + 200000
+money 元宝 + 1000
+GiveStateItem 强效金疮药 50 0 1 0 0 1 1 1 1
+
+sendmsg 7 完成任务了!!
+#CALL [\任务系统\任务文本.txt] @接取任务
+CLEARDELAYGOTO
+close
+
+[@逆天改命属性提升]
+#if
+#act
+
+#CALL [\人物属性加成\人物属性提升.txt] @基础属性
+goto @获取升级数据
+
+[@获取途径按钮]
+#if
+equal <$str(S$获取图鉴窗口)> 1
+#act
+mov S$获取途径
+
+mov S$获取图鉴窗口 0
+goto @获取升级数据
+break
+
+#if
+#act
+mov S$获取途径
+; sendmsg 5 <$str(S$快捷购买)>***
+
+#if
+equal <$str(S$快捷购买)>
+#act
+inc S$获取途径 <Img|id=获取途径控件|children={途径标题1,途径标题2,途径标题3,途径标题4,途径标题5,途径标题6,途径按钮1,途径按钮2,途径按钮3,途径按钮4,途径关闭}|width=245|height=460|x=515|y=68|img=public/haha/split/common_panel2045.png|link=@>
+inc S$获取途径 <Text|id=途径标题1|x=90.0|y=15.0|color=251|size=16|text=获取途径>
+inc S$获取途径 <Text|id=途径标题2|x=45.0|y=40.0|color=161|size=16|text=<$str(S$需要材料名1)>全部打怪掉落>
+inc S$获取途径 <Text|id=途径标题3|x=60.0|y=65.0|color=161|size=16|text=<$str(S$需要材料名1)>高爆产地>
+; inc S$获取途径 <Text|id=途径标题4|x=60.0|y=90.0|color=250|size=16|text=绑元不足扣除元宝>
+; #等级=105#地图名字=冰之雪崖
+inc S$获取途径 <Button|id=途径按钮1|x=65|y=125.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=冰雪之城|link=@途径传送按钮1>
+inc S$获取途径 <Button|id=途径按钮2|x=65|y=185.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=起源宫殿|link=@途径传送按钮2>
+inc S$获取途径 <Button|id=途径按钮3|x=65|y=245.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=起源冰城|link=@途径传送按钮3>
+inc S$获取途径 <Button|id=途径按钮4|x=65|y=305.0|nimg=public/btn_sifud_03.png|color=161|size=17|text=火魔龙窑|link=@途径传送按钮4>
+inc S$获取途径 <Button|id=途径关闭|x=-42|y=165.0|nimg=public/sf1/2/btn_sifud_30.png|color=161|size=17|text=关\闭|link=@获取途径按钮>
+inc S$获取途径 <Text|id=途径标题5|x=50.0|y=385.0|color=250|size=16|text=越高级的地图爆率越高>
+inc S$获取途径 <Text|id=途径标题6|x=70.0|y=405.0|color=250|size=16|text=点击按钮直接前往>
+
+#if
+equal <$str(S$快捷购买)>
+CheckContainsText <$STR(T8)> 加官进爵1
+not CheckContainsText <$STR(T8)> 逆天改命
+#act
+Navigation 0 途径按钮3 点击起源冰城
+
+#if
+equal <$str(S$快捷购买)>
+CheckContainsText <$STR(T8)> 逆天改命
+not CheckContainsText <$STR(T8)> 逆天改命1
+#act
+Navigation 0 途径按钮3 点击起源冰城
+
+#if
+not equal <$str(S$快捷购买)>
+#act
+GetValidstr <$STR(S$快捷购买)> & S$快捷购买道具 S$快捷购买消费
+GetValidstr <$STR(S$快捷购买消费)> * S$快捷购买货币 S$快捷购买消耗
+GetDBItemFieldValue <$str(S$快捷购买道具)> idx S$快捷购买道具ID1
+; sendmsg 5 <$str(S$快捷购买道具)>----<$str(S$快捷购买货币)>--<$str(S$快捷购买消耗)>
+
+inc S$获取途径 <Img|id=获取途径控件|children={途径标题1,途径标题2,途径标题3,途径标题4,途径标题5,途径标题6,途径按钮1,途径按钮2,途径按钮3,途径按钮4,途径关闭}|width=245|height=460|x=515|y=68|img=public/haha/split/common_panel2045.png|link=@>
+inc S$获取途径 <Text|id=途径标题1|x=90.0|y=15.0|color=251|size=16|text=获取途径>
+inc S$获取途径 <Text|id=途径标题2|x=45.0|y=40.0|color=161|size=16|text=<$str(S$快捷购买道具)>全部打怪掉落>
+inc S$获取途径 <Text|id=途径标题3|x=60.0|y=65.0|color=161|size=16|text=<$str(S$快捷购买道具)>高爆产地>
+inc S$获取途径 <Text|id=途径标题4|x=60.0|y=90.0|color=250|size=16|text=全部领主BOSS掉落>
+inc S$获取途径 <Button|id=途径关闭|x=-42|y=165.0|nimg=public/sf1/2/btn_sifud_30.png|color=161|size=17|text=关\闭|link=@获取途径按钮>
+inc S$获取途径 <Text|id=途径标题5|x=50.0|y=405.0|color=250|size=16|text=越高级的地图爆率越高>
+inc S$获取途径 <Img|id=途径标题6|x=12|y=250|children={快买标题,快买按钮,快买道具,快买道具名,快买道具价}|width=225|height=90|img=public/uipic/00679.png>
+inc S$获取途径 <ItemShow|id=快买道具|x=5|y=15|itemid=<$STR(S$快捷购买道具ID1)>|itemcount=0|showtips=1|bgtype=1|scale=0.6>
+inc S$获取途径 <Text|id=快买道具名|x=65.0|y=30.0|color=249|size=15|text=<$str(S$快捷购买道具)>>
+inc S$获取途径 <Text|id=快买道具价|x=65.0|y=50.0|color=249|size=15|text=<$str(S$快捷购买消耗)><$str(S$快捷购买货币)>>
+inc S$获取途径 <Text|id=快买标题|x=80.0|y=5.0|color=251|size=16|text=快捷购买>
+inc S$获取途径 <Button|id=快买按钮|x=135|y=35.0|width=90|height=55|nimg=public/btn_sifud_03.png|color=161|size=17|text=购买|link=@快捷购买>
+; inc S$获取途径 <Text|id=途径标题6|x=70.0|y=405.0|color=250|size=16|text=点击按钮直接前往>
+
+; #if
+; CheckContainsText <$STR(T8)> 加官进爵1
+; not CheckContainsText <$STR(T8)> 逆天改命
+; #act
+; Navigation 0 途径按钮2 点击起源宫殿
+
+#if
+#act
+mov S$获取图鉴窗口 1
+goto @获取升级数据
+
+
+
+[@快捷购买]
+
+#if
+equal <$str(S$快捷购买货币)> 元宝
+#act
+mov S$快捷购买货币 绑定元宝
+
+
+#if
+equal <$str(S$快捷购买货币)> 元宝
+CheckBindMoney <$str(S$快捷购买货币)> < <$str(S$快捷购买消耗)>
+#act
+messagebox 你的元宝不足,无法购买!!
+break
+
+#if
+checkmoney <$str(S$快捷购买货币)> < <$str(S$快捷购买消耗)>
+#act
+messagebox 你的<$str(S$快捷购买货币)>不足,无法购买!!
+break
+
+#if
+#act
+money <$str(S$快捷购买货币)> - <$str(S$快捷购买消耗)>
+givestateitem <$str(S$快捷购买道具)> 1 0 1 0 0 1 1 1 1
+sendmsg 7 <$str(S$快捷购买道具)>购买成功!!
+
+[@途径传送按钮1]
+#IF
+not CHECKRENEWLEVEL > 4
+#ACT
+MESSAGEBOX 你没有4转以上，无法进入！
+BREAK
+
+#if
+#act
+mapmove 冰雪之城 165 59
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖冰雪之城〗,寻找高级装备！ 1 3
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖冰雪之城〗,寻找高级装备！
+
+[@途径传送按钮2]
+#OR
+equal U22 4
+#ACT
+MapMove 起源宫殿 54 30
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源宫殿〗,寻找高级装备！ 1 3
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源宫殿〗,寻找高级装备！
+break
+#elseact
+SendMsg 7 你还不是本服的至尊VIP！无法进入！
+break
+
+#if
+CHECKRENEWLEVEL > 5
+#ACT
+MapMove 起源宫殿 54 30
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源宫殿〗,寻找高级装备！ 1 3
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源宫殿〗,寻找高级装备！
+break
+#elseact
+SendMsg 7 转生等级不够！无法进入！
+break
+
+#or
+not checklevelex < 110
+large <$str(U22)> 0
+#ACT
+MapMove 神秘峡谷一层
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了〖神秘峡谷一层〗,寻找高级装备！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了〖神秘峡谷一层〗,寻找高级装备！
+
+
+[@途径传送按钮3]
+#IF
+ISCASTLEGUILD
+#ACT
+TimeRecall 60
+MapMove 起源冰城
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源冰城〗,寻找高级装备！ 1 3
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源冰城〗,寻找高级装备！
+BREAK
+
+#if
+not ISCASTLEGUILD
+CheckBindMoney 元宝 < 20000
+#ACT
+SendMsg 7 你不是沙巴克成员！且元宝不足2W！无法进入该地图！！
+break
+#elseact
+money 绑定元宝 - 20000
+
+#if
+#ACT
+TimeRecall 60
+MapMove 起源冰城
+SendCenterMsg 180 251 你还剩余[%d秒]离开传说冰城. 0 3600 @离开
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源冰城〗,寻找高级装备！ 1 3
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源冰城〗,寻找高级装备！
+
+
+[@途径传送按钮4]
+#IF
+#ACT
+MapMove D2081
+SETONTIMER 2 1
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖火龙魔窑〗,寻找高级装备！ 1 3
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖火龙魔窑〗,寻找高级装备！
+
+}

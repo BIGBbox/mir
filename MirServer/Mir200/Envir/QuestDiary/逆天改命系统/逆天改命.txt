@@ -9,7 +9,7 @@ mov S$获取途径
 mov S$获取图鉴窗口 0
 mov N$逆天改命等级 0
 ; goto @获取升级数据
-goto @切换面板1
+goto @切换面板3
 goto @逆天改命系统主面板
 
 [@逆天改命面板]
@@ -38,10 +38,10 @@ mov S$主界面
 mov S$获取途径
 mov S$按钮列表
 mov S$获取图鉴窗口 0
-inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=血龙之体|link=@切换面板1>
-inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=先天之体|link=@切换面板2>
-inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=强身修炼|link=@切换面板3>
-inc S$按钮列表 <Button|id=列表4|x=60|y=200.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神佑修炼|link=@切换面板4>
+;inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=血龙之体|link=@切换面板1>
+;inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=先天之体|link=@切换面板2>
+inc S$按钮列表 <Button|id=列表3|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=强身修炼|link=@切换面板3>
+inc S$按钮列表 <Button|id=列表4|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神佑修炼|link=@切换面板4>
 
 mov S$窗口名 血龙之体
 goto @获取升级数据
@@ -53,10 +53,10 @@ mov S$主界面
 mov S$按钮列表
 mov S$获取途径
 mov S$获取图鉴窗口 0
-inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=血龙之体|link=@切换面板1>
-inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=先天之体|link=@切换面板2>
-inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=强身修炼|link=@切换面板3>
-inc S$按钮列表 <Button|id=列表4|x=60|y=200.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神佑修炼|link=@切换面板4>
+;inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=血龙之体|link=@切换面板1>
+;inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=先天之体|link=@切换面板2>
+inc S$按钮列表 <Button|id=列表3|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=强身修炼|link=@切换面板3>
+inc S$按钮列表 <Button|id=列表4|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神佑修炼|link=@切换面板4>
 
 mov S$窗口名 先天之体
 goto @获取升级数据
@@ -68,10 +68,10 @@ mov S$主界面
 mov S$获取途径
 mov S$按钮列表
 mov S$获取图鉴窗口 0
-inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=血龙之体|link=@切换面板1>
-inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=先天之体|link=@切换面板2>
-inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=强身修炼|link=@切换面板3>
-inc S$按钮列表 <Button|id=列表4|x=60|y=200.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神佑修炼|link=@切换面板4>
+;inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=血龙之体|link=@切换面板1>
+;inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=先天之体|link=@切换面板2>
+inc S$按钮列表 <Button|id=列表3|x=60|y=80.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=强身修炼|link=@切换面板3>
+inc S$按钮列表 <Button|id=列表4|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=神佑修炼|link=@切换面板4>
 
 mov S$窗口名 强身修炼
 goto @获取升级数据
@@ -83,10 +83,10 @@ mov S$主界面
 mov S$获取途径
 mov S$按钮列表
 mov S$获取图鉴窗口 0
-inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=血龙之体|link=@切换面板1>
-inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=先天之体|link=@切换面板2>
-inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=强身修炼|link=@切换面板3>
-inc S$按钮列表 <Button|id=列表4|x=60|y=200.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=神佑修炼|link=@切换面板4>
+;inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=血龙之体|link=@切换面板1>
+;inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=先天之体|link=@切换面板2>
+inc S$按钮列表 <Button|id=列表3|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=强身修炼|link=@切换面板3>
+inc S$按钮列表 <Button|id=列表4|x=60|y=120.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=神佑修炼|link=@切换面板4>
 
 
 mov S$窗口名 神佑修炼
@@ -238,8 +238,9 @@ break
 take <$str(S$需要材料名1)> <$str(S$需要材料数量1)>
 money <$str(S$所需货币名)> - <$str(S$所需货币数量)>
 inc <$str(S$等级变量)> 1
-CONFERTITLE <$str(S$给予称号)>
+; CONFERTITLE <$str(S$给予称号)>
 sendmsg 5 <$str(S$窗口名)>升级成功!!
+#CALL [\人物属性加成\人物属性提升.txt] @基础属性
 goto @逆天改命属性提升
 
 [@逆天改命属性提升]
@@ -262,7 +263,6 @@ break
 #if
 #act
 mov S$获取途径
-sendmsg 5 <$str(S$快捷购买)>***
 
 #if
 equal <$str(S$快捷购买)>
@@ -346,7 +346,7 @@ BREAK
 
 #if
 #act
-mapmove sjzc 165 59
+mapmove 冰雪之城 165 59
 SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖冰雪之城〗,寻找高级装备！ 1 3
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖冰雪之城〗,寻找高级装备！
 
@@ -354,7 +354,7 @@ GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖冰雪之城〗,寻找高级装备！
 #OR
 equal U22 4
 #ACT
-MapMove qygd 54 30
+MapMove 起源宫殿 54 30
 SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源宫殿〗,寻找高级装备！ 1 3
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源宫殿〗,寻找高级装备！
 break
@@ -365,7 +365,7 @@ break
 #if
 CHECKRENEWLEVEL > 5
 #ACT
-MapMove qygd 54 30
+MapMove 起源宫殿 54 30
 SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源宫殿〗,寻找高级装备！ 1 3
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源宫殿〗,寻找高级装备！
 break
@@ -377,8 +377,7 @@ break
 not checklevelex < 110
 large <$str(U22)> 0
 #ACT
-give 回城卷 1
-MapMove wld1
+MapMove 神秘峡谷一层
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了〖神秘峡谷一层〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了〖神秘峡谷一层〗,寻找高级装备！
 
@@ -388,7 +387,7 @@ GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了〖神秘峡谷一层〗,寻找高级装备！
 ISCASTLEGUILD
 #ACT
 TimeRecall 60
-MapMove xjsd
+MapMove 起源冰城
 SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源冰城〗,寻找高级装备！ 1 3
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源冰城〗,寻找高级装备！
 BREAK
@@ -404,9 +403,8 @@ money 绑定元宝 - 20000
 
 #if
 #ACT
-;give 回城卷 1
 TimeRecall 60
-MapMove xjsd
+MapMove 起源冰城
 SendCenterMsg 180 251 你还剩余[d秒]离开传说冰城. 0 3600 @离开
 SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源冰城〗,寻找高级装备！ 1 3
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起源冰城〗,寻找高级装备！

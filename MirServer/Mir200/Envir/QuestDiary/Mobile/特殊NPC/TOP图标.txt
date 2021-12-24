@@ -21,13 +21,22 @@ MOV S$展示 <Button|x=-230|y=<$STR(N$坐标Y1)>|nimg=official/top/1900012531.png|li
 MOV S$图标2 <Button|x=-230|y=<$STR(N$坐标Y1)>|nimg=official/top/1900012531.png|link=@伸缩>
 MOV N$坐标X2 -320
 
-INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=official/top/1900012604.png|link=@每日悬赏>
+INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=public/sf1/2/top/top10.png|link=@每日悬赏>
 
 dec N$坐标X2 85
-INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=official/top/1900012606.png|link=@会员>
+INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=public/sf1/2/top/top1.png|link=@会员>
 
 dec N$坐标X2 85
-INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=official/top/1900012600.png|link=@赞助>
+INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=public/sf1/2/top/top4.png|link=@赞助>
+
+dec N$坐标X2 85
+INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=public/sf1/2/top/top6.png|link=@首爆奖励>
+
+goto @首充按钮
+
+dec N$坐标X2 85
+INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=public/sf1/2/top/top2.png|link=@攻略>
+
 
 ; dec N$坐标X2 80
 ; INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=official/top/1900012602.png|link=@飞鞋>
@@ -42,6 +51,8 @@ Equal <$CLIENTFLAG> 2
 MOV S$admin <Button|x=-250|y=220|nimg=official/top/1900012530.png|link=@管理模式>
 
 addbutton 102 4 <$STR(S$admin)>
+
+
 
 [@伸缩]
 #if
@@ -75,6 +86,25 @@ addbutton 102 2 <$STR(S$展示)>
 #IF
 #ACT
 #Call [\Mobile\特殊NPC\系统管理员.txt] @GM
+
+[@首爆奖励]
+;#CALL [\技术QQ198605888\首杀_首爆\首爆_奖励\首爆_奖励.txt] @首爆_奖励
+#CALL [\装备首爆\首爆脚本界面.txt] @脚本界面
+
+[@首充按钮]
+#if
+not EQUAL U72 666
+#act
+dec N$坐标X2 85
+INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=public/sf1/2/top/top11.png|link=@首充>
+
+[@首充]
+#CALL [\首充系统\首充界面.txt] @首充面板
+
+[@攻略]
+#if
+#act
+#CALL [\游戏攻略\攻略.txt] @攻略面板
 
 [@展开]
 

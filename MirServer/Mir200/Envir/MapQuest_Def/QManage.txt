@@ -5,65 +5,63 @@
 MOVR G130 12 16
 MOVR G131 13 17
 
+
 [@Login]
-#if
-ISNEWHUMAN
-#act
 
-
-#IF
-ISDUMMY
-#ACT
-VAR Integer HUMAN KP
-VAR Integer HUMAN PD
-VAR Integer HUMAN JK
-;LOADVAR HUMAN JK ..\QuestDiary\临时数据\元宝捐款.txt
-;LOADVAR HUMAN KP ..\QuestDiary\临时数据\KPSave.txt
-;LOADVAR HUMAN PD ..\QuestDiary\临时数据\PDSave.txt
-VAR String HUMAN LoginPassWord
-;LOADVAR HUMAN LoginPassWord ..\QuestDiary\临时数据\LoginPassWord.txt
-VAR Integer HUMAN LoginPassWordStatus
-;LOADVAR HUMAN LoginPassWordStatus ..\QuestDiary\临时数据\LoginPassWord.txt
-VAR Integer HUMAN LoginPassWordNum
-;LOADVAR HUMAN LoginPassWordNum ..\QuestDiary\临时数据\LoginPassWord.txt
-SetOnTimer 0 1
-SetOnTimer 5 1
-BREAK
+; <$GUILDNAME>
 
 #If
-CHECKLEVELEX > 0
+; CHECKLEVELEX > 0
 #Act
 #Call [\Mobile\特殊NPC\TOP图标.txt] @导航
 ; #Call [\代理登录\登录文件.txt] @脚本相关
 #Call [\Mobile\特殊NPC\货币记录.txt] @货币
 #CALL [\基础按钮\主界面基础按钮QM.txt] @基础按钮QM
-
-#IF
-CHECKLEVELEX > 0
-#ACT
+EXTBAGOPENITEMCOUNT 130
+; #IF
+; CHECKLEVELEX > 0
+; #ACT
 VAR Integer HUMAN KP
 VAR Integer HUMAN PD
 VAR Integer HUMAN JK
 ;LOADVAR HUMAN JK ..\QuestDiary\临时数据\元宝捐款.txt
 ;LOADVAR HUMAN KP ..\QuestDiary\临时数据\KPSave.txt
 ;LOADVAR HUMAN PD ..\QuestDiary\临时数据\PDSave.txt
-VAR String HUMAN LoginPassWord
+; VAR String HUMAN LoginPassWord
 ;LOADVAR HUMAN LoginPassWord ..\QuestDiary\临时数据\LoginPassWord.txt
-VAR Integer HUMAN LoginPassWordStatus
+; VAR Integer HUMAN LoginPassWordStatus
 ;LOADVAR HUMAN LoginPassWordStatus ..\QuestDiary\临时数据\LoginPassWord.txt
-VAR Integer HUMAN LoginPassWordNum
+; VAR Integer HUMAN LoginPassWordNum
 ;LOADVAR HUMAN LoginPassWordNum ..\QuestDiary\临时数据\LoginPassWord.txt
+
 
 #CALL [\游戏登陆\登陆脚本.txt] @登陆设置
 #CALL [\游戏登陆\封号系统.txt] @封号分类
+
 ;#CALL [\二级密码\二级密码.txt] @登录检测
 #CALL [\元宝捐款\元宝捐款数据.txt] @刷新
 #CALL [\元宝捐款\元宝捐款奖励.txt] @奖励
 #CALL [\游戏功能\装备吸血.txt] @吸血设置
 #CALL [\游戏功能\装备爆率.txt] @装备爆率
-#CALL [\游戏登陆\右下显示.txt] @属性显示
+#CALL [\人物属性加成\人物属性提升.txt] @基础属性
+; #CALL [\游戏登陆\右下显示.txt] @属性显示
 SetOnTimer 0 1
+SetOnTimer 2 3600
 SetOnTimer 5 1
+#CALL [\任务系统\任务文本.txt] @接取任务
+
+#IF
+checklevelex > 27
+#ACT
+PLAYMAGICBALLEFFECT hp_0 30 200 -1 0 1 -5 -2 75
+PLAYMAGICBALLEFFECT mp_0 30 200 -1 1 1 2 -2 75
+#elseact
+PLAYMAGICBALLEFFECT fhp_0 30 200 -1 2 1 -2 -2 75
+
+#if
+equal <$str(T8)>
+#act
+#Call [\代理登录\欢迎界面.txt] @欢迎界面展示
 
 #If
 EQUAL G111 0
@@ -438,35 +436,6 @@ CONFERTITLE 先天之体lv8
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #IF
 equal U1 1
 #act
@@ -558,37 +527,128 @@ DEPRIVETITLE 血龙之体lv7
 DEPRIVETITLE 血龙之体lv8
 CONFERTITLE 血龙之体lv8
 
+[@在线时间显示]
+
+#IF
+#ACT
+mov N$M <$STR(N$在线时间)>
+mov N$H <$STR(N$在线时间)>
+mov N$AS <$STR(N$在线时间)>
+
+div N$M 60
+div N$H 3600
+
+mov N$秒 60
+
+mul N$秒 <$STR(N$M)>
+dec N$AS <$STR(N$秒)>
+
+
+mov S$在线时间 <$str(N$H)>时<$str(N$M)>分<$str(N$AS)>秒
+
+; mov S$在线时间 <$STR(N$在线时间)>
+SetStringBlank S$在线时间 12 0
+mov S$顶部在线时间
+INC S$顶部在线时间 <RText|x=220|y=4|size=16|text=<本次在线时间:/FCOLOR=250><<$str(S$在线时间)>/FCOLOR=250>>
+delbutton 106 1
+addbutton 106 1 <$STR(S$顶部在线时间)>
+
+[@大爆剩余时间显示]
+#if
+#act
+; U30
+; sendmsg 5 U30:::<$str(U30)>
+mov N$M1 <$STR(U30)>
+mov N$H1 <$STR(U30)>
+mov N$AS1 <$STR(U30)>
+
+div N$M1 60
+div N$H1 3600
+
+
+mov N$秒1 60
+
+mul N$秒1 <$STR(N$M1)>
+dec N$AS1 <$STR(N$秒1)>
+
+mov N$AH <$str(N$H1)>
+mul N$AH 60
+
+dec N$M1 <$str(N$AH)>
+
+
+mov S$在线时间1 <$str(N$H1)>时<$str(N$M1)>分<$str(N$AS1)>秒
+SetStringBlank S$在线时间1 12 0
+
+mov S$顶部大爆时间
+INC S$顶部大爆时间 <RText|x=-500|y=4|size=16|text=<大爆剩余时间:/FCOLOR=250><<$str(S$在线时间1)>/FCOLOR=249>>
+delbutton 106 2
+addbutton 106 2 <$STR(S$顶部大爆时间)>
+
+[@秒转时间]
+#if
+#act
+
+mov N$M <$STR(N$在线时间)>
+mov N$H <$STR(N$在线时间)>
+mov N$AS <$STR(N$在线时间)>
+
+div N$M 60
+div N$H 3600
+
+mov N$秒 60
+
+mul N$秒 <$STR(N$M)>
+dec N$AS <$STR(N$秒)>
+
+
+mov S$在线时间 <$str(N$H)>时<$str(N$M)>分<$str(N$AS)>秒
 
 [@OnTimer0]
 ; #if
 ; equal <$str(S$血祭窗口状态)> 1
 ; #act
 ; #CALL [\装备血祭系统\装备血祭.txt] @装备血祭功能
+#if
+#act
+inc N$在线时间 1
 
-; N$青铜爆率卡结束时间
+goto @在线时间显示
+goto @大爆剩余时间显示
+
+
+
+; U121
+#if
+large <$str(U30)> 0
+#act
+dec U30 1
 
 #if
 #act
+inc N$秒数 1
+; sendmsg 5 mp:::<$MP>
+
+goto @重置批量拾取卡体验卡
 goto @重置会员爆率卡
 goto @自动勾选背包待回收物品
-
+; sendmsg 5 秒::<$str(N$秒数)>
 #if
-CHECKLEVELEX < 50
-ISONMAP XINR1
+not equal <$STR(T8)>
+large <$str(N$秒数)> 2
 #act
-; SETWEATHEREFFECT XINR1 2 600
-CHANGEEXP + 20000
-#ELSEACT
-break
+mov N$秒数 0
+CHANGEEXP + 5000
+
 
 [@OnTimer1]
-#if
-ISONMAP jqpd
-#act
-CHANGEEXP + 30000
-#ELSEACT
-SetOffTimer 1
-break
+; #if
+; ISONMAP 激情泡点
+; #act
+; CHANGEEXP + 30000
+; #ELSEACT
+; SetOffTimer 1
+; break
 
 
 
@@ -633,7 +693,7 @@ equal <$CLIENTFLAG> 1
 #IF
 #act
 ;give 回城卷 1
-mapmove jqpd
+mapmove 激情泡点
 SendCenterMsg 116 0 [<$USERNAME>]赶往现场参加激情派对，邀请您一起来激情... 1 1
 GuildNoticeMsg 5 255 [<$USERNAME>]赶往现场参加激情派对，邀请您一起来激情...
 GuildNoticeMsg 5 255 [<$USERNAME>]赶往现场参加激情派对，邀请您一起来激情...
@@ -760,7 +820,7 @@ equal <$CLIENTFLAG> 1
 #IF
 #act
 ;give 回城卷 1
-mapmove HDCD
+mapmove 活动场地
 SendCenterMsg 116 0 [<$USERNAME>]赶往现场参加《真假半兽人》活动... 1 1
 GuildNoticeMsg 5 255 [<$USERNAME>]赶往现场参加《真假半兽人》活动...
 GuildNoticeMsg 5 255 [<$USERNAME>]赶往现场参加《真假半兽人》活动...
@@ -802,7 +862,7 @@ equal <$CLIENTFLAG> 1
 #IF
 #act
 ;give 回城卷 1
-mapmove HDCD
+mapmove 活动场地
 SendCenterMsg 116 0 [<$USERNAME>]赶往现场参加《刺杀稻草人》活动... 1 1
 GuildNoticeMsg 5 255 [<$USERNAME>]赶往现场参加《刺杀稻草人》活动...
 GuildNoticeMsg 5 255 [<$USERNAME>]赶往现场参加《刺杀稻草人》活动...
@@ -841,7 +901,7 @@ equal <$CLIENTFLAG> 1
 #IF
 #act
 ;give 回城卷 1
-mapmove HDCD
+mapmove 活动场地
 SendCenterMsg 116 0 [<$USERNAME>]赶往现场参加《冰城之战》活动... 1 1
 GuildNoticeMsg 5 255 [<$USERNAME>]赶往现场参加《冰城之战》活动...
 GuildNoticeMsg 5 255 [<$USERNAME>]赶往现场参加《冰城之战》活动...
@@ -859,7 +919,7 @@ ACTREPAIRALL
 [@OnTimer5]
 #if
 EQUAL I66 1
-CheckHumInRange jqpd 23 26 1
+CheckHumInRange 激情泡点 23 26 1
 #act
 GAMEGOLD + 20
 CHANGEEXP + 300000
@@ -867,7 +927,7 @@ BREAK
 
 #if
 EQUAL I66 1
-CheckHumInRange jqpd 23 26 2
+CheckHumInRange 激情泡点 23 26 2
 #act
 GAMEGOLD + 15
 CHANGEEXP + 200000
@@ -877,7 +937,7 @@ BREAK
 
 #if
 EQUAL I66 1
-CheckHumInRange jqpd 23 26 3
+CheckHumInRange 激情泡点 23 26 3
 #act
 GAMEGOLD + 10
 CHANGEEXP + 100000
@@ -1045,18 +1105,14 @@ inc N$转生等级 1
 goto @获取当前转生等级
 
 
-[@增加会员V值]
-#if
-small <$str(U9)> 1
-#act
-break
-
+[@OnTimer2]
 #if
 #act
 ReadConfigFileItem ..\QuestDiary\会员系统\会员数据.txt <$str(U9)> 会员V值 S$会员V值
 
-#if
+#or
 not small <$str(U12)> <$str(S$会员V值)>
+small <$str(U9)> 1
 #act
 break
 
@@ -1069,6 +1125,18 @@ inc U12 <$str(S$V值额外恢复数)>
 inc U12 5
 
 
+[@重置批量拾取卡体验卡]
+#if
+#act
+mov N$当前时间 <$UTCNOW8>
+#if
+large <$str(N$当前时间)> <$str(U23)> 
+not equal <$str(U23)> 0
+#act
+mov U23 0
+mov U21 0
+; SETSPRITEMODE 2
+
 [@重置会员爆率卡]
 #if
 #act
@@ -1076,123 +1144,123 @@ mov N$当前时间 <$UTCNOW8>
 mov S$是否更新爆率 0
 
 #if
-large <$str(N$当前时间)> <$str(N$青铜爆率卡结束时间)> 
-not equal <$str(N$青铜爆率卡结束时间)> 0
+large <$str(N$当前时间)> <$str(U121)> 
+not equal <$str(U121)> 0
 #act
-mov N$青铜爆率卡 0
-mov N$青铜爆率卡结束时间 0
+mov U120 0
+mov U121 0
 mov S$是否更新爆率 1
 
 #if
-large <$str(N$当前时间)> <$str(N$白银爆率卡结束时间)> 
-not equal <$str(N$白银爆率卡结束时间)> 0
+large <$str(N$当前时间)> <$str(U123)> 
+not equal <$str(U123)> 0
 #act
-mov N$白银爆率卡 0
-mov N$白银爆率卡结束时间 0
+mov U122 0
+mov U123 0
 mov S$是否更新爆率 1
 
 #if
-large <$str(N$当前时间)> <$str(N$黄金爆率卡结束时间)> 
-not equal <$str(N$黄金爆率卡结束时间)> 0
+large <$str(N$当前时间)> <$str(U125)> 
+not equal <$str(U125)> 0
 #act
-mov N$黄金爆率卡 0
-mov N$黄金爆率卡结束时间 0
+mov U124 0
+mov U125 0
 mov S$是否更新爆率 1
 
 #if
-large <$str(N$当前时间)> <$str(N$铂金爆率卡结束时间)> 
-not equal <$str(N$铂金爆率卡结束时间)> 0
+large <$str(N$当前时间)> <$str(U127)> 
+not equal <$str(U127)> 0
 #act
-mov N$铂金爆率卡 0
-mov N$铂金爆率卡结束时间 0
+mov U126 0
+mov U127 0
 mov S$是否更新爆率 1
 
 #if
-large <$str(N$当前时间)> <$str(N$钻石爆率卡结束时间)> 
-not equal <$str(N$钻石爆率卡结束时间)> 0
+large <$str(N$当前时间)> <$str(U129)> 
+not equal <$str(U129)> 0
 #act
-mov N$钻石爆率卡 0
-mov N$钻石爆率卡结束时间 0
+mov U128 0
+mov U129 0
 mov S$是否更新爆率 1
 
 #if
-large <$str(N$当前时间)> <$str(N$星耀爆率卡结束时间)> 
-not equal <$str(N$星耀爆率卡结束时间)> 0
+large <$str(N$当前时间)> <$str(U131)> 
+not equal <$str(U131)> 0
 #act
-mov N$星耀爆率卡 0
-mov N$星耀爆率卡结束时间 0
+mov U130 0
+mov U131 0
 mov S$是否更新爆率 1
 
 #if
-large <$str(N$当前时间)> <$str(N$王者爆率卡结束时间)> 
-not equal <$str(N$王者爆率卡结束时间)> 0
+large <$str(N$当前时间)> <$str(U133)> 
+not equal <$str(U133)> 0
 #act
-mov N$王者爆率卡 0
-mov N$王者爆率卡结束时间 0
+mov U132 0
+mov U133 0
 mov S$是否更新爆率 1
 
 #if
-large <$str(N$当前时间)> <$str(N$荣耀爆率卡结束时间)> 
-not equal <$str(N$荣耀爆率卡结束时间)> 0
+large <$str(N$当前时间)> <$str(U135)> 
+not equal <$str(U135)> 0
 #act
-mov N$荣耀爆率卡 0
-mov N$荣耀爆率卡结束时间 0
+mov U134 0
+mov U135 0
 mov S$是否更新爆率 1
 
 #if
-large <$str(N$当前时间)> <$str(N$神圣爆率卡结束时间)> 
-not equal <$str(N$神圣爆率卡结束时间)> 0
+large <$str(N$当前时间)> <$str(U137)> 
+not equal <$str(U137)> 0
 #act
-mov N$神圣爆率卡 0
-mov N$神圣爆率卡结束时间 0
+mov U136 0
+mov U137 0
 mov S$是否更新爆率 1
 
 #if
-large <$str(N$当前时间)> <$str(N$永恒爆率卡结束时间)> 
-not equal <$str(N$永恒爆率卡结束时间)> 0
+large <$str(N$当前时间)> <$str(U139)> 
+not equal <$str(U139)> 0
 #act
-mov N$永恒爆率卡 0
-mov N$永恒爆率卡结束时间 0
+mov U138 0
+mov U139 0
 mov S$是否更新爆率 1
 
 #if
-large <$str(N$当前时间)> <$str(N$至尊爆率卡结束时间)> 
-not equal <$str(N$至尊爆率卡结束时间)> 0
+large <$str(N$当前时间)> <$str(U141)> 
+not equal <$str(U141)> 0
 #act
-mov N$至尊爆率卡 0
-mov N$至尊爆率卡结束时间 0
+mov U140 0
+mov U141 0
 mov S$是否更新爆率 1
 
 #if
-large <$str(N$当前时间)> <$str(N$100爆率卡结束时间)> 
-not equal <$str(N$100爆率卡结束时间)> 0
+large <$str(N$当前时间)> <$str(U143)> 
+not equal <$str(U143)> 0
 #act
-mov N$100爆率卡 0
-mov N$100爆率卡结束时间 0
+mov U142 0
+mov U143 0
 mov S$是否更新爆率 1
 
 #if
-large <$str(N$当前时间)> <$str(N$200爆率卡结束时间)> 
-not equal <$str(N$200爆率卡结束时间)> 0
+large <$str(N$当前时间)> <$str(U145)> 
+not equal <$str(U145)> 0
 #act
-mov N$200爆率卡 0
-mov N$200爆率卡结束时间 0
+mov U144 0
+mov U145 0
 mov S$是否更新爆率 1
 
 #if
-large <$str(N$当前时间)> <$str(N$300爆率卡结束时间)> 
-not equal <$str(N$300爆率卡结束时间)> 0
+large <$str(N$当前时间)> <$str(U147)> 
+not equal <$str(U147)> 0
 #act
-mov N$300爆率卡 0
-mov N$300爆率卡结束时间 0
+mov U146 0
+mov U147 0
 mov S$是否更新爆率 1
 
 #if
-large <$str(N$当前时间)> <$str(N$500爆率卡结束时间)> 
-not equal <$str(N$500爆率卡结束时间)> 0
+large <$str(N$当前时间)> <$str(U149)> 
+not equal <$str(U149)> 0
 #act
-mov N$500爆率卡 0
-mov N$500爆率卡结束时间 0
+mov U148 0
+mov U149 0
 mov S$是否更新爆率 1
 
 

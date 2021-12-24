@@ -65,7 +65,7 @@ div N$百分比 <$str(S$充值额)>
 mov N$宽度 335
 CalcPer <$str(N$宽度)> <$str(N$百分比)> N$宽度
 mov S$充值进度显示 <<$str(N$充值额)>/<$str(N$RMB点)>/FCOLOR=161>
-mov N$进度条X 410
+mov N$进度条X 130
 
 #if
 equal <$str(N$RMB点)> 0
@@ -76,7 +76,7 @@ mov N$标题X 370
 mov S$充值进度显示 <<$str(N$充值额)>/100000/FCOLOR=249>
 mov S$充值进度显示 <MAX/FCOLOR=249>
 mov N$进度条X 400
-mov N$进度条X 435
+mov N$进度条X 155
 
 #if
 equal <$str(S$参数)> 1
@@ -88,19 +88,19 @@ goto @创建展示图片
 #act
 #say
 <Img|x=0|y=0|width=9999|height=9999|children={赞助系统主面板}|img=public/0.png|bg=1|link=@exit>
-<Img|id=赞助系统主面板|x=150|y=60|img=public/sf1/2/zanz/vipBg.png|children={closeBtn,特效,标题文字,lineBg,切换按钮1,切换按钮2,标题,logo,logo2,cash,进度条,赞助详情}|link=@1>
+<Img|id=赞助系统主面板|x=150|y=60|img=public/sf1/2/zanz/123.png|children={closeBtn,特效,标题文字,lineBg,切换按钮1,切换按钮2,标题,logo,logo2,cash,进度条,赞助详情}|link=@1>
 <Button|id=closeBtn|x=755|y=22.0|nimg=public/sf1/2/zanz/closeBtn.png|link=@exit>
-<RText|id=标题|x=<$str(N$标题X)>|y=65|size=18|outline=2|outlinecolor=0|text=<$str(S$所需显示)>>
-<Img|id=logo|x=120|y=85|img=public/sf1/2/zanz/<$str(S$大图标img)>.png>
-<Img|id=lineBg|x=282|y=97|children={进度条}|img=public/sf1/2/lineK.png>
-<Img|id=特效|x=286|y=100|width=<$str(N$宽度)>|height=20|img=public/sf1/2/greenLine.png>
+<RText|id=标题|x=<$str(N$标题X)>|y=75|size=18|outline=2|outlinecolor=0|text=<$str(S$所需显示)>>
+<Img|id=logo|x=120|y=95|img=public/sf1/2/zanz/<$str(S$大图标img)>.png>
+<Img|id=特效|x=286|y=110|width=<$str(N$宽度)>|height=20|img=public/sf1/2/greenLine.png>
 
 ; <Effect|id=特效|x=300|y=458|effectid=4203|effecttype=0|scale=2|speed=1.2|act=0|dir=2>
 ; <Effect|id=特效|x=320|y=178|effectid=1015|effecttype=0|scale=1|speed=1.2|act=0|dir=2>
 
 ; <Button|id=1_0|x=140|y=355|nimg=public/sf1/2/zanz/imag1.png|link=@123>
-<RText|id=标题文字|size=18|x=410|y=20|size=18|outline=2|outlinecolor=0|text=<贵族特权/FCOLOR=251>>
-<RText|id=进度条|x=<$str(N$进度条X)>|y=98|size=16|outline=2|outlinecolor=0|text=<$str(S$充值进度显示)>>
+<RText|id=标题文字|size=18|x=410|y=25|size=18|outline=2|outlinecolor=0|text=<贵族特权/FCOLOR=251>>
+<Img|id=lineBg|x=282|y=110|children={进度条文字}|img=public/sf1/2/lineK.png>
+<RText|id=进度条文字|x=<$str(N$进度条X)>|y=2|size=16|outline=2|outlinecolor=0|text=<$str(S$充值进度显示)>>
 <Button|id=cash|x=650|y=90.0|color=161|nimg=public/sf1/2/zanz/btnn1.png|pimg=public/sf1/2/zanz/btnn2.png|text=立即充值|link=@充值界面>
 
 <$str(S$切换界面按钮)>
@@ -201,30 +201,6 @@ inc N$展示起点 1
 inc N$展示图片 1
 goto @创建展示图片
 
-; [@123]
-; #if
-; #act
-; GetListString ..\QuestDiary\赞助系统\图片播放.txt <$str(N$展示图片)> S$展示图片img
-
-; #if
-; equal <$str(S$ID)> <$str(N$展示图片)>
-; #act
-; sendmsg 5 1id:<$str(S$ID)>
-; inc S$主面板 <Button|id=1_<$str(N$展示图片)>|x=0|y=0|width=240|height=150|nimg=public/sf1/2/zanz/<$str(S$展示图片img)>.png|link=@123#ID=<$str(N$展示图片)>>
-; #elseact
-; sendmsg 5 2id:<$str(S$ID)>
-
-; inc S$主面板 <Button|id=1_<$str(N$展示图片)>|x=0|y=0|width=220|height=130|nimg=public/sf1/2/zanz/<$str(S$展示图片img)>.png|link=@123#ID=<$str(N$展示图片)>>
-
-; #if
-; not equal <$str(S$展示图片img)>
-; ; small <$str(N$展示图片)> 8
-; #act
-; inc N$展示图片 1
-; goto @123
-; #elseact
-; ; goto @切换会员界面
-
 
 [@购买礼包]
 #if
@@ -238,7 +214,7 @@ break
 
 goto @获取数据
 
-GetValidstr <$STR(S$<$str(S$礼包价格)>)> * S$货币类型 S$货币数量
+GetValidstr <$STR(S$<$str(S$礼包价格)>)> x S$货币类型 S$货币数量
 
 #if
 check [<$str(S$首次购买标记)>] 1
@@ -281,7 +257,7 @@ goto @切换会员界面
 #if
 #act
 GetValidstr <$STR(S$<$str(S$礼包类型)>)> & S$礼包串 S$<$str(S$礼包类型)>
-GetValidstr <$STR(S$礼包串)> * S$礼包道具 S$礼包道具数量
+GetValidstr <$STR(S$礼包串)> x S$礼包道具 S$礼包道具数量
 
 MailGIVE <$STR(S$礼包道具)> <$STR(S$礼包道具数量)> 1#4#5#6#8
 ; sendmsg 5 发放道具::::<$str(S$礼包道具)>+++++<$str(S$礼包道具数量)>
@@ -384,9 +360,10 @@ ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(N$赞助道具界面)> <$
 #if
 #act
 GetValidstr <$STR(S$<$str(S$礼包类型)>)> & S$礼包串 S$<$str(S$礼包类型)>
-GetValidstr <$STR(S$礼包串)> * S$礼包道具 S$礼包道具数量
+GetValidstr <$STR(S$礼包串)> x S$礼包道具 S$礼包道具数量
 GetDBItemFieldValue <$STR(S$礼包道具)> idx S$礼包道具idx
-
+; sendmsg 5 -----<$STR(S$<$str(S$礼包类型)>)>
+; sendmsg 5 =====<$STR(S$礼包道具)>===<$str(S$礼包道具idx)>
 #if
 #act
 inc S$主面板 <Img|id=logo1|x=245|y=10|img=public/sf1/2/zanz/<$str(S$小图标img)>.png>
@@ -417,7 +394,7 @@ inc S$主面板 <RText|id=标题4|x=420|y=3|size=18|outline=2|outlinecolor=0|text=<<$
 inc S$主面板 <RText|id=标题5|x=535|y=3|size=18|outline=2|outlinecolor=0|text=<<$str(S$会员名字4)>/FCOLOR=251>>
 inc S$主面板 <Img|id=1_<$str(N$详情序号)>|children={属性<$str(N$详情序号)>,2_<$str(N$详情序号)>,3_<$str(N$详情序号)>,4_<$str(N$详情序号)>,5_<$str(N$详情序号)>}|img=public/sf1/2/zanz/gap.png>
 
-inc S$主面板 <RText|id=属性<$str(N$详情序号)>|x=10|y=0|size=16|outline=2|outlinecolor=0|text=<<$str(S$属性名字)>/FCOLOR=161>>
+inc S$主面板 <RText|id=属性<$str(N$详情序号)>|x=10|y=0|size=16|outline=2|outlinecolor=0|text=<<$str(S$属性名字)>/FCOLOR=154>>
 ; inc S$主面板 <RText|id=属性<$str(N$详情序号)>|x=10|y=0|size=16|outline=2|outlinecolor=0|text=<<$str(S$属性名字)>/FCOLOR=161>>
 goto @赞助奖励特权详情
 
@@ -441,15 +418,16 @@ ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt 1 <$str(S$属性名字)> S$特
 ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt 2 <$str(S$属性名字)> S$特权属性详情3
 ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt 3 <$str(S$属性名字)> S$特权属性详情4
 ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt 4 <$str(S$属性名字)> S$特权属性详情5
+
 SetStringBlank S$特权属性详情2 10 0
 SetStringBlank S$特权属性详情3 10 0
 SetStringBlank S$特权属性详情4 10 0
 SetStringBlank S$特权属性详情5 10 0
 
-inc S$主面板 <RText|id=2_<$str(N$详情序号)>|x=170|y=0|size=16|outline=2|outlinecolor=0|text=<<$str(S$特权属性详情2)>/FCOLOR=161>>
-inc S$主面板 <RText|id=3_<$str(N$详情序号)>|x=290|y=0|size=16|outline=2|outlinecolor=0|text=<<$str(S$特权属性详情3)>/FCOLOR=161>>
-inc S$主面板 <RText|id=4_<$str(N$详情序号)>|x=415|y=0|size=16|outline=2|outlinecolor=0|text=<<$str(S$特权属性详情4)>/FCOLOR=161>>
-inc S$主面板 <RText|id=5_<$str(N$详情序号)>|x=535|y=0|size=16|outline=2|outlinecolor=0|text=<<$str(S$特权属性详情5)>/FCOLOR=161>>
+inc S$主面板 <RText|id=2_<$str(N$详情序号)>|x=170|y=0|size=16|outline=2|outlinecolor=0|text=<<$str(S$特权属性详情2)>/FCOLOR=154>>
+inc S$主面板 <RText|id=3_<$str(N$详情序号)>|x=290|y=0|size=16|outline=2|outlinecolor=0|text=<<$str(S$特权属性详情3)>/FCOLOR=154>>
+inc S$主面板 <RText|id=4_<$str(N$详情序号)>|x=415|y=0|size=16|outline=2|outlinecolor=0|text=<<$str(S$特权属性详情4)>/FCOLOR=154>>
+inc S$主面板 <RText|id=5_<$str(N$详情序号)>|x=535|y=0|size=16|outline=2|outlinecolor=0|text=<<$str(S$特权属性详情5)>/FCOLOR=154>>
 
 
 #if

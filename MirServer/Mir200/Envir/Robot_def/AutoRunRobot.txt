@@ -105,7 +105,7 @@ equal 变量 数值 ;如果“变量 = 数据”则为1否则为0
 #AutoRun NPC MIN 180 @800125104制作
 
 
-#AutoRun NPC HOUR 1 @增加会员V值
+; #AutoRun NPC HOUR 1 @增加会员V值
 
 
 

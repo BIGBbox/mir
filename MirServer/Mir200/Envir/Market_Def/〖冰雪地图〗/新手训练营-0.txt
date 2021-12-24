@@ -1,0 +1,14 @@
+[@main]
+#IF
+CHECKLEVELEX < 100
+#ACT
+mapmove 新手训练营 24 26
+;give 回城卷 1
+SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖新手训练营〗！ 1 3
+;SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖新手训练营〗！ 1 3
+;GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖新手训练营〗！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖新手训练营〗！
+break
+#ELSEACT
+MESSAGEBOX 你大于100级，无法进入！
+BREAK

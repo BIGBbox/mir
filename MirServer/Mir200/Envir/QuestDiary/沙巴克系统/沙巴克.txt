@@ -13,10 +13,10 @@ goto @沙巴克主面板
 #act
 #say
 <Img|x=0|y=0|width=9999|height=9999|children={狂暴状态主面板}|img=public/0.png|bg=1|link=@exit>
-<Img|id=狂暴状态|x=210|y=30|img=public/sf1/2/bg3.png|children={内框背景,标题,小标题,okBtn,okBtn1,标记1,标记2,标记3,标记4,标记5,标记6,标记7,标记8,标记9,标记10,标记11,列表1,列表2,列表3,列表4,列表5,列表6,官位背景,升级条件1,获取途径控件,closeBtn}|reset=1|link=@>
-<Img|id=内框背景|x=187|y=80|width=505|height=440|img=public/haha/ty_bg.png>
-<Button|id=closeBtn|x=705|y=65.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|id=标题|x=180|y=45|color=255|size=18|text=沙城争霸>
+<Img|id=狂暴状态|x=210|y=30|width=790|height=565|img=public/sf1/2/Bg.png|children={内框背景,标题,小标题,okBtn,okBtn1,标记1,标记2,标记3,标记4,标记5,标记6,标记7,标记8,标记9,标记10,标记11,列表1,列表2,列表3,列表4,列表5,列表6,官位背景,升级条件1,获取途径控件,closeBtn}|reset=1|link=@>
+; <Img|id=内框背景|x=187|y=80|width=505|height=440|img=public/haha/ty_bg.png>
+<Button|id=closeBtn|x=760|y=55.0|nimg=public/sf1/2/btn_close.png|link=@exit>
+<Text|id=标题|x=355|y=52|color=251|size=18|text=沙城争霸>
 
 <$str(S$按钮列表)>
 <$str(S$主界面)>
@@ -32,8 +32,8 @@ mov S$当前界面 传送
 mov S$货币类型 元宝
 
 mov S$击杀奖励 <攻击提高70-70,获得1.1倍攻击,打怪爆率提升15%,回收加成20%,/FCOLOR=161>
-inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=沙城传送|link=@切换界面1>
-inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=攻城奖励|link=@切换界面2>
+inc S$按钮列表 <Button|id=列表1|x=10|y=90.0|width=133|height=40|nimg=public/sf1/2/btn_11.png|color=161|size=17|text=沙城传送|link=@切换界面1>
+inc S$按钮列表 <Button|id=列表2|x=10|y=130.0|width=133|height=40|nimg=public/sf1/2/btn_11_1.png|color=161|size=17|text=攻城奖励|link=@切换界面2>
 
 goto @创建主界面
 
@@ -46,8 +46,8 @@ mov S$按钮列表
 mov S$当前界面 领取
 
 mov S$击杀奖励 <攻击提高80-80,获得1.2倍攻击,打怪爆率提升15%,回收加成20%,/FCOLOR=161>
-inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=沙城传送|link=@切换界面1>
-inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=攻城奖励|link=@切换界面2>
+inc S$按钮列表 <Button|id=列表1|x=10|y=90.0|width=133|height=40|nimg=public/sf1/2/btn_11_1.png|color=161|size=17|text=沙城传送|link=@切换界面1>
+inc S$按钮列表 <Button|id=列表2|x=10|y=130.0|width=133|height=40|nimg=public/sf1/2/btn_11.png|color=161|size=17|text=攻城奖励|link=@切换界面2>
 goto @创建主界面
 
 
@@ -128,7 +128,7 @@ messagebox 你当前已经是满状态了！
 BREAK
 
 #if
-not checkmoney RMB点 < 10
+checkmoney RMB点 < 10
 #act
 MESSAGEBOX 你个穷鬼，别来烦我！
 break
@@ -137,6 +137,7 @@ break
 #act
 HUMANHP = <$MAXHP>
 HUMANMP = <$MAXMP>
+money RMB点 - 10
 sendmsg 7 你已经被我治疗好了,去活动下试试吧！！
 
 

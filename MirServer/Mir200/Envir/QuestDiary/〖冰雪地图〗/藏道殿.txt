@@ -23,12 +23,12 @@ goto @藏道殿主界面
 <Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=255|size=18|text=------------------------------------------------->
 <Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=254|size=18|text=千重劫，百世难，亘古匆匆，弹指间。>
 <Text|a=0|x=32.0|y=107.0|tipsx=10|tipsy=80|color=253|size=18|text=本图共7层，清完本层所有怪才可进入下一层！>
-<Text|a=0|x=32.0|y=130.0|tipsx=10|tipsy=80|color=250|size=18|text=本地图怪物相当变态，爆率相当变态，3转以上组队2人以上队长点击才可进入！>
+; <Text|a=0|x=32.0|y=130.0|tipsx=10|tipsy=80|color=250|size=18|text=本地图怪物相当变态，爆率相当变态，3转以上组队2人以上队长点击才可进入！>
 <Text|a=0|x=32|y=165|tipsx=10|tipsy=80|color=58|size=18|text=HOT~>
-<Text|a=0|x=111.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=花5000元宝+三转组队进入|link=@CHUN21通天1>
-<Text|a=0|x=363.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=黄金赞助免费进入|link=@CHUN21通天2>
-<Text|a=0|x=32.0|y=196.0|tipsx=10|tipsy=80|color=255|size=18|text=我不想组队也没有3转以上但是就是想进去涨涨见识>
-<Text|a=0|x=441.0|y=195.0|tipsx=10|tipsy=80|color=251|size=18|text=花1万元宝进去参观一下|link=@CHUN21通天3>
+<Text|a=0|x=111.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=花5000灵符+一转组队进入|link=@CHUN21通天1>
+<Text|a=0|x=363.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=蓝钻贵族免费进入|link=@CHUN21通天2>
+<Text|a=0|x=32.0|y=196.0|tipsx=10|tipsy=80|color=255|size=18|text=我不满足任何条件但是就是想进去涨涨见识>
+<Text|a=0|x=401.0|y=195.0|tipsx=10|tipsy=80|color=251|size=18|text=花1万灵符进去参观一下|link=@CHUN21通天3>
 
 <Button|x=515|y=25.0|nimg=public/icon/common1087.png|link=@显示掉落>
 <$str(S$掉落显示窗口)>
@@ -41,46 +41,46 @@ equal U22 3
 equal U22 2
 equal U22 1
 #ACT
-;give 回城卷 1
-MapMove cd1
+
+MapMove 通天塔一层
 SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！ 1 3
 
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！
 break
 #elseact
-SendMsg 7 你还不是我们的白金赞助！
+SendMsg 7 你还不是蓝钻贵族！无法进入！
 break
 
 [@chun21通天3]
 #if
-CHECKGAMEGOLD > 9999
+checkmoney 灵符 > 9999
 #ACT
-;give 回城卷 1
-GAMEGOLD - 10000
-MapMove cd1
+
+money 灵符 - 10000
+MapMove 通天塔一层
 SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！ 1 3
 
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！
 break
 #elseact
-SendMsg 7 你元宝不足,不能进入！
+SendMsg 7 你灵符不足,不能进入！
 break
 
 
 [@chun21通天1]
 #if
 ISGROUPMASTER
-CHECKRENEWLEVEL > 2
-CHECKGAMEGOLD > 4999
+CHECKRENEWLEVEL > 0
+checkmoney 灵符 > 4999
 #ACT
-;give 回城卷 1
-GAMEGOLD - 5000
-GROUPMAPMOVE cd1 23 20 1 @GROUPMAPMOVE
+
+money 灵符 - 5000
+GROUPMAPMOVE 通天塔一层 23 20 1 0 @GROUPMAPMOVE
 SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！ 1 3
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖通天塔〗,寻找高级装备！
 break
 #elseact
-SendMsg 7 你没有组队，或者元宝不足/或者没有3转！
+SendMsg 7 你没有组队，或者灵符不足/或者没有1转！
 break
 
 [@显示掉落]

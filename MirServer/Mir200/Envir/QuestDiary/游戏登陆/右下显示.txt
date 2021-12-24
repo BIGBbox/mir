@@ -2,25 +2,79 @@
 {
 #IF
 #ACT
-;delbutton 105 98
-;delbutton 105 99
 
 #Call [\Mobile\特殊NPC\TOP图标.txt] @导航
 ;#CALL [\游戏登陆\顶部属性.txt] @顶部属性显示
 ;delaygoto 50 @更新顶部属性显示
+; ReadConfigFileItem ..\QuestDiary\会员系统\会员数据.txt <$str(U9)> 会员V值 S$会员V值
+mov N$V点额外恢复 0
+mov N$额外回收加成 0
+mov N$贵族鞭尸特权 0
+mov N$倍攻 100
+mov N$经验加成 100
+
+#if
+large <$str(U98)> 0
+#act
+
+ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(U98)> 会员V点恢复/时 S$V点额外恢复
+ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(U98)> 额外回收比例 S$额外回收加成
+ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(U98)> 贵族鞭尸特权 S$贵族鞭尸特权
+
+; S$贵族鞭尸特权
+AnsiReplaceText S$贵族鞭尸特权 鞭尸+ 
+AnsiReplaceText S$贵族鞭尸特权 %
+AnsiReplaceText S$V点额外恢复 恢复+
+AnsiReplaceText S$额外回收加成 %
+
+inc N$V点额外恢复 <$str(S$V点额外恢复)>
+inc N$额外回收加成 <$str(S$额外回收加成)>
+inc N$贵族鞭尸特权 <$str(S$贵族鞭尸特权)>
+
+
+#if
+large <$str(U9)> 0
+#act
+mov N$V点恢复 5
+
+#if
+large <$str(U98)> 0
+large <$str(U9)> 0
+#act
+inc N$V点恢复 <$str(N$V点额外恢复)>
+
+#if
+check [58] 1
+#act
+inc N$倍攻 20
+inc N$额外回收加成 20
+
+#if
+check [59] 1
+#act
+inc N$倍攻 10
+inc N$额外回收加成 20
+
+#if
+#act
+
+mul N$经验加成 <$KILLMONEXPRATE>
+dec N$经验加成 100
+
+
 
 #IF
 #ACT
 mov S$btn <Button|id=100|children=100_1|x=5|y=-40|nimg=official/top/1900012531.png|pimg=public/sf1/1/99999.png|link=@显示>
-mov S$小面板str <Img|img=public/sf1/1/01543_2.png|x=5|y=-5|children={close_btn,up,dn,jp,page,all,称号信息}>
+mov S$小面板str <Img|img=public/sf1/2/zuoXia.png|x=5|y=-5|children={close_btn,up,dn,jp,page,all,称号信息}>
 INC S$小面板str <Img|id=称号信息|children={文本框1,文本框2,文本框3,文本框4,文本框5,文本框6,文本框7,文本框8,文本框9,100}|x=0|y=0.0|height=1|width=1|img=public/0.png>
 INC S$小面板str <Button|id=100|x=0|y=-35|nimg=official/top/1900012532.png|pimg=official/top/0.png|link=@隐藏>
-INC S$小面板str <Text|id=文本框1|text=<$STR(N$装备经验)>%|x=85|y=2|size=15>
-INC S$小面板str <Text|id=文本框2|text=<$STR(N$怪物额外伤害)>%|x=85|y=25|size=15>
-INC S$小面板str <Text|id=文本框3|text=<$STR(N$魔法切割)>%|x=85|y=48|size=15>
-INC S$小面板str <Text|id=文本框4|text=<$STR(N$道术切割)>%|x=85|y=71|size=15>
-INC S$小面板str <Text|id=文本框5|text=<$STR(N$游戏吸收显示)>%|x=85|y=94|size=15>
-INC S$小面板str <Text|id=文本框6|text=<$STR(N$装备倍攻)>%|x=85|y=117|size=15>
+INC S$小面板str <Text|id=文本框1|text=<$str(N$经验加成)>%|x=82|y=0|size=15>
+INC S$小面板str <Text|id=文本框2|text=<$STR(N2)>%|x=82|y=22|size=15>
+INC S$小面板str <Text|id=文本框3|text=<$str(N$倍攻)>%|x=82|y=44|size=15>
+INC S$小面板str <Text|id=文本框4|text=<$STR(N$贵族鞭尸特权)>%|x=82|y=65|size=15>
+INC S$小面板str <Text|id=文本框5|text=<$str(N$V点恢复)>/H|x=82|y=86|size=15>
+INC S$小面板str <Text|id=文本框6|text=<$STR(N$额外回收加成)>%|x=82|y=107|size=15>
 addbutton 105 98 <$STR(S$小面板str)>
 
 [@显示]

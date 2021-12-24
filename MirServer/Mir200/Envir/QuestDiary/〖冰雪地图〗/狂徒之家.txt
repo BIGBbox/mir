@@ -23,7 +23,7 @@ goto @狂徒之家主界面
 <Text|a=0|ax=0|x=120.0|y=50.0|tipsx=10|tipsy=80|color=70|size=18|text=地图一共两层,散人成长的殿堂！！>
 <Text|a=0|x=20.0|y=75.0|tipsx=10|tipsy=80|color=250|size=18|text=[刷新时间]：>
 <Text|a=0|ax=0|x=120.0|y=75.0|tipsx=10|tipsy=80|color=70|size=18|text=普通怪10分钟，Boss1小时>
-<Text|a=0|ax=0|x=20.0|y=100.0|tipsx=10|tipsy=80|color=244|size=18|text=118级以下玩家免费进入！！>
+<Text|a=0|ax=0|x=20.0|y=100.0|tipsx=10|tipsy=80|color=244|size=18|text=进阶之路，怪物比较凶猛，最少需要85级玩家才能免费进入！！>
 <Button|x=515|y=25.0|nimg=public/icon/common1087.png|link=@显示掉落>
 <Text|a=0|x=220.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=狂徒之家|link=@狂徒之家按钮>
 <$str(S$掉落显示窗口)>
@@ -32,15 +32,15 @@ goto @狂徒之家主界面
 
 [@狂徒之家按钮]
 #if
-CHECKLEVELEX < 118
+CHECKLEVELEX > 84
 #ACT
-give 回城卷 1
-MapMove mhtt1 177 20
+
+MapMove 狂徒之家 177 20
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖狂徒之家〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖狂徒之家〗,寻找高级装备！
 break
 #ELSEACT
-MESSAGEBOX 您的等级太高了,大姥级别了还欺负新人去？
+MESSAGEBOX 等级不足85级！去升升级再来吧！
 BREAK
 
 

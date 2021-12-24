@@ -3,7 +3,8 @@
 #IF
 ISNEWHUMAN
 #ACT
-GuildNoticeMsg 151 249 欢迎新人玩家〖<$USERNAME>〗进入２０１⒎最新独家<$SERVERNAME>。
+; GuildNoticeMsg 151 249 欢迎新人玩家〖<$USERNAME>〗进入２０１⒎最新独家<$SERVERNAME>。
+#CALL [\游戏登陆\新人触发.txt] @新人赠送
 
 
 
@@ -15,86 +16,22 @@ SENDMSG 0 号令天下的沙城主『<$USERNAME>』进入了<$SERVERNAME>!
 #if
 #act
 ;贵族称号
-SetIcon 8 0 00009<$str(U98)> 0 -10 0 0
+SetIcon 8 1 1201<$str(U98)> -80 -100 0 0
+
 
 #if
 check [59] 1
 #act
 ;狂暴称号
-SETICON 0 1 12000 0 -50 0 0
-ChangeHumAbility 5 + 88
-ChangeHumAbility 6 + 88
-ChangeHumAbility 7 + 88
-ChangeHumAbility 8 + 88
-ChangeHumAbility 9 + 88
-ChangeHumAbility 10 + 88
+SETICON 0 1 12006 -152 -100 0 0
+
 
 
 #if
 check [58] 1
 #act
 ;疾风称号
-SETICON 1 2 12000 0 -80 0 0
-
-#IF
-equal T13 雄霸天下
-#act
-SETICON 2 0 000025 0 -100 0 0
-
-
-#IF
-equal T13 万夫莫敌
-#act
-SETICON 2 0 000036 0 -100 0 0
-
-#IF
-equal T13 一品统帅
-#act
-SETICON 2 0 000049 0 -100 0 0
-
-#IF
-equal T13 二品将军
-#act
-SETICON 2 0 000039 0 -100 0 0
-
-#IF
-equal T13 三品大将
-#act
-SETICON 2 0 000038 0 -100 0 0
-
-
-#IF
-equal T13 四品参将
-#act
-SETICON 2 0 000042 0 -100 0 0
-
-
-#IF
-equal T13 五品左领
-#act
-SETICON 2 0 000045 0 -100 0 0
-
-#IF
-equal T13 六品护卫
-#act
-SETICON 2 0 000044 0 -100 0 0
-
-#IF
-equal T13 七品前锋
-#act
-SETICON 2 0 000046 0 -100 0 0
-
-#IF
-equal T13 八品骑士
-#act
-SETICON 2 0 000047 0 -100 0 0
-
-
-#IF
-equal T13 九品仕郎
-#act
-SETICON 2 0 000043 0 -100 0 0
-
+SETICON 1 2 12007 -45 -30 0 0
 
 
 

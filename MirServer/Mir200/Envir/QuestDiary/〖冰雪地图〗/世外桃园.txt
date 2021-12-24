@@ -62,8 +62,8 @@ money 绑定元宝 - 1000
 
 #if
 #ACT
-give 回城卷 1
-MapMove ymxy1
+
+MapMove 世外桃源
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖世外桃源〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖世外桃源〗,寻找高级装备！
 

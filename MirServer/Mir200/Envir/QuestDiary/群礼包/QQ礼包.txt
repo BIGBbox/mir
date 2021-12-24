@@ -1,0 +1,59 @@
+[@领取QQ]
+{
+
+#IF
+#ACT
+#SAY
+
+<Img|img=public/sf1/1/01440.png|x=200|y=100|children={close_btn,click_btn,二维码,rightTips,gable_item1,gable_item2,gable_item3}|bg=1|reset=1|move=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=839|y=195|nimg=public/sf1/2/00009.png|pimg=public/sf1/2/00011.png|width=38|height=38|link=@exit>
+<Text|id=rightTips|x=300|y=280|color=250|size=16|text=QQ群：615107610>
+<Img|id=gable_item1|children={下方礼包1}|x=335|y=195|width=60|height=60|img=public/sf1/19/itemBg1.png>
+<ItemShow|id=下方礼包1|x=-2|y=-2|itemid=6|itemcount=200000|showtips=1|color=250|scale=1.3>
+<Img|id=gable_item2|children={下方礼包2}|x=410|y=195|width=60|height=60|img=public/sf1/19/itemBg1.png>
+<ItemShow|id=下方礼包2|x=-2|y=-2|itemid=101506|itemcount=50|showtips=1|color=250|scale=1.3>
+<Img|id=gable_item3|children={下方礼包3}|x=485|y=195|width=60|height=60|img=public/sf1/19/itemBg1.png>
+<ItemShow|id=下方礼包3|x=-2|y=-2|itemid=60003|itemcount=1|showtips=1|color=250|scale=1.3>
+
+;<Img|id=二维码|img=public/sf1/1/weixinma.png|width=108|height=108|x=480|y=220>
+<Button|id=click_btn|x=380|y=310|nimg=public/sf1/1/01441.png|pimg=public/sf1/1/01443.png|tips=|tipsx=10|tipsy=80|size=18|color=249|link=@@InPutString10(请输入QQ兑换码)>
+
+
+[@InPutString10]
+
+#or
+not equal <$STR(S10)> 666666
+CheckContainsText <$STR(T8)> _QQ群礼包
+#act
+messagebox 领取失败??\\1、输入错误,请重新输入!\2、已经领取过!
+break
+
+
+#if
+equal <$STR(S10)> 666666
+#act
+inc T8 _QQ群礼包
+
+give 攻[吸血+1] 1
+CHANGEEXP + 200000
+GiveStateItem 小还丹 50 0 1 0 0 1 1 1 1
+
+SendMail 1 系统奖励 你好<$USERNAME>QQ礼包已发放到你的邮箱,请尽快提取!!
+
+; #Call [\Mobile\特殊NPC\TOP图标.txt] @导航
+NEWCOMPLETETASK 20
+NEWDELETETASK 20
+#CALL [\任务系统\任务文本.txt] @接取任务
+SENDMSG 0 {玩家|116:39:0}{[<$USERNAME>]|254:39:0}{成功领取|116:39:0}{QQ群礼包|253:39:0}
+close
+
+#if
+CheckContainsText <$STR(T8)> _QQ群礼包
+not CheckContainsText <$STR(T8)> _微信群礼包
+#act
+#CALL [\群礼包\微信礼包.txt] @领取微信
+
+
+
+}

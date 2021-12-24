@@ -1,48 +1,4 @@
-(@@InPutString @@InPutInteger)
 [@main]
-#IF
-equal <$CLIENTFLAG> 1
-#say
-<Img|x=0.0|y=0.0|width=450|height=200|rotate=0|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_01.png|reset=1>
-<Layout|x=428.0|y=3.0|width=80|height=80|link=@exit>
-<Button|x=450.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=62.0|y=23.0|tipsx=10|tipsy=80|color=254|size=13|text=大型公益>
-<Text|a=0|x=162.0|y=22.0|tipsx=10|tipsy=80|color=253|size=13|text=≡≡【冰雪之城】≡≡>
-<Text|a=0|x=330.0|y=23.0|tipsx=10|tipsy=80|color=254|size=13|text=小极品新版本>
-<Text|a=0|x=55.0|y=43.0|tipsx=10|tipsy=80|color=9|size=13|text=------------------------------------------------------------------>
-<Text|a=0|x=48.0|y=63.0|tipsx=10|tipsy=80|color=154|size=13|text=新人加入官方QQ商贸群平台.即可兑换超级大礼包!方便快捷>
-<Text|a=0|x=48.0|y=83.0|tipsx=10|tipsy=80|color=70|size=13|text=获取方法:点击加入QQ商贸群平台，进群有提示或看群公告即可>
-<Text|a=0|x=48.0|y=103.0|tipsx=10|tipsy=80|color=249|size=13|text=QQ群专属特权来啦赶快加入我们吧~QQ群：28026931>
-<Text|a=0|x=55.0|y=123.0|tipsx=10|tipsy=80|color=9|size=13|text=------------------------------------------------------------------>
-<Text|a=0|x=50.0|y=151.0|tipsx=10|tipsy=80|color=250|size=13|text=免费领取QQ礼包:>
-<Text|a=0|x=178.0|y=151.0|tipsx=10|tipsy=80|color=243|size=13|text=1.5倍爆率勋章>
-<Text|a=0|x=296.0|y=151.0|tipsx=10|tipsy=80|color=251|size=13|text=点击兑换QQ群礼包|link=@测试>
-
-#elsesay
-<Img|width=620|height=220|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=32|y=25|tipsx=10|tipsy=80|color=254|size=18|text=大型公益>
-<Text|a=0|x=120|y=25|tipsx=10|tipsy=80|color=253|size=18|text=≡≡【冰雪之城】≡≡>
-<Text|a=0|x=340|y=25|tipsx=10|tipsy=80|color=254|size=18|text=小极品新版本>
-<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=9|size=18|text=--------------------------------------------------------->
-<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=154|size=18|text=新人加入官方QQ商贸群平台.即可兑换超级大礼包!方便快捷>
-<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=70|size=18|text=获取方法:点击加入QQ商贸群平台，进群有提示或看群公告即可>
-<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=249|size=18|text=QQ群专属特权来啦赶快加入我们吧~QQ群：28026931>
-<Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=9|size=18|text=--------------------------------------------------------->
-<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=250|size=18|text=免费领取QQ礼包:>
-<Text|a=0|x=197|y=145|tipsx=10|tipsy=80|color=243|size=18|text=1.5倍爆率勋章>
-<Text|a=0|x=340|y=145|tipsx=10|tipsy=80|color=251|size=18|text=点击兑换QQ群礼包|link=@测试>
-
-
-[@测试]
-
 #if
 #act
-SENDDELAYMSG 你的礼物在%s后到达 300 255 0 @给礼物
-
-[@给礼物]
-#ACT
-GIVE 布衣(男)
-
-
+#CALL [\群礼包\QQ礼包.txt] @领取QQ

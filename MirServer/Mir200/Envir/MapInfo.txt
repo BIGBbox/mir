@@ -220,8 +220,6 @@
 
 [d001 兽人古墓一层] onkillmon  dark
 [d002 兽人古墓二层] onkillmon  dark
-[dm001 奸商] onkillmon  dark fight
-[dm002 国王陵墓] onkillmon  dark
 [d003  兽人古墓三层] onkillmon  dark
 
 0   147 33    -> d001   155 358
@@ -238,11 +236,9 @@ d002  324 15  -> d001   381 24
 d001  350 356 -> d002   367 351
 d002  367 350 -> d001   350 357
 
-d002  191 231 -> dm001  5 10
-dm001 6 10    -> d002   191 232
 
-d002  225 175 -> dm002  8 28
-dm002 7 28    -> d002  225 176
+
+
 
 d002  117 95  -> d003  106 83
 d003  106 82  -> d002  117 96
@@ -2589,196 +2585,196 @@ h203  77 15  ->  h204 50 50
 [erji1|q004 请设置二级密保] onkillmon  safe norecall noguildrecall nodearrecall nomasterrecall norandommove nothrowitem notallowuseitems(回城卷|回城石|随机石) notallowusemagic(治愈术|群体治愈术|瞬息移动|野蛮冲撞|火墙|行会召唤) 
 [xinr1|t118 新人出生地] onkillmon  safe norecall noguildrecall nodearrecall nomasterrecall norandommove nothrowitem notallowuseitems(回城卷|回城石|随机石) notallowusemagic(治愈术|群体治愈术|瞬息移动|野蛮冲撞|火墙|行会召唤) 
 
-[qdmg|d2073 起点迷宫] noreconnect(0159) 
+[起点迷宫|d2073 起点迷宫] noreconnect(0159) 
 [mgsd|d024  起点神殿] noreconnect(0159)
 
-[byxy|jz001  冰之雪崖] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[dxzec|jz002 冰之雪窑] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[dxzsc|jz006 冰封通道] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[dxzdc|jmzc  冰封王座] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[冰之雪崖|jz001  冰之雪崖] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[冰之雪窑|jz002 冰之雪窑] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[冰封通道|jz006 冰封通道] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[冰封王座|jmzc  冰封王座] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
 
-[qshl1|d2079  皇陵广场] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[qshl2|f008   皇陵甬道] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[qshl3|r001   安息之地] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[qshl4|d515   秦皇陵墓] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[皇陵广场|d2079  皇陵广场] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[皇陵甬道|f008   皇陵甬道] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[安息之地|r001   安息之地] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[秦皇陵墓|d515   秦皇陵墓] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
 
 
-[heian1|d2067   黑暗魔窑一层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[heian2|d2051   黑暗魔窑二层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[heian3|d2061   黑暗魔窑三层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[heian4|d2052   黑暗魔窑底层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[黑暗魔窑一层|d2067   黑暗魔窑一层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[黑暗魔窑二层|d2051   黑暗魔窑二层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[黑暗魔窑三层|d2061   黑暗魔窑三层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[黑暗魔窑底层|d2052   黑暗魔窑底层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
 
-heian1   155  160 ->  heian2 108 183
-heian1   156  161 ->  heian2 108 183
-heian2   108  183 ->  heian1 156  161
-heian2   50   24  ->  heian3 152 186
-heian3   152 186  ->  heian2   50   24
-heian3   18  176  ->  heian4   92   76
-heian4   92   76  ->  heian3   18  176
-heian4   93   75  ->  heian3   18  176
+黑暗魔窑一层   155  160 ->  黑暗魔窑二层 108 183
+黑暗魔窑一层   156  161 ->  黑暗魔窑二层 108 183
+黑暗魔窑二层   108  183 ->  黑暗魔窑一层 156  161
+黑暗魔窑二层   50   24  ->  黑暗魔窑三层 152 186
+黑暗魔窑三层   152 186  ->  黑暗魔窑二层   50   24
+黑暗魔窑三层   18  176  ->  黑暗魔窑底层   92   76
+黑暗魔窑底层   92   76  ->  黑暗魔窑三层   18  176
+黑暗魔窑底层   93   75  ->  黑暗魔窑三层   18  176
 
 
 
-[mhtt1|d2073 狂徒之家] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[mhtt2|d2079 狂徒大厅] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-mhtt1   371 377  ->  mhtt2   12 12
+[狂徒之家|d2073 狂徒之家] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[狂徒大厅|d2079 狂徒大厅] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+狂徒之家   371 377  ->  狂徒大厅   12 12
 
 
 
-[lmjd1|d10051  黄泉之路一] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[lmjd2|d2001   黄泉之路二] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[lmjd3|d10054  黄泉之路底] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[lmjd4|0139        九幽殿] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[黄泉之路一|d10051  黄泉之路一] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[黄泉之路二|d2001   黄泉之路二] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[黄泉之路底|d10054  黄泉之路底] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[九幽殿|0139        九幽殿] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
 
-[tzy|hero1 天之域] onkillmon nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
-[dzy|h007 地之域] onkillmon nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
+[天之域|hero1 天之域] onkillmon nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
+[地之域|h007 地之域] onkillmon nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
 
 
 
 
 
 
-[hwxd|xx003   海外仙岛] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
-[hdsd|jmzc      广寒宫] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
+[海外仙岛|xx003   海外仙岛] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
+[广寒宫|jmzc      广寒宫] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
 
-[xls1|d2009 血龙回廊] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[xls2|d2011 血龙大厅] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[xls3|d2013   血龙阁] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[xls4|f014    血龙殿] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[血龙回廊|d2009 血龙回廊] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[血龙大厅|d2011 血龙大厅] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[血龙阁|d2013   血龙阁] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[血龙殿|f014    血龙殿] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
 
-xls1   18  21  ->  xls2   86 91
+血龙回廊   18  21  ->  血龙大厅   86 91
 
-xls2   19  20  ->  xls3   82 83
+血龙大厅   19  20  ->  血龙阁   82 83
 
-xls3   21   25  ->  xls4   21  21
+血龙阁   21   25  ->  血龙殿   21  21
 
 
 
 
-[wld1|n111 神秘峡谷一层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[wld2|n110 神秘峡谷二层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[wld3|n104 神秘峡谷三层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[wld4|n103 神秘峡谷四层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[wld5|n112 神秘峡谷五层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[wld6|n102 神秘峡谷六层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[wld7|hero001 神秘山庄] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[神秘峡谷一层|n111 神秘峡谷一层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[神秘峡谷二层|n110 神秘峡谷二层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[神秘峡谷三层|n104 神秘峡谷三层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[神秘峡谷四层|n103 神秘峡谷四层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[神秘峡谷五层|n112 神秘峡谷五层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[神秘峡谷六层|n102 神秘峡谷六层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[神秘山庄|hero001 神秘山庄] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
 
 
 
-[m001|zy01  迷失地下基层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-[m002|zy02  迷失地下一层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
-[m003|zy03  迷失地下二层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
-[m004|zy05  迷失地下中殿] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
-[m005|zy06  迷失地下大殿] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
-[m006|zy07  迷失神迹] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
-[m007|zy07  迷失后宫] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
-[m008|0139  迷失领主之家] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
+[迷失地下基层|zy01  迷失地下基层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[迷失地下一层|zy02  迷失地下一层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
+[迷失地下二层|zy03  迷失地下二层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
+[迷失地下中殿|zy05  迷失地下中殿] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
+[迷失地下大殿|zy06  迷失地下大殿] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
+[迷失神迹|zy07  迷失神迹] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
+[迷失后宫|zy07  迷失后宫] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
+[迷失领主之家|0139  迷失领主之家] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
 
 
-m001   46   16  ->  m002   73 10
+迷失地下基层   46   16  ->  迷失地下一层   73 10
 
-m004   20   34  ->  m005   52  48
+迷失地下中殿   20   34  ->  迷失地下大殿   52  48
 
-m005   41   48  ->  m006   18 36 
-m005   89   26  ->  m006   12 29
+迷失地下大殿   41   48  ->  迷失神迹   18 36 
+迷失地下大殿   89   26  ->  迷失神迹   12 29
 
-m006   18 36  ->  m005   41   48
-m006   12 29  ->  m005   89   26 
+迷失神迹   18 36  ->  迷失地下大殿   41   48
+迷失神迹   12 29  ->  迷失地下大殿   89   26 
 
 
 
 
 
-[hdt1|d5073  囚魔炼狱一层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
-hdt1   60 9 ->  hdt2 20 23
-[hdt2|t139   囚魔炼狱底层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+[囚魔炼狱一层|d5073  囚魔炼狱一层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
+囚魔炼狱一层   60 9 ->  囚魔炼狱底层 20 23
+[囚魔炼狱底层|t139   囚魔炼狱底层] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石)
 
 
 
 
 
-[ymxy1|ey3 世外桃源] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
+[世外桃源|ey3 世外桃源] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
 
 
-[mhld|66 蛮荒领地] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
-[sjzc|90 冰雪之城] onkillmon   norecall noguildrecall nomasterrecall norandommove nothrowitem notallowuseitems(回城石|随机石) notallowusemagic(火墙) noreconnect(0159)
-sjzc   91 139 ->  sjj1 18 16
-sjzc   90 139 ->  sjj1 18 16
-sjzc   91 138 ->  sjj1 18 16
-sjzc   90 138 ->  sjj1 18 16
+[蛮荒领地|66 蛮荒领地] onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
+[冰雪之城|90 冰雪之城] onkillmon   norecall noguildrecall nomasterrecall norandommove nothrowitem notallowuseitems(回城石|随机石) notallowusemagic(火墙) noreconnect(0159)
+冰雪之城   91 139 ->  冰雪森林 18 16
+冰雪之城   90 139 ->  冰雪森林 18 16
+冰雪之城   91 138 ->  冰雪森林 18 16
+冰雪之城   90 138 ->  冰雪森林 18 16
 
 
-sjj1 79 26 ->  sjzc   90 138
-sjj1 79 25 ->  sjzc   90 138
-sjj1 78 26 ->  sjzc   90 138
-sjj1 78 25 ->  sjzc   90 138
+冰雪森林 79 26 ->  冰雪之城   90 138
+冰雪森林 79 25 ->  冰雪之城   90 138
+冰雪森林 78 26 ->  冰雪之城   90 138
+冰雪森林 78 25 ->  冰雪之城   90 138
 
 
-[sjj1|900 冰雪森林] nodearrecall onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
+[冰雪森林|900 冰雪森林] nodearrecall onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
 
 
-[mjld|h010 经典传奇之路] onkillmon  nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
-[xjsd|h010 起源冰城] nodearrecall onkillmon  nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
-[sgsd|h010 上古神殿] nodearrecall onkillmon  nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
+[经典传奇之路|h010 经典传奇之路] onkillmon  nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
+[起源冰城|h010 起源冰城] nodearrecall onkillmon  nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
+[上古神殿|h010 上古神殿] nodearrecall onkillmon  nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
 
 
-[hdsj|6    新世界] onkillmon  noguildrecall noreconnect(0159) decgamegold(1/20)  nodearrecall norandommove notallowuseitems(随机石) notallowusemagic(火墙)
+[新世界|6    新世界] onkillmon  noguildrecall noreconnect(0159) DECMONEY(12/1/20/@新世界检测)  nodearrecall norandommove notallowuseitems(随机石) notallowusemagic(火墙)
 
 
-[srsj|6    旧世界] onkillmon  nodearrecall noguildrecall noreconnect(0159) notallowusemagic(火墙)
+[旧世界|6    旧世界] onkillmon  nodearrecall noguildrecall noreconnect(0159) notallowusemagic(火墙)
 
 
 
-[jqpd|0139 激情泡点] onkillmon  noguildrecall noreconnect(0159) nodearrecall  norandommove notallowuseitems(随机石)
-[qmlw|d710 boss集中营] onkillmon  noguildrecall noreconnect(0159) nodearrecall  norandommove notallowuseitems(随机石) 
-qmlw   55 37 ->  qmlw 32 71
-qmlw   59 70 ->  qmlw 32 41
+[激情泡点|0139 激情泡点] onkillmon  noguildrecall noreconnect(0159) nodearrecall  norandommove notallowuseitems(随机石)
+[boss集中营|d710 boss集中营] onkillmon  noguildrecall noreconnect(0159) nodearrecall  norandommove notallowuseitems(随机石) 
+boss集中营   55 37 ->  boss集中营 32 71
+boss集中营   59 70 ->  boss集中营 32 41
 
-[fbjjd|t140 副本集结地] nodearrecall onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
-[lj1|bsrlm 王者单人副本] onkillmon  dark noreconnect(0159) nodearrecall
-[lj2|bsrlm 深渊单人副本] onkillmon  dark noreconnect(0159) nodearrecall
-[lj3|bsrlm 月牙岛单人副本] onkillmon  dark noreconnect(0159) nodearrecall
-[lj13|bsrlm 月牙岛团队副本] onkillmon  dark noreconnect(0159) nodearrecall
-[lj23|bsrlm 深渊团队副本] onkillmon  dark noreconnect(0159) nodearrecall
-[lj33|bsrlm 王者团队副本] onkillmon  dark noreconnect(0159) nodearrecall
+[副本集结地|t140 副本集结地] nodearrecall onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) 
+[王者单人副本|bsrlm 王者单人副本] onkillmon  dark noreconnect(0159) nodearrecall
+[深渊单人副本|bsrlm 深渊单人副本] onkillmon  dark noreconnect(0159) nodearrecall
+[月牙岛单人副本|bsrlm 月牙岛单人副本] onkillmon  dark noreconnect(0159) nodearrecall
+[月牙岛团队副本|bsrlm 月牙岛团队副本] onkillmon  dark noreconnect(0159) nodearrecall
+[深渊团队副本|bsrlm 深渊团队副本] onkillmon  dark noreconnect(0159) nodearrecall
+[王者团队副本|bsrlm 王者团队副本] onkillmon  dark noreconnect(0159) nodearrecall
 
-[sw1|d716 轮回之地一层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
-[sw2|d716 轮回之地二层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
-[sw3|d716 轮回之地三层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
-[sw4|d716 轮回之地四层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
-[sw5|d716 轮回之地五层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
-[sw6|d716 轮回之地六层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
-[sw7|d716 顶级轮回] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
+[轮回之地一层|d716 轮回之地一层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
+[轮回之地二层|d716 轮回之地二层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
+[轮回之地三层|d716 轮回之地三层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
+[轮回之地四层|d716 轮回之地四层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
+[轮回之地五层|d716 轮回之地五层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
+[轮回之地六层|d716 轮回之地六层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
+[顶级轮回|d716 顶级轮回] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
 
-[cd1|ev002 通天塔一层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
-[cd2|ev002 通天塔二层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
-[cd3|ev002 通天塔三层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
-[cd4|ev002 通天塔四层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
-[cd5|ev002 通天塔五层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
-[cd6|ev002 通天塔六层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
-[cd7|ev002 通天塔神殿] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
+[通天塔一层|ev002 通天塔一层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
+[通天塔二层|ev002 通天塔二层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
+[通天塔三层|ev002 通天塔三层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
+[通天塔四层|ev002 通天塔四层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
+[通天塔五层|ev002 通天塔五层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
+[通天塔六层|ev002 通天塔六层] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
+[通天塔神殿|ev002 通天塔神殿] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove notallowuseitems(随机传送卷|随机传送石)
 
-[hdcd|g003 活动场地] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove
+[活动场地|g003 活动场地] onkillmon  killfunc(31) noreconnect(0159) fight2 norecall nodearrecall noguildrecall nomasterrecall norandommove
 
-[bxsd|f007 冰城神殿] nodearrecall onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
+[冰城神殿|f007 冰城神殿] nodearrecall onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
 
-[qygd|d2078 起源宫殿] nodearrecall onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
+[起源宫殿|d2078 起源宫殿] nodearrecall onkillmon  noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
 
 
 
 
-[em1|f011 恶魔长廊] onkillmon nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
-[em2|f014 恶魔大厅] onkillmon nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
-[em3|f014 恶魔大殿] onkillmon nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
+[恶魔长廊|f011 恶魔长廊] onkillmon nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
+[恶魔大厅|f014 恶魔大厅] onkillmon nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
+[恶魔大殿|f014 恶魔大殿] onkillmon nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
 
-em1 100 101 -> em2 48 21
-em2 21 21 -> em3 48 21
+恶魔长廊 100 101 -> 恶魔大厅 48 21
+恶魔大厅 21 21 -> 恶魔大殿 48 21
 
 
 
 
-[zzly|h010 至尊领域] onkillmon  nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
-[wzly|h010 王者领域] onkillmon  nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
+[至尊领域|h010 至尊领域] onkillmon  nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
+[王者领域|h010 王者领域] onkillmon  nodearrecall noguildrecall noreconnect(0159)   norandommove notallowuseitems(随机石) notallowusemagic(火墙)
 
 
 
@@ -2799,7 +2795,8 @@ d2083 39 89 -> d2082 374 273
 [mhfy     黑暗之森] norecall hitmon(@muzhuang) nodearrecall noguildrecall nomasterrecall noreconnect(0159) notallowuseitems(随机石)
 [xzld     小擂台] norecall hitmon(@muzhuang) nodearrecall noguildrecall nomasterrecall noreconnect(0159) notallowuseitems(随机石)
 
-
-
+;===============================新做地图========================================
+[九龍冰室|ditu177 九龍冰室] onkillmon
+[新手训练营|0139 新手训练营] onkillmon
 
 

@@ -30,6 +30,6 @@ equal <$CLIENTFLAG> 1
 #if
 CHECKLEVELEX > 49
 #act
-mapmove qdmg
+mapmove 起点迷宫
 #ELSEACT
 MESSAGEBOX 请50级之后再出去！

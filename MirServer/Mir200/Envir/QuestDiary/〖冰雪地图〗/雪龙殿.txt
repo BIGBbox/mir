@@ -23,47 +23,46 @@ goto @雪龙殿主界面
 <Text|a=0|ax=0|x=120.0|y=50.0|tipsx=10|tipsy=80|color=70|size=18|text=山不在高,有仙则名!水不在深,有龙则灵！！>
 <Text|a=0|x=20.0|y=75.0|tipsx=10|tipsy=80|color=250|size=18|text=[刷新时间]：>
 <Text|a=0|ax=0|x=120.0|y=75.0|tipsx=10|tipsy=80|color=70|size=18|text=普通怪10分钟，Boss1小时>
-<Text|a=0|ax=0|x=20.0|y=100.0|tipsx=10|tipsy=80|color=244|size=18|text=三转、赞助免费进入.也可花500元宝进！！>
+<Text|a=0|ax=0|x=20.0|y=100.0|tipsx=10|tipsy=80|color=244|size=18|text=110级、红钻贵族免费进入.也可花1000灵符进！！>
 <Button|x=515|y=25.0|nimg=public/icon/common1087.png|link=@显示掉落>
-<Text|a=0|x=120.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=三转进入|link=@雪龙殿按钮#参数=1>
-<Text|a=0|x=220.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=赞助进入|link=@雪龙殿按钮#参数=2>
-<Text|a=0|x=320.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=元宝进入|link=@雪龙殿按钮#参数=3>
+<Text|a=0|x=120.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=等级进入|link=@雪龙殿按钮#参数=1>
+<Text|a=0|x=220.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=贵族进入|link=@雪龙殿按钮#参数=2>
+<Text|a=0|x=320.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=灵符进入|link=@雪龙殿按钮#参数=3>
 <$str(S$掉落显示窗口)>
 ; common1085
 
 [@雪龙殿按钮]
 #if
 equal <$str(S$参数)> 1
-not CHECKRENEWLEVEL > 2
+not checklevelex > 110
 #act
-MESSAGEBOX 转生等级不够！无法进入！
+MESSAGEBOX 角色等级不够！无法进入！
 break
 
 #if
 equal <$str(S$参数)> 2
-not large <$str(U22)> 0
+small <$str(U98)> 2
 #act
-MESSAGEBOX 你还不是本服的会员！无法进入！
+MESSAGEBOX 你还不是本服的红钻贵族！无法进入！
 break
 
 #if
 equal <$str(S$参数)> 3
-CheckBindMoney 元宝 < 500
+checkmoney 灵符 < 1000
 #act
-MESSAGEBOX 你的元宝不足！无法进入！
+MESSAGEBOX 你的灵符不足！无法进入！
 break
 
 #if
 equal <$str(S$参数)> 3
-not CheckBindMoney 元宝 < 500
+not checkmoney 灵符 < 1000
 #act
-money 绑定元宝 - 500
+money 灵符 - 1000
 
 
 #if
 #ACT
-give 回城卷 1
-MapMove xls1
+MapMove 血龙回廊
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖雪龙殿〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖雪龙殿〗,寻找高级装备！
 

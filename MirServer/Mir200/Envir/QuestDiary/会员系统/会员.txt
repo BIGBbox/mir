@@ -2,6 +2,8 @@
 {
 #if
 #act
+
+; mov U12 120
 mov S$新按钮
 mov S$参数 1
 mov N$按钮序号 1
@@ -19,21 +21,41 @@ goto @切换界面
 [@会员系统主面板]
 #if
 #act
+mov N$宽度 227
+
+; mov U12 200
+mov N$百分比 <$str(U12)>
+mul N$百分比 100
+div N$百分比 <$str(S$会员V值)>
+CalcPer <$str(N$宽度)> <$str(N$百分比)> N$宽度
+
+#if
+large <$str(N$宽度)> 227
+#act
+mov N$宽度 227
+
+
+#if
+#act
 #say
 <Img|x=0|y=0|width=9999|height=9999|children={会员系统主面板}|img=public/0.png|bg=1|link=@exit>
-<Img|id=会员系统主面板|x=150|y=30|width=870|img=public/1900000672.png|children={内框背景,okBtn,展示bg,框,ok框1,每日福利,激活,任务背景,按钮列表,会员等级背景按钮列表,会员V点背景,ok框2,ok框3,,成功率,消耗货币,连接图片1,连接图片2,连接图片3,标题,描述1,描述2,描述3,描述4,描述5,描述6,描述7,描述8,控件9,描述9,获取途径,获取途径控件,closeBtn}|link=@1>
-<Button|id=closeBtn|x=815|y=100.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<ListView|id=按钮列表|children={1_1,1_2,1_3,1_4,1_5,1_6,1_7,1_8,1_9,1_10,1_11,1_12,1_13,1_14,1_15,}|img=public/1900000680.png|direction=1|bounce=1|x=82|y=100.0|margin=2|height=420|width=220>
-<Img|id=会员等级背景按钮列表|children={会员等级}|x=385|y=100|img=public/sf1/19/title.png>
-<Img|id=框|x=75|y=90|img=public/haha/bg_yxui_1.png>
-<Img|id=任务背景|children={renwu,等级,官职,逆天改命,神魔之体}|x=330|y=215|img=public/sf1/2/xbg.png>
-<Img|id=renwu|x=19|y=13|img=custom/zdy/renwu/1900012554.png>
-<Img|id=会员V点背景|x=430|y=185|width=220|height=8|children=会员V点,注意|img=public/bg_szjm_04.png>
-<RText|id=会员V点|x=5|y=-17|size=30|children=注意|text=<会员V点:/FCOLOR=251><<$str(U12)>/<$str(S$会员V值)>/FCOLOR=250>>
-<RText|id=注意|x=30|y=15|size=12|text=<注意:会员V点每小时恢复/FCOLOR=249><5/FCOLOR=250><点/FCOLOR=249>>
+<Img|id=会员系统主面板|x=150|y=30|img=public/sf1/2/Bg.png|children={内框背景,okBtn,closeBtn,展示bg,框,ok框1,每日福利,激活,任务背景,title,按钮列表,会员等级背景按钮列表,会员V点背景,ok框2,ok框3,,成功率,消耗货币,连接图片1,连接图片2,连接图片3,标题,描述1,描述2,描述3,描述4,描述5,描述6,描述7,描述8,控件9,描述9,获取途径,获取途径控件,closeBtn}|link=@1>
+<Button|id=closeBtn|x=765|y=55.0|nimg=public/sf1/2/btn_close.png|link=@exit>
+<ListView|id=按钮列表|children={1_1,1_2,1_3,1_4,1_5,1_6,1_7,1_8,1_9,1_10,1_11,1_12,1_13,1_14,1_15,}|img=public/1900000680.png|direction=1|bounce=1|x=14|y=90.0|margin=2|height=460|width=220>
+<Img|id=会员等级背景按钮列表|children={会员等级}|x=330|y=100|img=public/sf1/19/title.png>
+<RText|id=title|x=360|y=50|size=18|text=<白嫖会员/FCOLOR=255>>
 
-<Img|id=每日福利|children={itemshowBg1,itemshowBg2,itemshowBg3,itemshowBg4}|x=325|y=390|width=66|height=70|img=public/sf1/19/top/00006.png>
-<Button|id=激活|x=500|y=475.0|nimg=public/1900000680.png|grey=<$str(S$按钮状态)>|text=<$str(S$激活状态)>|link=<$str(S$按钮事件)>>
+<Img|id=会员V点背景|x=360|y=180|children=jdt,会员V点,注意|img=public/sf1/2/jindut.png>
+<Img|id=jdt|width=<$str(N$宽度)>|x=14|y=6|img=public/sf1/2/jindut_1.png>
+<RText|id=会员V点|x=-90|y=-2|size=22|children=注意|text=<会员V点:/FCOLOR=251>                <<$str(U12)>/<$str(S$会员V值)>/FCOLOR=250>>
+<RText|id=注意|x=-35|y=28|size=14|text=<注意:每在线满1小时恢复/FCOLOR=249><5/FCOLOR=250><点/FCOLOR=249><，下线清除累计时间/FCOLOR=249>>
+<Img|id=任务背景|children={renwuBg,renwu,等级,官职,逆天改命,神魔之体}|x=160|y=235|img=public/sf1/2/vipD.png>
+<Img|id=renwuBg|x=135|y=10|img=public/sf1/2/missionBg.png>
+<Img|id=renwu|x=5|y=1|img=public/sf1/2/renwu.png>
+
+
+<Img|id=每日福利|children={itemshowBg1,itemshowBg2,itemshowBg3,itemshowBg4}|x=230|y=415|width=66|height=70|img=public/sf1/19/top/00006.png>
+<Button|id=激活|x=440|y=495.0|nimg=public/sf1/2/zanz/btnn1.png|grey=<$str(S$按钮状态)>|text=<$str(S$激活状态)>|link=<$str(S$按钮事件)>>
 
 
 <$str(S$新按钮)>
@@ -95,6 +117,11 @@ mov S$按钮事件 @领取每日礼包
 ; mov S$按钮状态 1
 ; mov S$按钮事件
 
+#if
+equal <$str(S$逆天改命)>
+#act
+mov S$逆天改命 无
+mov N$逆天改命坐标 30
 
 ; 任务
 #if
@@ -110,21 +137,21 @@ mov N$逆天改命坐标1 70
 #if
 #act
 inc S$会员等级 <Img|id=会员等级|x=90|y=30|img=public/sf1/19/artFont/<$str(S$大标题img)>.png>
-inc S$达成条件 <RText|id=等级|x=70|y=18|size=23|text=<等级:/FCOLOR=161><<$str(S$人物等级)>级/FCOLOR=250>>
-inc S$达成条件 <RText|id=官职|x=240|y=18|size=23|text=<官职:/FCOLOR=161><<$str(S$官职)>级/FCOLOR=250>>
-inc S$达成条件 <RText|id=逆天改命|children=逆天改命条件|x=170|y=<$str(N$逆天改命坐标1)>|size=23|text=<逆天改命/FCOLOR=251>>
-inc S$达成条件 <RText|id=逆天改命条件|x=<$str(N$逆天改命坐标)>|y=27|size=14|text=<<$str(S$逆天改命)>/FCOLOR=251>>
+inc S$达成条件 <RText|id=等级|x=170|y=18|size=20|text=<等级:/FCOLOR=161><<$str(S$人物等级)>级/FCOLOR=250>>
+inc S$达成条件 <RText|id=官职|x=340|y=18|size=20|text=<官职:/FCOLOR=161><<$str(S$官职)>级/FCOLOR=250>>
+inc S$达成条件 <RText|id=逆天改命|children=逆天改命条件|x=270|y=<$str(N$逆天改命坐标1)>|size=20|text=<逆天改命/FCOLOR=251>>
+inc S$达成条件 <RText|id=逆天改命条件|x=<$str(N$逆天改命坐标)>|y=27|size=14|text=<<$str(S$逆天改命)>/FCOLOR=250>>
 
 #if
 not equal <$str(S$人物转生)> 0
 #act
-inc S$达成条件 <RText|id=等级|x=70|y=18|size=23|text=<等级:/FCOLOR=161><<$str(S$人物转生)>转/FCOLOR=250>>
+inc S$达成条件 <RText|id=等级|x=170|y=18|size=20|text=<等级:/FCOLOR=161><<$str(S$人物转生)>转/FCOLOR=250>>
 
 
 #if
 not equal <$str(S$神魔之体)>
 #act
-inc S$达成条件 <RText|id=神魔之体|children=神魔之体条件|x=170|y=100|size=23|text=<神魔之体/FCOLOR=249>>
+inc S$达成条件 <RText|id=神魔之体|children=神魔之体条件|x=270|y=100|size=23|text=<神魔之体/FCOLOR=249>>
 inc S$达成条件 <RText|id=神魔之体条件|x=-60|y=27|size=14|text=<<$str(S$神魔之体)>/FCOLOR=249>>
 
 ; 按钮
@@ -132,9 +159,9 @@ inc S$达成条件 <RText|id=神魔之体条件|x=-60|y=27|size=14|text=<<$str(S$神魔之体)
 equal <$str(S$参数)> <$str(N$按钮序号)>
 #act
 mov S$会员展示名 <$str(S$会员名字)>
-inc S$新按钮 <Button|id=1_<$str(N$按钮序号)>|size=35|width=220|height=70|nimg=public/1900000650.png|color=249|text=<$str(S$会员名字)>|link=@切换界面#参数=<$str(N$按钮序号)>>
+inc S$新按钮 <Button|id=1_<$str(N$按钮序号)>|size=22|nimg=public/sf1/2/btn_13.png|pimg=public/sf1/2/btn_12.png|color=255|text=<$str(S$会员名字)>|link=@切换界面#参数=<$str(N$按钮序号)>>
 #elseact
-inc S$新按钮 <Button|id=1_<$str(N$按钮序号)>|size=35|width=220|height=70|nimg=private/mail/1900020063.png|color=250|text=<$str(S$会员名字)>|link=@切换界面#参数=<$str(N$按钮序号)>>
+inc S$新按钮 <Button|id=1_<$str(N$按钮序号)>|size=22|nimg=public/sf1/2/btn_12.png|pimg=public/sf1/2/btn_13.png|color=160|text=<$str(S$会员名字)>|link=@切换界面#参数=<$str(N$按钮序号)>>
 
 
 #if
@@ -177,10 +204,16 @@ goto @会员系统主面板
 
 
 [@领取每日礼包]
+
 #if
 small <$str(U12)> <$str(S$会员V值)>
 #act
 messagebox 会员V点值点不足！会员V点恢复翻倍>提升贵族特权~！！
+break
+
+#if
+#act
+messagebox 是否花费<$str(S$会员V值)>会员V点兑换会员每日福利！！ @确定领取每日礼包 @取消
 break
 
 ; #if
@@ -189,14 +222,15 @@ break
 ; messagebox 今日<$str(S$会员展示名)>礼包,已领取！！
 ; break
 
+[@确定领取每日礼包]
 #if
 #act
 dec U12 <$str(S$会员V值)>
 
 ReadConfigFileItem ..\QuestDiary\会员系统\会员数据.txt <$str(S$参数)> 每日福利 S$每日福利
-
+sendmsg 9 会员每日礼包领取成功!!
+sendmsg 9 会员每日礼包领取成功!!
 goto @发放每日礼包
-sendmsg 5 领取每日礼包
 
 [@发放每日礼包]
 #if
@@ -267,13 +301,14 @@ break
 
 ; sendmsg 5 aaa<$str(S$逆天改命不满足)>
 goto @切换界面
-sendmsg 5 会员激活按钮
+; sendmsg 5 会员激活按钮
 
 inc U9 1
 MOVR N$纵轴坐标 100 300
 sendmsg 7 恭喜你已成功升级到了<$str(S$会员展示名)>！！
 SENDMOVEMSG 0 253 0 <$STR(N$纵轴坐标)> 1 <恭喜玩家/FCOLOR=180><【<$USERNAME>】/FCOLOR=251><成功激活到了/FCOLOR=250><<$str(S$会员展示名)>/FCOLOR=249>
 
+#CALL [\游戏登陆\右下显示.txt] @属性显示
 
 [@查询逆天改命]
 #if

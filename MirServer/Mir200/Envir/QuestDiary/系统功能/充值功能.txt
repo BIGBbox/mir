@@ -23,15 +23,13 @@ goto @充值商城显示
 #IF
 #ACT
 #say
-<Img|children=bg1,容器1,容器2,btn1,btn2,btn3,btn4,title,2,3,payPage,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24|bg=1|move=1|x=<$STR(N$moveX)>|y=<$STR(N$moveY)>|width=<$STR(N$SizeX)>|height=<$STR(N$SizeY)>|img=public/chongzhi/bg5.png>
+<Img|children=bg1,容器1,容器2,btn1,btn2,btn3,btn4,title,2,3,payPage,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24|bg=1|move=1|x=<$STR(N$moveX)>|y=<$STR(N$moveY)>|width=<$STR(N$SizeX)>|height=<$STR(N$SizeY)>|img=public/chongzhi/bg6.png>
 
 <Layout|id=btn1|x=<$STR(N$按钮0)>|y=18|width=80|height=80|link=@exit>
-<Button|id=btn2|x=<$STR(N$按钮)>|y=20.0|nimg=public/chongzhi/00173.png|pimg=public/chongzhi/00174.png|link=@exit>
-<Img|id=2|x=8.0|y=55.0|width=786|height=87|esc=0|img=public/chongzhi/titlebg.png>
-
-<Img|id=title|x=375.0|y=22.0|img=public/chongzhi/title.png>
-
-<ListView|id=容器1|children={<$STR(S$列表list)>}|x=7.0|y=143.0|width=786|height=370|esc=0>
+<Button|id=btn2|x=<$STR(N$按钮)>|y=5.0|nimg=public/chongzhi/00175.png|link=@exit>
+<Img|id=2|x=8.0|y=40.0|width=786|height=87|img=public/chongzhi/titlebg.png>
+<Img|id=title|x=375.0|y=3.0|img=public/chongzhi/title.png>
+<ListView|id=容器1|children={<$STR(S$列表list)>}|loadDelay=1|margin=-12|x=8.0|y=123.0|width=786|height=390|bounce=0>
 
 <$STR(S$充值列表信息)>
 
@@ -58,7 +56,7 @@ small N$临时列表id <$STR(N$总行数)>
 mov S$子列表list
 goto @充值列表for1
 
-inc S$充值列表信息 <Img|id=充值_横_<$STR(N$临时列表id)>|children={<$STR(S$子列表list)>}|x=0.0|y=0.0|scale9r=10|scale9l=10|scale9b=10|scale9t=10|width=785|height=290|img=public/1900000582.png>
+inc S$充值列表信息 <Img|id=充值_横_<$STR(N$临时列表id)>|children={<$STR(S$子列表list)>}|x=0.0|y=0.0|scale9r=10|scale9l=10|scale9b=10|scale9t=10|width=785|height=290|img=public/0.png>
 inc S$列表list 充值_横_<$STR(N$临时列表id)>,
 
 mov N$临时列表id_纵_X坐标 8

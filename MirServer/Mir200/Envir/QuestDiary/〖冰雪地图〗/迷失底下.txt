@@ -23,18 +23,18 @@ goto @迷失底下主界面
 <Text|a=0|ax=0|x=120.0|y=50.0|tipsx=10|tipsy=80|color=70|size=18|text=此地共8层,BOSS1小时.领主6小时刷新！！>
 <Text|a=0|x=20.0|y=75.0|tipsx=10|tipsy=80|color=250|size=18|text=[刷新时间]：>
 <Text|a=0|ax=0|x=120.0|y=75.0|tipsx=10|tipsy=80|color=70|size=18|text=普通怪10分钟，Boss1小时>
-<Text|a=0|ax=0|x=20.0|y=100.0|tipsx=10|tipsy=80|color=244|size=18|text=110级、赞助免费进入.也可花1000元宝进！！>
+<Text|a=0|ax=0|x=20.0|y=100.0|tipsx=10|tipsy=80|color=244|size=18|text=200级、红钻贵族免费进入.也可花2000灵符进！！>
 <Button|x=515|y=25.0|nimg=public/icon/common1087.png|link=@显示掉落>
 <Text|a=0|x=120.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=等级进入|link=@迷失底下按钮#参数=1>
-<Text|a=0|x=220.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=赞助进入|link=@迷失底下按钮#参数=2>
-<Text|a=0|x=320.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=元宝进入|link=@迷失底下按钮#参数=3>
+<Text|a=0|x=220.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=贵族进入|link=@迷失底下按钮#参数=2>
+<Text|a=0|x=320.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=灵符进入|link=@迷失底下按钮#参数=3>
 <$str(S$掉落显示窗口)>
 ; common1085
 
 [@迷失底下按钮]
 #if
 equal <$str(S$参数)> 1
-checklevelex < 110
+checklevelex < 200
 #act
 MESSAGEBOX 人物等级不够！无法进入！
 break
@@ -48,22 +48,21 @@ break
 
 #if
 equal <$str(S$参数)> 3
-CheckBindMoney 元宝 < 1000
+CheckMoney 灵符 < 2000
 #act
-MESSAGEBOX 你的元宝不足！无法进入！
+MESSAGEBOX 你的灵符不足！无法进入！
 break
 
 #if
 equal <$str(S$参数)> 3
-not CheckBindMoney 元宝 < 1000
+not CheckMoney 灵符 < 2000
 #act
-money 绑定元宝 - 1000
+money 灵符 - 2000
 
 
 #if
 #ACT
-give 回城卷 1
-MapMove m001
+MapMove 迷失地下基层
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了〖迷失地下一层〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了〖迷失地下一层〗,寻找高级装备！
 

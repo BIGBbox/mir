@@ -23,7 +23,7 @@ goto @天地之域主界面
 <Text|a=0|ax=0|x=120.0|y=50.0|tipsx=10|tipsy=80|color=70|size=18|text=山不在高,有仙则名!水不在深,有龙则灵！！>
 <Text|a=0|x=20.0|y=75.0|tipsx=10|tipsy=80|color=250|size=18|text=[刷新时间]：>
 <Text|a=0|ax=0|x=120.0|y=75.0|tipsx=10|tipsy=80|color=70|size=18|text=普通怪10分钟，Boss1小时>
-<Text|a=0|ax=0|x=20.0|y=100.0|tipsx=10|tipsy=80|color=244|size=18|text=三转、赞助免费进入.也可花500元宝进！！>
+<Text|a=0|ax=0|x=20.0|y=100.0|tipsx=10|tipsy=80|color=244|size=18|text=95级、红钻贵族免费进入.也可花1000灵符进！！>
 <Button|x=515|y=25.0|nimg=public/icon/common1087.png|link=@显示掉落>
 <Text|a=0|x=170.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=天之域|link=@天之域按钮>
 <Text|a=0|x=320.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=地之域|link=@天之域按钮>
@@ -33,74 +33,68 @@ goto @天地之域主界面
 
 [@地之域按钮]
 
-#OR
-equal U22 4
-equal U22 3
-equal U22 2
-equal U22 1
+#if
+not small <$str(U98)> 2
 #ACT
-;give 回城卷 1
-MapMove Dzy
+
+MapMove 地之域
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖地之域〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖地之域〗,寻找高级装备！
 break
 
 #if
-CHECKRENEWLEVEL > 2
+not checklevelex < 95
 #ACT
-MapMove Dzy
+MapMove 地之域
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖地之域〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖地之域〗,寻找高级装备！
 break
 
 #if
-not CheckBindMoney 元宝 < 500
+not checkmoney 灵符 < 1000
 #ACT
-money 绑定元宝 - 500
-MapMove Dzy
+money 灵符 - 1000
+MapMove 地之域
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖地之域〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖地之域〗,寻找高级装备！
 break
 
 #if
 #act
-MESSAGEBOX 靠，元宝你没，会员你不是，3转你还没到，你还想进？！
+MESSAGEBOX 靠，灵符你没，红钻贵族你不是，95级你还没到，你还想进？！
 break
 
 [@天之域按钮]
 
-#OR
-equal U22 4
-equal U22 3
-equal U22 2
-equal U22 1
+#if
+not small <$str(U98)> 2
 #ACT
-;give 回城卷 1
-MapMove tzy
+
+MapMove 天之域
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖地之域〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖地之域〗,寻找高级装备！
 break
 
 #if
-CHECKRENEWLEVEL > 2
+not checklevelex < 95
 #ACT
-MapMove tzy
+MapMove 天之域
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖地之域〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖地之域〗,寻找高级装备！
 break
 
 #if
-not CheckBindMoney 元宝 < 500
+not checkmoney 灵符 < 1000
 #ACT
-money 绑定元宝 - 500
-MapMove tzy
+money 灵符 - 1000
+MapMove 天之域
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖地之域〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖地之域〗,寻找高级装备！
 break
 
 #if
 #act
-MESSAGEBOX 靠，元宝你没，会员你不是，3转你还没到，你还想进？！
+MESSAGEBOX 靠，灵符你没，红钻贵族你不是，95级你还没到，你还想进？！
 break
 
 

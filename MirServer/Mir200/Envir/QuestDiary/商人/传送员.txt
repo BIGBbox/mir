@@ -285,7 +285,7 @@ checkgold 3000
 #ACT
 take 金币 3000
 ;give 回城卷 1
-mapmove M001
+mapmove 迷失地下基层
 BREAK
 #ELSESAY
 你身上的钱不够！请准备好后再来。\ \ \

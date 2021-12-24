@@ -24,11 +24,38 @@ MOV G202 <$STR(S33)>
 MOV G203 <$STR(S34)>
 MOV G204 <$STR(S35)>
 
-
+mov S$SelfRankIdx 未上榜
+goto @SelfRankIdx
 
 GOTO @捐款用1
 GOTO @捐献说明界面
 BREAK
+
+[@SelfRankIdx]
+#if
+#act
+mov N$Begin 21
+mov N$End 25
+
+goto @CalcSelfIdx
+
+[@CalcSelfIdx]
+#if
+large N$Begin N$End
+#act
+break
+
+#if
+equal <$USERNAME> <$str(S<$str(N$Begin)>)>
+#act
+dec N$Begin 20
+mov S$SelfRankIdx 第<$str(N$Begin)>名
+break
+
+#if
+#act
+inc N$Begin 1
+goto @CalcSelfIdx
 
 [@捐款用1]
 #if
@@ -75,8 +102,8 @@ inc S$捐献说明 <Text|id=文本6|x=40|y=10|color=251|size=18|text=第六名>
 inc S$捐献说明 <Text|id=7|x=160|y=10|color=251|size=18|text=属性奖励:攻道魔5-5>
 
 inc S$捐献说明 <Button|id=adButt|x=630|y=460.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=我要捐献|link=@@INPUTINTEGER15(最少需要捐5000元宝)>
-inc S$捐献说明 <RText|id=我的捐献|x=230|y=460|size=16|text=<我已捐献：/FCOLOR=161><0元宝/FCOLOR=250>>
-inc S$捐献说明 <RText|id=我的排名|x=230|y=480|size=16|text=<我的排名：/FCOLOR=161><未上榜/FCOLOR=249>>
+inc S$捐献说明 <RText|id=我的捐献|x=230|y=460|size=16|text=<我已捐献：/FCOLOR=161><<$HUMAN(JK)>元宝/FCOLOR=250>>
+inc S$捐献说明 <RText|id=我的排名|x=230|y=480|size=16|text=<我的排名：/FCOLOR=161><<$str(S$SelfRankIdx)>/FCOLOR=249>>
 GOTO @捐款用1
 
 [@捐献排名界面]
@@ -117,8 +144,8 @@ inc S$捐献排名 <Text|id=拍11|x=180|y=10|color=251|size=18|text=<$STR(A205)>>
 inc S$捐献排名 <Text|id=拍12|x=300|y=10|color=161|size=18|text=捐献元宝:<$STR(G205)>>
 
 inc S$捐献排名 <Button|id=adButt|x=630|y=460.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=我要捐献|link=@@INPUTINTEGER15(最少需要捐5000元宝)>
-inc S$捐献排名 <RText|id=我的捐献|x=230|y=460|size=16|text=<我已捐献：/FCOLOR=161><0元宝/FCOLOR=250>>
-inc S$捐献排名 <RText|id=我的排名|x=230|y=480|size=16|text=<我的排名：/FCOLOR=161><未上榜/FCOLOR=249>>
+inc S$捐献排名 <RText|id=我的捐献|x=230|y=460|size=16|text=<我已捐献：/FCOLOR=161><<$HUMAN(JK)>元宝/FCOLOR=250>>
+inc S$捐献排名 <RText|id=我的排名|x=230|y=480|size=16|text=<我的排名：/FCOLOR=161><<$str(S$SelfRankIdx)>/FCOLOR=249>>
 GOTO @捐款用1
 
 

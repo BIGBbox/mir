@@ -29,46 +29,48 @@ goto @恶魔广场主界面
 <Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=250|size=18|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
 <Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=253|size=18|text=恶魔之地，生人勿近！此地图BOSS两个小时刷新，领主四个小时！>
 <Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=56|size=18|text=本地图一共三层，三层领主会秒人的，装备太差就不要进入寻求刺激了>
-<Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=251|size=18|text=四转进入|link=@恶魔广场>
-<Text|a=0|x=233.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=3000元宝进入|link=@恶魔广场1>
-<Text|a=0|x=428.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=VIP会员免费进入|link=@会员免费进入>
+; <Text|a=0|x=32|y=185|tipsx=10|tipsy=80|color=251|size=18|text=四转进入|link=@恶魔广场按钮#参数=1>
+<Text|a=0|x=133.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=1000灵符进入|link=@恶魔广场按钮#参数=2>
+<Text|a=0|x=328.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=狂暴之力免费进入|link=@恶魔广场按钮#参数=3>
 <Button|x=515|y=25.0|nimg=public/icon/common1087.png|link=@显示掉落>
 <$str(S$掉落显示窗口)>
 ; common1085
 
 [@恶魔广场按钮]
+
 #if
 equal <$str(S$参数)> 1
-checklevelex < 110
+CHECKRENEWLEVEL < 4
 #act
-MESSAGEBOX 人物等级不够！无法进入！
+MESSAGEBOX 人物转生等级不够！无法进入！
 break
 
 #if
 equal <$str(S$参数)> 2
-not large <$str(U22)> 0
+checkmoney 灵符 < 1000
 #act
-MESSAGEBOX 你还不是本服的会员！无法进入！
+MESSAGEBOX 灵符不足！无法进入！
 break
 
 #if
 equal <$str(S$参数)> 3
-CheckBindMoney 元宝 < 1000
+not check [59] 1
 #act
-MESSAGEBOX 你的元宝不足！无法进入！
+MESSAGEBOX 你的没有狂暴之力！无法进入！
 break
 
 #if
-equal <$str(S$参数)> 3
-not CheckBindMoney 元宝 < 1000
+equal <$str(S$参数)> 2
+not checkmoney 灵符 < 1000
 #act
-money 绑定元宝 - 1000
+money 灵符 - 1000
+
 
 
 #if
 #ACT
-give 回城卷 1
-MapMove ymxy1
+
+MapMove 恶魔长廊
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖恶魔广场〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖恶魔广场〗,寻找高级装备！
 

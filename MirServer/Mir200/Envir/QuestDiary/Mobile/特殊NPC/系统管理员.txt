@@ -11,17 +11,17 @@ ISADMIN
 <Button|x=340|y=20|nimg=public/btn_gban_01.png|link=@exit>
 
 <Button|x=40|y=70|nimg=public/bg_hhzy_01_3.png|text=等级10级|link=@01>
-<Button|x=40|y=140|nimg=public/bg_hhzy_01_3.png|text=转生10级|link=@02>
-<Button|x=40|y=210|nimg=public/bg_hhzy_01_3.png|text=无敌模式|link=@03>
-<Button|x=40|y=280|nimg=public/bg_hhzy_01_3.png|text=修炼技能|link=@04>
-<Button|x=40|y=350|nimg=public/bg_hhzy_01_3.png|text=打开仓库|link=@getback>
+<Button|x=40|y=120|nimg=public/bg_hhzy_01_3.png|text=转生10级|link=@02>
+<Button|x=40|y=170|nimg=public/bg_hhzy_01_3.png|text=无敌模式|link=@03>
+<Button|x=40|y=220|nimg=public/bg_hhzy_01_3.png|text=修炼技能|link=@04>
+<Button|x=40|y=270|nimg=public/bg_hhzy_01_3.png|text=打开仓库|link=@getback>
 
 
-<Button|x=190|y=70|nimg=public/bg_hhzy_01_3.png|text=增加金币|link=@12>
-<Button|x=190|y=140|nimg=public/bg_hhzy_01_3.png|text=增加元宝|link=@11>
-<Button|x=190|y=210|nimg=public/bg_hhzy_01_3.png|text=增加RMB点|link=@10>
-<Button|x=190|y=280|nimg=public/bg_hhzy_01_3.png|text=清理背包|link=@09>
-<Button|x=190|y=350|nimg=public/bg_hhzy_01_3.png|text=城市传送|link=@08>
+<Button|x=190|y=70|nimg=public/bg_hhzy_01_3.png|text=增加灵符|link=@12>
+<Button|x=190|y=120|nimg=public/bg_hhzy_01_3.png|text=增加元宝|link=@11>
+<Button|x=190|y=170|nimg=public/bg_hhzy_01_3.png|text=增加RMB点|link=@10>
+<Button|x=190|y=220|nimg=public/bg_hhzy_01_3.png|text=清理背包|link=@09>
+<Button|x=190|y=270|nimg=public/bg_hhzy_01_3.png|text=城市传送|link=@08>
 <Button|x=240|y=400|nimg=public/1900000611.png|text=测试充值|link=@page10>
 <Button|x=50|y=400|nimg=public/1900000611.png|text=测试|link=@99>
 
@@ -99,7 +99,7 @@ close
 [@01]
 #IF
 #ACT
-CHANGELEVEL + 10
+CHANGELEVEL + 1
 
 [@02]
 #IF
@@ -247,8 +247,8 @@ sendmsg 6 增加100万元宝
 [@12]
 #IF
 #ACT
-MONEY 金币 + 1000000
-sendmsg 6 增加100万金币
+MONEY 灵符 + 1000000
+sendmsg 6 增加100万灵符
 
 
 [@13]
@@ -257,11 +257,64 @@ sendmsg 6 增加100万金币
 Mov U52 3
 
 [@99]
-#if
-#act
-#Call [\Mobile\特殊NPC\TOP图标.txt] @导航
-; ReadConfigFileItem ..\QuestDiary\赞助系统\赞助数据.txt <$str(U98)> 会员V点恢复/时 S$V值额外恢复数
-; sendmsg 5 V值额外恢复数::::<$str(S$V值额外恢复数)>
+
+#IF
+; Equal <$CLIENTFLAG> 2
+#ACT
+; set [59] 1
+ChangeHumNewValue 66 10 10
+; KILLMONEXPRATE 1000 10
+; sendmsg 5 倍数::<$KILLMONEXPRATE>
+#CALL [\游戏登陆\右下显示.txt] @属性显示
+; #CALL [\游戏登陆\右下显示.txt] @属性显示
+; #CALL [\人物属性加成\人物属性提升.txt] @基础属性 89
+; ChangeHumNewValue 89 0 65535
+; USEBONUSPOINT 1 + 10
+; #CALL [\人物属性加成\人物属性提升.txt] @基础属性
+; sendmsg 5  ===<$LOGINLONG>==<$DC>==<$MAXDC>===<$str(U1)>
+; ChangeModeEx 20 65535 100 100
+
+; mov S$顶部
+; INC S$顶部 <Img|x=-0|y=0|img=item/item_0/000124.png>
+; INC S$顶部 <RText|x=0|y=0|size=16|text=<复活冷却中:/FCOLOR=250><<$STR(U18)>s/FCOLOR=249>>
+
+; DELBUTTON 106 1
+; addbutton 106 1 <$STR(S$顶部)>
+
+; SETICON 1 1 12007 -45 -30 0 0
+; SETICON 0 1 12006 -152 -100 0 0
+; sendmsg 5 999999
+; RECALLMOB 鸡 999 1
+; #CALL [\群礼包\QQ礼包.txt] @领取QQ
+; money 元宝 = 0
+
+; PLAYMAGICBALLEFFECT hp_0 30 200 -1 0 1 -5 -2 75
+; PLAYMAGICBALLEFFECT mp_0 30 200 -1 1 1 2 -2 75
+; GetListString ..\QuestDiary\装备血祭系统\主品.txt 1 S$所有祭品  
+; sendmsg 5 <$str(S$所有祭品)>==1=<$STR(S13)>
+
+; #Call [\代理登录\欢迎界面.txt] @欢迎界面展示
+
+; #CALL [\死亡触发\死亡回城.txt] @死亡回城
+
+; SetIcon 6 1 12004 -110 -110 0 0
+
+; sendmsg 6 【提示】你的武器已被加幸运了...
+; sendmsg 5 【提示】你的武器已被加诅咒了！！！
+; sendmsg 6 〖提示〗无效！！！
+
+; sendmsg 5 你的武器已被加诅咒了!!
+; #CALL [\群礼包\微信礼包.txt] @领取微信
+; sendmsg 5 U300:::<$str(U300)>
+
+
+; delaygoto 10 @导引
+
+; [@导引]
+; #if
+; #act
+
+; Navigation 104 9999 背包界面提示 
 
 
 }

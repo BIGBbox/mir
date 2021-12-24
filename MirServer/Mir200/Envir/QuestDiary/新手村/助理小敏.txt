@@ -1,0 +1,88 @@
+[@助理小敏面板]
+{
+#if
+CheckContainsText <$STR(T8)> 村长
+not CheckContainsText <$STR(T8)> 助理小敏
+#act
+mov S$任务状态 5W经验,1000元宝和强效魔法药*50/FCOLOR=250
+mov S$奖励idx1 6
+mov S$奖励nme1 50000
+mov S$奖励idx3 101537
+mov S$奖励nme3 1
+mov S$奖励idx2 101596
+mov S$奖励nme2 50
+DELAYGOTO 10 @助理小敏
+#elseact
+messagebox 尊敬的勇士,你已经做过这个任务了!!
+break
+
+
+[@助理小敏]
+
+#If
+#act
+DELAYGOTO 5000 @领取奖励
+
+#say
+
+; <Text|a=0|x=20|y=20|color=255|tips=|tipsx=10|tipsy=80|size=18|text=那个村长有什么吩咐？>
+; <RText|a=0|x=20|y=95|size=18|text=<奖励:/FCOLOR=250><<$STR(S$任务状态)>>>
+; <Button|id=click_btn1|x=25|y=125|nimg=public/0.png|pimg=public/0.png|text=完成任务|color=251|link=@助理小敏任务>
+
+<Img|img=public/sf1/2/renwuK.png|children=vipD,closeBtn,title|x=400|y=200|bg=1|reset=1|move=0>
+<Button|id=closeBtn|x=420|y=2|nimg=public/sf1/2/btn_close.png|link=@exit>
+<Img|id=vipD|img=public/sf1/2/0.png|children=1,2,938,show1,show2,show3|x=0|y=20>
+<Text|id=1|x=20|y=20|color=153|tips=|tipsx=10|tipsy=80|size=18|text=<$str(S$描述)>>
+<Text|id=title|x=175|y=2|color=154|size=18|text=助理小敏>
+; <RText|id=2|x=20|y=95|size=18|text=<奖励:/FCOLOR=250><<$STR(S$任务状态)>>>
+<Img|id=show1|children={下方礼包1}|x=25|y=150|width=40|height=40|img=public/sf1/19/itemBg1.png>
+<ItemShow|id=下方礼包1|x=-12|y=-10|itemid=<$str(S$奖励idx1)>|itemcount=<$str(S$奖励nme1)>|showtips=1|color=250|scale=0.8>
+<Img|id=show2|children={下方礼包2}|x=85|y=150|width=40|height=40|img=public/sf1/19/itemBg1.png>
+<ItemShow|id=下方礼包2|x=-12|y=-10|itemid=<$str(S$奖励idx2)>|itemcount=<$str(S$奖励nme1)>|showtips=1|color=250|scale=0.8>
+<Img|id=show3|children={下方礼包3}|x=145|y=150|width=40|height=40|img=public/sf1/19/itemBg1.png>
+<ItemShow|id=下方礼包3|x=-12|y=-10|itemid=<$str(S$奖励idx3)>|itemcount=<$str(S$奖励nme1)>|showtips=1|color=250|scale=0.8>
+<Button|id=938|x=290|y=150|nimg=public/sf1/2/btn_11.png|pimg=public/sf1/2/btn_11_1.png|text=完成任务|color=255|link=@助理小敏任务>
+
+
+#IF
+#ACT
+Navigation 0 938 点击完成任务
+
+[@助理小敏任务]
+
+#if
+CheckContainsText <$STR(T8)> 村长
+not CheckContainsText <$STR(T8)> 助理小敏
+#act
+goto @领取奖励
+
+#elseact
+messagebox 尊敬的勇士,你已经做过这个任务了!!
+break
+
+
+[@领取奖励]
+#if
+#act
+; break
+inc T8 _助理小敏
+
+
+NEWCOMPLETETASK 8
+NEWDELETETASK 8
+
+CHANGEEXP + 50000
+money 元宝 + 1000
+GiveStateItem 强效魔法药 50 0 1 0 0 1 1 1 1
+
+
+sendmsg 7 完成任务了!!
+;mapmove 新手村 160 110
+;OPENNPCSHOWEX 67
+#CALL [\任务系统\任务文本.txt] @接取任务
+CLEARDELAYGOTO
+
+close
+
+
+}

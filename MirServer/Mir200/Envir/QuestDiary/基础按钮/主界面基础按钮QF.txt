@@ -61,4 +61,51 @@ StartAutoPlayGame
 #ACT
 StopAutoPlayGame
 
+[@回城]
+; #IF
+; not checkitem 盟重回城石
+; #ACT
+; messagebox 你没有回城石无法回城!!
+; break
+
+#if
+#act
+MOVR N50 323 339
+MOVR N51 323 339
+mapmove 3 <$STR(N50)> <$STR(N51)>
+OPENHYPERLINK 24 2
+
+
+[@随机传送]
+; #IF
+; not checkitem 随机传送石
+; #ACT
+; messagebox 你没有随机传送石无法随机!!
+; break
+
+#if
+#act
+MAP <$MAP>
+OPENHYPERLINK 24 2
+; sendmsg 5 回城
+
+[@队伍召集]
+#if
+#act
+MOVR N50 323 339
+MOVR N51 323 339
+GROUPMAPMOVE 3 <$STR(N50)> <$STR(N51)> 1 0 
+; sendmsg 5 队伍召集
+
+[@行会召集]
+#if
+#act
+; sendmsg 5 行会召集
+
+
+[@关闭地图]
+#if
+#act
+OPENHYPERLINK 24 2
+
 }

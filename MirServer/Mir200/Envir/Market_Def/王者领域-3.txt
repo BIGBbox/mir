@@ -37,7 +37,7 @@ CHECKGAMEGOLD > 79999
 ;give 回城卷 1
 GAMEGOLD - 80000
 TimeRecall 60
-MapMove wzly
+MapMove 王者领域
 SendCenterMsg 180 251 你还剩余[%d秒]离开王者领域. 0 3600 @离开
 ;SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖王者领域〗,寻找高级装备！ 1 3
 SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖王者领域〗,寻找高级装备！ 1 3
@@ -55,7 +55,7 @@ CHECKGAMEGOLD > 159999
 ;give 回城卷 1
 GAMEGOLD - 160000
 TimeRecall 120
-MapMove wzly
+MapMove 王者领域
 SendCenterMsg 180 251 你还剩余[%d秒]离开王者领域. 0 7200 @离开
 ;SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖王者领域〗,寻找高级装备！ 1 3
 SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖王者领域〗,寻找高级装备！ 1 3

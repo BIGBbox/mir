@@ -1,144 +1,185 @@
 [@新人赠送]
 {
-#IF
-checkjob taoist
-gender man
-#ACT
-ADDSKILL 治愈术 3
-ADDSKILL 灵魂火符 3
-ADDSKILL 精神力战法 3
-ADDSKILL 隐身术 3
-ADDSKILL 施毒术 3
-ADDSKILL 幽灵盾 3
-ADDSKILL 神圣战甲术 3
-ADDSKILL 群体治愈术 3
-ADDSKILL 心灵启示 3
-ADDSKILL 召唤神兽 3
-GIVE 魔血石 1
-GIVE 疗伤药 20
-GIVE 聚灵珠(小) 5
-GIVE 新人·甲 1
-GIVE 新人·刃 1
-AutoTakeOnItem 魔血石 12
-AutoTakeOnItem 新人·甲 0
-AutoTakeOnItem 新人·刃 1
-BREAK
 
-#IF
-checkjob taoist
-gender Woman
-#ACT
-ADDSKILL 治愈术 3
-ADDSKILL 灵魂火符 3
-ADDSKILL 精神力战法 3
-ADDSKILL 隐身术 3
-ADDSKILL 施毒术 3
-ADDSKILL 幽灵盾 3
-ADDSKILL 神圣战甲术 3
-ADDSKILL 群体治愈术 3
-ADDSKILL 心灵启示 3
-ADDSKILL 召唤神兽 3
-GIVE 魔血石 1
-GIVE 疗伤药 20
-GIVE 聚灵珠(小) 5
-GIVE 新人·衣 1
-GIVE 新人·刃 1
-AutoTakeOnItem 魔血石 12
-AutoTakeOnItem 新人·衣 0
-AutoTakeOnItem 新人·刃 1
-BREAK
-
-#IF
-checkjob wizard
-gender man
-#ACT
-ADDSKILL 雷电术 3
-ADDSKILL 火墙 3
-ADDSKILL 魔法盾 3
-ADDSKILL 冰咆哮 3
-ADDSKILL 抗拒火环 3
-ADDSKILL 疾光电影 3
-ADDSKILL 诱惑之光 3
-ADDSKILL 地狱雷光 3
-ADDSKILL 诱惑之光 3
-ADDSKILL 瞬息移动 3
-ADDSKILL 圣言术 3
-GIVE 魔血石 1
-GIVE 疗伤药 20
-GIVE 聚灵珠(小) 5
-GIVE 新人·甲 1
-GIVE 新人·刃 1
-AutoTakeOnItem 魔血石 12
-AutoTakeOnItem 新人·甲 0
-AutoTakeOnItem 新人·刃 1
-BREAK
-
-#IF
-checkjob wizard
-gender Woman
-#ACT
-ADDSKILL 雷电术 3
-ADDSKILL 火墙 3
-ADDSKILL 魔法盾 3
-ADDSKILL 冰咆哮 3
-ADDSKILL 抗拒火环 3
-ADDSKILL 疾光电影 3
-ADDSKILL 诱惑之光 3
-ADDSKILL 地狱雷光 3
-ADDSKILL 诱惑之光 3
-ADDSKILL 瞬息移动 3
-ADDSKILL 圣言术 3
-GIVE 魔血石 1
-GIVE 疗伤药 20
-GIVE 聚灵珠(小) 5
-GIVE 新人·衣 1
-GIVE 新人·刃 1
-AutoTakeOnItem 魔血石 12
-AutoTakeOnItem 新人·衣 0
-AutoTakeOnItem 新人·刃 1
-BREAK
-
-#IF
-checkjob warrior
-gender man
-#ACT
-ADDSKILL 基本剑术 3
-ADDSKILL 攻杀剑术 3
-ADDSKILL 刺杀剑术 3
-ADDSKILL 半月弯刀 3
-ADDSKILL 野蛮冲撞 3
-ADDSKILL 烈火剑法 3
-GIVE 魔血石 1
-GIVE 疗伤药 20
-GIVE 聚灵珠(小) 5
-GIVE 新人·甲 1
-GIVE 新人·刃 1
-AutoTakeOnItem 魔血石 12
-AutoTakeOnItem 新人·甲 0
-AutoTakeOnItem 新人·刃 1
-BREAK
-
-#IF
-checkjob warrior
-gender Woman
-#ACT
-ADDSKILL 基本剑术 3
-ADDSKILL 攻杀剑术 3
-ADDSKILL 刺杀剑术 3
-ADDSKILL 半月弯刀 3
-ADDSKILL 野蛮冲撞 3
-ADDSKILL 烈火剑法 3
-GIVE 魔血石 1
-GIVE 聚灵珠(小) 5
-GIVE 疗伤药 20
-GIVE 新人·衣 1
-GIVE 新人·刃 1
-AutoTakeOnItem 魔血石 12
-AutoTakeOnItem 新人·衣 0
-AutoTakeOnItem 新人·刃 1
-BREAK
+#if
+#act
+; give 新人·刃
+; give 新人·甲
+; AutoTakeOnItem 新人·刃 1
+; AutoTakeOnItem 新人·甲 0
+; #Call [\代理登录\欢迎界面.txt] @欢迎界面展示
 
 
+; #if
+; #act
+; ; CHANGELEVEL + 50
+; GIVE 随机传送石 1
+; GIVE 盟重回城石 1
+; GIVE 开天 1
+; GIVE 凤天魔甲 1
+; GIVE 战神头盔 1
+; GIVE 战神项链 1
+; GIVE 战神手镯 2
+; GIVE 战神戒指 2
+; GIVE 战神腰带 1
+; GIVE 战神靴子 1
+; GIVE 治疗宝珠① 1
+; ADDSKILL 基本剑术 3
+; ADDSKILL 攻杀剑术 3
+; ADDSKILL 刺杀剑术 3
+; ADDSKILL 半月弯刀 3
+; ADDSKILL 野蛮冲撞 3
+; ADDSKILL 烈火剑法 3
+; AutoTakeOnItem 开天 1
+; AutoTakeOnItem 治疗宝珠① 12
+; AutoTakeOnItem 凤天魔甲 0
+; AutoTakeOnItem 战神头盔 4
+; AutoTakeOnItem 战神项链 3
+; AutoTakeOnItem 战神手镯 5
+; AutoTakeOnItem 战神手镯 6
+; AutoTakeOnItem 战神戒指 7
+; AutoTakeOnItem 战神戒指 8
+; AutoTakeOnItem 战神腰带 10
+; AutoTakeOnItem 战神靴子 11
+; break
+
+; #IF
+; checkjob taoist
+; gender man
+; #ACT
+; ADDSKILL 治愈术 3
+; ADDSKILL 灵魂火符 3
+; ADDSKILL 精神力战法 3
+; ADDSKILL 隐身术 3
+; ADDSKILL 施毒术 3
+; ADDSKILL 幽灵盾 3
+; ADDSKILL 神圣战甲术 3
+; ADDSKILL 群体治愈术 3
+; ADDSKILL 心灵启示 3
+; ADDSKILL 召唤神兽 3
+; GIVE 魔血石 1
+; GIVE 疗伤药 20
+; GIVE 聚灵珠(小) 5
+; GIVE 新人·甲 1
+; GIVE 新人·刃 1
+; AutoTakeOnItem 魔血石 12
+; AutoTakeOnItem 新人·甲 0
+; AutoTakeOnItem 新人·刃 1
+; BREAK
+
+; #IF
+; checkjob taoist
+; gender Woman
+; #ACT
+; ADDSKILL 治愈术 3
+; ADDSKILL 灵魂火符 3
+; ADDSKILL 精神力战法 3
+; ADDSKILL 隐身术 3
+; ADDSKILL 施毒术 3
+; ADDSKILL 幽灵盾 3
+; ADDSKILL 神圣战甲术 3
+; ADDSKILL 群体治愈术 3
+; ADDSKILL 心灵启示 3
+; ADDSKILL 召唤神兽 3
+; GIVE 魔血石 1
+; GIVE 疗伤药 20
+; GIVE 聚灵珠(小) 5
+; GIVE 新人·衣 1
+; GIVE 新人·刃 1
+; AutoTakeOnItem 魔血石 12
+; AutoTakeOnItem 新人·衣 0
+; AutoTakeOnItem 新人·刃 1
+; BREAK
+
+; #IF
+; checkjob wizard
+; gender man
+; #ACT
+; ADDSKILL 雷电术 3
+; ADDSKILL 火墙 3
+; ADDSKILL 魔法盾 3
+; ADDSKILL 冰咆哮 3
+; ADDSKILL 抗拒火环 3
+; ADDSKILL 疾光电影 3
+; ADDSKILL 诱惑之光 3
+; ADDSKILL 地狱雷光 3
+; ADDSKILL 诱惑之光 3
+; ADDSKILL 瞬息移动 3
+; ADDSKILL 圣言术 3
+; GIVE 魔血石 1
+; GIVE 疗伤药 20
+; GIVE 聚灵珠(小) 5
+; GIVE 新人·甲 1
+; GIVE 新人·刃 1
+; AutoTakeOnItem 魔血石 12
+; AutoTakeOnItem 新人·甲 0
+; AutoTakeOnItem 新人·刃 1
+; BREAK
+
+; #IF
+; checkjob wizard
+; gender Woman
+; #ACT
+; ADDSKILL 雷电术 3
+; ADDSKILL 火墙 3
+; ADDSKILL 魔法盾 3
+; ADDSKILL 冰咆哮 3
+; ADDSKILL 抗拒火环 3
+; ADDSKILL 疾光电影 3
+; ADDSKILL 诱惑之光 3
+; ADDSKILL 地狱雷光 3
+; ADDSKILL 诱惑之光 3
+; ADDSKILL 瞬息移动 3
+; ADDSKILL 圣言术 3
+; GIVE 魔血石 1
+; GIVE 疗伤药 20
+; GIVE 聚灵珠(小) 5
+; GIVE 新人·衣 1
+; GIVE 新人·刃 1
+; AutoTakeOnItem 魔血石 12
+; AutoTakeOnItem 新人·衣 0
+; AutoTakeOnItem 新人·刃 1
+; BREAK
+
+; #IF
+; checkjob warrior
+; gender man
+; #ACT
+; ADDSKILL 基本剑术 3
+; ADDSKILL 攻杀剑术 3
+; ADDSKILL 刺杀剑术 3
+; ADDSKILL 半月弯刀 3
+; ADDSKILL 野蛮冲撞 3
+; ADDSKILL 烈火剑法 3
+; GIVE 魔血石 1
+; GIVE 疗伤药 20
+; GIVE 聚灵珠(小) 5
+; GIVE 新人·甲 1
+; GIVE 新人·刃 1
+; AutoTakeOnItem 魔血石 12
+; AutoTakeOnItem 新人·甲 0
+; AutoTakeOnItem 新人·刃 1
+; BREAK
+
+; #IF
+; checkjob warrior
+; gender Woman
+; #ACT
+; ADDSKILL 基本剑术 3
+; ADDSKILL 攻杀剑术 3
+; ADDSKILL 刺杀剑术 3
+; ADDSKILL 半月弯刀 3
+; ADDSKILL 野蛮冲撞 3
+; ADDSKILL 烈火剑法 3
+; GIVE 魔血石 1
+; GIVE 聚灵珠(小) 5
+; GIVE 疗伤药 20
+; GIVE 新人·衣 1
+; GIVE 新人·刃 1
+; AutoTakeOnItem 魔血石 12
+; AutoTakeOnItem 新人·衣 0
+; AutoTakeOnItem 新人·刃 1
+; BREAK
 
 
 
@@ -147,149 +188,151 @@ BREAK
 
 
 
-#IF
-checkjob taoist
-gender man
-ISDUMMY
-#ACT
-ADDSKILL 治愈术 3
-ADDSKILL 灵魂火符 3
-ADDSKILL 精神力战法 3
-ADDSKILL 隐身术 3
-ADDSKILL 施毒术 3
-ADDSKILL 幽灵盾 3
-ADDSKILL 神圣战甲术 3
-ADDSKILL 群体治愈术 3
-ADDSKILL 心灵启示 3
-ADDSKILL 召唤神兽 3
-GIVE 魔血石 1
-GIVE 疗伤药 20
-GIVE 聚灵珠(小) 5
-GIVE 新人·甲 1
-GIVE 新人·刃 1
-AutoTakeOnItem 魔血石 12
-AutoTakeOnItem 新人·甲 0
-AutoTakeOnItem 新人·刃 1
-BREAK
 
-#IF
-checkjob taoist
-gender Woman
-ISDUMMY
-#ACT
-ADDSKILL 治愈术 3
-ADDSKILL 灵魂火符 3
-ADDSKILL 精神力战法 3
-ADDSKILL 隐身术 3
-ADDSKILL 施毒术 3
-ADDSKILL 幽灵盾 3
-ADDSKILL 神圣战甲术 3
-ADDSKILL 群体治愈术 3
-ADDSKILL 心灵启示 3
-ADDSKILL 召唤神兽 3
-GIVE 魔血石 1
-GIVE 疗伤药 20
-GIVE 聚灵珠(小) 5
-GIVE 新人·衣 1
-GIVE 新人·刃 1
-AutoTakeOnItem 魔血石 12
-AutoTakeOnItem 新人·衣 0
-AutoTakeOnItem 新人·刃 1
-BREAK
 
-#IF
-checkjob wizard
-gender man
-ISDUMMY
-#ACT
-ADDSKILL 雷电术 3
-ADDSKILL 火墙 3
-ADDSKILL 魔法盾 3
-ADDSKILL 冰咆哮 3
-ADDSKILL 抗拒火环 3
-ADDSKILL 疾光电影 3
-ADDSKILL 诱惑之光 3
-ADDSKILL 地狱雷光 3
-ADDSKILL 诱惑之光 3
-ADDSKILL 瞬息移动 3
-ADDSKILL 圣言术 3
-GIVE 魔血石 1
-GIVE 疗伤药 20
-GIVE 聚灵珠(小) 5
-GIVE 新人·甲 1
-GIVE 新人·刃 1
-AutoTakeOnItem 魔血石 12
-AutoTakeOnItem 新人·甲 0
-AutoTakeOnItem 新人·刃 1
-BREAK
+; #IF
+; checkjob taoist
+; gender man
+; ISDUMMY
+; #ACT
+; ADDSKILL 治愈术 3
+; ADDSKILL 灵魂火符 3
+; ADDSKILL 精神力战法 3
+; ADDSKILL 隐身术 3
+; ADDSKILL 施毒术 3
+; ADDSKILL 幽灵盾 3
+; ADDSKILL 神圣战甲术 3
+; ADDSKILL 群体治愈术 3
+; ADDSKILL 心灵启示 3
+; ADDSKILL 召唤神兽 3
+; GIVE 魔血石 1
+; GIVE 疗伤药 20
+; GIVE 聚灵珠(小) 5
+; GIVE 新人·甲 1
+; GIVE 新人·刃 1
+; AutoTakeOnItem 魔血石 12
+; AutoTakeOnItem 新人·甲 0
+; AutoTakeOnItem 新人·刃 1
+; BREAK
 
-#IF
-checkjob wizard
-gender Woman
-ISDUMMY
-#ACT
-ADDSKILL 雷电术 3
-ADDSKILL 火墙 3
-ADDSKILL 魔法盾 3
-ADDSKILL 冰咆哮 3
-ADDSKILL 抗拒火环 3
-ADDSKILL 疾光电影 3
-ADDSKILL 诱惑之光 3
-ADDSKILL 地狱雷光 3
-ADDSKILL 诱惑之光 3
-ADDSKILL 瞬息移动 3
-ADDSKILL 圣言术 3
-GIVE 魔血石 1
-GIVE 疗伤药 20
-GIVE 聚灵珠(小) 5
-GIVE 新人·衣 1
-GIVE 新人·刃 1
-AutoTakeOnItem 魔血石 12
-AutoTakeOnItem 新人·衣 0
-AutoTakeOnItem 新人·刃 1
-BREAK
+; #IF
+; checkjob taoist
+; gender Woman
+; ISDUMMY
+; #ACT
+; ADDSKILL 治愈术 3
+; ADDSKILL 灵魂火符 3
+; ADDSKILL 精神力战法 3
+; ADDSKILL 隐身术 3
+; ADDSKILL 施毒术 3
+; ADDSKILL 幽灵盾 3
+; ADDSKILL 神圣战甲术 3
+; ADDSKILL 群体治愈术 3
+; ADDSKILL 心灵启示 3
+; ADDSKILL 召唤神兽 3
+; GIVE 魔血石 1
+; GIVE 疗伤药 20
+; GIVE 聚灵珠(小) 5
+; GIVE 新人·衣 1
+; GIVE 新人·刃 1
+; AutoTakeOnItem 魔血石 12
+; AutoTakeOnItem 新人·衣 0
+; AutoTakeOnItem 新人·刃 1
+; BREAK
 
-#IF
-checkjob warrior
-gender man
-ISDUMMY
-#ACT
-ADDSKILL 基本剑术 3
-ADDSKILL 攻杀剑术 3
-ADDSKILL 刺杀剑术 3
-ADDSKILL 半月弯刀 3
-ADDSKILL 野蛮冲撞 3
-ADDSKILL 烈火剑法 3
-GIVE 魔血石 1
-GIVE 疗伤药 20
-GIVE 聚灵珠(小) 5
-GIVE 新人·甲 1
-GIVE 新人·刃 1
-AutoTakeOnItem 魔血石 12
-AutoTakeOnItem 新人·甲 0
-AutoTakeOnItem 新人·刃 1
-BREAK
+; #IF
+; checkjob wizard
+; gender man
+; ISDUMMY
+; #ACT
+; ADDSKILL 雷电术 3
+; ADDSKILL 火墙 3
+; ADDSKILL 魔法盾 3
+; ADDSKILL 冰咆哮 3
+; ADDSKILL 抗拒火环 3
+; ADDSKILL 疾光电影 3
+; ADDSKILL 诱惑之光 3
+; ADDSKILL 地狱雷光 3
+; ADDSKILL 诱惑之光 3
+; ADDSKILL 瞬息移动 3
+; ADDSKILL 圣言术 3
+; GIVE 魔血石 1
+; GIVE 疗伤药 20
+; GIVE 聚灵珠(小) 5
+; GIVE 新人·甲 1
+; GIVE 新人·刃 1
+; AutoTakeOnItem 魔血石 12
+; AutoTakeOnItem 新人·甲 0
+; AutoTakeOnItem 新人·刃 1
+; BREAK
 
-#IF
-checkjob warrior
-gender Woman
-ISDUMMY
-#ACT
-ADDSKILL 基本剑术 3
-ADDSKILL 攻杀剑术 3
-ADDSKILL 刺杀剑术 3
-ADDSKILL 半月弯刀 3
-ADDSKILL 野蛮冲撞 3
-ADDSKILL 烈火剑法 3
-GIVE 魔血石 1
-GIVE 聚灵珠(小) 5
-GIVE 疗伤药 20
-GIVE 新人·衣 1
-GIVE 新人·刃 1
-AutoTakeOnItem 魔血石 12
-AutoTakeOnItem 新人·衣 0
-AutoTakeOnItem 新人·刃 1
-BREAK
+; #IF
+; checkjob wizard
+; gender Woman
+; ISDUMMY
+; #ACT
+; ADDSKILL 雷电术 3
+; ADDSKILL 火墙 3
+; ADDSKILL 魔法盾 3
+; ADDSKILL 冰咆哮 3
+; ADDSKILL 抗拒火环 3
+; ADDSKILL 疾光电影 3
+; ADDSKILL 诱惑之光 3
+; ADDSKILL 地狱雷光 3
+; ADDSKILL 诱惑之光 3
+; ADDSKILL 瞬息移动 3
+; ADDSKILL 圣言术 3
+; GIVE 魔血石 1
+; GIVE 疗伤药 20
+; GIVE 聚灵珠(小) 5
+; GIVE 新人·衣 1
+; GIVE 新人·刃 1
+; AutoTakeOnItem 魔血石 12
+; AutoTakeOnItem 新人·衣 0
+; AutoTakeOnItem 新人·刃 1
+; BREAK
+
+; #IF
+; checkjob warrior
+; gender man
+; ISDUMMY
+; #ACT
+; ADDSKILL 基本剑术 3
+; ADDSKILL 攻杀剑术 3
+; ADDSKILL 刺杀剑术 3
+; ADDSKILL 半月弯刀 3
+; ADDSKILL 野蛮冲撞 3
+; ADDSKILL 烈火剑法 3
+; GIVE 魔血石 1
+; GIVE 疗伤药 20
+; GIVE 聚灵珠(小) 5
+; GIVE 新人·甲 1
+; GIVE 新人·刃 1
+; AutoTakeOnItem 魔血石 12
+; AutoTakeOnItem 新人·甲 0
+; AutoTakeOnItem 新人·刃 1
+; BREAK
+
+; #IF
+; checkjob warrior
+; gender Woman
+; ISDUMMY
+; #ACT
+; ADDSKILL 基本剑术 3
+; ADDSKILL 攻杀剑术 3
+; ADDSKILL 刺杀剑术 3
+; ADDSKILL 半月弯刀 3
+; ADDSKILL 野蛮冲撞 3
+; ADDSKILL 烈火剑法 3
+; GIVE 魔血石 1
+; GIVE 聚灵珠(小) 5
+; GIVE 疗伤药 20
+; GIVE 新人·衣 1
+; GIVE 新人·刃 1
+; AutoTakeOnItem 魔血石 12
+; AutoTakeOnItem 新人·衣 0
+; AutoTakeOnItem 新人·刃 1
+; BREAK
 
 
 

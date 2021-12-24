@@ -4,10 +4,14 @@
 #act
 mov S$掉落显示窗口
 mov S$显示掉落窗口打开 0
+; sendmsg 5 起点迷宫主界面
+GOTO @起点迷宫主界面
 
-
-goto @起点迷宫主界面
-
+#IF
+CheckContainsText <$STR(T8)> 冲级奖励
+not CheckContainsText <$STR(T8)> 起点迷宫
+#ACT
+DELAYGOTO 5000 @新手寻宝
 
 [@起点迷宫主界面]
 #if
@@ -23,24 +27,34 @@ goto @起点迷宫主界面
 <Text|a=0|ax=0|x=120.0|y=50.0|tipsx=10|tipsy=80|color=70|size=18|text=新人必经之地，装备狂暴.小心拣到宝哦.>
 <Text|a=0|x=20.0|y=75.0|tipsx=10|tipsy=80|color=250|size=18|text=[刷新时间]：>
 <Text|a=0|ax=0|x=120.0|y=75.0|tipsx=10|tipsy=80|color=70|size=18|text=普通怪10分钟，Boss1小时>
-<Text|a=0|ax=0|x=20.0|y=100.0|tipsx=10|tipsy=80|color=244|size=18|text=进阶之路，怪物比较凶猛，最少需要100级玩家才能免费进入！！>
+<Text|a=0|ax=0|x=20.0|y=100.0|tipsx=10|tipsy=80|color=244|size=18|text=进阶之路，怪物比较凶猛，最少需要50级玩家才能免费进入！！>
 <Button|x=515|y=25.0|nimg=public/icon/common1087.png|link=@显示掉落>
-<Text|a=0|x=220.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=起点迷宫|link=@新手寻宝>
+<Text|id=click_btn1|x=220.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=起点迷宫|link=@新手寻宝>
 <$str(S$掉落显示窗口)>
 ; common1085
 
+#IF
+CheckContainsText <$STR(T8)> 冲级奖励
+not CheckContainsText <$STR(T8)> 起点迷宫
+#ACT
+Navigation 0 click_btn1 点击完成任务
 
 [@新手寻宝]
 #if
-CHECKLEVELEX < 100
+#act
+CLEARDELAYGOTO
+
+#if
+CHECKLEVELEX > 49
 #ACT
-give 回城卷 1
-MapMove qdmg 156 160
+
+MapMove 起点迷宫 156 160
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起点迷宫〗,祝他满载而归！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖起点迷宫〗,祝他满载而归！
+CLEARDELAYGOTO
 break
 #ELSEACT
-MESSAGEBOX 您的等级太高了,大姥级别了还欺负新人去？
+MESSAGEBOX 等级不足50级！去升升级再来吧！
 BREAK
 
 [@显示掉落]

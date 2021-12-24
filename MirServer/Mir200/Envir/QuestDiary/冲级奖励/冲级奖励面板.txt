@@ -1,0 +1,345 @@
+[@冲级奖励面板]
+{
+#if
+#act
+mov S$领取奖励 
+
+#if
+CheckContainsText <$STR(T8)> 泡点地图
+CheckContainsText <$STR(T8)> 循环村长1
+CheckContainsText <$STR(T8)> 自动吸物
+CheckContainsText <$STR(T8)> 击杀新手训练营怪物50
+CheckContainsText <$STR(T8)> 新手训练营npc1
+not CheckContainsText <$STR(T8)> 冲级奖励
+#act
+mov S$描述 起点迷宫的最终领主，威力不容小觑,你可千万要小心啊!
+mov S$任务状态 20W经验值,圣战靴子和气血石/FCOLOR=250
+mov S$奖励idx1 6
+mov S$奖励nme1 200000
+mov S$奖励idx2 10008
+mov S$奖励nme2 1
+mov S$奖励idx3 106009
+mov S$奖励nme3 1
+mov S$领取奖励 领取奖励00
+
+goto @冲级任务面板1
+break
+
+#if
+CheckContainsText <$STR(T8)> 泡点地图
+CheckContainsText <$STR(T8)> 循环村长1
+CheckContainsText <$STR(T8)> 自动吸物
+CheckContainsText <$STR(T8)> 击杀新手训练营怪物50
+CheckContainsText <$STR(T8)> 新手训练营npc1
+CheckContainsText <$STR(T8)> 冲级奖励
+CheckContainsText <$STR(T8)> 起点迷宫
+not CheckContainsText <$STR(T8)> 冲级奖励1
+#act
+mov S$描述 你确实是我想象中的那个勇士,我没有看错人!
+mov S$任务状态 20W经验值,战神戒指和小还丹*50/FCOLOR=250
+mov S$奖励idx1 6
+mov S$奖励nme1 200000
+mov S$奖励idx2 10017
+mov S$奖励nme2 1
+mov S$奖励idx3 101506
+mov S$奖励nme3 50
+mov S$领取奖励 领取奖励01
+
+goto @冲级任务面板1
+break
+
+#if
+#act
+goto @显示主界面
+
+[@冲级任务面板1]
+
+#If
+#act
+DELAYGOTO 5000 @<$str(S$领取奖励)>
+
+#say
+
+; <Text|a=0|x=20|y=20|color=255|tips=|tipsx=10|tipsy=80|size=18|text=<$str(S$描述)>>
+; <RText|a=0|x=20|y=95|size=18|text=<奖励:/FCOLOR=250><<$STR(S$任务状态)>>>
+; <Button|id=click_btn1|x=25|y=125|nimg=public/0.png|pimg=public/0.png|text=完成任务|color=251|link=@冲级任务1>
+
+<Img|img=public/sf1/2/renwuK.png|children=vipD,closeBtn,title|x=400|y=200|bg=1|reset=1|move=0>
+<Button|id=closeBtn|x=420|y=2|nimg=public/sf1/2/btn_close.png|link=@exit>
+<Img|id=vipD|img=public/sf1/2/0.png|children=1,2,938,show1,show2,show3|x=0|y=20>
+<Text|id=1|x=20|y=20|color=153|tips=|tipsx=10|tipsy=80|size=18|text=<$str(S$描述)>>
+<Text|id=title|x=175|y=2|color=154|size=18|text=冲级奖励>
+; <RText|id=2|x=20|y=95|size=18|text=<奖励:/FCOLOR=250><<$STR(S$任务状态)>>>
+<Img|id=show1|children={下方礼包1}|x=25|y=150|width=40|height=40|img=public/sf1/19/itemBg1.png>
+<ItemShow|id=下方礼包1|x=-12|y=-10|itemid=<$str(S$奖励idx1)>|itemcount=<$str(S$奖励nme1)>|showtips=1|color=250|scale=0.8>
+<Img|id=show2|children={下方礼包2}|x=85|y=150|width=40|height=40|img=public/sf1/19/itemBg1.png>
+<ItemShow|id=下方礼包2|x=-12|y=-10|itemid=<$str(S$奖励idx2)>|itemcount=<$str(S$奖励nme1)>|showtips=1|color=250|scale=0.8>
+<Img|id=show3|children={下方礼包3}|x=145|y=150|width=40|height=40|img=public/sf1/19/itemBg1.png>
+<ItemShow|id=下方礼包3|x=-12|y=-10|itemid=<$str(S$奖励idx3)>|itemcount=<$str(S$奖励nme1)>|showtips=1|color=250|scale=0.8>
+<Button|id=938|x=290|y=150|nimg=public/sf1/2/btn_11.png|pimg=public/sf1/2/btn_11_1.png|text=完成任务|color=255|link=@冲级任务1>
+
+
+#IF
+#ACT
+Navigation 0 938 点击完成任务
+
+[@冲级任务1]
+
+#if
+CheckContainsText <$STR(T8)> 泡点地图
+CheckContainsText <$STR(T8)> 循环村长1
+CheckContainsText <$STR(T8)> 自动吸物
+CheckContainsText <$STR(T8)> 击杀新手训练营怪物50
+CheckContainsText <$STR(T8)> 新手训练营npc1
+not CheckContainsText <$STR(T8)> 冲级奖励
+#act
+goto @领取奖励00
+break
+
+#if
+CheckContainsText <$STR(T8)> 泡点地图
+CheckContainsText <$STR(T8)> 循环村长1
+CheckContainsText <$STR(T8)> 自动吸物
+CheckContainsText <$STR(T8)> 击杀新手训练营怪物50
+CheckContainsText <$STR(T8)> 新手训练营npc1
+CheckContainsText <$STR(T8)> 冲级奖励
+CheckContainsText <$STR(T8)> 起点迷宫
+not CheckContainsText <$STR(T8)> 冲级奖励1
+#act
+goto @领取奖励01
+break
+
+
+#if
+#act
+messagebox 尊敬的勇士,你已经做过这个任务了!!
+break
+
+[@领取奖励01]
+#if
+#act
+; break
+inc T8 _冲级奖励1
+
+NEWCOMPLETETASK 16
+NEWDELETETASK 16
+
+give 战神戒指 1
+CHANGEEXP + 200000
+GiveStateItem 10W经验卷 50 0 1 0 0 1 1 1 1
+TakeOnItem 圣战戒指 8
+
+sendmsg 7 完成任务了!!
+#CALL [\任务系统\任务文本.txt] @接取任务
+CLEARDELAYGOTO
+close
+
+[@领取奖励00]
+#if
+#act
+; break
+inc T8 _冲级奖励
+
+NEWCOMPLETETASK 14
+NEWDELETETASK 14
+
+; give 气血石 1
+give 圣战靴子 1
+
+CHANGEEXP + 200000
+GiveStateItem 气血石 1 0 1 0 0 1 1 1 1
+TakeOnItem 圣战靴子 11
+
+sendmsg 7 完成任务了!!
+#CALL [\任务系统\任务文本.txt] @接取任务
+CLEARDELAYGOTO
+close
+
+
+[@显示主界面]
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\冲级奖励\冲级奖励数据.txt 总数 总数 S$总数
+
+mov N$列表序号 1
+mov N$坐标y 110
+mov S$冲级列表
+goto @创建列表
+; goto @冲级主界面
+
+[@冲级主界面]
+#IF
+#act
+#SAY
+
+<Img|x=0|y=0|width=9999|height=9999|children={冲级主面板}|img=public/0.png|bg=1|link=@exit>
+<Img|id=冲级主面板|x=210|y=30|img=public/sf1/2/bg7.png|height=470|children={内框背景,标题,1,2,3,4,5,6,7,closeBtn,adButt}|reset=1|link=@>
+
+<Button|id=closeBtn|x=765|y=65.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|id=标题|x=160|y=35|color=254|size=18|text=升  级  奖  励>
+
+<$str(S$冲级列表)>
+
+
+
+[@创建列表]
+#if
+not large <$str(N$列表序号)> <$str(S$总数)>
+#act
+ReadConfigFileItem ..\QuestDiary\冲级奖励\冲级奖励数据.txt <$STR(N$列表序号)> 等级 S$等级
+ReadConfigFileItem ..\QuestDiary\冲级奖励\冲级奖励数据.txt <$STR(N$列表序号)> 奖励 S$奖励串
+ReadConfigFileItem ..\QuestDiary\冲级奖励\冲级奖励数据.txt <$STR(N$列表序号)> 名额 S$名额
+ReadConfigFileItem ..\QuestDiary\冲级奖励\冲级奖励数据.txt <$STR(N$列表序号)> 计数标记 S$计数标记
+ReadConfigFileItem ..\QuestDiary\冲级奖励\冲级奖励数据.txt <$STR(N$列表序号)> 个人标记 S$个人标记
+
+mov N$剩余名额<$STR(N$列表序号)> <$str(S$名额)>
+dec N$剩余名额<$STR(N$列表序号)> <$str(<$str(S$计数标记)>)>
+
+
+inc S$等级 级
+inc S$名额 名
+SetStringBlank S$等级 15 1
+SetStringBlank S$奖励串 15 1
+SetStringBlank S$名额 15 1
+
+#if
+not large <$str(N$列表序号)> <$str(S$总数)>
+check [<$str(S$个人标记)>] 1
+#act
+inc S$冲级列表 <Text|id=<$str(N$列表序号)>_0|x=90|y=0|color=249|size=18|text=已领取|link=@领取奖励<$str(N$列表序号)>>
+
+#if
+not large <$str(N$列表序号)> <$str(S$总数)>
+not check [<$str(S$个人标记)>] 1
+#act
+inc S$冲级列表 <Text|id=<$str(N$列表序号)>_0|x=90|y=0|color=251|size=18|text=领取奖励|link=@领取奖励<$str(N$列表序号)>>
+
+
+#if
+not large <$str(N$列表序号)> <$str(S$总数)>
+#act
+
+
+inc S$冲级列表 <Img|id=<$str(N$列表序号)>|x=0|y=<$str(N$坐标y)>|img=public/0.png|children={<$str(N$列表序号)>_0,<$str(N$列表序号)>_1,<$str(N$列表序号)>_2,<$str(N$列表序号)>_3,<$str(N$列表序号)>_4,<$str(N$列表序号)>_5,}>
+inc S$冲级列表 <Text|id=<$str(N$列表序号)>_1|x=180|y=0|color=168|size=18|text=等级-<$str(S$等级)>>
+inc S$冲级列表 <Text|id=<$str(N$列表序号)>_2|x=280|y=0|color=150|size=18|text=<$str(S$奖励串)>>
+inc S$冲级列表 <Text|id=<$str(N$列表序号)>_3|x=410|y=0|color=168|size=18|text=共<$str(S$名额)>>
+inc S$冲级列表 <Text|id=<$str(N$列表序号)>_4|x=500|y=0|color=251|size=18|text=剩余名额：>
+inc S$冲级列表 <Text|id=<$str(N$列表序号)>_5|x=600|y=0|color=255|size=18|text=<$str(N$剩余名额<$STR(N$列表序号)>)>>
+
+
+
+inc N$列表序号 1
+inc N$坐标y 40
+
+goto @创建列表
+#elseact
+goto @冲级主界面
+
+
+[@领取奖励]
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\冲级奖励\冲级奖励数据.txt <$STR(N$序号)> 奖励 S$奖励串
+ReadConfigFileItem ..\QuestDiary\冲级奖励\冲级奖励数据.txt <$STR(N$序号)> 计数标记 S$计数标记
+ReadConfigFileItem ..\QuestDiary\冲级奖励\冲级奖励数据.txt <$STR(N$序号)> 个人标记 S$个人标记
+ReadConfigFileItem ..\QuestDiary\冲级奖励\冲级奖励数据.txt <$STR(N$序号)> 等级 S$等级
+
+
+#if
+checklevelex < <$str(S$等级)>
+#act
+MESSAGEBOX \你的等级不足！
+BREAK
+
+#if
+check [<$str(S$个人标记)>] 1
+#act
+messagebox \你已经领取过此奖励！
+break 
+
+#if
+not CHECKBAGSIZE  3
+#act
+MESSAGEBOX \背包要留出3个空格！
+BREAK
+
+#if
+#act
+GetValidstr <$STR(S$奖励串)> * S$奖励名 S$奖励数
+MailGIVE <$STR(S$奖励名)> <$STR(S$奖励数)> 1#4#5#6#8
+SendMail 1 冲级奖励 <$str(S$等级)>级,冲级奖励已发放,请尽快提取附件!
+
+set [<$str(S$个人标记)>] 1
+inc <$str(S$计数标记)> 1
+
+mov N$列表序号 1
+mov N$坐标y 110
+mov S$冲级列表
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功领取了<$str(S$等级)>级升级奖励！！
+
+goto @创建列表
+goto @冲级主界面
+
+[@领110]
+#IF
+CHECKLEVELEX > 109
+CHECKBAGSIZE  3
+large G27 0
+check [024] 0
+#act
+; ReadConfigFileItem ..\QuestDiary\冲级奖励\冲级奖励数据.txt <$STR(N$列表序号)> 个人标记 S$等级
+
+SET [024] 1
+DEC G27 1
+GIVE 龙光 1
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功领取了110级升级奖励！！
+#ELSEACT
+MESSAGEBOX 错误\\①你的等级不足！\\②你已经领取过此奖励！\\③背包要留出3个空格！
+BREAK
+
+
+[@领取奖励1]
+#if
+#act
+mov N$序号 1
+goto @领取奖励
+
+[@领取奖励2]
+#if
+#act
+mov N$序号 2
+goto @领取奖励
+
+[@领取奖励3]
+#if
+#act
+mov N$序号 3
+goto @领取奖励
+
+[@领取奖励4]
+#if
+#act
+mov N$序号 4
+goto @领取奖励
+
+[@领取奖励5]
+#if
+#act
+mov N$序号 5
+goto @领取奖励
+
+[@领取奖励6]
+#if
+#act
+mov N$序号 6
+goto @领取奖励
+
+[@领取奖励7]
+#if
+#act
+mov N$序号 7
+goto @领取奖励
+
+
+}

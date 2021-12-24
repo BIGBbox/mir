@@ -16,6 +16,18 @@ mov U102 0
 mov U103 0
 mov U104 0
 mov U105 0
+mov U106 0
+mov U107 0
+mov U108 0
+mov U109 0
+mov U110 0
+mov U111 0
+mov U112 0
+mov U113 0
+mov U114 0
+mov U115 0
+mov U116 0
+mov U117 0
 
 ; ÐüÉÍ¹ºÂò±ê¼Ç
 set [100] 0

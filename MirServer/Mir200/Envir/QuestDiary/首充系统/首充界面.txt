@@ -1,0 +1,246 @@
+[@首充面板]
+{
+#if
+#act
+
+goto @InitShow
+goto @ShowButton
+
+#if
+#act
+#say
+<Img|x=0|y=0|width=9999|height=9999|children={FirstRecharge}|img=public/0.png|bg=1|link=@exit>
+<Img|id=FirstRecharge|x=260|y=120|img=public/sf1/2/shouchong/main.png|children={bottom,effect,cash1,cash,closeBtn,click,title,items,desc0,left,mmmmm}|link=@1>
+<Img|id=bottom|x=-120|y=280|img=public/sf1/2/shouchong/bottom.png|link=@1|scale=2>
+; <Img|id=left|x=-20|y=80|img=public/sf1/2/shouchong/left.png|link=@1|scale=2>
+<Button|id=closeBtn|x=620|y=0.0|nimg=public/sf1/2/shouchong/cls.png|link=@exit>
+<UIModel|id=effect|x=20|y=200|scale=1|sex=1|headID=344|clothID=003790|capID=1188|weaponID=003810|clothEffectID=6023#1#0#0|weaponEffectID=6024#1#0#0>
+
+<Img|id=desc0|x=173|y=16|img=public/sf1/2/shouchong/desc.png|link=@1|scale=1>
+<Img|id=title|x=210|y=-11|img=public/sf1/2/shouchong/title.png|link=@1|scale=1>
+<Img|id=mmmmm|x=210|y=65|img=public/sf1/2/shouchong/desc1.png|link=@1|scale=1>
+
+<$str(S$MainView)>
+
+;初始化展示
+[@InitShow]
+#if
+#act
+;当前标签索引
+mov N$LabIdx 1
+;当前展示的道具索引
+mov N$ShowIdx 0
+;天数展示的坐标偏移
+mov N$LabDayX 232
+mov N$LabBoxX 200
+;所有子控件
+mov S$Childs
+
+goto @ShowLable
+inc S$MainView <Img|id=items|width=0|height=0|children={<$str(S$Childs)>}|x=0|y=0|img=public/0.png>
+
+[@DayStatus]
+#if
+#act
+; 天数物品领取状态
+mov S$StatusIcon 0.png
+
+; sendmsg 6 标签[<$str(N$LabIdx)>],领取索引[<$str(U71)>],上次领取日期[<$str(U72)>]
+
+; 还没购买
+#if
+EQUAL U99 0
+#act
+break
+
+; 未到,非本日
+#if
+large N$LabIdx U71
+#act
+mov S$StatusIcon common1043.png
+break
+
+; 之前的, 已领取
+#if
+small N$LabIdx U71
+#act
+mov S$StatusIcon common1042_1.png
+break
+
+; 今天的,可能已领取,也可能未领取
+#if
+EQUAL <$str(U72)> <$DAY>
+#act
+mov S$StatusIcon common1043.png
+break
+
+;第N天
+[@ShowLable]
+#if
+#act
+;物品配置
+ReadConfigFileItem ..\Data\首充配置.txt <$str(N$LabIdx)> 物品,数量,绑定 S$AwardStr
+ReadConfigFileItem ..\Data\首充配置.txt <$str(N$LabIdx)> 图标x,y S$IconPos
+#if
+not equal <$STR(S$AwardStr)>   
+#act
+
+inc S$MainView <Img|id=day<$STR(N$LabIdx)>|x=<$STR(N$LabDayX)>|y=186|img=public/sf1/2/shouchong/day<$STR(N$LabIdx)>.png|link=@1|scale=1>
+inc S$MainView <Img|id=box<$STR(N$LabIdx)>|x=<$STR(N$LabBoxX)>|y=176|img=public/sf1/2/shouchong/lable.png|link=@1|scale=1>
+
+inc N$LabDayX 140
+inc N$LabBoxX 140
+
+inc S$Childs box<$STR(N$LabIdx)>,
+inc S$Childs day<$STR(N$LabIdx)>,
+
+; 道具图标上的已领取状态
+goto @DayStatus
+; sendmsg 6 结果[<$str(S$StatusIcon)>]
+
+inc N$LabIdx 1
+goto @ShowItem
+goto @ShowLable
+
+;组内的道具
+[@ShowItem]
+#if
+equal <$STR(S$AwardStr)>   
+#act
+break
+
+#if
+#act
+;道具
+GetValidstr <$STR(S$AwardStr)> & S$AwardItem S$AwardStr
+GETVALIDSTRSUPER <$STR(S$AwardItem)> , S$ItemInfo
+GetDBItemFieldValue <$STR(S$ItemInfo1)> idx S$AwardItemId
+
+;坐标
+GetValidstr <$STR(S$IconPos)> & S$IconPosVec S$IconPos
+GetValidstr <$STR(S$IconPosVec)> , S$IconX S$IconY
+
+;展示道具
+inc S$MainView <ItemShow|id=item<$STR(N$ShowIdx)>|x=<$STR(S$IconX)>|y=<$STR(S$IconY)>|itemid=<$STR(S$AwardItemId)>|itemcount=<$STR(S$ItemInfo2)>|children={lock<$STR(N$ShowIdx)>,status<$STR(N$ShowIdx)>,}|showtips=1|bgtype=1|scale=0.8>
+
+;领取状态
+inc S$MainView <Img|id=status<$STR(N$ShowIdx)>|x=8|y=22|img=public/icon/<$STR(S$StatusIcon)>>
+
+;锁的小图标
+#if
+equal <$STR(S$ItemInfo3)> 1
+#act
+inc S$MainView <Img|id=lock<$STR(N$ShowIdx)>|x=10|y=10|img=public/icon/lock.png>
+
+#if
+#act
+inc S$Childs item<$STR(N$ShowIdx)>,
+inc N$ShowIdx 1
+
+#if
+not equal <$STR(S$AwardStr)>   
+#act
+goto @ShowItem
+
+; 按钮
+[@ShowButton]
+#if
+#act
+mov N$BX 358
+mov N$BY 332
+
+#if
+EQUAL U99 0
+#act
+inc S$MainView <Button|id=cash|x=<$STR(N$BX)>|y=<$STR(N$BY)>|color=161|nimg=public/sf1/2/shouchong/recharge.png|pimg=public/sf1/2/shouchong/立即充值.png|link=@充值界面>
+inc S$MainView <Button|id=cash1|x=323|y=323|color=161|nimg=public/icon/common1090.png|pimg=public/icon/common1090.png|link=@充值界面>
+break
+
+; 和上次是否是同一天
+#if
+not EQUAL <$str(U72)> <$DAY>
+#act
+; 领取奖励
+inc S$MainView <Button|id=cash|x=<$STR(N$BX)>|y=<$STR(N$BY)>|nimg=public/icon/common1020.png|pimg=public/icon/common1020.png|link=@OnGetAward>
+inc S$MainView <Button|id=cash1|x=323|y=323|color=161|nimg=public/icon/common1090.png|pimg=public/icon/common1090.png|link=@OnGetAward>
+#elseact
+; 已领取
+inc S$MainView <Button|id=cash|x=370|y=325|nimg=public/icon/common1042_2.png|pimg=public/icon/common1042_2.png>
+inc S$MainView <Button|id=cash1|x=323|y=323|color=161|nimg=public/0.png|pimg=public/0.png|link=@OnGetAward>
+
+
+; 领取奖励
+[@OnGetAward]
+#if
+EQUAL U99 0
+#act
+messagebox 你还没有充值!
+break
+
+; 第几次领取
+#if
+#act
+ReadConfigFileItem ..\Data\首充配置.txt <$str(U71)> 物品,数量,绑定 S$MailAwards
+
+#if
+equal <$STR(S$MailAwards)>   
+#act
+messagebox 已经没有可领取的奖励了!
+break
+
+#if
+not EQUAL <$str(U72)> <$DAY>
+#act
+goto @MailHandle
+
+messagebox 奖励已通过邮件发放!
+SendMail 1 首充奖励 首充第<$str(U71)>天奖励!
+; 设置为当前领取的日期
+mov U72 <$DAY>
+inc U71 1
+
+#CALL [\首充系统\首充界面.txt] @首充面板
+
+#elseact
+messagebox 今天的奖励已经通过邮件发放了!
+
+; 已经没有了,删除图标
+#if
+#act
+ReadConfigFileItem ..\Data\首充配置.txt <$str(U71)> 物品,数量,绑定 S$MailAwards
+
+#if
+equal <$STR(S$MailAwards)>
+#act
+mov U72 666
+#CALL [\Mobile\特殊NPC\TOP图标.txt] @导航
+break
+
+; 邮件处理
+[@MailHandle]
+#if 
+equal <$str(S$MailAwards)>
+#act
+sendmsg 5 <$str(S$MailAwards)>
+break
+
+#if
+#act
+;道具
+mov S$MailItemInfo
+GetValidstr <$STR(S$MailAwards)> & S$MailItem S$MailAwards
+GETVALIDSTRSUPER <$STR(S$MailItem)> , S$MailItemInfo
+
+#if
+equal <$str(S$MailItemInfo3)> 1
+#act
+mov S$Attach 1#4#5#6#8
+#elseact
+mov S$Attach
+
+#if
+#act
+MailGIVE <$STR(S$MailItemInfo1)> <$STR(S$MailItemInfo2)> <$str(S$Attach)>
+
+goto @MailHandle
+}

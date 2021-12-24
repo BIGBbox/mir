@@ -45,7 +45,7 @@ CheckLevelEx > 104
 CHECKRENEWLEVEL > 2
 #ACT
 ;give 回城卷 1
-MapMove fbjjd
+MapMove 副本集结地
 SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖副本集结地〗,寻找高级装备！ 1 3
 SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖副本集结地〗,寻找高级装备！ 1 3
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖副本集结地〗,寻找高级装备！

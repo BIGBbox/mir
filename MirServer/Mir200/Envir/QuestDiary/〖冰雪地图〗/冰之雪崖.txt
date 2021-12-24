@@ -5,6 +5,13 @@
 mov S$掉落显示窗口
 mov S$显示掉落窗口打开 0
 
+DELAYGOTO 10 @冰之雪崖主界面
+
+#IF
+CheckContainsText <$STR(T8)> QQ群礼包
+not CheckContainsText <$STR(T8)> 冰之雪崖
+#act
+DELAYGOTO 5000 @冰之雪崖按钮
 
 goto @冰之雪崖主界面
 
@@ -23,29 +30,34 @@ goto @冰之雪崖主界面
 <Text|a=0|ax=0|x=120.0|y=50.0|tipsx=10|tipsy=80|color=70|size=18|text=本地图一共四层,爆率我看了都害怕！！>
 <Text|a=0|x=20.0|y=75.0|tipsx=10|tipsy=80|color=250|size=18|text=[刷新时间]：>
 <Text|a=0|ax=0|x=120.0|y=75.0|tipsx=10|tipsy=80|color=70|size=18|text=普通怪10分钟，Boss1小时>
-<Text|a=0|ax=0|x=20.0|y=100.0|tipsx=10|tipsy=80|color=244|size=18|text=105级以下玩家免费进入！！>
+<Text|a=0|ax=0|x=20.0|y=100.0|tipsx=10|tipsy=80|color=244|size=18|text=进阶之路，怪物比较凶猛，最少需要55级玩家才能免费进入！！>
 <Button|x=515|y=25.0|nimg=public/icon/common1087.png|link=@显示掉落>
-<Text|a=0|x=220.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=冰之雪崖|link=@冰之雪崖按钮>
+<Text|id=click_btn1|x=220.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=冰之雪崖|link=@冰之雪崖按钮>
 <$str(S$掉落显示窗口)>
 ; common1085
 
+#IF
+CheckContainsText <$STR(T8)> QQ群礼包
+not CheckContainsText <$STR(T8)> 冰之雪崖
+#ACT
+Navigation 0 click_btn1 点击完成任务
 
 [@冰之雪崖按钮]
 
 #if
 #act
-sendmsg 5 冰之雪崖
+CLEARDELAYGOTO
 
 #if
-CHECKLEVELEX < 105
+CHECKLEVELEX > 55
 #ACT
-give 回城卷 1
-MapMove byxy 51 20
+
+MapMove 冰之雪崖 51 20
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖冰之雪崖〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖冰之雪崖〗,寻找高级装备！
 break
 #ELSEACT
-MESSAGEBOX 您的等级太高了,大姥级别了还欺负新人去？
+MESSAGEBOX 等级不足55级！去升升级再来吧！
 BREAK
 
 [@显示掉落]

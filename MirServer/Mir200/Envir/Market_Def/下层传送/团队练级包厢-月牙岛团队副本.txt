@@ -1,0 +1,40 @@
+[@MAIN]
+#IF
+equal <$CLIENTFLAG> 1
+#say
+\
+<如果你能把本副本所有的怪物清除.可以到我这里领取一定奖励/FCOLOR=243>\
+<必须清理完所有的怪物./FCOLOR=243><副本清理所有怪物><可以在我这里领取奖励/FCOLOR=243>\
+\
+<怪物已经全部清理我要:/FCOLOR=254> <领取5000W经验/@领取奖励>\ \
+\
+<道士请注意> <请将你的狗狗杀死.在领取奖励/FCOLOR=253>\
+#elsesay
+<Img|width=620|height=220|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=243|size=18|text=如果你能把本副本所有的怪物清除.可以到我这里领取一定奖励>
+<Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=243|size=18|text=必须清理完所有的怪物.>
+<Text|a=0|x=223.0|y=65.0|tipsx=10|tipsy=80|color=255|size=18|text=副本清理所有怪物>
+<Text|a=0|x=381.0|y=65.0|tipsx=10|tipsy=80|color=243|size=18|text=可以在我这里领取奖励>
+<Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=254|size=18|text=怪物已经全部清理我要:>
+<Text|a=0|x=260.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=领取5000W经验|link=@领取奖励>
+<Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=255|size=18|text=道士请注意>
+<Text|a=0|x=153|y=145|tipsx=10|tipsy=80|color=253|size=18|text=请将你的狗狗杀死.在领取奖励>
+
+
+[@领取奖励]
+#IF
+CheckRangeMonCount 月牙岛团队副本 70 70 70 < 1
+#ACT
+mapmove 3 333 333
+CHANGEEXP + 50000000
+SENDMSG 6 勇士 [<$USERNAME>]通过了月牙岛团队副本，领取了5000万经验!
+SendCenterMsg 251 0 玩家『<$USERNAME>』通过了月牙岛团队副本，领取了5000万经验！ 1 3
+SendCenterMsg 251 0 玩家『<$USERNAME>』通过了月牙岛团队副本，领取了5000万经验！ 1 3
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』通过了月牙岛团队副本，领取了5000万经验！
+GuildNoticeMsg 251 0 玩家『<$USERNAME>』通过了月牙岛团队副本，领取了5000万经验！
+BREAK
+#ELSEACT
+MESSAGEBOX 不好意思，怪物没有清理干净，无法领取奖励！
+break

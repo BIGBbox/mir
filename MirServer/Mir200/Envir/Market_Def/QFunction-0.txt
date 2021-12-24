@@ -24,8 +24,10 @@ break
 [@OnKillMob]
 #if
 #act
-mov N$±ÞÊ¬¼¸ÂÊ 0
-goto @±ÞÊ¬
+; mov N$±ÞÊ¬¼¸ÂÊ 0
+; goto @±ÞÊ¬
+; goto @¸üÐÂ¹ÖÎï»÷É±Í³¼Æ
+
 ;RANDOM 300
 ;#act
 ;MOV U10 <$x>
@@ -51,21 +53,37 @@ SAVEVAR HUMAN KP
 
 ;-----------------------------------------------------------------------------------------------------------------
 [@PlayLevelUp]
+; 50¼¶ÈÎÎñ
+#if
+equal <$MAP> t118
+not checklevelex < 50
+#act
+#CALL [\ÈÎÎñÏµÍ³\ÈÎÎñÎÄ±¾.txt] @Íê³ÉµÈ¼¶ÈÎÎñ
+
+#if
+equal <$MAP> t118
+CheckContainsText <$STR(T8)> Ñ­»·´å³¤1
+not CheckContainsText <$STR(T8)> ÅÝµãµØÍ¼
+#act
+NEWCHANGETASK 10 <$LEVEL>
+
+
 #IF
-CHECKLEVELEX = 50
+checklevelex > 27
 #ACT
-GIVE ¿ì½Ý¹¦ÄÜ 1
-GIVE Ò»¼ü»ØÊÕ 1
-GIVE ËæÉí²Ö¿â 1
-GIVE ÃËÖØ»Ø³ÇÊ¯ 1
-GIVE Ëæ»ú´«ËÍÊ¯ 1
-break
+PLAYMAGICBALLEFFECT hp_0 30 200 -1 0 1 -5 -2 75
+PLAYMAGICBALLEFFECT mp_0 30 200 -1 1 1 2 -2 75
+#elseact
+PLAYMAGICBALLEFFECT fhp_0 30 200 -1 2 1 -2 -2 75
+
 ;-----------------------------------------------------------------------------------------------------------------
 [@PlayDie]
 #if
 #act
-REALIVE
-mapmove 3 333 333
+#CALL [\ËÀÍö´¥·¢\ËÀÍö»Ø³Ç.txt] @ËÀÍö»Ø³Ç
+
+; REALIVE
+; mapmove 3 333 333
 ; break
 
 
@@ -77,28 +95,34 @@ take ËÀÒ²²»±¬ 46
 ThrowItem <$MAP> <$X> <$Y> 1 ËÀÒ²²»±¬ 1|60 1 1
 
 #IF
-check [059] 1
+check [59] 1
 CHECKCURRTARGETRACE = 0
 #ACT
-<$CURRRTARGETNAME>.GAMEGOLD + 100000
-SET [059] 0
-SETICON 1 -1
-SendCenterMsg 250 0 Õ½±¨£º¡¾<$CURRRTARGETNAME>¡¿¸ÉµôÁËÓµÓÐ¡¾ÌìÉñÏÂ·²¡¿µÄ[<$USERNAME>]»ñµÃ100000Ôª±¦½±Àø£¡£¡ 1 3
-SendCenterMsg 250 0 Õ½±¨£º¡¾<$CURRRTARGETNAME>¡¿¸ÉµôÁËÓµÓÐ¡¾ÌìÉñÏÂ·²¡¿µÄ[<$USERNAME>]»ñµÃ100000Ôª±¦½±Àø£¡£¡ 1 3
-SendCenterMsg 250 0 Õ½±¨£º¡¾<$CURRRTARGETNAME>¡¿¸ÉµôÁËÓµÓÐ¡¾ÌìÉñÏÂ·²¡¿µÄ[<$USERNAME>]»ñµÃ100000Ôª±¦½±Àø£¡£¡ 1 3
-
+<$CURRRTARGETNAME>.money Áé·û + 1000
+SET [59] 0
+SETICON 0 -1
+SendCenterMsg 250 0 Õ½±¨£º¡¾<$CURRRTARGETNAME>¡¿¸ÉµôÁËÓµÓÐ¡¾ÌìÉñÏÂ·²¡¿µÄ[<$USERNAME>]»ñµÃ1000Áé·û½±Àø£¡£¡ 1 3
+SendCenterMsg 250 0 Õ½±¨£º¡¾<$CURRRTARGETNAME>¡¿¸ÉµôÁËÓµÓÐ¡¾ÌìÉñÏÂ·²¡¿µÄ[<$USERNAME>]»ñµÃ1000Áé·û½±Àø£¡£¡ 1 3
+SendCenterMsg 250 0 Õ½±¨£º¡¾<$CURRRTARGETNAME>¡¿¸ÉµôÁËÓµÓÐ¡¾ÌìÉñÏÂ·²¡¿µÄ[<$USERNAME>]»ñµÃ1000Áé·û½±Àø£¡£¡ 1 3
+<$USERNAME>.ChangeHumAbility 5 - 88
+<$USERNAME>.ChangeHumAbility 6 - 88
+<$USERNAME>.ChangeHumAbility 11 - 88
+<$USERNAME>.ChangeHumAbility 12 - 88
 
 #IF
-check [058] 1
+check [58] 1
 CHECKCURRTARGETRACE = 0
 #ACT
-<$CURRRTARGETNAME>.money RMBµã + 100000
-SET [059] 0
+<$CURRRTARGETNAME>.money RMBµã + 1000
+SET [58] 0
 SETICON 1 -1
 SendCenterMsg 250 0 Õ½±¨£º¡¾<$CURRRTARGETNAME>¡¿¸ÉµôÁËÓµÓÐ¡¾ÌìÉñÏÂ·²¡¿µÄ[<$USERNAME>]»ñµÃ1000RMBµã½±Àø£¡£¡ 1 3
 SendCenterMsg 250 0 Õ½±¨£º¡¾<$CURRRTARGETNAME>¡¿¸ÉµôÁËÓµÓÐ¡¾ÌìÉñÏÂ·²¡¿µÄ[<$USERNAME>]»ñµÃ1000RMBµã½±Àø£¡£¡ 1 3
 SendCenterMsg 250 0 Õ½±¨£º¡¾<$CURRRTARGETNAME>¡¿¸ÉµôÁËÓµÓÐ¡¾ÌìÉñÏÂ·²¡¿µÄ[<$USERNAME>]»ñµÃ1000RMBµã½±Àø£¡£¡ 1 3
-
+<$USERNAME>.ChangeHumAbility 5 - 88
+<$USERNAME>.ChangeHumAbility 6 - 188
+<$USERNAME>.ChangeHumAbility 11 - 88
+<$USERNAME>.ChangeHumAbility 12 - 188
 
 #IF
 KILLBYHUM
@@ -141,198 +165,65 @@ give ½ð±Ò 998000
 SENDMSG 7 ¹§Ï²£ºÔö¼ÓÁË100W½ð±Ò.
 BREAK
 
-[@STDMODEFUNC9]
-#IF
-gender woman
-#ACT
-HAIRSTYLE 1
-SENDMSG 7 ·¢ÐÍÒÑ¾­±ä¸ü!
-BREAK
-#IF
-gender man
-#ACT
-HAIRSTYLE 1
-SENDMSG 7 ·¢ÐÍÒÑ¾­±ä¸ü!
-BREAK
+; [@STDMODEFUNC9]
+; #IF
+; gender woman
+; #ACT
+; HAIRSTYLE 1
+; SENDMSG 7 ·¢ÐÍÒÑ¾­±ä¸ü!
+; BREAK
+; #IF
+; gender man
+; #ACT
+; HAIRSTYLE 1
+; SENDMSG 7 ·¢ÐÍÒÑ¾­±ä¸ü!
+; BREAK
 
-[@STDMODEFUNC10]
-#IF
-gender woman
-#ACT
-HAIRSTYLE 0
-SENDMSG 7 ·¢ÐÍÒÑ¾­±ä¸ü!
-BREAK
-#IF
-gender man
-#ACT
-HAIRSTYLE 0
-SENDMSG 7 ·¢ÐÍÒÑ¾­±ä¸ü!
-BREAK
+; [@STDMODEFUNC10]
+; #IF
+; gender woman
+; #ACT
+; HAIRSTYLE 0
+; SENDMSG 7 ·¢ÐÍÒÑ¾­±ä¸ü!
+; BREAK
+; #IF
+; gender man
+; #ACT
+; HAIRSTYLE 0
+; SENDMSG 7 ·¢ÐÍÒÑ¾­±ä¸ü!
+; BREAK
 
-[@STDMODEFUNC11]
-#IF
-#ACT
-KILLMONEXPRATE 200 7200
-Gmexecute showeffect 76
-SENDMSG 0 Íæ¼Ò¡¸<$USERNAME>¡¹Ê¹ÓÃË«±¶¾íÖá£¬»ñµÃÁË2Ð¡Ê±Ë«±¶Ê±¼ä¡£
-
-
-[@STDMODEFUNC12]
-#IF
-#ACT
-KILLMONEXPRATE 200 3600
-Gmexecute showeffect 76
-SENDMSG 0 Íæ¼Ò¡¸<$USERNAME>¡¹Ê¹ÓÃË«±¶±¦µä(Ð¡)£¬»ñµÃÁË1Ð¡Ê±Ë«±¶Ê±¼ä¡£
+; [@STDMODEFUNC11]
+; #IF
+; #ACT
+; KILLMONEXPRATE 200 7200
+; Gmexecute showeffect 76
+; SENDMSG 0 Íæ¼Ò¡¸<$USERNAME>¡¹Ê¹ÓÃË«±¶¾íÖá£¬»ñµÃÁË2Ð¡Ê±Ë«±¶Ê±¼ä¡£
 
 
-[@STDMODEFUNC13]
-#IF
-#ACT
-KILLMONEXPRATE 200 10800
-Gmexecute showeffect 76
-SENDMSG 0 Íæ¼Ò¡¸<$USERNAME>¡¹Ê¹ÓÃË«±¶±¦µä(ÖÐ)£¬»ñµÃÁË3Ð¡Ê±Ë«±¶Ê±¼ä¡£
+; [@STDMODEFUNC12]
+; #IF
+; #ACT
+; KILLMONEXPRATE 200 3600
+; Gmexecute showeffect 76
+; SENDMSG 0 Íæ¼Ò¡¸<$USERNAME>¡¹Ê¹ÓÃË«±¶±¦µä(Ð¡)£¬»ñµÃÁË1Ð¡Ê±Ë«±¶Ê±¼ä¡£
 
 
-[@STDMODEFUNC14]
-#IF
-#ACT
-KILLMONEXPRATE 200 21600
-Gmexecute showeffect 76
-SENDMSG 0 Íæ¼Ò¡¸<$USERNAME>¡¹Ê¹ÓÃË«±¶±¦µä(´ó)£¬»ñµÃÁË6Ð¡Ê±Ë«±¶Ê±¼ä¡£
+; [@STDMODEFUNC13]
+; #IF
+; #ACT
+; KILLMONEXPRATE 200 10800
+; Gmexecute showeffect 76
+; SENDMSG 0 Íæ¼Ò¡¸<$USERNAME>¡¹Ê¹ÓÃË«±¶±¦µä(ÖÐ)£¬»ñµÃÁË3Ð¡Ê±Ë«±¶Ê±¼ä¡£
 
 
-[@StdModeFunc15]
-#IF
-#ACT
-Gmexecute showeffect 79
-SENDMSG 0 <$USERNAME>ÔÚ:%m%x:%y´¦·ÅÑÌ»¨¿©¡¢´ó¼Ò¿ìÈ¥ÐÀÉÍÅ¶¡£
+; [@STDMODEFUNC14]
+; #IF
+; #ACT
+; KILLMONEXPRATE 200 21600
+; Gmexecute showeffect 76
+; SENDMSG 0 Íæ¼Ò¡¸<$USERNAME>¡¹Ê¹ÓÃË«±¶±¦µä(´ó)£¬»ñµÃÁË6Ð¡Ê±Ë«±¶Ê±¼ä¡£
 
-[@StdModeFunc16]
-#IF
-#ACT
-Gmexecute showeffect 80
-SENDMSG 0 <$USERNAME>ÔÚ:%m%x:%y´¦·ÅÑÌ»¨¿©¡¢´ó¼Ò¿ìÈ¥ÐÀÉÍÅ¶¡£
-
-[@StdModeFunc17]
-#IF
-#ACT
-Gmexecute showeffect 81
-SENDMSG 0 <$USERNAME>ÔÚ:%m%x:%y´¦·ÅÑÌ»¨¿©¡¢´ó¼Ò¿ìÈ¥ÐÀÉÍÅ¶¡£
-
-[@StdModeFunc18]
-#IF
-#ACT
-Gmexecute showeffect 82
-SENDMSG 0 <$USERNAME>ÔÚ:%m%x:%y´¦·ÅÑÌ»¨¿©¡¢´ó¼Ò¿ìÈ¥ÐÀÉÍÅ¶¡£
-
-[@StdModeFunc19]
-#IF
-#ACT
-Gmexecute showeffect 83
-SENDMSG 0 <$USERNAME>ÔÚ:%m%x:%y´¦·ÅÑÌ»¨¿©¡¢´ó¼Ò¿ìÈ¥ÐÀÉÍÅ¶¡£
-
-[@StdModeFunc20]
-#IF
-#ACT
-Gmexecute showeffect 84
-SENDMSG 0 <$USERNAME>ÔÚ:%m%x:%y´¦·ÅÑÌ»¨¿©¡¢´ó¼Ò¿ìÈ¥ÐÀÉÍÅ¶¡£
-
-[@StdModeFunc21]
-#IF
-#ACT
-Gmexecute showeffect 85
-SENDMSG 0 <$USERNAME>ÔÚ:%m%x:%y´¦·ÅÑÌ»¨¿©¡¢´ó¼Ò¿ìÈ¥ÐÀÉÍÅ¶¡£
-
-[@StdModeFunc41]
-#IF
-small M3 60
-#Act
-INC M3 2
-Gmexecute showeffect 79
-Gmexecute showeffect 80
-Gmexecute showeffect 81
-Delaygoto 2000 @Çìµäµ°¸â1
-SENDMSG 0 <$USERNAME>ÔÚ:%m%x:%y´¦·ÅÇìµäµ°¸âÁË!´ó¼Ò¿ìÈ¥¿´À­
-#ELSEAct
-MOV M3 0
-
-[@Çìµäµ°¸â1]
-#IF
-small M3 60
-#Act
-INC M3 2
-Gmexecute showeffect 80
-Gmexecute showeffect 81
-Gmexecute showeffect 82
-Delaygoto 2000 @Çìµäµ°¸â2
-SENDMSG 0 <$USERNAME>ÔÚ:%m%x:%y´¦·ÅÇìµäµ°¸âÁË!´ó¼Ò¿ìÈ¥¿´À­
-#ELSEAct
-MOV M3 0
-
-[@Çìµäµ°¸â2]
-#IF
-small M3 60
-#Act
-INC M3 2
-Gmexecute showeffect 81
-Gmexecute showeffect 82
-Gmexecute showeffect 83
-Delaygoto 2000 @Çìµäµ°¸â3
-SENDMSG 0 <$USERNAME>ÔÚ:%m%x:%y´¦·ÅÇìµäµ°¸âÁË!´ó¼Ò¿ìÈ¥¿´À­
-#ELSEAct
-MOV M3 0
-
-[@Çìµäµ°¸â3]
-#IF
-small M3 60
-#Act
-INC M3 2
-Gmexecute showeffect 82
-Gmexecute showeffect 83
-Gmexecute showeffect 84
-Delaygoto 2000 @Çìµäµ°¸â4
-SENDMSG 0 <$USERNAME>ÔÚ:%m%x:%y´¦·ÅÇìµäµ°¸âÁË!´ó¼Ò¿ìÈ¥¿´À­
-#ELSEAct
-MOV M3 0
-
-[@Çìµäµ°¸â4]
-#IF
-small M3 60
-#Act
-INC M3 2
-Gmexecute showeffect 83
-Gmexecute showeffect 84
-Gmexecute showeffect 85
-Delaygoto 2000 @Çìµäµ°¸â5
-SENDMSG 0 <$USERNAME>ÔÚ:%m%x:%y´¦·ÅÇìµäµ°¸âÁË!´ó¼Ò¿ìÈ¥¿´À­
-#ELSEAct
-MOV M3 0
-
-[@Çìµäµ°¸â5]
-#IF
-small M3 60
-#Act
-INC M3 2
-Gmexecute showeffect 79
-Gmexecute showeffect 84
-Gmexecute showeffect 85
-Delaygoto 2000 @Çìµäµ°¸â6
-SENDMSG 0 <$USERNAME>ÔÚ:%m%x:%y´¦·ÅÇìµäµ°¸âÁË!´ó¼Ò¿ìÈ¥¿´À­
-#ELSEAct
-MOV M3 0
-
-[@Çìµäµ°¸â6]
-#IF
-small M3 60
-#Act
-INC M3 2
-Gmexecute showeffect 79
-Gmexecute showeffect 80
-Gmexecute showeffect 85
-Delaygoto 2000 @Çìµäµ°¸â
-SENDMSG 0 <$USERNAME>ÔÚ:%m%x:%y´¦·ÅÇìµäµ°¸âÁË!´ó¼Ò¿ìÈ¥¿´À­
-#ELSEAct
-MOV M3 0
 
 [@StdModeFunc29]
 #IF
@@ -343,7 +234,9 @@ mapmove 0 326 272
 #IF
 #ACT
 mapmove 3 330 330
+; sendmsg 5 Ìø×ª330_33011
 SendCenterMsg 180 251 »¹Ê£Óà%dÀë¿ª±¾µØÍ¼. 5 0 @ExitMap
+
 [@StdModeFunc99]
 
 [@RevMaster]
@@ -394,17 +287,17 @@ unmaster REQUESTUNMASTER MASTER
 #ACT
 SENDMSG 5 Ê¥Õ½Ì××°Òþ²ØÊôÐÔ±»¼¤·¢,¹¥»÷ÌáÉý15%!
 
-[@GroupItem1]
+[@GroupIt¶ñÄ§³¤ÀÈ]
 #IF
 #ACT
 SENDMSG 5 ·¨ÉñÌ××°Òþ²ØÊôÐÔ±»¼¤·¢:Ä§·¨ÌáÉý15%!
 
-[@GroupItem2]
+[@GroupIt¶ñÄ§´óÌü]
 #IF
 #ACT
 SENDMSG 5 Ìì×ðÌ××°Òþ²ØÊôÐÔ±»¼¤·¢!µÀÊõÌáÉý15%!
 
-[@GroupItem3]
+[@GroupIt¶ñÄ§´óµî]
 #IF
 #ACT
 SENDMSG 5 ÊôÐÔÉúÐ§:Í·¿øÒ»¶¥¹¥»÷ÉÏÏÞÔö¼Ó1%!
@@ -439,12 +332,12 @@ SENDMSG 5 ÒÂ·þÊôÐÔÉúÐ§:µÀÊõÉÏÏÞÔö¼Ó3%£¬ÌåÁ¦»Ö¸´Ôö¼Ó1%Ä§·¨»Ö¸´Ôö¼Ó1%¡£
 #ACT
 SENDMSG 5 ÒÂ·þÊôÐÔÉúÐ§:µÀÊõÉÏÏÞÔö¼Ó3%£¬ÌåÁ¦»Ö¸´Ôö¼Ó1%Ä§·¨»Ö¸´Ôö¼Ó1%¡£
 
-[@GroupItem10]
+[@GroupIt¶ñÄ§³¤ÀÈ0]
 #IF
 #ACT
 SENDMSG 5 ÒÂ·þÊôÐÔÉúÐ§:Ä§·¨ÉÏÏÞÔö¼Ó3µã£¬HPÔö¼Ó20%£¬ÌåÁ¦»Ö¸´Ôö¼Ó1%Ä§·¨»Ö¸´Ôö¼Ó1%¡£
 
-[@GroupItem11]
+[@GroupIt¶ñÄ§³¤ÀÈ1]
 #IF
 #ACT
 SENDMSG 5 ÒÂ·þÊôÐÔÉúÐ§:Ä§·¨ÉÏÏÞÔö¼Ó3µã£¬HPÔö¼Ó20%£¬ÌåÁ¦»Ö¸´Ôö¼Ó1%Ä§·¨»Ö¸´Ôö¼Ó1%¡£
@@ -614,70 +507,153 @@ SENDMSG 7 {¤°¡¼ÌáÊ¾¡½:|251:0:0}{³É¹¦»ñµÃ¾­ÑéÖµ|255:0}{50W|222:0}
 BREAK
 
 [@StdModeFunc80]
-#ACT
-GAMEGOLD + 20
+; #if
+; #ACT
+; GAMEGOLD + 20
+; SENDMSG 7 ¹§Ï²Äú20Ôª±¦ÒÑµ½ÕÊ»§ÖÐ.
+
+#if
+checkitem 20Ôª±¦ 1
+#act
+take 20Ôª±¦ 1
+money Ôª±¦ + 20
 SENDMSG 7 ¹§Ï²Äú20Ôª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc80
+
 [@StdModeFunc81]
-#ACT
-GAMEGOLD + 50
+#if
+checkitem 50Ôª±¦ 1
+#act
+take 50Ôª±¦ 1
+money Ôª±¦ + 50
 SENDMSG 7 ¹§Ï²Äú50Ôª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc81
+
 [@StdModeFunc59]
-#ACT
-GAMEGOLD + 100
+#if
+checkitem 100Ôª±¦ 1
+#act
+take 100Ôª±¦ 1
+money Ôª±¦ + 100
 SENDMSG 7 ¹§Ï²Äú100Ôª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc59
+
 [@StdModeFunc60]
-#ACT
-GAMEGOLD + 200
+#if
+checkitem 200Ôª±¦ 1
+#act
+take 200Ôª±¦ 1
+money Ôª±¦ + 200
 SENDMSG 7 ¹§Ï²Äú200Ôª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc60
+
 [@StdModeFunc61]
-#ACT
-GAMEGOLD + 500
+#if
+checkitem 500Ôª±¦ 1
+#act
+take 500Ôª±¦ 1
+money Ôª±¦ + 500
 SENDMSG 7 ¹§Ï²Äú500Ôª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc61
+
 [@StdModeFunc62]
-#ACT
-GAMEGOLD + 1000
+#if
+checkitem 1000Ôª±¦ 1
+#act
+take 1000Ôª±¦ 1
+money Ôª±¦ + 1000
 SENDMSG 7 ¹§Ï²Äú1000Ôª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc62
+
 [@StdModeFunc63]
-#ACT
-GAMEGOLD + 2000
-SENDMSG 7 ¹§Ï²Äú2000Ôª±¦ÒÑµ½ÕÊ»§ÖÐ.
+#if
+checkitem 2000Ôª±¦ 1
+#act
+take 2000Ôª±¦ 1
+money Ôª±¦ + 2000
+SENDMSG 7 ¹§Ï²Äú1000Ôª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc63
+
 [@StdModeFunc64]
-#ACT
-GAMEGOLD + 5000
+#if
+checkitem 5000Ôª±¦ 1
+#act
+take 5000Ôª±¦ 1
+money Ôª±¦ + 5000
 SENDMSG 7 ¹§Ï²Äú5000Ôª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc64
+
 [@StdModeFunc65]
-#ACT
-GAMEGOLD + 10000
-SENDMSG 7 ¹§Ï²Äú10000Ôª±¦ÒÑµ½ÕÊ»§ÖÐ.
+#if
+checkitem 10000Ôª±¦ 1
+#act
+take 10000Ôª±¦ 1
+money Ôª±¦ + 10000
+SENDMSG 7 ¹§Ï²Äú1wÔª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc65
+
 [@StdModeFunc66]
-#ACT
-GAMEGOLD + 20000
+#if
+checkitem 20000Ôª±¦ 1
+#act
+take 20000Ôª±¦ 1
+money Ôª±¦ + 20000
 SENDMSG 7 ¹§Ï²Äú20000Ôª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc66
+
 [@StdModeFunc67]
-#ACT
-GAMEGOLD + 50000
+#if
+checkitem 50000Ôª±¦ 1
+#act
+take 50000Ôª±¦ 1
+money Ôª±¦ + 50000
 SENDMSG 7 ¹§Ï²Äú50000Ôª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc67
+
 [@StdModeFunc68]
-#ACT
-GAMEGOLD + 100000
+#if
+checkitem 100000Ôª±¦ 1
+#act
+take 100000Ôª±¦ 1
+money Ôª±¦ + 100000
 SENDMSG 7 ¹§Ï²Äú100000Ôª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc68
+
 
 [@StdModeFunc53]
 #ACT
-GAMEPOINT + 1
-GAMEGIRD + 1
+; GAMEPOINT + 1
+money RMBµã + 100
 break
 
 [@StdModeFunc54]
 #ACT
-GAMEPOINT + 5
-GAMEGIRD + 5
+; GAMEPOINT + 5
+money RMBµã + 500
 break
 
 [@StdModeFunc55]
 #ACT
-GAMEPOINT + 10
-GAMEGIRD + 10
+; GAMEPOINT + 10
+money RMBµã + 1000
+break
+
+[@StdModeFunc56]
+#ACT
+; GAMEPOINT + 10
+money RMBµã + 2000
+break
+
+[@StdModeFunc57]
+#ACT
+; GAMEPOINT + 10
+money RMBµã + 5000
+break
+
+[@StdModeFunc58]
+#ACT
+; GAMEPOINT + 10
+money RMBµã + 10000
 break
 
 [@StdModeFunc74]
@@ -727,32 +703,68 @@ SENDMSG 6 Áé»ê»ð·ûÐÞÁ¶Ç¿»¯¼Ó1ÖØ.×î¸ß3ÖØ£¡
 [@StdModeFunc85]
 #IF
 #ACT
-GAMEGIRD + 10
+money Áé·û + 10
 SENDMSG 6 Áé·ûÔö¼Ó10¸ö£¡£¡
 BREAK
 [@StdModeFunc86]
 #IF
 #ACT
-GAMEGIRD + 50
+money Áé·û + 50
 SENDMSG 6 Áé·ûÔö¼Ó50¸ö£¡£¡
 BREAK
 [@StdModeFunc87]
 #IF
 #ACT
-GAMEGIRD + 100
+money Áé·û + 100
 SENDMSG 6 Áé·ûÔö¼Ó100¸ö£¡£¡
 BREAK
 [@StdModeFunc88]
 #IF
 #ACT
-GAMEGIRD + 500
+money Áé·û + 500
 SENDMSG 6 Áé·ûÔö¼Ó500¸ö£¡£¡
 BREAK
 [@StdModeFunc89]
 #IF
 #ACT
-GAMEGIRD + 1000
+money Áé·û + 1000
 SENDMSG 6 Áé·ûÔö¼Ó1000¸ö£¡£¡
+BREAK
+[@StdModeFunc228]
+#IF
+#ACT
+money Áé·û + 2000
+SENDMSG 6 Áé·ûÔö¼Ó2000¸ö£¡£¡
+BREAK
+[@StdModeFunc229]
+#IF
+#ACT
+money Áé·û + 5000
+SENDMSG 6 Áé·ûÔö¼Ó5000¸ö£¡£¡
+BREAK
+[@StdModeFunc230]
+#IF
+#ACT
+money Áé·û + 10000
+SENDMSG 6 Áé·ûÔö¼Ó10000¸ö£¡£¡
+BREAK
+[@StdModeFunc231]
+#IF
+#ACT
+money Áé·û + 20000
+SENDMSG 6 Áé·ûÔö¼Ó20000¸ö£¡£¡
+BREAK
+[@StdModeFunc232]
+#IF
+#ACT
+money Áé·û + 50000
+SENDMSG 6 Áé·ûÔö¼Ó50000¸ö£¡£¡
+BREAK
+[@StdModeFunc233]
+#IF
+#ACT
+money Áé·û + 100000
+SENDMSG 6 Áé·ûÔö¼Ó100000¸ö£¡£¡
 BREAK
 
 [@StdModeFunc90]
@@ -806,34 +818,79 @@ BREAK
 MessageBox \ \ÐèÒªÊÕÈ¡5000Ôª±¦ÊÖÐø·Ñ\ \³É¹¦ÎäÆ÷¡¾¹¥»÷ÉËº¦¼¸ÂÊÔö¼Ó1%¡¿\ \Ê§°ÜÎäÆ÷¡¾¹¥»÷ÉËº¦¼¸ÂÊÇåÁã¡¿ @È·22¶¨ @È¡Ïû22
 
 
+[@È·22¶¨]
+#if
+CHECKBAGSIZE 2
+CHECKGAMEGOLD > 4999
+#ACT
+goto @112
+#elseact
+GIVE ÎäÆ÷¾«Á¶ÓÍ 1
+MESSAGEBOX ÉíÉÏµÄ¿Õ¸ñ²»¹»2¸ö»òÕßÄãÃ»ÓÐ5000Ôª±¦£¡
+break
+
+
+[@È¡Ïû22]
+#if
+#ACT
+GIVE ÎäÆ÷¾«Á¶ÓÍ 1
+break
+
+[@112]
+#if
+random 2
+#act
+GAMEGOLD - 5000
+SetNewItemValue 1 1 = 0
+MESSAGEBOX ºÜÒÅº¶,Ê§°Ü,ÔªËØÇå³ý£¡
+BREAK
+
+#if
+random 1
+CHECKNEWITEMVALUE 1 1 < 5
+#act
+GAMEGOLD - 5000
+SetNewItemValue 1 1 + 1
+MESSAGEBOX ³É¹¦£¡
+BREAK
+
+; mov S$ÅúÁ¿Ê°È¡¿¨
+; goto @È¡ÏûÊ¹ÓÃÅúÁ¿¿¨
+
 [@StdModeFunc200]
 #if
 #act
 
-inc N$ÇàÍ­±¬ÂÊ¿¨ 50
-mov N$ÇàÍ­±¬ÂÊ¿¨½áÊøÊ±¼ä <$UTCNOW8>
-inc N$ÇàÍ­±¬ÂÊ¿¨½áÊøÊ±¼ä 3600
+mov U121 <$UTCNOW8>
+inc U121 3600
 #CALL [\ÓÎÏ·¹¦ÄÜ\×°±¸±¬ÂÊ.txt] @×°±¸±¬ÂÊ
 
 #if
-large <$str(N$ÇàÍ­±¬ÂÊ¿¨)> 50
+large <$str(U120)> 50
+#act
+SENDMSG 6 µ±Ç°±¬ÂÊ´óÓÚ50,ÎÞ·¨Ê¹ÓÃ¸ÃµÀ¾ß£¡
+
+mov S$ÅúÁ¿Ê°È¡¿¨ ÇàÍ­±¬ÂÊ¿¨
+messagebox µ±Ç°±¬ÂÊ´óÓÚ50,Ê¹ÓÃ¸ÃµÀ¾ß±¬ÂÊ½«½µµÍÖÁ50 @È¡ÏûÊ¹ÓÃ±¬ÂÊ¿¨ @È·¶¨Ê¹ÓÃ
+; goto @È¡ÏûÊ¹ÓÃÅúÁ¿¿¨
+
+#if
+equal <$str(U120)> 50
 #act
 SENDMSG 6 ÇàÍ­±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß50%,³ÖÐøÊ±¼äÑÓ³¤Ò»Ð¡Ê±£¡
-#elseact
-SENDMSG 6 ÇàÍ­±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß50%,Ê±¼ä³ÖÐøÒ»Ð¡Ê±£¡
 
 [@StdModeFunc201]
 #if
 #act
 
-inc N$°×Òø±¬ÂÊ¿¨ 100
+inc U122 100
 
-mov N$°×Òø±¬ÂÊ¿¨½áÊøÊ±¼ä <$UTCNOW8>
-inc N$°×Òø±¬ÂÊ¿¨½áÊøÊ±¼ä 3600
+mov U123 <$UTCNOW8>
+inc U123 3600
 #CALL [\ÓÎÏ·¹¦ÄÜ\×°±¸±¬ÂÊ.txt] @×°±¸±¬ÂÊ
 
 #if
-large <$str(N$°×Òø±¬ÂÊ¿¨)> 100
+large <$str(U122)> 100
 #act
 SENDMSG 6 °×Òø±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß100%,³ÖÐøÊ±¼äÑÓ³¤Ò»Ð¡Ê±£¡
 #elseact
@@ -843,14 +900,14 @@ SENDMSG 6 °×Òø±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß100%,Ê±¼ä³ÖÐøÒ»Ð¡Ê±£¡
 #if
 #act
 
-inc N$»Æ½ð±¬ÂÊ¿¨ 150
+inc U124 150
 
-mov N$»Æ½ð±¬ÂÊ¿¨½áÊøÊ±¼ä <$UTCNOW8>
-inc N$»Æ½ð±¬ÂÊ¿¨½áÊøÊ±¼ä 3600
+mov U125 <$UTCNOW8>
+inc U125 3600
 #CALL [\ÓÎÏ·¹¦ÄÜ\×°±¸±¬ÂÊ.txt] @×°±¸±¬ÂÊ
 
 #if
-large <$str(N$»Æ½ð±¬ÂÊ¿¨)> 150
+large <$str(U124)> 150
 #act
 SENDMSG 6 »Æ½ð±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß150%,³ÖÐøÊ±¼äÑÓ³¤Ò»Ð¡Ê±£¡
 #elseact
@@ -860,14 +917,14 @@ SENDMSG 6 »Æ½ð±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß150%,³ÖÐøÊ±¼ä´ËÏîÒ»Ð¡Ê±£¡
 #if
 #act
 
-inc N$²¬½ð±¬ÂÊ¿¨ 200
+inc U126 200
 
-mov N$²¬½ð±¬ÂÊ¿¨½áÊøÊ±¼ä <$UTCNOW8>
-inc N$²¬½ð±¬ÂÊ¿¨½áÊøÊ±¼ä 3600
+mov U121 <$UTCNOW8>
+inc U121 3600
 #CALL [\ÓÎÏ·¹¦ÄÜ\×°±¸±¬ÂÊ.txt] @×°±¸±¬ÂÊ
 
 #if
-large <$str(N$²¬½ð±¬ÂÊ¿¨)> 200
+large <$str(U126)> 200
 #act
 SENDMSG 6 ²¬½ð±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß200%,³ÖÐøÊ±¼äÑÓ³¤Ò»Ð¡Ê±£¡
 #elseact
@@ -877,14 +934,14 @@ SENDMSG 6 ²¬½ð±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß200%,³ÖÐøÊ±¼ä´ËÏîÒ»Ð¡Ê±£¡
 #if
 #act
 
-inc N$×êÊ¯±¬ÂÊ¿¨ 250
+inc U128 250
 
-mov N$×êÊ¯±¬ÂÊ¿¨½áÊøÊ±¼ä <$UTCNOW8>
-inc N$×êÊ¯±¬ÂÊ¿¨½áÊøÊ±¼ä 3600
+mov U129 <$UTCNOW8>
+inc U129 3600
 #CALL [\ÓÎÏ·¹¦ÄÜ\×°±¸±¬ÂÊ.txt] @×°±¸±¬ÂÊ
 
 #if
-large <$str(N$×êÊ¯±¬ÂÊ¿¨)> 250
+large <$str(U128)> 250
 #act
 SENDMSG 6 ×êÊ¯±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß250%,³ÖÐøÊ±¼äÑÓ³¤Ò»Ð¡Ê±£¡
 #elseact
@@ -895,14 +952,14 @@ SENDMSG 6 ×êÊ¯±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß250%,³ÖÐøÊ±¼ä´ËÏîÒ»Ð¡Ê±£¡
 #if
 #act
 
-inc N$ÐÇÒ«±¬ÂÊ¿¨ 300
+inc U130 300
 
-mov N$ÐÇÒ«±¬ÂÊ¿¨½áÊøÊ±¼ä <$UTCNOW8>
-inc N$ÐÇÒ«±¬ÂÊ¿¨½áÊøÊ±¼ä 3600
+mov U131 <$UTCNOW8>
+inc U131 3600
 #CALL [\ÓÎÏ·¹¦ÄÜ\×°±¸±¬ÂÊ.txt] @×°±¸±¬ÂÊ
 
 #if
-large <$str(N$ÐÇÒ«±¬ÂÊ¿¨)> 300
+large <$str(U130)> 300
 #act
 SENDMSG 6 ÐÇÒ«±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß300%,³ÖÐøÊ±¼äÑÓ³¤Ò»Ð¡Ê±£¡
 #elseact
@@ -912,14 +969,14 @@ SENDMSG 6 ÐÇÒ«±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß300%,³ÖÐøÊ±¼ä´ËÏîÒ»Ð¡Ê±£¡
 #if
 #act
 
-inc N$ÍõÕß±¬ÂÊ¿¨ 350
+inc U132 350
 
-mov N$ÍõÕß±¬ÂÊ¿¨½áÊøÊ±¼ä <$UTCNOW8>
-inc N$ÍõÕß±¬ÂÊ¿¨½áÊøÊ±¼ä 3600
+mov U133 <$UTCNOW8>
+inc U133 3600
 #CALL [\ÓÎÏ·¹¦ÄÜ\×°±¸±¬ÂÊ.txt] @×°±¸±¬ÂÊ
 
 #if
-large <$str(N$ÍõÕß±¬ÂÊ¿¨)> 350
+large <$str(U132)> 350
 #act
 SENDMSG 6 ÍõÕß±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß350%,³ÖÐøÊ±¼äÑÓ³¤Ò»Ð¡Ê±£¡
 #elseact
@@ -929,14 +986,14 @@ SENDMSG 6 ÍõÕß±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß350%,³ÖÐøÊ±¼ä´ËÏîÒ»Ð¡Ê±£¡
 #if
 #act
 
-inc N$ÈÙÒ«±¬ÂÊ¿¨ 400
+inc U134 400
 
-mov N$ÈÙÒ«±¬ÂÊ¿¨½áÊøÊ±¼ä <$UTCNOW8>
-inc N$ÈÙÒ«±¬ÂÊ¿¨½áÊøÊ±¼ä 3600
+mov U135 <$UTCNOW8>
+inc U135 3600
 #CALL [\ÓÎÏ·¹¦ÄÜ\×°±¸±¬ÂÊ.txt] @×°±¸±¬ÂÊ
 
 #if
-large <$str(N$ÈÙÒ«±¬ÂÊ¿¨)> 400
+large <$str(U134)> 400
 #act
 SENDMSG 6 ÈÙÒ«±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß400%,³ÖÐøÊ±¼äÑÓ³¤Ò»Ð¡Ê±£¡
 #elseact
@@ -946,14 +1003,14 @@ SENDMSG 6 ÈÙÒ«±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß400%,³ÖÐøÊ±¼ä´ËÏîÒ»Ð¡Ê±£¡
 #if
 #act
 
-inc N$ÉñÊ¥±¬ÂÊ¿¨ 450
+inc U136 450
 
-mov N$ÉñÊ¥±¬ÂÊ¿¨½áÊøÊ±¼ä <$UTCNOW8>
-inc N$ÉñÊ¥±¬ÂÊ¿¨½áÊøÊ±¼ä 3600
+mov U137 <$UTCNOW8>
+inc U137 3600
 #CALL [\ÓÎÏ·¹¦ÄÜ\×°±¸±¬ÂÊ.txt] @×°±¸±¬ÂÊ
 
 #if
-large <$str(N$ÉñÊ¥±¬ÂÊ¿¨)> 450
+large <$str(U136)> 450
 #act
 SENDMSG 6 ÉñÊ¥±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß450%,³ÖÐøÊ±¼äÑÓ³¤Ò»Ð¡Ê±£¡
 #elseact
@@ -963,14 +1020,14 @@ SENDMSG 6 ÉñÊ¥±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß450%,³ÖÐøÊ±¼ä´ËÏîÒ»Ð¡Ê±£¡
 #if
 #act
 
-inc N$ÓÀºã±¬ÂÊ¿¨ 500
+inc U138 500
 
-mov N$ÓÀºã±¬ÂÊ¿¨½áÊøÊ±¼ä <$UTCNOW8>
-inc N$ÓÀºã±¬ÂÊ¿¨½áÊøÊ±¼ä 3600
+mov U139 <$UTCNOW8>
+inc U139 3600
 #CALL [\ÓÎÏ·¹¦ÄÜ\×°±¸±¬ÂÊ.txt] @×°±¸±¬ÂÊ
 
 #if
-large <$str(N$ÓÀºã±¬ÂÊ¿¨)> 500
+large <$str(U138)> 500
 #act
 SENDMSG 6 ÓÀºã±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß500%,³ÖÐøÊ±¼äÑÓ³¤Ò»Ð¡Ê±£¡
 #elseact
@@ -980,14 +1037,14 @@ SENDMSG 6 ÓÀºã±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß500%,³ÖÐøÊ±¼ä´ËÏîÒ»Ð¡Ê±£¡
 #if
 #act
 
-inc N$ÖÁ×ð±¬ÂÊ¿¨ 500
+inc U140 500
 
-mov N$ÖÁ×ð±¬ÂÊ¿¨½áÊøÊ±¼ä <$UTCNOW8>
-inc N$ÖÁ×ð±¬ÂÊ¿¨½áÊøÊ±¼ä 3600
+mov U141 <$UTCNOW8>
+inc U141 3600
 #CALL [\ÓÎÏ·¹¦ÄÜ\×°±¸±¬ÂÊ.txt] @×°±¸±¬ÂÊ
 
 #if
-large <$str(N$ÖÁ×ð±¬ÂÊ¿¨)> 500
+large <$str(U140)> 500
 #act
 SENDMSG 6 ÖÁ×ð±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß500%,³ÖÐøÊ±¼äÑÓ³¤Ò»Ð¡Ê±£¡
 #elseact
@@ -997,14 +1054,14 @@ SENDMSG 6 ÖÁ×ð±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß500%,³ÖÐøÊ±¼ä´ËÏîÒ»Ð¡Ê±£¡
 #if
 #act
 
-inc N$100±¬ÂÊ¿¨ 100
+inc U142 100
 
-mov N$100±¬ÂÊ¿¨½áÊøÊ±¼ä <$UTCNOW8>
-inc N$100±¬ÂÊ¿¨½áÊøÊ±¼ä 86400
+mov U143 <$UTCNOW8>
+inc U143 86400
 #CALL [\ÓÎÏ·¹¦ÄÜ\×°±¸±¬ÂÊ.txt] @×°±¸±¬ÂÊ
 
 #if
-large <$str(N$100±¬ÂÊ¿¨)> 100
+large <$str(U142)> 100
 #act
 SENDMSG 6 100%±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß100%,³ÖÐøÊ±¼äÑÓ³¤24Ð¡Ê±£¡
 #elseact
@@ -1014,14 +1071,14 @@ SENDMSG 6 100%±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß100%,³ÖÐøÊ±¼ä´ËÏî24Ð¡Ê±£¡
 #if
 #act
 
-inc N$200±¬ÂÊ¿¨ 200
+inc U144 200
 
-mov N$200±¬ÂÊ¿¨½áÊøÊ±¼ä <$UTCNOW8>
-inc N$200±¬ÂÊ¿¨½áÊøÊ±¼ä 86400
+mov U145 <$UTCNOW8>
+inc U145 86400
 #CALL [\ÓÎÏ·¹¦ÄÜ\×°±¸±¬ÂÊ.txt] @×°±¸±¬ÂÊ
 
 #if
-large <$str(N$200±¬ÂÊ¿¨)> 200
+large <$str(U144)> 200
 #act
 SENDMSG 6 200%±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß200%,³ÖÐøÊ±¼äÑÓ³¤24Ð¡Ê±£¡
 #elseact
@@ -1032,14 +1089,14 @@ SENDMSG 6 200%±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß200%,³ÖÐøÊ±¼ä´ËÏî24Ð¡Ê±£¡
 #if
 #act
 
-inc N$300±¬ÂÊ¿¨ 300
+inc U146 300
 
-mov N$300±¬ÂÊ¿¨½áÊøÊ±¼ä <$UTCNOW8>
-inc N$300±¬ÂÊ¿¨½áÊøÊ±¼ä 86400
+mov U147 <$UTCNOW8>
+inc U147 86400
 #CALL [\ÓÎÏ·¹¦ÄÜ\×°±¸±¬ÂÊ.txt] @×°±¸±¬ÂÊ
 
 #if
-large <$str(N$300±¬ÂÊ¿¨)> 300
+large <$str(U146)> 300
 #act
 SENDMSG 6 300%±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß300%,³ÖÐøÊ±¼äÑÓ³¤24Ð¡Ê±£¡
 #elseact
@@ -1050,14 +1107,14 @@ SENDMSG 6 300%±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß300%,³ÖÐøÊ±¼ä´ËÏî24Ð¡Ê±£¡
 #if
 #act
 
-inc N$500±¬ÂÊ¿¨ 500
+inc U148 500
 
-mov N$500±¬ÂÊ¿¨½áÊøÊ±¼ä <$UTCNOW8>
-inc N$500±¬ÂÊ¿¨½áÊøÊ±¼ä 86400
+mov U149 <$UTCNOW8>
+inc U149 86400
 #CALL [\ÓÎÏ·¹¦ÄÜ\×°±¸±¬ÂÊ.txt] @×°±¸±¬ÂÊ
 
 #if
-large <$str(N$500±¬ÂÊ¿¨)> 500
+large <$str(U148)> 500
 #act
 SENDMSG 6 500%±¬ÂÊ¿¨Ê¹ÓÃ³É¹¦£¡±¬ÂÊÌá¸ß500%,³ÖÐøÊ±¼äÑÓ³¤24Ð¡Ê±£¡
 #elseact
@@ -1113,53 +1170,287 @@ mov U21 3
 
 [@StdModeFunc218]
 #if
-not small <$str(U21)> 4
+not small <$str(U21)> 5
 #act
-mov S$ÅúÁ¿Ê°È¡¿¨ ×Ô¶¯ÎüÎï¡¾4*4·¶Î§¡¿
-messagebox µ±Ç°Ê°È¡·¶Î§Îª4*4,ÇëµÚ¶þÌìÔÙÊ¹ÓÃ¸ÃµÀ¾ß @È¡ÏûÊ¹ÓÃÅúÁ¿¿¨
+mov S$ÅúÁ¿Ê°È¡¿¨ ×Ô¶¯ÎüÎï¡¾5*5·¶Î§¡¿
+messagebox µ±Ç°Ê°È¡·¶Î§Îª5*5,ÇëµÚ¶þÌìÔÙÊ¹ÓÃ¸ÃµÀ¾ß @È¡ÏûÊ¹ÓÃÅúÁ¿¿¨
 break
 
 #if
 #act
-SENDMSG 6 ×Ô¶¯ÎüÎï¡¾4*4·¶Î§¡¿Ê¹ÓÃ³É¹¦£¡ÅúÁ¿Ê°È¡·¶Î§Ìá¸ßµ½4*4,µ±ÌìÁãµãÊ§Ð§£¡
-mov U21 4
+SENDMSG 6 ×Ô¶¯ÎüÎï¡¾5*5·¶Î§¡¿Ê¹ÓÃ³É¹¦£¡ÅúÁ¿Ê°È¡·¶Î§Ìá¸ßµ½5*5,µ±ÌìÁãµãÊ§Ð§£¡
+mov U21 5
 
 
-[@È·22¶¨]
+[@StdModeFunc223]
 #if
-CHECKBAGSIZE 2
-CHECKGAMEGOLD > 4999
-#ACT
-goto @112
-#elseact
-GIVE ÎäÆ÷¾«Á¶ÓÍ 1
-MESSAGEBOX ÉíÉÏµÄ¿Õ¸ñ²»¹»2¸ö»òÕßÄãÃ»ÓÐ5000Ôª±¦£¡
+not small <$str(U21)> 5
+#act
+mov S$ÅúÁ¿Ê°È¡¿¨ ×Ô¶¯ÎüÎï¡¾ÌåÑé¿¨¡¿
+messagebox µ±Ç°Ê°È¡·¶Î§Îª5*5,ÇëµÚ¶þÌìÔÙÊ¹ÓÃ¸ÃµÀ¾ß @È¡ÏûÊ¹ÓÃÅúÁ¿¿¨
 break
 
-
-[@È¡Ïû22]
 #if
-#ACT
-GIVE ÎäÆ÷¾«Á¶ÓÍ 1
+#act
+mov U23 <$UTCNOW8>
+inc U23 7200
+SENDMSG 6 ×Ô¶¯ÎüÎï¡¾ÌåÑé¿¨¡¿Ê¹ÓÃ³É¹¦£¡ÅúÁ¿Ê°È¡·¶Î§Ìá¸ßµ½5*5,Á½Ð¡Ê±Ê§Ð§£¡
+mov U21 5
+SETSPRITEMODE 1
+PICKUPITEMS 0 <$str(U21)> 500
+
+[@StdModeFunc219]
+#if
+#act
+mov S$vÖµ¿¨Ãû »áÔ±VµãÖµ+100
+mov S$VµãÊýÖµ 100
+
+#if
+small <$str(U9)> 1
+#act
+messagebox ÄãÏÖÔÚ»¹²»ÊÇ»áÔ±,ÎÞ·¨Ê¹ÓÃ¸ÃµÀ¾ß!!
+goto @È¡ÏûÊ¹ÓÃvµã¿¨
 break
 
-[@112]
 #if
-random 2
 #act
-GAMEGOLD - 5000
-SetNewItemValue 1 1 = 0
-MESSAGEBOX ºÜÒÅº¶,Ê§°Ü,ÔªËØÇå³ý£¡
-BREAK
+goto @È·¶¨Ê¹ÓÃvµã¿¨
+
+[@StdModeFunc220]
+#if
+#act
+mov S$vÖµ¿¨Ãû »áÔ±VµãÖµ+200
+mov S$VµãÊýÖµ 200
 
 #if
-random 1
-CHECKNEWITEMVALUE 1 1 < 5
+small <$str(U9)> 1
 #act
-GAMEGOLD - 5000
-SetNewItemValue 1 1 + 1
-MESSAGEBOX ³É¹¦£¡
-BREAK
+messagebox ÄãÏÖÔÚ»¹²»ÊÇ»áÔ±,ÎÞ·¨Ê¹ÓÃ¸ÃµÀ¾ß!!
+goto @È¡ÏûÊ¹ÓÃvµã¿¨
+break
+
+#if
+#act
+goto @È·¶¨Ê¹ÓÃvµã¿¨
+
+[@StdModeFunc221]
+#if
+#act
+mov S$vÖµ¿¨Ãû »áÔ±VµãÖµ+500
+mov S$VµãÊýÖµ 500
+
+#if
+small <$str(U9)> 1
+#act
+messagebox ÄãÏÖÔÚ»¹²»ÊÇ»áÔ±,ÎÞ·¨Ê¹ÓÃ¸ÃµÀ¾ß!!
+goto @È¡ÏûÊ¹ÓÃvµã¿¨
+break
+
+#if
+#act
+goto @È·¶¨Ê¹ÓÃvµã¿¨
+
+[@StdModeFunc222]
+#if
+#act
+mov S$vÖµ¿¨Ãû »áÔ±VµãÖµ+1000
+mov S$VµãÊýÖµ 1000
+
+#if
+small <$str(U9)> 1
+#act
+messagebox ÄãÏÖÔÚ»¹²»ÊÇ»áÔ±,ÎÞ·¨Ê¹ÓÃ¸ÃµÀ¾ß!!
+goto @È¡ÏûÊ¹ÓÃvµã¿¨
+break
+
+#if
+#act
+goto @È·¶¨Ê¹ÓÃvµã¿¨
+
+[@StdModeFunc244]
+#if
+#act
+map ¶ñÄ§³¤ÀÈ
+GuildNoticeMsg 251 0 Íæ¼Ò¡º<$USERNAME>¡»´³ÈëÁËÉñÃØµÄ¡¼¶ñÄ§³¤ÀÈ¡½,×£ËûÂúÔØ¶ø¹é£¡
+GuildNoticeMsg 251 0 Íæ¼Ò¡º<$USERNAME>¡»´³ÈëÁËÉñÃØµÄ¡¼¶ñÄ§³¤ÀÈ¡½,×£ËûÂúÔØ¶ø¹é£¡
+
+[@È·¶¨Ê¹ÓÃvµã¿¨]
+#if
+#act
+inc U12 <$str(S$VµãÊýÖµ)>
+sendmsg 6 <$str(S$vÖµ¿¨Ãû)>Ê¹ÓÃ³É¹¦,ÄãµÄ»áÔ±VµãÒÑÂú!!
+
+
+[@È¡ÏûÊ¹ÓÃvµã¿¨]
+#if
+#act
+givestateitem <$str(S$vÖµ¿¨Ãû)> 1 0 1 0 0 1 1 1 1
+sendmsg 6 <$str(S$vÖµ¿¨Ãû)>ÒÑ·µ»ØÄãµÄ±³°ü
+
+[@StdModeFunc227]
+#if
+#act
+movr N$×£¸£Ëæ»úÊý 101
+; CHANGEITEMADDVALUE 1 5 = 1
+GETITEMADDVALUE 1 5 N$ÐÒÔËÖµ
+
+#if
+#act
+
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\ÐÒÔËÏµÍ³\ÐÒÔËÌáÉýÊý¾Ý.txt <$str(N$ÐÒÔËÖµ)> ³É¹¦ S$³É¹¦ÂÊ
+ReadConfigFileItem ..\QuestDiary\ÐÒÔËÏµÍ³\ÐÒÔËÌáÉýÊý¾Ý.txt <$str(N$ÐÒÔËÖµ)> Ê§°Ü S$Ê§°ÜÂÊ
+
+#if
+small <$str(N$ÐÒÔËÖµ)> 1
+#act
+mov S$³É¹¦ÂÊ 100
+mov S$Ê§°ÜÂÊ 0
+
+#if
+small <$str(N$×£¸£Ëæ»úÊý)> <$str(S$³É¹¦ÂÊ)>
+CHECKITEMADDVALUE 1 5 = <$str(N$ÐÒÔËÖµ)>
+#act
+sendmsg 6 ¡¼ÌáÊ¾¡½ÄãµÄÎäÆ÷ÒÑ±»¼ÓÐÒÔËÁË...
+CHANGEITEMADDVALUE 1 5 + 1
+
+#if
+large <$str(N$×£¸£Ëæ»úÊý)> <$str(S$Ê§°ÜÂÊ)>
+CHECKITEMADDVALUE 1 5 = <$str(N$ÐÒÔËÖµ)>
+#act
+sendmsg 5 ¡¼ÌáÊ¾¡½ÄãµÄÎäÆ÷ÒÑ±»¼Ó×çÖäÁË£¡£¡£¡
+CHANGEITEMADDVALUE 1 5 - 1
+
+#if
+large <$str(N$×£¸£Ëæ»úÊý)> <$str(S$³É¹¦ÂÊ)>
+small <$str(N$×£¸£Ëæ»úÊý)> <$str(S$Ê§°ÜÂÊ)>
+CHECKITEMADDVALUE 1 5 = <$str(N$ÐÒÔËÖµ)>
+#act
+sendmsg 6 ¡¼ÌáÊ¾¡½ÎÞÐ§£¡£¡£¡
+
+
+[@StdModeFunc224]
+#if
+#act
+; mov N$Ê±¼ä <$UTCNOW8>
+; inc U2 <$str(N$Ê±¼ä)>
+inc U30 3600
+sendmsg 7 Ôö¼Ó1Ð¡Ê±Á½´Î±¬Îï£º¡¾¹ÖËÀÍöÁ½´Î´ó±¬Ð§¹û£¬Ê±¼ä¿Éµþ¼Ó¡¿
+
+[@StdModeFunc225]
+#if
+#act
+; mov N$Ê±¼ä <$UTCNOW8>
+; inc U2 <$str(N$Ê±¼ä)>
+inc U30 7200
+sendmsg 7 Ôö¼Ó2Ð¡Ê±Á½´Î±¬Îï£º¡¾¹ÖËÀÍöÁ½´Î´ó±¬Ð§¹û£¬Ê±¼ä¿Éµþ¼Ó¡¿
+
+[@StdModeFunc226]
+#if
+#act
+; mov N$Ê±¼ä <$UTCNOW8>
+; inc U2 <$str(N$Ê±¼ä)>
+inc U30 10800
+sendmsg 7 Ôö¼Ó3Ð¡Ê±Á½´Î±¬Îï£º¡¾¹ÖËÀÍöÁ½´Î´ó±¬Ð§¹û£¬Ê±¼ä¿Éµþ¼Ó¡¿
+
+[@StdModeFunc234]
+
+#if
+checkitem 300000Ôª±¦ 1
+#act
+take 300000Ôª±¦ 1
+money Ôª±¦ + 300000
+SENDMSG 7 ¹§Ï²Äú30WÔª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc234
+
+
+[@StdModeFunc235]
+#if
+checkitem 500000Ôª±¦ 1
+#act
+take 500000Ôª±¦ 1
+money Ôª±¦ + 500000
+SENDMSG 7 ¹§Ï²Äú50WÔª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc235
+
+[@StdModeFunc236]
+#if
+checkitem 1000000Ôª±¦ 1
+#act
+take 1000000Ôª±¦ 1
+money Ôª±¦ + 1000000
+SENDMSG 7 ¹§Ï²Äú100WÔª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc236
+
+[@StdModeFunc237]
+#if
+checkitem 2000000Ôª±¦ 1
+#act
+take 2000000Ôª±¦ 1
+money Ôª±¦ + 2000000
+SENDMSG 7 ¹§Ï²Äú200WÔª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc237
+
+
+[@StdModeFunc238]
+#if
+checkitem 3000000Ôª±¦ 1
+#act
+take 3000000Ôª±¦ 1
+money Ôª±¦ + 3000000
+SENDMSG 7 ¹§Ï²Äú300WÔª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc238
+
+
+[@StdModeFunc239]
+#if
+checkitem 5000000Ôª±¦ 1
+#act
+take 5000000Ôª±¦ 1
+money Ôª±¦ + 5000000
+SENDMSG 7 ¹§Ï²Äú500WÔª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc239
+
+[@StdModeFunc240]
+#if
+checkitem 10000000Ôª±¦ 1
+#act
+take 10000000Ôª±¦ 1
+money Ôª±¦ + 10000000
+SENDMSG 7 ¹§Ï²Äú1000WÔª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc240
+
+
+[@StdModeFunc241]
+#if
+checkitem 30000000Ôª±¦ 1
+#act
+take 30000000Ôª±¦ 1
+money Ôª±¦ + 30000000
+SENDMSG 7 ¹§Ï²Äú3000WÔª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc241
+
+
+[@StdModeFunc242]
+#if
+checkitem 50000000Ôª±¦ 1
+#act
+take 50000000Ôª±¦ 1
+money Ôª±¦ + 50000000
+SENDMSG 7 ¹§Ï²Äú5000WÔª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc242
+
+[@StdModeFunc243]
+#if
+checkitem 100000000Ôª±¦ 1
+#act
+take 100000000Ôª±¦ 1
+money Ôª±¦ + 100000000
+SENDMSG 7 ¹§Ï²Äú1ÒÚÔª±¦ÒÑµ½ÕÊ»§ÖÐ.
+goto @StdModeFunc243
+
 
 [@StdModeFunc97]
 #if
@@ -1998,15 +2289,81 @@ BREAK
 [@Àë¿ª]
 #IF
 #ACT
+
 mapmove 3 330 330
 BREAK
 ;-----------------------------------------------------------------------------------------------------------------
 
 [@TakeOnEx]
 #if
-; equal <$MAPTITLE> ±ÈÆæ³Ç
 #ACT
+
 #CALL [\ÓÎÏ·µÇÂ½\ÓÒÏÂÏÔÊ¾.txt] @ÊôÐÔÏÔÊ¾
+IncFileList 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17  N$Õ½Éñ×°±¸ÊýÁ¿ ..\QuestDiary\Õ½Éñ×°±¸.txt
+IncFileList 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17  N$Çå·ç×°±¸ÊýÁ¿ ..\QuestDiary\Çå·ç×°±¸.txt
+IncFileList 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17  N$ÈÈÑª×°±¸ÊýÁ¿ ..\QuestDiary\ÈÈÑª×°±¸.txt
+
+#if
+CheckContainsText <$STR(T8)> ³å¼¶½±Àø
+not CheckContainsText <$STR(T8)> ÆðµãÃÔ¹¬
+#act
+NEWCHANGETASK 15 <$str(N$Õ½Éñ×°±¸ÊýÁ¿)>
+
+#if
+CheckContainsText <$STR(T8)> ³å¼¶½±Àø
+not CheckContainsText <$STR(T8)> ÆðµãÃÔ¹¬
+not small <$str(N$Õ½Éñ×°±¸ÊýÁ¿)> 8
+#act
+#CALL [\ÈÎÎñÏµÍ³\ÈÎÎñÎÄ±¾.txt] @Õ½ÉñÌ×ÈÎÎñÍê³É
+
+#if
+CheckContainsText <$STR(T8)> QQÈºÀñ°ü
+not CheckContainsText <$STR(T8)> ±ùÖ®Ñ©ÑÂ
+#act
+NEWCHANGETASK 21 <$str(N$Çå·ç×°±¸ÊýÁ¿)>
+
+#if
+CheckContainsText <$STR(T8)> QQÈºÀñ°ü
+not CheckContainsText <$STR(T8)> ±ùÖ®Ñ©ÑÂ
+not small <$str(N$Çå·ç×°±¸ÊýÁ¿)> 8
+#act
+#CALL [\ÈÎÎñÏµÍ³\ÈÎÎñÎÄ±¾.txt] @Çå·çÌ×ÈÎÎñÍê³É
+
+
+[@TakeOffEx]
+#if
+#ACT
+
+#CALL [\ÓÎÏ·µÇÂ½\ÓÒÏÂÏÔÊ¾.txt] @ÊôÐÔÏÔÊ¾
+IncFileList 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17  N$Õ½Éñ×°±¸ÊýÁ¿ ..\QuestDiary\Õ½Éñ×°±¸.txt
+IncFileList 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17  N$Çå·ç×°±¸ÊýÁ¿ ..\QuestDiary\Çå·ç×°±¸.txt
+IncFileList 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17  N$ÈÈÑª×°±¸ÊýÁ¿ ..\QuestDiary\ÈÈÑª×°±¸.txt
+
+#if
+CheckContainsText <$STR(T8)> ³å¼¶½±Àø
+not CheckContainsText <$STR(T8)> ÆðµãÃÔ¹¬
+#act
+NEWCHANGETASK 15 <$str(N$Õ½Éñ×°±¸ÊýÁ¿)>
+
+#if
+CheckContainsText <$STR(T8)> ³å¼¶½±Àø
+not CheckContainsText <$STR(T8)> ÆðµãÃÔ¹¬
+not small <$str(N$Õ½Éñ×°±¸ÊýÁ¿)> 8
+#act
+#CALL [\ÈÎÎñÏµÍ³\ÈÎÎñÎÄ±¾.txt] @Õ½ÉñÌ×ÈÎÎñÍê³É
+
+#if
+CheckContainsText <$STR(T8)> QQÈºÀñ°ü
+not CheckContainsText <$STR(T8)> ±ùÖ®Ñ©ÑÂ
+#act
+NEWCHANGETASK 21 <$str(N$Çå·ç×°±¸ÊýÁ¿)>
+
+#if
+CheckContainsText <$STR(T8)> QQÈºÀñ°ü
+not CheckContainsText <$STR(T8)> ±ùÖ®Ñ©ÑÂ
+not small <$str(N$Çå·ç×°±¸ÊýÁ¿)> 8
+#act
+#CALL [\ÈÎÎñÏµÍ³\ÈÎÎñÎÄ±¾.txt] @Çå·çÌ×ÈÎÎñÍê³É
 
 
 [@TakeOn2]
@@ -2425,44 +2782,44 @@ BREAK
 [@StdModeFunc50]
 #IF
 #ACT
-GAMEDIAMOND + 1
-SENDMSG 5 ¹§Ï²ÄúµÄÈËÃñ±Òµã+1£¡
+money RMBµã + 10
+SENDMSG 5 ¹§Ï²ÄúµÄÈËÃñ±Òµã+10£¡
 BREAK
 
 [@StdModeFunc51]
 #IF
 #ACT
-GAMEDIAMOND + 2
-SENDMSG 5 ¹§Ï²ÄúµÄÈËÃñ±Òµã+2£¡
+money RMBµã + 20
+SENDMSG 5 ¹§Ï²ÄúµÄÈËÃñ±Òµã+20£¡
 BREAK
 
 [@StdModeFunc52]
 #IF
 #ACT
-GAMEDIAMOND + 5
-SENDMSG 5 ¹§Ï²ÄúµÄÈËÃñ±Òµã+5£¡
+money RMBµã + 50
+SENDMSG 5 ¹§Ï²ÄúµÄÈËÃñ±Òµã+50£¡
 BREAK
 
 [@StdModeFunc53]
 #IF
 #ACT
-GAMEDIAMOND + 10
-SENDMSG 5 ¹§Ï²ÄúµÄÈËÃñ±Òµã+10£¡
+money RMBµã + 100
+SENDMSG 5 ¹§Ï²ÄúµÄÈËÃñ±Òµã+100£¡
 BREAK
 
 [@StdModeFunc54]
 #IF
 #ACT
-GAMEDIAMOND + 50
-SENDMSG 5 ¹§Ï²ÄúµÄÈËÃñ±Òµã+50£¡
+money RMBµã + 500
+SENDMSG 5 ¹§Ï²ÄúµÄÈËÃñ±Òµã+500£¡
 BREAK
 
 
 [@StdModeFunc55]
 #IF
 #ACT
-GAMEDIAMOND + 100
-SENDMSG 5 ¹§Ï²ÄúµÄÈËÃñ±Òµã+100£¡
+money RMBµã + 1000
+SENDMSG 5 ¹§Ï²ÄúµÄÈËÃñ±Òµã+1000£¡
 BREAK
 
 
@@ -2505,7 +2862,7 @@ ADDBUTTON 104 6 <$STR(S$Ö÷½çÃæ°´Å¥)>
 [@AddBag]
 #if
 #act
-; SendMsg 6 µ±Ç°»ñµÃÎïÆ·Ãû³ÆÎª:<$NEWBAGITEMNAME>IDÎª:<$NEWBAGITEM>Î¨Ò»IDÎª:<$NEWBAGITEMID>
+; SendMsg 6 µ±Ç°»ñµÃÎïÆ·Ãû³ÆÎª:<$NEWBAGITEMNAME>IDÎª:<$NEWBAGITEM>Î¨Ò»IDÎª:<$NEWBAGITEMID>:::<$str(U210)>
 ; S$¹´Ñ¡±³°üID S$¹´Ñ¡±³°üKEY
 
 #if
@@ -2526,6 +2883,13 @@ check [799] 1
 equal <$STR(U209)> 1
 #act
 #CALL [\×Ô¶¯»¯\×Ô¶¯Ê¹ÓÃµÀ¾ß1.txt] @×Ô¶¯Ê¹ÓÃµÀ¾ß1
+
+#if
+equal <$STR(U210)> 1
+equal <$NEWBAGITEMNAME> ×£¸£ÓÍ
+#act
+take ×£¸£ÓÍ 1
+goto @StdModeFunc227
 
 
 [@¹´Ñ¡±³°üÎïÆ·]
@@ -2554,6 +2918,12 @@ SelectBagItems <$str(S12)>
 
 ;ÈÎÒâµØÍ¼É±ËÀ¹ÖÎï´¥·¢
 [@KillMon]
+
+#if
+large <$str(U30)> 0
+#act
+MonItems 1
+
 #if
 #act
 
@@ -2563,10 +2933,50 @@ ReadConfigFileItem ..\QuestDiary\»÷É±¹ÖÎïÍ³¼Æ\»÷É±¹ÖÎïÍ³¼Æ.txt <$MAPTITLE> ËùÓÐ¹
 
 #if
 not equal <$str(S$¹ÖÎï»÷É±±ê¼Ç)>
-; CheckContainsText <$STR(S$ËùÓÐ¹ÖÎïÁÐ±í)> <$KILLMONNAME>
+CheckContainsText <$STR(S$ËùÓÐ¹ÖÎïÁÐ±í)> <$KILLMONNAME>
 #act
 inc U<$str(S$¹ÖÎï»÷É±±ê¼Ç)> 1
 ; sendmsg 7 ³É¹¦»÷É±ÁË<$KILLMONNAME>!!
+
+#if
+#act
+mov N$±ÞÊ¬¼¸ÂÊ 0
+goto @±ÞÊ¬
+goto @¸üÐÂ¹ÖÎï»÷É±Í³¼Æ
+
+
+[@¸üÐÂ¹ÖÎï»÷É±Í³¼Æ]
+
+#if
+CheckContainsText <$STR(T8)> ÒÂ·þµê
+not CheckContainsText <$STR(T8)> »÷É±ÐÂÊÖÑµÁ·Óª¹ÖÎï
+#act
+
+inc N$ÁÙÊ±Í³¼Æ»÷É± 1
+NEWCHANGETASK 5 <$STR(N$ÁÙÊ±Í³¼Æ»÷É±)>
+
+#if
+not small <$str(N$ÁÙÊ±Í³¼Æ»÷É±)> 10
+CheckContainsText <$STR(T8)> ÒÂ·þµê
+not CheckContainsText <$STR(T8)> »÷É±ÐÂÊÖÑµÁ·Óª¹ÖÎï
+#act
+#CALL [\ÈÎÎñÏµÍ³\ÈÎÎñÎÄ±¾.txt] @Íê³ÉÉ±¹ÖÈÎÎñ
+break
+
+#if
+CheckContainsText <$STR(T8)> ×Ô¶¯ÎüÎï
+not CheckContainsText <$STR(T8)> »÷É±ÐÂÊÖÑµÁ·Óª¹ÖÎï50
+#act
+
+inc N$ÁÙÊ±Í³¼Æ»÷É± 1
+NEWCHANGETASK 12 <$STR(N$ÁÙÊ±Í³¼Æ»÷É±)>
+
+#if
+not small <$str(N$ÁÙÊ±Í³¼Æ»÷É±)> 50
+CheckContainsText <$STR(T8)> ×Ô¶¯ÎüÎï
+not CheckContainsText <$STR(T8)> »÷É±ÐÂÊÖÑµÁ·Óª¹ÖÎï50
+#act
+#CALL [\ÈÎÎñÏµÍ³\ÈÎÎñÎÄ±¾.txt] @Íê³ÉÉ±¹ÖÈÎÎñ1
 
 ;---------------------³äÖµ»Øµ÷--------
 
@@ -2590,6 +3000,11 @@ INC U99 <$STR(M0)>
 ;ÈÕ³ä
 INC U91 <$STR(M0)>
 
+#if
+equal U71 0
+#act
+mov U71 1
+
 CALCVAR HUMAN ½ñÈÕ³äÖµ + <$STR(M0)>
 SAVEVAR HUMAN ½ñÈÕ³äÖµ
 SENDMSG 1 ¡ï[%s]:¹§Ï²Íæ¼Ò<$USERNAME>³É¹¦³äÖµ¡£
@@ -2599,7 +3014,7 @@ SENDMSG 1 ¡ï[%s]:¹§Ï²Íæ¼Ò<$USERNAME>³É¹¦³äÖµ¡£
 #act
 mov N$QF¹ó×åÉý¼¶ 1
 goto @¹ó×åÉý¼¶
-
+#CALL [\ÏµÍ³¹¦ÄÜ\³äÖµ¹¦ÄÜ.txt] @¼ÆËãÊÇ·ñ¿ÉÒÔÁìÈ¡³äÖµÀñ°ü
 
 ;-----------Ã¿ÈÕÊ×´ÎµÇÂ¼´¥·¢--------------
 [@SetDay]
@@ -2635,8 +3050,8 @@ not equal <$str(S$ËùÐè³äÖµ¶î)>
 not small <$str(U99)> <$str(S$ËùÐè³äÖµ¶î)>
 #act
 mov U98 <$str(N$QF¹ó×åÉý¼¶)>
-SetIcon 8 0 00009<$str(U98)> 0 -10 0 0
 
+SetIcon 8 1 1201<$str(U98)> -80 -100 0 0
 
 #if
 small <$str(U99)> <$str(S$ËùÐè³äÖµ¶î)>
@@ -2647,16 +3062,24 @@ break
 not equal <$str(S$ËùÐè³äÖµ¶î)>
 #act
 inc N$QF¹ó×åÉý¼¶ 1
+#CALL [\ÓÎÏ·µÇÂ½\ÓÒÏÂÏÔÊ¾.txt] @ÊôÐÔÏÔÊ¾
+
 goto @¹ó×åÉý¼¶
 
 [@EnterMap]
+; #if
+; not checkitem ÃËÖØ»Ø³ÇÊ¯ 1
+; #act
+; give ÃËÖØ»Ø³ÇÊ¯ 1
+
 #if
 #act
+mov N$ÁÙÊ±Í³¼Æ»÷É± 0
 SETSPRITEMODE 2
 
 #if
 large <$str(U21)> 0
-not CheckTextList ..\QuestDiary\½ûÓÃÅúÁ¿Ê°È¡µØÍ¼.txt <$MAPTITLE>
+not CheckTextList ..\QuestDiary\×Ô¶¯»¯\½ûÓÃÅúÁ¿Ê°È¡µØÍ¼.txt <$MAPTITLE>
 #act
 SETSPRITEMODE 1
 PICKUPITEMS 0 <$str(U21)> 500
@@ -2670,7 +3093,7 @@ AnsiReplaceText S$¹ó×å±ÞÊ¬ÌØÈ¨ %
 
 movr N$Ëæ»úÊý 100
 inc N$±ÞÊ¬¼¸ÂÊ <$str(S$¹ó×å±ÞÊ¬ÌØÈ¨)>
-sendmsg 5 <$str(N$±ÞÊ¬¼¸ÂÊ)>::<$str(N$Ëæ»úÊý)>:
+; sendmsg 5 <$str(N$±ÞÊ¬¼¸ÂÊ)>::<$str(N$Ëæ»úÊý)>:
 ; mov N$±ÞÊ¬¼¸ÂÊ 100
 
 #or
@@ -2681,8 +3104,158 @@ SendCenterMsg 146 0 ¹§Ï²Äã´¥·¢±ÞÊ¬Ð§¹û:ÕÙ»½ÁËÒ»Ö»<$KILLMONNAME>.
 RECALLMOB <$KILLMONNAME> 999 1
 MEBabyHP <$KILLMONNAME> = 100 0
 GetCallMob <$KILLMONNAME>
-
+;GuildNoticeMsg 249 0 Íæ¼Ò´¥·¢ÁË±ÞÊ¬ÕÙ»½ÁËÒ»Ö»£¡
+SENDMSG 7 {Íæ¼Ò|255:56:0}{¡º<$USERNAME>¡»|251:56:0}{´¥·¢ÁË±ÞÊ¬ÕÙ»½ÁËÒ»Ö»|255:56:0}{¡¼<$KILLMONNAME>¡½|249:56:0}
 ; CHANGEMOBABILITY ¿ñÍ½ÓÂÊ¿ 11 = 10000 9999
 ; MonGenEx <$MAP> <$X> <$Y> <$KILLMONNAME> 3 1 0 250
 ; <$KILLMONNAME>.AddhpPer - 50
 
+
+[@PickTask]
+#if
+#ACT
+SENDMSG 7 Äã½ÓÈ¡ÁËÈÎÎñ£¡£¡£¡£¡£¡<$CURRTASKID>
+;#CALL [\ÈÎÎñÏµÍ³\ÈÎÎñÎÄ±¾.txt] @Ë¢ÐÂÈÎÎñ
+;BREAK
+
+[@ClickNewTask]
+#if
+#ACT
+SENDMSG 7 Äãµã»÷ÁËÈÎÎñÎªID:<$CURRTASKID>£¡£¡£¡£¡£¡
+; #CALL [\ÈÎÎñÏµÍ³\ÈÎÎñÎÄ±¾.txt] @µã»÷ÈÎÎñ
+
+; #if
+; not equal <$MAPTITLE> ÌìÏÂÖ÷³Ç
+; equal <$CURRTASKID> 13
+; CheckContainsText <$STR(T108)> 60¼¶ÈÎÎñ
+; not CheckContainsText <$STR(T108)> 80¼¶ÈÎÎñ
+; #ACT
+; mapmove ÌìÏÂÖ÷³Ç 106 96
+
+#IF
+equal <$CURRTASKID> 19
+#ACT
+#CALL [\ÈºÀñ°ü\Î¢ÐÅÀñ°ü.txt] @ÁìÈ¡Î¢ÐÅ
+break
+
+#IF
+equal <$CURRTASKID> 20
+#ACT
+#CALL [\ÈºÀñ°ü\QQÀñ°ü.txt] @ÁìÈ¡QQ
+break
+
+#if
+; small <$CURRTASKID> 16
+#act
+#CALL [\ÈÎÎñÏµÍ³\ÈÎÎñÎÄ±¾.txt] @½ÓÈ¡ÈÎÎñ
+break
+
+; #if
+; #ACT
+; #CALL [\ÈÎÎñÏµÍ³\ÈÎÎñÎÄ±¾.txt] @µã»÷Ö§ÏßÈÎÎñ
+; ; sendmsg 5 ½øÈëÖ§ÏßÈÎÎñ
+; break
+
+
+
+[@CompleteTask]
+#if
+#ACT
+SENDMSG 7 ÄãÍê³ÉÁËÈÎÎñ£¡£¡£¡£¡£¡
+;#CALL [\ÈÎÎñÏµÍ³\ÈÎÎñÎÄ±¾.txt] @Íê³ÉÈÎÎñ
+BREAK
+
+[@DeleteTask]
+#if
+#ACT
+SENDMSG 7 ÄãÉ¾³ýÁËÈÎÎñ£¡£¡£¡£¡£¡
+;#CALL [\ÈÎÎñÏµÍ³\ÈÎÎñÎÄ±¾.txt] @É¾³ýÈÎÎñ
+BREAK
+
+
+
+;¼ñÈ¡´¥·¢-------------------
+[@PickUpItemEx]
+#if
+#act
+
+#CALL [\×°±¸Ê×±¬\¼ñÈ¡´¥·¢½Å±¾.txt] @¼ñÈ¡ÎïÆ·´¥·¢
+
+#if
+CheckContainsText <$STR(T8)> ×Ô¶¯ÎüÎï
+not CheckContainsText <$STR(T8)> »÷É±ÐÂÊÖÑµÁ·Óª¹ÖÎï50
+not equal <$str(S$ÕýÔÚÊ°È¡)> 1
+#act
+LoopBagItems @ÕÒµ½×Ô¶¯ÎüÎïÌåÑé¿¨ N$ÎïÆ·Î¨Ò»ID S$ÎïÆ·µÄÃû³Æ
+; MOV S$µÝÔöÎïÆ·Î¨Ò»ID
+; MOV S$µÝÔöÎïÆ·Ãû³Æ
+
+[@ÕÒµ½×Ô¶¯ÎüÎïÌåÑé¿¨]
+#IF
+equal <$STR(S$ÎïÆ·µÄÃû³Æ)> ×Ô¶¯ÎüÎï¡¾ÌåÑé¿¨¡¿
+#ACT
+mov S$ÕýÔÚÊ°È¡ 1
+#Call [\Mobile\ÌØÊâNPC\»õ±Ò¼ÇÂ¼.txt] @»õ±Ò
+OPENHYPERLINK 7
+Navigation 1 <$STR(N$ÎïÆ·Î¨Ò»ID)> Ë«»÷Ê¹ÓÃÌåÑé¿¨ 
+
+[@Attack]
+#if
+#act
+;sendmsg 5 ¹¥»÷´¥·¢
+
+[@AttackDamage]
+#if
+#act
+; sendmsg 5 AttackDamage
+#if
+CHECKCURRTARGETRACE = 1
+equal <$MAP> t118
+; checklevelex < 50
+#act
+CHANGEEXP + 20000
+sendmsg 9 ¾­Ñé+20000
+
+[@ÐÂÊÀ½ç¼ì²â]
+#if
+not small <$str(U98)> 3
+#act
+money Áé·û + 10
+; sendmsg 5 ÐÂÊÀ½ç¼ì²â
+
+[@StruckDamage]
+
+#IF
+#act
+ReadConfigFileItem ..\QuestDiary\ÄæÌì¸ÄÃüÏµÍ³\Êý¾Ý\ÉñÓÓÐÞÁ¶.txt <$str(U3)> µ±Ç°ÊôÐÔ¼Ó³É S$µ±Ç°ÊôÐÔ¼Ó³É
+
+movr N$Ëæ»úÊý 101
+inc N$ÃâÉË¼¸ÂÊ <$str(S$µ±Ç°ÊôÐÔ¼Ó³É)>
+; mov N$ÃâÉË¼¸ÂÊ 10
+
+#or
+small <$str(N$Ëæ»úÊý)> <$str(N$ÃâÉË¼¸ÂÊ)>
+large <$str(N$ÃâÉË¼¸ÂÊ)> 99
+#act
+sendmsg 7 ÄãÒÑ´¥·¢¡¾ÉñÓÓÖ®Ìå¡¿ÃâÉËÐ§¹û,ÒÑÃâÒß<$DAMAGEVALUE>µãÉËº¦
+ChangeDamageValue 0 = 0
+
+
+
+[@»ñÈ¡µ±Ç°×ªÉúµÈ¼¶]
+#if
+not large <$STR(N$×ªÉúµÈ¼¶)> 20
+#act
+GetListString ..\QuestDiary\×ªÉúÏµÍ³\×ªÉúµÈ¼¶.txt <$STR(N$×ªÉúµÈ¼¶)> S$Íæ¼Ò×ªÉúµÈ¼¶
+
+#if
+CHECKRENEWLEVEL = <$STR(S$Íæ¼Ò×ªÉúµÈ¼¶)>
+#act
+mov N$×ªÉúµÈ¼¶ <$STR(S$Íæ¼Ò×ªÉúµÈ¼¶)>
+break
+
+#if
+not large <$STR(N$×ªÉúµÈ¼¶)> 20
+#act
+inc N$×ªÉúµÈ¼¶ 1
+goto @»ñÈ¡µ±Ç°×ªÉúµÈ¼¶
