@@ -7,11 +7,20 @@
 ;#CALL [\游戏登陆\顶部属性.txt] @顶部属性显示
 ;delaygoto 50 @更新顶部属性显示
 ; ReadConfigFileItem ..\QuestDiary\会员系统\会员数据.txt <$str(U9)> 会员V值 S$会员V值
+GETHUMCUSTOMITEMVALUE 3 66 S$123 S$经验万分比 1 1
+GETHUMCUSTOMITEMVALUE 3 65 S$123 S$掉落万分比 1 1
+mov N$血祭经验 <$str(S$经验万分比)>
+mov N$血祭爆率 <$str(S$掉落万分比)>
+div N$血祭经验 100
+div N$血祭爆率 100
 mov N$V点额外恢复 0
 mov N$额外回收加成 0
 mov N$贵族鞭尸特权 0
 mov N$倍攻 100
 mov N$经验加成 100
+; sendmsg 5 血祭::<$str(N$血祭经验)>
+
+inc N$血祭爆率 <$str(N2)>
 
 #if
 large <$str(U98)> 0
@@ -57,10 +66,17 @@ inc N$额外回收加成 20
 
 #if
 #act
-
 mul N$经验加成 <$KILLMONEXPRATE>
 dec N$经验加成 100
 
+#if
+small <$str(N$经验加成)> 0
+#act
+mov N$经验加成 0
+
+#if
+#act
+inc N$经验加成 <$str(N$血祭经验)>
 
 
 #IF
@@ -70,7 +86,7 @@ mov S$小面板str <Img|img=public/sf1/2/zuoXia.png|x=5|y=-5|children={close_btn,up
 INC S$小面板str <Img|id=称号信息|children={文本框1,文本框2,文本框3,文本框4,文本框5,文本框6,文本框7,文本框8,文本框9,100}|x=0|y=0.0|height=1|width=1|img=public/0.png>
 INC S$小面板str <Button|id=100|x=0|y=-35|nimg=official/top/1900012532.png|pimg=official/top/0.png|link=@隐藏>
 INC S$小面板str <Text|id=文本框1|text=<$str(N$经验加成)>%|x=82|y=0|size=15>
-INC S$小面板str <Text|id=文本框2|text=<$STR(N2)>%|x=82|y=22|size=15>
+INC S$小面板str <Text|id=文本框2|text=<$STR(N$血祭爆率)>%|x=82|y=22|size=15>
 INC S$小面板str <Text|id=文本框3|text=<$str(N$倍攻)>%|x=82|y=44|size=15>
 INC S$小面板str <Text|id=文本框4|text=<$STR(N$贵族鞭尸特权)>%|x=82|y=65|size=15>
 INC S$小面板str <Text|id=文本框5|text=<$str(N$V点恢复)>/H|x=82|y=86|size=15>
@@ -96,4 +112,8 @@ addbutton 105 98 <$STR(S$btn)>
 #act
 ;#CALL [\游戏登陆\顶部属性.txt] @顶部属性显示
 
-}
+[@]
+#if
+#act
+GETHUMCUSTOMITEMVALUE 1 66 S$属性值 S$百分比属性值 1 1
+ }

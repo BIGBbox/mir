@@ -19,7 +19,8 @@ goto @左边地图按钮
 #ACT
 
 #SAY
-<Img|layerid=99|children={bg0,line,xBg1,xBg2,地图按钮列表,cl_Btn1,cl_Btn2,cl_Btn3,tips1,tips2,介绍,大标题,close_btn}|x=120|y=60|show=0|reset=0|move=1|img=public/sf1/2/zanz/bg6.png|bg=1|reset=1>
+<Img|x=0|y=0|width=9999|height=9999|children={悬赏主面板}|img=public/0.png|bg=1|link=@exit>
+<Img|id=悬赏主面板|children={bg0,line,xBg1,xBg2,地图按钮列表,cl_Btn1,cl_Btn2,cl_Btn3,tips1,tips2,介绍,大标题,close_btn}|x=200|y=60|img=public/sf1/2/zanz/bg6.png|link=@11>
 
 <Img|id=bg0|x=10|y=30.0|width=780|img=public/sf1/2/zanz/innerBg.png>
 <Img|id=line|x=145|y=31.0|img=public/sf1/2/zanz/dLine.png>
@@ -284,7 +285,7 @@ sendmsg 7 特权奖励领取成功!!
 [@充值按钮]
 #if
 #act
-sendmsg 7 购买特权按钮!!
+; sendmsg 7 购买特权按钮!!
 Pullpay <$STR(S$特权价格)> 1 7
 
 }

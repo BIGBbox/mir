@@ -2,7 +2,7 @@
 {
 #if
 #act
-sendmsg 5 接取任务===<$STR(T8)>
+; sendmsg 5 接取任务===<$STR(T8)>
 ; #if
 ; ; large U108 23
 ; CheckContainsText <$STR(T108)> 80级任务

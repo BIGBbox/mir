@@ -22,6 +22,10 @@ large 变量 数值 ;如果“变量 > 数值”则为1否则为0
 
 equal 变量 数值 ;如果“变量 = 数据”则为1否则为0
 
+#AutoRun NPC RUNONDAY 19:29:00 @攻城提示
+#AutoRun NPC RUNONDAY 20:00:00 @开启攻城
+#AutoRun NPC RUNONDAY 21:00:00 @攻城结束
+
 
 ;-----------------------------------------------------
 #AutoRun NPC RUNONDAY 9:00  @派对活动
@@ -73,18 +77,18 @@ equal 变量 数值 ;如果“变量 = 数据”则为1否则为0
 #AutoRun NPC RUNONDAY 8:00  @派对活动
 #AutoRun NPC RUNONDAY 8:03  @派对结束
 
-#AutoRun NPC RUNONDAY 9:45  @疯狂半兽人
-#AutoRun NPC RUNONDAY 11:45  @疯狂半兽人
-#AutoRun NPC RUNONDAY 13:45  @疯狂半兽人
-#AutoRun NPC RUNONDAY 15:45  @疯狂半兽人
-#AutoRun NPC RUNONDAY 17:45  @疯狂半兽人
-#AutoRun NPC RUNONDAY 19:45  @疯狂半兽人
-#AutoRun NPC RUNONDAY 21:45  @疯狂半兽人
-#AutoRun NPC RUNONDAY 23:45  @疯狂半兽人
-#AutoRun NPC RUNONDAY 1:45  @疯狂半兽人
-#AutoRun NPC RUNONDAY 3:45  @疯狂半兽人
-#AutoRun NPC RUNONDAY 5:45  @疯狂半兽人
-#AutoRun NPC RUNONDAY 7:45  @疯狂半兽人
+;#AutoRun NPC RUNONDAY 9:45  @疯狂半兽人
+;#AutoRun NPC RUNONDAY 11:45  @疯狂半兽人
+;#AutoRun NPC RUNONDAY 13:45  @疯狂半兽人
+;#AutoRun NPC RUNONDAY 15:45  @疯狂半兽人
+;#AutoRun NPC RUNONDAY 17:45  @疯狂半兽人
+;#AutoRun NPC RUNONDAY 19:45  @疯狂半兽人
+;#AutoRun NPC RUNONDAY 21:45  @疯狂半兽人
+;#AutoRun NPC RUNONDAY 23:45  @疯狂半兽人
+;#AutoRun NPC RUNONDAY 1:45  @疯狂半兽人
+;#AutoRun NPC RUNONDAY 3:45  @疯狂半兽人
+;#AutoRun NPC RUNONDAY 5:45  @疯狂半兽人
+;#AutoRun NPC RUNONDAY 7:45  @疯狂半兽人
 
 ;#AutoRun NPC RUNONDAY 9:00  @刺杀稻草人
 ;#AutoRun NPC RUNONDAY 12:00  @刺杀稻草人

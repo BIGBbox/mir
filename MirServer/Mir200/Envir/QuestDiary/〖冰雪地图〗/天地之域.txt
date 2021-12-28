@@ -26,7 +26,7 @@ goto @天地之域主界面
 <Text|a=0|ax=0|x=20.0|y=100.0|tipsx=10|tipsy=80|color=244|size=18|text=95级、红钻贵族免费进入.也可花1000灵符进！！>
 <Button|x=515|y=25.0|nimg=public/icon/common1087.png|link=@显示掉落>
 <Text|a=0|x=170.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=天之域|link=@天之域按钮>
-<Text|a=0|x=320.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=地之域|link=@天之域按钮>
+<Text|a=0|x=320.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=地之域|link=@地之域按钮>
 
 <$str(S$掉落显示窗口)>
 ; common1085

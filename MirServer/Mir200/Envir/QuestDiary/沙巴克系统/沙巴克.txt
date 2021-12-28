@@ -87,34 +87,69 @@ inc S$主界面 <Text|id=小标题|x=200|y=90|outline=2|outlinecolor=0|color=249|size=
 goto @沙巴克主面板
 
 [@沙城大门正]
+#IF
+NOT CHECKUNDERWAR 沙巴克
+#ACT
+messagebox 沙巴克开启后才能使用该功能!!
+break
+
 #if
 #act
-MAPMOVE 3 676 333
+MAPMOVE n3 676 333
 
 
 [@沙城大门右]
+#IF
+NOT CHECKUNDERWAR 沙巴克
+#ACT
+messagebox 沙巴克开启后才能使用该功能!!
+break
+
 #if
 #act
-MAPMOVE 3 686 323
+MAPMOVE n3 686 323
 
 
 [@沙城大门左]
+#IF
+NOT CHECKUNDERWAR 沙巴克
+#ACT
+messagebox 沙巴克开启后才能使用该功能!!
+break
+
 #if
 #act
-MAPMOVE 3 666 345
+MAPMOVE n3 666 345
 
 [@沙城大门前]
+#IF
+NOT CHECKUNDERWAR 沙巴克
+#ACT
+messagebox 沙巴克开启后才能使用该功能!!
+break
+
 #if
 #act
-
-MAPMOVE 3 688 346
+MAPMOVE n3 688 346
 
 [@直飞复活点]
+#IF
+NOT CHECKUNDERWAR 沙巴克
+#ACT
+messagebox 沙巴克开启后才能使用该功能!!
+break
+
 #if
 #act
-MAPMOVE 3  644 289
+MAPMOVE n3  644 289
 
 [@直飞皇宫]
+#IF
+NOT CHECKUNDERWAR 沙巴克
+#ACT
+messagebox 沙巴克开启后才能使用该功能!!
+break
+
 #if
 #act
 MAPMOVE 0150

@@ -23,10 +23,10 @@ goto @囚魔炼狱主界面
 <Text|a=0|ax=0|x=120.0|y=50.0|tipsx=10|tipsy=80|color=70|size=18|text=囚魔职员、战士、法师、道士.千古魔主！！>
 <Text|a=0|x=20.0|y=75.0|tipsx=10|tipsy=80|color=250|size=18|text=[刷新时间]：>
 <Text|a=0|ax=0|x=120.0|y=75.0|tipsx=10|tipsy=80|color=70|size=18|text=普通怪10分钟，Boss1小时>
-<Text|a=0|ax=0|x=20.0|y=100.0|tipsx=10|tipsy=80|color=244|size=18|text=250级、红钻贵族免费进入.也可花2000灵符进！！>
+<Text|a=0|ax=0|x=20.0|y=100.0|tipsx=10|tipsy=80|color=244|size=18|text=250级、金钻贵族免费进入.也可花2000灵符进！！>
 <Button|x=515|y=25.0|nimg=public/icon/common1087.png|link=@显示掉落>
-<Text|a=0|x=120.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=护军进入|link=@囚魔炼狱按钮#参数=1>
-<Text|a=0|x=220.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=赞助进入|link=@囚魔炼狱按钮#参数=2>
+<Text|a=0|x=120.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=等级进入|link=@囚魔炼狱按钮#参数=1>
+<Text|a=0|x=220.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=贵族进入|link=@囚魔炼狱按钮#参数=2>
 <Text|a=0|x=320.0|y=160.0|tipsx=10|tipsy=80|color=251|size=18|text=灵符进入|link=@囚魔炼狱按钮#参数=3>
 <$str(S$掉落显示窗口)>
 ; common1085
@@ -41,9 +41,9 @@ break
 
 #if
 equal <$str(S$参数)> 2
-small <$str(U98)> 2
+small <$str(U98)> 3
 #act
-MESSAGEBOX 你还不是本服的红钻贵族！无法进入！
+MESSAGEBOX 你还不是本服的金钻贵族！无法进入！
 break
 
 #if

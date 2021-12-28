@@ -5,7 +5,7 @@ equal <$CLIENTFLAG> 1
 {<$SERVERNAME>/FCOLOR=241}    <泡点升级/AUTOCOLOR=251>\
 <----------------------------------------------------------/AUTOCOLOR=250,253,254,241>\
 <特别提示：本服主要获得经验的方式是回收装备和聚灵珠/FCOLOR=222>\
-<本地图每秒30W经验,最高泡到满级!/FCOLOR=254>\
+<本地图每秒3W经验,最高泡到满级!/FCOLOR=254>\
 <每天11:25 14:25 18:25 22:25 有送宝活动,掉落大量RMB、元宝、经验卷、材料/AUTOCOLOR=249,250,251>\
 <活动:随机刷送宝稻草人,爆RMB和元宝,刷新时间5-30分钟随机/FCOLOR=245>\
 <泡点每秒3W经验,最高泡到满级/FCOLOR=245/FCOLOR=249> \
@@ -19,7 +19,7 @@ equal <$CLIENTFLAG> 1
 <Text|a=0|x=219|y=25|tipsx=10|tipsy=80|color=251|size=18|text=泡点升级>
 <Text|a=0|x=32|y=45|tipsx=10|tipsy=80|color=250,253,254,241|size=18|text=---------------------------------------------------------->
 <Text|a=0|x=32|y=65|tipsx=10|tipsy=80|color=222|size=18|text=特别提示：本服主要获得经验的方式是回收装备和聚灵珠>
-<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=254|size=18|text=本地图每秒30W经验,最高泡到满级!>
+<Text|a=0|x=32|y=85|tipsx=10|tipsy=80|color=254|size=18|text=本地图每秒3W经验,最高泡到满级!>
 <Text|a=0|x=32|y=105|tipsx=10|tipsy=80|color=249,250,251|size=18|text=每天11:25 14:25 18:25 22:25 有送宝活动,掉落大量RMB、元宝、经验卷、材料>
 <Text|a=0|x=32|y=125|tipsx=10|tipsy=80|color=245|size=18|text=活动:随机刷送宝稻草人,爆RMB和元宝,刷新时间5-30分钟随机>
 <Text|a=0|x=32|y=145|tipsx=10|tipsy=80|color=245|size=18|text=泡点每秒3W经验,最高泡到满级>

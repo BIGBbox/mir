@@ -35,11 +35,8 @@ goto @藏道殿主界面
 ; common1085
 
 [@chun21通天2]
-#OR
-equal U22 4
-equal U22 3
-equal U22 2
-equal U22 1
+#if
+large <$str(U98)> 0
 #ACT
 
 MapMove 通天塔一层

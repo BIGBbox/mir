@@ -261,11 +261,15 @@ Mov U52 3
 #IF
 ; Equal <$CLIENTFLAG> 2
 #ACT
+
+; ChangeHumNewValue 66 1000 10
+; Div N10 100 2 
+; sendmsg 5 N10:::<$str(N10)>
+
 ; set [59] 1
-ChangeHumNewValue 66 10 10
+; ChangeHumNewValue 31 1000 10
 ; KILLMONEXPRATE 1000 10
 ; sendmsg 5 倍数::<$KILLMONEXPRATE>
-#CALL [\游戏登陆\右下显示.txt] @属性显示
 ; #CALL [\游戏登陆\右下显示.txt] @属性显示
 ; #CALL [\人物属性加成\人物属性提升.txt] @基础属性 89
 ; ChangeHumNewValue 89 0 65535

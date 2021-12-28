@@ -237,6 +237,11 @@ messagebox <$str(S$货币类型)>不足<$str(S$货币数量)>无法购买！！
 break
 
 #if
+#act
+messagebox 是否确定使用<$str(S$货币数量)><$str(S$货币类型)> @确定购买贵族礼包 @取消
+
+[@确定购买贵族礼包]
+#if
 equal <$str(S$礼包类型)> 首次礼包
 #act
 set [<$str(S$首次购买标记)>] 1

@@ -41,9 +41,9 @@ break
 
 #if
 equal <$str(S$参数)> 2
-not large <$str(U22)> 0
+small <$str(U98)> 2
 #act
-MESSAGEBOX 你还不是本服的会员！无法进入！
+MESSAGEBOX 你还不是本服的贵族！无法进入！
 break
 
 #if

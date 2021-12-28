@@ -45,7 +45,7 @@ inc S$MainView <Img|id=items|width=0|height=0|children={<$str(S$Childs)>}|x=0|y=
 ; 天数物品领取状态
 mov S$StatusIcon 0.png
 
-; sendmsg 6 标签[<$str(N$LabIdx)>],领取索引[<$str(U71)>],上次领取日期[<$str(U72)>]
+; sendmsg 6 标签[<$str(N$LabIdx)>],领取索引[<$str(U50)>],上次领取日期[<$str(U51)>]
 
 ; 还没购买
 #if
@@ -55,21 +55,21 @@ break
 
 ; 未到,非本日
 #if
-large N$LabIdx U71
+large N$LabIdx U50
 #act
 mov S$StatusIcon common1043.png
 break
 
 ; 之前的, 已领取
 #if
-small N$LabIdx U71
+small N$LabIdx U50
 #act
 mov S$StatusIcon common1042_1.png
 break
 
 ; 今天的,可能已领取,也可能未领取
 #if
-EQUAL <$str(U72)> <$DAY>
+EQUAL <$str(U51)> <$DAY>
 #act
 mov S$StatusIcon common1043.png
 break
@@ -158,7 +158,7 @@ break
 
 ; 和上次是否是同一天
 #if
-not EQUAL <$str(U72)> <$DAY>
+not EQUAL <$str(U51)> <$DAY>
 #act
 ; 领取奖励
 inc S$MainView <Button|id=cash|x=<$STR(N$BX)>|y=<$STR(N$BY)>|nimg=public/icon/common1020.png|pimg=public/icon/common1020.png|link=@OnGetAward>
@@ -180,7 +180,7 @@ break
 ; 第几次领取
 #if
 #act
-ReadConfigFileItem ..\Data\首充配置.txt <$str(U71)> 物品,数量,绑定 S$MailAwards
+ReadConfigFileItem ..\Data\首充配置.txt <$str(U50)> 物品,数量,绑定 S$MailAwards
 
 #if
 equal <$STR(S$MailAwards)>   
@@ -189,15 +189,15 @@ messagebox 已经没有可领取的奖励了!
 break
 
 #if
-not EQUAL <$str(U72)> <$DAY>
+not EQUAL <$str(U51)> <$DAY>
 #act
 goto @MailHandle
 
 messagebox 奖励已通过邮件发放!
-SendMail 1 首充奖励 首充第<$str(U71)>天奖励!
+SendMail 1 首充奖励 首充第<$str(U50)>天奖励!
 ; 设置为当前领取的日期
-mov U72 <$DAY>
-inc U71 1
+mov U51 <$DAY>
+inc U50 1
 
 #CALL [\首充系统\首充界面.txt] @首充面板
 
@@ -207,12 +207,12 @@ messagebox 今天的奖励已经通过邮件发放了!
 ; 已经没有了,删除图标
 #if
 #act
-ReadConfigFileItem ..\Data\首充配置.txt <$str(U71)> 物品,数量,绑定 S$MailAwards
+ReadConfigFileItem ..\Data\首充配置.txt <$str(U50)> 物品,数量,绑定 S$MailAwards
 
 #if
 equal <$STR(S$MailAwards)>
 #act
-mov U72 666
+mov U51 666
 #CALL [\Mobile\特殊NPC\TOP图标.txt] @导航
 break
 

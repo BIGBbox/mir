@@ -9,15 +9,15 @@ goto @攻略主面板初始化
 #if
 #say
 <Img|x=0|y=0|width=9999|height=9999|children={游戏攻略,1,2,3}|img=public/0.png|bg=1|reset=1|link=@exit>
-<Img|id=游戏攻略|x=0|y=0|width=<$SCREENWIDTH>|height=<$SCREENHEIGHT>|img=public/sf1/2/llll/BG.png|children={closeBtn,leftBtn,rightBtn,titleImg,downImg,leftBtnS,downBtnS}|link=@1>
+<Img|id=游戏攻略|x=0|y=0|width=<$SCREENWIDTH>|height=<$SCREENHEIGHT>|img=public/sf1/2/llll/BG1.png|children={closeBtn,leftBtn,rightBtn,titleImg,downImg,leftBtnS,downBtnS}|link=@1>
 <Button|id=closeBtn|x=1055|y=40.0|nimg=public/sf1/2/llll/closeBtn.png|pimg=public/sf1/2/llll/closeBtn_1.png|link=@exit>
 <Img|id=titleImg|x=550|y=45|img=public/sf1/2/llll/road.png>
 <Img|id=downImg|x=430|y=450|img=public/sf1/2/llll/text.png>
 <Img|id=leftBtnS|x=185|y=50|children={leftBtn1,leftBtn2,leftBtn3,leftBtn4,leftBtn5,leftBtn6,leftBtn7,leftBtn8}|width=125|height=370|img=public/sf1/2/zanz/0.png>
 <Img|id=downBtnS|x=200|y=520|children={downBtn1,downBtn2,downBtn3,downBtn4,downBtn5,downBtn6,downBtn7,downBtn8}|width=780|height=70|img=public/sf1/2/zanz/0.png>
-<Img|id=1|x=390|y=130|children={showitem11,showitem12,showitem13,showitem14,showitem15,showitem16,showitem17,showitem18,showitem19,showitem110}|width=540|height=50|img=public/sf1/2/0.png>
-<Img|id=2|x=390|y=130|children={showitem21,showitem22,showitem23,showitem24,showitem25,showitem26,showitem27,showitem28,showitem29,showitem210}|width=540|height=50|img=public/sf1/2/0.png>
-<Img|id=3|x=390|y=130|children={showitem31,showitem32,showitem33,showitem34,showitem35,showitem36,showitem37,showitem38,showitem39,showitem310}|width=540|height=50|img=public/sf1/2/0.png>
+<Img|id=1|x=370|y=130|children={showitem11,showitem12,showitem13,showitem14,showitem15,showitem16,showitem17,showitem18,showitem19,showitem110}|width=540|height=50|img=public/sf1/2/0.png>
+<Img|id=2|x=370|y=130|children={showitem21,showitem22,showitem23,showitem24,showitem25,showitem26,showitem27,showitem28,showitem29,showitem210}|width=540|height=50|img=public/sf1/2/0.png>
+<Img|id=3|x=370|y=130|children={showitem31,showitem32,showitem33,showitem34,showitem35,showitem36,showitem37,showitem38,showitem39,showitem310}|width=540|height=50|img=public/sf1/2/0.png>
 <Img|id=centerInfoS|x=390|y=130|children={center1,center2,center3,center4,center5,center6,center7,center8,center9,center10,center11,center12}|width=540|height=300|img=public/sf1/2/0.png>
 <$str(S$downBtnS)>
 <$str(S$leftBtnS)>
@@ -156,12 +156,17 @@ mov N$按钮序号 <$str(S$序号)>
 dec N$按钮序号 1
 
 
+ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 页数 S$总页数
 ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 详情解释1 S$左侧详情解释
 ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 展示装备1 S$展示装备1
 ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 展示装备2 S$展示装备2
 ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 展示装备3 S$展示装备3
 
-; sendmsg 9 <$str(S$leftBtn)>-----<$str(S$展示装备1)>
+; ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 详情解释<$str(N$当前页数)> S$左侧详情解释
+; ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 展示装备<$str(N$展示1)> S$展示装备1
+; ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 展示装备<$str(N$展示2)> S$展示装备2
+; ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 展示装备<$str(N$展示3)> S$展示装备3
+
 
 GETVALIDSTRSUPER <$str(S$左侧详情解释)> # S$左侧详情
 GETVALIDSTRSUPER <$str(S$展示装备1)> & S$展示装备名1
@@ -170,7 +175,6 @@ GETVALIDSTRSUPER <$str(S$展示装备3)> & S$展示装备名3
 
 
 #if
-
 #act
 goto @展示装备
 
@@ -187,14 +191,20 @@ goto @更新左侧按钮
 goto @攻略主面板
 
 [@展示装备]
+
 #if
 not equal <$str(S$展示装备1)>
 not equal <$str(S$展示装备2)>
 not equal <$str(S$展示装备3)>
+not equal <$str(S$总页数)>
 #act
 
-inc S$centerInfo <Button|id=leftBtn|x=550|y=423.0|width=50|height=20|nimg=public/sf1/2/zanz/left.png|pimg=public/sf1/2/zanz/left_1.png|link=@exit>
-inc S$centerInfo <Button|id=rightBtn|x=670|y=423.0|width=50|height=20|nimg=public/sf1/2/zanz/right.png|pimg=public/sf1/2/zanz/right_1.png|link=@exit>
+mov N$当前页数 1
+
+inc S$centerInfo <Button|id=leftBtn|x=550|y=423.0|width=50|height=20|nimg=public/sf1/2/zanz/left.png|pimg=public/sf1/2/zanz/left_1.png|link=@左翻页>
+inc S$centerInfo <Button|id=rightBtn|x=670|y=423.0|width=50|height=20|nimg=public/sf1/2/zanz/right.png|pimg=public/sf1/2/zanz/right_1.png|link=@右翻页>
+goto @更新页数显示
+; S$总页数
 
 #if
 not equal <$str(S$展示装备1)>
@@ -224,7 +234,7 @@ GetDBItemFieldValue <$str(S$展示装备名1<$str(N$装备展示1)>)> idx S$展示装备名idx
 
 ; sendmsg 9 <$str(S$展示装备1)>````<$str(S$展示装备名idx1)>
 inc S$showitem1 <Img|id=showitem1<$str(N$装备展示1)>|children=showitem1<$str(N$装备展示1)>_<$str(N$装备展示1)>|x=<$str(N$描述索引X1)>|y=33|width=55|height=55|img=public/sf1/2/itembg.png>
-inc S$showitem1 <ItemShow|id=showitem1<$str(N$装备展示1)>_<$str(N$装备展示1)>|x=-6|y=-6|itemid=<$STR(S$展示装备名idx11)>|itemcount=1|showtips=1|scale=1.3|bgtype=0>
+inc S$showitem1 <ItemShow|id=showitem1<$str(N$装备展示1)>_<$str(N$装备展示1)>|x=-6|y=-6|itemid=<$STR(S$展示装备名idx11)>|itemcount=1|showtips=1|scale=1.0|bgtype=0>
 mov S$展示装备名1<$str(N$装备展示1)>
 inc N$描述索引X1 55
 inc N$装备展示1 1
@@ -238,7 +248,7 @@ not equal <$str(S$展示装备名2<$str(N$装备展示2)>)>
 GetDBItemFieldValue <$str(S$展示装备名2<$str(N$装备展示2)>)> idx S$展示装备名idx12
 ; sendmsg 9 ===showitem2<$str(N$装备展示2)>
 inc S$showitem2 <Img|id=showitem2<$str(N$装备展示2)>|children=showitem2<$str(N$装备展示2)>_<$str(N$装备展示2)>|x=<$str(N$描述索引X2)>|y=133|width=55|height=55|img=public/sf1/2/itembg.png>
-inc S$showitem2 <ItemShow|id=showitem2<$str(N$装备展示2)>_<$str(N$装备展示2)>|x=-6|y=-6|itemid=<$STR(S$展示装备名idx12)>|itemcount=1|showtips=1|scale=1.3|bgtype=0>
+inc S$showitem2 <ItemShow|id=showitem2<$str(N$装备展示2)>_<$str(N$装备展示2)>|x=-6|y=-6|itemid=<$STR(S$展示装备名idx12)>|itemcount=1|showtips=1|scale=1.0|bgtype=0>
 mov S$展示装备名2<$str(N$装备展示2)>
 inc N$描述索引X2 55
 inc N$装备展示2 1
@@ -252,7 +262,7 @@ not equal <$str(S$展示装备名3<$str(N$装备展示3)>)>
 GetDBItemFieldValue <$str(S$展示装备名3<$str(N$装备展示3)>)> idx S$展示装备名idx13
 ; sendmsg 9 ===showitem2<$str(N$装备展示3)>
 inc S$showitem3 <Img|id=showitem3<$str(N$装备展示3)>|children=showitem3<$str(N$装备展示3)>_<$str(N$装备展示3)>|x=<$str(N$描述索引X3)>|y=233|width=55|height=55|img=public/sf1/2/itembg.png>
-inc S$showitem3 <ItemShow|id=showitem3<$str(N$装备展示3)>_<$str(N$装备展示3)>|x=-6|y=-6|itemid=<$STR(S$展示装备名idx13)>|itemcount=1|showtips=1|scale=1.3|bgtype=0>
+inc S$showitem3 <ItemShow|id=showitem3<$str(N$装备展示3)>_<$str(N$装备展示3)>|x=-6|y=-6|itemid=<$STR(S$展示装备名idx13)>|itemcount=1|showtips=1|scale=1.0|bgtype=0>
 mov S$展示装备名3<$str(N$装备展示3)>
 inc N$描述索引X3 55
 inc N$装备展示3 1
@@ -269,7 +279,7 @@ not equal <$str(S$左侧详情<$str(N$描述索引)>)> %%
 ; sendmsg 9 <$str(S$左侧详情1)>******<$str(S$左侧详情1)>---<$str(S$左侧详情2)>---<$str(S$左侧详情3)>
 inc S$centerInfo <RText|id=center<$str(N$描述索引)>|x=0|y=<$str(N$描述索引Y)>|size=16|text=<<$str(S$左侧详情<$str(N$描述索引)>)>>>
 ; mov S$左侧详情<$str(N$描述索引)>
-; sendmsg 9 <$str(S$左侧详情<$str(N$描述索引)>)>------------<$str(N$描述索引)>
+
 
 #if
 not equal <$str(S$左侧详情<$str(N$描述索引)>)>
@@ -278,5 +288,164 @@ mov S$左侧详情<$str(N$描述索引)>
 inc N$描述索引Y 25
 inc N$描述索引 1
 goto @显示描述
+
+
+[@左翻页]
+#if
+small <$str(N$当前页数)> 2
+#act
+sendmsg 9 已经是第一页了!!
+break
+
+#if
+#act
+dec N$当前页数 1
+mov N$描述索引 1
+mov N$展示1 1
+mov N$展示2 2
+mov N$展示3 3
+
+mov N$序号 <$str(N$当前页数)>
+dec N$序号 1
+mul N$序号 3
+
+mov S$showitem1
+mov S$showitem2
+mov S$showitem3
+; mov S$centerInfo
+
+inc N$展示1 <$str(N$序号)>
+inc N$展示2 <$str(N$序号)>
+inc N$展示3 <$str(N$序号)>
+
+mov N$描述索引 1
+mov N$描述索引Y 0
+
+; sendmsg 9 <$str(N$展示1)>---<$str(N$展示2)>---<$str(N$展示3)>---<$str(N$当前页数)>
+ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 详情解释<$str(N$当前页数)> S$左侧详情解释
+ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 展示装备<$str(N$展示1)> S$展示装备1
+ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 展示装备<$str(N$展示2)> S$展示装备2
+ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 展示装备<$str(N$展示3)> S$展示装备3
+
+
+GETVALIDSTRSUPER <$str(S$左侧详情解释)> # S$左侧详情
+GETVALIDSTRSUPER <$str(S$展示装备1)> & S$展示装备名1
+GETVALIDSTRSUPER <$str(S$展示装备2)> & S$展示装备名2
+GETVALIDSTRSUPER <$str(S$展示装备3)> & S$展示装备名3
+
+; sendmsg 9 左翻页--展示装备<$str(N$展示1)>===<$str(S$展示装备1)>
+
+; goto @展示装备
+
+#if
+not equal <$str(S$展示装备1)>
+#act
+mov N$描述索引X1 10
+mov N$装备展示1 1
+goto @展示装备1
+
+#if
+not equal <$str(S$展示装备2)>
+#act
+mov N$描述索引X2 10
+mov N$装备展示2 1
+goto @展示装备2
+
+#if
+not equal <$str(S$展示装备3)>
+#act
+
+mov N$描述索引X3 10
+mov N$装备展示3 1
+goto @展示装备3
+
+
+#if
+#act
+
+goto @显示描述
+goto @更新页数显示
+
+
+
+
+[@更新页数显示]
+#if
+#act
+inc S$centerInfo <RText|id=页数|x=620|y=423|size=16|text=<<$str(N$当前页数)>/<$str(S$总页数)>/FCOLOR=158>>
+goto @攻略主面板
+
+[@右翻页]
+#if
+equal <$str(N$当前页数)> <$str(S$总页数)>
+#act
+sendmsg 9 已经是最后一页了!!
+break
+
+#if
+#act
+inc N$当前页数 1
+mov N$描述索引 1
+mov N$展示1 1
+mov N$展示2 2
+mov N$展示3 3
+
+mov S$showitem1
+mov S$showitem2
+mov S$showitem3
+
+mov N$序号 <$str(N$当前页数)>
+dec N$序号 1
+mul N$序号 3
+
+
+
+inc N$展示1 <$str(N$序号)>
+inc N$展示2 <$str(N$序号)>
+inc N$展示3 <$str(N$序号)>
+
+mov N$描述索引 1
+mov N$描述索引Y 0
+ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 详情解释<$str(N$当前页数)> S$左侧详情解释
+ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 展示装备<$str(N$展示1)> S$展示装备1
+ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 展示装备<$str(N$展示2)> S$展示装备2
+ReadConfigFileItem ..\QuestDiary\游戏攻略\描述.txt <$str(S$leftBtn)> 展示装备<$str(N$展示3)> S$展示装备3
+
+
+GETVALIDSTRSUPER <$str(S$左侧详情解释)> # S$左侧详情
+GETVALIDSTRSUPER <$str(S$展示装备1)> & S$展示装备名1
+GETVALIDSTRSUPER <$str(S$展示装备2)> & S$展示装备名2
+GETVALIDSTRSUPER <$str(S$展示装备3)> & S$展示装备名3
+; sendmsg 9 <$str(N$展示1)>---<$str(N$展示2)>---<$str(N$展示3)>---<$str(N$当前页数)>
+; sendmsg 9 右翻页--<$str(S$左侧详情1)>
+
+#if
+not equal <$str(S$展示装备1)>
+#act
+mov N$描述索引X1 10
+mov N$装备展示1 1
+goto @展示装备1
+
+#if
+not equal <$str(S$展示装备2)>
+#act
+mov N$描述索引X2 10
+mov N$装备展示2 1
+goto @展示装备2
+
+#if
+not equal <$str(S$展示装备3)>
+#act
+mov N$描述索引X3 10
+mov N$装备展示3 1
+goto @展示装备3
+
+
+#if
+#act
+goto @显示描述
+goto @更新页数显示
+
+
 
 }

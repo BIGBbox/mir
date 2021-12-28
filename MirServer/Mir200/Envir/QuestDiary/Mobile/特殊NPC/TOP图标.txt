@@ -93,7 +93,7 @@ addbutton 102 2 <$STR(S$展示)>
 
 [@首充按钮]
 #if
-not EQUAL U72 666
+not EQUAL U51 666
 #act
 dec N$坐标X2 85
 INC S$图标2 <Button|x=<$str(N$坐标X2)>|y=35|nimg=public/sf1/2/top/top11.png|link=@首充>

@@ -20,7 +20,7 @@ goto @切换面板1
 #act
 #say
 ; <Img|x=0|y=0|width=9999|height=9999|children={装备熔炼系统主面板}|img=public/0.png|bg=1|link=@exit>
-<Img|id=装备熔炼系统主面板|x=210|y=30|img=public/sf1/2/bg6.png|children={内框背景,标题,列表1,列表2,列表3,列表4,控件9,获取途径,获取途径控件,closeBtn}|bg=1|move=1>
+<Img|id=装备熔炼系统主面板|x=110|y=30|img=public/sf1/2/bg6.png|children={内框背景,标题,列表1,列表2,列表3,列表4,控件9,获取途径,获取途径控件,closeBtn}|bg=1|move=1>
 
 <Button|id=closeBtn|x=765|y=65.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
 <Text|id=标题|x=180|y=45|color=255|size=18|text=装备熔炼>
@@ -188,13 +188,15 @@ goto @显示印记列表
 #if
 equal <$str(S$窗口名)> 残·神器熔炼
 #act
+mov filter3
 inc S$主界面 <Img|x=170|y=70|id=控件9|width=0|height=0|children={控件1,控件2,控件3,控件4,控件5,控件6,控件7,控件8,控件10,成功率,合成按钮,ok1,ok2,ok3,ok4,ok5,合成列表,连接图片1,连接图片2,连接图片3,连接图片4,btn1,btn2,btn3}|img=public/0.png|bg=1|link=@exit>
-inc S$主界面 <Text|id=控件1|x=32|y=25|tipsx=10|tipsy=80|color=56|size=15|text=以下是主印辅助熔炼规则！>
+inc S$主界面 <Text|id=控件1|x=32|y=25|tipsx=10|tipsy=80|color=56|size=15|text=以下是残·神器熔炼规则！>
 inc S$主界面 <Text|id=控件2|x=32|y=45|tipsx=10|tipsy=80|color=254|size=15|text=第一个格子放入需要熔炼的装备>
 inc S$主界面 <Text|id=控件3|x=32|y=65|tipsx=10|tipsy=80|color=254|size=15|text=第二个格子放入祭品！>
 inc S$主界面 <Text|id=控件4|x=32|y=85|tipsx=10|tipsy=80|color=56|size=15|text=第三个格子放入恶魔令牌可提高成功率，越多成功率越大>
 inc S$主界面 <Text|id=控件5|x=32|y=105|tipsx=10|tipsy=80|color=250|size=15|text=第四个格子放入血龙魄珠可提高成功率，越多成功率越大>
 inc S$主界面 <Text|id=控件6|x=32|y=125|tipsx=10|tipsy=80|color=250|size=15|text=第五个格子放入洗髓丹可提高成功率，越多成功率越大>
+; inc S$主界面 <BAGITEMS|id=物品列表|condition=*|select=<$STR(S0)>|filter3=<$str(S$filter3)>|selecttype=1|count=18|row=6|x=900|y=100|link=@神器熔炼选择>
 inc S$主界面 <Img|id=连接图片1|x=120|y=235|img=public/uipic/01709.png>
 inc S$主界面 <Img|id=连接图片2|x=230|y=235|img=public/uipic/01709.png>
 inc S$主界面 <Img|id=连接图片3|x=340|y=235|img=public/uipic/01709.png>
@@ -213,7 +215,7 @@ equal <$str(S$窗口名)> 神器熔炼
 #act
 inc S$主界面 <Img|x=170|y=70|id=控件9|width=0|height=0|children={控件1,控件2,控件3,控件4,控件5,控件6,控件7,控件8,控件10,ok1,ok2,ok3,合成列表,连接图片1,连接图片2,连接图片3,btn1,btn2,btn3}|img=public/0.png|bg=1|link=@exit>
 
-inc S$主界面 <Text|id=控件1|x=32|y=25|tipsx=10|tipsy=80|color=56|size=15|text=以下是主印辅助合成规则！>
+inc S$主界面 <Text|id=控件1|x=32|y=25|tipsx=10|tipsy=80|color=56|size=15|text=以下是神器熔炼合成规则！>
 inc S$主界面 <Text|id=控件2|x=32|y=45|tipsx=10|tipsy=80|color=254|size=15|text=十个残【上古】，合成对应的上古装备！>
 ; inc S$主界面 <Text|id=控件3|x=32|y=65|tipsx=10|tipsy=80|color=254|size=15|text=十个辅印碎片，合成对应的辅印！>
 inc S$主界面 <Text|id=控件4|x=32|y=85|tipsx=10|tipsy=80|color=254|size=15|text=合成费用为100W元宝！>
@@ -227,6 +229,11 @@ goto @显示神器列表
 #if
 #act
 goto @装备熔炼系统主面板
+
+[@神器熔炼选择]
+#if
+#act
+sendmsg 5 神器熔炼选择
 
 [@显示印记列表]
 

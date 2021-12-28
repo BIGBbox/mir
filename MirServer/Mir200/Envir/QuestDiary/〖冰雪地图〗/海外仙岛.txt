@@ -34,7 +34,7 @@ goto @海外仙岛主界面
 [@海外仙岛按钮]
 #if
 equal <$str(S$参数)> 1
-not checklevelex > 100
+checklevelex < 100
 #act
 MESSAGEBOX 角色等级不够！无法进入！
 break

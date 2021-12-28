@@ -281,37 +281,208 @@ SENDMSG 0 ┇[每3小时一次]降元宝、装备、转生材料、锻体材料、锻造材料等.┇
 SENDMSG 0 ╚┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╝
 SENDMSG 0 ┗≈☆★≈☆★≈☆★☆≈【天降福利】≈☆★☆≈★☆≈★☆≈┛
 GMEXECUTE StartQuest @天降福利
-ThrowItem 3 355 339 7 500元宝 5|60
-ThrowItem 3 355 339 7 500元宝 5|60
-ThrowItem 3 355 339 7 1000元宝 3|60
-ThrowItem 3 355 339 7 500W经验卷 5|60
-ThrowItem 3 355 339 7 500W经验卷 5|60
-ThrowItem 3 355 339 7 1000W经验卷 5|60
+
+ThrowItem 3 355 339 7 10灵符 1|60
+ThrowItem 3 355 339 7 10灵符 1|60
+ThrowItem 3 355 339 7 10灵符 1|60
+ThrowItem 3 355 339 7 10灵符 1|60
+ThrowItem 3 355 339 7 50灵符 1|60
+ThrowItem 3 355 339 7 50灵符 1|60
+ThrowItem 3 355 339 7 50灵符 1|60
+ThrowItem 3 355 339 7 50灵符 1|60
+ThrowItem 3 355 339 7 50灵符 1|60
+ThrowItem 3 355 339 7 50灵符 1|60
+ThrowItem 3 355 339 7 100灵符 1|60
+ThrowItem 3 355 339 7 100灵符 1|60
+ThrowItem 3 355 339 7 100灵符 1|60
+ThrowItem 3 355 339 7 100灵符 1|60
+ThrowItem 3 355 339 7 100灵符 1|60
+ThrowItem 3 355 339 7 100灵符 1|60
+ThrowItem 3 355 339 7 九品证明 1|60
+ThrowItem 3 355 339 7 九品证明 1|60
+ThrowItem 3 355 339 7 九品证明 1|60
+ThrowItem 3 355 339 7 九品证明 1|60
+ThrowItem 3 355 339 7 九品证明 1|60
+ThrowItem 3 355 339 7 九品证明 1|60
+ThrowItem 3 355 339 7 九品证明 1|60
+ThrowItem 3 355 339 7 九品证明 1|60
+ThrowItem 3 355 339 7 九品证明 1|60
+ThrowItem 3 355 339 7 九品证明 1|60
+ThrowItem 3 355 339 7 九品证明 1|60
+ThrowItem 3 355 339 7 九品证明 1|60
+ThrowItem 3 355 339 7 九品证明 1|60
+ThrowItem 3 355 339 7 九品证明 1|60
+ThrowItem 3 355 339 7 九品证明 1|60
+ThrowItem 3 355 339 7 九品证明 1|60
+ThrowItem 3 355 339 7 天精岩一转 1|60
+ThrowItem 3 355 339 7 地狱火一转 1|60
+ThrowItem 3 355 339 7 天精岩二转 1|60
+ThrowItem 3 355 339 7 地狱火二转 1|60
 ThrowItem 3 355 339 7 天精岩三转 1|60
 ThrowItem 3 355 339 7 地狱火三转 1|60
 ThrowItem 3 355 339 7 天精岩四转 1|60
 ThrowItem 3 355 339 7 地狱火四转 1|60
-ThrowItem 3 355 339 7 天精岩五转 1|60
-ThrowItem 3 355 339 7 地狱火五转 1|60
-ThrowItem 3 355 339 7 六品证明 1|60
-ThrowItem 3 355 339 7 五品证明 1|60
-ThrowItem 3 355 339 7 四品证明 1|60
-ThrowItem 3 355 339 7 三品证明 1|60
-ThrowItem 3 355 339 7 白银斗笠 1|60
-ThrowItem 3 355 339 7 白银·盾 1|60
-ThrowItem 3 355 339 7 麻痹戒指+5 1|60
-ThrowItem 3 355 339 7 复活戒指+5 1|60
-ThrowItem 3 355 339 7 护身戒指+5 1|60
-ThrowItem 3 355 339 7 恶魔令牌 10|60
-ThrowItem 3 355 339 7 洗髓丹 10|60
-ThrowItem 3 355 339 7 血龙魄珠 10|60
-ThrowItem 3 355 339 7 鬼药 10|60
-ThrowItem 3 355 339 7 1角人民币 5|60
-ThrowItem 3 355 339 7 治疗宝珠③ 3|60
-ThrowItem 3 355 339 7 治疗宝珠④ 3|60
+ThrowItem 3 355 339 7 天精岩一转 1|60
+ThrowItem 3 355 339 7 地狱火一转 1|60
+ThrowItem 3 355 339 7 天精岩二转 1|60
+ThrowItem 3 355 339 7 地狱火二转 1|60
+ThrowItem 3 355 339 7 天精岩三转 1|60
+ThrowItem 3 355 339 7 地狱火三转 1|60
+ThrowItem 3 355 339 7 天精岩四转 1|60
+ThrowItem 3 355 339 7 地狱火四转 1|60
+ThrowItem 3 355 339 7 天精岩一转 1|60
+ThrowItem 3 355 339 7 地狱火一转 1|60
+ThrowItem 3 355 339 7 天精岩二转 1|60
+ThrowItem 3 355 339 7 地狱火二转 1|60
+ThrowItem 3 355 339 7 天精岩三转 1|60
+ThrowItem 3 355 339 7 地狱火三转 1|60
+ThrowItem 3 355 339 7 天精岩四转 1|60
+ThrowItem 3 355 339 7 地狱火四转 1|60
+ThrowItem 3 355 339 7 洗髓丹 1|60
+ThrowItem 3 355 339 7 洗髓丹 1|60
+ThrowItem 3 355 339 7 洗髓丹 1|60
+ThrowItem 3 355 339 7 洗髓丹 1|60
+ThrowItem 3 355 339 7 洗髓丹 1|60
+ThrowItem 3 355 339 7 洗髓丹 1|60
+ThrowItem 3 355 339 7 洗髓丹 1|60
+ThrowItem 3 355 339 7 洗髓丹 1|60
+ThrowItem 3 355 339 7 洗髓丹 1|60
+ThrowItem 3 355 339 7 洗髓丹 1|60
+ThrowItem 3 355 339 7 洗髓丹 1|60
+ThrowItem 3 355 339 7 洗髓丹 1|60
+ThrowItem 3 355 339 7 洗髓丹 1|60
+ThrowItem 3 355 339 7 洗髓丹 1|60
+ThrowItem 3 355 339 7 洗髓丹 1|60
+ThrowItem 3 355 339 7 洗髓丹 1|60
+ThrowItem 3 355 339 7 血龙魄珠 1|60
+ThrowItem 3 355 339 7 血龙魄珠 1|60
+ThrowItem 3 355 339 7 血龙魄珠 1|60
+ThrowItem 3 355 339 7 血龙魄珠 1|60
+ThrowItem 3 355 339 7 血龙魄珠 1|60
+ThrowItem 3 355 339 7 血龙魄珠 1|60
+ThrowItem 3 355 339 7 血龙魄珠 1|60
+ThrowItem 3 355 339 7 血龙魄珠 1|60
+ThrowItem 3 355 339 7 血龙魄珠 1|60
+ThrowItem 3 355 339 7 血龙魄珠 1|60
+ThrowItem 3 355 339 7 血龙魄珠 1|60
+ThrowItem 3 355 339 7 血龙魄珠 1|60
+ThrowItem 3 355 339 7 血龙魄珠 1|60
+ThrowItem 3 355 339 7 血龙魄珠 1|60
+ThrowItem 3 355 339 7 血龙魄珠 1|60
+ThrowItem 3 355 339 7 聚灵珠(小) 1|60
+ThrowItem 3 355 339 7 聚灵珠(大) 1|60
+ThrowItem 3 355 339 7 聚灵珠(中) 1|60
+ThrowItem 3 355 339 7 聚灵珠(超级) 1|60
+ThrowItem 3 355 339 7 聚灵珠(小) 1|60
+ThrowItem 3 355 339 7 聚灵珠(大) 1|60
+ThrowItem 3 355 339 7 聚灵珠(中) 1|60
+ThrowItem 3 355 339 7 聚灵珠(超级) 1|60
+ThrowItem 3 355 339 7 治疗宝珠① 1|60
+ThrowItem 3 355 339 7 治疗宝珠② 1|60
+ThrowItem 3 355 339 7 治疗宝珠① 1|60
+ThrowItem 3 355 339 7 治疗宝珠② 1|60
+ThrowItem 3 355 339 7 1角人民币 1|60
+ThrowItem 3 355 339 7 2角人民币 1|60
+ThrowItem 3 355 339 7 5角人民币 1|60
+ThrowItem 3 355 339 7 1元人民币 1|60
+ThrowItem 3 355 339 7 100元宝 1|60
+ThrowItem 3 355 339 7 200元宝 1|60
+ThrowItem 3 355 339 7 500元宝 1|60
+ThrowItem 3 355 339 7 1000元宝 1|60
+ThrowItem 3 355 339 7 2000元宝 1|60
+ThrowItem 3 355 339 7 5000元宝 1|60
+ThrowItem 3 355 339 7 10000元宝 1|60
+ThrowItem 3 355 339 7 20000元宝 1|60
+ThrowItem 3 355 339 7 50000元宝 1|60
+ThrowItem 3 355 339 7 100000元宝 1|60
+ThrowItem 3 355 339 7 100W经验卷 1|60
+ThrowItem 3 355 339 7 200W经验卷 1|60
+ThrowItem 3 355 339 7 500W经验卷 1|60
+ThrowItem 3 355 339 7 100W经验卷 1|60
+ThrowItem 3 355 339 7 200W经验卷 1|60
+ThrowItem 3 355 339 7 500W经验卷 1|60
+ThrowItem 3 355 339 7 100W经验卷 1|60
+ThrowItem 3 355 339 7 200W经验卷 1|60
+ThrowItem 3 355 339 7 500W经验卷 1|60
+ThrowItem 3 355 339 7 1角人民币 1|60
+ThrowItem 3 355 339 7 2角人民币 1|60
+ThrowItem 3 355 339 7 1角人民币 1|60
+ThrowItem 3 355 339 7 2角人民币 1|60
+ThrowItem 3 355 339 7 1角人民币 1|60
+ThrowItem 3 355 339 7 2角人民币 1|60
+ThrowItem 3 355 339 7 1角人民币 1|60
+ThrowItem 3 355 339 7 2角人民币 1|60
 BREAK
 
-; [@增加会员V值]
-; #if
-; #act
-; GMEXECUTE StartQuest @增加会员V值
+
+[@攻城提示]
+#if
+#act
+sendmsg 5 攻城提示
+
+#if
+small <$str(G80)> 2
+#act
+break
+
+#or
+DAYOFWEEK TUE
+DAYOFWEEK SAT
+#ACT
+SendCenterMsg 250 0 ┏-------------------------------------------------------┓ 1 60
+SendCenterMsg 250 0 ┠-----------攻城战30分钟后已开启------------┨ 1 60
+SendCenterMsg 250 0 ┗-------------------------------------------------------┛ 1 60
+AddAttackSabukAll 0
+break
+
+#if
+equal <$str(G80)> 2
+#ACT
+SendCenterMsg 250 0 ┏-------------------------------------------------------┓ 1 60
+SendCenterMsg 250 0 ┠-----------攻城战30分钟后已开启------------┨ 1 60
+SendCenterMsg 250 0 ┗-------------------------------------------------------┛ 1 60
+AddAttackSabukAll 0
+
+
+[@开启攻城]
+#if
+#act
+sendmsg 5 开启攻城
+#if
+small <$str(G80)> 2
+#act
+break
+
+#or
+DAYOFWEEK TUE
+DAYOFWEEK SAT
+#ACT
+SendCenterMsg 250 0 ┏-------------------------------------------┓ 1 60
+SendCenterMsg 250 0 ┠-----------攻城战已开启------------┨ 1 60
+SendCenterMsg 250 0 ┗-------------------------------------------┛ 1 60
+break
+
+#if
+equal <$str(G80)> 2
+#ACT
+SendCenterMsg 250 0 ┏-------------------------------------------┓ 1 60
+SendCenterMsg 250 0 ┠-----------攻城战已开启------------┨ 1 60
+SendCenterMsg 250 0 ┗-------------------------------------------┛ 1 60
+
+
+
+[@攻城结束]
+#if
+#act
+sendmsg 5 攻城结束
+#if
+small <$str(G80)> 2
+#act
+break
+
+#if
+#act
+
+SendCenterMsg 249 0 ┏-------------------------------------------┓ 1 60
+SendCenterMsg 249 0 ┠-----------攻城战已开启------------┨ 1 60
+SendCenterMsg 249 0 ┗-------------------------------------------┛ 1 60

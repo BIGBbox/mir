@@ -21,7 +21,7 @@
 
 [@chun21Éñµî]
 #if
-not checklevelex > 105
+checklevelex < 105
 small <$str(U98)> 2
 checkmoney Áé·û < 1000
 #act

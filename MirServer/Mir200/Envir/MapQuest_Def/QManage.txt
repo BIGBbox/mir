@@ -660,17 +660,7 @@ CHECKLEVELEX < 2
 break
 
 #IF
-equal <$CLIENTFLAG> 1
 #SAY
-\
-<【/FCOLOR=229>激情派对活动<】/FCOLOR=229>\ \
-
-<╔═══════════════════════════╗/FCOLOR=59>\
-<‖/FCOLOR=59>　　　　　   　 　　<大量|经验元宝|/FCOLOR=249>　<我要前往/@派对>　　  　 　　      　<‖/FCOLOR=59>\
-<╚═══════════════════════════╝/FCOLOR=59>\
-<温馨提醒：/FCOLOR=250><围绕激情泡点NPC走动获得经验元宝.活动每3小时开启!!/FCOLOR=253>\
-<我现在就前往/@派对>　　　　　　　　　　　　<关闭/@exit>\
-#elsesay
 <Img|width=620|height=250|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10>
 <Layout|x=597|y=3|width=80|height=80|link=@exit>
 <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
@@ -922,7 +912,7 @@ EQUAL I66 1
 CheckHumInRange 激情泡点 23 26 1
 #act
 GAMEGOLD + 20
-CHANGEEXP + 300000
+CHANGEEXP + 30000
 BREAK
 
 #if

@@ -506,19 +506,23 @@ CHANGEEXP + 500000
 SENDMSG 7 {ぐ〖提示〗:|251:0:0}{成功获得经验值|255:0}{50W|222:0}
 BREAK
 
-[@StdModeFunc80]
-; #if
-; #ACT
-; GAMEGOLD + 20
-; SENDMSG 7 恭喜您20元宝已到帐户中.
+[@批量使用元宝]
+#if
+#act
+#CALL [\批量使用\批量使用.txt] @批量使用
 
+[@StdModeFunc80]
 #if
 checkitem 20元宝 1
-#act
-take 20元宝 1
+#ACT
 money 元宝 + 20
 SENDMSG 7 恭喜您20元宝已到帐户中.
-goto @StdModeFunc80
+
+#if
+checkitem 20元宝 3
+#act
+mov S$name 20元宝
+delaygoto 3 @批量使用元宝
 
 [@StdModeFunc81]
 #if
@@ -527,7 +531,12 @@ checkitem 50元宝 1
 take 50元宝 1
 money 元宝 + 50
 SENDMSG 7 恭喜您50元宝已到帐户中.
-goto @StdModeFunc81
+
+#if
+checkitem 50元宝 3
+#act
+mov S$name 50元宝
+delaygoto 3 @批量使用元宝
 
 [@StdModeFunc59]
 #if
@@ -536,7 +545,12 @@ checkitem 100元宝 1
 take 100元宝 1
 money 元宝 + 100
 SENDMSG 7 恭喜您100元宝已到帐户中.
-goto @StdModeFunc59
+
+#if
+checkitem 100元宝 3
+#act
+mov S$name 100元宝
+delaygoto 3 @批量使用元宝
 
 [@StdModeFunc60]
 #if
@@ -545,7 +559,12 @@ checkitem 200元宝 1
 take 200元宝 1
 money 元宝 + 200
 SENDMSG 7 恭喜您200元宝已到帐户中.
-goto @StdModeFunc60
+
+#if
+checkitem 200元宝 3
+#act
+mov S$name 200元宝
+delaygoto 3 @批量使用元宝
 
 [@StdModeFunc61]
 #if
@@ -554,7 +573,12 @@ checkitem 500元宝 1
 take 500元宝 1
 money 元宝 + 500
 SENDMSG 7 恭喜您500元宝已到帐户中.
-goto @StdModeFunc61
+
+#if
+checkitem 500元宝 3
+#act
+mov S$name 500元宝
+delaygoto 3 @批量使用元宝
 
 [@StdModeFunc62]
 #if
@@ -563,7 +587,12 @@ checkitem 1000元宝 1
 take 1000元宝 1
 money 元宝 + 1000
 SENDMSG 7 恭喜您1000元宝已到帐户中.
-goto @StdModeFunc62
+
+#if
+checkitem 1000元宝 3
+#act
+mov S$name 1000元宝
+delaygoto 3 @批量使用元宝
 
 [@StdModeFunc63]
 #if
@@ -572,7 +601,12 @@ checkitem 2000元宝 1
 take 2000元宝 1
 money 元宝 + 2000
 SENDMSG 7 恭喜您1000元宝已到帐户中.
-goto @StdModeFunc63
+
+#if
+checkitem 2000元宝 3
+#act
+mov S$name 2000元宝
+delaygoto 3 @批量使用元宝
 
 [@StdModeFunc64]
 #if
@@ -581,7 +615,12 @@ checkitem 5000元宝 1
 take 5000元宝 1
 money 元宝 + 5000
 SENDMSG 7 恭喜您5000元宝已到帐户中.
-goto @StdModeFunc64
+
+#if
+checkitem 5000元宝 3
+#act
+mov S$name 5000元宝
+delaygoto 3 @批量使用元宝
 
 [@StdModeFunc65]
 #if
@@ -590,7 +629,17 @@ checkitem 10000元宝 1
 take 10000元宝 1
 money 元宝 + 10000
 SENDMSG 7 恭喜您1w元宝已到帐户中.
-goto @StdModeFunc65
+
+#if
+checkitem 10000元宝 3
+#act
+mov S$name 10000元宝
+delaygoto 3 @批量使用元宝
+
+#if
+checkitem <$str(S$name)> 3
+#act
+delaygoto 3 @批量使用元宝
 
 [@StdModeFunc66]
 #if
@@ -599,7 +648,12 @@ checkitem 20000元宝 1
 take 20000元宝 1
 money 元宝 + 20000
 SENDMSG 7 恭喜您20000元宝已到帐户中.
-goto @StdModeFunc66
+
+#if
+checkitem 20000元宝 3
+#act
+mov S$name 20000元宝
+delaygoto 3 @批量使用元宝
 
 [@StdModeFunc67]
 #if
@@ -608,7 +662,12 @@ checkitem 50000元宝 1
 take 50000元宝 1
 money 元宝 + 50000
 SENDMSG 7 恭喜您50000元宝已到帐户中.
-goto @StdModeFunc67
+
+#if
+checkitem 50000元宝 3
+#act
+mov S$name 50000元宝
+delaygoto 3 @批量使用元宝
 
 [@StdModeFunc68]
 #if
@@ -617,7 +676,12 @@ checkitem 100000元宝 1
 take 100000元宝 1
 money 元宝 + 100000
 SENDMSG 7 恭喜您100000元宝已到帐户中.
-goto @StdModeFunc68
+
+#if
+checkitem 100000元宝 3
+#act
+mov S$name 100000元宝
+delaygoto 3 @批量使用元宝
 
 
 [@StdModeFunc53]
@@ -3001,9 +3065,9 @@ INC U99 <$STR(M0)>
 INC U91 <$STR(M0)>
 
 #if
-equal U71 0
+equal U50 0
 #act
-mov U71 1
+mov U50 1
 
 CALCVAR HUMAN 今日充值 + <$STR(M0)>
 SAVEVAR HUMAN 今日充值
@@ -3114,14 +3178,14 @@ SENDMSG 7 {玩家|255:56:0}{『<$USERNAME>』|251:56:0}{触发了鞭尸召唤了一只|255:56:
 [@PickTask]
 #if
 #ACT
-SENDMSG 7 你接取了任务！！！！！<$CURRTASKID>
+; SENDMSG 7 你接取了任务！！！！！<$CURRTASKID>
 ;#CALL [\任务系统\任务文本.txt] @刷新任务
 ;BREAK
 
 [@ClickNewTask]
 #if
 #ACT
-SENDMSG 7 你点击了任务为ID:<$CURRTASKID>！！！！！
+; SENDMSG 7 你点击了任务为ID:<$CURRTASKID>！！！！！
 ; #CALL [\任务系统\任务文本.txt] @点击任务
 
 ; #if

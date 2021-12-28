@@ -24,12 +24,12 @@ goto @创建展示道具
 #say
 ; <Img|x=0|y=0|width=9999|height=9999|children={分解大师系统主面板}|img=public/0.png|bg=1|link=@exit>
 <Img|id=分解大师系统主面板|x=210|y=30|img=public/sf1/2/bg6.png|children={内框背景,okBtn,展示bg,ok框,标题,列表1,列表2,列表3,描述1,描述2,描述3,描述4,描述5,描述6,列表4,控件9,获取途径,获取途径控件,closeBtn}|bg=1|move=1>
-<Text|id=描述1|x=202|y=95|tipsx=10|tipsy=80|color=250|size=18|text=我可以分解1-4转那些史诗,传承,罕世装备！>
+<Text|id=描述1|x=202|y=95|tipsx=10|tipsy=80|color=250|size=18|text=我可以分解高级装备！>
 <Text|id=描述2|x=202|y=115|tipsx=10|tipsy=80|color=250|size=18|text=不过也不是免费的，你需要支付一定的费用！>
 <Text|id=描述3|x=202|y=135|tipsx=10|tipsy=80|color=250|size=18|text=分解装备有一定几率获得（药品,材料印记,碎片,元宝,经验）！>
 <Text|id=描述4|x=260|y=250|color=250|size=16|text=放入分解装备>
 <Text|id=描述5|x=370|y=300|color=70|size=16|text=几率获得：>
-<RText|id=描述6|x=260|y=360|color=70|size=16|text=<分解费用：/FCOLOR=251><<$str(N$分解费用)>元宝/FCOLOR=161>>
+<RText|id=描述6|x=260|y=360|color=70|size=16|text=<分解费用：/FCOLOR=251><<$str(N$分解费用)>灵符/FCOLOR=161>>
 <Img|id=展示bg|x=480|y=180|children=展示1,展示2,展示3,展示4,展示5,展示6,展示7,展示8,展示9,|percentwidth=30|percentheight=44|img=public/uipic/00665.png>
 <ITEMBOX|id=ok框|x=280.0|y=280.0|width=55|height=55|boxindex=1|stdmode=*|<$str(S$分解大师box提示)>|tipsx=1|tipsy=65|img=public/1900000651_3.png>
 <Button|id=closeBtn|x=765|y=65.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
@@ -44,11 +44,11 @@ goto @创建展示道具
 mov S$主界面
 mov S$界面序号 1
 mov S$按钮列表
-mov N$分解费用 20000
+mov N$分解费用 1000
 
-inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=三转装备|link=@切换面板1>
-inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=四转装备|link=@切换面板2>
-inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=五转装备|link=@切换面板3>
+inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=苍龙&浩劫|link=@切换面板1>
+inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=幽皇&帝恨|link=@切换面板2>
+inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=【血祭装备】|link=@切换面板3>
 goto @分解大师系统主面板
 break
 
@@ -58,11 +58,11 @@ break
 mov S$主界面
 mov S$界面序号 2
 mov S$按钮列表
-mov N$分解费用 30000
+mov N$分解费用 2000
 
-inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=三转装备|link=@切换面板1>
-inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=四转装备|link=@切换面板2>
-inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=五转装备|link=@切换面板3>
+inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=苍龙&浩劫|link=@切换面板1>
+inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=幽皇&帝恨|link=@切换面板2>
+inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=【血祭装备】|link=@切换面板3>
 
 goto @分解大师系统主面板
 break
@@ -73,11 +73,11 @@ break
 mov S$主界面
 mov S$界面序号 3
 mov S$按钮列表
-mov N$分解费用 50000
+mov N$分解费用 3000
 
-inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=三转装备|link=@切换面板1>
-inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=四转装备|link=@切换面板2>
-inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=五转装备|link=@切换面板3>
+inc S$按钮列表 <Button|id=列表1|x=60|y=80.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=苍龙&浩劫|link=@切换面板1>
+inc S$按钮列表 <Button|id=列表2|x=60|y=120.0|width=120|height=40|nimg=public/1900000680_1.png|color=161|size=17|text=幽皇&帝恨|link=@切换面板2>
+inc S$按钮列表 <Button|id=列表3|x=60|y=160.0|width=120|height=40|nimg=public/1900000680.png|color=161|size=17|text=【血祭装备】|link=@切换面板3>
 
 goto @分解大师系统主面板
 break
@@ -153,9 +153,9 @@ BREAK
 [@确定分解]
 #IF
 CheckBoxItemCount 1 1
-not CheckBindMoney 元宝 < <$str(N$分解费用)>
+not CheckMoney 灵符 < <$str(N$分解费用)>
 #act
-money 绑定元宝 - <$str(N$分解费用)>
+money 灵符 - <$str(N$分解费用)>
 DELBOXITEM 1 1
 GetRandomText ..\QuestDiary\分解装备\奖励物品<$str(S$界面序号)>.txt S10
 give <$STR(S10)> 1
@@ -163,7 +163,7 @@ UpDateBoxItem 1
 #ELSEACT
 ReturnBoxItem 1
 UpDateBoxItem 1
-MESSAGEBOX 1.元宝不足<$str(N$分解费用)>,不能分解\2.物品框内没有物品！
+MESSAGEBOX 1.灵符不足<$str(N$分解费用)>,不能分解\2.物品框内没有物品！
 BREAK
 
 }

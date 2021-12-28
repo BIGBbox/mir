@@ -1,0 +1,79 @@
+[@批量使用]
+{
+
+#if
+equal <$str(S$name)>
+not CheckContainsText 元宝
+#act
+messagebox 数据异常!!
+break
+
+
+#if
+#act
+goto @主面板
+
+[@主面板]
+#If
+#act
+GETBAGITEMCOUNT <$str(S$name)> N$count
+GetDBItemFieldValue <$str(S$name)> idx S$idx
+
+; mov S$idx 2
+; sendmsg 5 count::<$str(N$count)>
+; sendmsg 5 idx::<$str(S$idx)>
+; sendmsg 5 name::<$str(S$name)>
+#say
+<Img|x=0|y=0|width=9999|height=9999|children={批量使用面板}|img=public/0.png|bg=1|link=@exit>
+
+<Img|id=批量使用面板|children={thisItem,title,2,close_btn,button1,输入框背景}|x=460|y=120|width=255|height=310|img=public/haha/split/common_panel2039.png|reset=0|link=@123>
+<Button|id=close_btn|x=250.0|y=5.0|size=18|nimg=public/1900000510.png|link=@exit>
+
+<RText|id=title|x=80|y=10|size=20|text=<批量使用/FCOLOR=250>>
+<ItemShow|id=thisItem|x=90|y=55|itemid=<$str(S$idx)>|itemcount=0|showtips=1|bgtype=1|scale=0.8>
+<RText|id=2|x=80|y=125|size=16|text=<<$str(S$name)>数量:/FCOLOR=250><<$str(N$count)>/FCOLOR=251>>
+
+<Button|id=button1|x=70.0|y=245.0|size=18|text=确定使用|nimg=public/sf1/2/btn_11.png|submitInput=2|link=@批量使用按钮>
+<Img|id=输入框背景|width=120|height=30|children={输入框,countCoin}|x=70|y=170|move=1|img=public/sf1/19/00213.png|>
+<Input|id=输入框|inputid=2|x=0.0|y=0.0|type=1|text=1|width=120|height=30|color=250|size=18|mincount=1|maxcount=3|errortips=1>
+<RText|id=countCoin|x=15|y=38|size=14|text=<输入使用数量/FCOLOR=251>>
+
+
+[@批量使用按钮]
+#if
+equal <$str(S$name)>
+#act
+messagebox 数据异常!!
+break
+
+#if
+#act
+GETBAGITEMCOUNT <$str(S$name)> N$count
+mov N$使用数量 <$NPCINPUT(2)>
+mov S$收益 <$str(S$name)>
+; sendmsg 5 <$str(N$使用数量)>====<$str(N$count)>====<$NPCINPUT(2)>
+AnsiReplaceText S$收益 元宝
+AnsiReplaceText S$收益 W 0000
+AnsiReplaceText S$收益 千万 00000000
+AnsiReplaceText S$收益 亿 000000000
+
+#if
+large <$str(N$使用数量)> <$str(N$count)>
+#act
+messagebox 元宝数量不足,无法使用!!
+break
+
+#if
+#act
+take <$str(S$name)> <$str(N$使用数量)>
+mov N$收益 <$str(S$收益)>
+mul N$收益 <$str(N$使用数量)>
+
+money 元宝 + <$str(N$收益)>
+sendmsg 9 成功使用<$str(S$name)>*<$str(N$使用数量)>,获得<$str(N$收益)>元宝!!
+SENDMSG 7 恭喜您<$str(N$收益)>元宝已到帐户中.
+mov S$name
+; goto @主面板
+close
+
+}

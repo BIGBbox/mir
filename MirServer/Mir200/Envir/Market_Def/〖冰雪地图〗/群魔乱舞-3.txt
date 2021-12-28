@@ -28,7 +28,7 @@
 not check [58] 1
 checkmoney 灵符 < 5000
 #ACT
-messagebox 你没有疾风之力,无法进入!!
+messagebox 你没有疾风之力,也没有5000灵符,无法进入!!
 break
 
 
@@ -46,6 +46,4 @@ MapMove boss集中营
 SendCenterMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖BOSS集中营〗,寻找高级装备！ 1 3
 ;GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖BOSS集中营〗,寻找高级装备！
 GuildNoticeMsg 251 0 玩家『<$USERNAME>』闯入了神秘的〖BOSS集中营〗,寻找高级装备！
-break
-#elseact
 
